@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/TeX Live for SUSE Linux) (preloaded format=pdflatex 2018.10.24)  12 NOV 2018 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/TeX Live for SUSE Linux) (preloaded format=pdflatex 2018.10.24)  12 NOV 2018 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -390,7 +390,7 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@lastruleclass=\count118
 \@thisrulewidth=\dimen174
 )
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 39.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 40.
 
 (/usr/share/texmf/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
@@ -1265,23 +1265,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 
 Package hyperref Warning: Option `backref' has already been used,
-(hyperref)                setting the option has no effect on input line 515.
+(hyperref)                setting the option has no effect on input line 516.
 
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 515.
+(hyperref)                setting the option has no effect on input line 516.
 
 
 Package hyperref Warning: Option `hyperindex' has already been used,
-(hyperref)                setting the option has no effect on input line 515.
+(hyperref)                setting the option has no effect on input line 516.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 515.
-Package hyperref Info: Option `breaklinks' set `true' on input line 515.
+Package hyperref Info: Option `colorlinks' set `false' on input line 516.
+Package hyperref Info: Option `breaklinks' set `true' on input line 516.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 515.
+(hyperref)                setting the option has no effect on input line 516.
 
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 515.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 516.
 (/usr/share/texmf/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
 
@@ -1301,25 +1301,27 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count448
 \@quotereset=\count449
-(./main.aux (./cython.aux))
+(./main.aux (./annexe/optimization/cython.aux)
+(./annexe/optimization/theano.aux) (./annexe/gui/qt.tex.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 51.
- (/usr/share/texmf/tex/latex/psnfss/t1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 45.
+
+(/usr/share/texmf/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -1388,7 +1390,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count456
-LaTeX Info: Redefining \microtypecontext on input line 51.
+LaTeX Info: Redefining \microtypecontext on input line 45.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1410,10 +1412,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 51.
-Package biblatex Info: Reference segment=0 on input line 51.
+Package biblatex Info: Reference section=0 on input line 45.
+Package biblatex Info: Reference segment=0 on input line 45.
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 45.
 
 (/usr/share/texmf/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1423,34 +1425,34 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count457
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
 <Pictures/background.pdf, id=7, 584.1825pt x 835.12pt>
 File: Pictures/background.pdf Graphic file (type pdf)
 <use Pictures/background.pdf>
-Package pdftex.def Info: Pictures/background.pdf  used on input line 60.
+Package pdftex.def Info: Pictures/background.pdf  used on input line 54.
 (pdftex.def)             Requested size: 597.50787pt x 854.24503pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 61.
-LaTeX Font Info:    Try loading font information for T1+pag on input line 61.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
+LaTeX Font Info:    Try loading font information for T1+pag on input line 55.
 
 (/usr/share/texmf/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 61.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 61.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 55.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pag' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 63.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 63.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 63
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 57.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 57
 .
 
 (/usr/share/texmf/tex/latex/psnfss/ot1ztmcm.fd
@@ -1460,35 +1462,35 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 63
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 57
 .
 
 (/usr/share/texmf/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 63
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 57
 .
 
 (/usr/share/texmf/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 63
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 57
 .
 
 (/usr/share/texmf/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 63.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 57.
 
 (/usr/share/texmf/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 
 (/usr/share/texmf/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1499,29 +1501,29 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 {/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Pictures/background.pd
 f>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 76.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 70.
 
 (/usr/share/texmf/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 82.
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 76.
 (/usr/share/texmf/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1530,13 +1532,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
@@ -1544,86 +1546,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 <Pictures/chapter_head_1.pdf, id=25, 597.432pt x 298.716pt>
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 96.
+Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 90.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
  (./main.toc
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <12> not available
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <12> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 10.
  [3
 
- <./Pictures/chapter_head_1.pdf>])
+ <./Pictures/chapter_head_1.pdf>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 76.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 76.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
+)
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [4] [5
+ [4] [5] [6
 
-] [6
+] [7] [8
 
 ]
-\c@ttl@toc@default=\count458
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <220> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 124.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 124.
- (./main.ptc)
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <30> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 124.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 124.
-
-[7] [8]
 Chapter 1.
-<Pictures/chapter_head_2.pdf, id=264, 3581.38pt x 1790.69pt>
+<Pictures/chapter_head_2.pdf, id=237, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 134.
+Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 123.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 
 Underfull \vbox (badness 1571) has occurred while \output is active []
 
- [9
-
- <./Pictures/chapter_head_2.pdf>]
+ [9 <./Pictures/chapter_head_2.pdf>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 148.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 148.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 148.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <6> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 148.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 148.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 148.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
  [10]
 
-LaTeX Warning: Citation 'article_key' on page 11 undefined on input line 188.
+LaTeX Warning: Citation 'article_key' on page 11 undefined on input line 177.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 188.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 177.
 
-LaTeX Warning: Citation 'book_key' on page 11 undefined on input line 188.
+LaTeX Warning: Citation 'book_key' on page 11 undefined on input line 177.
 
 [11] [12
 
@@ -1631,102 +1620,113 @@ LaTeX Warning: Citation 'book_key' on page 11 undefined on input line 188.
 Chapter 2.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 224.
+Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 213.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-Package mdframed Info: mdframed works in twoside mode on input line 232.
+Package mdframed Info: mdframed works in twoside mode on input line 221.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 232.
+(mdframed)              on input line 221.
+Package mdframed Info: mdframed works in twoside mode on input line 234.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 234.
 Package mdframed Info: mdframed works in twoside mode on input line 245.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 245.
-Package mdframed Info: mdframed works in twoside mode on input line 256.
+Package mdframed Info: mdframed works in twoside mode on input line 249.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 256.
-Package mdframed Info: mdframed works in twoside mode on input line 260.
+(mdframed)              on input line 249.
+Package mdframed Info: mdframed works in twoside mode on input line 255.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 260.
-Package mdframed Info: mdframed works in twoside mode on input line 266.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 266.
+(mdframed)              on input line 255.
 [13]
-Package mdframed Info: Not enough space on this page on input line 268.
-Package mdframed Info: mdframed works in twoside mode on input line 270.
+Package mdframed Info: Not enough space on this page on input line 257.
+Package mdframed Info: mdframed works in twoside mode on input line 259.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 270.
-Package mdframed Info: mdframed works in twoside mode on input line 279.
+(mdframed)              on input line 259.
+Package mdframed Info: mdframed works in twoside mode on input line 268.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 279.
-Package mdframed Info: mdframed works in twoside mode on input line 285.
+(mdframed)              on input line 268.
+Package mdframed Info: mdframed works in twoside mode on input line 274.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 285.
-Package mdframed Info: mdframed works in twoside mode on input line 289.
+(mdframed)              on input line 274.
+Package mdframed Info: mdframed works in twoside mode on input line 278.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 289.
-Package mdframed Info: mdframed works in twoside mode on input line 303.
+(mdframed)              on input line 278.
+Package mdframed Info: mdframed works in twoside mode on input line 292.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 303.
+(mdframed)              on input line 292.
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--310
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 313.
+Package mdframed Info: mdframed works in twoside mode on input line 302.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 313.
+(mdframed)              on input line 302.
 [14] (/usr/share/texmf/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Package mdframed Info: mdframed works in twoside mode on input line 356.
+Package mdframed Info: mdframed works in twoside mode on input line 345.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 356.
-Package mdframed Info: mdframed works in twoside mode on input line 361.
+(mdframed)              on input line 345.
+Package mdframed Info: mdframed works in twoside mode on input line 350.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 361.
+(mdframed)              on input line 350.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 371.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 360.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 371.
-Package mdframed Info: mdframed works in twoside mode on input line 380.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 360.
+Package mdframed Info: mdframed works in twoside mode on input line 369.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 380.
+(mdframed)              on input line 369.
  [15]
-Package mdframed Info: mdframed works in twoside mode on input line 435.
+Package mdframed Info: mdframed works in twoside mode on input line 424.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 435.
- [16] (./main.ptc)
+(mdframed)              on input line 424.
+ [16]
+\c@ttl@toc@default=\count458
+LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <220> not available
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 450.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 450.
+ (./main.ptc)
+LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <30> not available
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 450.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 450.
+
 [17
 
 ] [18]
 Chapter 3.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 467.
+Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 456.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-Package mdframed Info: mdframed works in twoside mode on input line 480.
+Package mdframed Info: mdframed works in twoside mode on input line 469.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 480.
-Package mdframed Info: mdframed works in twoside mode on input line 494.
+(mdframed)              on input line 469.
+Package mdframed Info: mdframed works in twoside mode on input line 483.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 494.
+(mdframed)              on input line 483.
 
-Overfull \hbox (1.05354pt too wide) in paragraph at lines 495--499
+Overfull \hbox (1.05354pt too wide) in paragraph at lines 484--488
 [][][][]\T1/pag/db/n/10 Exercise 3.2 [][][]\T1/ptm/m/n/10.95 (-20) En-richissez
  la classe Vecteur2D précé-dente en lui ajoutant une méth-ode d'affichage
  []
@@ -1739,15 +1739,15 @@ Overfull \hbox (1.05354pt too wide) in paragraph at lines 495--499
 Chapter 4.
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 520.
+Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 509.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Pictures/placeholder.jpg, id=426, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=427, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
-Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 564.
+Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 553.
 (pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1769,7 +1769,21 @@ Overfull \hbox (149.21451pt too wide) in paragraph at lines 27--29
 
 ] [29
 
-] [30
+]
+\openout2 = `annexe/optimization/theano.aux'.
+
+ (./annexe/optimization/theano.tex) [30
+
+] [31
+
+]
+\openout2 = `annexe/gui/qt.tex.aux'.
+
+
+No file annexe/gui/qt.tex.tex.
+[32
+
+
 
 ] (./main.ind
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
@@ -1826,20 +1840,24 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[31
+[33
 
 ])
 \tf@ptc=\write8
 \openout8 = `main.ptc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 613.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 613.
- (./main.aux (./annexe/optimization/cython.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 613.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 613.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 610.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 610.
+ (./main.aux (./annexe/optimization/cython.aux)
+(./annexe/optimization/theano.aux) (./annexe/gui/qt.tex.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 610.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 610.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1851,31 +1869,151 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38180 strings out of 493685
- 703213 string characters out of 6155429
- 1256331 words of memory out of 5000000
- 40982 multiletter control sequences out of 15000+600000
- 663686 words of font info for 293 fonts, out of 8000000 for 9000
+ 38256 strings out of 493685
+ 704335 string characters out of 6155429
+ 1261559 words of memory out of 5000000
+ 41002 multiletter control sequences out of 15000+600000
+ 663816 words of font info for 295 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  57i,15n,57p,10508b,2697s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvi
-ps/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/sym
-bols/msam10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b></usr/share/texmf/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/txfonts
-/t1xbtt.pfb></usr/share/texmf/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/
-texmf/fonts/type1/urw/avantgar/uagd8a.pfb></usr/share/texmf/fonts/type1/urw/ava
-ntgar/uagk8a.pfb></usr/share/texmf/fonts/type1/urw/symbol/usyr.pfb></usr/share/
-texmf/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf/fonts/type1/urw/times/u
-tmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (31 pages, 445545 bytes).
+pdfTeX warning (dest): name{section.5.9} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.8.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.8.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.8.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.7.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.7.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.6.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.6.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.3.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.3.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.3.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.4.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.4.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.4.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips
+/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmex
+10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbo
+ls/msam10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+</usr/share/texmf/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/txfonts/t
+1xbtt.pfb></usr/share/texmf/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/te
+xmf/fonts/type1/urw/avantgar/uagd8a.pfb></usr/share/texmf/fonts/type1/urw/avant
+gar/uagk8a.pfb></usr/share/texmf/fonts/type1/urw/symbol/usyr.pfb></usr/share/te
+xmf/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf/fonts/type1/urw/times/utm
+b8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (33 pages, 447125 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
- 561 compressed objects within 6 object streams
- 173 named destinations out of 1000 (max. 500000)
- 70457 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 789 PDF objects out of 1000 (max. 8388607)
+ 649 compressed objects within 7 object streams
+ 215 named destinations out of 1000 (max. 500000)
+ 70585 words of extra memory for PDF output out of 74296 (max. 10000000)
 
