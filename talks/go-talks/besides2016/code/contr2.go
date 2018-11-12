@@ -1,0 +1,1 @@
+if n, err = fd.Write(buf); err != nil { ... }
