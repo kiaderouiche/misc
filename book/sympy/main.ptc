@@ -112,11 +112,17 @@
 \ttl@stoptoc {default@3}
 \ttl@starttoc {default@4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}POO}{27}{chapter.5}
+\contentsline {section}{\numberline {4.6}Programmation Orient\IeC {\'e}e Objet}{27}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Programmation Orient\IeC {\'e}e Objet}{27}{section.5.1}
+\contentsline {section}{\numberline {4.7}D\'ecorateurs}{27}{section.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}D\'ecorateurs}{27}{section.5.2}
+\contentsline {section}{\numberline {4.8}Optimisation du code}{27}{section.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{29}{section*.2}
+\contentsline {subsection}{\numberline {4.8.1}Cython}{28}{subsection.4.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.8.2}Theano}{29}{subsection.4.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.9}Interface graphique}{29}{section.4.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{31}{section*.2}
 \contentsfinish 
