@@ -1,0 +1,595 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.3 (8/8/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%https://www.amazon.fr/dp/toc/2212673876/ref=dp_toc?_encoding=UTF8&n=301061
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering SymPy par la pratique\\[15pt] % Book title
+%{\Large A Profound Subtitle}\\[20pt] % Subtitle
+{\huge K.I.A.Derouiche}}}; % Author name
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2018 K.I.A.Derouiche\\ % Copyright notice
+
+\noindent \textsc{Published by Publisher}\\ % Publisher
+
+\noindent \textsc{book-website.com}\\ % URL
+
+\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
+
+\noindent \textit{First printing, March 2018} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	INTTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+Ce recueil d'exercices et de problèmes de programmation s'adresse aussi bien aux débutants qu'aux programmeurs confirmés. Il présente en effet plusieurs états d'esprit dont les deux principaux sont la programmation classique en Pascal pour les étudiants du premier cycle universitaire, et la programmation fonctionnelle en Lisp pour le second cycle.
+
+Ce livre constitue un panorama (non exhaustif, mais suffisant) sur les langages de programmation, et offre une grande variété dans les sujets traités : graphiques, calcul matriciel, traitements de chaînes de caractères, graphes, intelligence artificielle...
+\\
+La première partie du livre sera consacré \`a la résolution par une approche symbolique au divers questions posées au étudiants et toute personnes qui aiment savoir et voir s'initier  pour des niveaux et des questions rencontrés, la deuxième partie du livre sera questions aux problèmes plus rencontrés pour des étudiants passionnée des questions entre mathématiques et technologies, chercheurs et développeurs d'applications scientifiques, la troisième partie plus consacré aux questions poussées  
+
+
+\subsection{Pourquoi programmer en symbolique }
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Part One}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Calcul formel}
+
+L'approche La simulation numérique est devenue essentielle dans de nombreux domaines tels que la mécanique des fluides et des solides, la météo, l'évolution du climat, la biologie ou les semi-conducteurs. Elle permet de comprendre, de prévoir, d'accéder là où les instruments de mesures s'arrêtent. 
+
+Ce livre présente des méthodes performantes du calcul scientifique : matrices creuses, résolution efficace des grands systèmes linéaires, ainsi que de nombreuses applications à la résolution par éléments finis et différences finies. Alternant algorithmes et applications, les programmes sont directement présentés en langage C++. Ils sont sous forme concise et claire, et utilisent largement les notions de classe et de généricité du langage C++. 
+
+Le contenu de ce livre a fait l'objet de cours de troisième année à l'école nationale supérieure d'informatique et de mathématiques appliquées de Grenoble (ENSIMAG) ainsi qu'au mastère de mathématiques appliquées de l'université Joseph Fourier. Des connaissances de base d'algèbre matricielle et de programmation sont recommandées. La maîtrise du contenu de cet ouvrage permet d'appréhender les principaux paradigmes de programmation du calcul scientifique. Il est alors possible d'appliquer ces paradigmes pour aborder des problèmes d'intérêt pratique, tels que la résolution des équations aux dérivées partielles, qui est abordée au cours de ce livre. La diversité des sujets abordés, l'efficacité des algorithmes présentés et leur écriture directe en langage C++ font de cet ouvrage un recueil fort utile dans la vie professionnelle d'un ingénieur. 
+
+Le premier chapitre présente les bases fondamentales pour la suite : présentation du langage C++ à travers la conception d'une classe de quaternions et outils d'analyse asymptotique du temps de calcul des algorithmes. Le second chapitre aborde l'algorithme de transformée de Fourier rapide et développe deux applications à la discrétisation d'équations aux dérivées partielles par la méthode des différences finies. Le troisième chapitre est dédié aux matrices creuses et à l'algorithme du gradient conjugué. Ces notions sont appliquées à la méthode des éléments finis. En annexe sont groupés des exemples de génération de maillage et de visualisation graphique. 
+
+S'il est cependant recommandé de maîtriser les notions du premier chapitre pour aborder le reste du livre, les chapitres deux et trois sont complètement indépendants et peuvent être abordés séparément. Ces chapitres sont complétés par des exercices qui en constituent des développements, ainsi que des notes bibliographiques retraçant l'historique des travaux et fournissant des références sur des logiciels et librairies récents implémentant ou étendant les algorithmes présentés. 
+\section{Système de calcul formel}
+Dans le cas de donnée des explications et représentations très proche, car la question qui relie entre le logiciel et l'ordinateur d'un coté et la démonstration mathématique, est un pas décisive est très important l'exemple de l’intervalle beaucoup plus technique, donc il y a beaucoup de CAS 
+\begin{example}
+Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+\begin{equation}
+f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+\end{equation}
+The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
+\end{example}
+
+qui exprime ce qui nous permet notre choix pour un CAS qui possède des caractéristiques techniques et sur le plan du coût très important quand peut résumer dans les points suivants:
+\begin{enumerate}
+	\item Leger et 
+	\item S’appuie sur le langage de programmation Python
+	\item Portabilité dans toute transparence
+\end{enumerate}
+
+L'un des systèmes qui peut nous permettre d'écrire cette exemple avec un ordinateurs avec SymPy qui semble mieu intégré
+
+\section{Bibliothèque SymPy}
+
+Dans un cas plus simple l'exemple 1.1 se formule beaucoup plus dans un outil comme SymPy est une bibliothèque de calcul formel elle est aussi un environnement pour 
+l’apprentissage de l’algèbre, l’analyse, géométrie, combinatoire, cryptographie, mécanique 
+classique et quantique pour le lycée et l’université mais aussi un environnement de 
+développement et de recherche. SymPy  écrit entièrement en Python un langage de 
+programmation facile à apprendre et adapté à l’apprentissage,  elle fourni aux étudiant 
+\textit{SymPyGamma} une application web   notamment des primitives générales de traitement des expressions algébriques (développement, factorisation, …), des aides à l’organisation des objets mathématiques intervenant dans la résolution d’un problème ainsi qu’une assistance à la preuve. Il permet au professeur de préparer et de suivre le travail de l’élève. Différentes maquettes ont été développées et testées auprès d’élèves. Dans la plus récente, nous nous sommes attachés à explorer une nouvelle forme d’activité algébrique. Alors que le calcul en papier crayon et les logiciels standards considèrent
+ les expressions de façon isolée, l’environnement que nous développons organise en réseau les différentes expressions intervenant dans la résolution d’un problème. L’ordinateur peut facilement mettre à jour ce réseau quand l’utilisateur modifie certains de ses éléments. Il devient ainsi possible, pour aborder un problème générique, d’explorer facilement des cas particuliers et de conduire une généralisation. Les relations entre expressions algébriques sont mieux mises en évidence du fait de leur invariance dans les modifications du réseau. De façon très concise, Casyopée peut être défini
+\subsection{SymPyGamma}
+Est une interface onWeb marche avec un navigateur contient plusieurs catégorie liée de calcul, dynamique. L'interet de cette outil qu'il est facilement partageable adapté pour l’enseignement et surtout l'auto-apprentissage 
+\subsection{Besoin de rester dans le symbolique}
+Le symbolique est une grande importance d'un point de vue technique, car il permet
+de limité les risques de bug dans l'exécution des programmes, dans le contexte de 
+la vérification formelle si en prend le programme suivant:
+
+\subsection{Passage du symbolique au numérique}
+Généralement, le symbolique parmis c'est  
+\subsection{Faire des dessins}
+%------------------------------------------------
+
+\section{Citation}\index{Citation}
+
+This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
+
+%------------------------------------------------
+
+\section{Lists}\index{Lists}
+
+Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
+
+\subsection{Numbered List}\index{Lists!Numbered List}
+
+\begin{enumerate}
+\item The first item
+\item The second item
+\item The third item
+\end{enumerate}
+
+\subsection{Bullet Points}\index{Lists!Bullet Points}
+
+\begin{itemize}
+\item The first item
+\item The second item
+\item The third item
+\end{itemize}
+
+\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
+
+\begin{description}
+\item[Name] Description
+\item[Word] Definition
+\item[Comment] Elaboration
+\end{description}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2
+%----------------------------------------------------------------------------------------
+
+\chapter{Probl\`emes et exercices}
+
+\section{Premiers pas en Python symbolique}
+
+This is an example of theorems.
+
+\subsection{Variable et affection}\index{Variable et affection}
+
+\begin{exercise}
+Affectez les variables temps $t$ et distance $d$ par les valeurs 6.892 et 19.7. Calculez et affichez la valeur de la vitesse. Améliorez l’affichage en imposant un chiffre après le point décimal.
+\end{exercise}
+
+\begin{solution}
+Pour, affectez des variables est les rendre symbolique comme c'est décrit dans le mémo ou il 
+sera expliquer temps $t$ et distance $d$ par les valeurs 6.892 et 19.7. Calculez et affichez la 
+valeur de la vitesse. Améliorez l’affichage en imposant un chiffre après le point décimal.
+\end{solution}
+
+\subsection{Contrôle du flux d’instructions}\index{Theorems!Single Line}
+This is a theorem consisting of just one line.
+
+\begin{exercise}
+A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
+\end{exercise}
+\begin{solution}
+\end{solution}
+%------------------------------------------------
+
+\section{Les Fonctions}\index{Fonctions}
+
+This is an example of a definition. A definition could be mathematical or it could define a concept.
+
+\begin{exercise}
+Écrire une fonction cube qui retourne le cube de son argument
+\end{exercise}
+
+\begin{exercise}
+Écrire une fonction $volumeSphere$ qui calcule le volume d’une sphère de rayon $r$ fourni
+en argument et qui utilise la fonction cube .
+Tester la fonction $volumeSphere$ par un appel dans le programme principal.
+\end{exercise}
+
+\begin{exercise}
+Écrire une fonction maFonction qui retourne $f(x) = 2x^{3} + x - 5$
+\end{exercise}
+
+\begin{exercise}
+Écrire une fonction tabuler avec quatre paramètres : $fonction$ , $borneInf$ , $borneSup$
+et $nbPas$ . Cette procédure affiche les valeurs de $fonction$ , de $borneInf$ à $borneSup$ ,
+tous les nbPas . Elle doit respecter $borneInf < borneSup$.
+Tester cette fonction par un appel dans le programme principal après avoir saisi les
+deux bornes dans une floatbox et le nombre de pas dans une integerbox (utilisez le
+module easyguiB ).
+\end{exercise}
+
+\begin{exercise}
+Écrire une fonction $volMasse$ Ellipsoide qui retourne le volume et la masse d’un ellipsoïde grâce à un tuple. Les paramètres sont les trois demi-axes et la masse volumique. On donnera à ces quatre paramètres des valeurs par défaut. \\
+On donne: $v = \frac{3}{4} \pi abc$ \\
+Tester cette fonction par des appels avec différents nombres d’arguments.
+\end{exercise}
+
+\begin{exercise}
+Une fonction $f (x)$ est lin\'eaire et a une valeur de $29$ \`a $x = -2$ et $39$ à $x = 3$. Trouver sa valeur à $x = 5$.
+\end{exercise}
+
+\begin{exercise}
+Pour l'ensemble $N$ de nombres naturels et une opération binaire $f: N x N \longrightarrow N$, on appelle un élément $z$ $\epsilon$ $N$ une identité pour $f$, si $f (a, z) = a = f (z, a)$, pour tout a $\epsilon$ $N$. Lesquelles des opérations binaires suivantes ont une identité?:
+\begin{enumerate}
+  \item $f (x, y) = x + y - 3$
+  \item $f (x, y) = max(x, y)$
+  \item $f (x, y) = x^{y}$
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+le deuxième et le troisième 
+\end{solution}
+\section{Structures de données}
+
+\subsection{Logique}
+\begin{exercise}
+Dans la carte de Karnaugh ci-dessous, $X$ indique un terme sans intérêt. Quelle est la forme minimale de la fonction représentée par la carte de Karnaugh?
+\end{exercise}
+\subsection{Ensembles}
+La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que
+dans le cadre de SymPy elle s'appui entièrement sur Python avec certain modification, avec la collection d'objet.
+\\
+
+\textit{La fonction set accepte donc en argument un objet de type quelconque et s'efforce de le traduire dans un ensemble. Lorsqu'on ne passe aucun argument à set (option 2), ou qu'on lui passe une liste vide, set renvoie naturellement un ensemble vide; on aurait pu utiliser aussi bien, de la même manière, set(()), set({}), ou même set('') pour arriver au même résultat.}
+
+	\begin{exercise}
+		Définir deux ensembles $X = \lbrace a, b, c, d\rbrace$ et  $Y = \lbrace s, b, d\rbrace$ , puis 			affichez les résultats suivants :
+ 		\begin{enumerate}
+  			 \item les ensembles initiaux.
+  			 \item le test d’appartenance de l’élément $c$ à $X$.
+  			 \item le test d’appartenance de l’élément $a$ à $Y$.
+  			 \item les ensembles $X - Y$ et $Y - X$.
+  			 \item l’ensemble $X \cup Y$ (union).
+  			 \item l'ensemble $X \cap Y$ (intersection).
+	 \end{enumerate}
+	\end{exercise}
+
+\begin{solution}
+Il faut noter qu'il existe une solution qui se base sur le Python builtuints en utilisant la structure de donnée \textit{sets}. Mais comme en n'est dans la logique en utilise 
+\begin{python}
+from sympy import FiniteSet
+
+X = FiniteSet('a', 'b', 'c', 'd')
+Y = FiniteSet('s', 'b', 'd')
+
+class MyClass(Yourclass):
+    def __init__(self, my, yours):
+        bla = '5 1 2 3 4'
+        print bla
+\end{python}
+\begin{python}
+class MyClass(Yourclass):
+    def __init__(self, my, yours):
+        bla = '5 1 2 3 4'
+        print bla
+\end{python}
+
+\end{solution}
+%\begin{exercise}
+%Si $P$, $Q$, $R$ sont des sous-ensembles de l'ensemble universel $U$, alors $(P \cap Q\capR) \cup (P^{c} \cap Q \cap R)\cup(Q^{x}\cupR^{x})$ si
+%\begin{enumerate}
+%  \item  
+%  \item 
+%  \item
+%\end{enumerate}
+%\end{exercise}
+%------------------------------------------------
+\subsection{Polynômes}
+\begin{exercise}
+Considérons le polynôme $p(x) = a_{0} + a_{1} x + a_{2} x^{2} + a_{3} x^{3}$, où $a_{i} \neq 0$ $\forall i$. Le nombre minimum de multiplications nécessaires pour évaluer $p$ sur une entrée $x$ est:
+\end{exercise}
+%-----------------------------------------------
+\subsection{Nombres parfaits et nombres chanceux}
+\begin{exercise}
+$\sqrt{12}$
+\end{exercise}
+%------------------------------------------------
+
+\section{Remarks}\index{Remarks}
+
+This is an example of a remark.
+
+\begin{remark}
+The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+\end{remark}
+
+%------------------------------------------------
+
+\section{Corollaries}\index{Corollaries}
+
+This is an example of a corollary.
+
+\begin{corollary}[Corollary name]
+The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+\end{corollary}
+
+%------------------------------------------------
+
+\section{Propositions}\index{Propositions}
+
+This is an example of propositions.
+
+\subsection{Several equations}\index{Propositions!Several Equations}
+
+\begin{proposition}[Proposition name]
+It has the properties:
+\begin{align}
+& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+\end{align}
+\end{proposition}
+
+\subsection{Single Line}\index{Propositions!Single Line}
+
+\begin{proposition} 
+Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
+\end{proposition}
+
+%------------------------------------------------
+
+\section{Examples}\index{Examples}
+
+This is an example of examples.
+
+\subsection{Equation and Text}\index{Examples!Equation and Text}
+
+\begin{example}
+Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+\begin{equation}
+f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+\end{equation}
+The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
+\end{example}
+
+\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
+
+\begin{example}[Example name]
+\lipsum[2]
+\end{example}
+
+%------------------------------------------------
+
+\section{Exercises}\index{Exercises}
+
+This is an example of an exercise.
+
+\begin{exercise}
+This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
+\end{exercise}
+
+%------------------------------------------------
+
+\section{Problems}\index{Problems}
+
+\begin{problem}
+What is the average airspeed velocity of an unladen swallow?
+\end{problem}
+
+%------------------------------------------------
+
+\section{Vocabulary}\index{Vocabulary}
+
+Define a word to improve a students' vocabulary.
+
+\begin{vocabulary}[Word]
+Definition of word.
+\end{vocabulary}
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Part Two}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+
+\chapter{POO}
+
+\section{Programmation Orientée Objet}\index{Notations}
+\begin{notation}
+Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
+\begin{enumerate}
+\item Bounded support $G$;
+\item Infinitely differentiable;
+\end{enumerate}
+a vector space is denoted by $\mathcal{D}(G)$. 
+\end{notation}
+
+ \subsection{POO}
+\begin{exercise}
+ Définir une classe Vecteur2D avec un constructeur fournissant les coordonnées par
+défaut d’un vecteur du plan (par exemple : $x = 0$ et $y = 0$ ).
+Dans le programme principal, instanciez un Vecteur2D sans paramètre, un Vecteur2D
+avec ses deux paramètres, et affichez-les.
+\end{exercise}
+\begin{solution}
+ en utilise le module sympy.geometry ce module fait appel à tout les outils et theories qui
+ peuvents entre utiliser dans le cade de la géométrie dans le Plan.
+ \begin{python}
+ from sympy.geometry
+  \end{python}
+\end{solution}
+
+\begin{exercise}
+Enrichissez la classe Vecteur2D précédente en lui ajoutant une méthode d’affichage
+et une méthode de surcharge d’addition de deux vecteurs du plan.
+Dans le programme principal, instanciez deux Vecteur2D , affichez-les et affichez leur
+somme.
+\end{exercise}
+\begin{solution}
+\end{solution}
+
+%------------------------------------------------
+\subsection{Notions de COO et d’encapsulation}
+%------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Part Three}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_1.pdf} % Chapter heading image
+
+\chapter{Nonlinear Problem}
+Dans cette section ou se mele symbolique et numérique pour modélisé et résoudre des probl\`emes complexes, l'accents et prix sur des questions un 
+
+\section{Chaos}\index{Chaos}
+Prenons une pause dans l'apprentissage de nouvelles techniques et algorithmes informatiques
+pour un peu, et passer du temps en utilisant ce que nous avons appris jusqu'à présent pour enquêter sur quelque chose d'intéressant. Nous allons commencer avec quelque chose de familier: le simple pendule.
+\subsection{Pendule simple}
+Le pendule simple figure
+\subsection{Pendule à deux bras}
+\subsection{Les mouvements d’un robot}
+\section{Solution non linéaire d'equation algébrique}\index{Solving Nonlinear Algebraic Equations}
+
+Qu'est ce que non-linéaire et qu'est ce que une \'equation alg\'ebrique
+
+Une \'equation alg\'ebrique est un polyn\^ome de la forme $P(x)$
+
+\begin{equation}
+\exp(-x)\sin(x) = \cos(x)
+\end{equation}
+%------------------------------------------------
+\section{Transport optimal}
+C'est quoi le \textit{ transport optimal}?, exemple simple..., le domaine du transport optimal
+est très 
+%-------------------------------------------------
+\section{Le calcul des variations}
+
+\section{Figure}\index{Figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l l l}
+\toprule
+\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+\midrule
+Treatment 1 & 0.0003262 & 0.562 \\
+Treatment 2 & 0.0015681 & 0.910 \\
+Treatment 3 & 0.0009271 & 0.296 \\
+\bottomrule
+\end{tabular}
+\caption{Table caption}
+\end{table}
+
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder}
+\caption{Figure caption}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+
+%------------------------------------------------
+
+\section*{Articles}
+\addcontentsline{toc}{section}{Articles}
+\printbibliography[heading=bibempty,type=article]
+
+%------------------------------------------------
+
+\section*{Books}
+\addcontentsline{toc}{section}{Books}
+\printbibliography[heading=bibempty,type=book]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
