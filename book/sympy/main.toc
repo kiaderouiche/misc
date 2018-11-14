@@ -1,0 +1,81 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {0.1}Avant-Propos}{5}{section.0.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {0.2}Introduction}{6}{section.0.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {0.2.1}Pourquoi programmer en symbolique }{6}{subsection.0.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Calcul formel}{7}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Syst\IeC {\`e}me de calcul formel}{8}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Biblioth\IeC {\`e}que SymPy}{8}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}SymPyGamma}{9}{subsection.1.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.2}Besoin de rester dans le symbolique}{9}{subsection.1.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.3}Passage du symbolique au num\IeC {\'e}rique}{9}{subsection.1.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.4}Faire des dessins}{9}{subsection.1.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Ensemble}{11}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Ensemble}{11}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Ensembles}{11}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Convex Sets}{13}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Convexity}{13}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Cone}{13}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Operations preserving convexity}{13}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Operations that induce convexity}{13}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Convex Functions}{14}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Epigraph}{14}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Support Function}{16}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Operations Preserve Convexity of Functions}{17}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Nonlinear Problem}{19}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}\IeC {\'E}quation diff\IeC {\'e}rentielle}{19}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Chaos}{19}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Pendule simple}{19}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Pendule \IeC {\`a} deux bras}{19}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}Mouvements d\IeC {\textquoteright }un robot}{19}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Solution non lin\IeC {\'e}aire d'\IeC {\'e}quation alg\IeC {\'e}brique}{19}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Transport optimal}{20}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Le calcul des variations}{20}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Figure}{20}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Outils avanc\IeC {\'e}e}{21}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Programmation Orient\IeC {\'e}e Objet}{21}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}D\'ecorateurs}{21}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Optimisation du code}{21}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Cython}{22}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}Theano}{23}{subsection.5.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Interface graphique}{24}{section.5.3}
+\contentsfinish 

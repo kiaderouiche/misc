@@ -1,47 +1,48 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The Legrand Orange Book
-% LaTeX Template
-% Version 2.3 (8/8/17)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-%
-% Compiling this template:
-% This template uses biber for its bibliography and makeindex for its index.
-% When you first open the template, compile it from the command line with the 
-% commands below to make sure your LaTeX distribution is configured correctly:
-%
-% 1) pdflatex main
-% 2) makeindex main.idx -s StyleInd.ist
-% 3) biber main
-% 4) pdflatex main x 2
-%
-% After this, when you wish to update the bibliography/index use the appropriate
-% command above and make sure to compile with pdflatex several times 
-% afterwards to propagate your changes to the document.
-%
-% This template also uses a number of packages which may need to be
-% updated to the newest versions for the template to compile. It is strongly
-% recommended you update your LaTeX distribution if you have any
-% compilation errors.
+%  My documentation report
+%  Objetive: Explain what I did and how, so someone can continue with the investigation
 %
 % Important note:
 % Chapter heading images should have a 2:1 width:height ratio,
 % e.g. 920px width and 460px height.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%https://www.amazon.fr/dp/toc/2212673876/ref=dp_toc?_encoding=UTF8&n=301061
+
+
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 \documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
 
-%----------------------------------------------------------------------------------------
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
+
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book%
+
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{amsthm}
+%%%
+
+% Bibliography
+\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+\addbibresource{bibliography.bib} % BibTeX bibliography file
+\defbibheading{bibempty}{}
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
 
+%----------------------------------------------------------------------------------------
+%	Definitions of new commands
+%----------------------------------------------------------------------------------------
+
+\def\R{\mathbb{R}}
+\newcommand{\cvx}{convex}
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -50,13 +51,14 @@
 
 \begingroup
 \thispagestyle{empty}
-\begin{tikzpicture}[remember picture,overlay]
-\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
-\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering SymPy par la pratique\\[15pt] % Book title
-%{\Large A Profound Subtitle}\\[20pt] % Subtitle
-{\huge K.I.A.Derouiche}}}; % Author name
-\end{tikzpicture}
-\vfill
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.25]{esahubble}}} % Image background
+\centering
+\vspace*{5cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\textbf{SymPy par la pratique}\\
+{\LARGE Exemple et exercice}\par % Book title
+\vspace*{1cm}
+{\Huge K.I.A Derouiche}\par % Author name
 \endgroup
 
 %----------------------------------------------------------------------------------------
@@ -67,40 +69,41 @@
 ~\vfill
 \thispagestyle{empty}
 
-\noindent Copyright \copyright\ 2018 K.I.A.Derouiche\\ % Copyright notice
+%\noindent Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
 
-\noindent \textsc{Published by Publisher}\\ % Publisher
+\noindent \textsc{Summer Research Internship, University of Western Ontario}\\
 
-\noindent \textsc{book-website.com}\\ % URL
+\noindent \textsc{github.com/LaurethTeX/Clustering}\\ % URL
 
-\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
+\noindent This research was done under the supervision of Dr. Pauline Barmby with the financial support of the MITACS Globalink Research Internship Award within a total of 12 weeks, from June 16th to September 5th of 2014.\\ % License information
 
-\noindent \textit{First printing, March 2018} % Printing/edition date
+\noindent \textit{First release, August 2014} % Printing/edition date
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
-
-\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+\chapterimage{head1.png} % Table of contents heading image
 
 \pagestyle{empty} % No headers
 
 \tableofcontents % Print the table of contents itself
 
-\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
 
 \pagestyle{fancy} % Print headers again
 
 %----------------------------------------------------------------------------------------
-%	AVANT-PROPOS
+%	AVANT PROPOS
 %----------------------------------------------------------------------------------------
 
+\include{avant_propos}
+
 %----------------------------------------------------------------------------------------
-%	INTTRODUCTION
+%	CHAPTER 1
 %----------------------------------------------------------------------------------------
 
+\chapterimage{head2.png} % Chapter heading image
 \section{Introduction}
 Ce recueil d'exercices et de problèmes de programmation s'adresse aussi bien aux débutants qu'aux programmeurs confirmés. Il présente en effet plusieurs états d'esprit dont les deux principaux sont la programmation classique en Pascal pour les étudiants du premier cycle universitaire, et la programmation fonctionnelle en Lisp pour le second cycle.
 
@@ -117,9 +120,6 @@ La première partie du livre sera consacré \`a la résolution par une approche 
 %----------------------------------------------------------------------------------------
 
 
-
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
-
 \chapter{Calcul formel}
 
 L'approche La simulation numérique est devenue essentielle dans de nombreux domaines tels que la mécanique des fluides et des solides, la météo, l'évolution du climat, la biologie ou les semi-conducteurs. Elle permet de comprendre, de prévoir, d'accéder là où les instruments de mesures s'arrêtent. 
@@ -131,8 +131,15 @@ Le contenu de ce livre a fait l'objet de cours de troisième année à l'école 
 Le premier chapitre présente les bases fondamentales pour la suite : présentation du langage C++ à travers la conception d'une classe de quaternions et outils d'analyse asymptotique du temps de calcul des algorithmes. Le second chapitre aborde l'algorithme de transformée de Fourier rapide et développe deux applications à la discrétisation d'équations aux dérivées partielles par la méthode des différences finies. Le troisième chapitre est dédié aux matrices creuses et à l'algorithme du gradient conjugué. Ces notions sont appliquées à la méthode des éléments finis. En annexe sont groupés des exemples de génération de maillage et de visualisation graphique. 
 
 S'il est cependant recommandé de maîtriser les notions du premier chapitre pour aborder le reste du livre, les chapitres deux et trois sont complètement indépendants et peuvent être abordés séparément. Ces chapitres sont complétés par des exercices qui en constituent des développements, ainsi que des notes bibliographiques retraçant l'historique des travaux et fournissant des références sur des logiciels et librairies récents implémentant ou étendant les algorithmes présentés. 
+
 \section{Système de calcul formel}
-Dans le cas de donnée des explications et représentations très proche, car la question qui relie entre le logiciel et l'ordinateur d'un coté et la démonstration mathématique, est un pas décisive est très important l'exemple de l’intervalle beaucoup plus technique, donc il y a beaucoup de CAS 
+Dans cette section en va exposer les systèmes de calcul formel, leur 
+intérêt qui à vue un renouveau ces dernières années à cause de 
+l'émergence de technique, technologie et nouvelle approche de 
+programmation pour le domaine scientifique et industriel, hormis le fait 
+que le logiciel de calcul formel en soient sont un outil pédagogique 
+indispensable pour les scientifiques et les ingénieurs
+
 \begin{example}
 Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
 \begin{equation}
@@ -170,48 +177,56 @@ la vérification formelle si en prend le programme suivant:
 \subsection{Passage du symbolique au numérique}
 Généralement, le symbolique parmis c'est  
 \subsection{Faire des dessins}
-%------------------------------------------------
 
-\section{Citation}\index{Citation}
+%--------------------------------------------------------------------------------------
+% CHAPTRE
+%--------------------------------------------------------------------------------------
 
-This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
+\chapter{Ensemble}
 
-%------------------------------------------------
+\section{Ensemble}
 
-\section{Lists}\index{Lists}
+\subsection{Ensembles}
+La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que
+dans le cadre de SymPy elle s'appui entièrement sur Python avec certain modification, avec la collection d'objet.
+\\
 
-Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
+\textit{La fonction set accepte donc en argument un objet de type quelconque et s'efforce de le traduire dans un ensemble. Lorsqu'on ne passe aucun argument à set (option 2), ou qu'on lui passe une liste vide, set renvoie naturellement un ensemble vide; on aurait pu utiliser aussi bien, de la même manière, set(()), set({}), ou même set('') pour arriver au même résultat.}
 
-\subsection{Numbered List}\index{Lists!Numbered List}
+%\begin{exercise}
+%		Définir deux ensembles $X = \lbrace a, b, c, d\rbrace$ et  $Y = \lbrace s, b, d\rbrace$ , puis 			affichez les résultats suivants :
+% 		\begin{enumerate}
+%  			 \item les ensembles initiaux.
+%  			 \item le test d’appartenance de l’élément $c$ à $X$.
+%  			 \item le test d’appartenance de l’élément $a$ à $Y$.
+%  			 \item les ensembles $X - Y$ et $Y - X$.
+%  			 \item l’ensemble $X \cup Y$ (union).
+%  			 \item l'ensemble $X \cap Y$ (intersection).
+%	 \end{enumerate}
+%\end{exercise}
 
-\begin{enumerate}
-\item The first item
-\item The second item
-\item The third item
-\end{enumerate}
+\begin{solution}
+Il faut noter qu'il existe une solution qui se base sur le Python builtuints en utilisant la structure de donnée \textit{sets}. Mais comme en n'est dans la logique en utilise 
+\begin{python}
+from sympy import FiniteSet
 
-\subsection{Bullet Points}\index{Lists!Bullet Points}
+X = FiniteSet('a', 'b', 'c', 'd')
+Y = FiniteSet('s', 'b', 'd')
 
-\begin{itemize}
-\item The first item
-\item The second item
-\item The third item
-\end{itemize}
+class MyClass(Yourclass):
+    def __init__(self, my, yours):
+        bla = '5 1 2 3 4'
+        print bla
+\end{python}
+\begin{python}
+class MyClass(Yourclass):
+    def __init__(self, my, yours):
+        bla = '5 1 2 3 4'
+        print bla
+\end{python}
 
-\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
-
-\begin{description}
-\item[Name] Description
-\item[Word] Definition
-\item[Comment] Elaboration
-\end{description}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 2
-%----------------------------------------------------------------------------------------
-
-\chapter{Probl\`emes et exercices}
-
+\end{solution}
+%%
 \section{Premiers pas en Python symbolique}
 
 This is an example of theorems.
@@ -443,13 +458,7 @@ Define a word to improve a students' vocabulary.
 Definition of word.
 \end{vocabulary}
 
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Part Two}
-
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	CHAPTER 3
 %----------------------------------------------------------------------------------------
 
@@ -493,29 +502,213 @@ somme.
 \subsection{Notions de COO et d’encapsulation}
 %------------------------------------------------
 
+%%
+\chapter{Convex Sets}
+\section{Convexity}
+\subsection{Cone}
+\begin{definition}[Cone]
+A set $K \in \R^n$, when $x \in K $ implies $\alpha x \in K$.
+\end{definition}
+A non convex cone can be hyper-plane.\\
+For convex cone $x + y \in K, \forall x,y \in K$.\\
+Cone don't need to be "pointed". e.g. \\
+Direct sums of cones $C_1 + C_2 = \{ x = x_1+x_2 | x_1 \in C_1, x_2 \in C_2 \}$.\\
+\begin{example}
+$S_1^n  \{ X | X=X^n ,\lambda(x) \ge 0\}$\\
+A matrix with positive eigenvalues.
+\end{example}
 
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
+\subsubsection{Operations preserving convexity}
+\begin{itemize}
+\item[Intersection] $C  \cap_{i \in \mathbb{I}}C_i$
+\item[Linear map] Let $A : \mathbb{R}^n \to  \R^n$ be a linear map. If $C \in \R^n$ is convex, so is $A(C) = \{Ax \forall x \in C \}$
+\item[Inverse image] $A^{-1}(D) = \{ x \in \R |Ax \in D \}$
+\end{itemize}
 
-\part{Part Three}
+\subsubsection{Operations that induce convexity}
+Convex hull on $S = \cap \{C | S\in C, C is convex\}$\\
+\begin{example}
+$Co \{ x_1,x_2,\cdots,x_m\} = \{ \sum_{i=1}^m \alpha_i x_i | \alpha \in \delta_m \}$
+\end{example}
+For a convex set $x \in C \Rightarrow x = \sum \alpha_i x_i$. 
+\begin{theorem}[Carathéodory's theorem]
+If a point $x \in \R^d$ lies in the convex hull of a set $P$, there is a subset $P'$ of $P$ consisting of $d + 1$ or fewer points such that $x$ lies in the convex hull of $P'$. Equivalently, x lies in an r-simplex with vertices in P.
+\end{theorem}
 
-%----------------------------------------------------------------------------------------
+\section{Convex Functions}
+\begin{definition}[Convex function]
+Let $C \in \R^n$ be convex, $f:C \to \R$ is convex on f if $x,y \in C \times C$. $\forall \alpha \in (0,1)$, $f(\alpha x + (1-\alpha) y) \le f(\alpha x) + f((1-\alpha) y)$
+\end{definition}
+
+\begin{definition}[Strictly Convex function]
+Let $C \in \R^n$ be convex, $f:C \to \R$ is strictly convex on f if $x,y \in C \times C$. $\forall \alpha \in (0,1)$, $f(\alpha x + (1-\alpha) y) \langle f(\alpha x) + f((1-\alpha) y)$
+\end{definition}
+
+\begin{definition}[Strongly convex]
+$f:C \to \R$ is strongly convex with modules $u \ge 0$ if $f - \frac{1}{2}u || \cdot ||^2$ is convex.
+\end{definition}
+Interpretation: There is a convex quadratic $\frac{1}{2}u || \cdot ||^2$ that lower bounds f.
+\begin{example}
+$\min_{x \in C} f(x) \leftrightarrow \min \bar{f}(x)$
+Useful to turn this into an unconstrained problem. \\
+$$\bar{f}(x) = \begin{cases}
+f(x) \quad if x \in C \\
+\infty \quad  elsewhere
+\end{cases}$$
+\end{example}
+\begin{definition}
+A function $f : \R^n \to \R \cup \infty \ \bar{\R}$ is convex if $x,y \in \R^n \times \R^n$, $\forall x,y , \bar{f}(\alpha x + (1-\alpha) y) \le f(\alpha x) + f((1-\alpha) y)$
+\end{definition}
+Definition 1 is equivalent to definition 2 if $f(x) = \infty$.
+\begin{example}
+$f(x) = \sup_{j \in J} f_j(x)$
+\end{example}
+
+\subsection{Epigraph} 
+\begin{definition}[Epigraph]
+For $f: \R^n \rightarrow \bar{R}$, its epigraph $epi(f) \in \R^{n+1} is the set epi(f) \{ (x,\alpha) | f(x) \in \alpha \}$
+\end{definition}
+Next: a function is convex i.f.f. its epigraph is convex.
+
+\begin{definition}
+A function $f : C \rightarrow \R, C \in \R^n$ is convex if $\forall x, y \in C$, $f(ax + (1-a)x) \le af(x) + (1-a)f(x) \quad \forall a \in (0,1)$.\\ 
+Strict convex: $x \neq y \Rightarrow f(ax + (1-a)x) \le af(x) + (1-a)f(x) $
+\end{definition}
+\begin{remark}
+$f$ is convex $\Rightarrow$ $-f$ is concave.
+\end{remark}
+Level set: $S_{\alpha}f = \{ x | f(x) \le \alpha \}$.\\ 
+$S_{\alpha}f$ is convex $\Leftrightarrow$ $f$ is convex. \\
+\begin{definition}[Strongly convex]
+$f : C \rightarrow \R$ is strongly convex with modules $\mu$ if $\forall x, y \in C$, $\forall \alpha \in (0,1)$, $f(ax + (1-a)x) \le af(x) + (1-a)f(x) - \frac{1}{2\mu}\alpha(1- \alpha) \|x-y\|^2$.
+\end{definition}
+
+\begin{remark}
+\begin{itemize}
+\item $f$ is 2nd-differentiable, $f$ ix \cvx $\iff$ $\nabla^2f(x) \rangle  0$.
+\item $f$ is strongly \cvx $\iff$ $\nabla^2f(x) \rangle  \mu I$ $\iff$ $x \ge \mu$
+\end{itemize}
+\end{remark}
+\begin{definition}[2]
+$f : \R^n \to \bar{\R} $ is \cvx  if $x, y  \in \R , \alpha \in (0,1), f(ax + (1-a)x) \le af(x) + (1-a)f(x)$.  
+\end{definition}
+The effective domain of $f$ is $dom f = \{x | f(x) \langle + \infty \}$ 
+\begin{example}[ludcator function]
+$\delta_c(x) = \begin{cases}
+0 \quad  x \in C \\
++ \infty \quad elsewhere
+\end{cases}$.\\
+$dom \space \delta_c(x) = C$
+\end{example}
+\begin{definition}[Epigraph]
+The epigraph of f is $epi \space f = \{(x,\alpha) | f(x) \le \alpha\}$
+\end{definition}
+The graph of $epi \space f$ is $\{ (x,f(x) | x \in dom \space f\}$.
+\begin{definition}[III]
+A function $f : \R^n \to \bar{\R}$ is %\cvx  if $\epi \space f $ is \cvx
+\end{definition}
+\begin{theorem}
+$f : \R^n \to \bar{\R}$ is \cvx  $\iff$ $\forall x,y \in \R^n, \alpha \in (0,1), f(ax + (1-a)x) \le af(x) + (1-a)f(x)$.
+\end{theorem}
+\begin{proof}
+$\Rightarrow$ take $x,y \in dom \space f$, $(x,f(x)) \in epi \space f$,$(y,f(y)) \in epi \space f$.
+\end{proof}
+
+\begin{example}[Distance]
+Distance to a \cvx  set $d_c(x) = \inf \{ \| z-x \| | z \in C \}$. Take any two sequence $\{ y_k\} and \{ \bar{y}_k\} \subset C$ s.t. $\| y_k - x\| \to d_c(x)$, $\| \bar{y}_k - \bar{x}\| \to d_c(\bar{x})$. $z_k = \alpha y_k + (1 - \alpha) \bar{y}_k$.
+\begin{align*}
+d_c(\alpha x + (1-\alpha) \bar{x}) &\le \| z_k - \alpha x - (1 - \alpha) \bar{x}\| \\
+& = \| \alpha(y_k - x) + (1 - \alpha)(\bar{y}_k - \bar{x})\| \\
+& \le \alpha \| y_k - x\| + (1 - \alpha ) \|\bar{y}_k - \bar{x}\|
+\end{align*}
+Take $k \to \infty$, $d_c(\alpha x + (1 - \alpha) \bar{x}) \le \alpha d(x) + (1 - \alpha) d(\bar{x})$
+\end{example}
+\begin{example}[Eigenvalues]
+Let $X \in S^n := \{ n \times n symmetric matrix\}$. $\lambda_1(x) \ge \lambda_2(X) \ge \ldots \ge \lambda_n(x)$.\\
+$f_k(x) = \sum_{1}^n \lambda_i(x)$.\\
+Equivalent characterization 
+
+\begin{align*}
+f_k(x) & = \max\{ \sum_{i} v_i^T Xv_i | v_i \perp v_j , i \neq j\} \\
+& =  \max\{ tr( V^TXV | V^T V = I_k \} \\
+\max \{tr(VV^TX) \} \text{by circularity}
+\end{align*}
+Note $\langle A,B\rangle  = tr(A,B)$ is true for symmetric matrix. \\
+$\langle A,A\rangle  = |A |_F^2 = \sum_{i} A_{ii}^2$
+\end{example}
+
+\section{Support Function}
+Take a set $C \in \R^n$, not necessarily convex.The support function is $\sigma_C = \R^n \to \bar{\R}$. $\sigma_C(x) = \sum \{ \langle x,u\rangle  | u \in C\}$.
+\includegraphics[scale=0.5]{1_1.png}
+\begin{fact}
+The support function binds the supporting hyper-plane.
+\end{fact}
+
+Supporting functions are
+\begin{itemize}
+\item Positively homogeneous\\
+$\sigma_C(\alpha x) = \alpha \sigma_C(x) \forall \alpha \rangle  0$ \\
+$\sigma_C(\alpha x ) = \sup_{u \in C} \langle \alpha x, u\rangle  = \alpha \sup_{u \in C} \langle x, u\rangle  = \alpha \sigma_C(x)$
+\item Sub-linear( a special case of convex, linear combination holds $\forall \alpha$.\\
+$\sigma_C(\alpha x + (1 - \alpha) y ) = \sup_{u \in C} \langle \alpha x + (1 - \alpha) y,u\rangle  \le \alpha\sup_{u \in C}\langle x,u\rangle  + (1 - \alpha)\sup_{u \in C}\langle y,u\rangle  $
+\end{itemize}
+\begin{example}[L2-norm]
+$\| x \| = \sup_{u \in C} \{ \langle x, u \rangle, u \in \R^n \}$.\\
+$\|x \|_p = \sup \{ \langle x, u \rangle, u \in B_q \}$ where $\frac{1}{p} + \frac{1}{q} = 1$. $B_q = \{ \|x \|_q \le 1\}$.\\
+The norm is 
+\begin{itemize}
+\item Positive homogeneous
+\item sub-linear
+\item If $0 \in C$, $\sigma_C$ is non-negative.
+\item If $C$ is central-symmetric, $\sigma_C(0) = 0$ and $\sigma_C(x) = \sigma_C(-x)$
+\end{itemize}
+\end{example}
+
+\begin{fact}[Epigraph of a support function]
+$epi \space \sigma_C = \{ (x,t) | \sigma_C(x) \le t\}$.
+Suppose $(x,t) \in epi \space \sigma_C$. Take any  $\alpha > 0$. $\alpha(x,t) = (\alpha x, \alpha t)$.\\
+$\alpha \sigma_C(x) = \alpha \sigma_C(x) \le \alpha t$. $\alpha(x,c) \in epi 
+\sigma_C$\\
+\includegraphics[]{1_2}
+\end{fact}
+
+\section{Operations Preserve Convexity of Functions}
+\begin{itemize}
+\item Positive affine transformation \\
+$f_1,f_2,\ldots,f_k \in \space cvx \R^n$.\\
+$f = \alpha_1 f_1 + \alpha_2 f_2 + \ldots + \alpha_k f_k$
+\item Supremum of functions. Let $\{ f_i \}_{i \in I}$ be arbitrary family of functions. If $\exists x \sup_{j \in J} f_j(x) < \infty \Leftrightarrow f(x) = \sup_{j \in J} f_j(x) $\\
+\includegraphics[]{1_3}
+\item Composition with linear map.\\
+$f \in cvx \R^n$, $A:\R^n \to \R^m$ is a linear map.
+$f \circ A (x) = f(Ax) \in cvx \R^n$\\
+\begin{align*}
+f \circ A (x) & = f(A(\alpha x + (1-\alpha) y)) \\
+& = f(A \alpha x + (1-\alpha) A y) \\
+& \le \alpha f(Ax) + (a - \alpha) f(Ay)
+\end{align*}
+\end{itemize}
+
+%---------------------------------------------------------------------------------------
 %	CHAPTER 3
 %----------------------------------------------------------------------------------------
 
-\chapterimage{chapter_head_1.pdf} % Chapter heading image
-
 \chapter{Nonlinear Problem}
-Dans cette section ou se mele symbolique et numérique pour modélisé et résoudre des probl\`emes complexes, l'accents et prix sur des questions un 
+Les sujets de ce chapitre sont du néanmoins axées sur des questions
+ou l'approche mathématique et physique et demandé 
 
-\section{Chaos}\index{Chaos}
+\section{Équation différentielle}
+Sans aucun doute 
+\section{Chaos}\index{Mouvement d'un pendule}
 Prenons une pause dans l'apprentissage de nouvelles techniques et algorithmes informatiques
 pour un peu, et passer du temps en utilisant ce que nous avons appris jusqu'à présent pour enquêter sur quelque chose d'intéressant. Nous allons commencer avec quelque chose de familier: le simple pendule.
 \subsection{Pendule simple}
 Le pendule simple figure
 \subsection{Pendule à deux bras}
-\subsection{Les mouvements d’un robot}
+\subsection{Mouvements d’un robot}
+Qu'est ce qu'il faut savoir quand en veut modélisé le comportement
+d'un robot?. Et bien la réponse est tout simplement des mathématiques
+
 \section{Solution non linéaire d'équation algébrique}\index{Solving Nonlinear Algebraic Equations}
 
 Qu'est ce que non-linéaire et qu'est ce que une \'equation alg\'ebrique
@@ -525,7 +718,7 @@ Une \'equation alg\'ebrique est un polyn\^ome de la forme $P(x)$
 \begin{equation}
 \exp(-x)\sin(x) = \cos(x)
 \end{equation}
-%------------------------------------------------
+
 \section{Transport optimal}
 C'est quoi le \textit{ transport optimal}?, exemple simple..., le domaine du transport optimal
 est très 
@@ -548,63 +741,36 @@ Treatment 3 & 0.0009271 & 0.296 \\
 \caption{Table caption}
 \end{table}
 
-
-\begin{figure}[h]
-\centering\includegraphics[scale=0.5]{placeholder}
-\caption{Figure caption}
-\end{figure}
+%
+%\begin{figure}[h]
+%\centering\includegraphics[scale=0.5]
+%\caption{Figure caption}
+%\end{figure}
 
 %----------------------------------------------------------------------------------------
-%	ANNEXE
+%	Technique Avancée
 %----------------------------------------------------------------------------------------
 
-\part{ANNEXE}
+\chapter{Outils avancée}
 
 \section{Programmation Orientée Objet}\index{Notations}
 \section{D\'ecorateurs}
-Les d\'ecorateurs un m\'ecanisme incontournable pour \'ecrire de tr\'es bon code et purement lisible et
-portable
-\section{Optimisation du code}
+Les d\'ecorateurs un m\'ecanisme incontournable pour \'ecrire de tr\'es bon code et purement 
+lisible et portable
+\subsection{Optimisation du code}
+Sans aucun doute l'usage de la programmation symbolique avec ce que en a vue plus haut, ralentisse grandement l'exécution du programme, donc en gagne sur le coté sureté, élégance
+et maintenance du code et d'autre part en perd complètement la vitesse; penser à des centaine de ligne de code si vous voulez programmé un robot, voiture ou des objets connectés qui implémente des algorithmes mathématiques et qui de demande beaucoup de ressource est un temps de retour très élevées 
+
 \include{annexe/optimization/cython}
-\subsection{Theano}
 \include{annexe/optimization/theano}
 \section{Interface graphique}
-Quelle bibliothèque choisir: sous Python en \`a le choix entre diff\'erente, Tkinter, Gtk, Qt, wx et ftk
-et il existe encore d'autre bibliothques qui sont con\c{c}u pour le calcul et application scientifique
-\'editer par Thought[...] dans cette section nous allons  
+Quelle bibliothèque choisir: sous Python en \`a le choix entre diff\'erente, Tkinter, Gtk, 
+Qt, wx et ftk, et il existe encore d'autre bibliothèques qui sont con\c{c}u pour le calcul 
+et application scientifique \'editer par Thought[...] dans cette section nous allons. Une 
+autre approche serait d'utiliser les ipywdigets avec Jupyter ou JupyterLab notebook, les 
+ipywidgets sont trés intéressante approches pour des graphiques interactives rapide d'usages
+et bénéfiques sur le plan de présentation par exemple quand en veut exporté ou les partagés 
+
 \include{annexe/gui/qt.tex}
-
-
-
-%%----------------------------------------------------------------------------------------
-%%	BIBLIOGRAPHY
-%%----------------------------------------------------------------------------------------
-%
-%\chapter*{Bibliography}
-%\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
-%
-%%------------------------------------------------
-%
-%\section*{Articles}
-%\addcontentsline{toc}{section}{Articles}
-%\printbibliography[heading=bibempty,type=article]
-%
-%%------------------------------------------------
-%
-%\section*{Books}
-%\addcontentsline{toc}{section}{Books}
-%\printbibliography[heading=bibempty,type=book]
-%
-%----------------------------------------------------------------------------------------
-%	INDEX
-%----------------------------------------------------------------------------------------
-
-\cleardoublepage
-\phantomsection
-\setlength{\columnsep}{0.75cm}
-\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
-\printindex
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
