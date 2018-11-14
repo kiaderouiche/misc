@@ -17,8 +17,8 @@
 
 \usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
 
-\usepackage{xcolor} % Required for specifying colors by name
-\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book
+%\usepackage{xcolor} % Required for specifying colors by name
+%\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book%
 
 % Font Settings
 \usepackage{avant} % Use the Avantgarde font for headings
@@ -55,7 +55,7 @@
 \vspace*{5cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
 \textbf{SymPy par la pratique}\\
-{\LARGE Convex Analysis and Optimization}\par % Book title
+{\LARGE Exemple et exercice}\par % Book title
 \vspace*{1cm}
 {\Huge K.I.A Derouiche}\par % Author name
 \endgroup
@@ -103,6 +103,84 @@
 %----------------------------------------------------------------------------------------
 
 \chapterimage{head2.png} % Chapter heading image
+\section{Introduction}
+Ce recueil d'exercices et de problèmes de programmation s'adresse aussi bien aux débutants qu'aux programmeurs confirmés. Il présente en effet plusieurs états d'esprit dont les deux principaux sont la programmation classique en Pascal pour les étudiants du premier cycle universitaire, et la programmation fonctionnelle en Lisp pour le second cycle.
+
+Ce livre constitue un panorama (non exhaustif, mais suffisant) sur les langages de programmation, et offre une grande variété dans les sujets traités : graphiques, calcul matriciel, traitements de chaînes de caractères, graphes, intelligence artificielle...
+\\
+La première partie du livre sera consacré \`a la résolution par une approche symbolique au divers questions posées au étudiants et toute personnes qui aiment savoir et voir s'initier  pour des niveaux et des questions rencontrés, la deuxième partie du livre sera questions aux problèmes plus rencontrés pour des étudiants passionnée des questions entre mathématiques et technologies, chercheurs et développeurs d'applications scientifiques, la troisième partie plus consacré aux questions poussées  
+
+
+\subsection{Pourquoi programmer en symbolique }
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+
+\chapter{Calcul formel}
+
+L'approche La simulation numérique est devenue essentielle dans de nombreux domaines tels que la mécanique des fluides et des solides, la météo, l'évolution du climat, la biologie ou les semi-conducteurs. Elle permet de comprendre, de prévoir, d'accéder là où les instruments de mesures s'arrêtent. 
+
+Ce livre présente des méthodes performantes du calcul scientifique : matrices creuses, résolution efficace des grands systèmes linéaires, ainsi que de nombreuses applications à la résolution par éléments finis et différences finies. Alternant algorithmes et applications, les programmes sont directement présentés en langage C++. Ils sont sous forme concise et claire, et utilisent largement les notions de classe et de généricité du langage C++. 
+
+Le contenu de ce livre a fait l'objet de cours de troisième année à l'école nationale supérieure d'informatique et de mathématiques appliquées de Grenoble (ENSIMAG) ainsi qu'au mastère de mathématiques appliquées de l'université Joseph Fourier. Des connaissances de base d'algèbre matricielle et de programmation sont recommandées. La maîtrise du contenu de cet ouvrage permet d'appréhender les principaux paradigmes de programmation du calcul scientifique. Il est alors possible d'appliquer ces paradigmes pour aborder des problèmes d'intérêt pratique, tels que la résolution des équations aux dérivées partielles, qui est abordée au cours de ce livre. La diversité des sujets abordés, l'efficacité des algorithmes présentés et leur écriture directe en langage C++ font de cet ouvrage un recueil fort utile dans la vie professionnelle d'un ingénieur. 
+
+Le premier chapitre présente les bases fondamentales pour la suite : présentation du langage C++ à travers la conception d'une classe de quaternions et outils d'analyse asymptotique du temps de calcul des algorithmes. Le second chapitre aborde l'algorithme de transformée de Fourier rapide et développe deux applications à la discrétisation d'équations aux dérivées partielles par la méthode des différences finies. Le troisième chapitre est dédié aux matrices creuses et à l'algorithme du gradient conjugué. Ces notions sont appliquées à la méthode des éléments finis. En annexe sont groupés des exemples de génération de maillage et de visualisation graphique. 
+
+S'il est cependant recommandé de maîtriser les notions du premier chapitre pour aborder le reste du livre, les chapitres deux et trois sont complètement indépendants et peuvent être abordés séparément. Ces chapitres sont complétés par des exercices qui en constituent des développements, ainsi que des notes bibliographiques retraçant l'historique des travaux et fournissant des références sur des logiciels et librairies récents implémentant ou étendant les algorithmes présentés. 
+
+\section{Système de calcul formel}
+Dans cette section en va exposer les systèmes de calcul formel, leur 
+intérêt qui à vue un renouveau ces dernières années à cause de 
+l'émergence de technique, technologie et nouvelle approche de 
+programmation pour le domaine scientifique et industriel, hormis le fait 
+que le logiciel de calcul formel en soient sont un outil pédagogique 
+indispensable pour les scientifiques et les ingénieurs
+
+\begin{example}
+Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+\begin{equation}
+f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+\end{equation}
+The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
+\end{example}
+
+qui exprime ce qui nous permet notre choix pour un CAS qui possède des caractéristiques techniques et sur le plan du coût très important quand peut résumer dans les points suivants:
+\begin{enumerate}
+	\item Leger et 
+	\item S’appuie sur le langage de programmation Python
+	\item Portabilité dans toute transparence
+\end{enumerate}
+
+L'un des systèmes qui peut nous permettre d'écrire cette exemple avec un ordinateurs avec SymPy qui semble mieu intégré
+
+\section{Bibliothèque SymPy}
+
+Dans un cas plus simple l'exemple 1.1 se formule beaucoup plus dans un outil comme SymPy est une bibliothèque de calcul formel elle est aussi un environnement pour 
+l’apprentissage de l’algèbre, l’analyse, géométrie, combinatoire, cryptographie, mécanique 
+classique et quantique pour le lycée et l’université mais aussi un environnement de 
+développement et de recherche. SymPy  écrit entièrement en Python un langage de 
+programmation facile à apprendre et adapté à l’apprentissage,  elle fourni aux étudiant 
+\textit{SymPyGamma} une application web   notamment des primitives générales de traitement des expressions algébriques (développement, factorisation, …), des aides à l’organisation des objets mathématiques intervenant dans la résolution d’un problème ainsi qu’une assistance à la preuve. Il permet au professeur de préparer et de suivre le travail de l’élève. Différentes maquettes ont été développées et testées auprès d’élèves. Dans la plus récente, nous nous sommes attachés à explorer une nouvelle forme d’activité algébrique. Alors que le calcul en papier crayon et les logiciels standards considèrent
+ les expressions de façon isolée, l’environnement que nous développons organise en réseau les différentes expressions intervenant dans la résolution d’un problème. L’ordinateur peut facilement mettre à jour ce réseau quand l’utilisateur modifie certains de ses éléments. Il devient ainsi possible, pour aborder un problème générique, d’explorer facilement des cas particuliers et de conduire une généralisation. Les relations entre expressions algébriques sont mieux mises en évidence du fait de leur invariance dans les modifications du réseau. De façon très concise, Casyopée peut être défini
+\subsection{SymPyGamma}
+Est une interface onWeb marche avec un navigateur contient plusieurs catégorie liée de calcul, dynamique. L'interet de cette outil qu'il est facilement partageable adapté pour l’enseignement et surtout l'auto-apprentissage 
+\subsection{Besoin de rester dans le symbolique}
+Le symbolique est une grande importance d'un point de vue technique, car il permet
+de limité les risques de bug dans l'exécution des programmes, dans le contexte de 
+la vérification formelle si en prend le programme suivant:
+
+\subsection{Passage du symbolique au numérique}
+Généralement, le symbolique parmis c'est  
+\subsection{Faire des dessins}
+
+%--------------------------------------------------------------------------------------
+%
+%--------------------------------------------------------------------------------------
+
 \chapter{Convex Sets}
 \section{Convexity}
 \subsection{Cone}
@@ -292,8 +370,75 @@ f \circ A (x) & = f(A(\alpha x + (1-\alpha) y)) \\
 %---------------------------------------------------------------------------------------
 %
 %---------------------------------------------------------------------------------------
-\chapter{Convex Sets}
-\section{Convexity}
-\subsection{Cone}
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+
+\chapter{Nonlinear Problem}
+Dans cette section ou se mele symbolique et numérique pour modélisé et résoudre des probl\`emes complexes, l'accents et prix sur des questions un 
+
+\section{Chaos}\index{Chaos}
+Prenons une pause dans l'apprentissage de nouvelles techniques et algorithmes informatiques
+pour un peu, et passer du temps en utilisant ce que nous avons appris jusqu'à présent pour enquêter sur quelque chose d'intéressant. Nous allons commencer avec quelque chose de familier: le simple pendule.
+\subsection{Pendule simple}
+Le pendule simple figure
+\subsection{Pendule à deux bras}
+\subsection{Les mouvements d’un robot}
+\section{Solution non linéaire d'équation algébrique}\index{Solving Nonlinear Algebraic Equations}
+
+Qu'est ce que non-linéaire et qu'est ce que une \'equation alg\'ebrique
+
+Une \'equation alg\'ebrique est un polyn\^ome de la forme $P(x)$
+
+\begin{equation}
+\exp(-x)\sin(x) = \cos(x)
+\end{equation}
+%------------------------------------------------
+\section{Transport optimal}
+C'est quoi le \textit{ transport optimal}?, exemple simple..., le domaine du transport optimal
+est très 
+%-------------------------------------------------
+\section{Le calcul des variations}
+
+\section{Figure}\index{Figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l l l}
+\toprule
+\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+\midrule
+Treatment 1 & 0.0003262 & 0.562 \\
+Treatment 2 & 0.0015681 & 0.910 \\
+Treatment 3 & 0.0009271 & 0.296 \\
+\bottomrule
+\end{tabular}
+\caption{Table caption}
+\end{table}
+
+%
+%\begin{figure}[h]
+%\centering\includegraphics[scale=0.5]
+%\caption{Figure caption}
+%\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	ANNEXE
+%----------------------------------------------------------------------------------------
+
+\section{Annexe}
+\subsection{Programmation Orientée Objet}\index{Notations}
+\subsection{D\'ecorateurs}
+Les d\'ecorateurs un m\'ecanisme incontournable pour \'ecrire de tr\'es bon code et purement lisible et
+portable
+\subsection{Optimisation du code}
+\include{annexe/optimization/cython}
+\include{annexe/optimization/theano}
+\section{Interface graphique}
+Quelle bibliothèque choisir: sous Python en \`a le choix entre diff\'erente, Tkinter, Gtk, Qt, wx et ftk
+et il existe encore d'autre bibliothques qui sont con\c{c}u pour le calcul et application scientifique
+\'editer par Thought[...] dans cette section nous allons  
+\include{annexe/gui/qt.tex}
+
 
 \end{document}
