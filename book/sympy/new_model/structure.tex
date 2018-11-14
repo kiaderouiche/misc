@@ -255,7 +255,9 @@ innerbottommargin=5pt]{cBox}
 \newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
-\newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}	
+\newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}
+\newtheorem{solution}{Solution}[chapter]
+\newtheorem{exerciseT}{Exercise}[chapter]
 
 %----------------------------------------------------------------------------------------
 %	REMARK ENVIRONMENT
@@ -362,6 +364,9 @@ innerbottommargin=5pt]{cBox}
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
 % Python environment
 \usepackage{listings}
 % Python style for highlighting
@@ -392,4 +397,5 @@ showstringspaces=false            %
 
 % Python for inline
 \newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+%%
 
