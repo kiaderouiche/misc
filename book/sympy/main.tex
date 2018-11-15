@@ -137,13 +137,15 @@ Un logiciel de système formel est un outil qui facilite le calcul symbolique. L
 \end{definition}
 
 \begin{example}
-Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+soit $G=\{x\in\mathbb{R}^2:|x|<3\}$ et noté par: $x^0=(1,1)$; en considère la fonction:
 \begin{equation}
 f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
 & 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
 \end{equation}
 The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
 \end{example}
+
+cet exemple se traduit en forme symbolique avec la bibliothèque SymPy:
 
 \subsection{Quelques logiciels de calcul formel}
 
