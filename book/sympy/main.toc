@@ -51,9 +51,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Remarks}{16}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Corollaries}{16}{section.2.6}
+\contentsline {section}{\numberline {2.6}Corollaries}{17}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Propositions}{16}{section.2.7}
+\contentsline {section}{\numberline {2.7}Propositions}{17}{section.2.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7.1}Several equations}{17}{subsection.2.7.1}
 \defcounter {refsection}{0}\relax 
@@ -65,11 +65,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8.2}Paragraph of Text}{17}{subsection.2.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.9}Exercises}{17}{section.2.9}
+\contentsline {section}{\numberline {2.9}Exercises}{18}{section.2.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.10}Problems}{17}{section.2.10}
+\contentsline {section}{\numberline {2.10}Problems}{18}{section.2.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.11}Vocabulary}{17}{section.2.11}
+\contentsline {section}{\numberline {2.11}Vocabulary}{18}{section.2.11}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}POO}{19}{chapter.3}
 \defcounter {refsection}{0}\relax 
