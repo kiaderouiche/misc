@@ -1,2 +1,2 @@
 # misc
-Miscellaneous codes and book
+Miscellaneous: presentation codes and book.
