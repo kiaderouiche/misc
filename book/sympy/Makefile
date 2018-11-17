@@ -4,9 +4,7 @@
 all:main.pdf
 
 clean:
-	rm -f *.aux *.bcf *.log  *.xml  *.toc */*.aux *.bbl *.blg
-
-
+	rm -f *.aux *.bcf *.log  *.xml  *.toc */*.aux *.bbl *.blg main.synctex.gz
 %.pdf: %.tex %.bib #contenu/*.tex inclure/*.tex
 	pdflatex $*.tex
 

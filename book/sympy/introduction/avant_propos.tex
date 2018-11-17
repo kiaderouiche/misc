@@ -1,47 +1,50 @@
 \section{Avant-Propos}
-Ce livre traite de SymPy, une bibliothèque de calcul symbolique entièrement écrite en Python un langage de 
-programmation de haut niveau, orienté objet, totalement libre et terriblement efficace, conçu pour produire 
-du code de qualité, portable et facile à intégrer. Ainsi la conception d'un programme Python est très 
-rapide et offre au développeur une bonne productivité. En tant que langage dynamique, il est
-très souple d'utilisation et constitue un complément idéal à des langages compilés.
-Il reste un langage complet et autosuffisant, pour des petits scripts fonctionnels de 
-quelques lignes, comme pour des applicatifs complexes de plusieurs centaines de modules.
+Ce livre traite de SymPy, une bibliothèque de calcul symbolique entièrement écrite en Python un langage 
+de programmation de haut niveau, orienté objet, totalement libre, conçu pour produire 
+du code de qualité, portable et facile à intégrer. Ainsi la conception d'un programme scientifique  ou 
+symbolique avec SymPy et Python est très rapide et offre au développeur une bonne productivité. En tant 
+que bibliothèque pythonienne elle repose sur un langage dynamique, très souple d'utilisation et 
+constitue un complément idéal à des langages compilés. Elle reste une bibliothèque complète et autosuffisant, pour des petits scripts fonctionnels de quelques lignes, comme pour des applicatifs complexes de plusieurs centaines de modules.
 
 \subsection*{Pourquoi ce livre ?}
-Il existe déjà de nombreux ouvrages excellents traduits de l'anglais qui traitent de
-Python voire en présentent intégralité des modules disponibles. Citons Python en
-concentré, le manuel de référence de Mark Lutz et David Ascher, aux éditions
-O'Reilly, ou encore Apprendre à programmer avec Python de Gérard Swinnen, aux
-éditions Eyrolles, inspiré en partie du texte How to think like a computer scientist
-(Downey, Elkner, Meyers), et comme son titre l'indique, tr\'es p\'edadogique.
-Alors, pourquoi ce livre ?
+Il n'existe pas beaucoup d'ouvrages qui traitent du calcul symbolique en générale par  
+rapport aux calculs numériques ou des ouvrages consacré aux bibliothèques symbolique écrite en Python 
+est en particulier gravitent autour de SymPy mis à part un livre de 50 pages, quelques chapitres ou des 
+lignes de codes cité à titre d'exemples. Citons le livre de référence de Svein Linge et Hans Petter 
+Langtangen Programming for Computations – Python A Gentle Introduction to Numerical Simulations with 
+Python, aux éditions Springer, ou encore une version du livre de 50 pages Instant SymPy Starter de Ronan 
+Lamy, aux éditions Packt Publishing Limited, Le livre est Instant SymPy Starter de Ronan Lamy, c'est un 
+guide de démarrage rapide, La documentation en ligne de SymPy est bonne, mais il serait plus facile de 
+commencer avec ce livre. Alors, pourquoi ce livre ?
 
-Si ce livre présente comme ses prédécesseurs les notions fondamentales du langage, avec
-bien sûr des exemples originaux, des choix dans la présentation de certains modules, et
-une approche globale particulière, il tente également d’ajouter à ce socle des éléments
-qui participent de la philosophie de la programmation en Python, à savoir :
-• des conventions de codage ;
-• des recommandations pour la programmation dirigée par les tests ;
-• des bonnes pratiques de programmation et des techniques d’optimisation ;
-• des design patterns orientés objet.
-Même si chacun de ces sujets pourrait à lui seul donner matière à des ouvrages
-entiers, les réunir dans un seul et même livre contribue à fournir une vue complète de
-ce qu’un développeur Python averti et son chef de projet mettent en œuvre quoti-
-diennement.
+Si ce livre présente comme celui de Ronan Lamy les notions de la bibliothèque, celui-la ajoute des  
+exemples originaux, des choix dans la présentation des classes, et une approche globale particulière et 
+détaillé, il tente également d’ajouter à ce socle des éléments qui participent de la philosophie de la 
+programmation en Python scientifique, aller plus loin dans le développement non scientifique, mettre en 
+valeur L’Intérêt et l'importance, à savoir :
+\begin{itemize}
+ \item des conventions de codage ;
+ \item combiné l'approche symbolique et numérique;
+ \item des bonnes pratiques de programmation et des techniques d’optimisation ;
+\end{itemize}
+
+Même si chacun de ces sujets pourrait à lui seul donner matière à des ouvrages entiers, les réunir dans 
+un seul et même livre contribue à fournir une vue complète de ce qu’un développeur d'application 
+scientifique en particulier et Python averti et son chef de projet mettent en œuvre quotidiennement.
 
 \subsection*{A qui s'adresse l'ouvrage?}
 Cet ouvrage s’adresse bien sûr aux développeurs de tous horizons mais également aux
-chefs de projets.
-Les développeurs ne trouveront pas dans ce livre de bases de programmation ; une
-pratique minimale préalable est indispensable, quel que soit le langage utilisé. Il n’est
-pour autant pas nécessaire de maîtriser la programmation orientée objet et la con-
-naissance d’un langage impératif est suffisante.
+étudiants,chercheurs, enseignants et chefs de projets. Ils ne trouveront pas dans ce livre de bases de 
+programmation; une pratique minimale préalable est indispensable de Python, quel que soit le langage 
+utilisé. Il n’est pour autant pas nécessaire de maîtriser la programmation orientée objet et 
+la connaissance d’un langage impératif est suffisante.
 Les développeurs Python débutants – ou les développeurs avertis ne connaissant pas
-encore ce langage – trouveront dans cet ouvrage des techniques avancées, telles que la
-programmation dirigée par les tests, les patterns efficaces et l’application de certains
-design patterns objet.
+encore cette bibliothèque – trouveront dans cet ouvrage des techniques et sujets avancées, les patterns 
+efficaces et l’application de certains design patterns objet, topologie, théorie des catégories, machine
+learning.
+Les étudiants et enseignants trouveront un ouvrage ouvert sur l'apprentissage par l'exercice résolus et 
+une interprétation d’exercices mathématiques  
+les chercheurs trouveront un outil léger et efficace à travers des approches poussées liées aux 
+questions récentes en connections avec les mathématiques pures et appliquées de physique théorique.
 Les chefs de projets trouveront des éléments pratiques pour augmenter l’efficacité de
-leurs équipes, notamment la présentation des principaux modules de la bibliothèque
-standard – pour lutter contre le syndrome du NIH (Not Invented Here) –, des con-
-ventions de codage, et un guide explicite des techniques de programmation dirigée
-par les tests.
+leurs équipes pluridisciplinaires, notamment la présentation des principaux modules à la fois issues de  la bibliothèque standard, graphique et numérique.
