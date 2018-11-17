@@ -1,55 +1,65 @@
 \BOOKMARK [1][-]{section.0.1}{Avant-Propos}{}% 1
 \BOOKMARK [1][-]{section.0.2}{Introduction}{}% 2
-\BOOKMARK [0][-]{chapter.1}{Ensemble}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Ensemble}{chapter.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.1}{Ensembles}{section.1.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Premiers pas en Python symbolique}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.2.1}{Variable et affection}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.2}{Contr\364le du flux d\220instructions}{section.1.2}% 8
-\BOOKMARK [1][-]{section.1.3}{Les Fonctions}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.4}{Structures de donn\351es}{chapter.1}% 10
-\BOOKMARK [2][-]{subsection.1.4.1}{Logique}{section.1.4}% 11
-\BOOKMARK [2][-]{subsection.1.4.2}{Ensembles}{section.1.4}% 12
-\BOOKMARK [2][-]{subsection.1.4.3}{Polyn\364mes}{section.1.4}% 13
-\BOOKMARK [2][-]{subsection.1.4.4}{Nombres parfaits et nombres chanceux}{section.1.4}% 14
-\BOOKMARK [1][-]{section.1.5}{Remarks}{chapter.1}% 15
-\BOOKMARK [1][-]{section.1.6}{Corollaries}{chapter.1}% 16
-\BOOKMARK [1][-]{section.1.7}{Propositions}{chapter.1}% 17
-\BOOKMARK [2][-]{subsection.1.7.1}{Several equations}{section.1.7}% 18
-\BOOKMARK [2][-]{subsection.1.7.2}{Single Line}{section.1.7}% 19
-\BOOKMARK [1][-]{section.1.8}{Examples}{chapter.1}% 20
-\BOOKMARK [2][-]{subsection.1.8.1}{Equation and Text}{section.1.8}% 21
-\BOOKMARK [2][-]{subsection.1.8.2}{Paragraph of Text}{section.1.8}% 22
-\BOOKMARK [1][-]{section.1.9}{Exercises}{chapter.1}% 23
-\BOOKMARK [1][-]{section.1.10}{Problems}{chapter.1}% 24
-\BOOKMARK [1][-]{section.1.11}{Vocabulary}{chapter.1}% 25
-\BOOKMARK [0][-]{chapter.2}{POO}{}% 26
-\BOOKMARK [1][-]{section.2.1}{Programmation Orient\351e Objet}{chapter.2}% 27
-\BOOKMARK [2][-]{subsection.2.1.1}{POO}{section.2.1}% 28
-\BOOKMARK [2][-]{subsection.2.1.2}{Notions de COO et d\220encapsulation}{section.2.1}% 29
-\BOOKMARK [0][-]{chapter.3}{Convex Sets}{}% 30
-\BOOKMARK [1][-]{section.3.1}{Convexity}{chapter.3}% 31
-\BOOKMARK [2][-]{subsection.3.1.1}{Cone}{section.3.1}% 32
-\BOOKMARK [1][-]{section.3.2}{Convex Functions}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.2.1}{Epigraph}{section.3.2}% 34
-\BOOKMARK [1][-]{section.3.3}{Support Function}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.4}{Operations Preserve Convexity of Functions}{chapter.3}% 36
-\BOOKMARK [0][-]{chapter.4}{Nonlinear Problem}{}% 37
-\BOOKMARK [1][-]{section.4.1}{\311quation diff\351rentielle}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.2}{Chaos}{chapter.4}% 39
-\BOOKMARK [2][-]{subsection.4.2.1}{Pendule simple}{section.4.2}% 40
-\BOOKMARK [2][-]{subsection.4.2.2}{Pendule \340 deux bras}{section.4.2}% 41
-\BOOKMARK [2][-]{subsection.4.2.3}{Mouvements d\220un robot}{section.4.2}% 42
-\BOOKMARK [1][-]{section.4.3}{Solution non lin\351aire d'\351quation alg\351brique}{chapter.4}% 43
-\BOOKMARK [1][-]{section.4.4}{La th\351orie de cat\351gorie}{chapter.4}% 44
-\BOOKMARK [1][-]{section.4.5}{M\351canique quantique}{chapter.4}% 45
-\BOOKMARK [1][-]{section.4.6}{Transport optimal}{chapter.4}% 46
-\BOOKMARK [1][-]{section.4.7}{Le calcul des variations}{chapter.4}% 47
-\BOOKMARK [1][-]{section.4.8}{Figure}{chapter.4}% 48
-\BOOKMARK [0][-]{chapter.5}{Outils avanc\351e}{}% 49
-\BOOKMARK [1][-]{section.5.1}{Programmation Orient\351e Objet}{chapter.5}% 50
-\BOOKMARK [1][-]{section.5.2}{D\351corateurs}{chapter.5}% 51
-\BOOKMARK [2][-]{subsection.5.2.1}{Optimisation du code}{section.5.2}% 52
-\BOOKMARK [2][-]{subsection.5.2.2}{Cython}{section.5.2}% 53
-\BOOKMARK [2][-]{subsection.5.2.3}{Theano}{section.5.2}% 54
-\BOOKMARK [1][-]{section.5.3}{Interface graphique}{chapter.5}% 55
+\BOOKMARK [2][-]{subsection.0.2.1}{Pourquoi programmer en symbolique }{section.0.2}% 3
+\BOOKMARK [2][-]{subsection.0.2.2}{Calcul formel}{section.0.2}% 4
+\BOOKMARK [2][-]{subsection.0.2.3}{Un peu de th\351orie}{section.0.2}% 5
+\BOOKMARK [2][-]{subsection.0.2.4}{Logiciel de syst\350me de calcul formel}{section.0.2}% 6
+\BOOKMARK [2][-]{subsection.0.2.5}{Quelques logiciels de calcul formel}{section.0.2}% 7
+\BOOKMARK [2][-]{subsection.0.2.6}{Biblioth\350que SymPy}{section.0.2}% 8
+\BOOKMARK [2][-]{subsection.0.2.7}{SymPyGamma}{section.0.2}% 9
+\BOOKMARK [2][-]{subsection.0.2.8}{Besoin de rester dans le symbolique}{section.0.2}% 10
+\BOOKMARK [2][-]{subsection.0.2.9}{Passage du symbolique au num\351rique}{section.0.2}% 11
+\BOOKMARK [2][-]{subsection.0.2.10}{Faire des dessins}{section.0.2}% 12
+\BOOKMARK [0][-]{chapter.1}{Ensemble}{}% 13
+\BOOKMARK [1][-]{section.1.1}{Ensemble}{chapter.1}% 14
+\BOOKMARK [2][-]{subsection.1.1.1}{Ensembles}{section.1.1}% 15
+\BOOKMARK [1][-]{section.1.2}{Premiers pas en Python symbolique}{chapter.1}% 16
+\BOOKMARK [2][-]{subsection.1.2.1}{Variable et affection}{section.1.2}% 17
+\BOOKMARK [2][-]{subsection.1.2.2}{Contr\364le du flux d\220instructions}{section.1.2}% 18
+\BOOKMARK [1][-]{section.1.3}{Les Fonctions}{chapter.1}% 19
+\BOOKMARK [1][-]{section.1.4}{Structures de donn\351es}{chapter.1}% 20
+\BOOKMARK [2][-]{subsection.1.4.1}{Logique}{section.1.4}% 21
+\BOOKMARK [2][-]{subsection.1.4.2}{Ensembles}{section.1.4}% 22
+\BOOKMARK [2][-]{subsection.1.4.3}{Polyn\364mes}{section.1.4}% 23
+\BOOKMARK [2][-]{subsection.1.4.4}{Nombres parfaits et nombres chanceux}{section.1.4}% 24
+\BOOKMARK [1][-]{section.1.5}{Remarks}{chapter.1}% 25
+\BOOKMARK [1][-]{section.1.6}{Corollaries}{chapter.1}% 26
+\BOOKMARK [1][-]{section.1.7}{Propositions}{chapter.1}% 27
+\BOOKMARK [2][-]{subsection.1.7.1}{Several equations}{section.1.7}% 28
+\BOOKMARK [2][-]{subsection.1.7.2}{Single Line}{section.1.7}% 29
+\BOOKMARK [1][-]{section.1.8}{Examples}{chapter.1}% 30
+\BOOKMARK [2][-]{subsection.1.8.1}{Equation and Text}{section.1.8}% 31
+\BOOKMARK [2][-]{subsection.1.8.2}{Paragraph of Text}{section.1.8}% 32
+\BOOKMARK [1][-]{section.1.9}{Exercises}{chapter.1}% 33
+\BOOKMARK [1][-]{section.1.10}{Problems}{chapter.1}% 34
+\BOOKMARK [1][-]{section.1.11}{Vocabulary}{chapter.1}% 35
+\BOOKMARK [0][-]{chapter.2}{POO}{}% 36
+\BOOKMARK [1][-]{section.2.1}{Programmation Orient\351e Objet}{chapter.2}% 37
+\BOOKMARK [2][-]{subsection.2.1.1}{POO}{section.2.1}% 38
+\BOOKMARK [2][-]{subsection.2.1.2}{Notions de COO et d\220encapsulation}{section.2.1}% 39
+\BOOKMARK [0][-]{chapter.3}{Convex Sets}{}% 40
+\BOOKMARK [1][-]{section.3.1}{Convexity}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.1.1}{Cone}{section.3.1}% 42
+\BOOKMARK [1][-]{section.3.2}{Convex Functions}{chapter.3}% 43
+\BOOKMARK [2][-]{subsection.3.2.1}{Epigraph}{section.3.2}% 44
+\BOOKMARK [1][-]{section.3.3}{Support Function}{chapter.3}% 45
+\BOOKMARK [1][-]{section.3.4}{Operations Preserve Convexity of Functions}{chapter.3}% 46
+\BOOKMARK [0][-]{chapter.4}{Nonlinear Problem}{}% 47
+\BOOKMARK [1][-]{section.4.1}{\311quation diff\351rentielle}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.2}{Chaos}{chapter.4}% 49
+\BOOKMARK [2][-]{subsection.4.2.1}{Pendule simple}{section.4.2}% 50
+\BOOKMARK [2][-]{subsection.4.2.2}{Pendule \340 deux bras}{section.4.2}% 51
+\BOOKMARK [2][-]{subsection.4.2.3}{Mouvements d\220un robot}{section.4.2}% 52
+\BOOKMARK [1][-]{section.4.3}{Solution non lin\351aire d'\351quation alg\351brique}{chapter.4}% 53
+\BOOKMARK [1][-]{section.4.4}{La th\351orie de cat\351gorie}{chapter.4}% 54
+\BOOKMARK [1][-]{section.4.5}{M\351canique quantique}{chapter.4}% 55
+\BOOKMARK [1][-]{section.4.6}{Transport optimal}{chapter.4}% 56
+\BOOKMARK [1][-]{section.4.7}{Le calcul des variations}{chapter.4}% 57
+\BOOKMARK [1][-]{section.4.8}{Figure}{chapter.4}% 58
+\BOOKMARK [0][-]{chapter.5}{Outils avanc\351e}{}% 59
+\BOOKMARK [1][-]{section.5.1}{Programmation Orient\351e Objet}{chapter.5}% 60
+\BOOKMARK [1][-]{section.5.2}{D\351corateurs}{chapter.5}% 61
+\BOOKMARK [2][-]{subsection.5.2.1}{Optimisation du code}{section.5.2}% 62
+\BOOKMARK [2][-]{subsection.5.2.2}{Cython}{section.5.2}% 63
+\BOOKMARK [2][-]{subsection.5.2.3}{Theano}{section.5.2}% 64
+\BOOKMARK [1][-]{section.5.3}{Interface graphique}{chapter.5}% 65
