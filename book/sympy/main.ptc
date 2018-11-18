@@ -3,7 +3,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {0.1}Avant-Propos}{6}{section.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.2}Introduction}{8}{section.0.2}
+\contentsline {section}{\numberline {0.2}Premier pas vers SymPy}{8}{section.0.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {0.2.1}Pourquoi programmer en symbolique }{8}{subsection.0.2.1}
 \defcounter {refsection}{0}\relax 
@@ -13,17 +13,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {0.2.4}Logiciel de syst\IeC {\`e}me de calcul formel}{9}{subsection.0.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.5}Quelques logiciels de calcul formel}{9}{subsection.0.2.5}
+\contentsline {subsection}{\numberline {0.2.5}Quelques logiciels de calcul formel}{10}{subsection.0.2.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {0.2.6}Biblioth\IeC {\`e}que SymPy}{10}{subsection.0.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.7}SymPyGamma}{10}{subsection.0.2.7}
+\contentsline {subsubsection}{SymPyGamma}{10}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.8}Besoin de rester dans le symbolique}{10}{subsection.0.2.8}
+\contentsline {subsubsection}{Besoin de rester dans le symbolique}{10}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.9}Passage du symbolique au num\IeC {\'e}rique}{10}{subsection.0.2.9}
+\contentsline {subsubsection}{Passage du symbolique au num\IeC {\'e}rique}{10}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.10}Faire des dessins}{10}{subsection.0.2.10}
+\contentsline {subsection}{\numberline {0.2.7}Faire des dessins}{10}{subsection.0.2.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Ensemble}{11}{chapter.1}
 \ttl@starttoc {default@1}
@@ -90,9 +90,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.1}Cone}{19}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations preserving convexity}{19}{section*.4}
+\contentsline {subsubsection}{Operations preserving convexity}{19}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations that induce convexity}{19}{section*.5}
+\contentsline {subsubsection}{Operations that induce convexity}{19}{section*.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Convex Functions}{20}{section.3.2}
 \defcounter {refsection}{0}\relax 
@@ -102,7 +102,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Operations Preserve Convexity of Functions}{23}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Nonlinear Problem}{25}{chapter.4}
+\contentsline {chapter}{\numberline {4}Probl\IeC {\'e}me lin\IeC {\'e}aire}{25}{chapter.4}
 \ttl@stoptoc {default@3}
 \ttl@starttoc {default@4}
 \defcounter {refsection}{0}\relax 
@@ -128,7 +128,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.8}Figure}{26}{section.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Outils avanc\IeC {\'e}e}{27}{chapter.5}
+\contentsline {chapter}{\numberline {5}Annexe}{27}{chapter.5}
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
 \defcounter {refsection}{0}\relax 
@@ -143,4 +143,8 @@
 \contentsline {subsection}{\numberline {5.2.3}Theano}{29}{subsection.5.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Interface graphique}{30}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Bibliographie}{30}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}Index}{30}{section.5.5}
 \contentsfinish 
