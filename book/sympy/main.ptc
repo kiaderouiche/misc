@@ -102,19 +102,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Operations Preserve Convexity of Functions}{23}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Probl\IeC {\'e}me lin\IeC {\'e}aire}{25}{chapter.4}
+\contentsline {chapter}{\numberline {4}Probl\IeC {\`e}me non lin\IeC {\'e}aire}{25}{chapter.4}
 \ttl@stoptoc {default@3}
 \ttl@starttoc {default@4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}\IeC {\'E}quation diff\IeC {\'e}rentielle}{25}{section.4.1}
+\contentsline {section}{\numberline {4.1}Chaos}{25}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Chaos}{25}{section.4.2}
+\contentsline {subsection}{\numberline {4.1.1}Pendule simple}{25}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Pendule simple}{25}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.1.2}Pendule \IeC {\`a} deux bras}{25}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Pendule \IeC {\`a} deux bras}{25}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.1.3}Mouvements d\IeC {\textquoteright }un robot}{25}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Mouvements d\IeC {\textquoteright }un robot}{25}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.2}Le mod\IeC {\`e}le $\phi ^{4}$}{25}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}LES DIAGRAMMES DE FEYNMAN}{25}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Solution non lin\IeC {\'e}aire d'\IeC {\'e}quation alg\IeC {\'e}brique}{25}{section.4.3}
 \defcounter {refsection}{0}\relax 
