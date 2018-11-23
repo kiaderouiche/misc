@@ -87,191 +87,11 @@
 %----------------------------------------------------------------------------------------
 %	CHAPTER 1
 %----------------------------------------------------------------------------------------
-
 \chapter{Ensemble}
-
-\section{Ensemble}
-
-\subsection{Ensembles}
-La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que
-dans le cadre de SymPy elle s'appui entièrement sur Python avec certain modification, avec la collection d'objet.
-\\
-
-\textit{La fonction set accepte donc en argument un objet de type quelconque et s'efforce de le traduire dans un ensemble. Lorsqu'on ne passe aucun argument à set (option 2), ou qu'on lui passe une liste vide, set renvoie naturellement un ensemble vide; on aurait pu utiliser aussi bien, de la même manière, set(()), set({}), ou même set('') pour arriver au même résultat.}
-
-\begin{exercise}
-		Définir deux ensembles $X = \lbrace a, b, c, d\rbrace$ et  $Y = \lbrace s, b, d\rbrace$ , puis 			affichez les résultats suivants :
- 		\begin{enumerate}
-  			 \item les ensembles initiaux.
-  			 \item le test d’appartenance de l’élément $c$ à $X$.
-  			 \item le test d’appartenance de l’élément $a$ à $Y$.
-  			 \item les ensembles $X - Y$ et $Y - X$.
-  			 \item l’ensemble $X \cup Y$ (union).
-  			 \item l'ensemble $X \cap Y$ (intersection).
-	 \end{enumerate}
-\end{exercise}
-
-\begin{solution}
-Il faut noter qu'il existe une solution qui se base sur le Python builtuints en utilisant la structure de donnée \textit{sets}. Mais comme en n'est dans la logique en utilise 
-\begin{python}
-from sympy import FiniteSet
-
-X = FiniteSet('a', 'b', 'c', 'd')
-Y = FiniteSet('s', 'b', 'd')
-
-class MyClass(Yourclass):
-    def __init__(self, my, yours):
-        bla = '5 1 2 3 4'
-        print bla
-\end{python}
-\begin{python}
-class MyClass(Yourclass):
-    def __init__(self, my, yours):
-        bla = '5 1 2 3 4'
-        print bla
-\end{python}
-
-\end{solution}
-%%
-\section{Premiers pas en Python symbolique}
-
-This is an example of theorems.
-
-\subsection{Variable et affection}\index{Variable et affection}
-
-\begin{exercise}
-Affectez les variables temps $t$ et distance $d$ par les valeurs 6.892 et 19.7. Calculez et affichez la valeur de la vitesse. Améliorez l’affichage en imposant un chiffre après le point décimal.
-\end{exercise}
-
-\begin{solution}
-Pour, affectez des variables est les rendre symbolique comme c'est décrit dans le mémo ou il 
-sera expliquer temps $t$ et distance $d$ par les valeurs 6.892 et 19.7. Calculez et affichez la 
-valeur de la vitesse. Améliorez l’affichage en imposant un chiffre après le point décimal.
-\end{solution}
-
-\subsection{Contrôle du flux d’instructions}\index{Theorems!Single Line}
-This is a theorem consisting of just one line.
-
-\begin{exercise}
-A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
-\end{exercise}
-\begin{solution}
-\end{solution}
-%------------------------------------------------
-
-\section{Les Fonctions}\index{Fonctions}
-
-This is an example of a definition. A definition could be mathematical or it could define a concept.
-
-\begin{exercise}
-Écrire une fonction cube qui retourne le cube de son argument
-\end{exercise}
-
-\begin{exercise}
-Écrire une fonction $volumeSphere$ qui calcule le volume d’une sphère de rayon $r$ fourni
-en argument et qui utilise la fonction cube .
-Tester la fonction $volumeSphere$ par un appel dans le programme principal.
-\end{exercise}
-
-\begin{exercise}
-Écrire une fonction maFonction qui retourne $f(x) = 2x^{3} + x - 5$
-\end{exercise}
-
-\begin{exercise}
-Écrire une fonction tabuler avec quatre paramètres : $fonction$ , $borneInf$ , $borneSup$
-et $nbPas$ . Cette procédure affiche les valeurs de $fonction$ , de $borneInf$ à $borneSup$ ,
-tous les nbPas . Elle doit respecter $borneInf < borneSup$.
-Tester cette fonction par un appel dans le programme principal après avoir saisi les
-deux bornes dans une floatbox et le nombre de pas dans une integerbox (utilisez le
-module easyguiB ).
-\end{exercise}
-
-\begin{exercise}
-Écrire une fonction $volMasse$ Ellipsoide qui retourne le volume et la masse d’un ellipsoïde grâce à un tuple. Les paramètres sont les trois demi-axes et la masse volumique. On donnera à ces quatre paramètres des valeurs par défaut. \\
-On donne: $v = \frac{3}{4} \pi abc$ \\
-Tester cette fonction par des appels avec différents nombres d’arguments.
-\end{exercise}
-
-\begin{exercise}
-Une fonction $f (x)$ est lin\'eaire et a une valeur de $29$ \`a $x = -2$ et $39$ à $x = 3$. Trouver sa valeur à $x = 5$.
-\end{exercise}
-
-\begin{exercise}
-Pour l'ensemble $N$ de nombres naturels et une opération binaire $f: N x N \longrightarrow N$, on appelle un élément $z$ $\epsilon$ $N$ une identité pour $f$, si $f (a, z) = a = f (z, a)$, pour tout a $\epsilon$ $N$. Lesquelles des opérations binaires suivantes ont une identité?:
-\begin{enumerate}
-  \item $f (x, y) = x + y - 3$
-  \item $f (x, y) = max(x, y)$
-  \item $f (x, y) = x^{y}$
-\end{enumerate}
-\end{exercise}
-\begin{solution}
-le deuxième et le troisième 
-\end{solution}
-\section{Structures de données}
-
-\subsection{Logique}
-\begin{exercise}
-Dans la carte de Karnaugh ci-dessous, $X$ indique un terme sans intérêt. Quelle est la forme minimale de la fonction représentée par la carte de Karnaugh?
-\end{exercise}
-\subsection{Ensembles}
-La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que
-dans le cadre de SymPy elle s'appui entièrement sur Python avec certain modification, avec la collection d'objet.
-\\
-
-\textit{La fonction set accepte donc en argument un objet de type quelconque et s'efforce de le traduire dans un ensemble. Lorsqu'on ne passe aucun argument à set (option 2), ou qu'on lui passe une liste vide, set renvoie naturellement un ensemble vide; on aurait pu utiliser aussi bien, de la même manière, set(()), set({}), ou même set('') pour arriver au même résultat.}
-
-	\begin{exercise}
-		Définir deux ensembles $X = \lbrace a, b, c, d\rbrace$ et  $Y = \lbrace s, b, d\rbrace$ , puis 			affichez les résultats suivants :
- 		\begin{enumerate}
-  			 \item les ensembles initiaux.
-  			 \item le test d’appartenance de l’élément $c$ à $X$.
-  			 \item le test d’appartenance de l’élément $a$ à $Y$.
-  			 \item les ensembles $X - Y$ et $Y - X$.
-  			 \item l’ensemble $X \cup Y$ (union).
-  			 \item l'ensemble $X \cap Y$ (intersection).
-	 \end{enumerate}
-	\end{exercise}
-
-\begin{solution}
-Il faut noter qu'il existe une solution qui se base sur le Python builtuints en utilisant la structure de donnée \textit{sets}. Mais comme en n'est dans la logique en utilise 
-\begin{python}
-from sympy import FiniteSet
-
-X = FiniteSet('a', 'b', 'c', 'd')
-Y = FiniteSet('s', 'b', 'd')
-
-class MyClass(Yourclass):
-    def __init__(self, my, yours):
-        bla = '5 1 2 3 4'
-        print bla
-\end{python}
-\begin{python}
-class MyClass(Yourclass):
-    def __init__(self, my, yours):
-        bla = '5 1 2 3 4'
-        print bla
-\end{python}
-
-\end{solution}
-%\begin{exercise}
-%Si $P$, $Q$, $R$ sont des sous-ensembles de l'ensemble universel $U$, alors $(P \cap Q\capR) \cup (P^{c} \cap Q \cap R)\cup(Q^{x}\cupR^{x})$ si
-%\begin{enumerate}
-%  \item  
-%  \item 
-%  \item
-%\end{enumerate}
-%\end{exercise}
-%------------------------------------------------
-\subsection{Polynômes}
-\begin{exercise}
-Considérons le polynôme $p(x) = a_{0} + a_{1} x + a_{2} x^{2} + a_{3} x^{3}$, où $a_{i} \neq 0$ $\forall i$. Le nombre minimum de multiplications nécessaires pour évaluer $p$ sur une entrée $x$ est:
-\end{exercise}
-%-----------------------------------------------
-\subsection{Nombres parfaits et nombres chanceux}
-\begin{exercise}
-$\sqrt{12}$
-\end{exercise}
-%------------------------------------------------
+\include{premcalculformal}
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2
+%----------------------------------------------------------------------------------------
 
 \section{Remarks}\index{Remarks}
 
@@ -612,6 +432,7 @@ Le pendule simple figure
 \subsection{Mouvements d’un robot}
 Qu'est ce qu'il faut savoir quand en veut modélisé le comportement d'un robot?. Et bien la réponse est tout simplement des mathématiques
 
+\section{M\'ecanique et information quantique}
 \section{Le modèle $\phi^{4}$}
  \subsection{LES DIAGRAMMES DE FEYNMAN}
  
@@ -632,7 +453,6 @@ Une \'equation alg\'ebrique est un polyn\^ome de la forme $P(x)$
 \chapter{Problème non linéaire}
 \section{La théorie de catégorie}
 L'interet de la théorie de catégorie dans les mathématiques modernes et l'informatique théorique et sui dépasse de loin, cette derniére pour \^etre
-\section{M\'ecanique quantique}
 \section{Transport optimal}
 C'est quoi le \textit{ transport optimal}?, exemple simple..., le domaine du transport optimal
 est très 

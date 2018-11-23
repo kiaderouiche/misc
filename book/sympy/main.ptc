@@ -25,6 +25,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {0.2.7}Faire des dessins}{10}{subsection.0.2.7}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {0.2.8}Structure de donn\IeC {\'e}es dans SymPy}{10}{subsection.0.2.8}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Ensemble}{11}{chapter.1}
 \ttl@starttoc {default@1}
 \defcounter {refsection}{0}\relax 
@@ -114,39 +116,43 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.3}Mouvements d\IeC {\textquoteright }un robot}{25}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Le mod\IeC {\`e}le $\phi ^{4}$}{25}{section.4.2}
+\contentsline {section}{\numberline {4.2}M\'ecanique et information quantique}{25}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}LES DIAGRAMMES DE FEYNMAN}{25}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Le mod\IeC {\`e}le $\phi ^{4}$}{25}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Solution non lin\IeC {\'e}aire d'\IeC {\'e}quation alg\IeC {\'e}brique}{25}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}LES DIAGRAMMES DE FEYNMAN}{25}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}La th\IeC {\'e}orie de cat\IeC {\'e}gorie}{26}{section.4.4}
+\contentsline {section}{\numberline {4.4}Solution non lin\IeC {\'e}aire d'\IeC {\'e}quation alg\IeC {\'e}brique}{25}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}M\'ecanique quantique}{26}{section.4.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Transport optimal}{26}{section.4.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Le calcul des variations}{26}{section.4.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Figure}{26}{section.4.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Annexe}{27}{chapter.5}
+\contentsline {chapter}{\numberline {5}Probl\IeC {\`e}me non lin\IeC {\'e}aire}{27}{chapter.5}
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Programmation Orient\IeC {\'e}e Objet}{27}{section.5.1}
+\contentsline {section}{\numberline {5.1}La th\IeC {\'e}orie de cat\IeC {\'e}gorie}{27}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}D\'ecorateurs}{27}{section.5.2}
+\contentsline {section}{\numberline {5.2}Transport optimal}{27}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Optimisation du code}{27}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}Le calcul des variations}{27}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Cython}{28}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.4}Figure}{27}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.3}Theano}{29}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Annexe}{29}{chapter.6}
+\ttl@stoptoc {default@5}
+\ttl@starttoc {default@6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Interface graphique}{30}{section.5.3}
+\contentsline {section}{\numberline {6.1}Programmation Orient\IeC {\'e}e Objet}{29}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Bibliographie}{30}{section.5.4}
+\contentsline {section}{\numberline {6.2}D\'ecorateurs}{29}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Index}{30}{section.5.5}
+\contentsline {subsection}{\numberline {6.2.1}Optimisation du code}{29}{subsection.6.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}Cython}{30}{subsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.3}Theano}{31}{subsection.6.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Interface graphique}{32}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Bibliographie}{32}{section.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Index}{32}{section.6.5}
 \contentsfinish 
