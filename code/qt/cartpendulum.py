@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """
 original problem:
 I am trying to understand the force present in the system below. I found this picture online 
@@ -17,6 +20,15 @@ enter image description here
 ----------------------------
 
 """
+
+import sys
+
+from PyQt5.QtCore import pyqtSignal, pyqtSlot
+from PyQt5.QtWidgets import (QApplication, QGridLayout, QLineEdit, QSpinBox,
+                             QStyleFactory, QWidget)
+
 from sympy import symbols
 from sympy.physics.mechanics import *
-print('Calculation N and P force')
+
+if __name__ == '__main__':
+	print('Calculation N and P force')
