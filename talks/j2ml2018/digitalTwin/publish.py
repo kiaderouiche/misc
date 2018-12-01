@@ -6,19 +6,16 @@ import subprocess
 import sys
 
 
+def _run():
+	subprocess.call('jupyter nbconvert slides.ipynb --to slides --post serve --ServePostProcessor.reveal_cdn="http://cdn.jsdelivr.net/reveal.js/2.5.0"', shell=True)
+
 def _help():
-	print("jupyter and jupyterLab launcher")
+	print("jupyter launcher")
 
 def _version():
 	print("1.0.0")
 
 def main():
-	global dargs
-	print(dargs['ipynb files'])
-
-
-if __name__ == '__main__':
-
 	parser = argparse.ArgumentParser(description="jupyter launcher")
 
 	parser.add_argument('ipynb files', nargs='?')
@@ -35,6 +32,8 @@ if __name__ == '__main__':
 		_version()
 		sys.exit()
 	if dargs['run']:
-		print('Running...')
+		_run()
+		sys.exit()
 
-#jupyter nbconvert slides.ipynb --to slides --post serve --ServePostProcessor.reveal_cdn="http://cdn.jsdelivr.net/reveal.js/2.5.0"
+if __name__ == '__main__':
+	main()
