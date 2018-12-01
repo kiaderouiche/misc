@@ -1,0 +1,10 @@
+\babel@toc {french}{}
+\beamer@sectionintoc {1}{whoami}{2}{0}{1}
+\beamer@sectionintoc {2}{C'est quoi un jumeau num\IeC {\'e}rique?}{3}{0}{2}
+\beamer@sectionintoc {3}{Gestion du cycle de vie des produits}{5}{0}{3}
+\beamer@subsectionintoc {3}{1}{Gestion du cycle de vie des produits}{5}{0}{3}
+\beamer@subsectionintoc {3}{2}{Exemples}{6}{0}{3}
+\beamer@subsectionintoc {3}{3}{Diff\IeC {\'e}rence entre l'IoT et le jumeau num\IeC {\'e}rique}{7}{0}{3}
+\beamer@subsectionintoc {3}{4}{Diff\IeC {\'e}rence entre la simulation et le jumeau num\IeC {\'e}rique}{8}{0}{3}
+\beamer@sectionintoc {4}{D\IeC {\'e}finition formelle et ses types}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{D\IeC {\'e}finition formelle et ses types}{9}{0}{4}
