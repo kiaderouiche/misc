@@ -29,15 +29,6 @@ pour aborder un problème générique, d’explorer facilement des cas particuli
 généralisation. Les relations entre expressions algébriques sont mieux mises en évidence du fait de leur 
 invariance dans les modifications du réseau. De façon très concise, Casyopée peut être défini
 \subsection{Travaillez avec SymPy}
-Pour utiliser Sage, il suffit d’un navigateur web tel que Firefox. Le plus simple dans un premier temps est de se connecter sur un serveur de calcul Sage public comme http://sagenb.org/. On a alors accès à une interface utilisateur riche constituée d’un « bloc-notes » (notebook en anglais) permettant d’éditer
-et partager des feuilles de travail (worksheets, voir figure 1.2). De nombreuses universités et institutions mettent de tels serveurs à la disposition de leurs utilisateurs ; renseignez-vous autour de vous. Pour un usage plus intensif, on
-
-installe généralement Sage sur sa propre machine 1 . On peut alors toujours
-l’utiliser avec l’interface bloc-notes dans le navigateur web. Alternativement, on
-peut l’utiliser en ligne de commande, comme une calculatrice (voir figure 1.3).
-Les figures 1.4 et 1.5 illustrent pas à pas les étapes pour accéder à un serveur
-Sage public et l’utiliser pour faire un calcul :
-
 
 \subsubsection{SymPyGamma}
 Est une interface onWeb marche avec un navigateur contient plusieurs catégorie liée de calcul, dynamique. L’Intérêt de cette outil qu'il est facilement partageable adapté pour l’enseignement et surtout l'auto-apprentissage
@@ -49,6 +40,11 @@ SymPy Live est SymPy qui s'exécute sur Google App Engine. Ceci est juste un she
 \section{SymPy comme calculatrice}
 Contrairement à Sage[], Maple, Octave et les autres logiciel de calcul formel, SymPy, effectue des calculs directe numériques de deux manière différents en passant par la méthode, 
 \subsection{Premier calculs}
+Dans la suite du livre, nous présentons les calculs sous la forme suivante, qui
+imite l’allure d’une session de SymPyLive ligne de commande à travers IPython ou Jupyter :
+\begin{python}
+In [2]: from sympy import *
+\end{python}
 \subsubsection{Variables Python}
 Lorsque l’on veut conserver le résultat d’un calcul, on peut l’affecter à une
 variable :
