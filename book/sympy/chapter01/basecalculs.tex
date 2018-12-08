@@ -84,9 +84,11 @@ posons $x=8$
 In [1]: import math                                                             
 In [2]: math.sqrt(x)                                                            
 Out[2]: 2.8284271247461903
-
 \end{python}
 Les variables symboliques doivent \^etre explicitement déclarées avant d'\^etre employées
+
+Dans cet exemple, la commande SR.var(’z’) « construit » et renvoie une variable symbolique dont le nom est z. Cette variable symbolique est un objet Sage comme un autre : elle n’est pas traitée différemment d’expressions plus complexes comme $sin(x) + 1$. Ensuite, cette variable symbolique est affectée à la variable « du programmeur » z, ce qui permet de s’en servir comme de n’importe quelle expression pour construire des expressions plus complexes.
+
 
 \begin{python}
 In [1]: from sympy import *
@@ -118,6 +120,9 @@ Pour, affectez des variables est les rendre symbolique comme c'est décrit dans 
 sera expliquer temps $t$ et distance $d$ par les valeurs 6.892 et 19.7. Calculez et affichez la 
 valeur de la vitesse. Améliorez l'affichage en imposant un chiffre après le point décimal.
 \end{solution}
+
+\subsection{Substitution}
+Une des choses les plus courantes que vous pourriez vouloir faire avec une expression mathématique est la substitution. La substitution remplace toutes les occurrences de quelque chose dans une expression par quelque chose d'autre. SymPy utilisant la méthode \textbf{subs}. Sym
 
 \subsection{Contrôle du flux d’instructions}\index{Theorems!Single Line}
 This is a theorem consisting of just one line.
