@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  8 DEC 2018 23:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  9 DEC 2018 00:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1294,9 +1294,9 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotereset=\count446
 (./main.aux (./first/avant_propos.aux) (./first/firststep.aux)
 (./chapter01/basecalculs.aux) (./chapter02/formelalgebra.aux)
-(./chapter03/euclid.aux) (./chapter04/numerical.aux) (./chapter05/mathprob.aux)
-(./chapter06/nonlineaireprob.aux) (./annexe/optimization/cython.aux)
-(./annexe/optimization/theano.aux))
+(./chapter03/geometry.aux) (./chapter04/numerical.aux)
+(./chapter05/mathprob.aux) (./chapter06/nonlineaireprob.aux)
+(./annexe/optimization/cython.aux) (./annexe/optimization/theano.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -1441,7 +1441,7 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <35> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 47.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <35> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 47.
-<Pictures/esahubble.png, id=284, 614.295pt x 794.97pt>
+<Pictures/esahubble.png, id=288, 614.295pt x 794.97pt>
 File: Pictures/esahubble.png Graphic file (type png)
 <use Pictures/esahubble.png>
 Package pdftex.def Info: Pictures/esahubble.png  used on input line 57.
@@ -1450,7 +1450,7 @@ Package pdftex.def Info: Pictures/esahubble.png  used on input line 57.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Pictures/esahubble.png>]
  [2]
-<Pictures/head1.png, id=296, 1027.6794pt x 514.0806pt>
+<Pictures/head1.png, id=300, 1027.6794pt x 514.0806pt>
 File: Pictures/head1.png Graphic file (type png)
 <use Pictures/head1.png>
 Package pdftex.def Info: Pictures/head1.png  used on input line 69.
@@ -1479,7 +1479,7 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
 
  <./Pictures/head1.png>] [4]
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 13
-0.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -1489,42 +1489,49 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 13
-0.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 13
-0.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 13
-0.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 130.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 134.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
+)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -1581,7 +1588,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
  [11] [12]
 Chapter 1.
 \c@ttl@toc@default=\count455
-<Pictures/head2.png, id=493, 1027.6794pt x 514.0806pt>
+<Pictures/head2.png, id=497, 1027.6794pt x 514.0806pt>
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 2.
@@ -1595,7 +1602,7 @@ Overfull \hbox (100.60786pt too wide) in paragraph at lines 37--38
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<Pictures/../Pictures/sympyGammaMain.png, id=499, 1350.04375pt x 612.2875pt>
+<Pictures/../Pictures/sympyGammaMain.png, id=503, 1350.04375pt x 612.2875pt>
 File: Pictures/../Pictures/sympyGammaMain.png Graphic file (type png)
 <use Pictures/../Pictures/sympyGammaMain.png>
 Package pdftex.def Info: Pictures/../Pictures/sympyGammaMain.png  used on input
@@ -1607,7 +1614,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
  []
 
 [15]
-<Pictures/../Pictures/sympyarch.png, id=540, 336.50719pt x 321.45094pt>
+<Pictures/../Pictures/sympyarch.png, id=544, 336.50719pt x 321.45094pt>
 File: Pictures/../Pictures/sympyarch.png Graphic file (type png)
 <use Pictures/../Pictures/sympyarch.png>
 Package pdftex.def Info: Pictures/../Pictures/sympyarch.png  used on input line
@@ -1688,58 +1695,62 @@ Package mdframed Info: mdframed detected package amsthm
 ) [21
 
 ]
-\openout2 = `chapter03/euclid.aux'.
+\openout2 = `chapter03/geometry.aux'.
 
- (./chapter03/euclid.tex
-Package mdframed Info: mdframed works in twoside mode on input line 5.
+ (./chapter03/geometry.tex [22
+
+
+
+] [23] [24]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 3.
+
+Package mdframed Info: mdframed works in twoside mode on input line 6.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5.
+(mdframed)              on input line 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--12
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 30.
+Package mdframed Info: mdframed works in twoside mode on input line 31.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 30.
-Package mdframed Info: mdframed works in twoside mode on input line 35.
+(mdframed)              on input line 31.
+Package mdframed Info: mdframed works in twoside mode on input line 36.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 35.
-Package mdframed Info: mdframed works in twoside mode on input line 39.
+(mdframed)              on input line 36.
+Package mdframed Info: mdframed works in twoside mode on input line 40.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 39.
-Package mdframed Info: mdframed works in twoside mode on input line 43.
+(mdframed)              on input line 40.
+Package mdframed Info: mdframed works in twoside mode on input line 44.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 43.
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--50
+(mdframed)              on input line 44.
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
 
  []
 
-[22
-
-
-]
-Package mdframed Info: mdframed works in twoside mode on input line 55.
+Package mdframed Info: mdframed works in twoside mode on input line 56.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 55.
-Package mdframed Info: mdframed works in twoside mode on input line 64.
+(mdframed)              on input line 56.
+Package mdframed Info: mdframed works in twoside mode on input line 65.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 64.
+(mdframed)              on input line 65.
 
-Overfull \hbox (25.43553pt too wide) in paragraph at lines 65--66
+Overfull \hbox (25.43553pt too wide) in paragraph at lines 66--67
 [][]\T1/pag/db/n/10 Definition 2.3.5 --- Epi-graph. []\T1/ptm/m/n/10.95 (-20) F
 or $\OML/ztmcm/m/it/10.95 f \OT1/ztmcm/m/n/10.95 : \U/msb/m/n/10.95 R[] \OMS/zt
 mcm/m/n/10.95 ! []$\T1/ptm/m/n/10.95 (-20) , its epi-graph $\OML/ztmcm/m/it/10.
@@ -1751,157 +1762,197 @@ mcm/m/n/10.95 j\OML/ztmcm/m/it/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.
 95 x\OT1/ztmcm/m/n/10.95 ) \OMS/ztmcm/m/n/10.95 2
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 69.
+Package mdframed Info: mdframed works in twoside mode on input line 70.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 69.
+(mdframed)              on input line 70.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--78
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 78.
+Package mdframed Info: mdframed works in twoside mode on input line 79.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 78.
+(mdframed)              on input line 79.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
-Package mdframed Info: mdframed works in twoside mode on input line 88.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+Package mdframed Info: mdframed works in twoside mode on input line 89.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 88.
-Package mdframed Info: mdframed works in twoside mode on input line 99.
+(mdframed)              on input line 89.
+Package mdframed Info: mdframed works in twoside mode on input line 100.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 99.
-Package mdframed Info: Not enough space on this page on input line 101.
-[23]
-Package mdframed Info: Not enough space on this page on input line 101.
-Package mdframed Info: mdframed works in twoside mode on input line 103.
+(mdframed)              on input line 100.
+[26]
+Package mdframed Info: Not enough space on this page on input line 102.
+Package mdframed Info: mdframed works in twoside mode on input line 104.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 103.
-Package mdframed Info: mdframed works in twoside mode on input line 106.
+(mdframed)              on input line 104.
+Package mdframed Info: mdframed works in twoside mode on input line 107.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 106.
-<Pictures/1_1.png, id=611, 529.98pt x 469.755pt>
+(mdframed)              on input line 107.
+<Pictures/1_1.png, id=628, 529.98pt x 469.755pt>
 File: Pictures/1_1.png Graphic file (type png)
 <use Pictures/1_1.png>
-Package pdftex.def Info: Pictures/1_1.png  used on input line 138.
+Package pdftex.def Info: Pictures/1_1.png  used on input line 139.
 (pdftex.def)             Requested size: 264.98933pt x 234.87692pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-<Pictures/1_2.png, id=622, 318.18875pt x 316.18124pt>
+ [27]
+<Pictures/1_2.png, id=640, 318.18875pt x 316.18124pt>
 File: Pictures/1_2.png Graphic file (type png)
 <use Pictures/1_2.png>
-Package pdftex.def Info: Pictures/1_2.png  used on input line 168.
+Package pdftex.def Info: Pictures/1_2.png  used on input line 169.
 (pdftex.def)             Requested size: 318.18796pt x 316.18047pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25 <./Pictures/1_1.png>]
-<Pictures/1_3.png, id=632, 326.21875pt x 165.61874pt>
+ [28 <./Pictures/1_1.png>]
+<Pictures/1_3.png, id=649, 326.21875pt x 165.61874pt>
 File: Pictures/1_3.png Graphic file (type png)
 <use Pictures/1_3.png>
-Package pdftex.def Info: Pictures/1_3.png  used on input line 177.
+Package pdftex.def Info: Pictures/1_3.png  used on input line 178.
 (pdftex.def)             Requested size: 326.21794pt x 165.61833pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--181
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
 
  []
 
-[26 <./Pictures/1_2.png> <./Pictures/1_3.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 202.
+[29 <./Pictures/1_2.png> <./Pictures/1_3.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 203.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 202.
- [27]
-Package mdframed Info: mdframed works in twoside mode on input line 240.
+(mdframed)              on input line 203.
+ [30]
+Package mdframed Info: mdframed works in twoside mode on input line 241.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 240.
-) [28]
+(mdframed)              on input line 241.
+) [31]
 \openout2 = `chapter04/numerical.aux'.
 
 
-(./chapter04/numerical.tex [29
+(./chapter04/numerical.tex [32
 
 
 
-] [30]
+] [33] [34]
 Chapter 3.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 2.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-) [31
+[35
 
-] [32
+] [36
 
 ]
 Chapter 4.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 126.
+Package pdftex.def Info: Pictures/head2.png  used on input line 20.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[33
-
-]
-\openout2 = `chapter05/mathprob.aux'.
-
- (./chapter05/mathprob.tex) [34
+[37] [38
 
 ]
 Chapter 5.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 130.
+Package pdftex.def Info: Pictures/head2.png  used on input line 48.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[35
-
-
-]
-\openout2 = `chapter06/nonlineaireprob.aux'.
-
- (./chapter06/nonlineaireprob.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 15.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\phi' on input line 15.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 15.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 15.
-
-) [36
+) [39] [40
 
 ]
 Chapter 6.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 137.
+Package pdftex.def Info: Pictures/head2.png  used on input line 126.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[37
+[41
+
+]
+\openout2 = `chapter05/mathprob.aux'.
+
+ (./chapter05/mathprob.tex) [42
+
+]
+Chapter 7.
+File: Pictures/head2.png Graphic file (type png)
+<use Pictures/head2.png>
+Package pdftex.def Info: Pictures/head2.png  used on input line 130.
+(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+[43
 
 
 ]
+\openout2 = `chapter06/nonlineaireprob.aux'.
+
+ (./chapter06/nonlineaireprob.tex [44
+
+
+] [45] [46] [47] [48
+
+]
+Chapter 8.
+File: Pictures/head2.png Graphic file (type png)
+<use Pictures/head2.png>
+Package pdftex.def Info: Pictures/head2.png  used on input line 6.
+(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+[49] [50
+
+]
+Chapter 9.
+File: Pictures/head2.png Graphic file (type png)
+<use Pictures/head2.png>
+Package pdftex.def Info: Pictures/head2.png  used on input line 15.
+(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+[51] [52
+
+]
+Chapter 10.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 16.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\phi' on input line 16.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 16.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 16.
+
+File: Pictures/head2.png Graphic file (type png)
+<use Pictures/head2.png>
+Package pdftex.def Info: Pictures/head2.png  used on input line 16.
+(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 17.
+
+) [53] [54
+
+
+]
+Chapter 11.
+File: Pictures/head2.png Graphic file (type png)
+<use Pictures/head2.png>
+Package pdftex.def Info: Pictures/head2.png  used on input line 137.
+(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+[55]
 \openout2 = `annexe/optimization/cython.aux'.
 
  (./annexe/optimization/cython.tex
@@ -1909,45 +1960,49 @@ Overfull \hbox (143.8083pt too wide) in paragraph at lines 27--29
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [38
+) [56
 
 ]
 \openout2 = `annexe/optimization/theano.aux'.
 
- (./annexe/optimization/theano.tex) [39
+ (./annexe/optimization/theano.tex) [57
 
 
 ]
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
- [40
+ [58
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 162.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
  (./main.aux
 (./first/avant_propos.aux) (./first/firststep.aux) (./chapter01/basecalculs.aux
-) (./chapter02/formelalgebra.aux) (./chapter03/euclid.aux)
+) (./chapter02/formelalgebra.aux) (./chapter03/geometry.aux)
 (./chapter04/numerical.aux) (./chapter05/mathprob.aux)
 (./chapter06/nonlineaireprob.aux) (./annexe/optimization/cython.aux)
 (./annexe/optimization/theano.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 162.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 162.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A6EB3E8A0DC0648030ADEF2C6D27869A;4666.
+(rerunfilecheck)             Checksum: E1F9197720B2A8D4DB6607233E1A427B;4699.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38840 strings out of 494432
- 713992 string characters out of 6173608
- 1291290 words of memory out of 5000000
- 41479 multiletter control sequences out of 15000+600000
- 648802 words of font info for 277 fonts, out of 8000000 for 9000
+ 38919 strings out of 494432
+ 715319 string characters out of 6173608
+ 1291816 words of memory out of 5000000
+ 41534 multiletter control sequences out of 15000+600000
+ 658610 words of font info for 299 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 57i,15n,63p,921b,1985s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,15n,63p,921b,1974s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -1963,10 +2018,10 @@ f-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (40 pages, 13828220 bytes).
+Output written on main.pdf (58 pages, 13837935 bytes).
 PDF statistics:
- 830 PDF objects out of 1000 (max. 8388607)
- 688 compressed objects within 7 object streams
- 218 named destinations out of 1000 (max. 500000)
- 54877 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 913 PDF objects out of 1000 (max. 8388607)
+ 753 compressed objects within 8 object streams
+ 237 named destinations out of 1000 (max. 500000)
+ 57957 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -1,8 +1,34 @@
 \part{Calcul numérique}
-\chapter{Calcul numérique}
-\section{Nombres à virgule flottante}
-\section{Intégration numérique}
-%------------------------------------------------
+\chapter{Nombres à virgule flottante}
+Dans les chapitres suivants, les nombres à virgule flottante sont au cœur des
+calculs ; il convient de les étudier car leur comportement suit des règles précises.
+Comment représenter des nombres réels en machine ? Comme ces nombres ne
+peuvent pas en général être codés avec une quantité finie d’information, ils ne
+sont pas toujours représentables sur un ordinateur : il faut donc les approcher
+avec une quantité de mémoire finie.
+Un standard s’est dégagé autour d’une approximation des nombres réels avec
+une quantité fixe d’information : la représentation à virgule flottante.
+Dans ce chapitre, on trouve : une description sommaire des nombres à virgule
+flottante et des différents types de ces nombres disponibles dans SymPy, et la 
+démonstration de quelques-unes de leurs propriétés. Quelques exemples montreront
+certaines des difficultés qu’on rencontre en calculant avec les nombres à virgule
+flottante, quelques astuces pour arriver parfois à les contourner, en espérant 
+développer chez le lecteur une prudence bien nécessaire ; en conclusion, nous essayons
+de donner quelques propriétés que doivent posséder les méthodes numériques pour
+pouvoir être utilisées avec ces nombres.
+
+\chapter{Intégration numérique}
+Ce chapitre traite le calcul numérique d’intégrales (§14.1) ainsi que la résolution
+numérique d’équations différentielles ordinaires (§14.2) avec Sage. Nous rappelons
+des bases théoriques des méthodes d’intégration, puis nous détaillons les fonctions
+disponibles et leur usage (§14.1.1). Le calcul symbolique d’intégrales avec Sage a été traité précédemment (§2.3.8), et ne sera que mentionné rapidement ici comme une possibilité de calculer la
+valeur numérique d’une intégrale. Cette approche « symbolique puis numérique »,
+lorsqu’elle est possible, constitue une des forces de Sage et est à privilégier car le
+nombre de calculs effectués, et donc d’erreurs d’arrondi, est en général moindre
+que pour les méthodes d’intégration numérique.
+Nous donnons une rapide introduction aux méthodes classiques de résolution
+d’équations différentielles, puis le traitement d’un exemple (§14.2.1) débutera
+l’inventaire des fonctions disponibles en Sage (§14.2.2).
 
 \section{Examples}\index{Examples}
 
@@ -18,3 +44,19 @@ f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
 \end{equation}
 The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
 \end{example}
+
+\chapter{Solution non linéaire d'équation algébrique}\index{Solving Nonlinear Algebraic Equations}
+Ce chapitre explique comment résoudre une équation non linéaire avec SymPy.
+Dans un premier temps on étudie les équations polynomiales et on montre les
+limitations de la recherche de solutions exactes. Ensuite on décrit le fonctionnement
+de quelques méthodes classiques de résolution numérique. Au passage on indique
+quels sont les algorithmes de résolution numérique implémentés dans SymPy.
+
+
+Qu'est ce que non-linéaire et qu'est ce que une \'equation alg\'ebrique
+
+Une \'equation alg\'ebrique est un polyn\^ome de la forme $P(x)$
+
+\begin{equation}
+\exp(-x)\sin(x) = \cos(x)
+\end{equation}
