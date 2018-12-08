@@ -29,21 +29,39 @@ pour aborder un problème générique, d’explorer facilement des cas particuli
 généralisation. Les relations entre expressions algébriques sont mieux mises en évidence du fait de leur 
 invariance dans les modifications du réseau. De façon très concise, Casyopée peut être défini
 \subsection{Travaillez avec SymPy}
+\subsection{Installation de SymPy}
 
-\subsubsection{SymPyGamma}
+\subsection{isympy}
+  \begin{python}
+    isympy 
+	IPython console for SymPy 1.3 (Python 3.6.7-64-bit) (ground types: python)
+	These commands were executed:
+>>> from __future__ import division
+>>> from sympy import *
+>>> x, y, z, t = symbols('x y z t')
+>>> k, m, n = symbols('k m n', integer=True)
+>>> f, g, h = symbols('f g h', cls=Function)
+>>> init_printing()
+
+Documentation can be found at http://docs.sympy.org/1.3/
+
+  \end{python}
+\subsection{SymPyGamma}
 Est une interface onWeb marche avec un navigateur contient plusieurs catégorie liée de calcul, dynamique. L’Intérêt de cette outil qu'il est facilement partageable adapté pour l’enseignement et surtout l'auto-apprentissage
 
 \includegraphics[scale=0.3]{../Pictures/sympyGammaMain.png} 
 
-\subsubsection{SymPyLive}
+\subsection{SymPyLive}
 SymPy Live est SymPy qui s'exécute sur Google App Engine. Ceci est juste un shell Python standard, avec les commandes suivantes exécutées par défaut
 \section{SymPy comme calculatrice}
 Contrairement à Sage[], Maple, Octave et les autres logiciel de calcul formel, SymPy, effectue des calculs directe numériques de deux manière différents en passant par la méthode, 
 \subsection{Premier calculs}
 Dans la suite du livre, nous présentons les calculs sous la forme suivante, qui
-imite l’allure d’une session de SymPyLive ligne de commande à travers IPython ou Jupyter :
+imite l’allure d’une session de SymPyLive à travers la ligne de commande isympy:
 \begin{python}
-In [2]: from sympy import *
+In [1]: from sympy import *
+In [2]: 1+1                                                                     
+Out[2]: 2
 \end{python}
 \subsubsection{Variables Python}
 Lorsque l’on veut conserver le résultat d’un calcul, on peut l’affecter à une
@@ -55,14 +73,22 @@ toute approximation numérique, SymPy permet une manipulation avec des expressio
 des variables, comme $x^{2} + zy^{3} + z^{2}$ ou encore $sin(x) - exp(x)$. Les variables symboliques
 du mathématicien $x$, $y$, $z$ apparaissant dans ces expressions diffèrent, avec SymPy,
 des variables du développeur $sin(2) = 0.9092974268256817$ que nous manipulons sous Python 
-section précédente. 
-
+section précédente. SymPy diffère notablement, sur ce point, d’autres systèmes de calcul
+formel comme Maple ou Maxima, Sage c'est inspiré de SymPy sur ce point.
+\\
+Les variables symboliques doivent \^etre explicitement déclarées avant d'\^etre employées:
+\begin{python}
+In [1]: from sympy import *
+In [2]: x = symbols('x')                                                                     
+In [3]: type(x)
+Out[3]: sympy.core.symbol.Symbol
+\end{python}
 
 \subsection{Structure de données dans SymPy}
 Le moteur symbolique de SymPy tire parti de l'orientation des objets (notamment l'héritage) pour créer une base de code facilement extensible. Toutes les classes dérivent des fonctionnalités, telles que la possibilité de se comparer à d'autres objets, à partir de méthodes de la super-classe Basic. Les objets pouvant faire l'objet d'opérations algébriques acquièrent cette capacité grâce à un ensemble de méthodes d'une classe appelée Expr. Ces objets Expr peuvent être conservés dans des objets conteneur (qui contiennent également la sous-classe Expr) Mul, Add et Pow; les objets conteneur sont instanciés à l'aide de l'opérateur Python, tel que la fonction de surcharge, qui permet au constructeur de la classe conteneur d'être appelé chaque fois que l'opérateur binaire approprié est utilisé (* pour Mul, + pour Ajouter et $**$ pour Pow).
 De cette manière, des objets supplémentaires peuvent être ajoutés en créant simplement une sous-classe qui hérite des fonctionnalités de la classe Expr. Ces sous-classes bénéficient gratuitement de certaines fonctionnalités, telles que la possibilité de comparer, de multiplier, d’ajouter, etc. Voici comment SymPy crée un environnement modifiable, maintenable, et donc facile à étendre. Grâce à la possibilité d'hériter des propriétés de classes supérieures, la quantité de code nécessaire pour développer, par exemple, un système modélisant la mécanique quantique et la notation Dirac décroissant de manière significative.
 
-\includegraphics[scale=0.3]{../Pictures/sympyarch.png} 
+\includegraphics[scale=0.5]{../Pictures/sympyarch.png} 
 \subsection{Variable et affection}\index{Variable et affection}
 
 \begin{exercise}
