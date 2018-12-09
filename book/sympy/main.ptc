@@ -1,212 +1,280 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.1}Avant-Propos}{6}{section.0.1}
+\contentsline {section}{\numberline {0.1}Avant-Propos}{8}{section.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.2}Calcul formel}{8}{section.0.2}
+\contentsline {section}{\numberline {0.2}Calcul formel}{10}{section.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.1}Logiciel de syst\IeC {\`e}me de calcul formel}{8}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {0.2.1}Logiciel de syst\IeC {\`e}me de calcul formel}{10}{subsection.0.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.2}Quelques logiciels de calcul formel}{8}{subsection.0.2.2}
+\contentsline {subsection}{\numberline {0.2.2}Quelques logiciels de calcul formel}{10}{subsection.0.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.3}Pourquoi choisir SymPy?}{9}{subsection.0.2.3}
+\contentsline {subsection}{\numberline {0.2.3}Pourquoi choisir SymPy?}{11}{subsection.0.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Premier pas vers SymPy}{11}{part.1}
+\contentsline {part}{I\hspace {1em}Premier pas vers SymPy}{13}{part.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Premier pas vers SymPy}{13}{chapter.1}
+\contentsline {chapter}{\numberline {1}Premier pas vers SymPy}{15}{chapter.1}
 \ttl@starttoc {default@1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}La biblioth\IeC {\`e}que SymPy}{13}{section.1.1}
+\contentsline {section}{\numberline {1.1}La biblioth\IeC {\`e}que SymPy}{15}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.1}Le cas de la biblioth\IeC {\`e}que SymPy}{13}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Le cas de la biblioth\IeC {\`e}que SymPy}{15}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.2}Travaillez avec SymPy}{14}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.2}Travaillez avec SymPy}{16}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.3}Installation de SymPy}{14}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.3}Installation de SymPy}{16}{subsection.1.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.4}isympy}{14}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.4}isympy}{16}{subsection.1.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.5}SymPyGamma}{14}{subsection.1.1.5}
+\contentsline {subsection}{\numberline {1.1.5}SymPyGamma}{16}{subsection.1.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.6}SymPyLive}{14}{subsection.1.1.6}
+\contentsline {subsection}{\numberline {1.1.6}SymPyLive}{16}{subsection.1.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}SymPy comme calculatrice}{14}{section.1.2}
+\contentsline {section}{\numberline {1.2}SymPy comme calculatrice}{16}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Premier calculs}{15}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.1}Premier calculs}{17}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Variables Python}{15}{section*.4}
+\contentsline {subsubsection}{Variables Python}{17}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Variables Symboliques}{15}{section*.5}
+\contentsline {subsubsection}{Variables Symboliques}{17}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}Structure de donn\IeC {\'e}es dans SymPy}{15}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.2}Structure de donn\IeC {\'e}es dans SymPy}{17}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Variable et affection}{16}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.3}Variable et affection}{18}{subsection.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}Substitution}{16}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.4}Substitution}{18}{subsection.1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.5}Contr\IeC {\^o}le du flux d\IeC {\textquoteright }instructions}{16}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.5}Contr\IeC {\^o}le du flux d\IeC {\textquoteright }instructions}{18}{subsection.1.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Les Fonctions}{17}{section.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}Logique et ensemble}{19}{part.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Logique}{21}{chapter.2}
+\contentsline {chapter}{\numberline {2}Analyse et Alg\IeC {\`e}bre}{19}{chapter.2}
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Th\IeC {\'e}orie des ensemble}{23}{chapter.3}
+\contentsline {section}{\numberline {2.1}Expressions symboliques et simplification}{19}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Expressions symboliques}{19}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Transformation d'expressions}{19}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}Fonctions math\IeC {\'e}matiques usuelles}{19}{subsection.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}\IeC {\'E}quations}{19}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}R\IeC {\'e}solution explicite}{20}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}\IeC {\'E}quations sans solution explicite}{20}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}In\'equations}{20}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Analyse}{20}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Les Fonctions}{20}{subsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Sommes}{21}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.3}Limites}{21}{subsection.2.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.4}Suites}{21}{subsection.2.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.5}D\IeC {\'e}veloppements limit\IeC {\'e}s}{21}{subsection.2.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.6}S\IeC {\'e}ries}{21}{subsection.2.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.7}D\IeC {\'e}rivation}{21}{subsection.2.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.8}D\IeC {\'e}riv\IeC {\'e}es partielles}{21}{subsection.2.4.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.9}Int\IeC {\'e}gration}{21}{subsection.2.4.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Calcul matriciel}{21}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}R\IeC {\'e}solution de syst\IeC {\`e}mes lin\IeC {\'e}aires}{21}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}Calcul vectoriel}{21}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.3}Calcul matriciel}{21}{subsection.2.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.4}R\IeC {\'e}duction d'une matrice carr\IeC {\'e}e}{21}{subsection.2.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Graphiques}{23}{chapter.3}
 \ttl@stoptoc {default@2}
 \ttl@starttoc {default@3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Un petit rappel pour les ensembles dans Python}{23}{section.3.1}
+\contentsline {section}{\numberline {3.1}Courbes en 2D}{23}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Ensemble avec SymPy}{23}{section.3.2}
+\contentsline {subsection}{\numberline {3.1.1}Repr\IeC {\'e}sentation graphique de fonctions}{23}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Logique}{24}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.1.2}Courbe param\IeC {\'e}tr\IeC {\'e}e}{23}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Ensembles}{24}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.1.3}Courbe en coordonn\IeC {\'e}es polaires}{23}{subsection.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}Alg\IeC {\`e}bre et th\IeC {\'e}orie des nombres}{27}{part.3}
+\contentsline {subsection}{\numberline {3.1.4}Courbe d\IeC {\'e}finie par une \IeC {\'e}quation implicite}{23}{subsection.3.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Anneaux et corps finis}{29}{chapter.4}
+\contentsline {subsection}{\numberline {3.1.5}Trac\IeC {\'e} de donn\IeC {\'e}es}{23}{subsection.3.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.6}Trac\IeC {\'e} de solution d\IeC {\textquoteright }\IeC {\'e}quation diff\IeC {\'e}rentielle}{23}{subsection.3.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.7}D\IeC {\'e}velopp\IeC {\'e}e d\IeC {\textquoteright }une courbe}{23}{subsection.3.1.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Courbes en 3D}{23}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{II\hspace {1em}Logique et ensemble}{25}{part.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Logique}{27}{chapter.4}
 \ttl@stoptoc {default@3}
 \ttl@starttoc {default@4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{ Anneau des entiers modulo $n$}{29}{section*.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{ Corps finis}{29}{section*.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Polyn\IeC {\^o}mes}{31}{chapter.5}
+\contentsline {chapter}{\numberline {5}Th\IeC {\'e}orie des ensemble}{29}{chapter.5}
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Alg\IeC {\`e}bre lin\IeC {\'e}aire}{33}{chapter.6}
+\contentsline {section}{\numberline {5.1}Un petit rappel pour les ensembles dans Python}{29}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Ensemble avec SymPy}{29}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Logique}{30}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Ensembles}{30}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{III\hspace {1em}Alg\IeC {\`e}bre et th\IeC {\'e}orie des nombres}{33}{part.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Anneaux et corps finis}{35}{chapter.6}
 \ttl@stoptoc {default@5}
 \ttl@starttoc {default@6}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{IV\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{35}{part.4}
+\contentsline {subsubsection}{Anneau des entiers modulo $n$}{35}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}G\IeC {\'e}om\IeC {\'e}trie plan}{39}{chapter.7}
+\contentsline {subsubsection}{Corps finis}{35}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Polyn\IeC {\^o}mes}{37}{chapter.7}
 \ttl@stoptoc {default@6}
 \ttl@starttoc {default@7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}G\IeC {\'e}om\IeC {\'e}trie Diff\IeC {\'e}rentielle}{41}{chapter.8}
+\contentsline {chapter}{\numberline {8}Alg\IeC {\`e}bre lin\IeC {\'e}aire}{39}{chapter.8}
 \ttl@stoptoc {default@7}
 \ttl@starttoc {default@8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Convexity}{43}{chapter.9}
+\contentsline {part}{IV\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{41}{part.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}G\IeC {\'e}om\IeC {\'e}trie plan}{45}{chapter.9}
 \ttl@stoptoc {default@8}
 \ttl@starttoc {default@9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.0.1}Cone}{43}{subsection.9.0.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations preserving convexity}{43}{section*.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations that induce convexity}{43}{section*.9}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Convex Functions}{44}{section.9.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.1}Epigraph}{44}{subsection.9.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Support Function}{47}{chapter.10}
+\contentsline {chapter}{\numberline {10}G\IeC {\'e}om\IeC {\'e}trie Diff\IeC {\'e}rentielle}{47}{chapter.10}
 \ttl@stoptoc {default@9}
 \ttl@starttoc {default@10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1}Operations Preserve Convexity of Functions}{48}{section.10.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Remarks}{49}{section.10.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.3}Corollaries}{49}{section.10.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.4}Propositions}{49}{section.10.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4.1}Several equations}{49}{subsection.10.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4.2}Single Line}{50}{subsection.10.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4.3}Paragraph of Text}{50}{subsection.10.4.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.5}Exercises}{50}{section.10.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.6}Problems}{50}{section.10.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.7}Vocabulary}{50}{section.10.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{V\hspace {1em}Calcul num\IeC {\'e}rique et discret}{51}{part.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Nombres \IeC {\`a} virgule flottante}{53}{chapter.11}
+\contentsline {chapter}{\numberline {11}Convexity}{49}{chapter.11}
 \ttl@stoptoc {default@10}
 \ttl@starttoc {default@11}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Int\IeC {\'e}gration num\IeC {\'e}rique}{55}{chapter.12}
+\contentsline {subsection}{\numberline {11.0.1}Cone}{49}{subsection.11.0.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Operations preserving convexity}{49}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Operations that induce convexity}{49}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.1}Convex Functions}{50}{section.11.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1.1}Epigraph}{50}{subsection.11.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {12}Support Function}{53}{chapter.12}
 \ttl@stoptoc {default@11}
 \ttl@starttoc {default@12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.1}Examples}{55}{section.12.1}
+\contentsline {section}{\numberline {12.1}Operations Preserve Convexity of Functions}{54}{section.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1.1}Equation and Text}{55}{subsection.12.1.1}
+\contentsline {section}{\numberline {12.2}Remarks}{55}{section.12.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {13}Solution non lin\IeC {\'e}aire d'\IeC {\'e}quation alg\IeC {\'e}brique}{57}{chapter.13}
+\contentsline {section}{\numberline {12.3}Corollaries}{55}{section.12.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.4}Propositions}{55}{section.12.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.4.1}Several equations}{55}{subsection.12.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.4.2}Single Line}{56}{subsection.12.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.4.3}Paragraph of Text}{56}{subsection.12.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.5}Exercises}{56}{section.12.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.6}Problems}{56}{section.12.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.7}Vocabulary}{56}{section.12.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{V\hspace {1em}Calcul num\IeC {\'e}rique et discret}{57}{part.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {13}Nombres \IeC {\`a} virgule flottante}{59}{chapter.13}
 \ttl@stoptoc {default@12}
 \ttl@starttoc {default@13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {14}Transport optimal}{59}{chapter.14}
+\contentsline {chapter}{\numberline {14}Int\IeC {\'e}gration num\IeC {\'e}rique}{61}{chapter.14}
 \ttl@stoptoc {default@13}
 \ttl@starttoc {default@14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.1}Figure}{60}{section.14.1}
+\contentsline {section}{\numberline {14.1}Examples}{61}{section.14.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VI\hspace {1em}Combinatoire}{61}{part.6}
+\contentsline {subsection}{\numberline {14.1.1}Equation and Text}{61}{subsection.14.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {15}D\IeC {\'e}nombrement et combinatoire}{65}{chapter.15}
+\contentsline {chapter}{\numberline {15}\IeC {\'E}quations non lin\IeC {\'e}aires}{63}{chapter.15}
 \ttl@stoptoc {default@14}
 \ttl@starttoc {default@15}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VII\hspace {1em}Physique}{67}{part.7}
+\contentsline {section}{\numberline {15.1}\IeC {\'E}quations alg\IeC {\'e}briques}{63}{section.15.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {16}Chaos}{71}{chapter.16}
+\contentsline {section}{\numberline {15.2}Figure}{64}{section.15.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{VI\hspace {1em}Combinatoire}{65}{part.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {16}D\IeC {\'e}nombrement et combinatoire}{69}{chapter.16}
 \ttl@stoptoc {default@15}
 \ttl@starttoc {default@16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {16.1}Pendule simple}{71}{section.16.1}
+\contentsline {part}{VII\hspace {1em}Physique}{71}{part.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.1.1}Pendule \IeC {\`a} deux bras}{71}{subsection.16.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.1.2}Mouvements d\IeC {\textquoteright }un robot}{71}{subsection.16.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {17}M\'ecanique et information quantique}{73}{chapter.17}
+\contentsline {chapter}{\numberline {17}Chaos}{75}{chapter.17}
 \ttl@stoptoc {default@16}
 \ttl@starttoc {default@17}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {18}Le mod\IeC {\`e}le $\phi ^{4}$}{75}{chapter.18}
+\contentsline {section}{\numberline {17.1}Pendule simple}{75}{section.17.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {17.1.1}Pendule \IeC {\`a} deux bras}{75}{subsection.17.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {17.1.2}Mouvements d\IeC {\textquoteright }un robot}{75}{subsection.17.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {18}M\'ecanique et information quantique}{77}{chapter.18}
 \ttl@stoptoc {default@17}
 \ttl@starttoc {default@18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.0.1}LES DIAGRAMMES DE FEYNMAN}{75}{subsection.18.0.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{VIII\hspace {1em}Annexe}{77}{part.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {19}Programmation Orient\IeC {\'e}e Objet}{79}{chapter.19}
+\contentsline {chapter}{\numberline {19}Le mod\IeC {\`e}le $\phi ^{4}$}{79}{chapter.19}
 \ttl@stoptoc {default@18}
 \ttl@starttoc {default@19}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {20}D\'ecorateurs}{81}{chapter.20}
+\contentsline {subsection}{\numberline {19.0.1}LES DIAGRAMMES DE FEYNMAN}{79}{subsection.19.0.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{VIII\hspace {1em}Annexe}{81}{part.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {20}Programmation Orient\IeC {\'e}e Objet}{83}{chapter.20}
 \ttl@stoptoc {default@19}
 \ttl@starttoc {default@20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {21}Optimisation du code}{83}{chapter.21}
+\contentsline {chapter}{\numberline {21}D\'ecorateurs}{85}{chapter.21}
 \ttl@stoptoc {default@20}
 \ttl@starttoc {default@21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.0.1}Cython}{84}{subsection.21.0.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.0.2}Theano}{85}{subsection.21.0.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {22}Interface graphique}{87}{chapter.22}
+\contentsline {chapter}{\numberline {22}Optimisation du code}{87}{chapter.22}
 \ttl@stoptoc {default@21}
 \ttl@starttoc {default@22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.1}Bibliographie}{87}{section.22.1}
+\contentsline {subsection}{\numberline {22.0.1}Cython}{88}{subsection.22.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.2}Index}{87}{section.22.2}
+\contentsline {subsection}{\numberline {22.0.2}Theano}{89}{subsection.22.0.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {23}Interface graphique}{91}{chapter.23}
+\ttl@stoptoc {default@22}
+\ttl@starttoc {default@23}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {23.1}Bibliographie}{91}{section.23.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {23.2}Index}{91}{section.23.2}
 \contentsfinish 
