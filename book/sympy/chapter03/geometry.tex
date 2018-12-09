@@ -1,7 +1,8 @@
 \part{Géométrie}
 Le module de géométrie pour SymPy permet de créer des entités géométriques bidimensionnelles, telles que des lignes et des cercles, et une requête d'informations sur ces entités. Cela peut inclure de demander l’aire d’une ellipse, de vérifier la colinéarité d’un ensemble de points ou de rechercher l’intersection de deux lignes. Le cas d'utilisation principal du module implique des entités avec des valeurs numériques, mais il est également possible d'utiliser des représentations symboliques.
-\section{Géométrie plan}
-\section{Convexity}
+\chapter{Géométrie plan}
+\chapter{Géométrie Différentielle}
+\chapter{Convexity}
 \subsection{Cone}
 \begin{definition}[Cone]
 A set $K \in \R^n$, when $x \in K $ implies $\alpha x \in K$.
@@ -134,7 +135,7 @@ Note $\langle A,B\rangle  = tr(A,B)$ is true for symmetric matrix. \\
 $\langle A,A\rangle  = |A |_F^2 = \sum_{i} A_{ii}^2$
 \end{example}
 
-\section{Support Function}
+\chapter{Support Function}
 Take a set $C \in \R^n$, not necessarily convex.The support function is $\sigma_C = \R^n \to \bar{\R}$. $\sigma_C(x) = \sum \{ \langle x,u\rangle  | u \in C\}$.
 \includegraphics[scale=0.5]{1_1.png}
 \begin{fact}
@@ -151,7 +152,7 @@ $\sigma_C(\alpha x + (1 - \alpha) y ) = \sup_{u \in C} \langle \alpha x + (1 - \
 \end{itemize}
 \begin{example}[L2-norm]
 $\| x \| = \sup_{u \in C} \{ \langle x, u \rangle, u \in \R^n \}$.\\
-$\|x \|_p = \sup \{ \langle x, u \rangle, u \in B_q \}$ where $\frac{1}{p} + \frac{1}{q} = 1$. $B_q = \{ \|x \|_q \le 1\}$.\\
+$\|x \|_p = \sup \{ \langle x, u \rangle, u \in B_q \}$ where $\frac{1}{p} + \frac{1}{q} = 1$. $B_q = \{ \|x \|_q \le 1\}$.\\section
 The norm is 
 \begin{itemize}
 \item Positive homogeneous

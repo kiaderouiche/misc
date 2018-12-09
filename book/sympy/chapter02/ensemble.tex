@@ -1,6 +1,18 @@
-\subsection{Ensembles}
-La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que
-dans le cadre de SymPy elle s'appui entièrement sur Python avec certain modification, avec la collection d'objet.
+\part{Logique et ensemble}
+\chapter{Logique}\index{Logique}
+\chapter{Théorie des ensemble}\index{Théorie des ensemble}
+
+\section{Un petit rappel pour les ensembles dans Python}\index{Ensemble dans Python}
+La théorie d'ensemble existe sous Python, il suffit simplement de tapez 
+\begin{python}
+ens = set()
+\end{python}
+ou écrire simplement 
+\begin{python}
+ ens = ens = {1, 2, 4}
+\end{python}
+\section{Ensemble avec SymPy}\index{Ensemble avec SymPy}
+La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que dans le cadre de SymPy elle s'appui entièrement sur Python avec certain modification, avec la collection d'objet.
 \\
 
 \textit{La fonction set accepte donc en argument un objet de type quelconque et s'efforce de le traduire dans un ensemble. Lorsqu'on ne passe aucun argument à set (option 2), ou qu'on lui passe une liste vide, set renvoie naturellement un ensemble vide; on aurait pu utiliser aussi bien, de la même manière, set(()), set({}), ou même set('') pour arriver au même résultat.}

@@ -49,107 +49,107 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{II\hspace {1em}Alg\IeC {\`e}bre et th\IeC {\'e}orie des nombres}{19}{part.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Alg\IeC {\`e}bre et th\IeC {\'e}orie des nombres}{21}{chapter.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.0.1}Anneaux et corps finis}{21}{subsection.2.0.1}
+\contentsline {chapter}{\numberline {2}Anneaux et corps finis}{21}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{ Anneau des entiers modulo $n$}{21}{section*.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{ Corps finis}{21}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.0.2}Polyn\IeC {\^o}mes}{21}{subsection.2.0.2}
+\contentsline {chapter}{\numberline {3}Polyn\IeC {\^o}mes}{23}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{23}{part.3}
+\contentsline {chapter}{\numberline {4}Alg\IeC {\`e}bre lin\IeC {\'e}aire}{25}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}G\IeC {\'e}om\IeC {\'e}trie plan}{25}{section.2.1}
+\contentsline {part}{III\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{27}{part.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Convexity}{25}{section.2.2}
+\contentsline {chapter}{\numberline {5}G\IeC {\'e}om\IeC {\'e}trie plan}{31}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Cone}{25}{subsection.2.2.1}
+\contentsline {chapter}{\numberline {6}G\IeC {\'e}om\IeC {\'e}trie Diff\IeC {\'e}rentielle}{33}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations preserving convexity}{25}{section*.8}
+\contentsline {chapter}{\numberline {7}Convexity}{35}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations that induce convexity}{25}{section*.9}
+\contentsline {subsection}{\numberline {7.0.1}Cone}{35}{subsection.7.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Convex Functions}{25}{section.2.3}
+\contentsline {subsubsection}{Operations preserving convexity}{35}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Epigraph}{26}{subsection.2.3.1}
+\contentsline {subsubsection}{Operations that induce convexity}{35}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Support Function}{28}{section.2.4}
+\contentsline {section}{\numberline {7.1}Convex Functions}{36}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Operations Preserve Convexity of Functions}{29}{section.2.5}
+\contentsline {subsection}{\numberline {7.1.1}Epigraph}{36}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Remarks}{30}{section.2.6}
+\contentsline {chapter}{\numberline {8}Support Function}{39}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Corollaries}{30}{section.2.7}
+\contentsline {section}{\numberline {8.1}Operations Preserve Convexity of Functions}{40}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Propositions}{30}{section.2.8}
+\contentsline {section}{\numberline {8.2}Remarks}{41}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.1}Several equations}{30}{subsection.2.8.1}
+\contentsline {section}{\numberline {8.3}Corollaries}{41}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.2}Single Line}{30}{subsection.2.8.2}
+\contentsline {section}{\numberline {8.4}Propositions}{41}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.3}Paragraph of Text}{30}{subsection.2.8.3}
+\contentsline {subsection}{\numberline {8.4.1}Several equations}{41}{subsection.8.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.9}Exercises}{31}{section.2.9}
+\contentsline {subsection}{\numberline {8.4.2}Single Line}{42}{subsection.8.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.10}Problems}{31}{section.2.10}
+\contentsline {subsection}{\numberline {8.4.3}Paragraph of Text}{42}{subsection.8.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.11}Vocabulary}{31}{section.2.11}
+\contentsline {section}{\numberline {8.5}Exercises}{42}{section.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{IV\hspace {1em}Calcul num\IeC {\'e}rique}{33}{part.4}
+\contentsline {section}{\numberline {8.6}Problems}{42}{section.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Nombres \IeC {\`a} virgule flottante}{35}{chapter.3}
+\contentsline {section}{\numberline {8.7}Vocabulary}{42}{section.8.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Int\IeC {\'e}gration num\IeC {\'e}rique}{37}{chapter.4}
+\contentsline {part}{IV\hspace {1em}Calcul num\IeC {\'e}rique et discret}{43}{part.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Examples}{37}{section.4.1}
+\contentsline {chapter}{\numberline {9}Nombres \IeC {\`a} virgule flottante}{45}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Equation and Text}{37}{subsection.4.1.1}
+\contentsline {chapter}{\numberline {10}Int\IeC {\'e}gration num\IeC {\'e}rique}{47}{chapter.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Solution non lin\IeC {\'e}aire d'\IeC {\'e}quation alg\IeC {\'e}brique}{39}{chapter.5}
+\contentsline {section}{\numberline {10.1}Examples}{47}{section.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Figure}{40}{section.5.1}
+\contentsline {subsection}{\numberline {10.1.1}Equation and Text}{47}{subsection.10.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Math\IeC {\'e}matique pure}{41}{chapter.6}
+\contentsline {chapter}{\numberline {11}Solution non lin\IeC {\'e}aire d'\IeC {\'e}quation alg\IeC {\'e}brique}{49}{chapter.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}La th\IeC {\'e}orie de cat\IeC {\'e}gorie}{42}{section.6.1}
+\contentsline {chapter}{\numberline {12}Transport optimal}{51}{chapter.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Transport optimal}{42}{section.6.2}
+\contentsline {section}{\numberline {12.1}Figure}{52}{section.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Probl\IeC {\`e}me non lin\IeC {\'e}aire}{43}{chapter.7}
+\contentsline {part}{V\hspace {1em}Combinatoire}{53}{part.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{V\hspace {1em}Physique}{45}{part.5}
+\contentsline {chapter}{\numberline {13}D\IeC {\'e}nombrement et combinatoire}{57}{chapter.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Chaos}{49}{chapter.8}
+\contentsline {part}{VI\hspace {1em}Physique}{59}{part.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Pendule simple}{49}{section.8.1}
+\contentsline {chapter}{\numberline {14}Chaos}{63}{chapter.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.1}Pendule \IeC {\`a} deux bras}{49}{subsection.8.1.1}
+\contentsline {section}{\numberline {14.1}Pendule simple}{63}{section.14.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.2}Mouvements d\IeC {\textquoteright }un robot}{49}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {14.1.1}Pendule \IeC {\`a} deux bras}{63}{subsection.14.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}M\'ecanique et information quantique}{51}{chapter.9}
+\contentsline {subsection}{\numberline {14.1.2}Mouvements d\IeC {\textquoteright }un robot}{63}{subsection.14.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Le mod\IeC {\`e}le $\phi ^{4}$}{53}{chapter.10}
+\contentsline {chapter}{\numberline {15}M\'ecanique et information quantique}{65}{chapter.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.0.1}LES DIAGRAMMES DE FEYNMAN}{53}{subsection.10.0.1}
+\contentsline {chapter}{\numberline {16}Le mod\IeC {\`e}le $\phi ^{4}$}{67}{chapter.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Annexe}{55}{chapter.11}
+\contentsline {subsection}{\numberline {16.0.1}LES DIAGRAMMES DE FEYNMAN}{67}{subsection.16.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}Programmation Orient\IeC {\'e}e Objet}{55}{section.11.1}
+\contentsline {part}{VII\hspace {1em}Annexe}{69}{part.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.2}D\'ecorateurs}{55}{section.11.2}
+\contentsline {chapter}{\numberline {17}Programmation Orient\IeC {\'e}e Objet}{71}{chapter.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2.1}Optimisation du code}{55}{subsection.11.2.1}
+\contentsline {chapter}{\numberline {18}D\'ecorateurs}{73}{chapter.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2.2}Cython}{56}{subsection.11.2.2}
+\contentsline {chapter}{\numberline {19}Optimisation du code}{75}{chapter.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2.3}Theano}{57}{subsection.11.2.3}
+\contentsline {subsection}{\numberline {19.0.1}Cython}{76}{subsection.19.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.3}Interface graphique}{58}{section.11.3}
+\contentsline {subsection}{\numberline {19.0.2}Theano}{77}{subsection.19.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.4}Bibliographie}{58}{section.11.4}
+\contentsline {chapter}{\numberline {20}Interface graphique}{79}{chapter.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.5}Index}{58}{section.11.5}
+\contentsline {section}{\numberline {20.1}Bibliographie}{79}{section.20.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20.2}Index}{79}{section.20.2}
 \contentsfinish 

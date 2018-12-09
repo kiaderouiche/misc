@@ -20,51 +20,51 @@
 \BOOKMARK [2][-]{subsection.1.2.5}{Contr\364le du flux d\220instructions}{section.1.2}% 20
 \BOOKMARK [1][-]{section.1.3}{Les Fonctions}{chapter.1}% 21
 \BOOKMARK [-1][-]{part.2}{II Alg\350bre et th\351orie des nombres}{}% 22
-\BOOKMARK [0][-]{chapter.2}{Alg\350bre et th\351orie des nombres}{part.2}% 23
-\BOOKMARK [1][-]{subsection.2.0.1}{Anneaux et corps finis}{chapter.2}% 24
-\BOOKMARK [2][-]{subsection.2.0.2}{Polyn\364mes}{subsection.2.0.1}% 25
+\BOOKMARK [0][-]{chapter.2}{Anneaux et corps finis}{part.2}% 23
+\BOOKMARK [0][-]{chapter.3}{Polyn\364mes}{part.2}% 24
+\BOOKMARK [0][-]{chapter.4}{Alg\350bre lin\351aire}{part.2}% 25
 \BOOKMARK [-1][-]{part.3}{III G\351om\351trie}{}% 26
-\BOOKMARK [0][-]{section.2.1}{G\351om\351trie plan}{part.3}% 27
-\BOOKMARK [1][-]{section.2.2}{Convexity}{section.2.1}% 28
-\BOOKMARK [2][-]{subsection.2.2.1}{Cone}{section.2.2}% 29
-\BOOKMARK [1][-]{section.2.3}{Convex Functions}{section.2.1}% 30
-\BOOKMARK [2][-]{subsection.2.3.1}{Epigraph}{section.2.3}% 31
-\BOOKMARK [1][-]{section.2.4}{Support Function}{section.2.1}% 32
-\BOOKMARK [1][-]{section.2.5}{Operations Preserve Convexity of Functions}{section.2.1}% 33
-\BOOKMARK [1][-]{section.2.6}{Remarks}{section.2.1}% 34
-\BOOKMARK [1][-]{section.2.7}{Corollaries}{section.2.1}% 35
-\BOOKMARK [1][-]{section.2.8}{Propositions}{section.2.1}% 36
-\BOOKMARK [2][-]{subsection.2.8.1}{Several equations}{section.2.8}% 37
-\BOOKMARK [2][-]{subsection.2.8.2}{Single Line}{section.2.8}% 38
-\BOOKMARK [2][-]{subsection.2.8.3}{Paragraph of Text}{section.2.8}% 39
-\BOOKMARK [1][-]{section.2.9}{Exercises}{section.2.1}% 40
-\BOOKMARK [1][-]{section.2.10}{Problems}{section.2.1}% 41
-\BOOKMARK [1][-]{section.2.11}{Vocabulary}{section.2.1}% 42
-\BOOKMARK [-1][-]{part.4}{IV Calcul num\351rique}{}% 43
-\BOOKMARK [0][-]{chapter.3}{Nombres \340 virgule flottante}{part.4}% 44
-\BOOKMARK [0][-]{chapter.4}{Int\351gration num\351rique}{part.4}% 45
-\BOOKMARK [1][-]{section.4.1}{Examples}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.1.1}{Equation and Text}{section.4.1}% 47
-\BOOKMARK [0][-]{chapter.5}{Solution non lin\351aire d'\351quation alg\351brique}{part.4}% 48
-\BOOKMARK [1][-]{section.5.1}{Figure}{chapter.5}% 49
-\BOOKMARK [0][-]{chapter.6}{Math\351matique pure}{part.4}% 50
-\BOOKMARK [1][-]{section.6.1}{La th\351orie de cat\351gorie}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.2}{Transport optimal}{chapter.6}% 52
-\BOOKMARK [0][-]{chapter.7}{Probl\350me non lin\351aire}{part.4}% 53
-\BOOKMARK [-1][-]{part.5}{V Physique}{}% 54
-\BOOKMARK [0][-]{chapter.8}{Chaos}{part.5}% 55
-\BOOKMARK [1][-]{section.8.1}{Pendule simple}{chapter.8}% 56
-\BOOKMARK [2][-]{subsection.8.1.1}{Pendule \340 deux bras}{section.8.1}% 57
-\BOOKMARK [2][-]{subsection.8.1.2}{Mouvements d\220un robot}{section.8.1}% 58
-\BOOKMARK [0][-]{chapter.9}{M\351canique et information quantique}{part.5}% 59
-\BOOKMARK [0][-]{chapter.10}{Le mod\350le 4}{part.5}% 60
-\BOOKMARK [1][-]{subsection.10.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.10}% 61
-\BOOKMARK [0][-]{chapter.11}{Annexe}{part.5}% 62
-\BOOKMARK [1][-]{section.11.1}{Programmation Orient\351e Objet}{chapter.11}% 63
-\BOOKMARK [1][-]{section.11.2}{D\351corateurs}{chapter.11}% 64
-\BOOKMARK [2][-]{subsection.11.2.1}{Optimisation du code}{section.11.2}% 65
-\BOOKMARK [2][-]{subsection.11.2.2}{Cython}{section.11.2}% 66
-\BOOKMARK [2][-]{subsection.11.2.3}{Theano}{section.11.2}% 67
-\BOOKMARK [1][-]{section.11.3}{Interface graphique}{chapter.11}% 68
-\BOOKMARK [1][-]{section.11.4}{Bibliographie}{chapter.11}% 69
-\BOOKMARK [1][-]{section.11.5}{Index}{chapter.11}% 70
+\BOOKMARK [0][-]{chapter.5}{G\351om\351trie plan}{part.3}% 27
+\BOOKMARK [0][-]{chapter.6}{G\351om\351trie Diff\351rentielle}{part.3}% 28
+\BOOKMARK [0][-]{chapter.7}{Convexity}{part.3}% 29
+\BOOKMARK [1][-]{subsection.7.0.1}{Cone}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.1}{Convex Functions}{chapter.7}% 31
+\BOOKMARK [2][-]{subsection.7.1.1}{Epigraph}{section.7.1}% 32
+\BOOKMARK [0][-]{chapter.8}{Support Function}{part.3}% 33
+\BOOKMARK [1][-]{section.8.1}{Operations Preserve Convexity of Functions}{chapter.8}% 34
+\BOOKMARK [1][-]{section.8.2}{Remarks}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.3}{Corollaries}{chapter.8}% 36
+\BOOKMARK [1][-]{section.8.4}{Propositions}{chapter.8}% 37
+\BOOKMARK [2][-]{subsection.8.4.1}{Several equations}{section.8.4}% 38
+\BOOKMARK [2][-]{subsection.8.4.2}{Single Line}{section.8.4}% 39
+\BOOKMARK [2][-]{subsection.8.4.3}{Paragraph of Text}{section.8.4}% 40
+\BOOKMARK [1][-]{section.8.5}{Exercises}{chapter.8}% 41
+\BOOKMARK [1][-]{section.8.6}{Problems}{chapter.8}% 42
+\BOOKMARK [1][-]{section.8.7}{Vocabulary}{chapter.8}% 43
+\BOOKMARK [-1][-]{part.4}{IV Calcul num\351rique et discret}{}% 44
+\BOOKMARK [0][-]{chapter.9}{Nombres \340 virgule flottante}{part.4}% 45
+\BOOKMARK [0][-]{chapter.10}{Int\351gration num\351rique}{part.4}% 46
+\BOOKMARK [1][-]{section.10.1}{Examples}{chapter.10}% 47
+\BOOKMARK [2][-]{subsection.10.1.1}{Equation and Text}{section.10.1}% 48
+\BOOKMARK [0][-]{chapter.11}{Solution non lin\351aire d'\351quation alg\351brique}{part.4}% 49
+\BOOKMARK [0][-]{chapter.12}{Transport optimal}{part.4}% 50
+\BOOKMARK [1][-]{section.12.1}{Figure}{chapter.12}% 51
+\BOOKMARK [-1][-]{part.5}{V Combinatoire}{}% 52
+\BOOKMARK [0][-]{chapter.13}{D\351nombrement et combinatoire}{part.5}% 53
+\BOOKMARK [-1][-]{part.6}{VI Physique}{}% 54
+\BOOKMARK [0][-]{chapter.14}{Chaos}{part.6}% 55
+\BOOKMARK [1][-]{section.14.1}{Pendule simple}{chapter.14}% 56
+\BOOKMARK [2][-]{subsection.14.1.1}{Pendule \340 deux bras}{section.14.1}% 57
+\BOOKMARK [2][-]{subsection.14.1.2}{Mouvements d\220un robot}{section.14.1}% 58
+\BOOKMARK [0][-]{chapter.15}{M\351canique et information quantique}{part.6}% 59
+\BOOKMARK [0][-]{chapter.16}{Le mod\350le 4}{part.6}% 60
+\BOOKMARK [1][-]{subsection.16.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.16}% 61
+\BOOKMARK [-1][-]{part.7}{VII Annexe}{}% 62
+\BOOKMARK [0][-]{chapter.17}{Programmation Orient\351e Objet}{part.7}% 63
+\BOOKMARK [0][-]{chapter.18}{D\351corateurs}{part.7}% 64
+\BOOKMARK [0][-]{chapter.19}{Optimisation du code}{part.7}% 65
+\BOOKMARK [1][-]{subsection.19.0.1}{Cython}{chapter.19}% 66
+\BOOKMARK [2][-]{subsection.19.0.2}{Theano}{subsection.19.0.1}% 67
+\BOOKMARK [0][-]{chapter.20}{Interface graphique}{part.7}% 68
+\BOOKMARK [1][-]{section.20.1}{Bibliographie}{chapter.20}% 69
+\BOOKMARK [1][-]{section.20.2}{Index}{chapter.20}% 70
