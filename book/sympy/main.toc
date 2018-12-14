@@ -131,9 +131,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Anneaux et corps finis}{35}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Anneau des entiers modulo $n$}{35}{section*.6}
+\contentsline {section}{\numberline {6.1}Anneau des entiers modulo $n$}{35}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Corps finis}{35}{section*.7}
+\contentsline {section}{\numberline {6.2}Corps finis}{35}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Probl\`emes \IeC {\'e}l\IeC {\'e}mentaires de th\IeC {\'e}orie des nombres}{35}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.1}Th\IeC {\'e}or\IeC {\`e}me de Wilson}{35}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Polyn\IeC {\^o}mes}{37}{chapter.7}
 \defcounter {refsection}{0}\relax 
@@ -149,9 +153,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.0.1}Cone}{49}{subsection.11.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations preserving convexity}{49}{section*.8}
+\contentsline {subsubsection}{Operations preserving convexity}{49}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations that induce convexity}{49}{section*.9}
+\contentsline {subsubsection}{Operations that induce convexity}{49}{section*.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11.1}Convex Functions}{50}{section.11.1}
 \defcounter {refsection}{0}\relax 
