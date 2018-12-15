@@ -33,9 +33,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.1}Premier calculs}{17}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Variables Python}{17}{section*.4}
+\contentsline {subsubsection}{Variables Python}{17}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Variables Symboliques}{17}{section*.5}
+\contentsline {subsubsection}{Variables Symboliques}{17}{section*.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}Structure de donn\IeC {\'e}es dans SymPy}{17}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
@@ -135,7 +135,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Corps finis}{35}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Probl\`emes \IeC {\'e}l\IeC {\'e}mentaires de th\IeC {\'e}orie des nombres}{35}{section.6.3}
+\contentsline {section}{\numberline {6.3}Quelques probl\`emes \IeC {\'e}l\IeC {\'e}mentaires de th\IeC {\'e}orie des nombres}{35}{section.6.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.1}Th\IeC {\'e}or\IeC {\`e}me de Wilson}{35}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
@@ -153,9 +153,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.0.1}Cone}{49}{subsection.11.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations preserving convexity}{49}{section*.6}
+\contentsline {subsubsection}{Operations preserving convexity}{49}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations that induce convexity}{49}{section*.7}
+\contentsline {subsubsection}{Operations that induce convexity}{49}{section*.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11.1}Convex Functions}{50}{section.11.1}
 \defcounter {refsection}{0}\relax 

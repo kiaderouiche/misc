@@ -2,14 +2,18 @@
 \chapter{Anneaux et corps finis}
 \section{Anneau des entiers modulo $n$}
 \section{Corps finis}
-\section{Probl\`emes élémentaires de théorie des nombres}
-\subsection{Théorème de Wilson}\footnote{http://www.les-mathematiques.net/phorum/read.php?3,320294,320385, https://blogdemaths.wordpress.com/2015/10/26/le-theoreme-de-wilson/}
+\section{Quelques probl\`emes élémentaires de théorie des nombres}
+\subsection{Théorème de Wilson}\footnote{\textbf{Note Historique.} Le théorème de Wilson a été découvert à la fin du dixième siècle par le mathématicien arabe Ibn al-Haytham $(965-1040)$. Le résultat ressurgit, sans démonstration, à la fin du dix-huitième siècle dans les écrits de Edward Waring qui l’attribue en 1770 à son élève John Wilson. L’année suivante, Lagrange en donne deux démonstrations dans son article [LAG]. En fait, Leibniz $(1646-1716)$ connaissait déjà le résultat et sa démonstration mais ne les avait pas publiés (voir [RAS] pour de plus amples considérations historiques).}
 \'enoncé du théorème 
 \begin{theorem}
  Un entier $p$ strictement plus grand que $1$ est un nombre premier si et seulement s'il divise $(p - 1)! + 1$, c'est-à-dire si et seulement si $(p-1)!+ 1 \equiv 0 (mod p)$
 \end{theorem}
-
-Alain Connes dans son papier "Autour du théorème de Wilson"\footnote{https://arxiv.org/abs/1809.02832}
+\textbf{Indication.}  Quatre démonstrations de ce résultat de Wilson. L'idée directrice des deux premières démonstrations est de remplacer ce calcul de congruence $(\mathbb{Z}/p\mathbb{Z})$ par un calcul dans $\mathbb{F}_{p}$ ce qui va permettre d'utiliser les propriétés d’un corps. L'idée de la troisième démonstration est d’utiliser les théorèmes de Sylow dans le groupe symétrique $\mathbb{\sigma}_{p}$, la quatrième est plutôt combinatoire qui repose sur l'identité algébrique $\Sigma_{i=0}^{n} (-1)^{i} C_n^{p}(x-i)^n = n!$ donnée en théorème l'auteur\footnote{https://arxiv.org/pdf/math/0406086.pdf} ainsi le théorème sera simplement comme
+corollaire en remplaçant $n$ par $p-1$
+\begin{proof}
+A venir!.
+\end{proof}
+Allez plus loin dans une autre direction Alain Connes dans son article "Autour du théorème de Wilson"\footnote{https://arxiv.org/abs/1809.02832}, donne une approximation du nombre $\pi$
 \begin{remark}
 Contrairement au petit théorème de Fermat, le théorème de Wilson est une condition nécessaire et suffisante pour tester la primalité. Toutefois, cela conduirait à un test très lent informatiquement, car le calcul de (p-1)! nécessite beaucoup d'opérations.
 \end{remark}
