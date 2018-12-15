@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  15 DEC 2018 01:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  15 DEC 2018 02:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1766,12 +1766,12 @@ Package mdframed Info: mdframed detected package amsthm
 Chapter 7.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 20.
+Package pdftex.def Info: Pictures/head2.png  used on input line 27.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-Package mdframed Info: mdframed works in twoside mode on input line 21.
+Package mdframed Info: mdframed works in twoside mode on input line 28.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 21.
+(mdframed)              on input line 28.
 [37
 
 ] [38
@@ -1780,7 +1780,7 @@ Package mdframed Info: mdframed detected package amsthm
 Chapter 8.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 24.
+Package pdftex.def Info: Pictures/head2.png  used on input line 31.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 ) [39]
 \openout2 = `chapter03/geometry.aux'.
@@ -1919,18 +1919,18 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 138.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/1_1.png, id=1065, 529.98pt x 469.755pt>
+<Pictures/1_1.png, id=1071, 529.98pt x 469.755pt>
 File: Pictures/1_1.png Graphic file (type png)
 <use Pictures/1_1.png>
 Package pdftex.def Info: Pictures/1_1.png  used on input line 140.
 (pdftex.def)             Requested size: 264.98933pt x 234.87692pt.
 [53 <./Pictures/1_1.png>]
-<Pictures/1_2.png, id=1074, 318.18875pt x 316.18124pt>
+<Pictures/1_2.png, id=1080, 318.18875pt x 316.18124pt>
 File: Pictures/1_2.png Graphic file (type png)
 <use Pictures/1_2.png>
 Package pdftex.def Info: Pictures/1_2.png  used on input line 170.
 (pdftex.def)             Requested size: 318.18796pt x 316.18047pt.
-<Pictures/1_3.png, id=1075, 326.21875pt x 165.61874pt>
+<Pictures/1_3.png, id=1081, 326.21875pt x 165.61874pt>
 File: Pictures/1_3.png Graphic file (type png)
 <use Pictures/1_3.png>
 Package pdftex.def Info: Pictures/1_3.png  used on input line 179.
@@ -2138,11 +2138,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39210 strings out of 494432
- 719271 string characters out of 6173608
+ 39226 strings out of 494432
+ 719465 string characters out of 6173608
  1297603 words of memory out of 5000000
- 41651 multiletter control sequences out of 15000+600000
- 668100 words of font info for 330 fonts, out of 8000000 for 9000
+ 41658 multiletter control sequences out of 15000+600000
+ 668230 words of font info for 332 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  57i,15n,63p,921b,3480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -2160,10 +2160,10 @@ f-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (91 pages, 13874932 bytes).
+Output written on main.pdf (91 pages, 13875875 bytes).
 PDF statistics:
- 1395 PDF objects out of 1440 (max. 8388607)
- 1157 compressed objects within 12 object streams
- 364 named destinations out of 1000 (max. 500000)
+ 1402 PDF objects out of 1440 (max. 8388607)
+ 1164 compressed objects within 12 object streams
+ 370 named destinations out of 1000 (max. 500000)
  63429 words of extra memory for PDF output out of 74296 (max. 10000000)
 
