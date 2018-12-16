@@ -25,6 +25,10 @@ def isPrime(n):
  return bool(math.factorial(n>>1)%n)
 \end{python}
 \chapter{Polynômes}
+ \section{Anneaux et polynômes}
+  \subsection{Introduction}
+ Nous avons vu au chapitre 2 comment effectuer des calculs sur des expressions formelles, éléments de « l'anneau symbolique ». Dans ce chapitre en va manipuler le module dédié, \textcolor{red}{sympy.polys}, permettant de calculer des algèbres polynomiales sur divers domaines de coefficients implémentant un grand nombre de méthodes  allant d’outils simples comme la division polynomiale à des concepts avancés comprenant les bases de Gröbner et la factorisation multivariée sur des domaines de nombres algébrique:
+
 \begin{exercise}
 Considérons le polynôme $p(x) = a_{0} + a_{1} x + a_{2} x^{2} + a_{3} x^{3}$, où $a_{i} \neq 0$ $\forall i$. Le nombre minimum de multiplications nécessaires pour évaluer $p$ sur une entrée $x$ est:
 \end{exercise}

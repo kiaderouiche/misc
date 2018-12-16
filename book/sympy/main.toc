@@ -141,6 +141,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Polyn\IeC {\^o}mes}{37}{chapter.7}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Anneaux et polyn\IeC {\^o}mes}{37}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.1}Introduction}{37}{subsection.7.1.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Alg\IeC {\`e}bre lin\IeC {\'e}aire}{39}{chapter.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{IV\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{41}{part.4}
