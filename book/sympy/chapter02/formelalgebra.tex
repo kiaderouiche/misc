@@ -28,7 +28,44 @@ def isPrime(n):
  \section{Anneaux et polynômes}
   \subsection{Introduction}
  Nous avons vu au chapitre 2 comment effectuer des calculs sur des expressions formelles, éléments de « l'anneau symbolique ». Dans ce chapitre en va manipuler le module dédié, \textcolor{red}{sympy.polys}, permettant de calculer des algèbres polynomiales sur divers domaines de coefficients implémentant un grand nombre de méthodes  allant d’outils simples comme la division polynomiale à des concepts avancés comprenant les bases de Gröbner et la factorisation multivariée sur des domaines de nombres algébrique:
+  \subsection{ Construction d’anneaux de polynômes}
+En SymPy, les polynômes, comme beaucoup d’autres objets algébriques, sont en général à coefficients dans un anneau commutatif. C’est le point de vue que nous adoptons, mais la plupart de nos exemples concernent des polynômes sur un corps. Dans tout le chapitre, les lettres A et K désignent respectivement un anneau commutatif et un corps quelconques. La première étape pour mener un calcul dans une structure algébrique est souvent de construire R elle-même. On construit $\mathbb{Q}\left[x\right]$
+ \section{Polynômes}
+  \subsection{Création et arithmétique de base}
+  \subsection{Vue d’ensemble des opérations sur les polynômes}
+  \subsection{Changement d’anneau}\footnote{Contrairement à Sage, il peut y être que dans SymPy certain 
+  fonctionnalité ne soi pas directement accessible que par passage à la programmation }
+Changement d’anneau. La liste exacte des opérations disponibles, leur effet
+et leur efficacité dépendent fortement de l’anneau de base. Par exemple, les
+polynômes de $ZZ\left['x'\right]$ possèdent une méthode content qui renvoie leur contenu,
+c’est-à-dire le pgcd de leurs coefficients ; ceux de $QQ\left['x'\right]$ non, l’opération étant
+triviale. La méthode factor existe quant à elle pour tous les polynômes mais
+déclenche une exception NotImplementedError pour un polynôme à coefficients
+dans SR(le cas de Sage) ou dans $\mathbb{Z}/4\mathbb{Z}$. Par exemple Cette exception signifie que l’opération n’est pas disponible dans Sage pour ce type d’objet bien qu’elle ait un sens mathématiquement.
+Il est donc très utile de pouvoir jongler avec les différents anneaux de coefficients
+sur lesquels on peut considérer un « même » polynôme. Appliquée à un polynôme
+de $A\left['x'\right]$, la méthode change\_ring renvoie son image dans $B\left[x\right]$, quand il y a une
+façon naturelle de convertir les coefficients. La conversion est souvent donnée par
+un morphisme canonique de A dans B : notamment, change\_ring sert à étendre
+l’anneau de base pour disposer de propriétés algébriques supplémentaires. Ici par
+exemple, le polynôme p est irréductible sur les entiers, mais se factorise sur R :
+ \subsection{Itération}
+ \section{Arithmétique euclidienne}
+ \subsection{ Divisibilité}
+ \subsection{ Idéaux et quotients}
+ \subsection{Idéaux}
+ \section{ Factorisation et racines}
+ \subsection{Factorisation}
+ \subsection{ Recherche de racines}
+ \subsection{ Résultant}
+ \subsection{ Groupe de Galois}
+ Par défaut le calcul de groupe de Galois n'est pas disponible dans SymPy, ce qui nous amènes encore
+ une fois de programmer en ajoutant des modules, Le groupe de Galois d’un polynôme irréductible $p \in \mathbb{Q}\left[x\right]$ est un objet algébrique qui décrit certaines « symétries » des racines de $p$. Il s’agit d’un objet central de la théorie des équations algébriques. Notamment, l’équation $p\left(x\right) = 0$
+est résoluble par radicaux, c’est-à-dire que ses solutions s’expriment à partir des coefficients de $p$ au moyen des quatre opérations et de l'extraction de racine n-ième, si et seulement si le groupe de Galois de $p$ est résoluble.
+\section{ Fractions rationnelles}
+ \subsection{ Construction et propriétés élémentaires}
 
+%%%%%%%%
 \begin{exercise}
 Considérons le polynôme $p(x) = a_{0} + a_{1} x + a_{2} x^{2} + a_{3} x^{3}$, où $a_{i} \neq 0$ $\forall i$. Le nombre minimum de multiplications nécessaires pour évaluer $p$ sur une entrée $x$ est:
 \end{exercise}

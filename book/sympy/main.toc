@@ -145,6 +145,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.1.1}Introduction}{37}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.2} Construction d\IeC {\textquoteright }anneaux de polyn\IeC {\^o}mes}{37}{subsection.7.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Polyn\IeC {\^o}mes}{37}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}Cr\IeC {\'e}ation et arithm\IeC {\'e}tique de base}{37}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.2}Vue d\IeC {\textquoteright }ensemble des op\IeC {\'e}rations sur les polyn\IeC {\^o}mes}{37}{subsection.7.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.3}Changement d\IeC {\textquoteright }anneau}{37}{subsection.7.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.4}It\IeC {\'e}ration}{38}{subsection.7.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Arithm\IeC {\'e}tique euclidienne}{38}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.1} Divisibilit\IeC {\'e}}{38}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2} Id\IeC {\'e}aux et quotients}{38}{subsection.7.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.3}Id\IeC {\'e}aux}{38}{subsection.7.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4} Factorisation et racines}{38}{section.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.1}Factorisation}{38}{subsection.7.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.2} Recherche de racines}{38}{subsection.7.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.3} R\IeC {\'e}sultant}{38}{subsection.7.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.4} Groupe de Galois}{38}{subsection.7.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.5} Fractions rationnelles}{38}{section.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5.1} Construction et propri\IeC {\'e}t\IeC {\'e}s \IeC {\'e}l\IeC {\'e}mentaires}{38}{subsection.7.5.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Alg\IeC {\`e}bre lin\IeC {\'e}aire}{39}{chapter.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{IV\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{41}{part.4}
