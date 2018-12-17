@@ -64,6 +64,30 @@ exemple, le polynôme p est irréductible sur les entiers, mais se factorise sur
 est résoluble par radicaux, c’est-à-dire que ses solutions s’expriment à partir des coefficients de $p$ au moyen des quatre opérations et de l'extraction de racine n-ième, si et seulement si le groupe de Galois de $p$ est résoluble.
 \section{ Fractions rationnelles}
  \subsection{ Construction et propriétés élémentaires}
+ La division de deux polynômes (sur un anneau intègre) produit une fraction rationnelle. Son parent est le corps des fractions de l’anneau de polynômes, qui peut s’obtenir par Frac(R) :
+ \section{Séries formelles}
+ Une série formelle est une série entière vue comme une simple suite de coefficients, sans considération de convergence. Plus précisément, si $A$ est un anneau commutatif, on appelle séries formelles (en anglais formal
+ power series) d’indéterminée  à coefficients dans  les sommes formelles $\sum_{n=0}^{\infty} a_{n}x^{n}$ où ($a_{n}$) est une suite quelconque d’éléments de $A$. Munies des opérations d’addition et de multiplication naturelles
+\[
+ \sum_{n=0}^{\infty} a_{n}x^{n} + \sum_{n=0}^{\infty} b_{n}x^{n} = \sum_{n=0}^{\infty} \left(a_{n}+b_{n}\right) x^{n} 
+ \],
+\[
+ \left(\sum_{n=0}^{\infty} a_{n}x^{n}\right) \left(\sum_{n=0}^{\infty} b_{n}x^{n}\right) =  \sum_{n=0}^{\infty} \left( \sum_{n=0}^{\infty} a_{i}b_{j}\right)x^{n}
+\], les séries formelles forment un anneau noté $A\left[ \left[ x\right] \right] $.\\
+
+les séries formelles forment un anneau noté Dans un système de calcul formel, ces séries sont utiles pour représenter des fonctions analytiques dont on n'a pas d’écriture exacte. Comme toujours, l’ordinateur fait les calculs, mais c’est à l'utilisateur de leur donner un sens mathématique. À lui par exemple de s’assurer que les séries qu’il manipule sont convergentes. 
+ \subsection{Opérations sur les séries tronquées}
+ \subsection{Développement de solutions d’équations}
+ Face à une équation différentielle dont les solutions exactes sont trop compliquées à calculer ou à exploiter une fois calculées, ou tout simplement qui n’admet pas de solution en forme close, un recours fréquent consiste à chercher des solutions sous forme de séries. On commence habituellement par déterminer les solutions 
+de l’équation dans l’espace des séries formelles, et si nécessaire, on conclut ensuite par un argument de convergence que les solutions formelles construites ont un sens analytique. SymPy peut être d’une aide précieuse pour la première étape. Considérons par exemple l’équation différentielle
+
+\begin{example}
+\[
+ \left(x\right) = \sqrt{1+x^{2}}
+\]
+\end{example}
+
+
 
 %%%%%%%%
 \begin{exercise}
