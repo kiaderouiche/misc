@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  17 DEC 2018 00:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  20 DEC 2018 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1775,17 +1775,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 93.
+Package mdframed Info: mdframed works in twoside mode on input line 91.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 93.
+(mdframed)              on input line 91.
 [39] [40
 
 ]
 Chapter 8.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 96.
+Package pdftex.def Info: Pictures/head2.png  used on input line 94.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 ) [41]
 \openout2 = `chapter03/geometry.aux'.
@@ -1924,18 +1924,18 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 138.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/1_1.png, id=1215, 529.98pt x 469.755pt>
+<Pictures/1_1.png, id=1218, 529.98pt x 469.755pt>
 File: Pictures/1_1.png Graphic file (type png)
 <use Pictures/1_1.png>
 Package pdftex.def Info: Pictures/1_1.png  used on input line 140.
 (pdftex.def)             Requested size: 264.98933pt x 234.87692pt.
 [55 <./Pictures/1_1.png>]
-<Pictures/1_2.png, id=1225, 318.18875pt x 316.18124pt>
+<Pictures/1_2.png, id=1228, 318.18875pt x 316.18124pt>
 File: Pictures/1_2.png Graphic file (type png)
 <use Pictures/1_2.png>
 Package pdftex.def Info: Pictures/1_2.png  used on input line 170.
 (pdftex.def)             Requested size: 318.18796pt x 316.18047pt.
-<Pictures/1_3.png, id=1226, 326.21875pt x 165.61874pt>
+<Pictures/1_3.png, id=1229, 326.21875pt x 165.61874pt>
 File: Pictures/1_3.png Graphic file (type png)
 <use Pictures/1_3.png>
 Package pdftex.def Info: Pictures/1_3.png  used on input line 179.
@@ -2136,16 +2136,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
 (./annexe/optimization/cython.aux) (./annexe/optimization/theano.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AA8929C42D777CD6BD23DE0A9BB32290;9630.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: AA8929C42D777CD6BD23DE0A9BB32290;9630
+(rerunfilecheck)             After:  D644773EF2374A10E1F4643761B2B242;9912.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39283 strings out of 494432
- 720268 string characters out of 6173608
- 1297631 words of memory out of 5000000
+ 39286 strings out of 494432
+ 720311 string characters out of 6173608
+ 1297632 words of memory out of 5000000
  41680 multiletter control sequences out of 15000+600000
  668620 words of font info for 338 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
@@ -2165,10 +2172,10 @@ f-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (93 pages, 13888834 bytes).
+Output written on main.pdf (93 pages, 13889788 bytes).
 PDF statistics:
- 1550 PDF objects out of 1728 (max. 8388607)
- 1287 compressed objects within 13 object streams
- 396 named destinations out of 1000 (max. 500000)
+ 1555 PDF objects out of 1728 (max. 8388607)
+ 1292 compressed objects within 13 object streams
+ 399 named destinations out of 1000 (max. 500000)
  63605 words of extra memory for PDF output out of 74296 (max. 10000000)
 

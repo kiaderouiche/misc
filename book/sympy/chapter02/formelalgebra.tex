@@ -66,7 +66,7 @@ est résoluble par radicaux, c’est-à-dire que ses solutions s’expriment à 
  \subsection{ Construction et propriétés élémentaires}
  La division de deux polynômes (sur un anneau intègre) produit une fraction rationnelle. Son parent est le corps des fractions de l’anneau de polynômes, qui peut s’obtenir par Frac(R) :
  \section{Séries formelles}
- Une série formelle est une série entière vue comme une simple suite de coefficients, sans considération de convergence. Plus précisément, si $A$ est un anneau commutatif, on appelle séries formelles (en anglais formal
+ Une série formelle est une série enGroupes de matrices.tière vue comme une simple suite de coefficients, sans considération de convergence. Plus précisément, si $A$ est un anneau commutatif, on appelle séries formelles (en anglais formal
  power series) d’indéterminée  à coefficients dans  les sommes formelles $\sum_{n=0}^{\infty} a_{n}x^{n}$ où ($a_{n}$) est une suite quelconque d’éléments de $A$. Munies des opérations d’addition et de multiplication naturelles
 \[
  \sum_{n=0}^{\infty} a_{n}x^{n} + \sum_{n=0}^{\infty} b_{n}x^{n} = \sum_{n=0}^{\infty} \left(a_{n}+b_{n}\right) x^{n} 
@@ -87,8 +87,6 @@ de l’équation dans l’espace des séries formelles, et si nécessaire, on co
 \]
 \end{example}
 
-
-
 %%%%%%%%
 \begin{exercise}
 Considérons le polynôme $p(x) = a_{0} + a_{1} x + a_{2} x^{2} + a_{3} x^{3}$, où $a_{i} \neq 0$ $\forall i$. Le nombre minimum de multiplications nécessaires pour évaluer $p$ sur une entrée $x$ est:
@@ -99,3 +97,14 @@ des anneaux propres au calcul formel, tels que $Z$, des corps finis, des anneaux
 polynômes. Nous présentons les constructions sur les matrices et leurs espaces ainsi que les
 opérations de base, puis les différents calculs possibles sur ces matrices, regroupés en deux thèmes : ceux liés à l’élimination de Gauss et aux transformations par équivalence à gauche, et ceux liés aux valeurs et espaces
 propres et aux transformations de similitude.
+\section{Constructions et manipulations élémentaires}
+\subsection{ Espaces de vecteurs, de matrices}
+De la même façon que pour les polynômes, les vecteurs et les matrices sont
+manipulés comme des objets algébriques appartenant à un espace. Si les coefficients
+appartiennent à un corps $K$, c’est un espace vectoriel sur $K$ ; s’ils appartiennent
+à un anneau, c’est un $K-module$ libre.
+\textbf{Groupes de matrices.} On poura par ailleur définir des sous-groupes de l'espace total des matrices. Ainsi le constructeur 
+\subsection{ Construction des matrices et des vecteurs}
+Les matrices et les vecteurs peuvent naturellement être générés comme des éléments d’un espace en fournissant la liste des coefficients en arguments. Pour les matrices, ceux-ci seront lus par ligne :
+
+
