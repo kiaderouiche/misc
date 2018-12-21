@@ -130,7 +130,35 @@ En algèbre linéaire, les matrices peuvent être utilisées pour représenter a
 des systèmes d’équations linéaires, des applications linéaires ou des sous-espaces. Ainsi, le calcul d’une 
 propriété comme le rang d’une famille, la solution d’un système, les espaces propres d’une application linéaire, 
 ou la dimension d’un sous-espace se ramènent à des transformations sur ces matrices révélant cette propriété. 
+Ces transformations correspondent à des changements de base, vus au niveau.
+\\
 Ces transformations correspondent à des changements de base, vus au niveau
+matriciel comme des transformations d’équivalence : $B = PAQ^{-1}$ , où $P$ et $Q$ sont
+des matrices inversibles. Deux matrices sont dites équivalentes s’il existe une telle
+
+transformation pour passer de l’une à l’autre. On peut ainsi former des classes
+d’équivalence pour cette relation, et l’on définit des formes normales, permettant
+de caractériser de manière unique chaque classe d’équivalence. Dans ce qui suit,
+nous présentons l’essentiel des calculs sur les matrices disponibles avec SymPy, sous
+l’angle de deux cas particuliers de ces transformations :
+
+\begin{itemize}
+ 	 \item Les transformations d’équivalence à gauche, de la forme $B = U A$, qui
+révèlent les propriétés caractéristiques pour les familles de vecteurs, telles
+que le rang (nombre de vecteurs linéairement indépendants), le déterminant
+(volume du parallélépipède décrit par la famille de vecteurs), le profil de rang
+(premier sous-ensemble de vecteurs formant une base), . . . L’élimination de
+Gauss est l’outil central pour ces transformations, et la forme échelonnée
+réduite (forme de Gauss-Jordan dans un corps ou forme de Hermite dans Z)
+est la forme normale. En outre, ces transformations servent à la résolution
+des systèmes linéaires.
+	 \item  Les transformations de similitude, de la forme $B = UAU^{-1}$ , qui révèlent les
+propriétés caractéristiques des matrices représentant des endomorphismes,
+comme les valeurs propres, les espaces propres, les polynômes minimal et
+caractéristique, . . . La forme de Jordan ou la forme de Frobenius, selon les
+domaines de calcul, seront les formes normales pour ces transformations.
+
+\end{itemize}
 
 
 
