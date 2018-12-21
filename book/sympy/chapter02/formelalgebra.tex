@@ -106,5 +106,32 @@ appartiennent à un corps $K$, c’est un espace vectoriel sur $K$ ; s’ils app
 \textbf{Groupes de matrices.} On poura par ailleur définir des sous-groupes de l'espace total des matrices. Ainsi le constructeur 
 \subsection{ Construction des matrices et des vecteurs}
 Les matrices et les vecteurs peuvent naturellement être générés comme des éléments d’un espace en fournissant la liste des coefficients en arguments. Pour les matrices, ceux-ci seront lus par ligne :
+\subsection{ Manipulations de base et arithmétique sur les matrices}
+\textbf{Indices et accès aux coefficients.} L'accès aux coefficients ainsi qu’à des
+sous-matrices extraites se fait de façon unifiée par l’opérateur crochet $A$ $\left[i, j\right]$,selon les 
+conventions usuelles de Python. Les indices de ligne $i$ et de colonne $j$ peuvent être des entiers (pour 
+l’accès à des coefficients) ou des intervalles sous la forme $1:3$ (on rappelle que par convention, en Python 
+les indices commencent à $0$, et les intervalles sont toujours inclusifs pour la borne inférieure et exclusifs 
+pour la borne supérieure). L’intervalle « : » sans bornes correspond à la totalité des indices possibles dans la 
+dimension considérée. La notation $a:b:k$ permet d’accéder aux indices compris entre $a$ et $b-1$ par pas de 
+$k$. Enfin, les indices négatifs sont aussi valides, et permettent de parcourir les indices à partir de la
+fin. Ainsi $A$ $\left[-2,:\right]$ correspond à l’avant dernière ligne. L'accès à ces sous-matrices
+se fait aussi bien en lecture qu’en écriture. On peut par exemple modifier une colonne donnée de la façon 
+suivante :
+\subsection{ Opérations de base sur les matrices}
+Les opérations arithmétiques sur les matrices se font avec les opérateurs usuels $+$,$-$,$*$,$^$. L’inverse 
+d’une matrice $A$ peut s’écrire aussi bien $A^-1$ que $~A$. Lorsque $a$ est un scalaire et $A$ une matrice, 
+l’opération $a*A$ correspond à la multiplication externe de l’espace de matrices. Pour les autres opérations où 
+un scalaire a est fourni en lieu et place d’une matrice (par exemple l’opération a+A), il est considéré comme la 
+matrice scalaire correspondante $aI_{n}$ si a $a\neq 0$ et les dimensions le permettent. Le produit élément par 
+élément de deux matrices s’effectue avec l’opération elementwise\_product.
+\section{ Calculs sur les matrices}
+En algèbre linéaire, les matrices peuvent être utilisées pour représenter aussi bien des familles de vecteurs, 
+des systèmes d’équations linéaires, des applications linéaires ou des sous-espaces. Ainsi, le calcul d’une 
+propriété comme le rang d’une famille, la solution d’un système, les espaces propres d’une application linéaire, 
+ou la dimension d’un sous-espace se ramènent à des transformations sur ces matrices révélant cette propriété. 
+Ces transformations correspondent à des changements de base, vus au niveau
+
+
 
 
