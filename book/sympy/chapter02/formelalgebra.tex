@@ -120,7 +120,7 @@ se fait aussi bien en lecture qu’en écriture. On peut par exemple modifier un
 suivante :
 \subsection{ Opérations de base sur les matrices}
 Les opérations arithmétiques sur les matrices se font avec les opérateurs usuels +,-,$\ast$,\^. L’inverse 
-d’une matrice $A$ peut s’écrire aussi bien $A^-1$ que $~A$. Lorsque $a$ est un scalaire et $A$ une matrice, 
+d’une matrice $A$ peut s’écrire aussi bien $A^{-1}$ que $~A$. Lorsque $a$ est un scalaire et $A$ une matrice, 
 l’opération $a*A$ correspond à la multiplication externe de l’espace de matrices. Pour les autres opérations où 
 un scalaire a est fourni en lieu et place d’une matrice (par exemple l’opération a+A), il est considéré comme la 
 matrice scalaire correspondante $aI_{n}$ si a $a\neq 0$ et les dimensions le permettent. Le produit élément par 
@@ -143,13 +143,13 @@ nous présentons l’essentiel des calculs sur les matrices disponibles avec Sym
 l’angle de deux cas particuliers de ces transformations :
 
 \begin{itemize}
- 	 \item Les transformations d’équivalence à gauche, de la forme $B = U A$, qui
+ 	 \item Les transformations d’équivalence à gauche, de la forme $B = UA$, qui
 révèlent les propriétés caractéristiques pour les familles de vecteurs, telles
 que le rang (nombre de vecteurs linéairement indépendants), le déterminant
 (volume du parallélépipède décrit par la famille de vecteurs), le profil de rang
 (premier sous-ensemble de vecteurs formant une base), . . . L’élimination de
 Gauss est l’outil central pour ces transformations, et la forme échelonnée
-réduite (forme de Gauss-Jordan dans un corps ou forme de Hermite dans Z)
+réduite (forme de Gauss-Jordan dans un corps ou forme de Hermite dans $\mathbb{Z}$)
 est la forme normale. En outre, ces transformations servent à la résolution
 des systèmes linéaires.
 	 \item  Les transformations de similitude, de la forme $B = UAU^{-1}$ , qui révèlent les
@@ -159,6 +159,38 @@ caractéristique, . . . La forme de Jordan ou la forme de Frobenius, selon les
 domaines de calcul, seront les formes normales pour ces transformations.
 
 \end{itemize}
+
+La forme de Gram-Schmidt est une autre décomposition basée sur les transfomations d’équivalence à gauche, transformant une matrice en un ensemble de vecteurs orthogonaux.
+
+\subsection{ Élimination de Gauss, forme échelonnée}
+\textbf{Élimination de Gauss et équivalence à gauche.} L’élimination de Gauss est l’une des opérations fondamentales en algèbre linéaire car elle permet d’accéder à une représentation de la matrice à la fois plus adaptée au calcul, comme la résolution de systèmes, et révélant certaines de ses propriétés fondamentales,
+comme le rang, le déterminant, le profil de rang, etc. Les opérations de base pour l’élimination sont les opérations élémentaires sur les lignes :
+
+\textbf{Élimination de Gauss-Jordan.} La transformation de Gauss-Jordan est similaire à celle de Gauss, en ajoutant à $G_{x,k}$ les transvections correspondant aux lignes d’indice $i < k$ ; cela revient à éliminer les coefficients d’une colonne au-dessus et au-dessous du pivot. Si de plus on divise chaque ligne par son pivot, on obtient alors une forme échelonnée dite réduite encore appelée forme de Gauss-Jordan. Pour toute classe d’équivalence de matrices, il existe une unique matrice sous cette forme ; il s’agit donc d’une forme normale.
+
+\textbf{Forme échelonnée dans les anneaux euclidiens.}
+\subsection{ Résolution de systèmes ; image et base du noyau}
+\subsection{Valeurs propres, forme de Jordan et transformations de similitude}
+Lorsque l’on interprète une matrice carrée comme un opérateur linéaire (un endomorphisme), elle n’en est que la représentation dans une base donnée. Tout changement de base correspond à une transformation de similitude 
+$B = U^{-1}AU$ de la matrice. Les deux matrices $A$ et $B$ sont alors dites semblables. Ainsi les propriétés de l’opérateur linéaire, qui sont indépendantes de la base, sont révélées par l’étude des invariants de similitude de la matrice.
+par l’étude des invariants de similitude de la matrice. Parmi ces invariants, les plus simples sont le rang et le déterminant. En effet les matrices $U$ et $U^{-1}$ étant inversibles, le rang de $U^{-1}AU$ égale le rang de $A$. De plus $det\left( U^{-1}AU\right)  = det\left( U^{-1}\right) det \left(A det(U) = det(U^{-1}U\right) det\left( A\right) = det\left(A\right)$. De
+la même façon, le polynôme caractéristique de la matrice $A$, défini par 
+ est aussi invariant par transformation de similitude :
+%
+%\[
+% det\left(xId − U^{-1}AU\right) = det\left(U^{-1} \left( xId − A\right) U \left) = det\left( xId − A\right) .
+%\]
+
+Par conséquent, les valeurs caractéristiques d’une matrice, définies comme les racines du polynôme caractéristique dans son corps de décomposition, sont donc aussi des invariants de similitude. Par definition, un scalaire $\lambda$ est une valeur propre d’une matrice $A$ s’il existe un vecteur non nul $u$ tel que $Au = \lambda u$. L'espace propre associé à une valeur propre $\lambda$ est l’ensemble des vecteurs $u$ tels que $Au = \lambda u$. C'est un sous-espace vectoriel defini par $E_{\lambda} = Ker(\lambda Id - A)$. \\
+Les valeurs propres coïncident avec les valeurs caractéristiques :
+\[
+ det(\lambda Id - A) = 0 \Leftrightarrow dim(Ker(\lambda Id - A)) > 1 \Leftrightarrow \exists u 6= 0, \lambda u - Au = 0.
+\]
+
+
+
+
+
 
 
 
