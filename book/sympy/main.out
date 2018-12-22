@@ -104,48 +104,62 @@
 \BOOKMARK [2][-]{subsection.9.1.2}{Polyn\364mes}{section.9.1}% 104
 \BOOKMARK [1][-]{section.9.2}{Syst\350mes polynomiaux et id\351aux}{chapter.9}% 105
 \BOOKMARK [2][-]{subsection.9.2.1}{ Un premier exemple}{section.9.2}% 106
-\BOOKMARK [-1][-]{part.4}{IV G\351om\351trie}{}% 107
-\BOOKMARK [0][-]{chapter.10}{G\351om\351trie plan}{part.4}% 108
-\BOOKMARK [0][-]{chapter.11}{G\351om\351trie Diff\351rentielle}{part.4}% 109
-\BOOKMARK [0][-]{chapter.12}{Convexity}{part.4}% 110
-\BOOKMARK [1][-]{subsection.12.0.1}{Cone}{chapter.12}% 111
-\BOOKMARK [1][-]{section.12.1}{Convex Functions}{chapter.12}% 112
-\BOOKMARK [2][-]{subsection.12.1.1}{Epigraph}{section.12.1}% 113
-\BOOKMARK [0][-]{chapter.13}{Support Function}{part.4}% 114
-\BOOKMARK [1][-]{section.13.1}{Operations Preserve Convexity of Functions}{chapter.13}% 115
-\BOOKMARK [1][-]{section.13.2}{Remarks}{chapter.13}% 116
-\BOOKMARK [1][-]{section.13.3}{Corollaries}{chapter.13}% 117
-\BOOKMARK [1][-]{section.13.4}{Propositions}{chapter.13}% 118
-\BOOKMARK [2][-]{subsection.13.4.1}{Several equations}{section.13.4}% 119
-\BOOKMARK [2][-]{subsection.13.4.2}{Single Line}{section.13.4}% 120
-\BOOKMARK [2][-]{subsection.13.4.3}{Paragraph of Text}{section.13.4}% 121
-\BOOKMARK [1][-]{section.13.5}{Exercises}{chapter.13}% 122
-\BOOKMARK [1][-]{section.13.6}{Problems}{chapter.13}% 123
-\BOOKMARK [1][-]{section.13.7}{Vocabulary}{chapter.13}% 124
-\BOOKMARK [-1][-]{part.5}{V Calcul num\351rique et discret}{}% 125
-\BOOKMARK [0][-]{chapter.14}{Nombres \340 virgule flottante}{part.5}% 126
-\BOOKMARK [0][-]{chapter.15}{Int\351gration num\351rique}{part.5}% 127
-\BOOKMARK [1][-]{section.15.1}{Examples}{chapter.15}% 128
-\BOOKMARK [2][-]{subsection.15.1.1}{Equation and Text}{section.15.1}% 129
-\BOOKMARK [0][-]{chapter.16}{\311quations non lin\351aires}{part.5}% 130
-\BOOKMARK [1][-]{section.16.1}{\311quations alg\351briques}{chapter.16}% 131
-\BOOKMARK [1][-]{section.16.2}{Figure}{chapter.16}% 132
-\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 133
-\BOOKMARK [0][-]{chapter.17}{D\351nombrement et combinatoire}{part.6}% 134
-\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 135
-\BOOKMARK [0][-]{chapter.18}{Chaos}{part.7}% 136
-\BOOKMARK [1][-]{section.18.1}{Pendule simple}{chapter.18}% 137
-\BOOKMARK [2][-]{subsection.18.1.1}{Pendule \340 deux bras}{section.18.1}% 138
-\BOOKMARK [2][-]{subsection.18.1.2}{Mouvements d\220un robot}{section.18.1}% 139
-\BOOKMARK [0][-]{chapter.19}{M\351canique et information quantique}{part.7}% 140
-\BOOKMARK [0][-]{chapter.20}{Le mod\350le 4}{part.7}% 141
-\BOOKMARK [1][-]{subsection.20.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.20}% 142
-\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 143
-\BOOKMARK [0][-]{chapter.21}{Programmation Orient\351e Objet}{part.8}% 144
-\BOOKMARK [0][-]{chapter.22}{D\351corateurs}{part.8}% 145
-\BOOKMARK [0][-]{chapter.23}{Optimisation du code}{part.8}% 146
-\BOOKMARK [1][-]{subsection.23.0.1}{Cython}{chapter.23}% 147
-\BOOKMARK [2][-]{subsection.23.0.2}{Theano}{subsection.23.0.1}% 148
-\BOOKMARK [0][-]{chapter.24}{Interface graphique}{part.8}% 149
-\BOOKMARK [1][-]{section.24.1}{Bibliographie}{chapter.24}% 150
-\BOOKMARK [1][-]{section.24.2}{Index}{chapter.24}% 151
+\BOOKMARK [2][-]{subsection.9.2.2}{ Qu\220est-ce que r\351soudre ?}{section.9.2}% 107
+\BOOKMARK [2][-]{subsection.9.2.3}{Id\351aux et syst\350mes}{section.9.2}% 108
+\BOOKMARK [1][-]{section.9.3}{ Bases de Gr\366bner}{chapter.9}% 109
+\BOOKMARK [2][-]{subsection.9.3.1}{Ordres monomiaux}{section.9.3}% 110
+\BOOKMARK [2][-]{subsection.9.3.2}{ Division par une famille de polyn\364mes}{section.9.3}% 111
+\BOOKMARK [2][-]{subsection.9.3.3}{ Propri\351t\351s des bases de Gr\366bner}{section.9.3}% 112
+\BOOKMARK [0][-]{chapter.10}{\311quations diff\351rentielles}{part.3}% 113
+\BOOKMARK [1][-]{section.10.1}{\311quations diff\351rentielles}{chapter.10}% 114
+\BOOKMARK [2][-]{subsection.10.1.1}{Introduction}{section.10.1}% 115
+\BOOKMARK [2][-]{subsection.10.1.2}{\311quations diff\351rentielles ordinaires d\220ordre 1}{section.10.1}% 116
+\BOOKMARK [2][-]{subsection.10.1.3}{ \311quations d\220ordre 2}{section.10.1}% 117
+\BOOKMARK [0][-]{chapter.11}{suites d\351finies par une relation de r\351currence}{part.3}% 118
+\BOOKMARK [-1][-]{part.4}{IV G\351om\351trie}{}% 119
+\BOOKMARK [0][-]{chapter.12}{G\351om\351trie plan}{part.4}% 120
+\BOOKMARK [0][-]{chapter.13}{G\351om\351trie Diff\351rentielle}{part.4}% 121
+\BOOKMARK [0][-]{chapter.14}{Groupe de Lie}{part.4}% 122
+\BOOKMARK [1][-]{section.14.1}{R\351solution d\220\351quations par groupe de Lie}{chapter.14}% 123
+\BOOKMARK [0][-]{chapter.15}{Convexity}{part.4}% 124
+\BOOKMARK [1][-]{subsection.15.0.1}{Cone}{chapter.15}% 125
+\BOOKMARK [1][-]{section.15.1}{Convex Functions}{chapter.15}% 126
+\BOOKMARK [2][-]{subsection.15.1.1}{Epigraph}{section.15.1}% 127
+\BOOKMARK [0][-]{chapter.16}{Support Function}{part.4}% 128
+\BOOKMARK [1][-]{section.16.1}{Operations Preserve Convexity of Functions}{chapter.16}% 129
+\BOOKMARK [1][-]{section.16.2}{Remarks}{chapter.16}% 130
+\BOOKMARK [1][-]{section.16.3}{Corollaries}{chapter.16}% 131
+\BOOKMARK [1][-]{section.16.4}{Propositions}{chapter.16}% 132
+\BOOKMARK [2][-]{subsection.16.4.1}{Several equations}{section.16.4}% 133
+\BOOKMARK [2][-]{subsection.16.4.2}{Single Line}{section.16.4}% 134
+\BOOKMARK [2][-]{subsection.16.4.3}{Paragraph of Text}{section.16.4}% 135
+\BOOKMARK [1][-]{section.16.5}{Exercises}{chapter.16}% 136
+\BOOKMARK [1][-]{section.16.6}{Problems}{chapter.16}% 137
+\BOOKMARK [1][-]{section.16.7}{Vocabulary}{chapter.16}% 138
+\BOOKMARK [-1][-]{part.5}{V Calcul num\351rique et discret}{}% 139
+\BOOKMARK [0][-]{chapter.17}{Nombres \340 virgule flottante}{part.5}% 140
+\BOOKMARK [0][-]{chapter.18}{Int\351gration num\351rique}{part.5}% 141
+\BOOKMARK [1][-]{section.18.1}{Examples}{chapter.18}% 142
+\BOOKMARK [2][-]{subsection.18.1.1}{Equation and Text}{section.18.1}% 143
+\BOOKMARK [0][-]{chapter.19}{\311quations non lin\351aires}{part.5}% 144
+\BOOKMARK [1][-]{section.19.1}{\311quations alg\351briques}{chapter.19}% 145
+\BOOKMARK [1][-]{section.19.2}{Figure}{chapter.19}% 146
+\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 147
+\BOOKMARK [0][-]{chapter.20}{D\351nombrement et combinatoire}{part.6}% 148
+\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 149
+\BOOKMARK [0][-]{chapter.21}{Chaos}{part.7}% 150
+\BOOKMARK [1][-]{section.21.1}{Pendule simple}{chapter.21}% 151
+\BOOKMARK [2][-]{subsection.21.1.1}{Pendule \340 deux bras}{section.21.1}% 152
+\BOOKMARK [2][-]{subsection.21.1.2}{Mouvements d\220un robot}{section.21.1}% 153
+\BOOKMARK [0][-]{chapter.22}{M\351canique et information quantique}{part.7}% 154
+\BOOKMARK [0][-]{chapter.23}{Le mod\350le 4}{part.7}% 155
+\BOOKMARK [1][-]{subsection.23.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.23}% 156
+\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 157
+\BOOKMARK [0][-]{chapter.24}{Programmation Orient\351e Objet}{part.8}% 158
+\BOOKMARK [0][-]{chapter.25}{D\351corateurs}{part.8}% 159
+\BOOKMARK [0][-]{chapter.26}{Optimisation du code}{part.8}% 160
+\BOOKMARK [1][-]{subsection.26.0.1}{Cython}{chapter.26}% 161
+\BOOKMARK [2][-]{subsection.26.0.2}{Theano}{subsection.26.0.1}% 162
+\BOOKMARK [0][-]{chapter.27}{Interface graphique}{part.8}% 163
+\BOOKMARK [1][-]{section.27.1}{Bibliographie}{chapter.27}% 164
+\BOOKMARK [1][-]{section.27.2}{Index}{chapter.27}% 165

@@ -281,4 +281,143 @@ Considérons une variante du système polynomial de la section 2.2,
    \end{array}
    \right .
 \end{equation}
+\textbf{Simplifier le système.} Une approche différente est possible. Plutôt que de chercher les solutions, essayons de calculer une forme plus simple du système lui-même. Les outils fondamentaux qu’offre Sage pour ce faire sont la décomposition triangulaire et les bases de Gröbner. Nous verrons plus loin ce qu’ils calculent
+exactement ; essayons déjà de les utiliser sur cet exemple :
+\subsection{ Qu’est-ce que résoudre ?}
+Un système polynomial qui possède des solutions en a souvent une infinité.
+L’équation toute simple $x^{2} - y = 0$ admet une infinité de solutions dans $\mathbb{Q}^{2}$ , sans
+parler de $\mathbb{R}^{2}$ ou $\mathbb{C}^{2}$ . Il n’est donc pas question de les énumérer. Le mieux qu’on
+puisse faire est décrire l’ensemble des solutions « aussi explicitement que possible »,
+c’est-à-dire en calculer une représentation dont on puisse facilement extraire des
+informations intéressantes. La situation est analogue à celle des systèmes linéaires,
+pour lesquels (dans le cas homogène) une base du noyau du système est une bonne
+description de l’espace des solutions.
+\\
+Dans le cas particulier où les solutions sont en nombre fini il devient possible
+de « les calculer ». Mais même dans ce cas, cherche-t-on à énumérer les solutions
+dans $\mathbb{Q}$, ou encore dans un corps fini $\mathbb{F_{q}}$ ? À trouver des approximations numériques
+des solutions réelles ou complexes ? Ou encore, comme dans l’exemple de la section
+précédente, à représenter ces dernières à l’aide de nombres algébriques, c’est-à-dire
+par exemple à calculer les polynômes minimaux de leurs coordonnées ?
+\\
 
+Ce même exemple illustre que d’autres représentations de l’ensemble des
+solutions peuvent être bien plus parlantes qu’une simple liste de points, surtout
+quand les solutions sont nombreuses. Ainsi, les énumérer n’est pas forcément la
+chose la plus pertinente à faire même quand c’est possible. In fine, on ne cherche
+pas tant à calculer les solutions qu’à calculer avec les solutions, pour en déduire
+ensuite, suivant le problème, les informations auxquelles on s’intéresse vraiment.
+La suite de ce chapitre explore différents outils utiles pour ce faire.
+\subsection{Idéaux et systèmes}
+Si s polynômes $p_{1} , . . . , p_{s} \in K\left[x\right]$ s’annulent en un point x à coordonnées
+dans $K$ ou dans une extension de $K$, tout élément de l’idéal qu’ils engendrent
+s’annule aussi en $x$. Il est donc naturel d’associer au système polynomial
+\[
+p_{1}\left(x\right)= p_{2}\left(x\right)=...=p_{s}\left(x\right)
+\]
+l’idéal $J = \langle p_{1}, . . . , p_{s}\rangle \subset K\left[x\right]$. Deux systèmes polynomiaux qui engendrent le même idéal sont équivalents au sens où ils ont les mêmes solutions. Si $L$ est
+un corps contenant $K$, on appelle sous-variété algébrique de $L^{n}$ associée à $J$
+l’ensemble
+\[
+V_{L}\left(J\right) = \lbrace x \in L^{n} \vert \forall p \in J, p\left(x\right) = 0 \rbrace =
+\lbrace \in L^{n} \vert p_{1}\left(x\right)=...=p_{1}\left(x\right)=0\rbrace
+\]
+des solutions à coordonnées dans $L$ du système. Des idéaux différents peuvent
+avoir la même variété associée. Par exemple, les équations $x = 0$ et $x^{2} = 0$
+admettent la même unique solution dans $\mathbb{C}$, alors que l’on a $\langle x^{2}\rangle$ $\subsetneq$ $\langle x\rangle$. Ce que l’idéal engendré par un système polynomial capture est plutôt la notion intuitive
+de « solutions avec multiplicités ».
+Ainsi, les deux systèmes suivants expriment chacun l’intersection du cercle
+unité et d’une courbe d’équation $\alpha x^{2} y^{2} = 1$, réunion de deux hyperboles équilatères 
+\section{ Bases de Gröbner}
+Nous avons jusqu’ici utilisé les fonctionnalités d’élimination algébrique et de résolution de systèmes polynomiaux qu’offre SymPy comme des boîtes noires. Cette section introduit quelques-uns des outils mathématiques et algorithmiques sous-jacents. Le but est à la fois d’y recourir directement et de faire un usage
+avisé des fonctions de plus haut niveau présentées auparavant.
+Les techniques employées par Sage pour les calculs sur les idéaux et l’élimination reposent sur la notion de 
+base de Gröbner. On peut voir celle-ci, entre autres, comme une extension à plusieurs indéterminées de la *
+représentation par générateur principal des idéaux de $K\left[x\right]$. Le problème central de cette section 
+est de définir et calculer une forme normale pour les éléments des algèbres quotients de $K\left[x\right]$. 
+Notre point de vue reste celui de l’utilisateur : nous définissons les bases de Gröbner, montrons comment en 
+obtenir avec Sage et à quoi cela peut servir, mais nous n’abordons pas les algorithmes utilisés pour faire le 
+calcul.
+\subsection{Ordres monomiaux}
+\subsection{ Division par une famille de polynômes}
+\subsection{ Propriétés des bases de Gröbner}
+Les bases de Gröbner servent à implémenter les opérations étudiées dans la section 9.2. On les utilise notamment 
+afin de calculer des formes normales pour les idéaux d’anneaux de polynômes et les éléments des quotients par 
+ces idéaux, d’éliminer des variables dans les systèmes polynomiaux, ou encore de déterminer
+des caractéristiques des solutions telles que leur dimension.
+\chapter{Équations différentielles}
+ \section{Équations différentielles}
+ \subsection{Introduction}
+Si la méthode de George Pólya semble peu efficace, on peut faire appel à SymPy même si le domaine de la résolution formelle des équations différentielles demeure une faiblesse de nombreux logiciels de calcul. SymPy est en pleine évolution cependant et progresse à chaque version un peu plus en élargissant son spectre de
+résolution.
+\\
+On peut, si on le souhaite, invoquer Sage afin d’obtenir une étude qualitative :
+en effet, ses outils numériques et graphiques guideront l’intuition. C’est l’objet
+de la section 14.2 du chapitre consacré au calcul numérique. Des outils d’étude
+graphique des solutions sont donnés à la section 4.1.6. Des méthodes de résolution
+à l’aide de séries se trouvent à la section 7.5.2.
+On peut préférer résoudre les équations différentielles exactement. Sage peut
+alors parfois y aider en donnant directement une réponse formelle comme nous le
+verrons dans ce chapitre.
+\\
+Dans la plupart des cas, il faudra passer par une manipulation savante de
+ces équations pour aider SymPy. Il faudra veiller à garder en tête que la solution
+attendue d’une équation différentielle est une fonction dérivable sur un certain
+intervalle mais que SymPy, lui, manipule des expressions sans domaine de définition.
+La machine aura donc besoin d’une intervention humaine pour aller vers une
+solution rigoureuse.
+\\ 
+
+Nous étudierons d’abord les généralités sur les équations différentielles ordi-
+naires d’ordre 1 et quelques cas particuliers comme les équations linéaires, les
+équations à variables séparables, les équations homogènes, une équation dépendant
+d’un paramètre (§10.1.2) ; puis de manière plus sommaire les équations d’ordre 2
+ainsi qu’un exemple d’équation aux dérivées partielles (§10.1.3). Nous terminerons
+par l’utilisation de la transformée de Laplace (§10.1.4) et enfin la résolution de
+certains systèmes différentiels (§10.1.5).
+\\
+On rappelle qu’une équation différentielle ordinaire (parfois notée EDO, ou
+ODE en anglais) est une équation faisant intervenir une fonction (inconnue)
+d’une seule variable, ainsi qu’une ou plusieurs dérivées, successives ou non, de la
+fonction.
+\\
+Dans l’équation $y'(x) + x y\left(x\right) = e^{x}$ la fonction inconnue $y$ est appelée la
+variable dépendante et la variable x (par rapport à laquelle $y$ varie) est appelée la
+variable indépendante.
+Une équation aux dérivées partielles (notée parfois EDP, ou PDE en anglais)
+fait intervenir plusieurs variables indépendantes ainsi que les dérivées partielles
+de la variable dépendante par rapport à ces variables indépendantes.
+Sauf mention contraire, on considérera dans ce chapitre des fonctions d’une variable réelle.
+
+ \subsection{Équations différentielles ordinaires d’ordre 1}
+\begin{definition}
+Une équation différentielle ordinaire
+\end{definition}
+
+\begin{python}
+from sympy import symbols, Function
+x = symbols('x')
+y = Function("y")( x)
+\end{python}
+
+\textbf{Équations du premier ordre pouvant être résolues directement par SymPy}. Nous allons étudier dans cette section comment résoudre avec SymPy Équations différentielles ordinaires d’ordre 1
+les équations linéaires, les équations à variables séparables, les équations de Bernoulli, les équations homogènes, les équations exactes, ainsi que les équations de Riccati,
+Lagrange et Clairaut.
+\\
+Équations linéaires. il s'agit d’équations du type:
+  \[
+  y'+ P(x)y = Q(x) 
+  \] 
+ou $P$ et $Q$ sont des fonctions continues sur des intervalles données.
+\begin{example}
+ \[
+   y' + 3y = e^{x}
+ \]
+\end{example}
+\subsection{ Équations d’ordre 2}
+\textbf{Équations linéaires à coefficients constants.} Résolvons maintenant une équation du second ordre linéaire à coefficients constants, par exemple :
+\[
+ y"+3y = x^{2}-7x+31
+\]
+
+\chapter{suites définies par une relation de récurrence}
