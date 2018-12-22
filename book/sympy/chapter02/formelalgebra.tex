@@ -201,14 +201,84 @@ premier vecteur de la séquence linéairement dépendant avec ses prédécesseur
 cette relation de dépendance linéaire. Le polynôme $\varphi_{A, u}\left(x\right) = x^{d} = \sum_{i=0}^{d-1} \alpha_{i}x^{i}$ , qui vérifie $\varphi_{A, u}\left(A\right)u = 0$ est donc un polynôme unitaire annulateur de la suite de Krylov et de degré minimal. On l’appelle le polynôme minimal du vecteur $u$ (sous
 entendu, relativement à la matrice $A$). L’ensemble des polynômes annulateurs de u forme un idéal de $K\left[X\right]$, engendré par $\varphi_{A, u}$ .
 Le polynôme minimal de la matrice $A$ est défini comme le polynôme unitaire
-$\varphi_{A}\left(x\right)$ de plus petit degré annulant la matrice $A$ : $\varphi_{A}\left(A\right) = 0$. En particulier, en appliquant $\varphi_{A}\left(A\right)$ au vecteur $u$, on constate que $\varphi_{A}\left(A\right)$ est un polynôme annulateur de la suite de Krylov. Il est donc nécessairement un multiple du polynôme minimal de u. On peut en outre montrer (cf. exercice ) qu’il existe un vecteur $u$ tel que
+$\varphi_{A}\left(x\right)$ de plus petit degré annulant la matrice $A$ : $\varphi_{A}\left(A\right) = 0$. En particulier, en appliquant $\varphi_{A}\left(A\right)$ au vecteur $u$, on constate que $\varphi_{A}\left(A\right)$ est un polynôme annulateur de la suite de Krylov. Il est donc nécessairement un multiple du polynôme minimal de u. On peut en outre montrer (cf. exercice ) qu’il existe un vecteur $\overline{u}$ tel que
+\begin{equation}
+ \varphi_{A, \overline{u}} = \varphi_{A}.
+\end{equation}
+Lorsque le vecteur $u$ est choisi aléatoirement, la probabilité qu’il satisfasse l’équation (1.1) est d’autant plus grande que la taille du corps est grande (on peut montrer qu’elle est au moins $1-\frac{n}{\vert K \vert}$ 
+\begin{exercise}
+Montrons qu’il existe toujours un vecteur u dont le polynôme minimal coïncide avec le polynôme minimal de la matrice.
+ \begin{enumerate}
+    \item coïncide avec le polynôme minimal de la matrice. 1. Soit $\left(e_{1},..., e_{n}\right)$ une base de l’espace vectoriel. Montrer que $\varphi_{A}$ coïncide avec le ppcm des $\varphi_{A, e_{i}}$ .
+    \item  Dans le cas particulier où $\varphi_{A}$ est une puissance d’un polynôme irréductible, montrer qu’il existe un indice $i_{0}$ tel que $\varphi_{A} =\varphi_{A, e_{i0}}$.
+    \item 
+    \item 
+    \item 
+  \end{enumerate}
+\end{exercise}
+\textbf{Facteurs invariants et invariants de similitude.}  Une propriété importante relie les invariants de similitude et les facteurs invariants vus dans la section  Les invariants de similitude d’une matrice  à coefficients dans
+\begin{theorem}
+Les invariants de similitude d’une matrice $A$ à coefficients dans un corps correspondent aux facteurs invariants de sa matrice caractéristique $xId - A$.
+\end{theorem}
+\textbf{Valeurs propres, vecteurs propres}. Si l’on décompose le polynôme minimal en facteurs irréductibles, 
+$\varphi_{1}$ = $\psi_{1}^{m_{1}}$, $\psi_{2}^{m_{2}}$, $\psi_{3}^{m_{3}}$,..., $\psi_{1}^{m_{s}}$ alors tous les facteurs invariants s’écrivent sous la forme.
+\\
+\textbf{Forme de Jordan.} Lorsque le polynôme minimal est scindé mais ayant des
+facteurs avec des multiplicités supérieures à 1, la forme intermédiaire (8.3) n’est
+pas diagonale. On montre alors qu’il n’existe pas de transformation de similitude
+la rendant diagonale, la matrice initiale n’est donc pas diagonalisable. On peut
+en revanche la trigonaliser, c’est-à-dire la rendre triangulaire supérieure, telle que
+les valeurs propres apparaissent sur la diagonale. Parmi les différentes matrices
+triangulaires possibles, la plus réduite de toutes est la forme normale de Jordan.
+\\
+\textbf{Forme normale primaire.} Pour être complet, il faut mentionner une dernière
+forme normale qui généralise la forme de Jordan dans le cas quelconque où le
+polynôme minimal n’est pas scindé. Pour un polynôme irréductible $P$ de degré $k$,
+on définit le bloc de Jordan de multiplicité $m$ comme la matrice $J_{P,m}$ de dimension
+$km x km$ vérifiant.
+\\
+unique à une permutation des blocs diagonaux près. L’unicité de ces formes normales permet en particulier de tester si deux matrices sont semblables, et par la même occasion de produire une matrice de
+passage entre l’une et l’autre.
 
+\begin{exercise}
+Écrire un programme qui détermine si deux matrices $A$ et $B$ sont semblables et renvoie la matrice $U$ de passage telle que $A = U^{-1}BU$ (on pourra renvoyer None dans le cas où les matrices ne sont pas semblables).
+\end{exercise}
 
+\chapter{Systèmes polynomiaux}
+Ce chapitre prolonge les deux précédents. Les objets sont des systèmes d’équations à plusieurs variables, comme ceux du chapitre 8. Ces équations, dans la lignée du chapitre 7, sont polynomiales. Par rapport aux polynômes à une seule indéterminée, ceux à plusieurs indéterminées présentent une grande richesse mathématique mais aussi des difficultés nouvelles, liées notamment au fait que l’anneau $K\left[x_{1}, x_{2}, ..., x_{n}\right] $ n’est pas principal. La théorie des bases de Gröbner fournit des outils pour contourner cette limitation. Au final, on dispose de méthodes puissantes pour étudier les systèmes polynomiaux, avec d’innombrables applications
+qui couvrent des domaines variés.
+\\
 
+Une bonne partie du chapitre ne présuppose que des connaissances de base sur les polynômes à plusieurs indéterminées. Certains passages sont cependant du niveau d’un cours d’algèbre commutative de L3 ou M1. Pour une introduction moins allusive et en français à la théorie mathématique des systèmes polynomiaux, accessible au niveau licence, le lecteur pourra se reporter au chapitre [FSED09] de Faugère et Safey El Din. On trouvera un traitement plus avancé dans le livre de Elkadi et Mourrain [EM07]. Enfin, en anglais cette fois, le livre de Cox, Little et O’Shea [CLO07] est à la fois accessible et fort complet.
 
+\section{ Polynômes à plusieurs indéterminées}
+ \subsection{ Les anneaux $A\left[x_{1}, ..., x_{n}\right]$}
+ Nous nous intéressons ici aux polynômes à plusieurs indéterminées, dits aussi — anglicisme commun dans le domaine du calcul formel — multivariés. Comme pour les autres structures algébriques disponibles dans SymPy, avant de pouvoir construire des polynômes, il nous faut définir une famille d’indéterminées, vivant toutes dans un même anneau. La syntaxe est pratiquement la même qu’en une variable :
 
+\begin{exercise}
+Définir l’anneau $\mathbb{Q}\left[x2 , x3 , . . . , x37\right]$ dont les indéterminées sont indexées
+par les nombres premiers inférieurs à $40$, ainsi que des variables $x2, x3, ..., x37$ pour
+accéder aux indéterminées.
+\end{exercise}
 
+Il peut enfin s’avérer utile, dans quelques cas, de manipuler des polynômes à plusieurs indéterminées en 
+représentation récursive, c’est-à-dire comme éléments d’un anneau de polynômes à coefficients eux-mêmes 
+polynomiaux.
 
-
-
+\subsection{Polynômes}
+\section{Systèmes polynomiaux et idéaux}
+Nous abordons à présent le sujet central de ce chapitre. Les sections 9.2.1 et 9.2.2 offrent un panorama des manières de trouver et de comprendre les solutions d’un système d’équations polynomiales avec l’aide de SymPy La section 9.2.3 est consacrée aux idéaux associés à ces systèmes. Les sections suivantes reviennent
+de façon plus détaillée sur les outils d’élimination algébrique et de résolution de
+systèmes.
+\subsection{ Un premier exemple}
+Considérons une variante du système polynomial de la section 2.2,
+\begin{equation}
+ \left \{
+   \begin{array}{r c l}
+      x^{2}yz  & = & 18 \\
+      xy^{3}z   & = & 24 \\
+      xyz^{4} & = & 0,5
+   \end{array}
+   \right .
+\end{equation}
 
