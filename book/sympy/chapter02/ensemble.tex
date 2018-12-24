@@ -107,6 +107,17 @@ class MyClass(Yourclass):
 %-----------------------------------------------
 \chapter{Théorie des catégories}
 \section{Note historique}
-Les catégories sont utilisées dans la plupart des branches mathématiques et dans certains secteurs de l'informatique théorique et en mathématiques de la physique. Elles forment une notion unificatrice. Cette théorie a été mise en place par Samuel Eilenberg et Saunders Mac Lane en 1942-1945, en lien avec la topologie algébrique, et propagée dans les années 1960-1970 en France par Alexandre Grothendieck, qui en fit une étude systématique. À la suite des travaux de William Lawvere, la théorie des catégories est utilisée depuis 1969 pour définir la logique et la théorie des ensembles ; la théorie des catégories peut donc, comme la théorie des ensembles ou la théorie des types, avec laquelle elle a des similarités, être considérée comme fondement des mathématiques. Une élaboration fine est développé avec l'ajout de la théorie d'homotopie pour en donnée de la théorie des types homotopiques qui sera pas traité dans ce chapitre 
+Les catégories sont utilisées dans la plupart des branches mathématiques et dans certains secteurs de l'informatique théorique et en mathématiques de la physique. Elles forment une notion unificatrice. Cette théorie a été mise en place par Samuel Eilenberg et Saunders Mac Lane en 1942-1945, en lien avec la topologie algébrique, et propagée dans les années 1960-1970 en France par Alexandre Grothendieck, qui en fit une étude systématique. À la suite des travaux de William Lawvere, la théorie des catégories est utilisée depuis 1969 pour définir la logique et la théorie des ensembles ; la théorie des catégories peut donc, comme la théorie des ensembles ou la théorie des types, avec laquelle elle a des similarités, être considérée comme fondement des mathématiques. Une élaboration fine est développé avec l'ajout de la théorie d'homotopie pour en donnée de la théorie des types homotopiques qui sera pas traité dans ce chapitre  ni d'une catégorie élaboré tel-que: 2-catégorie ou $\infty$-catégorie
 \section{Introduction}
-Dans le langage des catégories tout commence avec la relation des objets entre-eux à travers des flèches ou morphismes.   
+Dans le langage des catégories tout commence avec la relation des objets entre-eux à travers des flèches ou morphismes.
+\\
+Pour commencer nous définissions des objets et des flèches qui met en relation avec ces objets 
+\begin{python}
+from sympy.categories import Object, NamedMorphism
+from sympy import init_printing(pretty_print=True)
+A = Object("A")
+B = Object("B")
+\end{python}
+\begin{example}(Produit cartésien)
+
+\end{example}
