@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  24 DEC 2018 01:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  24 DEC 2018 02:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1745,14 +1745,44 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 108.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-) [33]
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
+
+ []
+
+
+Overfull \hbox (10.88254pt too wide) in paragraph at lines 120--123
+[][]$\U/msa/m/n/6 ^^D$ \T1/pag/db/n/10 Ex-am-ple 6.1 []\T1/ptm/m/n/10.95 (-20) 
+(Pro-duit cartésien) Com-ment définir le pro-duit cartésien $\OML/ztmcm/m/it/10
+.95 A \OMS/ztmcm/m/n/10.95 ^^B \OML/ztmcm/m/it/10.95 B \OT1/ztmcm/m/n/10.95 = [
+]$
+ []
+
+
+Overfull \hbox (26.55269pt too wide) in paragraph at lines 120--123
+\T1/ptm/m/n/10.95 (-20) sans faire in-ter-venir $\OMS/ztmcm/m/n/10.95 2$\T1/ptm
+/m/n/10.95 (-20) , en con-sid-érant unique-ment des trans-for-ma-tions(fonction
+s) en-tre ob-jects(ensembles)?. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
+
+ []
+
+[33]) [34]
 \openout2 = `chapter02/formelalgebra.aux'.
 
- (./chapter02/formelalgebra.tex [34
+ (./chapter02/formelalgebra.tex [35
 
 
 
-] [35] [36]
+] [36]
 Chapter 7.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
@@ -2258,10 +2288,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39469 strings out of 494432
- 723020 string characters out of 6173608
+ 39529 strings out of 494432
+ 724077 string characters out of 6173608
  1298277 words of memory out of 5000000
- 41774 multiletter control sequences out of 15000+600000
+ 41834 multiletter control sequences out of 15000+600000
  676310 words of font info for 358 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  57i,15n,63p,1114b,3480s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2281,7 +2311,7 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (109 pages, 13937887 bytes).
+Output written on main.pdf (109 pages, 13939666 bytes).
 PDF statistics:
  1870 PDF objects out of 2073 (max. 8388607)
  1553 compressed objects within 16 object streams

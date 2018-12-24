@@ -111,13 +111,37 @@ Les catégories sont utilisées dans la plupart des branches mathématiques et d
 \section{Introduction}
 Dans le langage des catégories tout commence avec la relation des objets entre-eux à travers des flèches ou morphismes.
 \\
+
+Application à l'informatique.
+\\
+
 Pour commencer nous définissions des objets et des flèches qui met en relation avec ces objets 
+
+\begin{example}(Produit cartésien)
+Comment définir le produit cartésien $A \times B = \left\lbrace \left( a, b\right)  \vert a \in A \wedge b \in B\right\rbrace$ sans faire intervenir $\in$, en considérant uniquement des transformations(fonctions) entre objects(ensembles)?.
+\begin{itemize}
+ \item premier projection: $\pi_{1}: A \times B \rightarrow A$
+ \item deuxième projection: $\pi_{2}: A \times B \rightarrow B$
+ \item la structure $\left(A \times B,\pi_{1},\pi_{2}\right) $ est optimale
+ \item quelques soient $f: C \rightarrow A$ et $g: C \rightarrow B$ on peut construire 
+ $\langle f, g \rangle: C \rightarrow A \times B$ définie par et $\langle f, g \rangle\left(x\right)=\left(f\left(x\right),g\left(x\right)\right)$
+ \\
+ 
+ \begin{tikzpicture}[every node/.style={midway}]
+\matrix[column sep={4em,between origins},
+    row sep={2em}] at (0,0)
+{ \node(X)   {$X$}  ; & \node(Y) {$Y$}; \\
+\node(V) {$V$};                   \\};
+\draw[<-] (V) -- (X) node[anchor=east]  {$h$};
+\draw[->] (V) -- (Y) node[anchor=north]  {$g$};
+\draw[->] (X)   -- (Y) node[anchor=south] {$f$};
+\end{tikzpicture}
+\end{itemize}
+Le code python correspondant.
 \begin{python}
 from sympy.categories import Object, NamedMorphism
 from sympy import init_printing(pretty_print=True)
 A = Object("A")
 B = Object("B")
 \end{python}
-\begin{example}(Produit cartésien)
-
 \end{example}
