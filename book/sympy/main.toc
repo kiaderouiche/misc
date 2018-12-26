@@ -251,6 +251,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {12}suites d\IeC {\'e}finies par une relation de r\IeC {\'e}currence}{55}{chapter.12}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.1}Suites d\IeC {\'e}finies par $u_{n+1} = f\left (u_{n} \right )$}{55}{section.12.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.2}Suites r\IeC {\'e}currentes lin\IeC {\'e}aires}{55}{section.12.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.3}Suites r\IeC {\'e}currentes \IeC {\guillemotleft } avec second membre \IeC {\guillemotright }}{55}{section.12.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {part}{IV\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{57}{part.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {13}G\IeC {\'e}om\IeC {\'e}trie plan}{61}{chapter.13}
