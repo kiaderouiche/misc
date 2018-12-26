@@ -151,20 +151,22 @@
 \BOOKMARK [1][-]{section.20.2}{Figure}{chapter.20}% 151
 \BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 152
 \BOOKMARK [0][-]{chapter.21}{D\351nombrement et combinatoire}{part.6}% 153
-\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 154
-\BOOKMARK [0][-]{chapter.22}{Chaos}{part.7}% 155
-\BOOKMARK [1][-]{section.22.1}{Pendule simple}{chapter.22}% 156
-\BOOKMARK [2][-]{subsection.22.1.1}{Pendule \340 deux bras}{section.22.1}% 157
-\BOOKMARK [2][-]{subsection.22.1.2}{Mouvements d\220un robot}{section.22.1}% 158
-\BOOKMARK [0][-]{chapter.23}{M\351canique et information quantique}{part.7}% 159
-\BOOKMARK [0][-]{chapter.24}{Le mod\350le 4}{part.7}% 160
-\BOOKMARK [1][-]{subsection.24.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.24}% 161
-\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 162
-\BOOKMARK [0][-]{chapter.25}{Programmation Orient\351e Objet}{part.8}% 163
-\BOOKMARK [0][-]{chapter.26}{D\351corateurs}{part.8}% 164
-\BOOKMARK [0][-]{chapter.27}{Optimisation du code}{part.8}% 165
-\BOOKMARK [1][-]{subsection.27.0.1}{Cython}{chapter.27}% 166
-\BOOKMARK [2][-]{subsection.27.0.2}{Theano}{subsection.27.0.1}% 167
-\BOOKMARK [0][-]{chapter.28}{Interface graphique}{part.8}% 168
-\BOOKMARK [1][-]{section.28.1}{Bibliographie}{chapter.28}% 169
-\BOOKMARK [1][-]{section.28.2}{Index}{chapter.28}% 170
+\BOOKMARK [0][-]{chapter.22}{Semi-groupe num\351rique}{part.6}% 154
+\BOOKMARK [1][-]{section.22.1}{Introduction}{chapter.22}% 155
+\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 156
+\BOOKMARK [0][-]{chapter.23}{Chaos}{part.7}% 157
+\BOOKMARK [1][-]{section.23.1}{Pendule simple}{chapter.23}% 158
+\BOOKMARK [2][-]{subsection.23.1.1}{Pendule \340 deux bras}{section.23.1}% 159
+\BOOKMARK [2][-]{subsection.23.1.2}{Mouvements d\220un robot}{section.23.1}% 160
+\BOOKMARK [0][-]{chapter.24}{M\351canique et information quantique}{part.7}% 161
+\BOOKMARK [0][-]{chapter.25}{Le mod\350le 4}{part.7}% 162
+\BOOKMARK [1][-]{subsection.25.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.25}% 163
+\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 164
+\BOOKMARK [0][-]{chapter.26}{Programmation Orient\351e Objet}{part.8}% 165
+\BOOKMARK [0][-]{chapter.27}{D\351corateurs}{part.8}% 166
+\BOOKMARK [0][-]{chapter.28}{Optimisation du code}{part.8}% 167
+\BOOKMARK [1][-]{subsection.28.0.1}{Cython}{chapter.28}% 168
+\BOOKMARK [2][-]{subsection.28.0.2}{Theano}{subsection.28.0.1}% 169
+\BOOKMARK [0][-]{chapter.29}{Interface graphique}{part.8}% 170
+\BOOKMARK [1][-]{section.29.1}{Bibliographie}{chapter.29}% 171
+\BOOKMARK [1][-]{section.29.2}{Index}{chapter.29}% 172

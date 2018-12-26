@@ -315,37 +315,41 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {21}D\IeC {\'e}nombrement et combinatoire}{87}{chapter.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VII\hspace {1em}Physique}{89}{part.7}
+\contentsline {chapter}{\numberline {22}Semi-groupe num\IeC {\'e}rique}{89}{chapter.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {22}Chaos}{93}{chapter.22}
+\contentsline {section}{\numberline {22.1}Introduction}{89}{section.22.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.1}Pendule simple}{93}{section.22.1}
+\contentsline {part}{VII\hspace {1em}Physique}{91}{part.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.1.1}Pendule \IeC {\`a} deux bras}{93}{subsection.22.1.1}
+\contentsline {chapter}{\numberline {23}Chaos}{95}{chapter.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.1.2}Mouvements d\IeC {\textquoteright }un robot}{93}{subsection.22.1.2}
+\contentsline {section}{\numberline {23.1}Pendule simple}{95}{section.23.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {23}M\'ecanique et information quantique}{95}{chapter.23}
+\contentsline {subsection}{\numberline {23.1.1}Pendule \IeC {\`a} deux bras}{95}{subsection.23.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {24}Le mod\IeC {\`e}le $\phi ^{4}$}{97}{chapter.24}
+\contentsline {subsection}{\numberline {23.1.2}Mouvements d\IeC {\textquoteright }un robot}{95}{subsection.23.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {24.0.1}LES DIAGRAMMES DE FEYNMAN}{97}{subsection.24.0.1}
+\contentsline {chapter}{\numberline {24}M\'ecanique et information quantique}{97}{chapter.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VIII\hspace {1em}Annexe}{99}{part.8}
+\contentsline {chapter}{\numberline {25}Le mod\IeC {\`e}le $\phi ^{4}$}{99}{chapter.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {25}Programmation Orient\IeC {\'e}e Objet}{101}{chapter.25}
+\contentsline {subsection}{\numberline {25.0.1}LES DIAGRAMMES DE FEYNMAN}{99}{subsection.25.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {26}D\'ecorateurs}{103}{chapter.26}
+\contentsline {part}{VIII\hspace {1em}Annexe}{101}{part.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {27}Optimisation du code}{105}{chapter.27}
+\contentsline {chapter}{\numberline {26}Programmation Orient\IeC {\'e}e Objet}{103}{chapter.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {27.0.1}Cython}{106}{subsection.27.0.1}
+\contentsline {chapter}{\numberline {27}D\'ecorateurs}{105}{chapter.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {27.0.2}Theano}{107}{subsection.27.0.2}
+\contentsline {chapter}{\numberline {28}Optimisation du code}{107}{chapter.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {28}Interface graphique}{109}{chapter.28}
+\contentsline {subsection}{\numberline {28.0.1}Cython}{108}{subsection.28.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {28.1}Bibliographie}{109}{section.28.1}
+\contentsline {subsection}{\numberline {28.0.2}Theano}{109}{subsection.28.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {28.2}Index}{109}{section.28.2}
+\contentsline {chapter}{\numberline {29}Interface graphique}{111}{chapter.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {29.1}Bibliographie}{111}{section.29.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {29.2}Index}{111}{section.29.2}
 \contentsfinish 
