@@ -133,6 +133,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Introduction}{33}{section.6.2}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}Quels applications pour l'informatiques}{34}{subsection.6.2.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {part}{III\hspace {1em}Alg\IeC {\`e}bre et th\IeC {\'e}orie des nombres}{35}{part.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Anneaux et corps finis}{37}{chapter.7}

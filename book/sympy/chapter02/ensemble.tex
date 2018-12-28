@@ -127,15 +127,10 @@ Comment définir le produit cartésien $A \times B = \left\lbrace \left( a, b\ri
  $\langle f, g \rangle: C \rightarrow A \times B$ définie par et $\langle f, g \rangle\left(x\right)=\left(f\left(x\right),g\left(x\right)\right)$
  \\
  
- \begin{tikzpicture}[every node/.style={midway}]
-\matrix[column sep={4em,between origins},
-    row sep={2em}] at (0,0)
-{ \node(X)   {$X$}  ; & \node(Y) {$Y$}; \\
-\node(V) {$V$};                   \\};
-\draw[<-] (V) -- (X) node[anchor=east]  {$h$};
-\draw[->] (V) -- (Y) node[anchor=north]  {$g$};
-\draw[->] (X)   -- (Y) node[anchor=south] {$f$};
-\end{tikzpicture}
+\begin{tikzcd}[column sep=small]
+X \arrow{rr}{f} \arrow[swap]{dr}{h}& &Y \arrow{dl}{g}\\
+& V & 
+\end{tikzcd}
 \end{itemize}
 Le code python correspondant.
 \begin{python}
@@ -145,3 +140,17 @@ A = Object("A")
 B = Object("B")
 \end{python}
 \end{example}
+\subsection{Quels applications pour l'informatiques}
+“This paper tries to explain why and how category theory is useful in
+computing science, by guiving guidelines for applying seven basic categorical
+concepts : category, functor, natural transformation, limit, adjoint, colimit and
+comma category. Somes examples, intuition, and references are given for
+each concept, but completeness is not attempted.”
+\begin{itemize}
+  \item théorie des graphes (catégorie $\approx$ algèbre des chemins)
+  \item théorie des automates (systèmes et comportement, bisimulation)
+  \item théorie des types (polymorphisme)
+  \item programmation fonctionnelle (modèles du $\lambda$-calcul, effets)
+ \item substitutions de variables et unification
+  \item systèmes de réécriture
+\end{itemize}
