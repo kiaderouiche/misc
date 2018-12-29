@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  30 DEC 2018 00:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  30 DEC 2018 00:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2217,7 +2217,7 @@ Package pdftex.def Info: Pictures/head2.png  used on input line 6.
 Chapter 22.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 18.
+Package pdftex.def Info: Pictures/head2.png  used on input line 8.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 ) [89]
 \openout2 = `chapter06/physics.aux'.
@@ -2345,7 +2345,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 61AC7F5F5E1A45D3EDA9478845808D29;13076.
+(rerunfilecheck)             Checksum: 561172149E094E02B75A6B1E431489A1;13057.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -2374,7 +2374,7 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (111 pages, 13946753 bytes).
+Output written on main.pdf (111 pages, 13946564 bytes).
 PDF statistics:
  1925 PDF objects out of 2073 (max. 8388607)
  1600 compressed objects within 16 object streams

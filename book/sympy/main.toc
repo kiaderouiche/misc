@@ -321,7 +321,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{VI\hspace {1em}Combinatoire}{83}{part.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {21}D\IeC {\'e}nombrement et combinatoire}{87}{chapter.21}% 
+\contentsline {chapter}{\numberline {21}Permutations}{87}{chapter.21}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {22}Semi-groupe num\IeC {\'e}rique}{89}{chapter.22}% 
 \defcounter {refsection}{0}\relax 
