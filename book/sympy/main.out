@@ -148,31 +148,40 @@
 \BOOKMARK [-1][-]{part.5}{V Calcul num\351rique et discret}{}% 148
 \BOOKMARK [0][-]{chapter.18}{Nombres \340 virgule flottante}{part.5}% 149
 \BOOKMARK [0][-]{chapter.19}{Int\351gration num\351rique}{part.5}% 150
-\BOOKMARK [1][-]{section.19.1}{Examples}{chapter.19}% 151
-\BOOKMARK [2][-]{subsection.19.1.1}{Equation and Text}{section.19.1}% 152
-\BOOKMARK [0][-]{chapter.20}{\311quations non lin\351aires}{part.5}% 153
-\BOOKMARK [1][-]{section.20.1}{\311quations alg\351briques}{chapter.20}% 154
-\BOOKMARK [1][-]{section.20.2}{Figure}{chapter.20}% 155
-\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 156
-\BOOKMARK [0][-]{chapter.21}{Permutations}{part.6}% 157
-\BOOKMARK [0][-]{chapter.22}{Groupe symmetrique}{part.6}% 158
-\BOOKMARK [0][-]{chapter.23}{Groupe Ab\351lien}{part.6}% 159
-\BOOKMARK [0][-]{chapter.24}{Semi-groupe num\351rique}{part.6}% 160
-\BOOKMARK [1][-]{section.24.1}{Introduction}{chapter.24}% 161
-\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 162
-\BOOKMARK [0][-]{chapter.25}{Chaos}{part.7}% 163
-\BOOKMARK [1][-]{section.25.1}{Pendule simple}{chapter.25}% 164
-\BOOKMARK [2][-]{subsection.25.1.1}{Pendule \340 deux bras}{section.25.1}% 165
-\BOOKMARK [2][-]{subsection.25.1.2}{Mouvements d\220un robot}{section.25.1}% 166
-\BOOKMARK [0][-]{chapter.26}{M\351canique et information quantique}{part.7}% 167
-\BOOKMARK [0][-]{chapter.27}{Le mod\350le 4}{part.7}% 168
-\BOOKMARK [1][-]{subsection.27.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.27}% 169
-\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 170
-\BOOKMARK [0][-]{chapter.28}{Programmation Orient\351e Objet}{part.8}% 171
-\BOOKMARK [0][-]{chapter.29}{D\351corateurs}{part.8}% 172
-\BOOKMARK [0][-]{chapter.30}{Optimisation du code}{part.8}% 173
-\BOOKMARK [1][-]{subsection.30.0.1}{Cython}{chapter.30}% 174
-\BOOKMARK [2][-]{subsection.30.0.2}{Theano}{subsection.30.0.1}% 175
-\BOOKMARK [0][-]{chapter.31}{Interface graphique}{part.8}% 176
-\BOOKMARK [1][-]{section.31.1}{Bibliographie}{chapter.31}% 177
-\BOOKMARK [1][-]{section.31.2}{Index}{chapter.31}% 178
+\BOOKMARK [1][-]{subsection.19.0.1}{Equation and Text}{chapter.19}% 151
+\BOOKMARK [0][-]{chapter.20}{Transformation d'int\351grale}{part.5}% 152
+\BOOKMARK [1][-]{section.20.1}{Transformation de Fourier}{chapter.20}% 153
+\BOOKMARK [2][-]{subsection.20.1.1}{Transformation de Fourier inverse}{section.20.1}% 154
+\BOOKMARK [1][-]{section.20.2}{Transformation de Laplace}{chapter.20}% 155
+\BOOKMARK [1][-]{section.20.3}{Transformation de Mellin}{chapter.20}% 156
+\BOOKMARK [2][-]{subsection.20.3.1}{Transformation de melin inverse}{section.20.3}% 157
+\BOOKMARK [1][-]{section.20.4}{Transfomation de Henkel}{chapter.20}% 158
+\BOOKMARK [2][-]{subsection.20.4.1}{Transformation de Henkel inverse}{section.20.4}% 159
+\BOOKMARK [0][-]{chapter.21}{\311quations non lin\351aires}{part.5}% 160
+\BOOKMARK [1][-]{section.21.1}{\311quations alg\351briques}{chapter.21}% 161
+\BOOKMARK [1][-]{section.21.2}{Figure}{chapter.21}% 162
+\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 163
+\BOOKMARK [0][-]{chapter.22}{Permutations}{part.6}% 164
+\BOOKMARK [0][-]{chapter.23}{Groupe symmetrique}{part.6}% 165
+\BOOKMARK [0][-]{chapter.24}{Groupe Ab\351lien}{part.6}% 166
+\BOOKMARK [0][-]{chapter.25}{Semi-groupe num\351rique}{part.6}% 167
+\BOOKMARK [1][-]{section.25.1}{Introduction et concept}{chapter.25}% 168
+\BOOKMARK [1][-]{section.25.2}{Genre et nombre de Frobenius}{chapter.25}% 169
+\BOOKMARK [1][-]{section.25.3}{Fixons le genre}{chapter.25}% 170
+\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 171
+\BOOKMARK [0][-]{chapter.26}{Chaos}{part.7}% 172
+\BOOKMARK [1][-]{section.26.1}{Pendule simple}{chapter.26}% 173
+\BOOKMARK [2][-]{subsection.26.1.1}{Pendule \340 deux bras}{section.26.1}% 174
+\BOOKMARK [2][-]{subsection.26.1.2}{Mouvements d\220un robot}{section.26.1}% 175
+\BOOKMARK [0][-]{chapter.27}{M\351canique et information quantique}{part.7}% 176
+\BOOKMARK [0][-]{chapter.28}{Le mod\350le 4}{part.7}% 177
+\BOOKMARK [1][-]{subsection.28.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.28}% 178
+\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 179
+\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 180
+\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 181
+\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 182
+\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 183
+\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 184
+\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 185
+\BOOKMARK [1][-]{section.32.1}{Bibliographie}{chapter.32}% 186
+\BOOKMARK [1][-]{section.32.2}{Index}{chapter.32}% 187

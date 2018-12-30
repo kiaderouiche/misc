@@ -27,9 +27,16 @@ lorsqu’elle est possible, constitue une des forces de SymPy et est à privilé
 nombre de calculs effectués, et donc d’erreurs d’arrondi, est en général moindre
 que pour les méthodes d’intégration numérique. Nous donnons une rapide introduction aux méthodes classiques de résolution d’équations différentielles, puis le traitement d’un exemple (§14.2.1) débutera l’inventaire des fonctions disponibles en SymPy (§14.2.2).
 
-\section{Examples}\index{Examples}
+On s’intéresse au calcul numérique d’intégrales de fonctions réelles ; pour une
+fonction $f : I \longleftrightarrow R$, où $I$ est un intervalle de $\mathbb{R}$, on veut calculer :
+\[
+\int_{I} f\left(x\right).
+\]
 
-This is an example of examples.
+Par exemple, calculons
+\[
+ \int_{1}^{3} x^{2}e^{-x^{2}}\cos\left(x\right) dx.
+\] 
 
 \subsection{Equation and Text}\index{Examples!Equation and Text}
 
@@ -42,6 +49,49 @@ f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
 The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
 \end{example}
 
+\chapter{Transformation d'intégrale}
+ \section{Transformation de Fourier}
+ \begin{exercise}
+ \end{exercise}
+ \begin{exercise}
+ \end{exercise}
+ \begin{exercise}
+ \end{exercise}
+  \subsection{Transformation de Fourier inverse}
+  \begin{exercise}
+ \end{exercise}
+ \begin{exercise}
+ \end{exercise}
+ \section{Transformation de Laplace}
+ \begin{python}
+ \end{python}
+ \begin{exercise}
+ \end{exercise}
+ \section{Transformation de Mellin}
+ \begin{example}
+  La transformée d'une distribution de Dirac ${\displaystyle \delta (x-a)}$, avec $a > 0$, est une fonction exponentielle ${\displaystyle s\mapsto a^{s-1}}$.
+ \end{example}
+ \begin{python}
+ \end{python}
+ \begin{example}
+  La transformée de Mellin de la fonction ${\displaystyle f\,:\,x\mapsto \mathrm {H} (a-x)} {\displaystyle f\,:\,x\mapsto \mathrm {H} (a-x)}$, avec $a > 0$, est la fonction ${\displaystyle s\mapsto {\frac {a^{s}}{s}}} {\displaystyle s\mapsto {\frac {a^{s}}{s}}}$ sur le demi-plan $Re (s) > 0$
+(où $H$ est la fonction de Heaviside, $f(x) = 1$ si $0 < x < a et f (x) = 0 si x > a$).
+ \end{example}
+ \begin{python}
+ \end{python}
+ \begin{example}
+%   La transformée de Mellin de la fonction ${\frac {1}{\mathrm {e} ^{x}-1}}}$ est la fonction ${\displaystyle s\mapsto \Gamma (s)\zeta (s)}$ sur le demi-plan $Re (s) > 1$
+ \end{example}
+ \begin{python}
+ \end{python}
+ \subsection{Transformation de melin inverse}
+ \section{Transfomation de Henkel}
+ La transformée de Hankel (d'ordre zéro) est une transformée intégrale équivalente à une transformée de Fourier à deux dimensions avec un noyau intégral à symétrie radiale, appelée également transformation de Fourier-Bessel. Il est défini comme
+ \[
+ g \left(u, v \right)	= F_{r}\left[\left(r\right)\right]\left(u, v\right)
+ \]
+ \subsection{Transformation de Henkel inverse}
+ 
 \chapter{Équations non linéaires}\index{Équations non linéaires}
 Ce chapitre explique comment résoudre une équation non linéaire avec SymPy.
 Dans un premier temps on étudie les équations polynomiales et on montre les
