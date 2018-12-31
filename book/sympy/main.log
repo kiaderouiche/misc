@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  30 DEC 2018 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  30 DEC 2018 21:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2188,47 +2188,57 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 20.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+<Pictures/../Pictures/Figure_1.png, id=1686, 462.528pt x 346.896pt>
+File: Pictures/../Pictures/Figure_1.png Graphic file (type png)
+<use Pictures/../Pictures/Figure_1.png>
+Package pdftex.def Info: Pictures/../Pictures/Figure_1.png  used on input line 
+41.
+(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 41.
+(hyperref)                than one, level fixed on input line 65.
 
-[81] [82
-
-]
+[82 <./Pictures/../Pictures/Figure_1.png>]
 Chapter 20.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 52.
+Package pdftex.def Info: Pictures/head2.png  used on input line 76.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-Package mdframed Info: mdframed works in twoside mode on input line 54.
+Package mdframed Info: mdframed works in twoside mode on input line 78.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 54.
-Package mdframed Info: mdframed works in twoside mode on input line 56.
+(mdframed)              on input line 78.
+Package mdframed Info: mdframed works in twoside mode on input line 80.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 56.
-Package mdframed Info: mdframed works in twoside mode on input line 58.
+(mdframed)              on input line 80.
+Package mdframed Info: mdframed works in twoside mode on input line 82.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
-Package mdframed Info: mdframed works in twoside mode on input line 61.
+(mdframed)              on input line 82.
+Package mdframed Info: mdframed works in twoside mode on input line 85.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 61.
-Package mdframed Info: mdframed works in twoside mode on input line 63.
+(mdframed)              on input line 85.
+Package mdframed Info: mdframed works in twoside mode on input line 87.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 63.
-Package mdframed Info: mdframed works in twoside mode on input line 68.
+(mdframed)              on input line 87.
+Package mdframed Info: mdframed works in twoside mode on input line 92.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 68.
-[83] [84]
+(mdframed)              on input line 92.
+[83
+
+] [84]
 Chapter 21.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 95.
+Package pdftex.def Info: Pictures/head2.png  used on input line 119.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 ) [85
 
@@ -2282,7 +2292,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 27.
 [97]
-<Pictures/../Pictures/gratte-ciel5.jpg, id=1788, 564.60938pt x 120.45pt>
+<Pictures/../Pictures/gratte-ciel5.jpg, id=1804, 564.60938pt x 120.45pt>
 File: Pictures/../Pictures/gratte-ciel5.jpg Graphic file (type jpg)
 <use Pictures/../Pictures/gratte-ciel5.jpg>
 Package pdftex.def Info: Pictures/../Pictures/gratte-ciel5.jpg  used on input l
@@ -2425,10 +2435,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40632 strings out of 494409
- 756971 string characters out of 6173287
+ 40671 strings out of 494409
+ 757528 string characters out of 6173287
  1328050 words of memory out of 5000000
- 42876 multiletter control sequences out of 15000+600000
+ 42900 multiletter control sequences out of 15000+600000
  680354 words of font info for 366 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  58i,15n,82p,1201b,3480s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2448,10 +2458,10 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (119 pages, 13981341 bytes).
+Output written on main.pdf (119 pages, 13992719 bytes).
 PDF statistics:
- 2062 PDF objects out of 2073 (max. 8388607)
- 1715 compressed objects within 18 object streams
- 528 named destinations out of 1000 (max. 500000)
- 64018 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2082 PDF objects out of 2487 (max. 8388607)
+ 1733 compressed objects within 18 object streams
+ 542 named destinations out of 1000 (max. 500000)
+ 64023 words of extra memory for PDF output out of 74296 (max. 10000000)
 

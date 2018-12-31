@@ -309,7 +309,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {19}Int\IeC {\'e}gration num\IeC {\'e}rique}{81}{chapter.19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {19.0.1}Equation and Text}{81}{subsection.19.0.1}% 
+\contentsline {subsection}{\numberline {19.0.1}Equation and Text}{82}{subsection.19.0.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {20}Transformation d'int\IeC {\'e}grale}{83}{chapter.20}% 
 \defcounter {refsection}{0}\relax 
