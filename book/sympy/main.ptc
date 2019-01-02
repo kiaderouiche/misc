@@ -158,7 +158,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.3}Quelques probl\`emes \IeC {\'e}l\IeC {\'e}mentaires de th\IeC {\'e}orie des nombres}{39}{section.7.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Th\IeC {\'e}or\IeC {\`e}me de Wilson}{39}{subsection.7.3.1}% 
+\contentsline {subsection}{\numberline {7.3.1}Nombre p-adique}{39}{subsection.7.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2}Th\IeC {\'e}or\IeC {\`e}me de Wilson}{39}{subsection.7.3.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Polyn\IeC {\^o}mes}{41}{chapter.8}% 
 \ttl@stoptoc {default@7}
@@ -288,9 +290,15 @@
 \ttl@stoptoc {default@12}
 \ttl@starttoc {default@13}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.1}Introduction}{63}{section.13.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.1.1}Polygones r\IeC {\'e}gulier}{63}{subsection.13.1.1}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {14}G\IeC {\'e}om\IeC {\'e}trie Diff\IeC {\'e}rentielle}{65}{chapter.14}% 
 \ttl@stoptoc {default@13}
 \ttl@starttoc {default@14}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.1}Vari\IeC {\'e}t\IeC {\'e} diff\IeC {\'e}rentiable}{65}{section.14.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {15}Groupe de Lie}{67}{chapter.15}% 
 \ttl@stoptoc {default@14}
@@ -298,7 +306,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {15.1}R\IeC {\'e}solution d\IeC {\textquoteright }\IeC {\'e}quations par groupe de Lie}{67}{section.15.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {16}Convexity}{69}{chapter.16}% 
+\contentsline {chapter}{\numberline {16}Convexit\IeC {\'e}}{69}{chapter.16}% 
 \ttl@stoptoc {default@15}
 \ttl@starttoc {default@16}
 \defcounter {refsection}{0}\relax 
@@ -388,61 +396,51 @@
 \ttl@stoptoc {default@23}
 \ttl@starttoc {default@24}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {25}Semi-groupe num\IeC {\'e}rique}{97}{chapter.25}% 
+\contentsline {part}{VII\hspace {1em}Physique}{97}{part.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {25}Chaos}{101}{chapter.25}% 
 \ttl@stoptoc {default@24}
 \ttl@starttoc {default@25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {25.1}Introduction et concept}{97}{section.25.1}% 
+\contentsline {section}{\numberline {25.1}Pendule simple}{101}{section.25.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {25.2}Genre et nombre de Frobenius}{98}{section.25.2}% 
+\contentsline {subsection}{\numberline {25.1.1}Pendule \IeC {\`a} deux bras}{101}{subsection.25.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {25.3}Fixons le genre}{98}{section.25.3}% 
+\contentsline {subsection}{\numberline {25.1.2}Mouvements d\IeC {\textquoteright }un robot}{101}{subsection.25.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VII\hspace {1em}Physique}{99}{part.7}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {26}Chaos}{103}{chapter.26}% 
+\contentsline {chapter}{\numberline {26}M\'ecanique et information quantique}{103}{chapter.26}% 
 \ttl@stoptoc {default@25}
 \ttl@starttoc {default@26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {26.1}Pendule simple}{103}{section.26.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {26.1.1}Pendule \IeC {\`a} deux bras}{103}{subsection.26.1.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {26.1.2}Mouvements d\IeC {\textquoteright }un robot}{103}{subsection.26.1.2}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {27}M\'ecanique et information quantique}{105}{chapter.27}% 
+\contentsline {chapter}{\numberline {27}Le mod\IeC {\`e}le $\phi ^{4}$}{105}{chapter.27}% 
 \ttl@stoptoc {default@26}
 \ttl@starttoc {default@27}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {28}Le mod\IeC {\`e}le $\phi ^{4}$}{107}{chapter.28}% 
+\contentsline {subsection}{\numberline {27.0.1}LES DIAGRAMMES DE FEYNMAN}{105}{subsection.27.0.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{VIII\hspace {1em}Annexe}{107}{part.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {28}Programmation Orient\IeC {\'e}e Objet}{109}{chapter.28}% 
 \ttl@stoptoc {default@27}
 \ttl@starttoc {default@28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {28.0.1}LES DIAGRAMMES DE FEYNMAN}{107}{subsection.28.0.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{VIII\hspace {1em}Annexe}{109}{part.8}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {29}Programmation Orient\IeC {\'e}e Objet}{111}{chapter.29}% 
+\contentsline {chapter}{\numberline {29}D\'ecorateurs}{111}{chapter.29}% 
 \ttl@stoptoc {default@28}
 \ttl@starttoc {default@29}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {30}D\'ecorateurs}{113}{chapter.30}% 
+\contentsline {chapter}{\numberline {30}Optimisation du code}{113}{chapter.30}% 
 \ttl@stoptoc {default@29}
 \ttl@starttoc {default@30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {31}Optimisation du code}{115}{chapter.31}% 
+\contentsline {subsection}{\numberline {30.0.1}Cython}{114}{subsection.30.0.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {30.0.2}Theano}{115}{subsection.30.0.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {31}Interface graphique}{117}{chapter.31}% 
 \ttl@stoptoc {default@30}
 \ttl@starttoc {default@31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {31.0.1}Cython}{116}{subsection.31.0.1}% 
+\contentsline {section}{\numberline {31.1}Bibliographie}{117}{section.31.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {31.0.2}Theano}{117}{subsection.31.0.2}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {32}Interface graphique}{119}{chapter.32}% 
-\ttl@stoptoc {default@31}
-\ttl@starttoc {default@32}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {32.1}Bibliographie}{119}{section.32.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {32.2}Index}{119}{section.32.2}% 
+\contentsline {section}{\numberline {31.2}Index}{117}{section.31.2}% 
 \contentsfinish 

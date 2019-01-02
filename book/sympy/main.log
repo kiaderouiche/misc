@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  1 JAN 2019 00:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  2 JAN 2019 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1313,8 +1313,10 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotereset=\count446
 (./main.aux (./first/avant_propos.aux) (./first/firststep.aux)
 (./chapter01/basecalculs.aux) (./chapter02/ensemble.aux)
-(./chapter02/formelalgebra.aux) (./chapter03/geometry.aux)
-(./chapter04/numerical.aux) (./chapter05/combina.aux) (./chapter06/physics.aux)
+(./chapter02/formelalgebra.aux) (./chapter03/plangeometry.aux)
+(./chapter03/diffgeometry.aux) (./chapter03/liegeometry.aux)
+(./chapter03/convgeometry.aux) (./chapter04/numerical.aux)
+(./chapter05/combina.aux) (./chapter06/physics.aux)
 (./annexe/optimization/cython.aux) (./annexe/optimization/theano.aux))
 \openout1 = `main.aux'.
 
@@ -1545,9 +1547,9 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 220.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 220.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
  [6] [7]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 364.
@@ -1821,41 +1823,45 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 3.
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
-Package mdframed Info: mdframed works in twoside mode on input line 8.
+Package mdframed Info: mdframed works in twoside mode on input line 16.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 8.
+(mdframed)              on input line 16.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 19.
+Package mdframed Info: mdframed works in twoside mode on input line 21.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 21.
 [39
 
 ] [40]
 Chapter 8.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 27.
+Package pdftex.def Info: Pictures/head2.png  used on input line 40.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 [41
 
 ] [42]
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 91.
+Package mdframed Info: mdframed works in twoside mode on input line 104.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 91.
+(mdframed)              on input line 104.
 [43] [44
 
 ]
 Chapter 9.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 94.
+Package pdftex.def Info: Pictures/head2.png  used on input line 107.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 [45]
-Overfull \hbox (4.986pt too wide) in paragraph at lines 163--164
+Overfull \hbox (4.986pt too wide) in paragraph at lines 176--177
 []\T1/ptm/m/n/10.95 (-20) La forme de Gram-Schmidt est une autre dé-com-po-si-t
 ion basée sur les trans-fo-ma-tions d'équivalence
  []
@@ -1865,62 +1871,62 @@ Underfull \vbox (badness 2142) has occurred while \output is active []
 
  [46]
 [47]
-Package mdframed Info: mdframed works in twoside mode on input line 209.
+Package mdframed Info: mdframed works in twoside mode on input line 222.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 209.
-Package mdframed Info: mdframed works in twoside mode on input line 220.
+(mdframed)              on input line 222.
+Package mdframed Info: mdframed works in twoside mode on input line 233.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 220.
+(mdframed)              on input line 233.
  [48]
-Package mdframed Info: mdframed works in twoside mode on input line 243.
+Package mdframed Info: mdframed works in twoside mode on input line 256.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 243.
+(mdframed)              on input line 256.
  [49] [50
 
 ]
 Chapter 10.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 247.
+Package pdftex.def Info: Pictures/head2.png  used on input line 260.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--251
+Underfull \hbox (badness 10000) in paragraph at lines 261--264
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 255.
+(hyperref)                removing `math shift' on input line 268.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 255.
+(hyperref)                removing `\left' on input line 268.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 255.
+(hyperref)                removing `subscript' on input line 268.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 255.
+(hyperref)                removing `subscript' on input line 268.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 255.
+(hyperref)                removing `\right' on input line 268.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 255.
+(hyperref)                removing `math shift' on input line 268.
 
-Package mdframed Info: mdframed works in twoside mode on input line 258.
+Package mdframed Info: mdframed works in twoside mode on input line 271.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 258.
+(mdframed)              on input line 271.
 [51]
-Underfull \hbox (badness 10000) in paragraph at lines 287--303
+Underfull \hbox (badness 10000) in paragraph at lines 300--316
 
  []
 
@@ -1930,18 +1936,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 287--303
 Chapter 11.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 348.
+Package pdftex.def Info: Pictures/head2.png  used on input line 361.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--370
+Underfull \hbox (badness 10000) in paragraph at lines 364--383
 
  []
 
 [55]
-Package mdframed Info: mdframed works in twoside mode on input line 393.
+Package mdframed Info: mdframed works in twoside mode on input line 406.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 393.
+(mdframed)              on input line 406.
  (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
@@ -1956,135 +1962,169 @@ Package Fancyhdr Warning: \headheight is too small (14.5pt):
 Chapter 12.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 436.
+Package pdftex.def Info: Pictures/head2.png  used on input line 449.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 439.
+(hyperref)                removing `math shift' on input line 452.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 439.
+(hyperref)                removing `subscript' on input line 452.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 439.
+(hyperref)                removing `\left' on input line 452.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 439.
+(hyperref)                removing `subscript' on input line 452.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 439.
+(hyperref)                removing `\right' on input line 452.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 439.
+(hyperref)                removing `math shift' on input line 452.
 
-Package mdframed Info: mdframed works in twoside mode on input line 440.
+Package mdframed Info: mdframed works in twoside mode on input line 453.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 440.
-Package mdframed Info: mdframed works in twoside mode on input line 446.
+(mdframed)              on input line 453.
+Package mdframed Info: mdframed works in twoside mode on input line 459.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 446.
-Package mdframed Info: mdframed works in twoside mode on input line 454.
+(mdframed)              on input line 459.
+Package mdframed Info: mdframed works in twoside mode on input line 467.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 454.
+(mdframed)              on input line 467.
 ) [57
 
-]
-\openout2 = `chapter03/geometry.aux'.
-
- (./chapter03/geometry.tex [58
+] [58
 
 
+] [59] [60] [61]
+\openout2 = `chapter03/plangeometry.aux'.
 
-] [59] [60] [61] [62
+ (./chapter03/plangeometry.tex [62
+
 
 ]
 Chapter 13.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 3.
+Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[63] [64
+
+Overfull \hbox (64.6075pt too wide) in paragraph at lines 8--9
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+
+Overfull \hbox (107.80794pt too wide) in paragraph at lines 10--11
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 20.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 20.
+Package mdframed Info: mdframed works in twoside mode on input line 25.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 25.
+) [63]
+\openout2 = `chapter03/diffgeometry.aux'.
+
+ (./chapter03/diffgeometry.tex [64
+
+
 
 ]
 Chapter 14.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 4.
+Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[65] [66
+) [65]
+\openout2 = `chapter03/liegeometry.aux'.
+
+ (./chapter03/liegeometry.tex [66
+
+
 
 ]
 Chapter 15.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 5.
+Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[67] [68
+) [67]
+\openout2 = `chapter03/convgeometry.aux'.
+
+ (./chapter03/convgeometry.tex [68
+
+
 
 ]
 Chapter 16.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 11.
+Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 12.
+(hyperref)                than one, level fixed on input line 2.
 
-Package mdframed Info: mdframed works in twoside mode on input line 13.
+Package mdframed Info: mdframed works in twoside mode on input line 3.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 13.
+(mdframed)              on input line 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--20
+Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 38.
+Package mdframed Info: mdframed works in twoside mode on input line 28.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 38.
+(mdframed)              on input line 28.
 [69]
-Package mdframed Info: mdframed works in twoside mode on input line 43.
+Package mdframed Info: mdframed works in twoside mode on input line 33.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 43.
-Package mdframed Info: mdframed works in twoside mode on input line 47.
+(mdframed)              on input line 33.
+Package mdframed Info: mdframed works in twoside mode on input line 37.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 47.
-Package mdframed Info: mdframed works in twoside mode on input line 51.
+(mdframed)              on input line 37.
+Package mdframed Info: mdframed works in twoside mode on input line 41.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 51.
+(mdframed)              on input line 41.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 63.
+Package mdframed Info: mdframed works in twoside mode on input line 53.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 63.
-Package mdframed Info: mdframed works in twoside mode on input line 72.
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed works in twoside mode on input line 62.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 72.
+(mdframed)              on input line 62.
 
-Overfull \hbox (31.0355pt too wide) in paragraph at lines 73--74
+Overfull \hbox (31.0355pt too wide) in paragraph at lines 63--64
 [][]\T1/pag/db/n/10 Definition 16.1.5 --- Epi-graph. []\T1/ptm/m/n/10.95 (-20) 
 For $\OML/ztmcm/m/it/10.95 f \OT1/ztmcm/m/n/10.95 : \U/msb/m/n/10.95 R[] \OMS/z
 tmcm/m/n/10.95 ! []$\T1/ptm/m/n/10.95 (-20) , its epi-graph $\OML/ztmcm/m/it/10
@@ -2096,80 +2136,80 @@ tmcm/m/n/10.95 j\OML/ztmcm/m/it/10.95 f\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10
 .95 x\OT1/ztmcm/m/n/10.95 ) \OMS/ztmcm/m/n/10.95 2
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 77.
+Package mdframed Info: mdframed works in twoside mode on input line 67.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 77.
+(mdframed)              on input line 67.
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
+Package mdframed Info: mdframed works in twoside mode on input line 76.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 76.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
 Package mdframed Info: mdframed works in twoside mode on input line 86.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 86.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
-Package mdframed Info: mdframed works in twoside mode on input line 96.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 96.
 [70]
-Package mdframed Info: Not enough space on this page on input line 98.
-Package mdframed Info: mdframed works in twoside mode on input line 107.
+Package mdframed Info: Not enough space on this page on input line 88.
+Package mdframed Info: mdframed works in twoside mode on input line 97.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 107.
-Package mdframed Info: mdframed works in twoside mode on input line 111.
+(mdframed)              on input line 97.
+Package mdframed Info: mdframed works in twoside mode on input line 101.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 111.
-Package mdframed Info: mdframed works in twoside mode on input line 114.
+(mdframed)              on input line 101.
+Package mdframed Info: mdframed works in twoside mode on input line 104.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 114.
+(mdframed)              on input line 104.
  [71] [72
 
 ]
 Chapter 17.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 144.
+Package pdftex.def Info: Pictures/head2.png  used on input line 134.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/1_1.png, id=1641, 529.98pt x 469.755pt>
+<Pictures/1_1.png, id=1660, 529.98pt x 469.755pt>
 File: Pictures/1_1.png Graphic file (type png)
 <use Pictures/1_1.png>
-Package pdftex.def Info: Pictures/1_1.png  used on input line 146.
+Package pdftex.def Info: Pictures/1_1.png  used on input line 136.
 (pdftex.def)             Requested size: 264.98933pt x 234.87692pt.
 [73 <./Pictures/1_1.png>]
-<Pictures/1_2.png, id=1651, 318.18875pt x 316.18124pt>
+<Pictures/1_2.png, id=1670, 318.18875pt x 316.18124pt>
 File: Pictures/1_2.png Graphic file (type png)
 <use Pictures/1_2.png>
-Package pdftex.def Info: Pictures/1_2.png  used on input line 176.
+Package pdftex.def Info: Pictures/1_2.png  used on input line 166.
 (pdftex.def)             Requested size: 318.18796pt x 316.18047pt.
-<Pictures/1_3.png, id=1652, 326.21875pt x 165.61874pt>
+<Pictures/1_3.png, id=1671, 326.21875pt x 165.61874pt>
 File: Pictures/1_3.png Graphic file (type png)
 <use Pictures/1_3.png>
-Package pdftex.def Info: Pictures/1_3.png  used on input line 185.
+Package pdftex.def Info: Pictures/1_3.png  used on input line 175.
 (pdftex.def)             Requested size: 326.21794pt x 165.61833pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74 <./Pictures/1_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+Underfull \hbox (badness 10000) in paragraph at lines 176--179
 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 210.
+Package mdframed Info: mdframed works in twoside mode on input line 200.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 210.
+(mdframed)              on input line 200.
 [75 <./Pictures/1_3.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 248.
+Package mdframed Info: mdframed works in twoside mode on input line 238.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 248.
+(mdframed)              on input line 238.
 ) [76]
 \openout2 = `chapter04/numerical.aux'.
 
@@ -2193,7 +2233,7 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 20.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/../Pictures/Figure_1.png, id=1694, 462.528pt x 346.896pt>
+<Pictures/../Pictures/Figure_1.png, id=1713, 462.528pt x 346.896pt>
 File: Pictures/../Pictures/Figure_1.png Graphic file (type png)
 <use Pictures/../Pictures/Figure_1.png>
 Package pdftex.def Info: Pictures/../Pictures/Figure_1.png  used on input line 
@@ -2284,57 +2324,33 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 17.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[95] [96
+) [95]
+\openout2 = `chapter06/physics.aux'.
+
+ (./chapter06/physics.tex [96
+
+
+
+] [97] [98] [99] [100
 
 ]
 Chapter 25.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 18.
+Package pdftex.def Info: Pictures/head2.png  used on input line 6.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-Package mdframed Info: mdframed works in twoside mode on input line 27.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 27.
-[97]
-<Pictures/../Pictures/gratte-ciel5.jpg, id=1812, 564.60938pt x 120.45pt>
-File: Pictures/../Pictures/gratte-ciel5.jpg Graphic file (type jpg)
-<use Pictures/../Pictures/gratte-ciel5.jpg>
-Package pdftex.def Info: Pictures/../Pictures/gratte-ciel5.jpg  used on input l
-ine 51.
-(pdftex.def)             Requested size: 282.30399pt x 60.22484pt.
-Package mdframed Info: mdframed works in twoside mode on input line 59.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 59.
-) [98 <./Pictures/../Pictures/gratte-ciel5.jpg>]
-\openout2 = `chapter06/physics.aux'.
-
- (./chapter06/physics.tex
-[99
-
-
-
-] [100] [101] [102
+[101] [102
 
 ]
 Chapter 26.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 6.
+Package pdftex.def Info: Pictures/head2.png  used on input line 15.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 [103] [104
 
 ]
 Chapter 27.
-File: Pictures/head2.png Graphic file (type png)
-<use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 15.
-(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[105] [106
-
-]
-Chapter 28.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 17.
@@ -2363,34 +2379,34 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 18.
 
-) [107] [108
+) [105] [106
 
 
-] [109] [110]
+] [107] [108]
+Chapter 28.
+File: Pictures/head2.png Graphic file (type png)
+<use Pictures/head2.png>
+Package pdftex.def Info: Pictures/head2.png  used on input line 142.
+(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+[109
+
+] [110
+
+]
 Chapter 29.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 137.
+Package pdftex.def Info: Pictures/head2.png  used on input line 143.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[111
-
-] [112
+[111] [112
 
 ]
 Chapter 30.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 138.
+Package pdftex.def Info: Pictures/head2.png  used on input line 146.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[113] [114
-
-]
-Chapter 31.
-File: Pictures/head2.png Graphic file (type png)
-<use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 141.
-(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[115]
+[113]
 \openout2 = `annexe/optimization/cython.aux'.
 
  (./annexe/optimization/cython.tex
@@ -2403,48 +2419,50 @@ Overfull \hbox (143.8083pt too wide) in paragraph at lines 27--29
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [116
+) [114
 
 ]
 \openout2 = `annexe/optimization/theano.aux'.
 
- (./annexe/optimization/theano.tex) [117
+ (./annexe/optimization/theano.tex) [115
 
 
-] [118
+] [116
 
 
 ]
-Chapter 32.
+Chapter 31.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 150.
+Package pdftex.def Info: Pictures/head2.png  used on input line 155.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
-[119]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+[117]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
  (./main.aux (./first/avant_propos.aux) (./first/firststep.aux)
 (./chapter01/basecalculs.aux) (./chapter02/ensemble.aux)
-(./chapter02/formelalgebra.aux) (./chapter03/geometry.aux)
-(./chapter04/numerical.aux) (./chapter05/combina.aux) (./chapter06/physics.aux)
+(./chapter02/formelalgebra.aux) (./chapter03/plangeometry.aux)
+(./chapter03/diffgeometry.aux) (./chapter03/liegeometry.aux)
+(./chapter03/convgeometry.aux) (./chapter04/numerical.aux)
+(./chapter05/combina.aux) (./chapter06/physics.aux)
 (./annexe/optimization/cython.aux) (./annexe/optimization/theano.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 87D284C425791F08890B5F8507B07D4A;13913.
+(rerunfilecheck)             Checksum: 41E803A6E767D99F3D630020A52AC901;13923.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40679 strings out of 494409
- 757656 string characters out of 6173287
- 1328071 words of memory out of 5000000
- 42901 multiletter control sequences out of 15000+600000
- 680354 words of font info for 366 fonts, out of 8000000 for 9000
+ 40737 strings out of 494409
+ 758504 string characters out of 6173287
+ 1335949 words of memory out of 5000000
+ 42926 multiletter control sequences out of 15000+600000
+ 680484 words of font info for 368 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  58i,15n,82p,1189b,3480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -2463,10 +2481,10 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (119 pages, 13993981 bytes).
+Output written on main.pdf (117 pages, 13972997 bytes).
 PDF statistics:
- 2092 PDF objects out of 2487 (max. 8388607)
- 1743 compressed objects within 18 object streams
- 549 named destinations out of 1000 (max. 500000)
- 64023 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2096 PDF objects out of 2487 (max. 8388607)
+ 1750 compressed objects within 18 object streams
+ 559 named destinations out of 1000 (max. 500000)
+ 64018 words of extra memory for PDF output out of 74296 (max. 10000000)
 
