@@ -1,0 +1,476 @@
+\part{Algèbre et théorie des nombres}
+\chapter{Anneaux et corps finis}
+\section{Anneau des entiers modulo $n$}
+\section{Corps finis}
+\section{Quelques probl\`emes élémentaires de théorie des nombres}
+\subsection{Théorème de Wilson}\footnote{\textbf{Note Historique.} Le théorème de Wilson a été découvert à la fin du dixième siècle par le mathématicien arabe Ibn al-Haytham $(965-1040)$. Le résultat ressurgit, sans démonstration, à la fin du dix-huitième siècle dans les écrits de Edward Waring qui l’attribue en 1770 à son élève John Wilson. L’année suivante, Lagrange en donne deux démonstrations dans son article [LAG]. En fait, Leibniz $(1646-1716)$ connaissait déjà le résultat et sa démonstration mais ne les avait pas publiés (voir [RAS] pour de plus amples considérations historiques).}
+\'enoncé du théorème 
+\begin{theorem}
+ Un entier $p$ strictement plus grand que $1$ est un nombre premier si et seulement s'il divise $(p - 1)! + 1$, c'est-à-dire si et seulement si $(p-1)!+ 1 \equiv 0 (mod p)$
+\end{theorem}
+\textbf{Indication.}  Quatre démonstrations de ce résultat de Wilson. L'idée directrice des deux premières démonstrations est de remplacer ce calcul de congruence $(\mathbb{Z}/p\mathbb{Z})$ par un calcul dans $\mathbb{F}_{p}$ ce qui va permettre d'utiliser les propriétés d’un corps. L'idée de la troisième démonstration est d’utiliser les théorèmes de Sylow dans le groupe symétrique $\mathbb{\sigma}_{p}$, la quatrième est plutôt combinatoire qui repose sur l'identité algébrique $\Sigma_{i=0}^{n} (-1)^{i} C_n^{p}(x-i)^n = n!$ donnée en théorème l'auteur\footnote{https://arxiv.org/pdf/math/0406086.pdf} ainsi le théorème sera simplement comme
+corollaire en remplaçant $n$ par $p-1$
+\begin{proof}
+A venir!.
+\end{proof}
+Alain Connes dans son article "Autour du théorème de Wilson"\footnote{Alain Connes, An essay on the Riemann Hypothesis, Open Problems in Mathematics.John Forbes Nash, Jr. Michael Th. Rassias Editors}, donne une approximation du nombre $\pi$ en somme de $sin$
+\begin{remark}
+Contrairement au petit théorème de Fermat, le théorème de Wilson est une condition nécessaire et suffisante pour tester la primalité. Toutefois, cela conduirait à un test très lent informatiquement, car le calcul de (p-1)! nécessite beaucoup d'opérations.
+\end{remark}
+\begin{python}
+import sympy
+
+def isPrime(n):
+ if n == 4: return 
+ return bool(math.factorial(n>>1)%n)
+\end{python}
+\subsection{Nombre p-adique}
+Nous définissons les nombres p-adiques\footnote{Xavier Caruso, Computations with p-adic numbers. 2017}, discutons de leurs propriétés fondamentales et essayons d'expliquer, en sélectionnant quelques exemples pertinents, leur place dans la théorie des nombres, la géométrie algébrique et le calcul symbolique. La présentation ci-dessous est volontairement très résumée; nous renvoyons le lecteur intéressé à\footnote{Yvette Amice. Les nombres p-adiques. PUF (1975) et Fernando Gouvea. p-adic Numbers: An Introduction. Springer (1997) } pour un exposé plus complet de la théorie des nombres p-adiques.
+\\
+Les nombres p-adiques sont des objets très ambivalents auxquels on peut penser sous différents angles:
+calcul, algébrique, analytique. Il s'avère que chaque point de vue conduit à sa propre définition
+des nombres p-adiques: les informaticiens préfèrent souvent voir un nombre p-adique comme une séquence de
+chiffres tandis que les algébristes préfèrent parler de limites projectives et les analystes sont plus à l'aise
+avec des espaces et des finitions Banach. Bien sûr, toutes ces approches ont leur propre intérêt
+et la compréhension des intersections entre eux est souvent la clé derrière le plus important
+avances.
+\begin{definition}
+Un nombre $p-adique$
+\end{definition}
+\chapter{Polynômes}
+ \section{Anneaux et polynômes}
+  \subsection{Introduction}
+ Nous avons vu au chapitre 2 comment effectuer des calculs sur des expressions formelles, éléments de « l'anneau symbolique ». Dans ce chapitre en va manipuler le module dédié, \textcolor{red}{sympy.polys}, permettant de calculer des algèbres polynomiales sur divers domaines de coefficients implémentant un grand nombre de méthodes  allant d’outils simples comme la division polynomiale à des concepts avancés comprenant les bases de Gröbner et la factorisation multivariée sur des domaines de nombres algébrique:
+  \subsection{ Construction d’anneaux de polynômes}
+En SymPy, les polynômes, comme beaucoup d’autres objets algébriques, sont en général à coefficients dans un anneau commutatif. C’est le point de vue que nous adoptons, mais la plupart de nos exemples concernent des polynômes sur un corps. Dans tout le chapitre, les lettres A et K désignent respectivement un anneau commutatif et un corps quelconques. La première étape pour mener un calcul dans une structure algébrique est souvent de construire R elle-même. On construit $\mathbb{Q}\left[x\right]$
+ \section{Polynômes}
+  \subsection{Création et arithmétique de base}
+  \subsection{Vue d’ensemble des opérations sur les polynômes}
+  \subsection{Changement d’anneau}\footnote{Contrairement à Sage, il peut y être que dans SymPy certain 
+  fonctionnalité ne soi pas directement accessible que par passage à la programmation }
+Changement d’anneau. La liste exacte des opérations disponibles, leur effet
+et leur efficacité dépendent fortement de l’anneau de base. Par exemple, les
+polynômes de $ZZ\left['x'\right]$ possèdent une méthode content qui renvoie leur contenu,
+c’est-à-dire le pgcd de leurs coefficients ; ceux de $QQ\left['x'\right]$ non, l’opération étant
+triviale. La méthode factor existe quant à elle pour tous les polynômes mais
+déclenche une exception NotImplementedError pour un polynôme à coefficients
+dans SR(le cas de Sage) ou dans $\mathbb{Z}/4\mathbb{Z}$. Par exemple Cette exception signifie que l’opération n’est pas disponible dans Sage pour ce type d’objet bien qu’elle ait un sens mathématiquement.
+Il est donc très utile de pouvoir jongler avec les différents anneaux de coefficients
+sur lesquels on peut considérer un « même » polynôme. Appliquée à un polynôme
+de $A\left['x'\right]$, la méthode change\_ring renvoie son image dans $B\left[x\right]$, quand il y a une
+façon naturelle de convertir les coefficients. La conversion est souvent donnée par
+un morphisme canonique de A dans B : notamment, change\_ring sert à étendre
+l’anneau de base pour disposer de propriétés algébriques supplémentaires. Ici par
+exemple, le polynôme p est irréductible sur les entiers, mais se factorise sur R :
+ \subsection{Itération}
+ \section{Arithmétique euclidienne}
+ \subsection{ Divisibilité}
+ \subsection{ Idéaux et quotients}
+ \subsection{Idéaux}
+ \section{ Factorisation et racines}
+ \subsection{Factorisation}
+ \subsection{ Recherche de racines}
+ \subsection{ Résultant}
+ \subsection{ Groupe de Galois}
+ Par défaut le calcul de groupe de Galois n'est pas disponible dans SymPy, ce qui nous amènes encore
+ une fois de programmer en ajoutant des modules, Le groupe de Galois d’un polynôme irréductible $p \in \mathbb{Q}\left[x\right]$ est un objet algébrique qui décrit certaines « symétries » des racines de $p$. Il s’agit d’un objet central de la théorie des équations algébriques. Notamment, l’équation $p\left(x\right) = 0$
+est résoluble par radicaux, c’est-à-dire que ses solutions s’expriment à partir des coefficients de $p$ au moyen des quatre opérations et de l'extraction de racine n-ième, si et seulement si le groupe de Galois de $p$ est résoluble.
+\section{ Fractions rationnelles}
+ \subsection{ Construction et propriétés élémentaires}
+ La division de deux polynômes (sur un anneau intègre) produit une fraction rationnelle. Son parent est le corps des fractions de l’anneau de polynômes, qui peut s’obtenir par Frac(R) :
+ \section{Séries formelles}
+ Une série formelle est une série enGroupes de matrices.tière vue comme une simple suite de coefficients, sans considération de convergence. Plus précisément, si $A$ est un anneau commutatif, on appelle séries formelles (en anglais formal
+ power series) d’indéterminée  à coefficients dans  les sommes formelles $\sum_{n=0}^{\infty} a_{n}x^{n}$ où ($a_{n}$) est une suite quelconque d’éléments de $A$. Munies des opérations d’addition et de multiplication naturelles
+\[
+ \sum_{n=0}^{\infty} a_{n}x^{n} + \sum_{n=0}^{\infty} b_{n}x^{n} = \sum_{n=0}^{\infty} \left(a_{n}+b_{n}\right) x^{n} 
+ \],
+\[
+ \left(\sum_{n=0}^{\infty} a_{n}x^{n}\right) \left(\sum_{n=0}^{\infty} b_{n}x^{n}\right) =  \sum_{n=0}^{\infty} \left( \sum_{n=0}^{\infty} a_{i}b_{j}\right)x^{n}
+\], les séries formelles forment un anneau noté $A\left[ \left[ x\right] \right] $.\\
+
+les séries formelles forment un anneau noté Dans un système de calcul formel, ces séries sont utiles pour représenter des fonctions analytiques dont on n'a pas d’écriture exacte. Comme toujours, l’ordinateur fait les calculs, mais c’est à l'utilisateur de leur donner un sens mathématique. À lui par exemple de s’assurer que les séries qu’il manipule sont convergentes. 
+ \subsection{Opérations sur les séries tronquées}
+ \subsection{Développement de solutions d’équations}
+ Face à une équation différentielle dont les solutions exactes sont trop compliquées à calculer ou à exploiter une fois calculées, ou tout simplement qui n’admet pas de solution en forme close, un recours fréquent consiste à chercher des solutions sous forme de séries. On commence habituellement par déterminer les solutions 
+de l’équation dans l’espace des séries formelles, et si nécessaire, on conclut ensuite par un argument de convergence que les solutions formelles construites ont un sens analytique. SymPy peut être d’une aide précieuse pour la première étape. Considérons par exemple l’équation différentielle
+
+\begin{example}
+\[
+ \left(x\right) = \sqrt{1+x^{2}}
+\]
+\end{example}
+
+%%%%%%%%
+\begin{exercise}
+Considérons le polynôme $p(x) = a_{0} + a_{1} x + a_{2} x^{2} + a_{3} x^{3}$, où $a_{i} \neq 0$ $\forall i$. Le nombre minimum de multiplications nécessaires pour évaluer $p$ sur une entrée $x$ est:
+\end{exercise}
+\chapter{Algèbre linéaire}
+Ce chapitre traite de l’algèbre linéaire exacte et symbolique, c’est-à-dire sur
+des anneaux propres au calcul formel, tels que $Z$, des corps finis, des anneaux de
+polynômes. Nous présentons les constructions sur les matrices et leurs espaces ainsi que les
+opérations de base, puis les différents calculs possibles sur ces matrices, regroupés en deux thèmes : ceux liés à l’élimination de Gauss et aux transformations par équivalence à gauche, et ceux liés aux valeurs et espaces
+propres et aux transformations de similitude.
+\section{Constructions et manipulations élémentaires}
+\subsection{ Espaces de vecteurs, de matrices}
+De la même façon que pour les polynômes, les vecteurs et les matrices sont
+manipulés comme des objets algébriques appartenant à un espace. Si les coefficients
+appartiennent à un corps $K$, c’est un espace vectoriel sur $K$ ; s’ils appartiennent
+à un anneau, c’est un $K-module$ libre.
+\textbf{Groupes de matrices.} On poura par ailleur définir des sous-groupes de l'espace total des matrices. Ainsi le constructeur 
+\subsection{ Construction des matrices et des vecteurs}
+Les matrices et les vecteurs peuvent naturellement être générés comme des éléments d’un espace en fournissant la liste des coefficients en arguments. Pour les matrices, ceux-ci seront lus par ligne :
+\subsection{ Manipulations de base et arithmétique sur les matrices}
+\textbf{Indices et accès aux coefficients.} L'accès aux coefficients ainsi qu’à des
+sous-matrices extraites se fait de façon unifiée par l’opérateur crochet $A$ $\left[i, j\right]$,selon les 
+conventions usuelles de Python. Les indices de ligne $i$ et de colonne $j$ peuvent être des entiers (pour 
+l’accès à des coefficients) ou des intervalles sous la forme $1:3$ (on rappelle que par convention, en Python 
+les indices commencent à $0$, et les intervalles sont toujours inclusifs pour la borne inférieure et exclusifs 
+pour la borne supérieure). L’intervalle « : » sans bornes correspond à la totalité des indices possibles dans la 
+dimension considérée. La notation $a:b:k$ permet d’accéder aux indices compris entre $a$ et $b-1$ par pas de 
+$k$. Enfin, les indices négatifs sont aussi valides, et permettent de parcourir les indices à partir de la
+fin. Ainsi $A$ $\left[-2,:\right]$ correspond à l’avant dernière ligne. L'accès à ces sous-matrices
+se fait aussi bien en lecture qu’en écriture. On peut par exemple modifier une colonne donnée de la façon 
+suivante :
+\subsection{ Opérations de base sur les matrices}
+Les opérations arithmétiques sur les matrices se font avec les opérateurs usuels +,-,$\ast$,\^. L’inverse 
+d’une matrice $A$ peut s’écrire aussi bien $A^{-1}$ que $~A$. Lorsque $a$ est un scalaire et $A$ une matrice, 
+l’opération $a*A$ correspond à la multiplication externe de l’espace de matrices. Pour les autres opérations où 
+un scalaire a est fourni en lieu et place d’une matrice (par exemple l’opération a+A), il est considéré comme la 
+matrice scalaire correspondante $aI_{n}$ si a $a\neq 0$ et les dimensions le permettent. Le produit élément par 
+élément de deux matrices s’effectue avec l’opération elementwise\_product.
+\section{ Calculs sur les matrices}
+En algèbre linéaire, les matrices peuvent être utilisées pour représenter aussi bien des familles de vecteurs, 
+des systèmes d’équations linéaires, des applications linéaires ou des sous-espaces. Ainsi, le calcul d’une 
+propriété comme le rang d’une famille, la solution d’un système, les espaces propres d’une application linéaire, 
+ou la dimension d’un sous-espace se ramènent à des transformations sur ces matrices révélant cette propriété. 
+Ces transformations correspondent à des changements de base, vus au niveau.
+\\
+Ces transformations correspondent à des changements de base, vus au niveau
+matriciel comme des transformations d’équivalence : $B = PAQ^{-1}$ , où $P$ et $Q$ sont
+des matrices inversibles. Deux matrices sont dites équivalentes s’il existe une telle
+
+transformation pour passer de l’une à l’autre. On peut ainsi former des classes
+d’équivalence pour cette relation, et l’on définit des formes normales, permettant
+de caractériser de manière unique chaque classe d’équivalence. Dans ce qui suit,
+nous présentons l’essentiel des calculs sur les matrices disponibles avec SymPy, sous
+l’angle de deux cas particuliers de ces transformations :
+
+\begin{itemize}
+ 	 \item Les transformations d’équivalence à gauche, de la forme $B = UA$, qui
+révèlent les propriétés caractéristiques pour les familles de vecteurs, telles
+que le rang (nombre de vecteurs linéairement indépendants), le déterminant
+(volume du parallélépipède décrit par la famille de vecteurs), le profil de rang
+(premier sous-ensemble de vecteurs formant une base), . . . L’élimination de
+Gauss est l’outil central pour ces transformations, et la forme échelonnée
+réduite (forme de Gauss-Jordan dans un corps ou forme de Hermite dans $\mathbb{Z}$)
+est la forme normale. En outre, ces transformations servent à la résolution
+des systèmes linéaires.
+	 \item  Les transformations de similitude, de la forme $B = UAU^{-1}$ , qui révèlent les
+propriétés caractéristiques des matrices représentant des endomorphismes,
+comme les valeurs propres, les espaces propres, les polynômes minimal et
+caractéristique, . . . La forme de Jordan ou la forme de Frobenius, selon les
+domaines de calcul, seront les formes normales pour ces transformations.
+
+\end{itemize}
+
+La forme de Gram-Schmidt est une autre décomposition basée sur les transfomations d’équivalence à gauche, transformant une matrice en un ensemble de vecteurs orthogonaux.
+
+\subsection{ Élimination de Gauss, forme échelonnée}
+\textbf{Élimination de Gauss et équivalence à gauche.} L’élimination de Gauss est l’une des opérations fondamentales en algèbre linéaire car elle permet d’accéder à une représentation de la matrice à la fois plus adaptée au calcul, comme la résolution de systèmes, et révélant certaines de ses propriétés fondamentales,
+comme le rang, le déterminant, le profil de rang, etc. Les opérations de base pour l’élimination sont les opérations élémentaires sur les lignes :
+
+\textbf{Élimination de Gauss-Jordan.} La transformation de Gauss-Jordan est similaire à celle de Gauss, en ajoutant à $G_{x,k}$ les transvections correspondant aux lignes d’indice $i < k$ ; cela revient à éliminer les coefficients d’une colonne au-dessus et au-dessous du pivot. Si de plus on divise chaque ligne par son pivot, on obtient alors une forme échelonnée dite réduite encore appelée forme de Gauss-Jordan. Pour toute classe d’équivalence de matrices, il existe une unique matrice sous cette forme ; il s’agit donc d’une forme normale.
+
+\textbf{Forme échelonnée dans les anneaux euclidiens.}
+\subsection{ Résolution de systèmes ; image et base du noyau}
+\subsection{Valeurs propres, forme de Jordan et transformations de similitude}
+Lorsque l’on interprète une matrice carrée comme un opérateur linéaire (un endomorphisme), elle n’en est que la représentation dans une base donnée. Tout changement de base correspond à une transformation de similitude 
+$B = U^{-1}AU$ de la matrice. Les deux matrices $A$ et $B$ sont alors dites semblables. Ainsi les propriétés de l’opérateur linéaire, qui sont indépendantes de la base, sont révélées par l’étude des invariants de similitude de la matrice.
+par l’étude des invariants de similitude de la matrice. Parmi ces invariants, les plus simples sont le rang et le déterminant. En effet les matrices $U$ et $U^{-1}$ étant inversibles, le rang de $U^{-1}AU$ égale le rang de $A$. De plus $det\left( U^{-1}AU\right)  = det\left( U^{-1}\right) det \left(A det(U) = det(U^{-1}U\right) det\left( A\right) = det\left(A\right)$. De
+la même façon, le polynôme caractéristique de la matrice $A$, défini par 
+ est aussi invariant par transformation de similitude :
+%
+%\[
+% det\left(xId − U^{-1}AU\right) = det\left(U^{-1} \left( xId − A\right) U \left) = det\left( xId − A\right) .
+%\]
+
+Par conséquent, les valeurs caractéristiques d’une matrice, définies comme les racines du polynôme caractéristique dans son corps de décomposition, sont donc aussi des invariants de similitude. Par definition, un scalaire $\lambda$ est une valeur propre d’une matrice $A$ s’il existe un vecteur non nul $u$ tel que $Au = \lambda u$. L'espace propre associé à une valeur propre $\lambda$ est l’ensemble des vecteurs $u$ tels que $Au = \lambda u$. C'est un sous-espace vectoriel defini par $E_{\lambda} = Ker(\lambda Id - A)$. \\
+Les valeurs propres coïncident avec les valeurs caractéristiques :
+\[
+ det(\lambda Id - A) = 0 \Leftrightarrow dim(Ker(\lambda Id - A)) > 1 \Leftrightarrow \exists u 6= 0, \lambda u - Au = 0.
+\]
+Ces deux points de vue correspondent respectivement à l’approche algébrique et géométrique des valeurs propres. Dans le point de vue géométrique, on s’intéresse à l’action de l’opérateur linéaire $A$ sur les vecteurs de l’espace avec plus de précision que dans le point de vue algébrique. En particulier on distingue les notions de
+multiplicité algébrique, correspondant à l’ordre de la racine dans le polynôme caractéristique, de la multiplicité géométrique, correspondant à la dimension du sous-espace propre associé à la valeur propre. Pour les matrices diagonalisables, ces deux notions sont équivalentes. Dans le cas contraire, la multiplicité géométrique est toujours inférieure à la multiplicité algébrique. Le point de vue géométrique permet de décrire plus en détail la structure de la matrice. Par ailleurs, il donne des algorithmes beaucoup plus rapides pour le
+calcul des valeurs et espaces propres, et des polynômes caractéristique et minimal.
+\\
+\textbf{Espaces invariants cycliques, et forme normale de Frobenius.} Soit $A$ Soit une matrice $n x n$ sur un 
+corps $K$ et $u$ un vecteur de $K^{n}$. La famille de vecteurs $u$, $Au$, $A^{2}u$, ..., $A^{n}u$, appelée suite de 
+Krylov, est liée (comme famille de $n + 1$ vecteurs en dimension $n$). Soit $d$ tel que $A^{d} u$ soit le
+premier vecteur de la séquence linéairement dépendant avec ses prédécesseurs $u$, $Au$, ..., $A^{d-1}u$.On 
+écrira
+\[
+	A^{d}u = \sum_{i=0}^{d-1} \alpha_{i} A^{i}u
+\]
+cette relation de dépendance linéaire. Le polynôme $\varphi_{A, u}\left(x\right) = x^{d} = \sum_{i=0}^{d-1} \alpha_{i}x^{i}$ , qui vérifie $\varphi_{A, u}\left(A\right)u = 0$ est donc un polynôme unitaire annulateur de la suite de Krylov et de degré minimal. On l’appelle le polynôme minimal du vecteur $u$ (sous
+entendu, relativement à la matrice $A$). L’ensemble des polynômes annulateurs de u forme un idéal de $K\left[X\right]$, engendré par $\varphi_{A, u}$ .
+Le polynôme minimal de la matrice $A$ est défini comme le polynôme unitaire
+$\varphi_{A}\left(x\right)$ de plus petit degré annulant la matrice $A$ : $\varphi_{A}\left(A\right) = 0$. En particulier, en appliquant $\varphi_{A}\left(A\right)$ au vecteur $u$, on constate que $\varphi_{A}\left(A\right)$ est un polynôme annulateur de la suite de Krylov. Il est donc nécessairement un multiple du polynôme minimal de u. On peut en outre montrer (cf. exercice ) qu’il existe un vecteur $\overline{u}$ tel que
+\begin{equation}
+ \varphi_{A, \overline{u}} = \varphi_{A}.
+\end{equation}
+Lorsque le vecteur $u$ est choisi aléatoirement, la probabilité qu’il satisfasse l’équation (1.1) est d’autant plus grande que la taille du corps est grande (on peut montrer qu’elle est au moins $1-\frac{n}{\vert K \vert}$ 
+\begin{exercise}
+Montrons qu’il existe toujours un vecteur u dont le polynôme minimal coïncide avec le polynôme minimal de la matrice.
+ \begin{enumerate}
+    \item coïncide avec le polynôme minimal de la matrice. 1. Soit $\left(e_{1},..., e_{n}\right)$ une base de l’espace vectoriel. Montrer que $\varphi_{A}$ coïncide avec le ppcm des $\varphi_{A, e_{i}}$ .
+    \item  Dans le cas particulier où $\varphi_{A}$ est une puissance d’un polynôme irréductible, montrer qu’il existe un indice $i_{0}$ tel que $\varphi_{A} =\varphi_{A, e_{i0}}$.
+    \item 
+    \item 
+    \item 
+  \end{enumerate}
+\end{exercise}
+\textbf{Facteurs invariants et invariants de similitude.}  Une propriété importante relie les invariants de similitude et les facteurs invariants vus dans la section  Les invariants de similitude d’une matrice  à coefficients dans
+\begin{theorem}
+Les invariants de similitude d’une matrice $A$ à coefficients dans un corps correspondent aux facteurs invariants de sa matrice caractéristique $xId - A$.
+\end{theorem}
+\textbf{Valeurs propres, vecteurs propres}. Si l’on décompose le polynôme minimal en facteurs irréductibles, 
+$\varphi_{1}$ = $\psi_{1}^{m_{1}}$, $\psi_{2}^{m_{2}}$, $\psi_{3}^{m_{3}}$,..., $\psi_{1}^{m_{s}}$ alors tous les facteurs invariants s’écrivent sous la forme.
+\\
+\textbf{Forme de Jordan.} Lorsque le polynôme minimal est scindé mais ayant des
+facteurs avec des multiplicités supérieures à 1, la forme intermédiaire (8.3) n’est
+pas diagonale. On montre alors qu’il n’existe pas de transformation de similitude
+la rendant diagonale, la matrice initiale n’est donc pas diagonalisable. On peut
+en revanche la trigonaliser, c’est-à-dire la rendre triangulaire supérieure, telle que
+les valeurs propres apparaissent sur la diagonale. Parmi les différentes matrices
+triangulaires possibles, la plus réduite de toutes est la forme normale de Jordan.
+\\
+\textbf{Forme normale primaire.} Pour être complet, il faut mentionner une dernière
+forme normale qui généralise la forme de Jordan dans le cas quelconque où le
+polynôme minimal n’est pas scindé. Pour un polynôme irréductible $P$ de degré $k$,
+on définit le bloc de Jordan de multiplicité $m$ comme la matrice $J_{P,m}$ de dimension
+$km x km$ vérifiant.
+\\
+unique à une permutation des blocs diagonaux près. L’unicité de ces formes normales permet en particulier de tester si deux matrices sont semblables, et par la même occasion de produire une matrice de
+passage entre l’une et l’autre.
+
+\begin{exercise}
+Écrire un programme qui détermine si deux matrices $A$ et $B$ sont semblables et renvoie la matrice $U$ de passage telle que $A = U^{-1}BU$ (on pourra renvoyer None dans le cas où les matrices ne sont pas semblables).
+\end{exercise}
+\chapter{Systèmes polynomiaux}
+Ce chapitre prolonge les deux précédents. Les objets sont des systèmes d’équations à plusieurs variables, comme ceux du chapitre 8. Ces équations, dans la lignée du chapitre 7, sont polynomiales. Par rapport aux polynômes à une seule indéterminée, ceux à plusieurs indéterminées présentent une grande richesse mathématique mais aussi des difficultés nouvelles, liées notamment au fait que l’anneau $K\left[x_{1}, x_{2}, ..., x_{n}\right] $ n’est pas principal. La théorie des bases de Gröbner fournit des outils pour contourner cette limitation. Au final, on dispose de méthodes puissantes pour étudier les systèmes polynomiaux, avec d’innombrables applications
+qui couvrent des domaines variés.
+\\
+
+Une bonne partie du chapitre ne présuppose que des connaissances de base sur les polynômes à plusieurs indéterminées. Certains passages sont cependant du niveau d’un cours d’algèbre commutative de L3 ou M1. Pour une introduction moins allusive et en français à la théorie mathématique des systèmes polynomiaux, accessible au niveau licence, le lecteur pourra se reporter au chapitre [FSED09] de Faugère et Safey El Din. On trouvera un traitement plus avancé dans le livre de Elkadi et Mourrain [EM07]. Enfin, en anglais cette fois, le livre de Cox, Little et O’Shea [CLO07] est à la fois accessible et fort complet.
+
+\section{ Polynômes à plusieurs indéterminées}
+ \subsection{ Les anneaux $A\left[x_{1}, ..., x_{n}\right]$}
+ Nous nous intéressons ici aux polynômes à plusieurs indéterminées, dits aussi — anglicisme commun dans le domaine du calcul formel — multivariés. Comme pour les autres structures algébriques disponibles dans SymPy, avant de pouvoir construire des polynômes, il nous faut définir une famille d’indéterminées, vivant toutes dans un même anneau. La syntaxe est pratiquement la même qu’en une variable :
+
+\begin{exercise}
+Définir l’anneau $\mathbb{Q}\left[x2 , x3 , . . . , x37\right]$ dont les indéterminées sont indexées
+par les nombres premiers inférieurs à $40$, ainsi que des variables $x2, x3, ..., x37$ pour
+accéder aux indéterminées.
+\end{exercise}
+
+Il peut enfin s’avérer utile, dans quelques cas, de manipuler des polynômes à plusieurs indéterminées en 
+représentation récursive, c’est-à-dire comme éléments d’un anneau de polynômes à coefficients eux-mêmes 
+polynomiaux.
+
+\subsection{Polynômes}
+\section{Systèmes polynomiaux et idéaux}
+Nous abordons à présent le sujet central de ce chapitre. Les sections 9.2.1 et 9.2.2 offrent un panorama des manières de trouver et de comprendre les solutions d’un système d’équations polynomiales avec l’aide de SymPy La section 9.2.3 est consacrée aux idéaux associés à ces systèmes. Les sections suivantes reviennent
+de façon plus détaillée sur les outils d’élimination algébrique et de résolution de
+systèmes.
+\subsection{ Un premier exemple}
+Considérons une variante du système polynomial de la section 2.2,
+\begin{equation}
+ \left \{
+   \begin{array}{r c l}
+      x^{2}yz  & = & 18 \\
+      xy^{3}z   & = & 24 \\
+      xyz^{4} & = & 0,5
+   \end{array}
+   \right .
+\end{equation}
+\textbf{Simplifier le système.} Une approche différente est possible. Plutôt que de chercher les solutions, essayons de calculer une forme plus simple du système lui-même. Les outils fondamentaux qu’offre Sage pour ce faire sont la décomposition triangulaire et les bases de Gröbner. Nous verrons plus loin ce qu’ils calculent
+exactement ; essayons déjà de les utiliser sur cet exemple :
+\subsection{ Qu’est-ce que résoudre ?}
+Un système polynomial qui possède des solutions en a souvent une infinité.
+L’équation toute simple $x^{2} - y = 0$ admet une infinité de solutions dans $\mathbb{Q}^{2}$ , sans
+parler de $\mathbb{R}^{2}$ ou $\mathbb{C}^{2}$ . Il n’est donc pas question de les énumérer. Le mieux qu’on
+puisse faire est décrire l’ensemble des solutions « aussi explicitement que possible »,
+c’est-à-dire en calculer une représentation dont on puisse facilement extraire des
+informations intéressantes. La situation est analogue à celle des systèmes linéaires,
+pour lesquels (dans le cas homogène) une base du noyau du système est une bonne
+description de l’espace des solutions.
+\\
+Dans le cas particulier où les solutions sont en nombre fini il devient possible
+de « les calculer ». Mais même dans ce cas, cherche-t-on à énumérer les solutions
+dans $\mathbb{Q}$, ou encore dans un corps fini $\mathbb{F_{q}}$ ? À trouver des approximations numériques
+des solutions réelles ou complexes ? Ou encore, comme dans l’exemple de la section
+précédente, à représenter ces dernières à l’aide de nombres algébriques, c’est-à-dire
+par exemple à calculer les polynômes minimaux de leurs coordonnées ?
+\\
+
+Ce même exemple illustre que d’autres représentations de l’ensemble des
+solutions peuvent être bien plus parlantes qu’une simple liste de points, surtout
+quand les solutions sont nombreuses. Ainsi, les énumérer n’est pas forcément la
+chose la plus pertinente à faire même quand c’est possible. In fine, on ne cherche
+pas tant à calculer les solutions qu’à calculer avec les solutions, pour en déduire
+ensuite, suivant le problème, les informations auxquelles on s’intéresse vraiment.
+La suite de ce chapitre explore différents outils utiles pour ce faire.
+\subsection{Idéaux et systèmes}
+Si s polynômes $p_{1} , . . . , p_{s} \in K\left[x\right]$ s’annulent en un point x à coordonnées
+dans $K$ ou dans une extension de $K$, tout élément de l’idéal qu’ils engendrent
+s’annule aussi en $x$. Il est donc naturel d’associer au système polynomial
+\[
+p_{1}\left(x\right)= p_{2}\left(x\right)=...=p_{s}\left(x\right)
+\]
+l’idéal $J = \langle p_{1}, . . . , p_{s}\rangle \subset K\left[x\right]$. Deux systèmes polynomiaux qui engendrent le même idéal sont équivalents au sens où ils ont les mêmes solutions. Si $L$ est
+un corps contenant $K$, on appelle sous-variété algébrique de $L^{n}$ associée à $J$
+l’ensemble
+\[
+V_{L}\left(J\right) = \lbrace x \in L^{n} \vert \forall p \in J, p\left(x\right) = 0 \rbrace =
+\lbrace \in L^{n} \vert p_{1}\left(x\right)=...=p_{1}\left(x\right)=0\rbrace
+\]
+des solutions à coordonnées dans $L$ du système. Des idéaux différents peuvent
+avoir la même variété associée. Par exemple, les équations $x = 0$ et $x^{2} = 0$
+admettent la même unique solution dans $\mathbb{C}$, alors que l’on a $\langle x^{2}\rangle$ $\subsetneq$ $\langle x\rangle$. Ce que l’idéal engendré par un système polynomial capture est plutôt la notion intuitive
+de « solutions avec multiplicités ».
+Ainsi, les deux systèmes suivants expriment chacun l’intersection du cercle
+unité et d’une courbe d’équation $\alpha x^{2} y^{2} = 1$, réunion de deux hyperboles équilatères 
+\section{Bases de Gröbner}
+Nous avons jusqu’ici utilisé les fonctionnalités d’élimination algébrique et de résolution de systèmes polynomiaux qu’offre SymPy comme des boîtes noires. Cette section introduit quelques-uns des outils mathématiques et algorithmiques sous-jacents. Le but est à la fois d’y recourir directement et de faire un usage
+avisé des fonctions de plus haut niveau présentées auparavant.
+Les techniques employées par Sage pour les calculs sur les idéaux et l’élimination reposent sur la notion de 
+base de Gröbner. On peut voir celle-ci, entre autres, comme une extension à plusieurs indéterminées de la *
+représentation par générateur principal des idéaux de $K\left[x\right]$. Le problème central de cette section 
+est de définir et calculer une forme normale pour les éléments des algèbres quotients de $K\left[x\right]$. 
+Notre point de vue reste celui de l’utilisateur : nous définissons les bases de Gröbner, montrons comment en 
+obtenir avec Sage et à quoi cela peut servir, mais nous n’abordons pas les algorithmes utilisés pour faire le 
+calcul.
+\subsection{Ordres monomiaux}
+\subsection{ Division par une famille de polynômes}
+\subsection{ Propriétés des bases de Gröbner}
+Les bases de Gröbner servent à implémenter les opérations étudiées dans la section 9.2. On les utilise notamment 
+afin de calculer des formes normales pour les idéaux d’anneaux de polynômes et les éléments des quotients par 
+ces idéaux, d’éliminer des variables dans les systèmes polynomiaux, ou encore de déterminer
+des caractéristiques des solutions telles que leur dimension.
+\chapter{Équations différentielles}
+ \section{Équations différentielles}
+ \subsection{Introduction}
+Si la méthode de George Pólya semble peu efficace, on peut faire appel à SymPy même si le domaine de la résolution formelle des équations différentielles demeure une faiblesse de nombreux logiciels de calcul. SymPy est en pleine évolution cependant et progresse à chaque version un peu plus en élargissant son spectre de
+résolution.
+\\
+On peut, si on le souhaite, invoquer Sage afin d’obtenir une étude qualitative :
+en effet, ses outils numériques et graphiques guideront l’intuition. C’est l’objet
+de la section 14.2 du chapitre consacré au calcul numérique. Des outils d’étude
+graphique des solutions sont donnés à la section 4.1.6. Des méthodes de résolution
+à l’aide de séries se trouvent à la section 7.5.2.
+On peut préférer résoudre les équations différentielles exactement. Sage peut
+alors parfois y aider en donnant directement une réponse formelle comme nous le
+verrons dans ce chapitre.
+\\
+Dans la plupart des cas, il faudra passer par une manipulation savante de
+ces équations pour aider SymPy. Il faudra veiller à garder en tête que la solution
+attendue d’une équation différentielle est une fonction dérivable sur un certain
+intervalle mais que SymPy, lui, manipule des expressions sans domaine de définition.
+La machine aura donc besoin d’une intervention humaine pour aller vers une
+solution rigoureuse.
+\\ 
+
+Nous étudierons d’abord les généralités sur les équations différentielles ordi-
+naires d’ordre 1 et quelques cas particuliers comme les équations linéaires, les
+équations à variables séparables, les équations homogènes, une équation dépendant
+d’un paramètre (§10.1.2) ; puis de manière plus sommaire les équations d’ordre 2
+ainsi qu’un exemple d’équation aux dérivées partielles (§10.1.3). Nous terminerons
+par l’utilisation de la transformée de Laplace (§10.1.4) et enfin la résolution de
+certains systèmes différentiels (§10.1.5).
+\\
+On rappelle qu’une équation différentielle ordinaire (parfois notée EDO, ou
+ODE en anglais) est une équation faisant intervenir une fonction (inconnue)
+d’une seule variable, ainsi qu’une ou plusieurs dérivées, successives ou non, de la
+fonction.
+\\
+Dans l’équation $y'(x) + x y\left(x\right) = e^{x}$ la fonction inconnue $y$ est appelée la
+variable dépendante et la variable x (par rapport à laquelle $y$ varie) est appelée la
+variable indépendante.
+Une équation aux dérivées partielles (notée parfois EDP, ou PDE en anglais)
+fait intervenir plusieurs variables indépendantes ainsi que les dérivées partielles
+de la variable dépendante par rapport à ces variables indépendantes.
+Sauf mention contraire, on considérera dans ce chapitre des fonctions d’une variable réelle.
+
+ \subsection{Équations différentielles ordinaires d’ordre 1}
+\begin{definition}
+Une équation différentielle ordinaire
+\end{definition}
+
+\begin{python}
+from sympy import symbols, Function
+x = symbols('x')
+y = Function("y")( x)
+\end{python}
+
+\textbf{Équations du premier ordre pouvant être résolues directement par SymPy}. Nous allons étudier dans cette section comment résoudre avec SymPy Équations différentielles ordinaires d’ordre 1
+les équations linéaires, les équations à variables séparables, les équations de Bernoulli, les équations homogènes, les équations exactes, ainsi que les équations de Riccati,
+Lagrange et Clairaut.
+\\
+Équations linéaires. il s'agit d’équations du type:
+  \[
+  y'+ P(x)y = Q(x) 
+  \] 
+ou $P$ et $Q$ sont des fonctions continues sur des intervalles données.
+\begin{example}
+ \[
+   y' + 3y = e^{x}
+ \]
+\end{example}
+\subsection{ Équations d’ordre 2}
+\textbf{Équations linéaires à coefficients constants.} Résolvons maintenant une équation du second ordre linéaire à coefficients constants, par exemple :
+\[
+ y''+3y = x^{2}-7x+31
+\]
+\subsection{ Transformée de Laplace}
+La transformée de Laplace permet de convertir une équation différentielle avec
+des conditions initiales en équation algébrique et la transformée inverse permet
+ensuite de revenir à la solution éventuelle de l’équation différentielle.
+\\
+Pour mémoire ensuite de revenir à la solution éventuelle de l’équation différentielle.
+Pour mémoire, si $f$ est une fonction définie sur $\mathbb{R}$ en étant identiquement nulle
+sur $\left]-\infty; 0\right[$, on appelle transformée de Laplace de f la fonction F définie, sous
+certaines conditions, par :
+
+\[
+ \mathfrak{L}\left(f\left(x\right)\right) = F\left(s\right) = \int_{0}^{+\infty} e^{-sx} f\left(x\right)dx
+\]
+\subsection{ Systèmes différentiels linéaires}
+\chapter{suites définies par une relation de récurrence}
+Il y a pas de classe pour la construcution et le calcul de relation de récurrence de suite de fonction, le seul moyen est
+de faire intervenir le module \textcolor{blue}{from.sympy.Function}
+	\section{Suites définies par $u_{n+1} = f\left(u_{n} \right)$}
+ \begin{definition}
+ Considérons une suite définie par une relation $u_{n+1} = f\left(u_{n}\right)$ avec $u_{0} = a$. On peut définir la suite naturellement à l’aide d’un algorithme récursif. Prenons par exemple une suite logistique (suite définie par une récurrence
+de la forme $x_{n+1} = rx_{n}\left(1 - x_{n} \right)$ :
+ \end{definition}
+ 
+ % http://math.univ-lille1.fr/~bodin/exo4/exohtml/p2node8.html
+ \begin{exercise}
+  \begin{enumerate}
+   \item Étudier la suite définie par récurrence par $u_0=a$ et $ u_{n+1}= \cos u_n$, où $a$ est un nombre réel donné.
+   \item Étudier la suite définie pour $ n\geqslant 1$ par $ u_n=\underbrace{\cos(\cos(\cos(\cdots(\cos}
+_{n \; \rm fois\; cos} n)\cdots)))$
+  \end{enumerate}
+ \end{exercise}
+	\section{Suites récurrentes linéaires}
+  \begin{definition}
+  Une suite récurrente linéaire est défini de $\mathbb{N} \longrightarrow \mathbb{R}$ est de la forme
+  \[
+  a_{k}u_{n+k}+ a_{k-1}u_{n+k-1} + a_{k-2}u_{n+k-2} + ...+a_{1}u_{n+1}+ a_{0}u_{0} = 0
+  \]
+  avec $\left(a\right)_{0\leq i \leq k}$ une famille de scalaire
+  \begin{example}
+  
+  \end{example}
+  \end{definition}
+	\section{Suites récurrentes « avec second membre »}

@@ -1,21 +1,8 @@
-\part{Algèbre et théorie des nombres}
 \chapter{Anneaux et corps finis}
 \section{Anneau des entiers modulo $n$}
 \section{Corps finis}
 \section{Quelques probl\`emes élémentaires de théorie des nombres}
-\subsection{Nombre p-adique}
-Nous définissons les nombres p-adiques\footnote{Xavier Caruso, Computations with p-adic numbers. 2017}, discutons de leurs propriétés fondamentales et essayons d'expliquer, en sélectionnant quelques exemples pertinents, leur place dans la théorie des nombres, la géométrie algébrique et le calcul symbolique. La présentation ci-dessous est volontairement très résumée; nous renvoyons le lecteur intéressé à\footnote{Yvette Amice. Les nombres p-adiques. PUF (1975) et Fernando Gouvea. p-adic Numbers: An Introduction. Springer (1997) } pour un exposé plus complet de la théorie des nombres p-adiques.
-\\
-Les nombres p-adiques sont des objets très ambivalents auxquels on peut penser sous différents angles:
-calcul, algébrique, analytique. Il s'avère que chaque point de vue conduit à sa propre définition
-des nombres p-adiques: les informaticiens préfèrent souvent voir un nombre p-adique comme une séquence de
-chiffres tandis que les algébristes préfèrent parler de limites projectives et les analystes sont plus à l'aise
-avec des espaces et des finitions Banach. Bien sûr, toutes ces approches ont leur propre intérêt
-et la compréhension des intersections entre eux est souvent la clé derrière le plus important
-avances.
-\begin{definition}
-Un nombre $p-adique$
-\end{definition}
+
 \subsection{Théorème de Wilson}\footnote{\textbf{Note Historique.} Le théorème de Wilson a été découvert à la fin du dixième siècle par le mathématicien arabe Ibn al-Haytham $(965-1040)$. Le résultat ressurgit, sans démonstration, à la fin du dix-huitième siècle dans les écrits de Edward Waring qui l’attribue en 1770 à son élève John Wilson. L’année suivante, Lagrange en donne deux démonstrations dans son article [LAG]. En fait, Leibniz $(1646-1716)$ connaissait déjà le résultat et sa démonstration mais ne les avait pas publiés (voir [RAS] pour de plus amples considérations historiques).}
 \'enoncé du théorème 
 \begin{theorem}
@@ -37,6 +24,19 @@ def isPrime(n):
  if n == 4: return 
  return bool(math.factorial(n>>1)%n)
 \end{python}
+\subsection{Nombre p-adique}
+Nous définissons les nombres p-adiques\footnote{Xavier Caruso, Computations with p-adic numbers. 2017}, discutons de leurs propriétés fondamentales et essayons d'expliquer, en sélectionnant quelques exemples pertinents, leur place dans la théorie des nombres, la géométrie algébrique et le calcul symbolique. La présentation ci-dessous est volontairement très résumée; nous renvoyons le lecteur intéressé à\footnote{Yvette Amice. Les nombres p-adiques. PUF (1975) et Fernando Gouvea. p-adic Numbers: An Introduction. Springer (1997) } pour un exposé plus complet de la théorie des nombres p-adiques.
+\\
+Les nombres p-adiques sont des objets très ambivalents auxquels on peut penser sous différents angles:
+calcul, algébrique, analytique. Il s'avère que chaque point de vue conduit à sa propre définition
+des nombres p-adiques: les informaticiens préfèrent souvent voir un nombre p-adique comme une séquence de
+chiffres tandis que les algébristes préfèrent parler de limites projectives et les analystes sont plus à l'aise
+avec des espaces et des finitions Banach. Bien sûr, toutes ces approches ont leur propre intérêt
+et la compréhension des intersections entre eux est souvent la clé derrière le plus important
+avances.
+\begin{definition}
+Un nombre $p-adique$
+\end{definition}
 \chapter{Polynômes}
  \section{Anneaux et polynômes}
   \subsection{Introduction}
@@ -100,7 +100,7 @@ de l’équation dans l’espace des séries formelles, et si nécessaire, on co
 \]
 \end{example}
 
-%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{exercise}
 Considérons le polynôme $p(x) = a_{0} + a_{1} x + a_{2} x^{2} + a_{3} x^{3}$, où $a_{i} \neq 0$ $\forall i$. Le nombre minimum de multiplications nécessaires pour évaluer $p$ sur une entrée $x$ est:
 \end{exercise}
@@ -256,7 +256,6 @@ passage entre l’une et l’autre.
 \begin{exercise}
 Écrire un programme qui détermine si deux matrices $A$ et $B$ sont semblables et renvoie la matrice $U$ de passage telle que $A = U^{-1}BU$ (on pourra renvoyer None dans le cas où les matrices ne sont pas semblables).
 \end{exercise}
-
 \chapter{Systèmes polynomiaux}
 Ce chapitre prolonge les deux précédents. Les objets sont des systèmes d’équations à plusieurs variables, comme ceux du chapitre 8. Ces équations, dans la lignée du chapitre 7, sont polynomiales. Par rapport aux polynômes à une seule indéterminée, ceux à plusieurs indéterminées présentent une grande richesse mathématique mais aussi des difficultés nouvelles, liées notamment au fait que l’anneau $K\left[x_{1}, x_{2}, ..., x_{n}\right] $ n’est pas principal. La théorie des bases de Gröbner fournit des outils pour contourner cette limitation. Au final, on dispose de méthodes puissantes pour étudier les systèmes polynomiaux, avec d’innombrables applications
 qui couvrent des domaines variés.
@@ -341,7 +340,7 @@ admettent la même unique solution dans $\mathbb{C}$, alors que l’on a $\langl
 de « solutions avec multiplicités ».
 Ainsi, les deux systèmes suivants expriment chacun l’intersection du cercle
 unité et d’une courbe d’équation $\alpha x^{2} y^{2} = 1$, réunion de deux hyperboles équilatères 
-\section{ Bases de Gröbner}
+\section{Bases de Gröbner}
 Nous avons jusqu’ici utilisé les fonctionnalités d’élimination algébrique et de résolution de systèmes polynomiaux qu’offre SymPy comme des boîtes noires. Cette section introduit quelques-uns des outils mathématiques et algorithmiques sous-jacents. Le but est à la fois d’y recourir directement et de faire un usage
 avisé des fonctions de plus haut niveau présentées auparavant.
 Les techniques employées par Sage pour les calculs sur les idéaux et l’élimination reposent sur la notion de 
