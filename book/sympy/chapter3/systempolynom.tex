@@ -1,0 +1,101 @@
+\chapter{Systèmes polynomiaux}
+Ce chapitre prolonge les deux précédents. Les objets sont des systèmes d’équations à plusieurs variables, comme ceux du chapitre 8. Ces équations, dans la lignée du chapitre 7, sont polynomiales. Par rapport aux polynômes à une seule indéterminée, ceux à plusieurs indéterminées présentent une grande richesse mathématique mais aussi des difficultés nouvelles, liées notamment au fait que l’anneau $K\left[x_{1}, x_{2}, ..., x_{n}\right] $ n’est pas principal. La théorie des bases de Gröbner fournit des outils pour contourner cette limitation. Au final, on dispose de méthodes puissantes pour étudier les systèmes polynomiaux, avec d’innombrables applications
+qui couvrent des domaines variés.
+\\
+
+Une bonne partie du chapitre ne présuppose que des connaissances de base sur les polynômes à plusieurs indéterminées. Certains passages sont cependant du niveau d’un cours d’algèbre commutative de L3 ou M1. Pour une introduction moins allusive et en français à la théorie mathématique des systèmes polynomiaux, accessible au niveau licence, le lecteur pourra se reporter au chapitre [FSED09] de Faugère et Safey El Din. On trouvera un traitement plus avancé dans le livre de Elkadi et Mourrain [EM07]. Enfin, en anglais cette fois, le livre de Cox, Little et O’Shea [CLO07] est à la fois accessible et fort complet.
+
+\section{ Polynômes à plusieurs indéterminées}
+ \subsection{ Les anneaux $A\left[x_{1}, ..., x_{n}\right]$}
+ Nous nous intéressons ici aux polynômes à plusieurs indéterminées, dits aussi — anglicisme commun dans le domaine du calcul formel — multivariés. Comme pour les autres structures algébriques disponibles dans SymPy, avant de pouvoir construire des polynômes, il nous faut définir une famille d’indéterminées, vivant toutes dans un même anneau. La syntaxe est pratiquement la même qu’en une variable :
+
+\begin{exercise}
+Définir l’anneau $\mathbb{Q}\left[x2 , x3 , . . . , x37\right]$ dont les indéterminées sont indexées
+par les nombres premiers inférieurs à $40$, ainsi que des variables $x2, x3, ..., x37$ pour
+accéder aux indéterminées.
+\end{exercise}
+
+Il peut enfin s’avérer utile, dans quelques cas, de manipuler des polynômes à plusieurs indéterminées en 
+représentation récursive, c’est-à-dire comme éléments d’un anneau de polynômes à coefficients eux-mêmes 
+polynomiaux.
+
+\subsection{Polynômes}
+\section{Systèmes polynomiaux et idéaux}
+Nous abordons à présent le sujet central de ce chapitre. Les sections 9.2.1 et 9.2.2 offrent un panorama des manières de trouver et de comprendre les solutions d’un système d’équations polynomiales avec l’aide de SymPy La section 9.2.3 est consacrée aux idéaux associés à ces systèmes. Les sections suivantes reviennent
+de façon plus détaillée sur les outils d’élimination algébrique et de résolution de
+systèmes.
+\subsection{ Un premier exemple}
+Considérons une variante du système polynomial de la section 2.2,
+\begin{equation}
+ \left \{
+   \begin{array}{r c l}
+      x^{2}yz  & = & 18 \\
+      xy^{3}z   & = & 24 \\
+      xyz^{4} & = & 0,5
+   \end{array}
+   \right .
+\end{equation}
+\textbf{Simplifier le système.} Une approche différente est possible. Plutôt que de chercher les solutions, essayons de calculer une forme plus simple du système lui-même. Les outils fondamentaux qu’offre Sage pour ce faire sont la décomposition triangulaire et les bases de Gröbner. Nous verrons plus loin ce qu’ils calculent
+exactement ; essayons déjà de les utiliser sur cet exemple :
+\subsection{ Qu’est-ce que résoudre ?}
+Un système polynomial qui possède des solutions en a souvent une infinité.
+L’équation toute simple $x^{2} - y = 0$ admet une infinité de solutions dans $\mathbb{Q}^{2}$ , sans
+parler de $\mathbb{R}^{2}$ ou $\mathbb{C}^{2}$ . Il n’est donc pas question de les énumérer. Le mieux qu’on
+puisse faire est décrire l’ensemble des solutions « aussi explicitement que possible »,
+c’est-à-dire en calculer une représentation dont on puisse facilement extraire des
+informations intéressantes. La situation est analogue à celle des systèmes linéaires,
+pour lesquels (dans le cas homogène) une base du noyau du système est une bonne
+description de l’espace des solutions.
+\\
+Dans le cas particulier où les solutions sont en nombre fini il devient possible
+de « les calculer ». Mais même dans ce cas, cherche-t-on à énumérer les solutions
+dans $\mathbb{Q}$, ou encore dans un corps fini $\mathbb{F_{q}}$ ? À trouver des approximations numériques
+des solutions réelles ou complexes ? Ou encore, comme dans l’exemple de la section
+précédente, à représenter ces dernières à l’aide de nombres algébriques, c’est-à-dire
+par exemple à calculer les polynômes minimaux de leurs coordonnées ?
+\\
+
+Ce même exemple illustre que d’autres représentations de l’ensemble des
+solutions peuvent être bien plus parlantes qu’une simple liste de points, surtout
+quand les solutions sont nombreuses. Ainsi, les énumérer n’est pas forcément la
+chose la plus pertinente à faire même quand c’est possible. In fine, on ne cherche
+pas tant à calculer les solutions qu’à calculer avec les solutions, pour en déduire
+ensuite, suivant le problème, les informations auxquelles on s’intéresse vraiment.
+La suite de ce chapitre explore différents outils utiles pour ce faire.
+\subsection{Idéaux et systèmes}
+Si s polynômes $p_{1} , . . . , p_{s} \in K\left[x\right]$ s’annulent en un point x à coordonnées
+dans $K$ ou dans une extension de $K$, tout élément de l’idéal qu’ils engendrent
+s’annule aussi en $x$. Il est donc naturel d’associer au système polynomial
+\[
+p_{1}\left(x\right)= p_{2}\left(x\right)=...=p_{s}\left(x\right)
+\]
+l’idéal $J = \langle p_{1}, . . . , p_{s}\rangle \subset K\left[x\right]$. Deux systèmes polynomiaux qui engendrent le même idéal sont équivalents au sens où ils ont les mêmes solutions. Si $L$ est
+un corps contenant $K$, on appelle sous-variété algébrique de $L^{n}$ associée à $J$
+l’ensemble
+\[
+V_{L}\left(J\right) = \lbrace x \in L^{n} \vert \forall p \in J, p\left(x\right) = 0 \rbrace =
+\lbrace \in L^{n} \vert p_{1}\left(x\right)=...=p_{1}\left(x\right)=0\rbrace
+\]
+des solutions à coordonnées dans $L$ du système. Des idéaux différents peuvent
+avoir la même variété associée. Par exemple, les équations $x = 0$ et $x^{2} = 0$
+admettent la même unique solution dans $\mathbb{C}$, alors que l’on a $\langle x^{2}\rangle$ $\subsetneq$ $\langle x\rangle$. Ce que l’idéal engendré par un système polynomial capture est plutôt la notion intuitive
+de « solutions avec multiplicités ».
+Ainsi, les deux systèmes suivants expriment chacun l’intersection du cercle
+unité et d’une courbe d’équation $\alpha x^{2} y^{2} = 1$, réunion de deux hyperboles équilatères 
+\section{ Bases de Gröbner}
+Nous avons jusqu’ici utilisé les fonctionnalités d’élimination algébrique et de résolution de systèmes polynomiaux qu’offre SymPy comme des boîtes noires. Cette section introduit quelques-uns des outils mathématiques et algorithmiques sous-jacents. Le but est à la fois d’y recourir directement et de faire un usage
+avisé des fonctions de plus haut niveau présentées auparavant.
+Les techniques employées par Sage pour les calculs sur les idéaux et l’élimination reposent sur la notion de 
+base de Gröbner. On peut voir celle-ci, entre autres, comme une extension à plusieurs indéterminées de la *
+représentation par générateur principal des idéaux de $K\left[x\right]$. Le problème central de cette section 
+est de définir et calculer une forme normale pour les éléments des algèbres quotients de $K\left[x\right]$. 
+Notre point de vue reste celui de l’utilisateur : nous définissons les bases de Gröbner, montrons comment en 
+obtenir avec Sage et à quoi cela peut servir, mais nous n’abordons pas les algorithmes utilisés pour faire le 
+calcul.
+\subsection{Ordres monomiaux}
+\subsection{ Division par une famille de polynômes}
+\subsection{ Propriétés des bases de Gröbner}
+Les bases de Gröbner servent à implémenter les opérations étudiées dans la section 9.2. On les utilise notamment 
+afin de calculer des formes normales pour les idéaux d’anneaux de polynômes et les éléments des quotients par 
+ces idéaux, d’éliminer des variables dans les systèmes polynomiaux, ou encore de déterminer
+des caractéristiques des solutions telles que leur dimension.

@@ -1,0 +1,57 @@
+\chapter{Transformation d'intégrale}
+ \section{Transformation de Fourier}
+ \begin{exercise}
+ \end{exercise}
+ \begin{exercise}
+ \end{exercise}
+ \begin{exercise}
+ \end{exercise}
+  \subsection{Transformation de Fourier inverse}
+  \begin{exercise}
+ \end{exercise}
+ \begin{exercise}
+ \end{exercise}
+ \section{Transformation de Laplace}
+ \begin{python}
+ \end{python}
+ \begin{exercise}
+ \end{exercise}
+ \section{Transformation de Mellin}
+ \begin{example}
+  La transformée d'une distribution de Dirac ${\displaystyle \delta (x-a)}$, avec $a > 0$, est une fonction exponentielle ${\displaystyle s\mapsto a^{s-1}}$.
+ \end{example}
+ \begin{python}
+ \end{python}
+ \begin{example}
+  La transformée de Mellin de la fonction ${\displaystyle f\,:\,x\mapsto \mathrm {H} (a-x)} {\displaystyle f\,:\,x\mapsto \mathrm {H} (a-x)}$, avec $a > 0$, est la fonction ${\displaystyle s\mapsto {\frac {a^{s}}{s}}} {\displaystyle s\mapsto {\frac {a^{s}}{s}}}$ sur le demi-plan $Re (s) > 0$
+(où $H$ est la fonction de Heaviside, $f(x) = 1$ si $0 < x < a et f (x) = 0 si x > a$).
+ \end{example}
+ \begin{python}
+ \end{python}
+ \begin{example}
+%   La transformée de Mellin de la fonction ${\frac {1}{\mathrm {e} ^{x}-1}}}$ est la fonction ${\displaystyle s\mapsto \Gamma (s)\zeta (s)}$ sur le demi-plan $Re (s) > 1$
+ \end{example}
+ \begin{python}
+ \end{python}
+ \subsection{Transformation de melin inverse}
+ \section{Transfomation de Henkel}
+ La transformée de Hankel (d'ordre zéro) est une transformée intégrale équivalente à une transformée de Fourier à deux dimensions avec un noyau intégral à symétrie radiale, appelée également transformation de Fourier-Bessel. Il est défini comme
+ \[
+ g \left(u, v \right)	= F_{r}\left[\left(r\right)\right]\left(u, v\right)
+ \]
+ \subsection{Transformation de Henkel inverse}
+ 
+\chapter{Équations non linéaires}\index{Équations non linéaires}
+Ce chapitre explique comment résoudre une équation non linéaire avec SymPy.
+Dans un premier temps on étudie les équations polynomiales et on montre les
+limitations de la recherche de solutions exactes. Ensuite on décrit le fonctionnement
+de quelques méthodes classiques de résolution numérique. Au passage on indique
+quels sont les algorithmes de résolution numérique implémentés dans SymPy.
+Qu'est ce que non-linéaire et qu'est ce que une \'equation alg\'ebrique
+
+Une \'equation alg\'ebrique est un polyn\^ome de la forme $P(x)$
+
+\begin{equation}
+\exp(-x)\sin(x) = \cos(x)
+\end{equation}
+\section{Équations algébriques}

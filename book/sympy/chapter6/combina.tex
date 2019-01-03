@@ -1,0 +1,17 @@
+\part{Combinatoire}
+
+Les sujets de ce chapitre sont du néanmoins axées sur des questions ou l'approche mathématique et 
+physique et demandé 
+
+\chapter{Permutations}\index{Permutations}
+Une permutation, également appelée "numéro d'agencement" ou "ordre", est un agencement des éléments d'une liste ordonnée dans un mappage un-à-un avec lui-même. La permutation d'un arrangement donné est donnée en indiquant les positions des éléments après le réarrangement. Par exemple, si on commençait par les éléments $\left[x, y, a, b\right]$ (dans cet ordre) et qu'ils étaient réordonnés sous la forme $\left[x, y, b, a\right]$, la permutation serait alors $\left[0, 1, 3, 2\right]$ . Notez que (dans SymPy) le premier élément est toujours désigné par $0$ et que la permutation utilise les indices des éléments dans l'ordre d'origine, et non les éléments ($a$, $b$, etc.) eux-mêmes.
+\chapter{Groupe symmetrique}
+
+ \begin{python}
+  from sympy.combinatorics.named_groups import SymmetricGroup
+  G = SymmetricGroup(4)
+  G.is_group
+  G.order()
+  list(G.generate_schreier_sims(af=True))
+ \end{python}
+\chapter{Groupe Abélien}

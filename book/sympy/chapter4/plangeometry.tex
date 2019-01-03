@@ -1,0 +1,74 @@
+\chapter{Géométrie plan}
+Le module \textcolor{red}{sympy.geometry} permet de créer des entités géométriques bidimensionnelles, telles que des lignes et des cercles, et de rechercher des informations sur ces entités. Cela peut inclure de demander l’aire d’une ellipse, de vérifier la colinéarité d’un ensemble de points ou de rechercher l’intersection de deux lignes. Le cas d'utilisation principal du module implique des entités avec des valeurs numériques, mais il est également possible d'utiliser des représentations symboliques.
+
+\section{Introduction}
+
+\begin{python}
+In [1]: from sympy import Point, Polygon, pi
+In [2]: p1, p2, p3, p4, p5 = [(0, 0), (1, 0), (5, 1), (0, 1), (3, 0)]
+In [3]: Polygon(p1, p2, p3, p4)
+Out[3]: Polygon(Point2D(0, 0), Point2D(1, 0), Point2D(5, 1), Point2D(0, 1))
+\end{python}
+
+\begin{exercise}{(Problème des 5 cercles)\footnote{Cette propriétaire, en apparence assez mystérieuse, s’inscrit dans un cadre bien plus général : à un nombre $n$ quelconque de droites du plan, on associe un point
+ou un cercle selon la parité de $n$. Tous ces résultats de géométrie classique sont d'us au géométrie anglais William Kingdon Clifford (voir [4] pour la preuve originale), et démontrés de manière accessible dans [1]. Ce problème est redevenu « `a la mode » récemment dans des circonstances assez particulières : il fut posée
+par le président chinois Yang Zemin `a un parterre D’éminents mathématiciens au cours du congrès international des mathématiciens (Pekin, août 2002). C’est ainsi que ce problème a obtenu une certaine célébrité : il est ainsi cité par Alain Connes dans le cadre du séminaire Poincaré (octobre 2002).}}
+
+On considère un pentagone étoilé $ABCDE$. Soient $S_{1}$, $S_{2}$, $S_{3}$, $S_{4}$ et $S_{5}$  les cercles circonscrits aux triangles définis par les « branches » du pentagone. Alors les points d’intersection
+de chacun de ces cercles avec le suivant sont cocycliques (on prend bien sur les points d’intersection autres que les sommets du pentagone intérieur). 
+\end{exercise}
+\begin{exercise}{(Fagnano's problem)}
+\end{exercise}
+\begin{exercise}{(Sur l’impossibilité de )}
+\end{exercise}
+
+\begin{exercise}{(GENERALIZED POPOVICIU’S PROBLEM\footnote{YU.G. NIKONOROV, YU.V. NIKONOROVA. GENERALIZED POPOVICIU’S PROBLEM})}
+\end{exercise}
+\subsection{Polygones régulier}
+
+\begin{definition}
+\end{definition}
+
+\textbf{Construction à la règle et au compas.}
+\\
+\begin{example}
+$ABCDEFGH$ est un octogone régulier de centre $O$; calculer $\widehat{ABC}$ (angle entre deux cotés)
+\end{example}
+
+\begin{example}
+Sept points sont placés dans un disque (y compris sur le bord), de telle sorte que la
+distance entre deux d’entre eux est toujours au moins égale au rayon du cercle. Montrer que
+l’un d’eux est au centre du cercle
+\end{example}
+
+\textbf{Problème isopérimétrique\footnote{ABSOS ALI SHAIKH AND CHANDAN KUMAR MONDAL, A NOTE ON THE ISOPERIMETRIC INEQUALITY IN THE PLANE.}.}
+\\
+\begin{theorem}
+If $\gamma$ be a simple closed curve in the plane with length $L$ and bounds a region of area $A$ then
+\[
+L^{2} \geq 4 \pi A
+\]
+where the equality holds if and only if $\gamma$ is a circle.
+\end{theorem}
+
+\begin{example}{(ISOPERIMETRIC INEQUALITY)}
+\end{example}
+
+\begin{exercise}
+Soit $E$ un ensemble de $n \geq 3$ points du plan. On suppose que si $A$ et $B \neq E$, la médiatrice
+de $\left[AB\right]$ est un axe de symétrie de $E$. Montrer que $E$ est un polygone régulier.
+\end{exercise}
+
+\begin{exercise}
+Il est possible de placer trois polygones réguliers (convexes) dans le plan pour qu'ils s'agencent parfaitement autour d'un sommet commun.
+\end{exercise}
+
+\begin{exercise}{(Intersection de cordes)}
+On place n points sur un cercle et l’on trace toutes les cordes reliant ces deux points. On
+suppose en outre que les cordes sont en position générale, c’est-à-dire que trois cordes ne
+sont jamais concourantes. Combien de points d’intersection y aura-t-il à l’intérieur du disque ?
+\end{exercise}
+
+\begin{exercise}{(Tétraèdre et octaèdre)}
+Quel est le rapport entre le volume d'un octaèdre régulier et celui d'un tétraèdre régulier de même côté ?
+\end{exercise}

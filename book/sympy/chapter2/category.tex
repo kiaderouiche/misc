@@ -1,0 +1,63 @@
+\chapter{Théorie des catégories}
+La théorie des catégories occupe désormais une place centrale dans les mathématiques pures et appliquées,  
+l'informatique théorique, et la physique mathématique. En gros, il s’agit d’une 
+théorie mathématique générale des structures et des systèmes de structures. Comme la théorie des catégories 
+est en cours d'évolution. Il s'agit d'un langage puissant, ou d’un cadre conceptuel, qui nous permet de voir les composants universels d’une famille de structures d’un type donné et la manière dont des structures de types différents sont interdépendantes.  La théorie des catégories est une alternative à la théorie des ensembles en tant que fondement des mathématiques. Elle soulève de nombreuses questions concernant l'ontologie mathématique et l'épistémologie. Dans le langage des catégories tout commence avec la relation des objets entre-eux à travers des flèches ou morphismes. Il existe une pycategories\footnote{\href{https://pypi.org/project/pycategories/}{pycategories}} bibliothèque Python pour la théorie des catégories, différence avec SymPy
+\\
+
+Application à l'informatique.
+\\
+
+Pour commencer nous définissions des objets et des flèches qui met en relation avec ces objets 
+\section{Note historique}
+Les catégories\footnote{https://prezi.com/chlftwema-yy/intro-a-la-theorie-des-categories} sont utilisées dans la plupart des branches mathématiques et dans certains secteurs de l'informatique théorique et en mathématiques de la physique. Elles forment une notion unificatrice. Cette théorie a été mise en place par Samuel Eilenberg et Saunders Mac Lane en 1942-1945, en lien avec la topologie algébrique, et propagée dans les années 1960-1970 en France par Alexandre Grothendieck, qui en fit une étude systématique. À la suite des travaux de William Lawvere, la théorie des catégories est utilisée depuis 1969 pour définir la logique et la théorie des ensembles ; la théorie des catégories peut donc, comme la théorie des ensembles ou la théorie des types, avec laquelle elle a des similarités, être considérée comme fondement des mathématiques. Une élaboration fine est développé avec l'ajout de la théorie d'homotopie pour en donnée de la théorie des types homotopiques qui sera pas traité dans ce chapitre  ni d'une catégorie élaboré tel-que: 2-catégorie ou $\infty$-catégorie
+\section{Bref aperçu}
+\begin{definition}
+AA
+\end{definition}
+
+\begin{python}
+from sympy.categories import Object, NamedMorphism
+from sympy import init_printing(pretty_print=True)
+A = Object("A")
+B = Object("B")
+f = NamedMorphism(A, B, "f")
+\end{python}
+
+\begin{example}(Produit cartésien)
+Comment définir le produit cartésien $A \times B = \left\lbrace \left( a, b\right)  \vert a \in A \wedge b \in B\right\rbrace$ sans faire intervenir $\in$, en considérant uniquement des transformations(fonctions) entre objects(ensembles)?.
+\begin{itemize}
+ \item premier projection: $\pi_{1}: A \times B \rightarrow A$
+ \item deuxième projection: $\pi_{2}: A \times B \rightarrow B$
+ \item la structure $\left(A \times B,\pi_{1},\pi_{2}\right) $ est optimale
+ \item quelques soient $f: C \rightarrow A$ et $g: C \rightarrow B$ on peut construire 
+ $\langle f, g \rangle: C \rightarrow A \times B$ définie par et $\langle f, g \rangle\left(x\right)=\left(f\left(x\right),g\left(x\right)\right)$
+ \\
+ 
+\begin{tikzcd}[column sep=small]
+X \arrow{rr}{f} \arrow[swap]{dr}{h}& &Y \arrow{dl}{g}\\
+& V & 
+\end{tikzcd}
+\end{itemize}
+Le code python correspondant.
+\begin{python}
+from sympy.categories import Object, NamedMorphism
+from sympy import init_printing(pretty_print=True)
+A = Object("A")
+B = Object("B")
+\end{python}
+\end{example}
+\subsection{Quels applications pour l'informatiques}
+“This paper tries to explain why and how category theory is useful in
+computing science, by guiving guidelines for applying seven basic categorical
+concepts : category, functor, natural transformation, limit, adjoint, colimit and
+comma category. Somes examples, intuition, and references are given for
+each concept, but completeness is not attempted.”
+\begin{itemize}
+  \item théorie des graphes (catégorie $\approx$ algèbre des chemins)
+  \item théorie des automates (systèmes et comportement, bisimulation)
+  \item théorie des types (polymorphisme)
+  \item programmation fonctionnelle (modèles du $\lambda$-calcul, effets)
+ \item substitutions de variables et unification
+  \item systèmes de réécriture
+\end{itemize}

@@ -1,0 +1,117 @@
+\chapter{Équations différentielles}
+ \section{Équations différentielles}
+ \subsection{Introduction}
+Si la méthode de George Pólya semble peu efficace, on peut faire appel à SymPy même si le domaine de la résolution formelle des équations différentielles demeure une faiblesse de nombreux logiciels de calcul. SymPy est en pleine évolution cependant et progresse à chaque version un peu plus en élargissant son spectre de
+résolution.
+\\
+On peut, si on le souhaite, invoquer Sage afin d’obtenir une étude qualitative :
+en effet, ses outils numériques et graphiques guideront l’intuition. C’est l’objet
+de la section 14.2 du chapitre consacré au calcul numérique. Des outils d’étude
+graphique des solutions sont donnés à la section 4.1.6. Des méthodes de résolution
+à l’aide de séries se trouvent à la section 7.5.2.
+On peut préférer résoudre les équations différentielles exactement. Sage peut
+alors parfois y aider en donnant directement une réponse formelle comme nous le
+verrons dans ce chapitre.
+\\
+Dans la plupart des cas, il faudra passer par une manipulation savante de
+ces équations pour aider SymPy. Il faudra veiller à garder en tête que la solution
+attendue d’une équation différentielle est une fonction dérivable sur un certain
+intervalle mais que SymPy, lui, manipule des expressions sans domaine de définition.
+La machine aura donc besoin d’une intervention humaine pour aller vers une
+solution rigoureuse.
+\\ 
+
+Nous étudierons d’abord les généralités sur les équations différentielles ordi-
+naires d’ordre 1 et quelques cas particuliers comme les équations linéaires, les
+équations à variables séparables, les équations homogènes, une équation dépendant
+d’un paramètre (§10.1.2) ; puis de manière plus sommaire les équations d’ordre 2
+ainsi qu’un exemple d’équation aux dérivées partielles (§10.1.3). Nous terminerons
+par l’utilisation de la transformée de Laplace (§10.1.4) et enfin la résolution de
+certains systèmes différentiels (§10.1.5).
+\\
+On rappelle qu’une équation différentielle ordinaire (parfois notée EDO, ou
+ODE en anglais) est une équation faisant intervenir une fonction (inconnue)
+d’une seule variable, ainsi qu’une ou plusieurs dérivées, successives ou non, de la
+fonction.
+\\
+Dans l’équation $y'(x) + x y\left(x\right) = e^{x}$ la fonction inconnue $y$ est appelée la
+variable dépendante et la variable x (par rapport à laquelle $y$ varie) est appelée la
+variable indépendante.
+Une équation aux dérivées partielles (notée parfois EDP, ou PDE en anglais)
+fait intervenir plusieurs variables indépendantes ainsi que les dérivées partielles
+de la variable dépendante par rapport à ces variables indépendantes.
+Sauf mention contraire, on considérera dans ce chapitre des fonctions d’une variable réelle.
+
+\subsection{Équations différentielles ordinaires d’ordre 1}
+\begin{definition}
+Une équation différentielle ordinaire
+\end{definition}
+
+\begin{python}
+from sympy import symbols, Function
+x = symbols('x')
+y = Function("y")( x)
+\end{python}
+
+\textbf{Équations du premier ordre pouvant être résolues directement par SymPy}. Nous allons étudier dans cette section comment résoudre avec SymPy Équations différentielles ordinaires d’ordre 1
+les équations linéaires, les équations à variables séparables, les équations de Bernoulli, les équations homogènes, les équations exactes, ainsi que les équations de Riccati,
+Lagrange et Clairaut.
+\\
+Équations linéaires. il s'agit d’équations du type:
+  \[
+  y'+ P(x)y = Q(x) 
+  \] 
+ou $P$ et $Q$ sont des fonctions continues sur des intervalles données.
+\begin{example}
+ \[
+   y' + 3y = e^{x}
+ \]
+\end{example}
+\subsection{ Équations d’ordre 2}
+\textbf{Équations linéaires à coefficients constants.} Résolvons maintenant une équation du second ordre linéaire à coefficients constants, par exemple :
+\[
+ y''+3y = x^{2}-7x+31
+\]
+\subsection{Transformée de Laplace}
+La transformée de Laplace permet de convertir une équation différentielle avec
+des conditions initiales en équation algébrique et la transformée inverse permet
+ensuite de revenir à la solution éventuelle de l’équation différentielle.
+\\
+Pour mémoire ensuite de revenir à la solution éventuelle de l’équation différentielle.
+Pour mémoire, si $f$ est une fonction définie sur $\mathbb{R}$ en étant identiquement nulle
+sur $\left]-\infty; 0\right[$, on appelle transformée de Laplace de f la fonction F définie, sous
+certaines conditions, par :
+
+\[
+ \mathfrak{L}\left(f\left(x\right)\right) = F\left(s\right) = \int_{0}^{+\infty} e^{-sx} f\left(x\right)dx
+\]
+\subsection{ Systèmes différentiels linéaires}
+\chapter{suites définies par une relation de récurrence}
+Il y a pas de classe pour la construcution et le calcul de relation de récurrence de suite de fonction, le seul moyen est
+de faire intervenir le module \textcolor{blue}{from.sympy.Function}
+	\section{Suites définies par $u_{n+1} = f\left(u_{n} \right)$}
+ \begin{definition}
+ Considérons une suite définie par une relation $u_{n+1} = f\left(u_{n}\right)$ avec $u_{0} = a$. On peut définir la suite naturellement à l’aide d’un algorithme récursif. Prenons par exemple une suite logistique (suite définie par une récurrence
+de la forme $x_{n+1} = rx_{n}\left(1 - x_{n} \right)$ :
+ \end{definition}
+ 
+ % http://math.univ-lille1.fr/~bodin/exo4/exohtml/p2node8.html
+ \begin{exercise}
+  \begin{enumerate}
+   \item Étudier la suite définie par récurrence par $u_0=a$ et $ u_{n+1}= \cos u_n$, où $a$ est un nombre réel donné.
+   \item Étudier la suite définie pour $ n\geqslant 1$ par $ u_n=\underbrace{\cos(\cos(\cos(\cdots(\cos}
+_{n \; \rm fois\; cos} n)\cdots)))$
+  \end{enumerate}
+ \end{exercise}
+	\section{Suites récurrentes linéaires}
+  \begin{definition}
+  Une suite récurrente linéaire est défini de $\mathbb{N} \longrightarrow \mathbb{R}$ est de la forme
+  \[
+  a_{k}u_{n+k}+ a_{k-1}u_{n+k-1} + a_{k-2}u_{n+k-2} + ...+a_{1}u_{n+1}+ a_{0}u_{0} = 0
+  \]
+  avec $\left(a\right)_{0\leq i \leq k}$ une famille de scalaire
+  \begin{example}
+  
+  \end{example}
+  \end{definition}
+	\section{Suites récurrentes « avec second membre »}
