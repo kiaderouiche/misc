@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  3 JAN 2019 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  4 JAN 2019 01:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1319,8 +1319,8 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (./chapter4/plangeometry.aux) (./chapter4/diffgeometry.aux)
 (./chapter4/liegeometry.aux) (./chapter4/convgeometry.aux)
 (./chapter5/floatappro.aux) (./chapter5/numintgration.aux)
-(./chapter5/integrtransform.aux) (./chapter6/combina.aux)
-(./chapter7/physics.aux) (./annexe/optimization/cython.aux)
+(./chapter5/integrtransform.aux) (./chapter6/combina.aux) (./chapter7/chaos.aux
+) (./chapter7/quantum.aux) (./annexe/optimization/cython.aux)
 (./annexe/optimization/theano.aux))
 \openout1 = `main.aux'.
 
@@ -1466,7 +1466,7 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <35> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 47.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <35> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 47.
-<Pictures/esahubble.png, id=867, 614.295pt x 794.97pt>
+<Pictures/esahubble.png, id=847, 614.295pt x 794.97pt>
 File: Pictures/esahubble.png Graphic file (type png)
 <use Pictures/esahubble.png>
 Package pdftex.def Info: Pictures/esahubble.png  used on input line 57.
@@ -1475,7 +1475,7 @@ Package pdftex.def Info: Pictures/esahubble.png  used on input line 57.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Pictures/esahubble.png>]
  [2]
-<Pictures/head1.png, id=879, 1027.6794pt x 514.0806pt>
+<Pictures/head1.png, id=859, 1027.6794pt x 514.0806pt>
 File: Pictures/head1.png Graphic file (type png)
 <use Pictures/head1.png>
 Package pdftex.def Info: Pictures/head1.png  used on input line 69.
@@ -1555,18 +1555,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
  [6] [7]
-[8]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 418.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 418.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 418.
- [9])
+[8])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [10]
+ [9]
 \openout2 = `first/avant_propos.aux'.
 
  (./first/avant_propos.tex
@@ -1577,9 +1570,9 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
- [11
+ [10
 
-]) [12]
+]) [11]
 \openout2 = `first/firststep.aux'.
 
 
@@ -1600,25 +1593,26 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
- [13
+ [12
 
 
-]) [14]
+]) [13]
 \openout2 = `chapter1/basecalculs.aux'.
 
- (./chapter1/basecalculs.tex
+ (./chapter1/basecalculs.tex [14
+
+
+
+]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
- [15
-
-
-
-] [16]
+ [15]
+[16]
 Chapter 1.
 \c@ttl@toc@default=\count455
-<Pictures/head2.png, id=1383, 1027.6794pt x 514.0806pt>
+<Pictures/head2.png, id=1352, 1027.6794pt x 514.0806pt>
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 2.
@@ -1632,7 +1626,7 @@ Overfull \hbox (100.60786pt too wide) in paragraph at lines 37--38
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<Pictures/../Pictures/sympyGammaMain.png, id=1388, 1350.04375pt x 612.2875pt>
+<Pictures/../Pictures/sympyGammaMain.png, id=1358, 1350.04375pt x 612.2875pt>
 File: Pictures/../Pictures/sympyGammaMain.png Graphic file (type png)
 <use Pictures/../Pictures/sympyGammaMain.png>
 Package pdftex.def Info: Pictures/../Pictures/sympyGammaMain.png  used on input
@@ -1644,7 +1638,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
  []
 
 [19]
-<Pictures/../Pictures/sympyarch.png, id=1429, 336.50719pt x 321.45094pt>
+<Pictures/../Pictures/sympyarch.png, id=1399, 336.50719pt x 321.45094pt>
 File: Pictures/../Pictures/sympyarch.png Graphic file (type png)
 <use Pictures/../Pictures/sympyarch.png>
 Package pdftex.def Info: Pictures/../Pictures/sympyarch.png  used on input line
@@ -1775,6 +1769,10 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--7
 
@@ -1822,6 +1820,8 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
@@ -1889,7 +1889,7 @@ File: Pictures/head2.png Graphic file (type png)
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 [49]
-Overfull \hbox (4.986pt too wide) in paragraph at lines 70--71
+Overfull \hbox (4.986pt too wide) in paragraph at lines 69--70
 []\T1/ptm/m/n/10.95 (-20) La forme de Gram-Schmidt est une autre dé-com-po-si-t
 ion basée sur les trans-fo-ma-tions d'équivalence
  []
@@ -1899,19 +1899,21 @@ Underfull \vbox (badness 2142) has occurred while \output is active []
 
  [50]
 [51]
-Package mdframed Info: mdframed works in twoside mode on input line 116.
+Package mdframed Info: mdframed works in twoside mode on input line 129.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 116.
-Package mdframed Info: mdframed works in twoside mode on input line 127.
+(mdframed)              on input line 129.
+Package mdframed Info: mdframed works in twoside mode on input line 140.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 127.
+(mdframed)              on input line 140.
+Package mdframed Info: Not enough space on this page on input line 142.
  [52]
-Package mdframed Info: mdframed works in twoside mode on input line 150.
+Package mdframed Info: Not enough space on this page on input line 142.
+Package mdframed Info: mdframed works in twoside mode on input line 163.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 150.
+(mdframed)              on input line 163.
 ) [53]
 \openout2 = `chapter3/systempolynom.aux'.
 
@@ -2309,18 +2311,18 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 134.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/1_1.png, id=1882, 529.98pt x 469.755pt>
+<Pictures/1_1.png, id=1852, 529.98pt x 469.755pt>
 File: Pictures/1_1.png Graphic file (type png)
 <use Pictures/1_1.png>
 Package pdftex.def Info: Pictures/1_1.png  used on input line 136.
 (pdftex.def)             Requested size: 264.98933pt x 234.87692pt.
 [81 <./Pictures/1_1.png>]
-<Pictures/1_2.png, id=1891, 318.18875pt x 316.18124pt>
+<Pictures/1_2.png, id=1861, 318.18875pt x 316.18124pt>
 File: Pictures/1_2.png Graphic file (type png)
 <use Pictures/1_2.png>
 Package pdftex.def Info: Pictures/1_2.png  used on input line 166.
 (pdftex.def)             Requested size: 318.18796pt x 316.18047pt.
-<Pictures/1_3.png, id=1892, 326.21875pt x 165.61874pt>
+<Pictures/1_3.png, id=1862, 326.21875pt x 165.61874pt>
 File: Pictures/1_3.png Graphic file (type png)
 <use Pictures/1_3.png>
 Package pdftex.def Info: Pictures/1_3.png  used on input line 175.
@@ -2370,7 +2372,7 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/../Pictures/Figure_1.png, id=1935, 462.528pt x 346.896pt>
+<Pictures/../Pictures/Figure_1.png, id=1905, 462.528pt x 346.896pt>
 File: Pictures/../Pictures/Figure_1.png Graphic file (type png)
 <use Pictures/../Pictures/Figure_1.png>
 Package pdftex.def Info: Pictures/../Pictures/Figure_1.png  used on input line 
@@ -2466,89 +2468,62 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 17.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-) [103]
-\openout2 = `chapter7/physics.aux'.
-
- (./chapter7/physics.tex [104
+) [103] [104
 
 
+] [105] [106]
+\openout2 = `chapter7/chaos.aux'.
 
-] [105] [106] [107] [108
-
-]
+ (./chapter7/chaos.tex
 Chapter 27.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 6.
+Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[109] [110
+) [107
+
+
+]
+\openout2 = `chapter7/quantum.aux'.
+
+ (./chapter7/quantum.tex [108
+
+
 
 ]
 Chapter 28.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 15.
+Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[111] [112
+) [109] [110
 
-]
+
+] [111] [112]
 Chapter 29.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\phi' on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 17.
-
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 17.
+Package pdftex.def Info: Pictures/head2.png  used on input line 156.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
+[113
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 18.
+] [114
 
-) [113] [114
-
-
-] [115] [116]
+]
 Chapter 30.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 155.
+Package pdftex.def Info: Pictures/head2.png  used on input line 157.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[117
-
-] [118
+[115] [116
 
 ]
 Chapter 31.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 156.
+Package pdftex.def Info: Pictures/head2.png  used on input line 160.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[119] [120
-
-]
-Chapter 32.
-File: Pictures/head2.png Graphic file (type png)
-<use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 159.
-(pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[121]
+[117]
 \openout2 = `annexe/optimization/cython.aux'.
 
  (./annexe/optimization/cython.tex
@@ -2561,29 +2536,29 @@ Overfull \hbox (143.8083pt too wide) in paragraph at lines 27--29
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [122
+) [118
 
 ]
 \openout2 = `annexe/optimization/theano.aux'.
 
- (./annexe/optimization/theano.tex) [123
+ (./annexe/optimization/theano.tex) [119
 
 
-] [124
+] [120
 
 
 ]
-Chapter 33.
+Chapter 32.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
-Package pdftex.def Info: Pictures/head2.png  used on input line 168.
+Package pdftex.def Info: Pictures/head2.png  used on input line 169.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
-[125]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+[121]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
  (./main.aux (./first/avant_propos.aux) (./first/firststep.aux)
 (./chapter1/basecalculs.aux) (./chapter2/ensemble.aux) (./chapter2/category.aux
 ) (./chapter3/ringfinitefiled.aux) (./chapter3/polynomes.aux)
@@ -2592,23 +2567,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
 (./chapter4/plangeometry.aux) (./chapter4/diffgeometry.aux)
 (./chapter4/liegeometry.aux) (./chapter4/convgeometry.aux)
 (./chapter5/floatappro.aux) (./chapter5/numintgration.aux)
-(./chapter5/integrtransform.aux) (./chapter6/combina.aux)
-(./chapter7/physics.aux) (./annexe/optimization/cython.aux)
+(./chapter5/integrtransform.aux) (./chapter6/combina.aux) (./chapter7/chaos.aux
+) (./chapter7/quantum.aux) (./annexe/optimization/cython.aux)
 (./annexe/optimization/theano.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F9627DC345C17F877A2C96D34C567F7C;16101.
+(rerunfilecheck)             Checksum: 0845E12E10ACCD520DE0DB54F878D8A2;15739.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40917 strings out of 494409
- 761723 string characters out of 6173287
- 1357542 words of memory out of 5000000
- 42984 multiletter control sequences out of 15000+600000
- 685434 words of font info for 377 fonts, out of 8000000 for 9000
+ 40863 strings out of 494409
+ 760743 string characters out of 6173287
+ 1360030 words of memory out of 5000000
+ 42938 multiletter control sequences out of 15000+600000
+ 675154 words of font info for 353 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  58i,15n,82p,1188b,3480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -2627,10 +2602,10 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (125 pages, 13993300 bytes).
+Output written on main.pdf (121 pages, 13990303 bytes).
 PDF statistics:
- 2329 PDF objects out of 2487 (max. 8388607)
- 1946 compressed objects within 20 object streams
- 615 named destinations out of 1000 (max. 500000)
- 65258 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2280 PDF objects out of 2487 (max. 8388607)
+ 1906 compressed objects within 20 object streams
+ 606 named destinations out of 1000 (max. 500000)
+ 62146 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -64,18 +64,31 @@ propriétés caractéristiques des matrices représentant des endomorphismes,
 comme les valeurs propres, les espaces propres, les polynômes minimal et
 caractéristique, . . . La forme de Jordan ou la forme de Frobenius, selon les
 domaines de calcul, seront les formes normales pour ces transformations.
-
 \end{itemize}
 
 La forme de Gram-Schmidt est une autre décomposition basée sur les transfomations d’équivalence à gauche, transformant une matrice en un ensemble de vecteurs orthogonaux.
 
 \subsection{ Élimination de Gauss, forme échelonnée}
+
+\begin{flushleft}
 \textbf{Élimination de Gauss et équivalence à gauche.} L’élimination de Gauss est l’une des opérations fondamentales en algèbre linéaire car elle permet d’accéder à une représentation de la matrice à la fois plus adaptée au calcul, comme la résolution de systèmes, et révélant certaines de ses propriétés fondamentales,
 comme le rang, le déterminant, le profil de rang, etc. Les opérations de base pour l’élimination sont les opérations élémentaires sur les lignes :
+\end{flushleft}
 
+\begin{flushleft}
 \textbf{Élimination de Gauss-Jordan.} La transformation de Gauss-Jordan est similaire à celle de Gauss, en ajoutant à $G_{x,k}$ les transvections correspondant aux lignes d’indice $i < k$ ; cela revient à éliminer les coefficients d’une colonne au-dessus et au-dessous du pivot. Si de plus on divise chaque ligne par son pivot, on obtient alors une forme échelonnée dite réduite encore appelée forme de Gauss-Jordan. Pour toute classe d’équivalence de matrices, il existe une unique matrice sous cette forme ; il s’agit donc d’une forme normale.
+\end{flushleft}
 
-\textbf{Forme échelonnée dans les anneaux euclidiens.}
+\begin{flushleft}
+\textbf{Forme échelonnée dans les anneaux euclidiens.} Dans un anneau euclidien, les coefficients non nuls ne sont pas nécessairement inversibles, et l’élimination de Gauss consisterait donc à choisir le premier élément inversible de la colonne courante pour pivot. Ainsi certaines colonnes non nulles peuvent ne pas contenir
+de pivot et l’élimination n’est alors plus possible. Il est cependant toujours possible de définir une transformation unimodulaire éliminant le coefficient de tête d’une ligne avec celui d’une autre, grâce à
+l’algorithme d’Euclide étendu.
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{Facteurs invariants et forme normale de Smith.}
+\end{flushleft}
+
 \subsection{ Résolution de systèmes ; image et base du noyau}
 \subsection{Valeurs propres, forme de Jordan et transformations de similitude}
 Lorsque l’on interprète une matrice carrée comme un opérateur linéaire (un endomorphisme), elle n’en est que la représentation dans une base donnée. Tout changement de base correspond à une transformation de similitude 

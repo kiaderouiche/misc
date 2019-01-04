@@ -197,18 +197,13 @@
 \BOOKMARK [0][-]{chapter.26}{Groupe Ab\351lien}{part.6}% 197
 \BOOKMARK [-1][-]{part.7}{VII Physique}{}% 198
 \BOOKMARK [0][-]{chapter.27}{Chaos}{part.7}% 199
-\BOOKMARK [1][-]{section.27.1}{Pendule simple}{chapter.27}% 200
-\BOOKMARK [2][-]{subsection.27.1.1}{Pendule \340 deux bras}{section.27.1}% 201
-\BOOKMARK [2][-]{subsection.27.1.2}{Mouvements d\220un robot}{section.27.1}% 202
-\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 203
-\BOOKMARK [0][-]{chapter.29}{Le mod\350le 4}{part.7}% 204
-\BOOKMARK [1][-]{subsection.29.0.1}{LES DIAGRAMMES DE FEYNMAN}{chapter.29}% 205
-\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 206
-\BOOKMARK [0][-]{chapter.30}{Programmation Orient\351e Objet}{part.8}% 207
-\BOOKMARK [0][-]{chapter.31}{D\351corateurs}{part.8}% 208
-\BOOKMARK [0][-]{chapter.32}{Optimisation du code}{part.8}% 209
-\BOOKMARK [1][-]{subsection.32.0.1}{Cython}{chapter.32}% 210
-\BOOKMARK [2][-]{subsection.32.0.2}{Theano}{subsection.32.0.1}% 211
-\BOOKMARK [0][-]{chapter.33}{Interface graphique}{part.8}% 212
-\BOOKMARK [1][-]{section.33.1}{Bibliographie}{chapter.33}% 213
-\BOOKMARK [1][-]{section.33.2}{Index}{chapter.33}% 214
+\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 200
+\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 201
+\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 202
+\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 203
+\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 204
+\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 205
+\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 206
+\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 207
+\BOOKMARK [1][-]{section.32.1}{Bibliographie}{chapter.32}% 208
+\BOOKMARK [1][-]{section.32.2}{Index}{chapter.32}% 209
