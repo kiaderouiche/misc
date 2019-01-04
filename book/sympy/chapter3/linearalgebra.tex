@@ -10,7 +10,10 @@ De la même façon que pour les polynômes, les vecteurs et les matrices sont
 manipulés comme des objets algébriques appartenant à un espace. Si les coefficients
 appartiennent à un corps $K$, c’est un espace vectoriel sur $K$ ; s’ils appartiennent
 à un anneau, c’est un $K-module$ libre.
+\begin{flushright}
 \textbf{Groupes de matrices.} On poura par ailleur définir des sous-groupes de l'espace total des matrices. Ainsi le constructeur 
+\end{flushright}
+
 \subsection{ Construction des matrices et des vecteurs}
 Les matrices et les vecteurs peuvent naturellement être générés comme des éléments d’un espace en fournissant la liste des coefficients en arguments. Pour les matrices, ceux-ci seront lus par ligne :
 \subsection{ Manipulations de base et arithmétique sur les matrices}
@@ -146,21 +149,26 @@ Montrons qu’il existe toujours un vecteur u dont le polynôme minimal coïncid
     \item 
   \end{enumerate}
 \end{exercise}
+\begin{flushleft}
 \textbf{Facteurs invariants et invariants de similitude.}  Une propriété importante relie les invariants de similitude et les facteurs invariants vus dans la section  Les invariants de similitude d’une matrice  à coefficients dans
 \begin{theorem}
 Les invariants de similitude d’une matrice $A$ à coefficients dans un corps correspondent aux facteurs invariants de sa matrice caractéristique $xId - A$.
 \end{theorem}
+\end{flushleft}
+\begin{flushright}
 \textbf{Valeurs propres, vecteurs propres}. Si l’on décompose le polynôme minimal en facteurs irréductibles, 
 $\varphi_{1}$ = $\psi_{1}^{m_{1}}$, $\psi_{2}^{m_{2}}$, $\psi_{3}^{m_{3}}$,..., $\psi_{1}^{m_{s}}$ alors tous les facteurs invariants s’écrivent sous la forme.
-\\
+\end{flushright}
+\begin{flushright}
 \textbf{Forme de Jordan.} Lorsque le polynôme minimal est scindé mais ayant des
 facteurs avec des multiplicités supérieures à 1, la forme intermédiaire (8.3) n’est
 pas diagonale. On montre alors qu’il n’existe pas de transformation de similitude
 la rendant diagonale, la matrice initiale n’est donc pas diagonalisable. On peut
-en revanche la trigonaliser, c’est-à-dire la rendre triangulaire supérieure, telle que
+en revanche la trigonalisation, c’est-à-dire la rendre triangulaire supérieure, telle que
 les valeurs propres apparaissent sur la diagonale. Parmi les différentes matrices
 triangulaires possibles, la plus réduite de toutes est la forme normale de Jordan.
-\\
+\end{flushright}
+\begin{flushright}
 \textbf{Forme normale primaire.} Pour être complet, il faut mentionner une dernière
 forme normale qui généralise la forme de Jordan dans le cas quelconque où le
 polynôme minimal n’est pas scindé. Pour un polynôme irréductible $P$ de degré $k$,
@@ -169,7 +177,16 @@ $km x km$ vérifiant.
 \\
 unique à une permutation des blocs diagonaux près. L’unicité de ces formes normales permet en particulier de tester si deux matrices sont semblables, et par la même occasion de produire une matrice de
 passage entre l’une et l’autre.
-
 \begin{exercise}
 Écrire un programme qui détermine si deux matrices $A$ et $B$ sont semblables et renvoie la matrice $U$ de passage telle que $A = U^{-1}BU$ (on pourra renvoyer None dans le cas où les matrices ne sont pas semblables).
 \end{exercise}
+\end{flushright}
+\section{Forme quadratique}
+A vrai dire il n'a y pas de module pour manipuler les formes quadratiques dans SymPy, pour cela en va écrire
+des scripts qui font appelés à d'autres modules permettant de nous aidez à le faire.
+
+\begin{exercise}
+Soit $q$ une forme quadratique défini de $\R^2 \to \R$
+\end{exercise}
+
+

@@ -261,6 +261,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.2.3}Valeurs propres, forme de Jordan et transformations de similitude}{51}{subsection.10.2.3}% 
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.3}Forme quadratique}{53}{section.10.3}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {11}Syst\IeC {\`e}mes polynomiaux}{55}{chapter.11}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11.1} Polyn\IeC {\^o}mes \IeC {\`a} plusieurs ind\IeC {\'e}termin\IeC {\'e}es}{55}{section.11.1}% 
