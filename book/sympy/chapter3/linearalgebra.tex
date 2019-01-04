@@ -17,6 +17,7 @@ appartiennent à un corps $K$, c’est un espace vectoriel sur $K$ ; s’ils app
 \subsection{ Construction des matrices et des vecteurs}
 Les matrices et les vecteurs peuvent naturellement être générés comme des éléments d’un espace en fournissant la liste des coefficients en arguments. Pour les matrices, ceux-ci seront lus par ligne :
 \subsection{ Manipulations de base et arithmétique sur les matrices}
+\begin{flushright}
 \textbf{Indices et accès aux coefficients.} L'accès aux coefficients ainsi qu’à des
 sous-matrices extraites se fait de façon unifiée par l’opérateur crochet $A$ $\left[i, j\right]$,selon les 
 conventions usuelles de Python. Les indices de ligne $i$ et de colonne $j$ peuvent être des entiers (pour 
@@ -28,6 +29,8 @@ $k$. Enfin, les indices négatifs sont aussi valides, et permettent de parcourir
 fin. Ainsi $A$ $\left[-2,:\right]$ correspond à l’avant dernière ligne. L'accès à ces sous-matrices
 se fait aussi bien en lecture qu’en écriture. On peut par exemple modifier une colonne donnée de la façon 
 suivante :
+\end{flushright}
+
 \subsection{ Opérations de base sur les matrices}
 Les opérations arithmétiques sur les matrices se font avec les opérateurs usuels +,-,$\ast$,\^. L’inverse 
 d’une matrice $A$ peut s’écrire aussi bien $A^{-1}$ que $~A$. Lorsque $a$ est un scalaire et $A$ une matrice, 
@@ -123,6 +126,7 @@ Ces deux points de vue correspondent respectivement à l’approche algébrique 
 multiplicité algébrique, correspondant à l’ordre de la racine dans le polynôme caractéristique, de la multiplicité géométrique, correspondant à la dimension du sous-espace propre associé à la valeur propre. Pour les matrices diagonalisables, ces deux notions sont équivalentes. Dans le cas contraire, la multiplicité géométrique est toujours inférieure à la multiplicité algébrique. Le point de vue géométrique permet de décrire plus en détail la structure de la matrice. Par ailleurs, il donne des algorithmes beaucoup plus rapides pour le
 calcul des valeurs et espaces propres, et des polynômes caractéristique et minimal.
 \\
+\begin{flushright}
 \textbf{Espaces invariants cycliques, et forme normale de Frobenius.} Soit $A$ Soit une matrice $n x n$ sur un 
 corps $K$ et $u$ un vecteur de $K^{n}$. La famille de vecteurs $u$, $Au$, $A^{2}u$, ..., $A^{n}u$, appelée suite de 
 Krylov, est liée (comme famille de $n + 1$ vecteurs en dimension $n$). Soit $d$ tel que $A^{d} u$ soit le
@@ -149,6 +153,8 @@ Montrons qu’il existe toujours un vecteur u dont le polynôme minimal coïncid
     \item 
   \end{enumerate}
 \end{exercise}
+\end{flushright}
+
 \begin{flushleft}
 \textbf{Facteurs invariants et invariants de similitude.}  Une propriété importante relie les invariants de similitude et les facteurs invariants vus dans la section  Les invariants de similitude d’une matrice  à coefficients dans
 \begin{theorem}
@@ -174,7 +180,7 @@ forme normale qui généralise la forme de Jordan dans le cas quelconque où le
 polynôme minimal n’est pas scindé. Pour un polynôme irréductible $P$ de degré $k$,
 on définit le bloc de Jordan de multiplicité $m$ comme la matrice $J_{P,m}$ de dimension
 $km x km$ vérifiant.
-\\
+
 unique à une permutation des blocs diagonaux près. L’unicité de ces formes normales permet en particulier de tester si deux matrices sont semblables, et par la même occasion de produire une matrice de
 passage entre l’une et l’autre.
 \begin{exercise}
@@ -185,8 +191,23 @@ passage entre l’une et l’autre.
 A vrai dire il n'a y pas de module pour manipuler les formes quadratiques dans SymPy, pour cela en va écrire
 des scripts qui font appelés à d'autres modules permettant de nous aidez à le faire.
 
+\subsection{Réduction de forme quadratique}
 \begin{exercise}
-Soit $q$ une forme quadratique défini de $\R^2 \to \R$
+Soit $q$ une forme quadratique défini de $\R^2 \to \R$, $q(x,y) = x^2 + 13 y^2 - 6xy$
+\begin{itemize}
+  \item Écrire la matrice de forme polaire $M$ correspondante.
+  \item Chercher le polynôme et valeur propre de la matrice $M$.
+  \item détermine les sous-espaces propres associés aux valeurs propres $\lambda_{1}$ et $\lambda_{2}$.
+\end{itemize}
 \end{exercise}
+
+\begin{exercise}
+Soit $E=\mathbb{R}_{n}\left[x\right]$. Pour $P\in E$, on pose $Q\left(P\right)= \sum_{k=0}^{+\infty}P\left(k\right)P\left(-k\right)e^{-k}$. 
+\begin{itemize}
+  \item Montrer que $Q$ est une forme quadratique de $E$.
+  \item Déterminer sa signature.
+\end{itemize}
+\end{exercise}
+
 
 
