@@ -79,6 +79,15 @@ comme le rang, le déterminant, le profil de rang, etc. Les opérations de base 
 \textbf{Élimination de Gauss-Jordan.} La transformation de Gauss-Jordan est similaire à celle de Gauss, en ajoutant à $G_{x,k}$ les transvections correspondant aux lignes d’indice $i < k$ ; cela revient à éliminer les coefficients d’une colonne au-dessus et au-dessous du pivot. Si de plus on divise chaque ligne par son pivot, on obtient alors une forme échelonnée dite réduite encore appelée forme de Gauss-Jordan. Pour toute classe d’équivalence de matrices, il existe une unique matrice sous cette forme ; il s’agit donc d’une forme normale.
 \end{flushleft}
 
+\begin{definition}
+Une matrice est dite sous forme échelonnée réduite si :
+ \begin{itemize}
+  \item toutes les lignes nulles sont en bas de la matrice,
+  \item le coefficient non nul le plus à gauche de chaque ligne non nulle, appelé le pivot, est un $1$, et est situé à droite du pivot de la ligne précédente,
+  \item les pivots sont les seuls coefficients non nuls au sein de leur colonne. 
+ \end{itemize}
+\end{definition}
+
 \begin{flushleft}
 \textbf{Forme échelonnée dans les anneaux euclidiens.} Dans un anneau euclidien, les coefficients non nuls ne sont pas nécessairement inversibles, et l’élimination de Gauss consisterait donc à choisir le premier élément inversible de la colonne courante pour pivot. Ainsi certaines colonnes non nulles peuvent ne pas contenir
 de pivot et l’élimination n’est alors plus possible. Il est cependant toujours possible de définir une transformation unimodulaire éliminant le coefficient de tête d’une ligne avec celui d’une autre, grâce à
