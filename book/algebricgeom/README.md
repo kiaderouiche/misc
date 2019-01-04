@@ -1,0 +1,5 @@
+La géométrie algébrique fait référence à l'étude de problèmes géométriques via des méthodes algébriques (et parfois l'inverse). Bien qu’il s’agisse d’un sujet plutôt ancien, la géométrie algébrique, telle qu’elle est comprise aujourd’hui, est un développement du XXe siècle. En s’appuyant sur les idées de Riemann et de Dedekind, par exemple, il a été constaté qu’il existait un lien étroit entre les propriétés de l’ensemble des solutions d’un système d’équations polynomiales (appelé variété algébrique) et le comportement de l’ensemble des fonctions polynomiales sur cette variété ( appelé l'anneau de coordonnées).
+
+Comme dans de nombreuses disciplines géométriques, nous pouvons distinguer les questions (et les méthodes) locales et globales. Les recherches locales en géométrie algébrique sont essentiellement équivalentes à l’étude de certains anneaux, de leurs idéaux et de leurs modules. Ce dernier sujet est également appelé algèbre commutative. C'est le jeu d'outils local de base des géomètres algébriques, de la même manière que l'analyse différentielle est le jeu d'outils local des géomètres différentiels.
+
+
