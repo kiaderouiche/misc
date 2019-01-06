@@ -2,210 +2,214 @@
 \BOOKMARK [1][-]{section.0.2}{Calcul formel}{}% 2
 \BOOKMARK [2][-]{subsection.0.2.1}{Logiciel de syst\350me de calcul formel}{section.0.2}% 3
 \BOOKMARK [2][-]{subsection.0.2.2}{Quelques logiciels de calcul formel}{section.0.2}% 4
-\BOOKMARK [2][-]{subsection.0.2.3}{Pourquoi choisir SymPy?}{section.0.2}% 5
-\BOOKMARK [-1][-]{part.1}{I Premier pas vers SymPy}{}% 6
-\BOOKMARK [0][-]{chapter.1}{Premier pas vers SymPy}{part.1}% 7
-\BOOKMARK [1][-]{section.1.1}{La biblioth\350que SymPy}{chapter.1}% 8
-\BOOKMARK [2][-]{subsection.1.1.1}{Le cas de la biblioth\350que SymPy}{section.1.1}% 9
-\BOOKMARK [2][-]{subsection.1.1.2}{Travaillez avec SymPy}{section.1.1}% 10
-\BOOKMARK [2][-]{subsection.1.1.3}{Installation de SymPy}{section.1.1}% 11
-\BOOKMARK [2][-]{subsection.1.1.4}{isympy}{section.1.1}% 12
-\BOOKMARK [2][-]{subsection.1.1.5}{SymPyGamma}{section.1.1}% 13
-\BOOKMARK [2][-]{subsection.1.1.6}{SymPyLive}{section.1.1}% 14
-\BOOKMARK [1][-]{section.1.2}{SymPy comme calculatrice}{chapter.1}% 15
-\BOOKMARK [2][-]{subsection.1.2.1}{Premier calculs}{section.1.2}% 16
-\BOOKMARK [2][-]{subsection.1.2.2}{Structure de donn\351es dans SymPy}{section.1.2}% 17
-\BOOKMARK [2][-]{subsection.1.2.3}{Variable et affection}{section.1.2}% 18
-\BOOKMARK [2][-]{subsection.1.2.4}{Substitution}{section.1.2}% 19
-\BOOKMARK [2][-]{subsection.1.2.5}{Contr\364le du flux d\220instructions}{section.1.2}% 20
-\BOOKMARK [0][-]{chapter.2}{Analyse et Alg\350bre}{part.1}% 21
-\BOOKMARK [1][-]{section.2.1}{Expressions symboliques et simplification}{chapter.2}% 22
-\BOOKMARK [2][-]{subsection.2.1.1}{Expressions symboliques}{section.2.1}% 23
-\BOOKMARK [2][-]{subsection.2.1.2}{Transformation d'expressions}{section.2.1}% 24
-\BOOKMARK [2][-]{subsection.2.1.3}{Fonctions math\351matiques usuelles}{section.2.1}% 25
-\BOOKMARK [1][-]{section.2.2}{\311quations}{chapter.2}% 26
-\BOOKMARK [2][-]{subsection.2.2.1}{R\351solution explicite}{section.2.2}% 27
-\BOOKMARK [2][-]{subsection.2.2.2}{\311quations sans solution explicite}{section.2.2}% 28
-\BOOKMARK [1][-]{section.2.3}{In\351quations}{chapter.2}% 29
-\BOOKMARK [1][-]{section.2.4}{Analyse}{chapter.2}% 30
-\BOOKMARK [2][-]{subsection.2.4.1}{Les Fonctions}{section.2.4}% 31
-\BOOKMARK [2][-]{subsection.2.4.2}{Sommes}{section.2.4}% 32
-\BOOKMARK [2][-]{subsection.2.4.3}{Limites}{section.2.4}% 33
-\BOOKMARK [2][-]{subsection.2.4.4}{Suites}{section.2.4}% 34
-\BOOKMARK [2][-]{subsection.2.4.5}{D\351veloppements limit\351s}{section.2.4}% 35
-\BOOKMARK [2][-]{subsection.2.4.6}{S\351ries}{section.2.4}% 36
-\BOOKMARK [2][-]{subsection.2.4.7}{D\351rivation}{section.2.4}% 37
-\BOOKMARK [2][-]{subsection.2.4.8}{D\351riv\351es partielles}{section.2.4}% 38
-\BOOKMARK [2][-]{subsection.2.4.9}{Int\351gration}{section.2.4}% 39
-\BOOKMARK [1][-]{section.2.5}{Calcul matriciel}{chapter.2}% 40
-\BOOKMARK [2][-]{subsection.2.5.1}{R\351solution de syst\350mes lin\351aires}{section.2.5}% 41
-\BOOKMARK [2][-]{subsection.2.5.2}{Calcul vectoriel}{section.2.5}% 42
-\BOOKMARK [2][-]{subsection.2.5.3}{Calcul matriciel}{section.2.5}% 43
-\BOOKMARK [2][-]{subsection.2.5.4}{R\351duction d'une matrice carr\351e}{section.2.5}% 44
-\BOOKMARK [0][-]{chapter.3}{Graphiques}{part.1}% 45
-\BOOKMARK [1][-]{section.3.1}{Courbes en 2D}{chapter.3}% 46
-\BOOKMARK [2][-]{subsection.3.1.1}{Repr\351sentation graphique de fonctions}{section.3.1}% 47
-\BOOKMARK [2][-]{subsection.3.1.2}{Courbe param\351tr\351e}{section.3.1}% 48
-\BOOKMARK [2][-]{subsection.3.1.3}{Courbe en coordonn\351es polaires}{section.3.1}% 49
-\BOOKMARK [2][-]{subsection.3.1.4}{Courbe d\351finie par une \351quation implicite}{section.3.1}% 50
-\BOOKMARK [2][-]{subsection.3.1.5}{Trac\351 de donn\351es}{section.3.1}% 51
-\BOOKMARK [2][-]{subsection.3.1.6}{Trac\351 de solution d\220\351quation diff\351rentielle}{section.3.1}% 52
-\BOOKMARK [2][-]{subsection.3.1.7}{D\351velopp\351e d\220une courbe}{section.3.1}% 53
-\BOOKMARK [1][-]{section.3.2}{Courbes en 3D}{chapter.3}% 54
-\BOOKMARK [-1][-]{part.2}{II Alg\350bre et th\351orie des nombres}{}% 55
-\BOOKMARK [0][-]{chapter.4}{Logique}{part.2}% 56
-\BOOKMARK [0][-]{chapter.5}{Th\351orie des ensemble}{part.2}% 57
-\BOOKMARK [1][-]{section.5.1}{Un petit rappel pour les ensembles dans Python}{chapter.5}% 58
-\BOOKMARK [1][-]{section.5.2}{Th\351orie des ensembles}{chapter.5}% 59
-\BOOKMARK [2][-]{subsection.5.2.1}{Logique}{section.5.2}% 60
-\BOOKMARK [2][-]{subsection.5.2.2}{Ensembles}{section.5.2}% 61
-\BOOKMARK [0][-]{chapter.6}{Th\351orie des cat\351gories}{part.2}% 62
-\BOOKMARK [1][-]{section.6.1}{Note historique}{chapter.6}% 63
-\BOOKMARK [1][-]{section.6.2}{Bref aper\347u}{chapter.6}% 64
-\BOOKMARK [2][-]{subsection.6.2.1}{Quels applications pour l'informatiques}{section.6.2}% 65
-\BOOKMARK [-1][-]{part.3}{III Alg\350bre et th\351orie des nombres}{}% 66
-\BOOKMARK [0][-]{chapter.7}{Anneaux et corps finis}{part.3}% 67
-\BOOKMARK [1][-]{section.7.1}{Anneau des entiers modulo n}{chapter.7}% 68
-\BOOKMARK [1][-]{section.7.2}{Corps finis}{chapter.7}% 69
-\BOOKMARK [1][-]{section.7.3}{Quelques probl\350mes \351l\351mentaires de th\351orie des nombres}{chapter.7}% 70
-\BOOKMARK [2][-]{subsection.7.3.1}{Th\351or\350me de Wilson}{section.7.3}% 71
-\BOOKMARK [2][-]{subsection.7.3.2}{Nombre p-adique}{section.7.3}% 72
-\BOOKMARK [0][-]{chapter.8}{Polyn\364mes}{part.3}% 73
-\BOOKMARK [1][-]{section.8.1}{Anneaux et polyn\364mes}{chapter.8}% 74
-\BOOKMARK [2][-]{subsection.8.1.1}{Introduction}{section.8.1}% 75
-\BOOKMARK [2][-]{subsection.8.1.2}{ Construction d\220anneaux de polyn\364mes}{section.8.1}% 76
-\BOOKMARK [1][-]{section.8.2}{Polyn\364mes}{chapter.8}% 77
-\BOOKMARK [2][-]{subsection.8.2.1}{Cr\351ation et arithm\351tique de base}{section.8.2}% 78
-\BOOKMARK [2][-]{subsection.8.2.2}{Vue d\220ensemble des op\351rations sur les polyn\364mes}{section.8.2}% 79
-\BOOKMARK [2][-]{subsection.8.2.3}{Changement d\220anneau}{section.8.2}% 80
-\BOOKMARK [2][-]{subsection.8.2.4}{It\351ration}{section.8.2}% 81
-\BOOKMARK [1][-]{section.8.3}{Arithm\351tique euclidienne}{chapter.8}% 82
-\BOOKMARK [2][-]{subsection.8.3.1}{ Divisibilit\351}{section.8.3}% 83
-\BOOKMARK [2][-]{subsection.8.3.2}{ Id\351aux et quotients}{section.8.3}% 84
-\BOOKMARK [2][-]{subsection.8.3.3}{Id\351aux}{section.8.3}% 85
-\BOOKMARK [1][-]{section.8.4}{ Factorisation et racines}{chapter.8}% 86
-\BOOKMARK [2][-]{subsection.8.4.1}{Factorisation}{section.8.4}% 87
-\BOOKMARK [2][-]{subsection.8.4.2}{ Recherche de racines}{section.8.4}% 88
-\BOOKMARK [2][-]{subsection.8.4.3}{ R\351sultant}{section.8.4}% 89
-\BOOKMARK [2][-]{subsection.8.4.4}{ Groupe de Galois}{section.8.4}% 90
-\BOOKMARK [1][-]{section.8.5}{ Fractions rationnelles}{chapter.8}% 91
-\BOOKMARK [2][-]{subsection.8.5.1}{ Construction et propri\351t\351s \351l\351mentaires}{section.8.5}% 92
-\BOOKMARK [1][-]{section.8.6}{S\351ries formelles}{chapter.8}% 93
-\BOOKMARK [2][-]{subsection.8.6.1}{Op\351rations sur les s\351ries tronqu\351es}{section.8.6}% 94
-\BOOKMARK [2][-]{subsection.8.6.2}{D\351veloppement de solutions d\220\351quations}{section.8.6}% 95
-\BOOKMARK [0][-]{chapter.9}{Polyn\364mes}{part.3}% 96
-\BOOKMARK [1][-]{section.9.1}{Anneaux et polyn\364mes}{chapter.9}% 97
-\BOOKMARK [2][-]{subsection.9.1.1}{Introduction}{section.9.1}% 98
-\BOOKMARK [2][-]{subsection.9.1.2}{ Construction d\220anneaux de polyn\364mes}{section.9.1}% 99
-\BOOKMARK [1][-]{section.9.2}{Polyn\364mes}{chapter.9}% 100
-\BOOKMARK [2][-]{subsection.9.2.1}{Cr\351ation et arithm\351tique de base}{section.9.2}% 101
-\BOOKMARK [2][-]{subsection.9.2.2}{Vue d\220ensemble des op\351rations sur les polyn\364mes}{section.9.2}% 102
-\BOOKMARK [2][-]{subsection.9.2.3}{Changement d\220anneau}{section.9.2}% 103
-\BOOKMARK [2][-]{subsection.9.2.4}{It\351ration}{section.9.2}% 104
-\BOOKMARK [1][-]{section.9.3}{Arithm\351tique euclidienne}{chapter.9}% 105
-\BOOKMARK [2][-]{subsection.9.3.1}{ Divisibilit\351}{section.9.3}% 106
-\BOOKMARK [2][-]{subsection.9.3.2}{ Id\351aux et quotients}{section.9.3}% 107
-\BOOKMARK [2][-]{subsection.9.3.3}{Id\351aux}{section.9.3}% 108
-\BOOKMARK [1][-]{section.9.4}{ Factorisation et racines}{chapter.9}% 109
-\BOOKMARK [2][-]{subsection.9.4.1}{Factorisation}{section.9.4}% 110
-\BOOKMARK [2][-]{subsection.9.4.2}{ Recherche de racines}{section.9.4}% 111
-\BOOKMARK [2][-]{subsection.9.4.3}{ R\351sultant}{section.9.4}% 112
-\BOOKMARK [2][-]{subsection.9.4.4}{ Groupe de Galois}{section.9.4}% 113
-\BOOKMARK [1][-]{section.9.5}{ Fractions rationnelles}{chapter.9}% 114
-\BOOKMARK [2][-]{subsection.9.5.1}{ Construction et propri\351t\351s \351l\351mentaires}{section.9.5}% 115
-\BOOKMARK [1][-]{section.9.6}{S\351ries formelles}{chapter.9}% 116
-\BOOKMARK [2][-]{subsection.9.6.1}{Op\351rations sur les s\351ries tronqu\351es}{section.9.6}% 117
-\BOOKMARK [2][-]{subsection.9.6.2}{D\351veloppement de solutions d\220\351quations}{section.9.6}% 118
-\BOOKMARK [0][-]{chapter.10}{Alg\350bre lin\351aire}{part.3}% 119
-\BOOKMARK [1][-]{section.10.1}{Constructions et manipulations \351l\351mentaires}{chapter.10}% 120
-\BOOKMARK [2][-]{subsection.10.1.1}{ Espaces de vecteurs, de matrices}{section.10.1}% 121
-\BOOKMARK [2][-]{subsection.10.1.2}{ Construction des matrices et des vecteurs}{section.10.1}% 122
-\BOOKMARK [2][-]{subsection.10.1.3}{ Manipulations de base et arithm\351tique sur les matrices}{section.10.1}% 123
-\BOOKMARK [2][-]{subsection.10.1.4}{ Op\351rations de base sur les matrices}{section.10.1}% 124
-\BOOKMARK [1][-]{section.10.2}{ Calculs sur les matrices}{chapter.10}% 125
-\BOOKMARK [2][-]{subsection.10.2.1}{ \311limination de Gauss, forme \351chelonn\351e}{section.10.2}% 126
-\BOOKMARK [2][-]{subsection.10.2.2}{ R\351solution de syst\350mes ; image et base du noyau}{section.10.2}% 127
-\BOOKMARK [2][-]{subsection.10.2.3}{Valeurs propres, forme de Jordan et transformations de similitude}{section.10.2}% 128
-\BOOKMARK [1][-]{section.10.3}{Forme quadratique}{chapter.10}% 129
-\BOOKMARK [2][-]{subsection.10.3.1}{R\351duction de forme quadratique}{section.10.3}% 130
-\BOOKMARK [0][-]{chapter.11}{Syst\350mes polynomiaux}{part.3}% 131
-\BOOKMARK [1][-]{section.11.1}{ Polyn\364mes \340 plusieurs ind\351termin\351es}{chapter.11}% 132
-\BOOKMARK [2][-]{subsection.11.1.1}{ Les anneaux A[x1, ..., xn]}{section.11.1}% 133
-\BOOKMARK [2][-]{subsection.11.1.2}{Polyn\364mes}{section.11.1}% 134
-\BOOKMARK [1][-]{section.11.2}{Syst\350mes polynomiaux et id\351aux}{chapter.11}% 135
-\BOOKMARK [2][-]{subsection.11.2.1}{ Un premier exemple}{section.11.2}% 136
-\BOOKMARK [2][-]{subsection.11.2.2}{ Qu\220est-ce que r\351soudre ?}{section.11.2}% 137
-\BOOKMARK [2][-]{subsection.11.2.3}{Id\351aux et syst\350mes}{section.11.2}% 138
-\BOOKMARK [1][-]{section.11.3}{ Bases de Gr\366bner}{chapter.11}% 139
-\BOOKMARK [2][-]{subsection.11.3.1}{Ordres monomiaux}{section.11.3}% 140
-\BOOKMARK [2][-]{subsection.11.3.2}{ Division par une famille de polyn\364mes}{section.11.3}% 141
-\BOOKMARK [2][-]{subsection.11.3.3}{ Propri\351t\351s des bases de Gr\366bner}{section.11.3}% 142
-\BOOKMARK [0][-]{chapter.12}{\311quations diff\351rentielles}{part.3}% 143
-\BOOKMARK [1][-]{section.12.1}{\311quations diff\351rentielles}{chapter.12}% 144
-\BOOKMARK [2][-]{subsection.12.1.1}{Introduction}{section.12.1}% 145
-\BOOKMARK [2][-]{subsection.12.1.2}{\311quations diff\351rentielles ordinaires d\220ordre 1}{section.12.1}% 146
-\BOOKMARK [2][-]{subsection.12.1.3}{ \311quations d\220ordre 2}{section.12.1}% 147
-\BOOKMARK [2][-]{subsection.12.1.4}{Transform\351e de Laplace}{section.12.1}% 148
-\BOOKMARK [2][-]{subsection.12.1.5}{ Syst\350mes diff\351rentiels lin\351aires}{section.12.1}% 149
-\BOOKMARK [0][-]{chapter.13}{suites d\351finies par une relation de r\351currence}{part.3}% 150
-\BOOKMARK [1][-]{section.13.1}{Suites d\351finies par un+1 = f\(un \)}{chapter.13}% 151
-\BOOKMARK [1][-]{section.13.2}{Suites r\351currentes lin\351aires}{chapter.13}% 152
-\BOOKMARK [1][-]{section.13.3}{Suites r\351currentes \253 avec second membre \273}{chapter.13}% 153
-\BOOKMARK [0][-]{chapter.14}{suites d\351finies par une relation de r\351currence}{part.3}% 154
-\BOOKMARK [1][-]{section.14.1}{Suites d\351finies par un+1 = f\(un \)}{chapter.14}% 155
-\BOOKMARK [1][-]{section.14.2}{Suites r\351currentes lin\351aires}{chapter.14}% 156
-\BOOKMARK [1][-]{section.14.3}{Suites r\351currentes \253 avec second membre \273}{chapter.14}% 157
-\BOOKMARK [-1][-]{part.4}{IV G\351om\351trie}{}% 158
-\BOOKMARK [0][-]{chapter.15}{G\351om\351trie plan}{part.4}% 159
-\BOOKMARK [1][-]{section.15.1}{Introduction}{chapter.15}% 160
-\BOOKMARK [2][-]{subsection.15.1.1}{Polygones r\351gulier}{section.15.1}% 161
-\BOOKMARK [0][-]{chapter.16}{G\351om\351trie Diff\351rentielle}{part.4}% 162
-\BOOKMARK [1][-]{section.16.1}{Vari\351t\351 diff\351rentiable}{chapter.16}% 163
-\BOOKMARK [0][-]{chapter.17}{Groupe de Lie}{part.4}% 164
-\BOOKMARK [1][-]{section.17.1}{R\351solution d\220\351quations par groupe de Lie}{chapter.17}% 165
-\BOOKMARK [0][-]{chapter.18}{Convexit\351}{part.4}% 166
-\BOOKMARK [1][-]{subsection.18.0.1}{Cone}{chapter.18}% 167
-\BOOKMARK [1][-]{section.18.1}{Convex Functions}{chapter.18}% 168
-\BOOKMARK [2][-]{subsection.18.1.1}{Epigraph}{section.18.1}% 169
-\BOOKMARK [0][-]{chapter.19}{Support Function}{part.4}% 170
-\BOOKMARK [1][-]{section.19.1}{Operations Preserve Convexity of Functions}{chapter.19}% 171
-\BOOKMARK [1][-]{section.19.2}{Remarks}{chapter.19}% 172
-\BOOKMARK [1][-]{section.19.3}{Corollaries}{chapter.19}% 173
-\BOOKMARK [1][-]{section.19.4}{Propositions}{chapter.19}% 174
-\BOOKMARK [2][-]{subsection.19.4.1}{Several equations}{section.19.4}% 175
-\BOOKMARK [2][-]{subsection.19.4.2}{Single Line}{section.19.4}% 176
-\BOOKMARK [2][-]{subsection.19.4.3}{Paragraph of Text}{section.19.4}% 177
-\BOOKMARK [1][-]{section.19.5}{Exercises}{chapter.19}% 178
-\BOOKMARK [1][-]{section.19.6}{Problems}{chapter.19}% 179
-\BOOKMARK [1][-]{section.19.7}{Vocabulary}{chapter.19}% 180
-\BOOKMARK [-1][-]{part.5}{V Calcul num\351rique et discret}{}% 181
-\BOOKMARK [0][-]{chapter.20}{Nombres \340 virgule flottante}{part.5}% 182
-\BOOKMARK [0][-]{chapter.21}{Int\351gration num\351rique}{part.5}% 183
-\BOOKMARK [1][-]{subsection.21.0.1}{Equation and Text}{chapter.21}% 184
-\BOOKMARK [0][-]{chapter.22}{Transformation d'int\351grale}{part.5}% 185
-\BOOKMARK [1][-]{section.22.1}{Transformation de Fourier}{chapter.22}% 186
-\BOOKMARK [2][-]{subsection.22.1.1}{Transformation de Fourier inverse}{section.22.1}% 187
-\BOOKMARK [1][-]{section.22.2}{Transformation de Laplace}{chapter.22}% 188
-\BOOKMARK [1][-]{section.22.3}{Transformation de Mellin}{chapter.22}% 189
-\BOOKMARK [2][-]{subsection.22.3.1}{Transformation de melin inverse}{section.22.3}% 190
-\BOOKMARK [1][-]{section.22.4}{Transfomation de Henkel}{chapter.22}% 191
-\BOOKMARK [2][-]{subsection.22.4.1}{Transformation de Henkel inverse}{section.22.4}% 192
-\BOOKMARK [0][-]{chapter.23}{\311quations non lin\351aires}{part.5}% 193
-\BOOKMARK [1][-]{section.23.1}{\311quations alg\351briques}{chapter.23}% 194
-\BOOKMARK [1][-]{section.23.2}{Figure}{chapter.23}% 195
-\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 196
-\BOOKMARK [0][-]{chapter.24}{Permutations}{part.6}% 197
-\BOOKMARK [0][-]{chapter.25}{Groupe symmetrique}{part.6}% 198
-\BOOKMARK [0][-]{chapter.26}{Groupe Ab\351lien}{part.6}% 199
-\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 200
-\BOOKMARK [0][-]{chapter.27}{Chaos}{part.7}% 201
-\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 202
-\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 203
-\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 204
-\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 205
-\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 206
-\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 207
-\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 208
-\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 209
-\BOOKMARK [1][-]{section.32.1}{Bibliographie}{chapter.32}% 210
-\BOOKMARK [1][-]{section.32.2}{Index}{chapter.32}% 211
+\BOOKMARK [2][-]{subsection.0.2.3}{SymPy vs Sagemath}{section.0.2}% 5
+\BOOKMARK [2][-]{subsection.0.2.4}{Pourquoi choisir SymPy?}{section.0.2}% 6
+\BOOKMARK [-1][-]{part.1}{I Premier pas vers SymPy}{}% 7
+\BOOKMARK [0][-]{chapter.1}{Premier pas vers SymPy}{part.1}% 8
+\BOOKMARK [1][-]{section.1.1}{La biblioth\350que SymPy}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.1.1}{Le cas de la biblioth\350que SymPy}{section.1.1}% 10
+\BOOKMARK [2][-]{subsection.1.1.2}{Travaillez avec SymPy}{section.1.1}% 11
+\BOOKMARK [2][-]{subsection.1.1.3}{Installation de SymPy}{section.1.1}% 12
+\BOOKMARK [2][-]{subsection.1.1.4}{isympy}{section.1.1}% 13
+\BOOKMARK [2][-]{subsection.1.1.5}{SymPyGamma}{section.1.1}% 14
+\BOOKMARK [2][-]{subsection.1.1.6}{SymPyLive}{section.1.1}% 15
+\BOOKMARK [1][-]{section.1.2}{SymPy comme calculatrice}{chapter.1}% 16
+\BOOKMARK [2][-]{subsection.1.2.1}{Premier calculs}{section.1.2}% 17
+\BOOKMARK [2][-]{subsection.1.2.2}{Structure de donn\351es dans SymPy}{section.1.2}% 18
+\BOOKMARK [2][-]{subsection.1.2.3}{Variable et affection}{section.1.2}% 19
+\BOOKMARK [2][-]{subsection.1.2.4}{Substitution}{section.1.2}% 20
+\BOOKMARK [2][-]{subsection.1.2.5}{Contr\364le du flux d\220instructions}{section.1.2}% 21
+\BOOKMARK [0][-]{chapter.2}{Analyse et Alg\350bre}{part.1}% 22
+\BOOKMARK [1][-]{section.2.1}{Expressions symboliques et simplification}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.1.1}{Expressions symboliques}{section.2.1}% 24
+\BOOKMARK [2][-]{subsection.2.1.2}{Transformation d'expressions}{section.2.1}% 25
+\BOOKMARK [2][-]{subsection.2.1.3}{Fonctions math\351matiques usuelles}{section.2.1}% 26
+\BOOKMARK [1][-]{section.2.2}{\311quations}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.2.1}{R\351solution explicite}{section.2.2}% 28
+\BOOKMARK [2][-]{subsection.2.2.2}{\311quations sans solution explicite}{section.2.2}% 29
+\BOOKMARK [1][-]{section.2.3}{In\351quations}{chapter.2}% 30
+\BOOKMARK [1][-]{section.2.4}{Analyse}{chapter.2}% 31
+\BOOKMARK [2][-]{subsection.2.4.1}{Les Fonctions}{section.2.4}% 32
+\BOOKMARK [2][-]{subsection.2.4.2}{Sommes}{section.2.4}% 33
+\BOOKMARK [2][-]{subsection.2.4.3}{Limites}{section.2.4}% 34
+\BOOKMARK [2][-]{subsection.2.4.4}{Suites}{section.2.4}% 35
+\BOOKMARK [2][-]{subsection.2.4.5}{D\351veloppements limit\351s}{section.2.4}% 36
+\BOOKMARK [2][-]{subsection.2.4.6}{S\351ries}{section.2.4}% 37
+\BOOKMARK [2][-]{subsection.2.4.7}{D\351rivation}{section.2.4}% 38
+\BOOKMARK [2][-]{subsection.2.4.8}{D\351riv\351es partielles}{section.2.4}% 39
+\BOOKMARK [2][-]{subsection.2.4.9}{Int\351gration}{section.2.4}% 40
+\BOOKMARK [1][-]{section.2.5}{Calcul matriciel}{chapter.2}% 41
+\BOOKMARK [2][-]{subsection.2.5.1}{R\351solution de syst\350mes lin\351aires}{section.2.5}% 42
+\BOOKMARK [2][-]{subsection.2.5.2}{Calcul vectoriel}{section.2.5}% 43
+\BOOKMARK [2][-]{subsection.2.5.3}{Calcul matriciel}{section.2.5}% 44
+\BOOKMARK [2][-]{subsection.2.5.4}{R\351duction d'une matrice carr\351e}{section.2.5}% 45
+\BOOKMARK [0][-]{chapter.3}{Graphiques}{part.1}% 46
+\BOOKMARK [1][-]{section.3.1}{Courbes en 2D}{chapter.3}% 47
+\BOOKMARK [2][-]{subsection.3.1.1}{Repr\351sentation graphique de fonctions}{section.3.1}% 48
+\BOOKMARK [2][-]{subsection.3.1.2}{Courbe param\351tr\351e}{section.3.1}% 49
+\BOOKMARK [2][-]{subsection.3.1.3}{Courbe en coordonn\351es polaires}{section.3.1}% 50
+\BOOKMARK [2][-]{subsection.3.1.4}{Courbe d\351finie par une \351quation implicite}{section.3.1}% 51
+\BOOKMARK [2][-]{subsection.3.1.5}{Trac\351 de donn\351es}{section.3.1}% 52
+\BOOKMARK [2][-]{subsection.3.1.6}{Trac\351 de solution d\220\351quation diff\351rentielle}{section.3.1}% 53
+\BOOKMARK [2][-]{subsection.3.1.7}{D\351velopp\351e d\220une courbe}{section.3.1}% 54
+\BOOKMARK [1][-]{section.3.2}{Courbes en 3D}{chapter.3}% 55
+\BOOKMARK [-1][-]{part.2}{II Alg\350bre et th\351orie des nombres}{}% 56
+\BOOKMARK [0][-]{chapter.4}{Logique}{part.2}% 57
+\BOOKMARK [0][-]{chapter.5}{Th\351orie des ensemble}{part.2}% 58
+\BOOKMARK [1][-]{section.5.1}{Un petit rappel pour les ensembles dans Python}{chapter.5}% 59
+\BOOKMARK [1][-]{section.5.2}{Th\351orie des ensembles}{chapter.5}% 60
+\BOOKMARK [2][-]{subsection.5.2.1}{Logique}{section.5.2}% 61
+\BOOKMARK [2][-]{subsection.5.2.2}{Ensembles}{section.5.2}% 62
+\BOOKMARK [0][-]{chapter.6}{Th\351orie des cat\351gories}{part.2}% 63
+\BOOKMARK [1][-]{section.6.1}{Note historique}{chapter.6}% 64
+\BOOKMARK [1][-]{section.6.2}{Bref aper\347u}{chapter.6}% 65
+\BOOKMARK [2][-]{subsection.6.2.1}{Quels applications pour l'informatiques}{section.6.2}% 66
+\BOOKMARK [-1][-]{part.3}{III Alg\350bre et th\351orie des nombres}{}% 67
+\BOOKMARK [0][-]{chapter.7}{Anneaux et corps finis}{part.3}% 68
+\BOOKMARK [1][-]{section.7.1}{Anneau des entiers modulo n}{chapter.7}% 69
+\BOOKMARK [1][-]{section.7.2}{Corps finis}{chapter.7}% 70
+\BOOKMARK [1][-]{section.7.3}{Quelques probl\350mes \351l\351mentaires de th\351orie des nombres}{chapter.7}% 71
+\BOOKMARK [2][-]{subsection.7.3.1}{Th\351or\350me de Wilson}{section.7.3}% 72
+\BOOKMARK [2][-]{subsection.7.3.2}{Nombre p-adique}{section.7.3}% 73
+\BOOKMARK [0][-]{chapter.8}{Polyn\364mes}{part.3}% 74
+\BOOKMARK [1][-]{section.8.1}{Anneaux et polyn\364mes}{chapter.8}% 75
+\BOOKMARK [2][-]{subsection.8.1.1}{Introduction}{section.8.1}% 76
+\BOOKMARK [2][-]{subsection.8.1.2}{ Construction d\220anneaux de polyn\364mes}{section.8.1}% 77
+\BOOKMARK [1][-]{section.8.2}{Polyn\364mes}{chapter.8}% 78
+\BOOKMARK [2][-]{subsection.8.2.1}{Cr\351ation et arithm\351tique de base}{section.8.2}% 79
+\BOOKMARK [2][-]{subsection.8.2.2}{Vue d\220ensemble des op\351rations sur les polyn\364mes}{section.8.2}% 80
+\BOOKMARK [2][-]{subsection.8.2.3}{Changement d\220anneau}{section.8.2}% 81
+\BOOKMARK [2][-]{subsection.8.2.4}{It\351ration}{section.8.2}% 82
+\BOOKMARK [1][-]{section.8.3}{Arithm\351tique euclidienne}{chapter.8}% 83
+\BOOKMARK [2][-]{subsection.8.3.1}{ Divisibilit\351}{section.8.3}% 84
+\BOOKMARK [2][-]{subsection.8.3.2}{ Id\351aux et quotients}{section.8.3}% 85
+\BOOKMARK [2][-]{subsection.8.3.3}{Id\351aux}{section.8.3}% 86
+\BOOKMARK [1][-]{section.8.4}{ Factorisation et racines}{chapter.8}% 87
+\BOOKMARK [2][-]{subsection.8.4.1}{Factorisation}{section.8.4}% 88
+\BOOKMARK [2][-]{subsection.8.4.2}{ Recherche de racines}{section.8.4}% 89
+\BOOKMARK [2][-]{subsection.8.4.3}{ R\351sultant}{section.8.4}% 90
+\BOOKMARK [2][-]{subsection.8.4.4}{ Groupe de Galois}{section.8.4}% 91
+\BOOKMARK [1][-]{section.8.5}{ Fractions rationnelles}{chapter.8}% 92
+\BOOKMARK [2][-]{subsection.8.5.1}{ Construction et propri\351t\351s \351l\351mentaires}{section.8.5}% 93
+\BOOKMARK [1][-]{section.8.6}{S\351ries formelles}{chapter.8}% 94
+\BOOKMARK [2][-]{subsection.8.6.1}{Op\351rations sur les s\351ries tronqu\351es}{section.8.6}% 95
+\BOOKMARK [2][-]{subsection.8.6.2}{D\351veloppement de solutions d\220\351quations}{section.8.6}% 96
+\BOOKMARK [0][-]{chapter.9}{Polyn\364mes}{part.3}% 97
+\BOOKMARK [1][-]{section.9.1}{Anneaux et polyn\364mes}{chapter.9}% 98
+\BOOKMARK [2][-]{subsection.9.1.1}{Introduction}{section.9.1}% 99
+\BOOKMARK [2][-]{subsection.9.1.2}{ Construction d\220anneaux de polyn\364mes}{section.9.1}% 100
+\BOOKMARK [1][-]{section.9.2}{Polyn\364mes}{chapter.9}% 101
+\BOOKMARK [2][-]{subsection.9.2.1}{Cr\351ation et arithm\351tique de base}{section.9.2}% 102
+\BOOKMARK [2][-]{subsection.9.2.2}{Vue d\220ensemble des op\351rations sur les polyn\364mes}{section.9.2}% 103
+\BOOKMARK [2][-]{subsection.9.2.3}{Changement d\220anneau}{section.9.2}% 104
+\BOOKMARK [2][-]{subsection.9.2.4}{It\351ration}{section.9.2}% 105
+\BOOKMARK [1][-]{section.9.3}{Arithm\351tique euclidienne}{chapter.9}% 106
+\BOOKMARK [2][-]{subsection.9.3.1}{ Divisibilit\351}{section.9.3}% 107
+\BOOKMARK [2][-]{subsection.9.3.2}{ Id\351aux et quotients}{section.9.3}% 108
+\BOOKMARK [2][-]{subsection.9.3.3}{Id\351aux}{section.9.3}% 109
+\BOOKMARK [1][-]{section.9.4}{ Factorisation et racines}{chapter.9}% 110
+\BOOKMARK [2][-]{subsection.9.4.1}{Factorisation}{section.9.4}% 111
+\BOOKMARK [2][-]{subsection.9.4.2}{ Recherche de racines}{section.9.4}% 112
+\BOOKMARK [2][-]{subsection.9.4.3}{ R\351sultant}{section.9.4}% 113
+\BOOKMARK [2][-]{subsection.9.4.4}{ Groupe de Galois}{section.9.4}% 114
+\BOOKMARK [1][-]{section.9.5}{ Fractions rationnelles}{chapter.9}% 115
+\BOOKMARK [2][-]{subsection.9.5.1}{ Construction et propri\351t\351s \351l\351mentaires}{section.9.5}% 116
+\BOOKMARK [2][-]{subsection.9.5.2}{D\351composition en \351l\351ments simples}{section.9.5}% 117
+\BOOKMARK [2][-]{subsection.9.5.3}{Reconstruction rationnelle}{section.9.5}% 118
+\BOOKMARK [1][-]{section.9.6}{S\351ries formelles}{chapter.9}% 119
+\BOOKMARK [2][-]{subsection.9.6.1}{Op\351rations sur les s\351ries tronqu\351es}{section.9.6}% 120
+\BOOKMARK [2][-]{subsection.9.6.2}{D\351veloppement de solutions d\220\351quations}{section.9.6}% 121
+\BOOKMARK [0][-]{chapter.10}{Alg\350bre lin\351aire}{part.3}% 122
+\BOOKMARK [1][-]{section.10.1}{Constructions et manipulations \351l\351mentaires}{chapter.10}% 123
+\BOOKMARK [2][-]{subsection.10.1.1}{ Espaces de vecteurs, de matrices}{section.10.1}% 124
+\BOOKMARK [2][-]{subsection.10.1.2}{ Construction des matrices et des vecteurs}{section.10.1}% 125
+\BOOKMARK [2][-]{subsection.10.1.3}{ Manipulations de base et arithm\351tique sur les matrices}{section.10.1}% 126
+\BOOKMARK [2][-]{subsection.10.1.4}{ Op\351rations de base sur les matrices}{section.10.1}% 127
+\BOOKMARK [1][-]{section.10.2}{ Calculs sur les matrices}{chapter.10}% 128
+\BOOKMARK [2][-]{subsection.10.2.1}{ \311limination de Gauss, forme \351chelonn\351e}{section.10.2}% 129
+\BOOKMARK [2][-]{subsection.10.2.2}{ R\351solution de syst\350mes ; image et base du noyau}{section.10.2}% 130
+\BOOKMARK [2][-]{subsection.10.2.3}{Valeurs propres, forme de Jordan et transformations de similitude}{section.10.2}% 131
+\BOOKMARK [1][-]{section.10.3}{Forme quadratique}{chapter.10}% 132
+\BOOKMARK [2][-]{subsection.10.3.1}{R\351duction de forme quadratique}{section.10.3}% 133
+\BOOKMARK [1][-]{section.10.4}{Tenseur}{chapter.10}% 134
+\BOOKMARK [0][-]{chapter.11}{Syst\350mes polynomiaux}{part.3}% 135
+\BOOKMARK [1][-]{section.11.1}{ Polyn\364mes \340 plusieurs ind\351termin\351es}{chapter.11}% 136
+\BOOKMARK [2][-]{subsection.11.1.1}{ Les anneaux A[x1, ..., xn]}{section.11.1}% 137
+\BOOKMARK [2][-]{subsection.11.1.2}{Polyn\364mes}{section.11.1}% 138
+\BOOKMARK [1][-]{section.11.2}{Syst\350mes polynomiaux et id\351aux}{chapter.11}% 139
+\BOOKMARK [2][-]{subsection.11.2.1}{ Un premier exemple}{section.11.2}% 140
+\BOOKMARK [2][-]{subsection.11.2.2}{ Qu\220est-ce que r\351soudre ?}{section.11.2}% 141
+\BOOKMARK [2][-]{subsection.11.2.3}{Id\351aux et syst\350mes}{section.11.2}% 142
+\BOOKMARK [1][-]{section.11.3}{ Bases de Gr\366bner}{chapter.11}% 143
+\BOOKMARK [2][-]{subsection.11.3.1}{Ordres monomiaux}{section.11.3}% 144
+\BOOKMARK [2][-]{subsection.11.3.2}{ Division par une famille de polyn\364mes}{section.11.3}% 145
+\BOOKMARK [2][-]{subsection.11.3.3}{ Propri\351t\351s des bases de Gr\366bner}{section.11.3}% 146
+\BOOKMARK [0][-]{chapter.12}{\311quations diff\351rentielles}{part.3}% 147
+\BOOKMARK [1][-]{section.12.1}{\311quations diff\351rentielles}{chapter.12}% 148
+\BOOKMARK [2][-]{subsection.12.1.1}{Introduction}{section.12.1}% 149
+\BOOKMARK [2][-]{subsection.12.1.2}{\311quations diff\351rentielles ordinaires d\220ordre 1}{section.12.1}% 150
+\BOOKMARK [2][-]{subsection.12.1.3}{ \311quations d\220ordre 2}{section.12.1}% 151
+\BOOKMARK [2][-]{subsection.12.1.4}{Transform\351e de Laplace}{section.12.1}% 152
+\BOOKMARK [2][-]{subsection.12.1.5}{ Syst\350mes diff\351rentiels lin\351aires}{section.12.1}% 153
+\BOOKMARK [0][-]{chapter.13}{suites d\351finies par une relation de r\351currence}{part.3}% 154
+\BOOKMARK [1][-]{section.13.1}{Suites d\351finies par un+1 = f\(un \)}{chapter.13}% 155
+\BOOKMARK [1][-]{section.13.2}{Suites r\351currentes lin\351aires}{chapter.13}% 156
+\BOOKMARK [1][-]{section.13.3}{Suites r\351currentes \253 avec second membre \273}{chapter.13}% 157
+\BOOKMARK [0][-]{chapter.14}{suites d\351finies par une relation de r\351currence}{part.3}% 158
+\BOOKMARK [1][-]{section.14.1}{Suites d\351finies par un+1 = f\(un \)}{chapter.14}% 159
+\BOOKMARK [1][-]{section.14.2}{Suites r\351currentes lin\351aires}{chapter.14}% 160
+\BOOKMARK [1][-]{section.14.3}{Suites r\351currentes \253 avec second membre \273}{chapter.14}% 161
+\BOOKMARK [-1][-]{part.4}{IV G\351om\351trie}{}% 162
+\BOOKMARK [0][-]{chapter.15}{G\351om\351trie plan}{part.4}% 163
+\BOOKMARK [1][-]{section.15.1}{Introduction}{chapter.15}% 164
+\BOOKMARK [2][-]{subsection.15.1.1}{Polygones r\351gulier}{section.15.1}% 165
+\BOOKMARK [0][-]{chapter.16}{G\351om\351trie Diff\351rentielle}{part.4}% 166
+\BOOKMARK [1][-]{section.16.1}{Vari\351t\351 diff\351rentiable}{chapter.16}% 167
+\BOOKMARK [0][-]{chapter.17}{Groupe de Lie}{part.4}% 168
+\BOOKMARK [1][-]{section.17.1}{R\351solution d\220\351quations par groupe de Lie}{chapter.17}% 169
+\BOOKMARK [0][-]{chapter.18}{Convexit\351}{part.4}% 170
+\BOOKMARK [1][-]{subsection.18.0.1}{Cone}{chapter.18}% 171
+\BOOKMARK [1][-]{section.18.1}{Convex Functions}{chapter.18}% 172
+\BOOKMARK [2][-]{subsection.18.1.1}{Epigraph}{section.18.1}% 173
+\BOOKMARK [0][-]{chapter.19}{Support Function}{part.4}% 174
+\BOOKMARK [1][-]{section.19.1}{Operations Preserve Convexity of Functions}{chapter.19}% 175
+\BOOKMARK [1][-]{section.19.2}{Remarks}{chapter.19}% 176
+\BOOKMARK [1][-]{section.19.3}{Corollaries}{chapter.19}% 177
+\BOOKMARK [1][-]{section.19.4}{Propositions}{chapter.19}% 178
+\BOOKMARK [2][-]{subsection.19.4.1}{Several equations}{section.19.4}% 179
+\BOOKMARK [2][-]{subsection.19.4.2}{Single Line}{section.19.4}% 180
+\BOOKMARK [2][-]{subsection.19.4.3}{Paragraph of Text}{section.19.4}% 181
+\BOOKMARK [1][-]{section.19.5}{Exercises}{chapter.19}% 182
+\BOOKMARK [1][-]{section.19.6}{Problems}{chapter.19}% 183
+\BOOKMARK [1][-]{section.19.7}{Vocabulary}{chapter.19}% 184
+\BOOKMARK [-1][-]{part.5}{V Calcul num\351rique et discret}{}% 185
+\BOOKMARK [0][-]{chapter.20}{Nombres \340 virgule flottante}{part.5}% 186
+\BOOKMARK [0][-]{chapter.21}{Int\351gration num\351rique}{part.5}% 187
+\BOOKMARK [1][-]{subsection.21.0.1}{Equation and Text}{chapter.21}% 188
+\BOOKMARK [0][-]{chapter.22}{Transformation d'int\351grale}{part.5}% 189
+\BOOKMARK [1][-]{section.22.1}{Transformation de Fourier}{chapter.22}% 190
+\BOOKMARK [2][-]{subsection.22.1.1}{Transformation de Fourier inverse}{section.22.1}% 191
+\BOOKMARK [1][-]{section.22.2}{Transformation de Laplace}{chapter.22}% 192
+\BOOKMARK [1][-]{section.22.3}{Transformation de Mellin}{chapter.22}% 193
+\BOOKMARK [2][-]{subsection.22.3.1}{Transformation de melin inverse}{section.22.3}% 194
+\BOOKMARK [1][-]{section.22.4}{Transfomation de Henkel}{chapter.22}% 195
+\BOOKMARK [2][-]{subsection.22.4.1}{Transformation de Henkel inverse}{section.22.4}% 196
+\BOOKMARK [0][-]{chapter.23}{\311quations non lin\351aires}{part.5}% 197
+\BOOKMARK [1][-]{section.23.1}{\311quations alg\351briques}{chapter.23}% 198
+\BOOKMARK [1][-]{section.23.2}{Figure}{chapter.23}% 199
+\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 200
+\BOOKMARK [0][-]{chapter.24}{Permutations}{part.6}% 201
+\BOOKMARK [0][-]{chapter.25}{Groupe symmetrique}{part.6}% 202
+\BOOKMARK [0][-]{chapter.26}{Groupe Ab\351lien}{part.6}% 203
+\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 204
+\BOOKMARK [0][-]{chapter.27}{Chaos}{part.7}% 205
+\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 206
+\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 207
+\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 208
+\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 209
+\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 210
+\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 211
+\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 212
+\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 213
+\BOOKMARK [1][-]{section.32.1}{Bibliographie}{chapter.32}% 214
+\BOOKMARK [1][-]{section.32.2}{Index}{chapter.32}% 215

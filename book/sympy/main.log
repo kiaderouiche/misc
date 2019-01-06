@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  4 JAN 2019 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.28)  5 JAN 2019 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1466,7 +1466,7 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <35> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 47.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <35> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 47.
-<Pictures/esahubble.png, id=855, 614.295pt x 794.97pt>
+<Pictures/esahubble.png, id=871, 614.295pt x 794.97pt>
 File: Pictures/esahubble.png Graphic file (type png)
 <use Pictures/esahubble.png>
 Package pdftex.def Info: Pictures/esahubble.png  used on input line 57.
@@ -1475,7 +1475,7 @@ Package pdftex.def Info: Pictures/esahubble.png  used on input line 57.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Pictures/esahubble.png>]
  [2]
-<Pictures/head1.png, id=867, 1027.6794pt x 514.0806pt>
+<Pictures/head1.png, id=883, 1027.6794pt x 514.0806pt>
 File: Pictures/head1.png Graphic file (type png)
 <use Pictures/head1.png>
 Package pdftex.def Info: Pictures/head1.png  used on input line 69.
@@ -1490,24 +1490,23 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <12> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 16.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 16.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 16.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 16.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 18.
 
-Underfull \vbox (badness 1314) has occurred while \output is active []
-
- [3
+[3
 
  <./Pictures/head1.png>] [4]
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 14
-2.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+4.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1515,34 +1514,35 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 14
-2.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+4.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 14
-2.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 14
-2.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 142.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 144.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 142.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 144.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 142.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 144.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 142.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 144.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1551,15 +1551,18 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [5] [6]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 272.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 280.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 272.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 280.
+
+Underfull \vbox (badness 1888) has occurred while \output is active []
+
  [7]
-[8])
+[8] [9])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [9]
+ [10]
 \openout2 = `first/avant_propos.aux'.
 
  (./first/avant_propos.tex
@@ -1570,9 +1573,9 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
- [10
+ [11
 
-]) [11]
+]) [12]
 \openout2 = `first/firststep.aux'.
 
 
@@ -1593,26 +1596,25 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
- [12
+ [13
 
 
-]) [13]
+]) [14]
 \openout2 = `chapter1/basecalculs.aux'.
 
- (./chapter1/basecalculs.tex [14
-
-
-
-]
+ (./chapter1/basecalculs.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
- [15]
-[16]
+ [15
+
+
+
+] [16]
 Chapter 1.
 \c@ttl@toc@default=\count455
-<Pictures/head2.png, id=1365, 1027.6794pt x 514.0806pt>
+<Pictures/head2.png, id=1389, 1027.6794pt x 514.0806pt>
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 2.
@@ -1626,7 +1628,7 @@ Overfull \hbox (100.60786pt too wide) in paragraph at lines 37--38
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<Pictures/../Pictures/sympyGammaMain.png, id=1370, 1350.04375pt x 612.2875pt>
+<Pictures/../Pictures/sympyGammaMain.png, id=1394, 1350.04375pt x 612.2875pt>
 File: Pictures/../Pictures/sympyGammaMain.png Graphic file (type png)
 <use Pictures/../Pictures/sympyGammaMain.png>
 Package pdftex.def Info: Pictures/../Pictures/sympyGammaMain.png  used on input
@@ -1638,7 +1640,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
  []
 
 [19]
-<Pictures/../Pictures/sympyarch.png, id=1411, 336.50719pt x 321.45094pt>
+<Pictures/../Pictures/sympyarch.png, id=1435, 336.50719pt x 321.45094pt>
 File: Pictures/../Pictures/sympyarch.png Graphic file (type png)
 <use Pictures/../Pictures/sympyarch.png>
 Package pdftex.def Info: Pictures/../Pictures/sympyarch.png  used on input line
@@ -1871,7 +1873,7 @@ File: Pictures/head2.png Graphic file (type png)
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
 [45] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
@@ -2323,18 +2325,18 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 134.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/1_1.png, id=1869, 529.98pt x 469.755pt>
+<Pictures/1_1.png, id=1895, 529.98pt x 469.755pt>
 File: Pictures/1_1.png Graphic file (type png)
 <use Pictures/1_1.png>
 Package pdftex.def Info: Pictures/1_1.png  used on input line 136.
 (pdftex.def)             Requested size: 264.98933pt x 234.87692pt.
 [81 <./Pictures/1_1.png>]
-<Pictures/1_2.png, id=1878, 318.18875pt x 316.18124pt>
+<Pictures/1_2.png, id=1905, 318.18875pt x 316.18124pt>
 File: Pictures/1_2.png Graphic file (type png)
 <use Pictures/1_2.png>
 Package pdftex.def Info: Pictures/1_2.png  used on input line 166.
 (pdftex.def)             Requested size: 318.18796pt x 316.18047pt.
-<Pictures/1_3.png, id=1879, 326.21875pt x 165.61874pt>
+<Pictures/1_3.png, id=1906, 326.21875pt x 165.61874pt>
 File: Pictures/1_3.png Graphic file (type png)
 <use Pictures/1_3.png>
 Package pdftex.def Info: Pictures/1_3.png  used on input line 175.
@@ -2384,7 +2386,7 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/../Pictures/Figure_1.png, id=1922, 462.528pt x 346.896pt>
+<Pictures/../Pictures/Figure_1.png, id=1948, 462.528pt x 346.896pt>
 File: Pictures/../Pictures/Figure_1.png Graphic file (type png)
 <use Pictures/../Pictures/Figure_1.png>
 Package pdftex.def Info: Pictures/../Pictures/Figure_1.png  used on input line 
@@ -2585,16 +2587,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4BE07E02CB541CEFB812EB050D54C467;15896.
+(rerunfilecheck)             Checksum: 6AC0ACB8ACEFA1360D9E6C539D3ED2D5;16203.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40876 strings out of 494409
- 760963 string characters out of 6173287
- 1360168 words of memory out of 5000000
- 42945 multiletter control sequences out of 15000+600000
+ 40886 strings out of 494409
+ 761123 string characters out of 6173287
+ 1360169 words of memory out of 5000000
+ 42949 multiletter control sequences out of 15000+600000
  675154 words of font info for 353 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  58i,15n,82p,1188b,3480s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2614,10 +2616,10 @@ ist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (121 pages, 13992578 bytes).
+Output written on main.pdf (121 pages, 13994491 bytes).
 PDF statistics:
- 2298 PDF objects out of 2487 (max. 8388607)
- 1922 compressed objects within 20 object streams
- 612 named destinations out of 1000 (max. 500000)
- 62162 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2326 PDF objects out of 2487 (max. 8388607)
+ 1946 compressed objects within 20 object streams
+ 618 named destinations out of 1000 (max. 500000)
+ 62194 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -38,10 +38,22 @@ exemple, le polynôme p est irréductible sur les entiers, mais se factorise sur
 est résoluble par radicaux, c’est-à-dire que ses solutions s’expriment à partir des coefficients de $p$ au moyen des quatre opérations et de l'extraction de racine n-ième, si et seulement si le groupe de Galois de $p$ est résoluble.
 \section{ Fractions rationnelles}
  \subsection{ Construction et propriétés élémentaires}
- La division de deux polynômes (sur un anneau intègre) produit une fraction rationnelle. Son parent est le corps des fractions de l’anneau de polynômes, qui peut s’obtenir par Frac(R) :
+ La division de deux polynômes (sur un anneau intègre) produit une fraction rationnelle. Son parent est le corps des fractions de l’anneau de polynômes, qui peut s’obtenir par :
+ \begin{python}
+ \end{python}
+ On observe que la simplification n’est pas automatique. C’est parce que $RR$ est un anneau inexact, c’est-à-dire dont les éléments s’interprètent comme des approximations d’objets mathématiques. La méthode \textcolor{blue}{reduce} met la fraction sous forme réduite. Elle ne renvoie pas de nouvel objet, mais modifie la fraction rationnelle existante :
+ \begin{python}
+ \end{python}
+Sur un anneau exact, en revanche, les fractions rationnelles sont automatiquement réduites. Les opérations sur les fractions rationnelles sont analogues à celles sur les polynômes. Celles qui ont un sens dans les deux cas (substitution, dérivée, factorisation...) s’utilisent de la même façon. Le tableau 7.6 énumère quelques autres
+méthodes utiles. La décomposition en éléments simples et surtout la reconstruction
+rationnelle méritent quelques explications.
+ \subsection{Décomposition en éléments simples}
+ Sage calcule la décomposition en éléments simples d’une fraction rationnelle $a \diagup b$
+ \subsection{Reconstruction rationnelle}
+ Un analogue de la reconstruction rationnelle présentée en §6.1.3 existe pour les
+polynômes à coefficients dans $A = \mathbb{Z} \diagup n\mathbb{Z}$
  \section{Séries formelles}
- Une série formelle est une série enGroupes de matrices.tière vue comme une simple suite de coefficients, sans considération de convergence. Plus précisément, si $A$ est un anneau commutatif, on appelle séries formelles (en anglais formal
- power series) d’indéterminée  à coefficients dans  les sommes formelles $\sum_{n=0}^{\infty} a_{n}x^{n}$ où ($a_{n}$) est une suite quelconque d’éléments de $A$. Munies des opérations d’addition et de multiplication naturelles
+ Une série formelle est une série en Groupes de matrices.tière vue comme une simple suite de coefficients, sans considération de convergence. Plus précisément, si $A$ est un anneau commutatif, on appelle séries formelles (en anglais formal  power series) d’indéterminée  à coefficients dans  les sommes formelles $\sum_{n=0}^{\infty} a_{n}x^{n}$ où ($a_{n}$) est une suite quelconque d’éléments de $A$. Munies des opérations d’addition et de multiplication naturelles
 \[
  \sum_{n=0}^{\infty} a_{n}x^{n} + \sum_{n=0}^{\infty} b_{n}x^{n} = \sum_{n=0}^{\infty} \left(a_{n}+b_{n}\right) x^{n} 
  \],
