@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/TeX Live for SUSE Linux) (preloaded format=pdflatex 2018.10.24)  8 JAN 2019 10:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/TeX Live for SUSE Linux) (preloaded format=pdflatex 2018.10.24)  8 JAN 2019 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1459,7 +1459,7 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <35> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 47.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <35> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 47.
-<Pictures/esahubble.png, id=802, 614.295pt x 794.97pt>
+<Pictures/esahubble.png, id=823, 614.295pt x 794.97pt>
 File: Pictures/esahubble.png Graphic file (type png)
 <use Pictures/esahubble.png>
 Package pdftex.def Info: Pictures/esahubble.png  used on input line 57.
@@ -1468,7 +1468,7 @@ Package pdftex.def Info: Pictures/esahubble.png  used on input line 57.
 
 {/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Pictures/esahubble.png
 >] [2]
-<Pictures/head1.png, id=815, 1027.6794pt x 514.0806pt>
+<Pictures/head1.png, id=835, 1027.6794pt x 514.0806pt>
 File: Pictures/head1.png Graphic file (type png)
 <use Pictures/head1.png>
 Package pdftex.def Info: Pictures/head1.png  used on input line 69.
@@ -1548,7 +1548,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 234.
  [6] [7]
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <10> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 344.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 346.
  [8])
 \tf@toc=\write7
 \openout7 = `main.toc'.
@@ -1606,7 +1606,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
  [15] [16]
 Chapter 1.
 \c@ttl@toc@default=\count454
-<Pictures/head2.png, id=1287, 1027.6794pt x 514.0806pt>
+<Pictures/head2.png, id=1322, 1027.6794pt x 514.0806pt>
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 2.
@@ -1620,7 +1620,7 @@ Overfull \hbox (100.60786pt too wide) in paragraph at lines 37--38
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<Pictures/../Pictures/sympyGammaMain.png, id=1292, 1350.04375pt x 612.2875pt>
+<Pictures/../Pictures/sympyGammaMain.png, id=1327, 1350.04375pt x 612.2875pt>
 File: Pictures/../Pictures/sympyGammaMain.png Graphic file (type png)
 <use Pictures/../Pictures/sympyGammaMain.png>
 Package pdftex.def Info: Pictures/../Pictures/sympyGammaMain.png  used on input
@@ -1632,7 +1632,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
  []
 
 [19]
-<Pictures/../Pictures/sympyarch.png, id=1334, 336.50719pt x 321.45094pt>
+<Pictures/../Pictures/sympyarch.png, id=1369, 336.50719pt x 321.45094pt>
 File: Pictures/../Pictures/sympyarch.png Graphic file (type png)
 <use Pictures/../Pictures/sympyarch.png>
 Package pdftex.def Info: Pictures/../Pictures/sympyarch.png  used on input line
@@ -2321,18 +2321,18 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 134.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/1_1.png, id=1750, 529.98pt x 469.755pt>
+<Pictures/1_1.png, id=1786, 529.98pt x 469.755pt>
 File: Pictures/1_1.png Graphic file (type png)
 <use Pictures/1_1.png>
 Package pdftex.def Info: Pictures/1_1.png  used on input line 136.
 (pdftex.def)             Requested size: 264.98933pt x 234.87692pt.
 [75 <./Pictures/1_1.png>]
-<Pictures/1_2.png, id=1759, 318.18875pt x 316.18124pt>
+<Pictures/1_2.png, id=1795, 318.18875pt x 316.18124pt>
 File: Pictures/1_2.png Graphic file (type png)
 <use Pictures/1_2.png>
 Package pdftex.def Info: Pictures/1_2.png  used on input line 166.
 (pdftex.def)             Requested size: 318.18796pt x 316.18047pt.
-<Pictures/1_3.png, id=1760, 326.21875pt x 165.61874pt>
+<Pictures/1_3.png, id=1796, 326.21875pt x 165.61874pt>
 File: Pictures/1_3.png Graphic file (type png)
 <use Pictures/1_3.png>
 Package pdftex.def Info: Pictures/1_3.png  used on input line 175.
@@ -2382,13 +2382,63 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
+[83]
 LaTeX Font Info:    Font shape `T1/pag/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/pag/b/it' tried instead on input line 15.
+(Font)              Font shape `T1/pag/b/it' tried instead on input line 31.
 LaTeX Font Info:    Font shape `T1/pag/b/it' in size <10.95> not available
-(Font)              Font shape `T1/pag/db/it' tried instead on input line 15.
+(Font)              Font shape `T1/pag/db/it' tried instead on input line 31.
 LaTeX Font Info:    Font shape `T1/pag/db/it' in size <10.95> not available
-(Font)              Font shape `T1/pag/db/sl' tried instead on input line 15.
-[83]) [84]
+(Font)              Font shape `T1/pag/db/sl' tried instead on input line 31.
+Package mdframed Info: mdframed works in twoside mode on input line 32.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 32.
+Package mdframed Info: mdframed works in twoside mode on input line 34.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 34.
+Package mdframed Info: mdframed works in twoside mode on input line 38.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 38.
+Package mdframed Info: mdframed works in twoside mode on input line 44.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 44.
+Package mdframed Info: mdframed works in twoside mode on input line 51.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 51.
+Package mdframed Info: mdframed works in twoside mode on input line 54.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 54.
+Package mdframed Info: mdframed works in twoside mode on input line 57.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 57.
+ [84]
+Package mdframed Info: mdframed works in twoside mode on input line 62.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 62.
+Package mdframed Info: mdframed works in twoside mode on input line 65.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 65.
+Package mdframed Info: mdframed works in twoside mode on input line 73.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 73.
+Package mdframed Info: mdframed works in twoside mode on input line 76.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 76.
+Package mdframed Info: mdframed works in twoside mode on input line 79.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 79.
+ [85]) [86]
 \openout2 = `chapter5/numintgration.aux'.
 
  (./chapter5/numintgration.tex
@@ -2397,7 +2447,7 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures/../Pictures/Figure_1.png, id=1812, 462.528pt x 346.896pt>
+<Pictures/../Pictures/Figure_1.png, id=1877, 462.528pt x 346.896pt>
 File: Pictures/../Pictures/Figure_1.png Graphic file (type png)
 <use Pictures/../Pictures/Figure_1.png>
 Package pdftex.def Info: Pictures/../Pictures/Figure_1.png  used on input line 
@@ -2406,7 +2456,7 @@ Package pdftex.def Info: Pictures/../Pictures/Figure_1.png  used on input line
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85
+ [87
 
 
 
@@ -2415,7 +2465,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 46.
 
-) [86 <./Pictures/../Pictures/Figure_1.png>]
+) [88 <./Pictures/../Pictures/Figure_1.png>]
 \openout2 = `chapter5/integrtransform.aux'.
 
  (./chapter5/integrtransform.tex
@@ -2444,31 +2494,39 @@ Package mdframed Info: mdframed works in twoside mode on input line 12.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 12.
+
+LaTeX Warning: Reference `mdf@pagelabel-76' on page 89 undefined on input line 
+13.
+
 Package mdframed Info: mdframed works in twoside mode on input line 17.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 17.
-[87
+
+LaTeX Warning: Reference `mdf@pagelabel-77' on page 89 undefined on input line 
+18.
+
+[89
 
 
 
-] [88]
+] [90]
 Chapter 23.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 44.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-) [89
+) [91
 
-] [90
+] [92
 
 ]
 \openout2 = `chapter6/combina.aux'.
 
- (./chapter6/combina.tex [91
+ (./chapter6/combina.tex [93
 
 
-] [92] [93] [94
+] [94] [95] [96
 
 ]
 Chapter 24.
@@ -2476,7 +2534,7 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 6.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[95] [96
+[97] [98
 
 ]
 Chapter 25.
@@ -2489,7 +2547,7 @@ Overfull \hbox (7.00691pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[97] [98
+[99] [100
 
 ]
 Chapter 26.
@@ -2497,10 +2555,10 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 17.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-) [99] [100
+) [101] [102
 
 
-] [101] [102]
+] [103] [104]
 \openout2 = `chapter7/chaos.aux'.
 
  (./chapter7/chaos.tex
@@ -2509,13 +2567,13 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-) [103
+) [105
 
 
 ]
 \openout2 = `chapter7/quantum.aux'.
 
- (./chapter7/quantum.tex [104
+ (./chapter7/quantum.tex [106
 
 
 
@@ -2525,18 +2583,18 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-) [105] [106
+) [107] [108
 
 
-] [107] [108]
+] [109] [110]
 Chapter 29.
 File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 158.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[109
+[111
 
-] [110
+] [112
 
 ]
 Chapter 30.
@@ -2544,7 +2602,7 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 159.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[111] [112
+[113] [114
 
 ]
 Chapter 31.
@@ -2552,7 +2610,7 @@ File: Pictures/head2.png Graphic file (type png)
 <use Pictures/head2.png>
 Package pdftex.def Info: Pictures/head2.png  used on input line 162.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-[113]
+[115]
 \openout2 = `annexe/optimization/cython.aux'.
 
  (./annexe/optimization/cython.tex
@@ -2565,15 +2623,15 @@ Overfull \hbox (143.8083pt too wide) in paragraph at lines 27--29
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [114
+) [116
 
 ]
 \openout2 = `annexe/optimization/theano.aux'.
 
- (./annexe/optimization/theano.tex) [115
+ (./annexe/optimization/theano.tex) [117
 
 
-] [116
+] [118
 
 
 ]
@@ -2585,7 +2643,7 @@ Package pdftex.def Info: Pictures/head2.png  used on input line 171.
 \tf@ptc=\write8
 \openout8 = `main.ptc'.
 
-[117]
+[119]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
  (./main.aux (./first/avant_propos.aux) (./first/firststep.aux)
@@ -2603,16 +2661,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 48C1182A71FD32B472009156E5E653FB;14903.
+(rerunfilecheck)             Checksum: 58DFFB09E948DA9B2DC5A48F66AC563C;15345.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40084 strings out of 493685
- 745975 string characters out of 6155429
- 1346636 words of memory out of 5000000
- 42185 multiletter control sequences out of 15000+600000
+ 40133 strings out of 493685
+ 746741 string characters out of 6155429
+ 1346898 words of memory out of 5000000
+ 42202 multiletter control sequences out of 15000+600000
  680224 words of font info for 359 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  58i,15n,82p,10517b,2082s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2631,10 +2696,10 @@ hare/texmf/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf/fonts/type1/urw/sy
 mbol/usyr.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (117 pages, 13993250 bytes).
+Output written on main.pdf (119 pages, 14005326 bytes).
 PDF statistics:
- 2189 PDF objects out of 2487 (max. 8388607)
- 1829 compressed objects within 19 object streams
- 580 named destinations out of 1000 (max. 500000)
- 66666 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2257 PDF objects out of 2487 (max. 8388607)
+ 1890 compressed objects within 19 object streams
+ 612 named destinations out of 1000 (max. 500000)
+ 66706 words of extra memory for PDF output out of 74296 (max. 10000000)
 

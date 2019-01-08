@@ -11,10 +11,77 @@ autant une initiation à des méthodes qui font partie d'un domaine de recherche
 
 \section{Matrices pleines}
 class sympy.matrices.dense.\textbf{MutableDenseMatrix}
+\subsection{Résolution de systèmes linéaires}
+ \begin{flushleft}
+ \textbf{Méthode à éviter} Ce qu'il ne faut (presque) jamais faire, c'est utiliser les formules de Cramer. Un raisonnement par récurrence montre que le coût du calcul du déterminant d'une matrice $n \times n$ en utilisant les formules de Cramer est de
+l'ordre n! multiplications (et autant d'additions). Pour résoudre un système de taille $n$, ce sont $n + 1$ déterminants qu'il faut calculer. Prenons $n = 7$ :
+\end{flushleft}
+\begin{python}
+In [1]: from sympy import factorial
+In [2]: n = 7
+In [3]: (n+1)*factorial(n+1)
+Out[3]: 40320
+ \end{python}
+ \begin{flushleft}
+  \textbf{Méthodes pratiques.} La résolution de systèmes linéaires $Ax = b$ est le plus souvent basée sur une factorisation de la matrice $A$ en un produit de deux matrices $A = M_{1}M_{2}$ , $M_{1} et M_{2}$ définissant des systèmes linéaires faciles à résoudre. Pour résoudre $Ax = b$, on résout alors successivement $M_{1}y = b$, puis $M_{2}x = y$.
+ 
+ Par exemple $M_{1}$ et $M_{2}$ peuvent être deux matrices triangulaires ; dans ce cas, une fois la factorisation effectuée, il faut résoudre deux systèmes linéaires à matrice triangulaire. Le coût de la factorisation est bien plus élevé que celui de la résolution des deux systèmes triangulaires (par exemple $O\left(n^{3}\right)$ pour la factorisation \textit{LU} contre $O\left(n^{2}\right)$ pour la résolution des systèmes triangulaires). Il convient donc, dans le cas de la résolution de plusieurs systèmes avec la même matrice, de ne calculer qu'une seule fois la décomposition. Bien entendu, on n'inverse jamais une matrice pour résoudre un système linéaire, l'inversion demandant la factorisation de la matrice, puis la résolution de n systèmes au lieu d'un seul.
+ \end{flushleft}
 \subsection{Résolution directe}
 \subsection{La décomposition \textit{LU}}
+\begin{exercise}
+\end{exercise}
+\begin{exercise}
+
+\end{exercise}
+\subsection{La décomposition de Cholesky}
+\begin{definition}
+Une matrice symétrique $A$ est dite définie positive si pour tout vecteur $x$ non nul, ${}^t \!xAx>0$
+\end{definition}
+\begin{example}
+SymPy utilise une méthode pour déterminer oui ou non une matrice donnée est positive ou pas.
+\end{example}
+\begin{definition}
+Il existe une matrice triangulaire inférieure $N$ telle que $A = N^{t}N$. Cette factorisation est appelée décomposition de Cholesky. 
+\end{definition}
+Dans SymPy, elle se calcule en appelant la méthode cholesky()
+\begin{example}
+
+\end{example}
+\begin{exercise}
+A
+\end{exercise}
+\begin{exercise}
+A
+\end{exercise}
+\begin{exercise}
+A
+\end{exercise}
+\subsection{Décomposition \textit{QR}}
+Soit $A \in \mathbb{R}^{n \times m}$, avec $n\geq m$ il s'agit ici de trouver des matrices $Q$ et $R$ telles que $A=QR$ ou $Q \in \mathbb{R}^{n \times m}$ est orthogonale $\left( {}^t\!Q.Q = I\right)$ et $R \in \mathbb{R}^{n \times m}$ est triangulaire supérieure. Bien sur, une fois la décomposition calculé, on peut s'en servir pour résoudre des systèmes linéaires si la matrice $A$ est carrée et inversible. 
+\begin{exercise}
+A
+\end{exercise}
+\begin{exercise}
+A
+\end{exercise}
+\subsection{Valeurs propres, vecteurs propres}
+Jusqu'à présent, nous n'avons utilisé que des méthodes directes (décomposition LU , QR, de Cholesky), qui fournissent une solution en un nombre fini d'opérations (les quatre opérations élémentaires, plus la racine carrée pour la décomposition de
+Cholesky). Ce ne peut pas être le cas pour le calcul des valeurs propres : en effet, on peut associer à tout polynôme une matrice dont les valeurs propres sont les racines du polynôme ; mais on sait qu'il n'existe pas de formule explicite pour le calcul des racines d'un polynôme de degré supérieur ou égal à $5$, formule que donnerait précisément une méthode directe. D'autre part, former le polynôme caractéristique pour en calculer les racines serait extrêmement coûteux; notons toutefois que l'algorithme de Faddeev-Le Verrier permet de calculer le polynôme caractéristique d'une matrice de taille $n$ en $O\left(n^{4}\right)$ opérations, ce qui est malgré tout considéré comme bien trop coûteux. Les méthodes numériques
+utilisées pour le calcul de valeurs et de vecteurs propres sont toutes itératives. On va donc construire des suites convergeant vers les valeurs propres (et les vecteurs propres) et arrêter les itérations quand on sera assez proche de la
+solution
+\begin{exercise}
+A
+\end{exercise}
+\begin{exercise}
+A
+\end{exercise}
+\begin{exercise}
+A
+\end{exercise}
 \section{Matrices creuses}
 Les matrices creuses sont très fréquentes en calcul scientifique : le caractère creux (sparsity en anglais) est une propriété recherchée qui permet de résoudre des problèmes de grande taille, inaccessibles avec des matrices pleines
+
 \subsection{Origine des systèmes creux}
 \begin{flushright}
 \textbf{Problèmes aux limites.} L'origine la plus fréquente est la discrétisation d'équations aux dérivées partielles. Considérons par exemple l'équation de Poisson (équation de la chaleur stationnaire) :
@@ -22,3 +89,22 @@ Les matrices creuses sont très fréquentes en calcul scientifique : le caractè
 \[
 -\Delta u = f
 \]
+où $u= u\left(x, y\right)$, $f=f\left(x, y\right)$,
+\[
+\Delta u := \frac{\partial^{2}u}{\partial x^{2}} + \frac{\partial^{2}u}{\partial y^{2}}
+\]
+L'équation est posée dans le carré $\left[0, 1\right]^{2}$, et munie de conditions aux limites $u=0$ sur le bord du carré. L'analogue en dimension un est le problème
+\begin{equation}
+-\frac{\partial^{2}u}{\partial x^{2}} = f,
+\end{equation}
+avec $u\left(0\right) = u\left(1\right) = 0$.
+
+Une des méthodes les plus simples pour approcher la solution de cette équation consiste à utiliser la méthode des différences finies : on découpe l'intervalle $\left[0, 1\right]$ en un nombre fini $N$ d'intervalles de pas h constant. On note $u_{i}$ la valeur approchée de u au point $x_{i} = ih$. On approche la dérivée de $u$ par $\left(u_{i+1} - u_{i}\right) \diagup h$ et sa dérivée seconde par
+\[
+\frac{\left(u_{i+1}-u_{i}\right)/h - \left(u_{i}-u_{i+1}\right)/h} {h} = \frac{u_{i+1}-2u_{i}+u_{i-1}}{h^{2}}
+\]
+On voit immédiatement que les $u_{0},..., u_{N}$ , qui approchent $u$ aux points $ih$, satisfont un système linéaire n'ayant que $3$ termes non nuls par ligne (et dont on peut vérifier que la matrice est symétrique définie positive).
+\subsection{Valeurs propres, vecteurs propres}
+\begin{flushright}
+\textbf{La méthode de la puissance itérée.} La méthode de la puissance itérée est particulièrement adaptée au cas de très grandes matrices creuses ; en effet il suffit de savoir effectuer des produits matrice-vecteur (et des produits scalaires) pour savoir implanter l'algorithme. À titre d'exemple, revenons aux marches aléatoires sur un graphe creux, et calculons la distribution stationnaire, par la méthode de la puissance itérée
+\end{flushright}

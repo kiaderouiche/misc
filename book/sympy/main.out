@@ -163,36 +163,41 @@
 \BOOKMARK [0][-]{chapter.19}{Nombres \340 virgule flottante}{part.5}% 163
 \BOOKMARK [0][-]{chapter.20}{Alg\350bre lin\351aire num\351rique}{part.5}% 164
 \BOOKMARK [1][-]{section.20.1}{Matrices pleines}{chapter.20}% 165
-\BOOKMARK [2][-]{subsection.20.1.1}{R\351solution directe}{section.20.1}% 166
-\BOOKMARK [2][-]{subsection.20.1.2}{La d\351composition LU}{section.20.1}% 167
-\BOOKMARK [1][-]{section.20.2}{Matrices creuses}{chapter.20}% 168
-\BOOKMARK [2][-]{subsection.20.2.1}{Origine des syst\350mes creux}{section.20.2}% 169
-\BOOKMARK [0][-]{chapter.21}{Int\351gration num\351rique}{part.5}% 170
-\BOOKMARK [1][-]{subsection.21.0.1}{Equation and Text}{chapter.21}% 171
-\BOOKMARK [0][-]{chapter.22}{Transformation d'int\351grale}{part.5}% 172
-\BOOKMARK [1][-]{section.22.1}{Transformation de Fourier}{chapter.22}% 173
-\BOOKMARK [2][-]{subsection.22.1.1}{Transformation de Fourier inverse}{section.22.1}% 174
-\BOOKMARK [1][-]{section.22.2}{Transformation de Laplace}{chapter.22}% 175
-\BOOKMARK [1][-]{section.22.3}{Transformation de Mellin}{chapter.22}% 176
-\BOOKMARK [2][-]{subsection.22.3.1}{Transformation de melin inverse}{section.22.3}% 177
-\BOOKMARK [1][-]{section.22.4}{Transfomation de Henkel}{chapter.22}% 178
-\BOOKMARK [2][-]{subsection.22.4.1}{Transformation de Henkel inverse}{section.22.4}% 179
-\BOOKMARK [0][-]{chapter.23}{\311quations non lin\351aires}{part.5}% 180
-\BOOKMARK [1][-]{section.23.1}{\311quations alg\351briques}{chapter.23}% 181
-\BOOKMARK [1][-]{section.23.2}{Figure}{chapter.23}% 182
-\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 183
-\BOOKMARK [0][-]{chapter.24}{Permutations}{part.6}% 184
-\BOOKMARK [0][-]{chapter.25}{Groupe symmetrique}{part.6}% 185
-\BOOKMARK [0][-]{chapter.26}{Groupe Ab\351lien}{part.6}% 186
-\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 187
-\BOOKMARK [0][-]{chapter.27}{Chaos}{part.7}% 188
-\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 189
-\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 190
-\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 191
-\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 192
-\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 193
-\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 194
-\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 195
-\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 196
-\BOOKMARK [1][-]{section.32.1}{Bibliographie}{chapter.32}% 197
-\BOOKMARK [1][-]{section.32.2}{Index}{chapter.32}% 198
+\BOOKMARK [2][-]{subsection.20.1.1}{R\351solution de syst\350mes lin\351aires}{section.20.1}% 166
+\BOOKMARK [2][-]{subsection.20.1.2}{R\351solution directe}{section.20.1}% 167
+\BOOKMARK [2][-]{subsection.20.1.3}{La d\351composition LU}{section.20.1}% 168
+\BOOKMARK [2][-]{subsection.20.1.4}{La d\351composition de Cholesky}{section.20.1}% 169
+\BOOKMARK [2][-]{subsection.20.1.5}{D\351composition QR}{section.20.1}% 170
+\BOOKMARK [2][-]{subsection.20.1.6}{Valeurs propres, vecteurs propres}{section.20.1}% 171
+\BOOKMARK [1][-]{section.20.2}{Matrices creuses}{chapter.20}% 172
+\BOOKMARK [2][-]{subsection.20.2.1}{Origine des syst\350mes creux}{section.20.2}% 173
+\BOOKMARK [2][-]{subsection.20.2.2}{Valeurs propres, vecteurs propres}{section.20.2}% 174
+\BOOKMARK [0][-]{chapter.21}{Int\351gration num\351rique}{part.5}% 175
+\BOOKMARK [1][-]{subsection.21.0.1}{Equation and Text}{chapter.21}% 176
+\BOOKMARK [0][-]{chapter.22}{Transformation d'int\351grale}{part.5}% 177
+\BOOKMARK [1][-]{section.22.1}{Transformation de Fourier}{chapter.22}% 178
+\BOOKMARK [2][-]{subsection.22.1.1}{Transformation de Fourier inverse}{section.22.1}% 179
+\BOOKMARK [1][-]{section.22.2}{Transformation de Laplace}{chapter.22}% 180
+\BOOKMARK [1][-]{section.22.3}{Transformation de Mellin}{chapter.22}% 181
+\BOOKMARK [2][-]{subsection.22.3.1}{Transformation de melin inverse}{section.22.3}% 182
+\BOOKMARK [1][-]{section.22.4}{Transfomation de Henkel}{chapter.22}% 183
+\BOOKMARK [2][-]{subsection.22.4.1}{Transformation de Henkel inverse}{section.22.4}% 184
+\BOOKMARK [0][-]{chapter.23}{\311quations non lin\351aires}{part.5}% 185
+\BOOKMARK [1][-]{section.23.1}{\311quations alg\351briques}{chapter.23}% 186
+\BOOKMARK [1][-]{section.23.2}{Figure}{chapter.23}% 187
+\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 188
+\BOOKMARK [0][-]{chapter.24}{Permutations}{part.6}% 189
+\BOOKMARK [0][-]{chapter.25}{Groupe symmetrique}{part.6}% 190
+\BOOKMARK [0][-]{chapter.26}{Groupe Ab\351lien}{part.6}% 191
+\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 192
+\BOOKMARK [0][-]{chapter.27}{Chaos}{part.7}% 193
+\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 194
+\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 195
+\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 196
+\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 197
+\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 198
+\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 199
+\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 200
+\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 201
+\BOOKMARK [1][-]{section.32.1}{Bibliographie}{chapter.32}% 202
+\BOOKMARK [1][-]{section.32.2}{Index}{chapter.32}% 203

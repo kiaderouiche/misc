@@ -339,69 +339,79 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {20.1}Matrices pleines}{83}{section.20.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.1.1}R\IeC {\'e}solution directe}{83}{subsection.20.1.1}
+\contentsline {subsection}{\numberline {20.1.1}R\IeC {\'e}solution de syst\IeC {\`e}mes lin\IeC {\'e}aires}{83}{subsection.20.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.1.2}La d\IeC {\'e}composition \textit {LU}}{83}{subsection.20.1.2}
+\contentsline {subsection}{\numberline {20.1.2}R\IeC {\'e}solution directe}{84}{subsection.20.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {20.2}Matrices creuses}{83}{section.20.2}
+\contentsline {subsection}{\numberline {20.1.3}La d\IeC {\'e}composition \textit {LU}}{84}{subsection.20.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.2.1}Origine des syst\IeC {\`e}mes creux}{84}{subsection.20.2.1}
+\contentsline {subsection}{\numberline {20.1.4}La d\IeC {\'e}composition de Cholesky}{84}{subsection.20.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {21}Int\IeC {\'e}gration num\IeC {\'e}rique}{85}{chapter.21}
+\contentsline {subsection}{\numberline {20.1.5}D\IeC {\'e}composition \textit {QR}}{85}{subsection.20.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.0.1}Equation and Text}{86}{subsection.21.0.1}
+\contentsline {subsection}{\numberline {20.1.6}Valeurs propres, vecteurs propres}{85}{subsection.20.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {22}Transformation d'int\IeC {\'e}grale}{87}{chapter.22}
+\contentsline {section}{\numberline {20.2}Matrices creuses}{85}{section.20.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.1}Transformation de Fourier}{87}{section.22.1}
+\contentsline {subsection}{\numberline {20.2.1}Origine des syst\IeC {\`e}mes creux}{85}{subsection.20.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.1.1}Transformation de Fourier inverse}{87}{subsection.22.1.1}
+\contentsline {subsection}{\numberline {20.2.2}Valeurs propres, vecteurs propres}{86}{subsection.20.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.2}Transformation de Laplace}{87}{section.22.2}
+\contentsline {chapter}{\numberline {21}Int\IeC {\'e}gration num\IeC {\'e}rique}{87}{chapter.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.3}Transformation de Mellin}{87}{section.22.3}
+\contentsline {subsection}{\numberline {21.0.1}Equation and Text}{88}{subsection.21.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.3.1}Transformation de melin inverse}{88}{subsection.22.3.1}
+\contentsline {chapter}{\numberline {22}Transformation d'int\IeC {\'e}grale}{89}{chapter.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.4}Transfomation de Henkel}{88}{section.22.4}
+\contentsline {section}{\numberline {22.1}Transformation de Fourier}{89}{section.22.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.4.1}Transformation de Henkel inverse}{88}{subsection.22.4.1}
+\contentsline {subsection}{\numberline {22.1.1}Transformation de Fourier inverse}{89}{subsection.22.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {23}\IeC {\'E}quations non lin\IeC {\'e}aires}{89}{chapter.23}
+\contentsline {section}{\numberline {22.2}Transformation de Laplace}{89}{section.22.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {23.1}\IeC {\'E}quations alg\IeC {\'e}briques}{89}{section.23.1}
+\contentsline {section}{\numberline {22.3}Transformation de Mellin}{89}{section.22.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {23.2}Figure}{90}{section.23.2}
+\contentsline {subsection}{\numberline {22.3.1}Transformation de melin inverse}{90}{subsection.22.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VI\hspace {1em}Combinatoire}{91}{part.6}
+\contentsline {section}{\numberline {22.4}Transfomation de Henkel}{90}{section.22.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {24}Permutations}{95}{chapter.24}
+\contentsline {subsection}{\numberline {22.4.1}Transformation de Henkel inverse}{90}{subsection.22.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {25}Groupe symmetrique}{97}{chapter.25}
+\contentsline {chapter}{\numberline {23}\IeC {\'E}quations non lin\IeC {\'e}aires}{91}{chapter.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {26}Groupe Ab\IeC {\'e}lien}{99}{chapter.26}
+\contentsline {section}{\numberline {23.1}\IeC {\'E}quations alg\IeC {\'e}briques}{91}{section.23.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VII\hspace {1em}Physique}{101}{part.7}
+\contentsline {section}{\numberline {23.2}Figure}{92}{section.23.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {27}Chaos}{103}{chapter.27}
+\contentsline {part}{VI\hspace {1em}Combinatoire}{93}{part.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {28}M\'ecanique et information quantique}{105}{chapter.28}
+\contentsline {chapter}{\numberline {24}Permutations}{97}{chapter.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VIII\hspace {1em}Annexe}{107}{part.8}
+\contentsline {chapter}{\numberline {25}Groupe symmetrique}{99}{chapter.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {29}Programmation Orient\IeC {\'e}e Objet}{109}{chapter.29}
+\contentsline {chapter}{\numberline {26}Groupe Ab\IeC {\'e}lien}{101}{chapter.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {30}D\'ecorateurs}{111}{chapter.30}
+\contentsline {part}{VII\hspace {1em}Physique}{103}{part.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {31}Optimisation du code}{113}{chapter.31}
+\contentsline {chapter}{\numberline {27}Chaos}{105}{chapter.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {31.0.1}Cython}{114}{subsection.31.0.1}
+\contentsline {chapter}{\numberline {28}M\'ecanique et information quantique}{107}{chapter.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {31.0.2}Theano}{115}{subsection.31.0.2}
+\contentsline {part}{VIII\hspace {1em}Annexe}{109}{part.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {32}Interface graphique}{117}{chapter.32}
+\contentsline {chapter}{\numberline {29}Programmation Orient\IeC {\'e}e Objet}{111}{chapter.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {32.1}Bibliographie}{117}{section.32.1}
+\contentsline {chapter}{\numberline {30}D\'ecorateurs}{113}{chapter.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {32.2}Index}{117}{section.32.2}
+\contentsline {chapter}{\numberline {31}Optimisation du code}{115}{chapter.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {31.0.1}Cython}{116}{subsection.31.0.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {31.0.2}Theano}{117}{subsection.31.0.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {32}Interface graphique}{119}{chapter.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {32.1}Bibliographie}{119}{section.32.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {32.2}Index}{119}{section.32.2}
 \contentsfinish 
