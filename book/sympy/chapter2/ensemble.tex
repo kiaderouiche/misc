@@ -1,18 +1,15 @@
-\chapter{Logique}\index{Logique}
-La bibliothèque fournit un module pour faire de la logique mathématique indépendamment vue comme extension
-des classes fournit par le builtins de Python.
-\chapter{Théorie des ensemble}\index{Théorie des ensemble}
-\section{Un petit rappel pour les ensembles dans Python}\index{Ensemble dans Python}
-La théorie d'ensemble existe sous Python, il suffit simplement de tapez 
+\chapter{Théorie des ensembles}\index{Théorie des ensemble}
+\section{Limite de l'utilisation de set de la bibliothèque standard Python}\index{Un petit rappel pour les ensembles dans Python}
+La bibliothèque standard dispose de la structure de donnée set, qui crée un ensemble $ens = ()$ ou $ens = {}$ de variable, et permet de le manipulez
 \begin{python}
-ens = set()
+ens = set() ou ens 
 \end{python}
+
 ou écrire simplement 
 \begin{python}
- ens = ens = {1, 2, 4}
+ ens = {1, 2, 4}
 \end{python}
-\section{Théorie des ensembles}\index{Théorie des ensembles}
-La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que dans le cadre de SymPy elle s'appui entièrement sur Python avec certain modification, avec la collection d'objet.
+La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que dans le cadre de SymPy elle s'appuie entièrement sur Python avec certain modification, avec la collection d'objet.
 \\
 
 \textit{La fonction set accepte donc en argument un objet de type quelconque et s'efforce de le traduire dans un ensemble. Lorsqu'on ne passe aucun argument à set (option 2), ou qu'on lui passe une liste vide, set renvoie naturellement un ensemble vide; on aurait pu utiliser aussi bien, de la même manière, set(()), set({}), ou même set('') pour arriver au même résultat.}
@@ -51,55 +48,25 @@ class MyClass(Yourclass):
 
 \end{solution}
 %%
-\subsection{Logique}
-\begin{exercise}
-Dans la carte de Karnaugh ci-dessous, $X$ indique un terme sans intérêt. Quelle est la forme minimale de la fonction représentée par la carte de Karnaugh?
-\end{exercise}
-\subsection{Ensembles}
-La notion d'objet immuable en Python est fondamentale,  une structure qui rappel les ensembles en mathématiques que soit fini ou infini est \textit{set}, importante, bien que
-dans le cadre de SymPy elle s'appui entièrement sur Python avec certain modification, avec la collection d'objet.
-\\
-
-\textit{La fonction set accepte donc en argument un objet de type quelconque et s'efforce de le traduire dans un ensemble. Lorsqu'on ne passe aucun argument à set (option 2), ou qu'on lui passe une liste vide, set renvoie naturellement un ensemble vide; on aurait pu utiliser aussi bien, de la même manière, set(()), set({}), ou même set('') pour arriver au même résultat.}
-
-	\begin{exercise}
-		Définir deux ensembles $X = \lbrace a, b, c, d\rbrace$ et  $Y = \lbrace s, b, d\rbrace$ , puis 			affichez les résultats suivants :
- 		\begin{enumerate}
-  			 \item les ensembles initiaux.
-  			 \item le test d’appartenance de l’élément $c$ à $X$.
-  			 \item le test d’appartenance de l’élément $a$ à $Y$.
-  			 \item les ensembles $X - Y$ et $Y - X$.
-  			 \item l’ensemble $X \cup Y$ (union).
-  			 \item l'ensemble $X \cap Y$ (intersection).
-	 \end{enumerate}
-	\end{exercise}
-
-\begin{solution}
-Il faut noter qu'il existe une solution qui se base sur le Python builtuints en utilisant la structure de donnée \textit{sets}. Mais comme en n'est dans la logique en utilise 
+\section{Produit cartésien}
+ \begin{definition}
+ Pour tout ensemble $A$ et tout $B$, il existe $P$ dont les éléments sont tous les couples dont la première composante appartient à $A$ et la seconde à $B$:
+ \[
+ \forall A \forall B
+ \]
+ 
+ \end{definition}
+\section{L'algèbre de Boole comme ensemble}
+ 
+ \begin{exercise}
+ 
+ \end{exercise}
+\section{Mesure sur $\left[0,1\right] $ }
+Premier exemple sur la mesure de l'ensemble  $\left[0,1\right]$
 \begin{python}
-from sympy import FiniteSet
-
-X = FiniteSet('a', 'b', 'c', 'd')
-Y = FiniteSet('s', 'b', 'd')
-
-class MyClass(Yourclass):
-    def __init__(self, my, yours):
-        bla = '5 1 2 3 4'
-        print bla
+In [1]: from sympy import Interval, Union
+In [2]: Interval(0, 1).measure
+Out[2]: 1
+In [3]: Union(Interval(-0, 1), Interval(2, 3)).measure                          
+Out[3]: 2
 \end{python}
-\begin{python}
-class MyClass(Yourclass):
-    def __init__(self, my, yours):
-        bla = '5 1 2 3 4'
-        print bla
-\end{python}
-
-\end{solution}
-%\begin{exercise}
-%Si $P$, $Q$, $R$ sont des sous-ensembles de l'ensemble universel $U$, alors $(P \cap Q\capR) \cup (P^{c} \cap Q \cap R)\cup(Q^{x}\cupR^{x})$ si
-%\begin{enumerate}
-%  \item  
-%  \item 
-%  \item
-%\end{enumerate}
-%\end{exercise}

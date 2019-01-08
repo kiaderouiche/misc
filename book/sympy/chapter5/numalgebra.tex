@@ -1,0 +1,24 @@
+\chapter{Algèbre linéaire numérique}
+Dans ce chapitre on traite les aspects numériques de l'algèbre linéaire, algèbre linéaire symbolique étant présentée au chapitre 9. L'algèbre linéaire numérique joue un rôle prépondérant dans ce qu'il est convenu d'appeler le calcul scientifique, appellation impropre pour désigner des problèmes dont l'étude mathématique relève de l'analyse numérique : résolution approchée de systèmes d'équations différentielles, résolution approchée d'équations aux dérivées partielles, optimisation, traitement du signal, etc. La résolution numérique de la plupart de ces problèmes, même linéaires, est fondée sur des algorithmes formés de boucles imbriquées ; au plus profond de ces boucles, il y a très souvent la résolution d'un système linéaire. On utilise souvent
+la méthode de Newton pour résoudre des systèmes algébriques non linéaires : là encore il faut résoudre des systèmes linéaires. 
+La performance et la robustesse des méthodes d'algèbre linéaire numérique sont donc cruciales.
+
+
+Ce chapitre comporte deux sections: la première section (§13.2) traite, sans être exhaustive, des problèmes les 
+plus classiques (résolution de systèmes, calcul de valeurs propres, moindres carrés) ; dans la deuxième section on 
+montre comment résoudre certains problèmes si on fait l'hypothèse que les matrices sont creuses. Cette dernière partie se veut
+autant une initiation à des méthodes qui font partie d'un domaine de recherche actif qu'un guide d'utilisation.
+
+\section{Matrices pleines}
+class sympy.matrices.dense.\textbf{MutableDenseMatrix}
+\subsection{Résolution directe}
+\subsection{La décomposition \textit{LU}}
+\section{Matrices creuses}
+Les matrices creuses sont très fréquentes en calcul scientifique : le caractère creux (sparsity en anglais) est une propriété recherchée qui permet de résoudre des problèmes de grande taille, inaccessibles avec des matrices pleines
+\subsection{Origine des systèmes creux}
+\begin{flushright}
+\textbf{Problèmes aux limites.} L'origine la plus fréquente est la discrétisation d'équations aux dérivées partielles. Considérons par exemple l'équation de Poisson (équation de la chaleur stationnaire) :
+\end{flushright}
+\[
+-\Delta u = f
+\]
