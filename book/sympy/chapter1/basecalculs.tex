@@ -103,8 +103,6 @@ In [4]: x+3
 Out[4]: x + 3
 \end{python}
 
-
-
 \subsection{Structure de données dans SymPy}
 Le moteur symbolique de SymPy tire parti de l'orientation des objets (notamment l'héritage) pour créer une base de code facilement extensible. Toutes les classes dérivent des fonctionnalités, telles que la possibilité de se comparer à d'autres objets, à partir de méthodes de la super-classe Basic. Les objets pouvant faire l'objet d'opérations algébriques acquièrent cette capacité grâce à un ensemble de méthodes d'une classe appelée Expr. Ces objets Expr peuvent être conservés dans des objets conteneur (qui contiennent également la sous-classe Expr) Mul, Add et Pow; les objets conteneur sont instanciés à l'aide de l'opérateur Python, tel que la fonction de surcharge, qui permet au constructeur de la classe conteneur d'être appelé chaque fois que l'opérateur binaire approprié est utilisé (* pour Mul, + pour Ajouter et $**$ pour Pow).
 De cette manière, des objets supplémentaires peuvent être ajoutés en créant simplement une sous-classe qui hérite des fonctionnalités de la classe Expr. Ces sous-classes bénéficient gratuitement de certaines fonctionnalités, telles que la possibilité de comparer, de multiplier, d’ajouter, etc. Voici comment SymPy crée un environnement modifiable, maintenable, et donc facile à étendre. Grâce à la possibilité d'hériter des propriétés de classes supérieures, la quantité de code nécessaire pour développer, par exemple, un système modélisant la mécanique quantique et la notation Dirac décroissant de manière significative.
@@ -158,8 +156,8 @@ dans le tableau
 Ceci est la documentation officielle du module solveset dans les solveurs. Il contient les questions fréquemment posées sur notre nouveau module pour résoudre des équations.
  \subsection{Résolution explicite}\index{Résolution explicite}
  \subsection{Équations sans solution explicite}\index{Équations sans solution explicite}
-\section{In\'equations}
-\section{Analyse}
+\section{In\'equations}\index{In\'equations}
+\section{Analyse}\index{Analyse}
 Dans cette section, nous présentons succinctement les fonctions couramment utiles en analyse réelle. Pour une 
 utilisation avancée ou des compléments, on renvoie aux chapitres suivants notamment ceux qui traitent de 
 l'intégration numérique (ch. 14), de la résolution des équations non linéaires (ch. 12), et des
@@ -234,16 +232,20 @@ le deuxième et le troisième
   \subsection{Calcul matriciel} \index{Calcul matriciel}
   \subsection{Réduction d'une matrice carrée}\index{Réduction d'une matrice carrée}
  \chapter{Graphiques}
-La visualisation de fonctions d'une ou deux variables, d'une série de données, facilite la perception de phénomènes mathématiques ou physiques et permet de conjecturer des résultats efficacement. Dans ce chapitre, on illustre sur des exemples les capacités graphiques de SymPy.
+La visualisation de fonctions d'une ou deux variables, d'une série de données, facilite la perception de phénomènes mathématiques ou physiques et permet de conjecturer des résul Équations sans solution explicitement efficacement. Dans ce chapitre, on illustre sur des exemples les capacités graphiques de SymPy.
  \section{Courbes en 2D}\index{Courbes en 2D}
  Une courbe plane peut être définie de plusieurs façons : comme graphe d’une fonction d’une variable, par un système d’équations paramétriques, par une équation en coordonnées polaires, ou par une équation implicite. Nous présentons
 ces quatre cas, puis donnons quelques exemples de tracés de données.
  \subsection{Représentation graphique de fonctions}\index{Représentation graphique de fonctions}
  \subsection{Courbe paramétrée}\index{Courbe paramétrée}
- \subsection{Courbe en coordonnées polaires}\index{Courbe en coordonnées polaires}
+ Les tracés de courbes paramétrées $\left( x = f\left(t\right), y=f\left(t\right)\right)$ sont réalisés par la commande Curve\footnote{du module sympy.geometry(quand on le verra dans le chapitre)}$\left(\left(f\left( t\right)\right), \left(\left(g\left( t\right)\right), \left(t, a, b\right)\right)$ ou $\left[a, b\right]$ est l'intervalle parcouru par le paramètre.
+ \\
+ Représentons par exemple la courbe paramétrée d’équations :
+  
+ \subsection{Courbe en coordonnées polaires}\index{Courbe en coordonnées gpolaires}
  \subsection{Courbe définie par une équation implicite}\index{Courbe définie par une équation implicite}
  \subsection{Tracé de données}\index{Tracé de données}
  \subsection{Tracé de solution d’équation différentielle}\index{Tracé de solution d’équation différentielle}
+ 
  \subsection{Développée d’une courbe}\index{Développée d’une courbe}
  \section{Courbes en 3D}   
-  
