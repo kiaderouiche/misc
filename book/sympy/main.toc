@@ -1,419 +1,419 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.1}Avant-Propos}{10}{section.0.1}% 
+\contentsline {section}{\numberline {0.1}Avant-Propos}{10}{section.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.2}Calcul formel}{12}{section.0.2}% 
+\contentsline {section}{\numberline {0.2}Calcul formel}{12}{section.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.1}Logiciel de syst\IeC {\`e}me de calcul formel}{12}{subsection.0.2.1}% 
+\contentsline {subsection}{\numberline {0.2.1}Logiciel de syst\IeC {\`e}me de calcul formel}{12}{subsection.0.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.2}Quelques logiciels de calcul formel}{12}{subsection.0.2.2}% 
+\contentsline {subsection}{\numberline {0.2.2}Quelques logiciels de calcul formel}{12}{subsection.0.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.3}SymPy vs Sagemath}{13}{subsection.0.2.3}% 
+\contentsline {subsection}{\numberline {0.2.3}SymPy vs Sagemath}{13}{subsection.0.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.2.4}Pourquoi choisir SymPy?}{13}{subsection.0.2.4}% 
+\contentsline {subsection}{\numberline {0.2.4}Pourquoi choisir SymPy?}{13}{subsection.0.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Premier pas vers SymPy}{15}{part.1}% 
+\contentsline {part}{I\hspace {1em}Premier pas vers SymPy}{15}{part.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Premier pas vers SymPy}{17}{chapter.1}% 
+\contentsline {chapter}{\numberline {1}Premier pas vers SymPy}{17}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}La biblioth\IeC {\`e}que SymPy}{17}{section.1.1}% 
+\contentsline {section}{\numberline {1.1}La biblioth\IeC {\`e}que SymPy}{17}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.1}Le cas de la biblioth\IeC {\`e}que SymPy}{17}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Le cas de la biblioth\IeC {\`e}que SymPy}{17}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.2}Travaillez avec SymPy}{18}{subsection.1.1.2}% 
+\contentsline {subsection}{\numberline {1.1.2}Travaillez avec SymPy}{18}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.3}Installation de SymPy}{18}{subsection.1.1.3}% 
+\contentsline {subsection}{\numberline {1.1.3}Installation de SymPy}{18}{subsection.1.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.4}isympy}{18}{subsection.1.1.4}% 
+\contentsline {subsection}{\numberline {1.1.4}isympy}{18}{subsection.1.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.5}SymPyGamma}{18}{subsection.1.1.5}% 
+\contentsline {subsection}{\numberline {1.1.5}SymPyGamma}{18}{subsection.1.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.6}SymPyLive}{18}{subsection.1.1.6}% 
+\contentsline {subsection}{\numberline {1.1.6}SymPyLive}{18}{subsection.1.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}SymPy comme calculatrice}{18}{section.1.2}% 
+\contentsline {section}{\numberline {1.2}SymPy comme calculatrice}{18}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Premier calculs}{19}{subsection.1.2.1}% 
+\contentsline {subsection}{\numberline {1.2.1}Premier calculs}{19}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Variables Python}{19}{section*.7}% 
+\contentsline {subsubsection}{Variables Python}{19}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Variables Symboliques}{19}{section*.8}% 
+\contentsline {subsubsection}{Variables Symboliques}{19}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}Structure de donn\IeC {\'e}es dans SymPy}{19}{subsection.1.2.2}% 
+\contentsline {subsection}{\numberline {1.2.2}Structure de donn\IeC {\'e}es dans SymPy}{19}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Variable et affection}{20}{subsection.1.2.3}% 
+\contentsline {subsection}{\numberline {1.2.3}Variable et affection}{20}{subsection.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}Substitution}{20}{subsection.1.2.4}% 
+\contentsline {subsection}{\numberline {1.2.4}Substitution}{20}{subsection.1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.5}Contr\IeC {\^o}le du flux d\IeC {\textquoteright }instructions}{20}{subsection.1.2.5}% 
+\contentsline {subsection}{\numberline {1.2.5}Contr\IeC {\^o}le du flux d\IeC {\textquoteright }instructions}{20}{subsection.1.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Analyse et Alg\IeC {\`e}bre}{21}{chapter.2}% 
+\contentsline {chapter}{\numberline {2}Analyse et Alg\IeC {\`e}bre}{21}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Expressions symboliques et simplification}{21}{section.2.1}% 
+\contentsline {section}{\numberline {2.1}Expressions symboliques et simplification}{21}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Expressions symboliques}{21}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Expressions symboliques}{21}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Transformation d'expressions}{21}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.2}Transformation d'expressions}{21}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Fonctions math\IeC {\'e}matiques usuelles}{21}{subsection.2.1.3}% 
+\contentsline {subsection}{\numberline {2.1.3}Fonctions math\IeC {\'e}matiques usuelles}{21}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}\IeC {\'E}quations}{21}{section.2.2}% 
+\contentsline {section}{\numberline {2.2}\IeC {\'E}quations}{21}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}R\IeC {\'e}solution explicite}{22}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.1}R\IeC {\'e}solution explicite}{22}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}\IeC {\'E}quations sans solution explicite}{22}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.2}\IeC {\'E}quations sans solution explicite}{22}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}In\'equations}{22}{section.2.3}% 
+\contentsline {section}{\numberline {2.3}In\'equations}{22}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Analyse}{22}{section.2.4}% 
+\contentsline {section}{\numberline {2.4}Analyse}{22}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Les Fonctions}{22}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.1}Les Fonctions}{22}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Sommes}{23}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.2}Sommes}{23}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Limites}{23}{subsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.4.3}Limites}{23}{subsection.2.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}Suites}{23}{subsection.2.4.4}% 
+\contentsline {subsection}{\numberline {2.4.4}Suites}{23}{subsection.2.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}D\IeC {\'e}veloppements limit\IeC {\'e}s}{23}{subsection.2.4.5}% 
+\contentsline {subsection}{\numberline {2.4.5}D\IeC {\'e}veloppements limit\IeC {\'e}s}{23}{subsection.2.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}S\IeC {\'e}ries}{23}{subsection.2.4.6}% 
+\contentsline {subsection}{\numberline {2.4.6}S\IeC {\'e}ries}{23}{subsection.2.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.7}D\IeC {\'e}rivation}{23}{subsection.2.4.7}% 
+\contentsline {subsection}{\numberline {2.4.7}D\IeC {\'e}rivation}{23}{subsection.2.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.8}D\IeC {\'e}riv\IeC {\'e}es partielles}{23}{subsection.2.4.8}% 
+\contentsline {subsection}{\numberline {2.4.8}D\IeC {\'e}riv\IeC {\'e}es partielles}{23}{subsection.2.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.9}Int\IeC {\'e}gration}{23}{subsection.2.4.9}% 
+\contentsline {subsection}{\numberline {2.4.9}Int\IeC {\'e}gration}{23}{subsection.2.4.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Calcul matriciel}{23}{section.2.5}% 
+\contentsline {section}{\numberline {2.5}Calcul matriciel}{23}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.1}R\IeC {\'e}solution de syst\IeC {\`e}mes lin\IeC {\'e}aires}{23}{subsection.2.5.1}% 
+\contentsline {subsection}{\numberline {2.5.1}R\IeC {\'e}solution de syst\IeC {\`e}mes lin\IeC {\'e}aires}{23}{subsection.2.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.2}Calcul vectoriel}{23}{subsection.2.5.2}% 
+\contentsline {subsection}{\numberline {2.5.2}Calcul vectoriel}{23}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.3}Calcul matriciel}{23}{subsection.2.5.3}% 
+\contentsline {subsection}{\numberline {2.5.3}Calcul matriciel}{23}{subsection.2.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.4}R\IeC {\'e}duction d'une matrice carr\IeC {\'e}e}{23}{subsection.2.5.4}% 
+\contentsline {subsection}{\numberline {2.5.4}R\IeC {\'e}duction d'une matrice carr\IeC {\'e}e}{23}{subsection.2.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Graphiques}{25}{chapter.3}% 
+\contentsline {chapter}{\numberline {3}Graphiques}{25}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Courbes en 2D}{25}{section.3.1}% 
+\contentsline {section}{\numberline {3.1}Courbes en 2D}{25}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Repr\IeC {\'e}sentation graphique de fonctions}{25}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Repr\IeC {\'e}sentation graphique de fonctions}{25}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}Courbe param\IeC {\'e}tr\IeC {\'e}e}{25}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.2}Courbe param\IeC {\'e}tr\IeC {\'e}e}{25}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.3}Courbe en coordonn\IeC {\'e}es polaires}{25}{subsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.1.3}Courbe en coordonn\IeC {\'e}es polaires}{25}{subsection.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.4}Courbe d\IeC {\'e}finie par une \IeC {\'e}quation implicite}{25}{subsection.3.1.4}% 
+\contentsline {subsection}{\numberline {3.1.4}Courbe d\IeC {\'e}finie par une \IeC {\'e}quation implicite}{25}{subsection.3.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.5}Trac\IeC {\'e} de donn\IeC {\'e}es}{26}{subsection.3.1.5}% 
+\contentsline {subsection}{\numberline {3.1.5}Trac\IeC {\'e} de donn\IeC {\'e}es}{26}{subsection.3.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.6}Trac\IeC {\'e} de solution d\IeC {\textquoteright }\IeC {\'e}quation diff\IeC {\'e}rentielle}{26}{subsection.3.1.6}% 
+\contentsline {subsection}{\numberline {3.1.6}Trac\IeC {\'e} de solution d'\IeC {\'e}quation diff\IeC {\'e}rentielle}{26}{subsection.3.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.7}D\IeC {\'e}velopp\IeC {\'e}e d\IeC {\textquoteright }une courbe}{26}{subsection.3.1.7}% 
+\contentsline {subsection}{\numberline {3.1.7}D\IeC {\'e}velopp\IeC {\'e}e d'une courbe}{26}{subsection.3.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Courbes en 3D}{26}{section.3.2}% 
+\contentsline {section}{\numberline {3.2}Courbes en 3D}{26}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}Logique, ensembles et th\IeC {\'e}orie des cat\IeC {\'e}gories}{27}{part.2}% 
+\contentsline {part}{II\hspace {1em}Logique, ensembles et th\IeC {\'e}orie des cat\IeC {\'e}gories}{27}{part.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Logique}{29}{chapter.4}% 
+\contentsline {chapter}{\numberline {4}Logique}{29}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Th\IeC {\'e}orie des ensembles}{31}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Th\IeC {\'e}orie des ensembles}{31}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Limite de l'utilisation de set de la biblioth\IeC {\`e}que standard Python}{31}{section.5.1}% 
+\contentsline {section}{\numberline {5.1}Limite de l'utilisation de set de la biblioth\IeC {\`e}que standard Python}{31}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Produit cart\IeC {\'e}sien}{32}{section.5.2}% 
+\contentsline {section}{\numberline {5.2}Produit cart\IeC {\'e}sien}{32}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}L'alg\IeC {\`e}bre de Boole comme ensemble}{32}{section.5.3}% 
+\contentsline {section}{\numberline {5.3}L'alg\IeC {\`e}bre de Boole comme ensemble}{32}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Plan complexe}{32}{section.5.4}% 
+\contentsline {section}{\numberline {5.4}Plan complexe}{32}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Mesure sur l'ensemble $\left [0,1\right ] $ }{32}{section.5.5}% 
+\contentsline {section}{\numberline {5.5}Mesure sur l'ensemble $\left [0,1\right ] $ }{32}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Th\IeC {\'e}orie des cat\IeC {\'e}gories}{33}{chapter.6}% 
+\contentsline {chapter}{\numberline {6}Th\IeC {\'e}orie des cat\IeC {\'e}gories}{33}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Note historique}{33}{section.6.1}% 
+\contentsline {section}{\numberline {6.1}Note historique}{33}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Bref aper\IeC {\c c}u}{34}{section.6.2}% 
+\contentsline {section}{\numberline {6.2}Bref aper\IeC {\c c}u}{34}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}Quels applications pour l'informatiques}{34}{subsection.6.2.1}% 
+\contentsline {subsection}{\numberline {6.2.1}Quels applications pour l'informatiques}{34}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}Alg\IeC {\`e}bre et th\IeC {\'e}orie des nombres}{35}{part.3}% 
+\contentsline {part}{III\hspace {1em}Alg\IeC {\`e}bre et th\IeC {\'e}orie des nombres}{35}{part.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Anneaux et corps finis}{37}{chapter.7}% 
+\contentsline {chapter}{\numberline {7}Anneaux et corps finis}{37}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Anneau des entiers modulo $n$}{37}{section.7.1}% 
+\contentsline {section}{\numberline {7.1}Anneau des entiers modulo $n$}{37}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Corps finis}{37}{section.7.2}% 
+\contentsline {section}{\numberline {7.2}Corps finis}{37}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Quelques probl\`emes \IeC {\'e}l\IeC {\'e}mentaires de th\IeC {\'e}orie des nombres}{37}{section.7.3}% 
+\contentsline {section}{\numberline {7.3}Quelques probl\`emes \IeC {\'e}l\IeC {\'e}mentaires de th\IeC {\'e}orie des nombres}{37}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Th\IeC {\'e}or\IeC {\`e}me de Wilson}{37}{subsection.7.3.1}% 
+\contentsline {subsection}{\numberline {7.3.1}Th\IeC {\'e}or\IeC {\`e}me de Wilson}{37}{subsection.7.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Nombre p-adique}{38}{subsection.7.3.2}% 
+\contentsline {subsection}{\numberline {7.3.2}Nombre p-adique}{38}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Polyn\IeC {\^o}mes}{39}{chapter.8}% 
+\contentsline {chapter}{\numberline {8}Polyn\IeC {\^o}mes}{39}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Anneaux et polyn\IeC {\^o}mes}{39}{section.8.1}% 
+\contentsline {section}{\numberline {8.1}Anneaux et polyn\IeC {\^o}mes}{39}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.1}Introduction}{39}{subsection.8.1.1}% 
+\contentsline {subsection}{\numberline {8.1.1}Introduction}{39}{subsection.8.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.2} Construction d\IeC {\textquoteright }anneaux de polyn\IeC {\^o}mes}{39}{subsection.8.1.2}% 
+\contentsline {subsection}{\numberline {8.1.2} Construction d\IeC {\textquoteright }anneaux de polyn\IeC {\^o}mes}{39}{subsection.8.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Polyn\IeC {\^o}mes}{39}{section.8.2}% 
+\contentsline {section}{\numberline {8.2}Polyn\IeC {\^o}mes}{39}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.1}Cr\IeC {\'e}ation et arithm\IeC {\'e}tique de base}{39}{subsection.8.2.1}% 
+\contentsline {subsection}{\numberline {8.2.1}Cr\IeC {\'e}ation et arithm\IeC {\'e}tique de base}{39}{subsection.8.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.2}Vue d\IeC {\textquoteright }ensemble des op\IeC {\'e}rations sur les polyn\IeC {\^o}mes}{39}{subsection.8.2.2}% 
+\contentsline {subsection}{\numberline {8.2.2}Vue d\IeC {\textquoteright }ensemble des op\IeC {\'e}rations sur les polyn\IeC {\^o}mes}{39}{subsection.8.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.3}Changement d\IeC {\textquoteright }anneau}{39}{subsection.8.2.3}% 
+\contentsline {subsection}{\numberline {8.2.3}Changement d\IeC {\textquoteright }anneau}{39}{subsection.8.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.4}It\IeC {\'e}ration}{40}{subsection.8.2.4}% 
+\contentsline {subsection}{\numberline {8.2.4}It\IeC {\'e}ration}{40}{subsection.8.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Arithm\IeC {\'e}tique euclidienne}{40}{section.8.3}% 
+\contentsline {section}{\numberline {8.3}Arithm\IeC {\'e}tique euclidienne}{40}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.1} Divisibilit\IeC {\'e}}{40}{subsection.8.3.1}% 
+\contentsline {subsection}{\numberline {8.3.1} Divisibilit\IeC {\'e}}{40}{subsection.8.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.2} Id\IeC {\'e}aux et quotients}{40}{subsection.8.3.2}% 
+\contentsline {subsection}{\numberline {8.3.2} Id\IeC {\'e}aux et quotients}{40}{subsection.8.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.3}Id\IeC {\'e}aux}{40}{subsection.8.3.3}% 
+\contentsline {subsection}{\numberline {8.3.3}Id\IeC {\'e}aux}{40}{subsection.8.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4} Factorisation et racines}{40}{section.8.4}% 
+\contentsline {section}{\numberline {8.4} Factorisation et racines}{40}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.1}Factorisation}{40}{subsection.8.4.1}% 
+\contentsline {subsection}{\numberline {8.4.1}Factorisation}{40}{subsection.8.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.2} Recherche de racines}{40}{subsection.8.4.2}% 
+\contentsline {subsection}{\numberline {8.4.2} Recherche de racines}{40}{subsection.8.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.3} R\IeC {\'e}sultant}{40}{subsection.8.4.3}% 
+\contentsline {subsection}{\numberline {8.4.3} R\IeC {\'e}sultant}{40}{subsection.8.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.4} Groupe de Galois}{40}{subsection.8.4.4}% 
+\contentsline {subsection}{\numberline {8.4.4} Groupe de Galois}{40}{subsection.8.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.5} Fractions rationnelles}{40}{section.8.5}% 
+\contentsline {section}{\numberline {8.5} Fractions rationnelles}{40}{section.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.1} Construction et propri\IeC {\'e}t\IeC {\'e}s \IeC {\'e}l\IeC {\'e}mentaires}{40}{subsection.8.5.1}% 
+\contentsline {subsection}{\numberline {8.5.1} Construction et propri\IeC {\'e}t\IeC {\'e}s \IeC {\'e}l\IeC {\'e}mentaires}{40}{subsection.8.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.2}D\IeC {\'e}composition en \IeC {\'e}l\IeC {\'e}ments simples}{41}{subsection.8.5.2}% 
+\contentsline {subsection}{\numberline {8.5.2}D\IeC {\'e}composition en \IeC {\'e}l\IeC {\'e}ments simples}{41}{subsection.8.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.3}Reconstruction rationnelle}{41}{subsection.8.5.3}% 
+\contentsline {subsection}{\numberline {8.5.3}Reconstruction rationnelle}{41}{subsection.8.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.6}S\IeC {\'e}ries formelles}{41}{section.8.6}% 
+\contentsline {section}{\numberline {8.6}S\IeC {\'e}ries formelles}{41}{section.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.6.1}Op\IeC {\'e}rations sur les s\IeC {\'e}ries tronqu\IeC {\'e}es}{41}{subsection.8.6.1}% 
+\contentsline {subsection}{\numberline {8.6.1}Op\IeC {\'e}rations sur les s\IeC {\'e}ries tronqu\IeC {\'e}es}{41}{subsection.8.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.6.2}D\IeC {\'e}veloppement de solutions d\IeC {\textquoteright }\IeC {\'e}quations}{41}{subsection.8.6.2}% 
+\contentsline {subsection}{\numberline {8.6.2}D\IeC {\'e}veloppement de solutions d\IeC {\textquoteright }\IeC {\'e}quations}{41}{subsection.8.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Alg\IeC {\`e}bre lin\IeC {\'e}aire}{43}{chapter.9}% 
+\contentsline {chapter}{\numberline {9}Alg\IeC {\`e}bre lin\IeC {\'e}aire}{43}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Constructions et manipulations \IeC {\'e}l\IeC {\'e}mentaires}{43}{section.9.1}% 
+\contentsline {section}{\numberline {9.1}Constructions et manipulations \IeC {\'e}l\IeC {\'e}mentaires}{43}{section.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.1} Espaces de vecteurs, de matrices}{43}{subsection.9.1.1}% 
+\contentsline {subsection}{\numberline {9.1.1} Espaces de vecteurs, de matrices}{43}{subsection.9.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.2} Construction des matrices et des vecteurs}{43}{subsection.9.1.2}% 
+\contentsline {subsection}{\numberline {9.1.2} Construction des matrices et des vecteurs}{43}{subsection.9.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.3} Manipulations de base et arithm\IeC {\'e}tique sur les matrices}{43}{subsection.9.1.3}% 
+\contentsline {subsection}{\numberline {9.1.3} Manipulations de base et arithm\IeC {\'e}tique sur les matrices}{43}{subsection.9.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.4} Op\IeC {\'e}rations de base sur les matrices}{44}{subsection.9.1.4}% 
+\contentsline {subsection}{\numberline {9.1.4} Op\IeC {\'e}rations de base sur les matrices}{44}{subsection.9.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2} Calculs sur les matrices}{44}{section.9.2}% 
+\contentsline {section}{\numberline {9.2} Calculs sur les matrices}{44}{section.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2.1} \IeC {\'E}limination de Gauss, forme \IeC {\'e}chelonn\IeC {\'e}e}{45}{subsection.9.2.1}% 
+\contentsline {subsection}{\numberline {9.2.1} \IeC {\'E}limination de Gauss, forme \IeC {\'e}chelonn\IeC {\'e}e}{45}{subsection.9.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2.2} R\IeC {\'e}solution de syst\IeC {\`e}mes ; image et base du noyau}{45}{subsection.9.2.2}% 
+\contentsline {subsection}{\numberline {9.2.2} R\IeC {\'e}solution de syst\IeC {\`e}mes ; image et base du noyau}{45}{subsection.9.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2.3}Valeurs propres, forme de Jordan et transformations de similitude}{45}{subsection.9.2.3}% 
+\contentsline {subsection}{\numberline {9.2.3}Valeurs propres, forme de Jordan et transformations de similitude}{45}{subsection.9.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.3}Forme quadratique}{47}{section.9.3}% 
+\contentsline {section}{\numberline {9.3}Forme quadratique}{47}{section.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3.1}R\IeC {\'e}duction de forme quadratique}{47}{subsection.9.3.1}% 
+\contentsline {subsection}{\numberline {9.3.1}R\IeC {\'e}duction de forme quadratique}{47}{subsection.9.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.4}Tenseur}{48}{section.9.4}% 
+\contentsline {section}{\numberline {9.4}Tenseur}{48}{section.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Syst\IeC {\`e}mes polynomiaux}{49}{chapter.10}% 
+\contentsline {chapter}{\numberline {10}Syst\IeC {\`e}mes polynomiaux}{49}{chapter.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1} Polyn\IeC {\^o}mes \IeC {\`a} plusieurs ind\IeC {\'e}termin\IeC {\'e}es}{49}{section.10.1}% 
+\contentsline {section}{\numberline {10.1} Polyn\IeC {\^o}mes \IeC {\`a} plusieurs ind\IeC {\'e}termin\IeC {\'e}es}{49}{section.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.1} Les anneaux $A\left [x_{1}, ..., x_{n}\right ]$}{49}{subsection.10.1.1}% 
+\contentsline {subsection}{\numberline {10.1.1} Les anneaux $A\left [x_{1}, ..., x_{n}\right ]$}{49}{subsection.10.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.2}Polyn\IeC {\^o}mes}{50}{subsection.10.1.2}% 
+\contentsline {subsection}{\numberline {10.1.2}Polyn\IeC {\^o}mes}{50}{subsection.10.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Syst\IeC {\`e}mes polynomiaux et id\IeC {\'e}aux}{50}{section.10.2}% 
+\contentsline {section}{\numberline {10.2}Syst\IeC {\`e}mes polynomiaux et id\IeC {\'e}aux}{50}{section.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.1} Un premier exemple}{50}{subsection.10.2.1}% 
+\contentsline {subsection}{\numberline {10.2.1} Un premier exemple}{50}{subsection.10.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.2} Qu\IeC {\textquoteright }est-ce que r\IeC {\'e}soudre ?}{50}{subsection.10.2.2}% 
+\contentsline {subsection}{\numberline {10.2.2} Qu\IeC {\textquoteright }est-ce que r\IeC {\'e}soudre ?}{50}{subsection.10.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.3}Id\IeC {\'e}aux et syst\IeC {\`e}mes}{51}{subsection.10.2.3}% 
+\contentsline {subsection}{\numberline {10.2.3}Id\IeC {\'e}aux et syst\IeC {\`e}mes}{51}{subsection.10.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.3} Bases de Gr\IeC {\"o}bner}{51}{section.10.3}% 
+\contentsline {section}{\numberline {10.3} Bases de Gr\IeC {\"o}bner}{51}{section.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.1}Ordres monomiaux}{51}{subsection.10.3.1}% 
+\contentsline {subsection}{\numberline {10.3.1}Ordres monomiaux}{51}{subsection.10.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.2} Division par une famille de polyn\IeC {\^o}mes}{51}{subsection.10.3.2}% 
+\contentsline {subsection}{\numberline {10.3.2} Division par une famille de polyn\IeC {\^o}mes}{51}{subsection.10.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.3} Propri\IeC {\'e}t\IeC {\'e}s des bases de Gr\IeC {\"o}bner}{51}{subsection.10.3.3}% 
+\contentsline {subsection}{\numberline {10.3.3} Propri\IeC {\'e}t\IeC {\'e}s des bases de Gr\IeC {\"o}bner}{51}{subsection.10.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}\IeC {\'E}quations diff\IeC {\'e}rentielles}{53}{chapter.11}% 
+\contentsline {chapter}{\numberline {11}\IeC {\'E}quations diff\IeC {\'e}rentielles}{53}{chapter.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}\IeC {\'E}quations diff\IeC {\'e}rentielles}{53}{section.11.1}% 
+\contentsline {section}{\numberline {11.1}\IeC {\'E}quations diff\IeC {\'e}rentielles}{53}{section.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.1}Introduction}{53}{subsection.11.1.1}% 
+\contentsline {subsection}{\numberline {11.1.1}Introduction}{53}{subsection.11.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.2}\IeC {\'E}quations diff\IeC {\'e}rentielles ordinaires d\IeC {\textquoteright }ordre 1}{54}{subsection.11.1.2}% 
+\contentsline {subsection}{\numberline {11.1.2}\IeC {\'E}quations diff\IeC {\'e}rentielles ordinaires d\IeC {\textquoteright }ordre 1}{54}{subsection.11.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.3} \IeC {\'E}quations d\IeC {\textquoteright }ordre 2}{54}{subsection.11.1.3}% 
+\contentsline {subsection}{\numberline {11.1.3} \IeC {\'E}quations d\IeC {\textquoteright }ordre 2}{54}{subsection.11.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.4}Transform\IeC {\'e}e de Laplace}{54}{subsection.11.1.4}% 
+\contentsline {subsection}{\numberline {11.1.4}Transform\IeC {\'e}e de Laplace}{54}{subsection.11.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.5} Syst\IeC {\`e}mes diff\IeC {\'e}rentiels lin\IeC {\'e}aires}{54}{subsection.11.1.5}% 
+\contentsline {subsection}{\numberline {11.1.5} Syst\IeC {\`e}mes diff\IeC {\'e}rentiels lin\IeC {\'e}aires}{54}{subsection.11.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}suites d\IeC {\'e}finies par une relation de r\IeC {\'e}currence}{55}{chapter.12}% 
+\contentsline {chapter}{\numberline {12}suites d\IeC {\'e}finies par une relation de r\IeC {\'e}currence}{55}{chapter.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.1}Suites d\IeC {\'e}finies par $u_{n+1} = f\left (u_{n} \right )$}{55}{section.12.1}% 
+\contentsline {section}{\numberline {12.1}Suites d\IeC {\'e}finies par $u_{n+1} = f\left (u_{n} \right )$}{55}{section.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.2}Suites r\IeC {\'e}currentes lin\IeC {\'e}aires}{55}{section.12.2}% 
+\contentsline {section}{\numberline {12.2}Suites r\IeC {\'e}currentes lin\IeC {\'e}aires}{55}{section.12.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.3}Suites r\IeC {\'e}currentes \IeC {\guillemotleft } avec second membre \IeC {\guillemotright }}{55}{section.12.3}% 
+\contentsline {section}{\numberline {12.3}Suites r\IeC {\'e}currentes \IeC {\guillemotleft } avec second membre \IeC {\guillemotright }}{55}{section.12.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {13}suites d\IeC {\'e}finies par une relation de r\IeC {\'e}currence}{57}{chapter.13}% 
+\contentsline {chapter}{\numberline {13}suites d\IeC {\'e}finies par une relation de r\IeC {\'e}currence}{57}{chapter.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.1}Suites d\IeC {\'e}finies par $u_{n+1} = f\left (u_{n} \right )$}{57}{section.13.1}% 
+\contentsline {section}{\numberline {13.1}Suites d\IeC {\'e}finies par $u_{n+1} = f\left (u_{n} \right )$}{57}{section.13.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.2}Suites r\IeC {\'e}currentes lin\IeC {\'e}aires}{57}{section.13.2}% 
+\contentsline {section}{\numberline {13.2}Suites r\IeC {\'e}currentes lin\IeC {\'e}aires}{57}{section.13.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.3}Suites r\IeC {\'e}currentes \IeC {\guillemotleft } avec second membre \IeC {\guillemotright }}{57}{section.13.3}% 
+\contentsline {section}{\numberline {13.3}Suites r\IeC {\'e}currentes \IeC {\guillemotleft } avec second membre \IeC {\guillemotright }}{57}{section.13.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{IV\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{59}{part.4}% 
+\contentsline {part}{IV\hspace {1em}G\IeC {\'e}om\IeC {\'e}trie}{59}{part.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {14}G\IeC {\'e}om\IeC {\'e}trie plan}{63}{chapter.14}% 
+\contentsline {chapter}{\numberline {14}G\IeC {\'e}om\IeC {\'e}trie plan}{63}{chapter.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.1}Introduction}{63}{section.14.1}% 
+\contentsline {section}{\numberline {14.1}Introduction}{63}{section.14.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.1.1}Polygones r\IeC {\'e}gulier}{64}{subsection.14.1.1}% 
+\contentsline {subsection}{\numberline {14.1.1}Polygones r\IeC {\'e}gulier}{64}{subsection.14.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {15}G\IeC {\'e}om\IeC {\'e}trie Diff\IeC {\'e}rentielle}{67}{chapter.15}% 
+\contentsline {chapter}{\numberline {15}G\IeC {\'e}om\IeC {\'e}trie Diff\IeC {\'e}rentielle}{67}{chapter.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15.1}Vari\IeC {\'e}t\IeC {\'e} diff\IeC {\'e}rentiable}{67}{section.15.1}% 
+\contentsline {section}{\numberline {15.1}Vari\IeC {\'e}t\IeC {\'e} diff\IeC {\'e}rentiable}{67}{section.15.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {16}Groupe de Lie}{69}{chapter.16}% 
+\contentsline {chapter}{\numberline {16}Groupe de Lie}{69}{chapter.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {16.1}R\IeC {\'e}solution d\IeC {\textquoteright }\IeC {\'e}quations par groupe de Lie}{69}{section.16.1}% 
+\contentsline {section}{\numberline {16.1}R\IeC {\'e}solution d\IeC {\textquoteright }\IeC {\'e}quations par groupe de Lie}{69}{section.16.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {17}Convexit\IeC {\'e}}{71}{chapter.17}% 
+\contentsline {chapter}{\numberline {17}Convexit\IeC {\'e}}{71}{chapter.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.0.1}Cone}{71}{subsection.17.0.1}% 
+\contentsline {subsection}{\numberline {17.0.1}Cone}{71}{subsection.17.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations preserving convexity}{71}{section*.9}% 
+\contentsline {subsubsection}{Operations preserving convexity}{71}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operations that induce convexity}{71}{section*.10}% 
+\contentsline {subsubsection}{Operations that induce convexity}{71}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {17.1}Convex Functions}{72}{section.17.1}% 
+\contentsline {section}{\numberline {17.1}Convex Functions}{72}{section.17.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.1.1}Epigraph}{72}{subsection.17.1.1}% 
+\contentsline {subsection}{\numberline {17.1.1}Epigraph}{72}{subsection.17.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {18}Support Function}{75}{chapter.18}% 
+\contentsline {chapter}{\numberline {18}Support Function}{75}{chapter.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.1}Operations Preserve Convexity of Functions}{76}{section.18.1}% 
+\contentsline {section}{\numberline {18.1}Operations Preserve Convexity of Functions}{76}{section.18.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.2}Remarks}{77}{section.18.2}% 
+\contentsline {section}{\numberline {18.2}Remarks}{77}{section.18.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.3}Corollaries}{77}{section.18.3}% 
+\contentsline {section}{\numberline {18.3}Corollaries}{77}{section.18.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.4}Propositions}{77}{section.18.4}% 
+\contentsline {section}{\numberline {18.4}Propositions}{77}{section.18.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.4.1}Several equations}{77}{subsection.18.4.1}% 
+\contentsline {subsection}{\numberline {18.4.1}Several equations}{77}{subsection.18.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.4.2}Single Line}{78}{subsection.18.4.2}% 
+\contentsline {subsection}{\numberline {18.4.2}Single Line}{78}{subsection.18.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.4.3}Paragraph of Text}{78}{subsection.18.4.3}% 
+\contentsline {subsection}{\numberline {18.4.3}Paragraph of Text}{78}{subsection.18.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.5}Exercises}{78}{section.18.5}% 
+\contentsline {section}{\numberline {18.5}Exercises}{78}{section.18.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.6}Problems}{78}{section.18.6}% 
+\contentsline {section}{\numberline {18.6}Problems}{78}{section.18.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.7}Vocabulary}{78}{section.18.7}% 
+\contentsline {section}{\numberline {18.7}Vocabulary}{78}{section.18.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{V\hspace {1em}Calcul num\IeC {\'e}rique et discret}{79}{part.5}% 
+\contentsline {part}{V\hspace {1em}Calcul num\IeC {\'e}rique et discret}{79}{part.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {19}Nombres \IeC {\`a} virgule flottante}{81}{chapter.19}% 
+\contentsline {chapter}{\numberline {19}Nombres \IeC {\`a} virgule flottante}{81}{chapter.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {20}Alg\IeC {\`e}bre lin\IeC {\'e}aire num\IeC {\'e}rique}{83}{chapter.20}% 
+\contentsline {chapter}{\numberline {20}Alg\IeC {\`e}bre lin\IeC {\'e}aire num\IeC {\'e}rique}{83}{chapter.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {20.1}Matrices pleines}{83}{section.20.1}% 
+\contentsline {section}{\numberline {20.1}Matrices pleines}{83}{section.20.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.1.1}R\IeC {\'e}solution de syst\IeC {\`e}mes lin\IeC {\'e}aires}{83}{subsection.20.1.1}% 
+\contentsline {subsection}{\numberline {20.1.1}R\IeC {\'e}solution de syst\IeC {\`e}mes lin\IeC {\'e}aires}{83}{subsection.20.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.1.2}R\IeC {\'e}solution directe}{84}{subsection.20.1.2}% 
+\contentsline {subsection}{\numberline {20.1.2}R\IeC {\'e}solution directe}{84}{subsection.20.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.1.3}La d\IeC {\'e}composition \textit {LU}}{84}{subsection.20.1.3}% 
+\contentsline {subsection}{\numberline {20.1.3}La d\IeC {\'e}composition \textit {LU}}{84}{subsection.20.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.1.4}La d\IeC {\'e}composition de Cholesky}{84}{subsection.20.1.4}% 
+\contentsline {subsection}{\numberline {20.1.4}La d\IeC {\'e}composition de Cholesky}{84}{subsection.20.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.1.5}D\IeC {\'e}composition \textit {QR}}{85}{subsection.20.1.5}% 
+\contentsline {subsection}{\numberline {20.1.5}D\IeC {\'e}composition \textit {QR}}{85}{subsection.20.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.1.6}Valeurs propres, vecteurs propres}{85}{subsection.20.1.6}% 
+\contentsline {subsection}{\numberline {20.1.6}Valeurs propres, vecteurs propres}{85}{subsection.20.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {20.2}Matrices creuses}{85}{section.20.2}% 
+\contentsline {section}{\numberline {20.2}Matrices creuses}{85}{section.20.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.2.1}Origine des syst\IeC {\`e}mes creux}{85}{subsection.20.2.1}% 
+\contentsline {subsection}{\numberline {20.2.1}Origine des syst\IeC {\`e}mes creux}{85}{subsection.20.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {20.2.2}Valeurs propres, vecteurs propres}{86}{subsection.20.2.2}% 
+\contentsline {subsection}{\numberline {20.2.2}Valeurs propres, vecteurs propres}{86}{subsection.20.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {21}Int\IeC {\'e}gration num\IeC {\'e}rique}{87}{chapter.21}% 
+\contentsline {chapter}{\numberline {21}Int\IeC {\'e}gration num\IeC {\'e}rique}{87}{chapter.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.0.1}Equation and Text}{88}{subsection.21.0.1}% 
+\contentsline {subsection}{\numberline {21.0.1}Equation and Text}{88}{subsection.21.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {22}Transformation d'int\IeC {\'e}grale}{89}{chapter.22}% 
+\contentsline {chapter}{\numberline {22}Transformation d'int\IeC {\'e}grale}{89}{chapter.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.1}Transformation de Fourier}{89}{section.22.1}% 
+\contentsline {section}{\numberline {22.1}Transformation de Fourier}{89}{section.22.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.1.1}Transformation de Fourier inverse}{89}{subsection.22.1.1}% 
+\contentsline {subsection}{\numberline {22.1.1}Transformation de Fourier inverse}{89}{subsection.22.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.2}Transformation de Laplace}{89}{section.22.2}% 
+\contentsline {section}{\numberline {22.2}Transformation de Laplace}{89}{section.22.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.3}Transformation de Mellin}{89}{section.22.3}% 
+\contentsline {section}{\numberline {22.3}Transformation de Mellin}{89}{section.22.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.3.1}Transformation de melin inverse}{90}{subsection.22.3.1}% 
+\contentsline {subsection}{\numberline {22.3.1}Transformation de melin inverse}{90}{subsection.22.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22.4}Transfomation de Henkel}{90}{section.22.4}% 
+\contentsline {section}{\numberline {22.4}Transfomation de Henkel}{90}{section.22.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.4.1}Transformation de Henkel inverse}{90}{subsection.22.4.1}% 
+\contentsline {subsection}{\numberline {22.4.1}Transformation de Henkel inverse}{90}{subsection.22.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {23}\IeC {\'E}quations non lin\IeC {\'e}aires}{91}{chapter.23}% 
+\contentsline {chapter}{\numberline {23}\IeC {\'E}quations non lin\IeC {\'e}aires}{91}{chapter.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {23.1}\IeC {\'E}quations alg\IeC {\'e}briques}{91}{section.23.1}% 
+\contentsline {section}{\numberline {23.1}\IeC {\'E}quations alg\IeC {\'e}briques}{91}{section.23.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {23.2}Figure}{92}{section.23.2}% 
+\contentsline {section}{\numberline {23.2}Figure}{92}{section.23.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VI\hspace {1em}Combinatoire}{93}{part.6}% 
+\contentsline {part}{VI\hspace {1em}Combinatoire}{93}{part.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {24}Permutations}{97}{chapter.24}% 
+\contentsline {chapter}{\numberline {24}Permutations}{97}{chapter.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {25}Groupe symmetrique}{99}{chapter.25}% 
+\contentsline {chapter}{\numberline {25}Groupe symmetrique}{99}{chapter.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {26}Groupe Ab\IeC {\'e}lien}{101}{chapter.26}% 
+\contentsline {chapter}{\numberline {26}Groupe Ab\IeC {\'e}lien}{101}{chapter.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VII\hspace {1em}Physique}{103}{part.7}% 
+\contentsline {part}{VII\hspace {1em}Physique}{103}{part.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {27}Chaos}{105}{chapter.27}% 
+\contentsline {chapter}{\numberline {27}Chaos}{105}{chapter.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {28}M\'ecanique et information quantique}{107}{chapter.28}% 
+\contentsline {chapter}{\numberline {28}M\'ecanique et information quantique}{107}{chapter.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VIII\hspace {1em}Annexe}{109}{part.8}% 
+\contentsline {part}{VIII\hspace {1em}Annexe}{109}{part.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {29}Programmation Orient\IeC {\'e}e Objet}{111}{chapter.29}% 
+\contentsline {chapter}{\numberline {29}Programmation Orient\IeC {\'e}e Objet}{111}{chapter.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {30}D\'ecorateurs}{113}{chapter.30}% 
+\contentsline {chapter}{\numberline {30}D\'ecorateurs}{113}{chapter.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {31}Optimisation du code}{115}{chapter.31}% 
+\contentsline {chapter}{\numberline {31}Optimisation du code}{115}{chapter.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {31.0.1}Cython}{116}{subsection.31.0.1}% 
+\contentsline {subsection}{\numberline {31.0.1}Cython}{116}{subsection.31.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {31.0.2}Theano}{117}{subsection.31.0.2}% 
+\contentsline {subsection}{\numberline {31.0.2}Theano}{117}{subsection.31.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {32}Interface graphique}{119}{chapter.32}% 
+\contentsline {chapter}{\numberline {32}Interface graphique}{119}{chapter.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {32.1}Bibliographie}{120}{section.32.1}% 
+\contentsline {section}{\numberline {32.1}Bibliographie}{120}{section.32.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {32.2}Index}{120}{section.32.2}% 
+\contentsline {section}{\numberline {32.2}Index}{120}{section.32.2}
 \contentsfinish 

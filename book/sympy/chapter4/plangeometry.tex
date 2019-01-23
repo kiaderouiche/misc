@@ -3,6 +3,15 @@ Le module \textcolor{red}{sympy.geometry} permet de créer des entités géomét
 
 \section{Introduction}
 
+\begin{example}
+Dessiner le plan de Fano
+\end{example}
+
+\begin{exercise}(Point l'intérieur d'un triangle)
+Soit $ABC$ un triangle de périmètre $p=AB+BC+AC$, Alors pour tout point $M$ à l'intérieur à $ABC$, on a: $\frac{p}{2} \leq MA+MB+MC \leq p-inf\left(AB, BC, AC\right)$.
+\end{exercise}
+
+
 \begin{python}
 In [1]: from sympy import Point, Polygon, pi
 In [2]: p1, p2, p3, p4, p5 = [(0, 0), (1, 0), (5, 1), (0, 1), (3, 0)]
@@ -10,16 +19,16 @@ In [3]: Polygon(p1, p2, p3, p4)
 Out[3]: Polygon(Point2D(0, 0), Point2D(1, 0), Point2D(5, 1), Point2D(0, 1))
 \end{python}
 
-\begin{exercise}{(Problème des 5 cercles)\footnote{Cette propriétaire, en apparence assez mystérieuse, s’inscrit dans un cadre bien plus général : à un nombre $n$ quelconque de droites du plan, on associe un point
+\begin{exercise}{(Problème des 5 cercles)\footnote{Cette propriétaire, en apparence assez mystérieuse, s'inscrit dans un cadre bien plus général : à un nombre $n$ quelconque de droites du plan, on associe un point
 ou un cercle selon la parité de $n$. Tous ces résultats de géométrie classique sont d'us au géométrie anglais William Kingdon Clifford (voir [4] pour la preuve originale), et démontrés de manière accessible dans [1]. Ce problème est redevenu « `a la mode » récemment dans des circonstances assez particulières : il fut posée
 par le président chinois Yang Zemin `a un parterre D’éminents mathématiciens au cours du congrès international des mathématiciens (Pekin, août 2002). C’est ainsi que ce problème a obtenu une certaine célébrité : il est ainsi cité par Alain Connes dans le cadre du séminaire Poincaré (octobre 2002).}}
 
-On considère un pentagone étoilé $ABCDE$. Soient $S_{1}$, $S_{2}$, $S_{3}$, $S_{4}$ et $S_{5}$  les cercles circonscrits aux triangles définis par les « branches » du pentagone. Alors les points d’intersection
-de chacun de ces cercles avec le suivant sont cocycliques (on prend bien sur les points d’intersection autres que les sommets du pentagone intérieur). 
+On considère un pentagone étoilé $ABCDE$. Soient $S_{1}$, $S_{2}$, $S_{3}$, $S_{4}$ et $S_{5}$  les cercles circonscrits aux triangles définis par les « branches » du pentagone. Alors les points d'intersection
+de chacun de ces cercles avec le suivant sont cocycliques (on prend bien sur les points d'intersection autres que les sommets du pentagone intérieur). 
 \end{exercise}
 \begin{exercise}{(Fagnano's problem)}
 \end{exercise}
-\begin{exercise}{(Sur l’impossibilité de )}
+\begin{exercise}{(Sur l'impossibilité de )}
 \end{exercise}
 
 \begin{exercise}{(GENERALIZED POPOVICIU’S PROBLEM\footnote{YU.G. NIKONOROV, YU.V. NIKONOROVA. GENERALIZED POPOVICIU’S PROBLEM})}
@@ -64,11 +73,19 @@ Il est possible de placer trois polygones réguliers (convexes) dans le plan pou
 \end{exercise}
 
 \begin{exercise}{(Intersection de cordes)}
-On place n points sur un cercle et l’on trace toutes les cordes reliant ces deux points. On
-suppose en outre que les cordes sont en position générale, c’est-à-dire que trois cordes ne
-sont jamais concourantes. Combien de points d’intersection y aura-t-il à l’intérieur du disque ?
+On place n points sur un cercle et l'on trace toutes les cordes reliant ces deux points. On
+suppose en outre que les cordes sont en position générale, c'est-à-dire que trois cordes ne
+sont jamais concourantes. Combien de points d'intersection y aura-t-il à l'intérieur du disque ?
 \end{exercise}
 
 \begin{exercise}{(Tétraèdre et octaèdre)}
 Quel est le rapport entre le volume d'un octaèdre régulier et celui d'un tétraèdre régulier de même côté ?
+\end{exercise}
+\begin{exercise}
+Soit\footnote{LE PROBLÈME DE SIN PAN: https://images.math.cnrs.fr/Le-probleme-de-Sin-Pan.html\#nb1} $M_{1}$...$M_{n}$ un $n$-gone (polygone à $n\geq 3$ côtés). Construire un $n$-gone $A_{1}$...$A_{n}$ ayant les points $M_{1}$,...,$M_{n}$ comme milieux respectifs des côtés $A_{1}A_{2}$,...,$A_{n}A_{1}$.
+ \begin{itemize}
+   \item Que doit vérifier le $n$-gone $M_{1}$...$M_{n}$ pour que $A_{n}$...$A_{1}$ existe ?
+   \item Dans le cas où $A_{n}$...$A_{1}$ existe, comment le construire géométriquement ?
+ \end{itemize}
+
 \end{exercise}
