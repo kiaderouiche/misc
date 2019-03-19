@@ -1,0 +1,76 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: first/avant_propos.aux
+A level-1 auxiliary file: first/firststep.aux
+A level-1 auxiliary file: chapter1/basecalculs.aux
+A level-1 auxiliary file: chapter2/logic.aux
+A level-1 auxiliary file: chapter2/ensemble.aux
+A level-1 auxiliary file: chapter2/category.aux
+A level-1 auxiliary file: chapter3/ringfinitefiled.aux
+A level-1 auxiliary file: chapter3/polynomes.aux
+A level-1 auxiliary file: chapter3/linearalgebra.aux
+A level-1 auxiliary file: chapter3/systempolynom.aux
+A level-1 auxiliary file: chapter3/symbolicdiffequ.aux
+A level-1 auxiliary file: chapter3/recurrsquence.aux
+A level-1 auxiliary file: chapter4/plangeometry.aux
+A level-1 auxiliary file: chapter4/diffgeometry.aux
+A level-1 auxiliary file: chapter4/liegeometry.aux
+A level-1 auxiliary file: chapter4/trigolorentz.aux
+A level-1 auxiliary file: chapter5/floatappro.aux
+A level-1 auxiliary file: chapter5/numalgebra.aux
+A level-1 auxiliary file: chapter5/numintgration.aux
+A level-1 auxiliary file: chapter5/integrtransform.aux
+A level-1 auxiliary file: chapter6/combina.aux
+A level-1 auxiliary file: chapter7/chaos.aux
+A level-1 auxiliary file: chapter7/quantum.aux
+A level-1 auxiliary file: annexe/poo/intropoo.aux
+A level-1 auxiliary file: annexe/decor/decorator.aux
+A level-1 auxiliary file: annexe/optimization/cython.aux
+A level-1 auxiliary file: annexe/optimization/theano.aux
+A level-1 auxiliary file: annexe/gui/qt.aux
+I found no \citation commands---while reading file main.aux
+I found no \bibdata command---while reading file main.aux
+I found no \bibstyle command---while reading file main.aux
+You've used 0 entries,
+            0 wiz_defined-function locations,
+            111 strings with 1146 characters,
+and the built_in function-call counts, 0 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 0
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 0
+format.name$ -- 0
+if$ -- 0
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 0
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 0
+purify$ -- 0
+quote$ -- 0
+skip$ -- 0
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 0
+(There were 3 error messages)
