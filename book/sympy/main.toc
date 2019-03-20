@@ -413,7 +413,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {32}Interface graphique}{119}{chapter.32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {32.1}Bibliographie}{120}{section.32.1}% 
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{121}{chapter*.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {32.2}Index}{120}{section.32.2}% 
+\contentsline {section}{Articles}{121}{section*.12}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Books}{121}{section*.13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{123}{section*.14}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {32.1}Index}{123}{section.32.1}% 
 \contentsfinish 
