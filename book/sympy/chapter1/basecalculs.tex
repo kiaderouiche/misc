@@ -155,12 +155,41 @@ dans le tableau
 \section{Équations}
 Ceci est la documentation officielle du module solveset dans les solveurs. Il contient les questions fréquemment posées sur notre nouveau module pour résoudre des équations.
  \subsection{Résolution explicite}\index{Résolution explicite}
+ La résolution de l’équation $x^{2}-2x+8$
  \begin{python}
 In [34]: solve(x**2+2*x-8, x)                                                                     
 Out[34]: [-4, 2]
 \end{python}
+Un exemple un peu plus compliqué avec $z \in \mathbb{R}$ 
  \subsection{Équations sans solution explicite}\index{Équations sans solution explicite}
-Dans la plupart des cas, dès que le système devient trop compliqué, il n’est pas possible de calculer une solution explicite
+Dans la plupart des cas, dès que le système devient trop compliqué, il n’est pas possible de calculer une 
+solution non explicite, l'exemple de l’équation $\left(- x + \pi\right) \cos{\left (x \right )} + \sin{\left (x 
+\right )} - \frac{\pi}{2}$ Cette équation est rencontrée dans le problème de la chèvre ;
+\begin{python}
+In[01]: sin(x)+(pi-x)*cos(x)-pi/2
+\end{python}
+
+\subsection{Équations transcendantale}
+\begin{definition}
+Une équation transcendante est une équation contenant une fonction transcendante d'une ou plusieurs variables 
+qui sont solutions de l'équation en d'autre terme elle ne peut pas être résolue algébriquement, qu'elle n'a pas 
+de solution analytique
+\end{definition}
+\begin{example}
+$x = \exp(-x)$
+$x = \sin(x)$
+\end{example}
+
+Un autre exemple d'équation $3^{e^{- x}}- 5^{x}$ qui semble très compliqué  bien que elle 
+\begin{python}
+In[01]: solve(3**(1/exp(x))-5**x)
+\end{python}
+Déclenche une exception 
+\begin{python}
+NotImplementedError: multiple generators [3**exp(-x), 5**x]
+No algorithms are implemented to solve equation 3**exp(-x) - 5**x
+\end{python}
+
 \section{In\'equations}\index{In\'equations}
 \section{Analyse}\index{Analyse}
 Dans cette section, nous présentons succinctement les fonctions couramment utiles en analyse réelle et complexe. 
