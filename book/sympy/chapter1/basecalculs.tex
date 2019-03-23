@@ -155,6 +155,10 @@ dans le tableau
 \section{Équations}
 Ceci est la documentation officielle du module solveset dans les solveurs. Il contient les questions fréquemment posées sur notre nouveau module pour résoudre des équations.
  \subsection{Résolution explicite}\index{Résolution explicite}
+ \begin{python}
+In [34]: solve(x**2+2*x-8, x)                                                                     
+Out[34]: [-4, 2]
+\end{python}
  \subsection{Équations sans solution explicite}\index{Équations sans solution explicite}
 Dans la plupart des cas, dès que le système devient trop compliqué, il n’est pas possible de calculer une solution explicite
 \section{In\'equations}\index{In\'equations}
@@ -222,9 +226,13 @@ Pour calculer une limite, on utilise la commande $\mathrm{limit}$. Soient à cal
  \subsection{Suites}
  Les fonctions précédentes permettent d’effectuer des études de suites. On donne un exemple d’étude de croissance comparée entre une suite exponentielle et une suite géométrique
  \subsection{Développements limités}
- SymPy peut calculer des développements de séries asymptotiques de fonctions autour d'un point. Pour calculer l'expansion de f (x) autour du point $x = x_{0}$ termes d'ordre xn, utilisez f(x).series(x, x0, n). x0 et $n$ peuvent être omis, auquel cas les valeurs par défaut x0 = 0 et $n = 6$ seront utilisées
- 
- Pour calculer un développement limité d’ordre $n$ au sens fort $2$ en $x_{0}$, on dispose de la fonction $f(x).series(x==x0, n)$. Si l’on ne s’intéresse qu’à la partie régulière du développement limité à l’ordre n (au sens faible), on peut aussi utiliser la fonction taylor(f(x), x, x0, n)
+ SymPy peut calculer des développements de séries asymptotiques de fonctions autour d'un point. Pour calculer 
+ l'expansion de $f(x)$ autour du point $x = x_{0}$ termes d'ordre $x^{n}$, utilisez $f(x).series(x, x0, n). x0$ 
+ et $n$ peuvent être omis, auquel cas les valeurs par défaut $x_{0} = 0$ et $n = 6$ seront utilisées, on peut 
+ aussi utiliser la fonction taylor(f(x), x, x0, n)
+
+\begin{exercise}
+ \end{exercise}
  \begin{exercise}(Formule due \`a Gauss)
  \[
  \frac{\pi}{4} = 12\arctan(\frac{1}{38})+20\arctan(\frac{1}{57})+7\arctan(\frac{1}{239})+24\arctan(\frac{1}{268})
@@ -234,8 +242,6 @@ Pour calculer une limite, on utilise la commande $\mathrm{limit}$. Soient à cal
   \item Prouver que l'intégralité: $\forall x \in \left[0,\frac{\pi}{4}\right]$, $\tan x \leq \frac{4}{\pi}$. En déduire la formule de Gauss.
   \item En approchant la fonction $\arctan$ par son polynôme de Taylor d’ordre $21$ en $0$, donner une nouvelle approximation de $\pi$
  \end{itemize}
- \end{exercise}
- \begin{exercise}
  \end{exercise}
  \begin{exercise}
  \end{exercise}
