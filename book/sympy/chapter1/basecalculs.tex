@@ -156,12 +156,11 @@ dans le tableau
 Ceci est la documentation officielle du module solveset dans les solveurs. Il contient les questions fréquemment posées sur notre nouveau module pour résoudre des équations.
  \subsection{Résolution explicite}\index{Résolution explicite}
  \subsection{Équations sans solution explicite}\index{Équations sans solution explicite}
+Dans la plupart des cas, dès que le système devient trop compliqué, il n’est pas possible de calculer une solution explicite
 \section{In\'equations}\index{In\'equations}
 \section{Analyse}\index{Analyse}
-Dans cette section, nous présentons succinctement les fonctions couramment utiles en analyse réelle. Pour une 
-utilisation avancée ou des compléments, on renvoie aux chapitres suivants notamment ceux qui traitent de 
-l'intégration numérique (ch. 14), de la résolution des équations non linéaires (ch. 12), et des
-équations différentielles (ch. 10)
+Dans cette section, nous présentons succinctement les fonctions couramment utiles en analyse réelle et complexe. 
+Pour une utilisation avancée ou des compléments
  \subsection{Les Fonctions}\index{Fonctions}
 Il sert également de constructeur pour les classes de fonctions non définies.
 
@@ -215,8 +214,23 @@ le deuxième et le troisième
 \end{solution}
  \subsection{Sommes}
  \subsection{Limites}
+Pour calculer une limite, on utilise la commande $\mathrm{limit}$. Soient à calculer les limites suivantes
+%\begin{enumerate}
+% \item $\frac{X}{Y}$
+% \item $\frac{\sin(\frac{\pi}{2}-x)-\cot(x)}{1-\cos(\frac{\pi}{3}+x)$
+%\end{enumerate}
  \subsection{Suites}
+ Les fonctions précédentes permettent d’effectuer des études de suites. On donne un exemple d’étude de croissance comparée entre une suite exponentielle et une suite géométrique
  \subsection{Développements limités}
+ SymPy peut calculer des développements de séries asymptotiques de fonctions autour d'un point. Pour calculer l'expansion de f (x) autour du point $x = x_{0}$ termes d'ordre xn, utilisez f(x).series(x, x0, n). x0 et $n$ peuvent être omis, auquel cas les valeurs par défaut x0 = 0 et $n = 6$ seront utilisées
+ 
+ Pour calculer un développement limité d’ordre $n$ au sens fort $2$ en $x_{0}$, on dispose de la fonction $f(x).series(x==x0, n)$. Si l’on ne s’intéresse qu’à la partie régulière du développement limité à l’ordre n (au sens faible), on peut aussi utiliser la fonction taylor(f(x), x, x0, n)
+ \begin{exercise}
+ \end{exercise}
+ \begin{exercise}
+ \end{exercise}
+ \begin{exercise}
+ \end{exercise}
  \subsection{Séries}
   On peut utiliser les commandes précédentes pour effectuer des calculs sur les séries. Donnons quelques exemples.
  \subsection{Dérivation}

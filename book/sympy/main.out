@@ -146,62 +146,61 @@
 \BOOKMARK [0][-]{chapter.16}{Groupe de Lie}{part.4}% 146
 \BOOKMARK [1][-]{section.16.1}{R\351solution d\220\351quations par groupe de Lie}{chapter.16}% 147
 \BOOKMARK [0][-]{chapter.17}{Trigonom\351trie en g\351om\351trie lorentzienne}{part.4}% 148
-\BOOKMARK [1][-]{subsection.17.0.1}{Cone}{chapter.17}% 149
-\BOOKMARK [1][-]{section.17.1}{Convex Functions}{chapter.17}% 150
-\BOOKMARK [2][-]{subsection.17.1.1}{Epigraph}{section.17.1}% 151
-\BOOKMARK [0][-]{chapter.18}{Support Function}{part.4}% 152
-\BOOKMARK [1][-]{section.18.1}{Operations Preserve Convexity of Functions}{chapter.18}% 153
-\BOOKMARK [1][-]{section.18.2}{Remarks}{chapter.18}% 154
-\BOOKMARK [1][-]{section.18.3}{Corollaries}{chapter.18}% 155
-\BOOKMARK [1][-]{section.18.4}{Propositions}{chapter.18}% 156
-\BOOKMARK [2][-]{subsection.18.4.1}{Several equations}{section.18.4}% 157
-\BOOKMARK [2][-]{subsection.18.4.2}{Single Line}{section.18.4}% 158
-\BOOKMARK [2][-]{subsection.18.4.3}{Paragraph of Text}{section.18.4}% 159
-\BOOKMARK [1][-]{section.18.5}{Exercises}{chapter.18}% 160
-\BOOKMARK [1][-]{section.18.6}{Problems}{chapter.18}% 161
-\BOOKMARK [1][-]{section.18.7}{Vocabulary}{chapter.18}% 162
-\BOOKMARK [-1][-]{part.5}{V Calcul num\351rique et discret}{}% 163
-\BOOKMARK [0][-]{chapter.19}{Nombres \340 virgule flottante}{part.5}% 164
-\BOOKMARK [0][-]{chapter.20}{Alg\350bre lin\351aire num\351rique}{part.5}% 165
-\BOOKMARK [1][-]{section.20.1}{Matrices pleines}{chapter.20}% 166
-\BOOKMARK [2][-]{subsection.20.1.1}{R\351solution de syst\350mes lin\351aires}{section.20.1}% 167
-\BOOKMARK [2][-]{subsection.20.1.2}{R\351solution directe}{section.20.1}% 168
-\BOOKMARK [2][-]{subsection.20.1.3}{La d\351composition LU}{section.20.1}% 169
-\BOOKMARK [2][-]{subsection.20.1.4}{La d\351composition de Cholesky}{section.20.1}% 170
-\BOOKMARK [2][-]{subsection.20.1.5}{D\351composition QR}{section.20.1}% 171
-\BOOKMARK [2][-]{subsection.20.1.6}{Valeurs propres, vecteurs propres}{section.20.1}% 172
-\BOOKMARK [1][-]{section.20.2}{Matrices creuses}{chapter.20}% 173
-\BOOKMARK [2][-]{subsection.20.2.1}{Origine des syst\350mes creux}{section.20.2}% 174
-\BOOKMARK [2][-]{subsection.20.2.2}{Valeurs propres, vecteurs propres}{section.20.2}% 175
-\BOOKMARK [0][-]{chapter.21}{Int\351gration num\351rique}{part.5}% 176
-\BOOKMARK [1][-]{subsection.21.0.1}{Equation and Text}{chapter.21}% 177
-\BOOKMARK [0][-]{chapter.22}{Transformation d'int\351grale}{part.5}% 178
-\BOOKMARK [1][-]{section.22.1}{Transformation de Fourier}{chapter.22}% 179
-\BOOKMARK [2][-]{subsection.22.1.1}{Transformation de Fourier inverse}{section.22.1}% 180
-\BOOKMARK [1][-]{section.22.2}{Transformation de Laplace}{chapter.22}% 181
-\BOOKMARK [1][-]{section.22.3}{Transformation de Mellin}{chapter.22}% 182
-\BOOKMARK [2][-]{subsection.22.3.1}{Transformation de melin inverse}{section.22.3}% 183
-\BOOKMARK [1][-]{section.22.4}{Transfomation de Henkel}{chapter.22}% 184
-\BOOKMARK [2][-]{subsection.22.4.1}{Transformation de Henkel inverse}{section.22.4}% 185
-\BOOKMARK [0][-]{chapter.23}{\311quations non lin\351aires}{part.5}% 186
-\BOOKMARK [1][-]{section.23.1}{\311quations alg\351briques}{chapter.23}% 187
-\BOOKMARK [1][-]{section.23.2}{Figure}{chapter.23}% 188
-\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 189
-\BOOKMARK [0][-]{chapter.24}{Permutations}{part.6}% 190
-\BOOKMARK [0][-]{chapter.25}{Groupe symmetrique}{part.6}% 191
-\BOOKMARK [0][-]{chapter.26}{Groupe Ab\351lien}{part.6}% 192
-\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 193
-\BOOKMARK [0][-]{chapter.27}{Chaos}{part.7}% 194
-\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 195
-\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 196
-\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 197
-\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 198
-\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 199
-\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 200
-\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 201
-\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 202
-\BOOKMARK [0][-]{chapter*.11}{Bibliography}{part.8}% 203
-\BOOKMARK [1][-]{section*.12}{Articles}{chapter*.11}% 204
-\BOOKMARK [1][-]{section*.13}{Books}{chapter*.11}% 205
-\BOOKMARK [0][-]{section*.14}{Index}{part.8}% 206
-\BOOKMARK [1][-]{section.32.1}{Index}{section*.14}% 207
+\BOOKMARK [1][-]{section.17.1}{Convex Functions}{chapter.17}% 149
+\BOOKMARK [2][-]{subsection.17.1.1}{Epigraph}{section.17.1}% 150
+\BOOKMARK [0][-]{chapter.18}{Support Function}{part.4}% 151
+\BOOKMARK [1][-]{section.18.1}{Operations Preserve Convexity of Functions}{chapter.18}% 152
+\BOOKMARK [1][-]{section.18.2}{Remarks}{chapter.18}% 153
+\BOOKMARK [1][-]{section.18.3}{Corollaries}{chapter.18}% 154
+\BOOKMARK [1][-]{section.18.4}{Propositions}{chapter.18}% 155
+\BOOKMARK [2][-]{subsection.18.4.1}{Several equations}{section.18.4}% 156
+\BOOKMARK [2][-]{subsection.18.4.2}{Single Line}{section.18.4}% 157
+\BOOKMARK [2][-]{subsection.18.4.3}{Paragraph of Text}{section.18.4}% 158
+\BOOKMARK [1][-]{section.18.5}{Exercises}{chapter.18}% 159
+\BOOKMARK [1][-]{section.18.6}{Problems}{chapter.18}% 160
+\BOOKMARK [1][-]{section.18.7}{Vocabulary}{chapter.18}% 161
+\BOOKMARK [-1][-]{part.5}{V Calcul num\351rique et discret}{}% 162
+\BOOKMARK [0][-]{chapter.19}{Nombres \340 virgule flottante}{part.5}% 163
+\BOOKMARK [0][-]{chapter.20}{Alg\350bre lin\351aire num\351rique}{part.5}% 164
+\BOOKMARK [1][-]{section.20.1}{Matrices pleines}{chapter.20}% 165
+\BOOKMARK [2][-]{subsection.20.1.1}{R\351solution de syst\350mes lin\351aires}{section.20.1}% 166
+\BOOKMARK [2][-]{subsection.20.1.2}{R\351solution directe}{section.20.1}% 167
+\BOOKMARK [2][-]{subsection.20.1.3}{La d\351composition LU}{section.20.1}% 168
+\BOOKMARK [2][-]{subsection.20.1.4}{La d\351composition de Cholesky}{section.20.1}% 169
+\BOOKMARK [2][-]{subsection.20.1.5}{D\351composition QR}{section.20.1}% 170
+\BOOKMARK [2][-]{subsection.20.1.6}{Valeurs propres, vecteurs propres}{section.20.1}% 171
+\BOOKMARK [1][-]{section.20.2}{Matrices creuses}{chapter.20}% 172
+\BOOKMARK [2][-]{subsection.20.2.1}{Origine des syst\350mes creux}{section.20.2}% 173
+\BOOKMARK [2][-]{subsection.20.2.2}{Valeurs propres, vecteurs propres}{section.20.2}% 174
+\BOOKMARK [0][-]{chapter.21}{Int\351gration num\351rique}{part.5}% 175
+\BOOKMARK [1][-]{subsection.21.0.1}{Equation and Text}{chapter.21}% 176
+\BOOKMARK [0][-]{chapter.22}{Transformation d'int\351grale}{part.5}% 177
+\BOOKMARK [1][-]{section.22.1}{Transformation de Fourier}{chapter.22}% 178
+\BOOKMARK [2][-]{subsection.22.1.1}{Transformation de Fourier inverse}{section.22.1}% 179
+\BOOKMARK [1][-]{section.22.2}{Transformation de Laplace}{chapter.22}% 180
+\BOOKMARK [1][-]{section.22.3}{Transformation de Mellin}{chapter.22}% 181
+\BOOKMARK [2][-]{subsection.22.3.1}{Transformation de melin inverse}{section.22.3}% 182
+\BOOKMARK [1][-]{section.22.4}{Transfomation de Henkel}{chapter.22}% 183
+\BOOKMARK [2][-]{subsection.22.4.1}{Transformation de Henkel inverse}{section.22.4}% 184
+\BOOKMARK [0][-]{chapter.23}{\311quations non lin\351aires}{part.5}% 185
+\BOOKMARK [1][-]{section.23.1}{\311quations alg\351briques}{chapter.23}% 186
+\BOOKMARK [1][-]{section.23.2}{Figure}{chapter.23}% 187
+\BOOKMARK [-1][-]{part.6}{VI Combinatoire}{}% 188
+\BOOKMARK [0][-]{chapter.24}{Permutations}{part.6}% 189
+\BOOKMARK [0][-]{chapter.25}{Groupe symmetrique}{part.6}% 190
+\BOOKMARK [0][-]{chapter.26}{Groupe Ab\351lien}{part.6}% 191
+\BOOKMARK [-1][-]{part.7}{VII Physique}{}% 192
+\BOOKMARK [0][-]{chapter.27}{Chaos}{part.7}% 193
+\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 194
+\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 195
+\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 196
+\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 197
+\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 198
+\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 199
+\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 200
+\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 201
+\BOOKMARK [0][-]{chapter*.11}{Bibliography}{part.8}% 202
+\BOOKMARK [1][-]{section*.12}{Articles}{chapter*.11}% 203
+\BOOKMARK [1][-]{section*.13}{Books}{chapter*.11}% 204
+\BOOKMARK [0][-]{section*.14}{Index}{part.8}% 205
+\BOOKMARK [1][-]{section.32.1}{Index}{section*.14}% 206
