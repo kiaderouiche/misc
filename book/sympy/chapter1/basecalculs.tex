@@ -160,7 +160,17 @@ Ceci est la documentation officielle du module solveset dans les solveurs. Il co
 In [34]: solve(x**2+2*x-8, x)                                                                     
 Out[34]: [-4, 2]
 \end{python}
-Un exemple un peu plus compliqué avec $z \in \mathbb{R}$ 
+Soit l'équation $x^{2} + \frac{x^{2}}{(x+1)^{2}} - 3 = 0$ pour tout $x \in \mathbb{R}-\left\lbrace -1 \right\rbrace $. En simplifiant le dénominateur $(x+1)^{2}$ elle revient à l'expression:
+\[
+x^{2}(x+1)^{2} + x^{2} = 3(x+1)^{2}
+\]
+Un exemple un peu plus compliqué l'inconnue $z \in \mathbb{R}$  et de paramètre  $\phi$ suivant:
+\[
+ z^{2} - (\frac{2}{\cos\phi})z + \frac{5}{\cos\phi^{2}}-4 = 0, avec \phi \in \left]-\frac{\pi}{2}, \frac{\pi}{2}\right[ 
+\]
+\begin{python}
+
+\end{python}
  \subsection{Équations sans solution explicite}\index{Équations sans solution explicite}
 Dans la plupart des cas, dès que le système devient trop compliqué, il n’est pas possible de calculer une 
 solution non explicite, l'exemple de l’équation $\left(- x + \pi\right) \cos{\left (x \right )} + \sin{\left (x 
@@ -168,7 +178,13 @@ solution non explicite, l'exemple de l’équation $\left(- x + \pi\right) \cos{
 \begin{python}
 In[01]: sin(x)+(pi-x)*cos(x)-pi/2
 \end{python}
-
+Pour tout $x \in \mathbb{R}$ cherchant la solution de l’équation $x^{\frac{1}{x}} - (\frac{1}{x})^{x}=0$, la 
+réponse est une comparaison booléenne sans évaluation, même si en remplace solve par Eq en obtient le même 
+résultat.  
+\begin{python}
+In [153]: solve(x**(1/x)==(1/x)**x, x)
+Out[153]: False
+\end{python}
 \subsection{Équations transcendantale}
 \begin{definition}
 Une équation transcendante est une équation contenant une fonction transcendante d'une ou plusieurs variables 
@@ -176,8 +192,10 @@ qui sont solutions de l'équation en d'autre terme elle ne peut pas être résol
 de solution analytique
 \end{definition}
 \begin{example}
-$x = \exp(-x)$
-$x = \sin(x)$
+ \begin{enumerate}
+  \item $x = \exp(-x)$
+  \item $x = \sin(x)$
+ \end{enumerate}
 \end{example}
 
 Un autre exemple d'équation $3^{e^{- x}}- 5^{x}$ qui semble très compliqué  bien que elle 
@@ -190,7 +208,9 @@ NotImplementedError: multiple generators [3**exp(-x), 5**x]
 No algorithms are implemented to solve equation 3**exp(-x) - 5**x
 \end{python}
 
+
 \section{In\'equations}\index{In\'equations}
+Par exemple l'inéquation $\cos^{2}x \leq \frac{1}{2}$, $I = \left[0, 2\pi\right]$
 \section{Analyse}\index{Analyse}
 Dans cette section, nous présentons succinctement les fonctions couramment utiles en analyse réelle et complexe. 
 Pour une utilisation avancée ou des compléments
