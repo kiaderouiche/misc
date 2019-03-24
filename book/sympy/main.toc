@@ -65,7 +65,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.3}\IeC {\'E}quations transcendantale}{22}{subsection.2.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}In\'equations}{22}{section.2.3}% 
+\contentsline {section}{\numberline {2.3}In\'equations}{23}{section.2.3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Analyse}{23}{section.2.4}% 
 \defcounter {refsection}{0}\relax 
@@ -83,7 +83,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.7}D\IeC {\'e}rivation}{24}{subsection.2.4.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.8}D\IeC {\'e}riv\IeC {\'e}es partielles}{24}{subsection.2.4.8}% 
+\contentsline {subsection}{\numberline {2.4.8}D\IeC {\'e}riv\IeC {\'e}es partielles}{25}{subsection.2.4.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.9}Int\IeC {\'e}gration}{25}{subsection.2.4.9}% 
 \defcounter {refsection}{0}\relax 
