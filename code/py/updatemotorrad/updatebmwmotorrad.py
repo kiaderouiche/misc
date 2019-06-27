@@ -15,29 +15,31 @@ import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup as Soup
 from requests import get
 
-site_link_1 = "https://www.etkbmw.com/bmw/FR/parts/info/{0}"
+url = "https://www.etkbmw.com/bmw/FR/parts/info/{0}"
 
-def makebmwparts(slink, srcfile):
+def makebmwparts(web_link, srcfile):
 	Model = []
 	try:
 		df = pd.read_excel(srcfile, dtype={'Référence':str})
 		for idx, row in df.iterrows():
-			req = get(slink.format(row['Référence']))
+			req = get(web_link.format(row['Référence']))
+			print(req)
 			req.encoding = "utf-8"
 			page_bs = Soup(req.text, "lxml")
 			desc = page_bs.findAll(attrs={"name":"description"})
+			print(desc)
 			print("Référence: {} | Designation: {}".format(row['Référence'], ' '.join(desc[0]['content'].split()[2:-2])))
 			# Create a column from the list
 			Modeln.append(' '.join(desc[0]['content'].split()[2:-2]))
 		df['Modele Moto'] = Model
-		df.to_csv('TARIF MDN_-2018_refPrice.csv')
+		df.to_csv('TARIF_2019_refPrice.csv')
 		return df
 	except IOError:
 		print("Error not possible open {}".format(srcfile))
 
-def statbmwparts():
+def statbmwparts(web_link):
 	""" Une methode pour faire les statistiques descriptive"""
-	df = makebmwparts(site_link, srcfile='TARIF COMPANY-YEAR.xlsx')
+	df = makebmwparts(web_link, srcfile='TARIF_2019.xlsx')
 	count_ref = df['Référence'].count()
 	count_desgn = df['Designation'].count()
 	count_price = df['Prix en DZ'].count()
@@ -55,7 +57,8 @@ def statbmwparts():
 	print('\n')
 
 def main():
-	statbmwparts()
+	#statbmwparts(url)
+	makebmwparts(url, srcfile='TARIF_2019.xlsx')
 
 if __name__ == '__main__':
 	main()
