@@ -4,12 +4,13 @@ package main
 /*
 * K.I.A.Derouiche
 * simple pkgsrc / wip search script using pkgsrc.netbsd.se
+* https://tutorialedge.net/golang/makefiles-for-go-developers/
 */
 
 import (
   "fmt"
   
-  "gopkg.in/urfave/cli.v2"
+  "github.com/urfave/cli"
 )
 
 const version = "1.0"
