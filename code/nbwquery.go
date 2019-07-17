@@ -14,7 +14,7 @@ import (
 )
 
 const version = "1.0"
-const url_website = "http://search.pkgsrc.se/"
+const urlweb = "http://search.pkgsrc.se/"
 
 func main(){
   fmt.Println(version)
