@@ -62,7 +62,7 @@ func main() {
 		},
 		{
 			Name:  "distname",
-			Usage: "get origin apckage name",
+			Usage: "get origin package name",
 			Action: func(c *cli.Context) error {
 				fmt.Println("")
 			},
