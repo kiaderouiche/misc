@@ -8,6 +8,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/micro/cli"
@@ -26,69 +27,52 @@ var (
 func main() {
 	app := cli.NewApp()
 	app.Name = __name__
-	app.Version = __version__
 	app.Authors = []cli.Author{
-		cli.Author{
+		{
 			Name:  __author__,
 			Email: __email__,
 		},
 	}
-	app.Copyright = __copyright__
 	app.Usage = __usage__
 
 	app.Commands = []cli.Command{
-		{
-			Name:  "category",
-			Usage: "add a task to the list",
-			Action: func(c *cli.Context) error {
-				fmt.Println("added task: ", c.Args().First())
-				return nil
-			},
-		},
-		{
-			Name:  "comment",
-			Usage: "complete a task on the list",
-			Action: func(c *cli.Context) error {
-				fmt.Println("completed task: ", c.Args().First())
-				return nil
-			},
-		},
-		{
-			Name:  "dev",
-			Usage: "get maintainer",
-			Action: func(c *cli.Context) error {
-				fmt.Println("")
-			},
-		},
-		{
-			Name:  "distname",
-			Usage: "get origin apckage name",
-			Action: func(c *cli.Context) error {
-				fmt.Println("")
-			},
-		},
-		{
-			Name:  "pvers",
-			Usage: "get package version",
-			Action: func(c *cli.Context) error {
-				fmt.Println("")
-			},
-		},
-		{
-			Name:  "url",
-			Usage: "get package website",
-			Action: func(c *cli.Context) error {
-				fmt.Println("")
-			},
-		},
 		{
 			Name:  "stat",
 			Usage: "numberic",
 			Action: func(c *cli.Context) error {
 				fmt.Println("")
+				return nil
+			},
+		},
+		{
+			Name:  "full",
+			Usage: "Verbose package",
+			Action: func(c *cli.Context) error {
+				name := "pkgname"
+				if c.NArg() > 0 {
+					name = c.Args()[0]
+					fmt.Println("Error de pkgname")
+				}
+				if name == "pkgse" {
+					fmt.Println("pkgse")
+				} else {
+					fmt.Println("noname")
+				}
+				return nil
+			},
+		},
+		{
+			Name:  "version",
+			Usage: "display information from tools",
+			Action: func(c *cli.Context) error {
+				fmt.Println("nbwquery version", __version__)
+				return nil
 			},
 		},
 	}
 
-	app.Run(os.Args)
+	err := app.Run(os.Args)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
