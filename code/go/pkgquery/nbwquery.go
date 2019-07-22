@@ -37,15 +37,7 @@ func main() {
 
 	app.Commands = []cli.Command{
 		{
-			Name:  "stat",
-			Usage: "numberic",
-			Action: func(c *cli.Context) error {
-				fmt.Println("")
-				return nil
-			},
-		},
-		{
-			Name:  "full",
+			Name:  "show",
 			Usage: "Verbose package",
 			Action: func(c *cli.Context) error {
 				name := "pkgname"
@@ -62,6 +54,14 @@ func main() {
 			},
 		},
 		{
+			Name:  "stat",
+			Usage: "numberic",
+			Action: func(c *cli.Context) error {
+				fmt.Println("")
+				return nil
+			},
+		},
+		{
 			Name:  "version",
 			Usage: "display information from tools",
 			Action: func(c *cli.Context) error {
@@ -74,5 +74,7 @@ func main() {
 	err := app.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)
+		os.Exit(1)
 	}
+	os.Exit(0)
 }
