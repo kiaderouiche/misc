@@ -18,11 +18,22 @@
   (local-set-key (kbd "M-*") 'pop-tag-mark)
 )
 (add-hook 'go-mode-hook 'my-go-mode-hook)
+(add-hook 'before-save-hook 'gofmt-before-save)
 
 (require-package 'go-projectile)
 (require-package 'golint)
 (require-package 'go-gopath)
 (require-package 'gotest)
+
+;;AUTO-COMPLETE
+(setenv "GOPATH" "/usr/local/go/src/github.com/mdempsky/gocode")
+(add-to-list 'exec-path "/usr/local/go/bin/gocode")
+
+;;Load auto-complete
+(ac-config-default)
+(require 'auto-complete-config)
+(require 'go-autocomplete)
+;;
 
 (provide 'init-go)
 
