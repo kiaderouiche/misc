@@ -2,6 +2,7 @@ package main
 
 /*
 * K.I.A.Derouiche
+* http://search.pkgsrc.se/
 * simple pkgsrc / wip search script using pkgsrc.netbsd.se
 * https://tutorialedge.net/golang/makefiles-for-go-developers/
  */
