@@ -26,6 +26,8 @@ import (
 	"github.com/micro/cli"
 )
 
+var ()
+
 //Function to compress PDF via Ghostscript command line interface
 func compress(inputFilePath string, outputFilePath string, power int) {
 	power = 0
@@ -45,12 +47,26 @@ func compress(inputFilePath string, outputFilePath string, power int) {
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "go-pdf_compressor"
-	app.Usage = ""
-	app.Action = func(c *cli.Context) error {
-		fmt.Println("PDF compressor")
-		return nil
+
+	app.Flags = []cli.Flag{
+		cli.StringFlag{
+			Name:  "input",
+			Usage: "Relative or absolute path of the input `PDF file`",
+		},
+		cli.StringFlag{
+			Name:  "output, out",
+			Usage: "Relative or absolute path of the output `PDF file`",
+		},
+		cli.StringFlag{
+			Name:  "compress, c",
+			Usage: "Compression level from `[0-4]`",
+		},
+		cli.StringFlag{
+			Name:  "backup, b",
+			Usage: "Backup the old `PDF file`",
+		},
 	}
+
 	app.Run(os.Args)
 
 }
