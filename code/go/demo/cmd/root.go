@@ -1,5 +1,5 @@
 /*
-Copyright © 2019 K.I.A.Derouiche
+Copyright © 2019 NAME HERE <EMAIL ADDRESS>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-  Use:   "gopdfc",
+  Use:   "demo",
   Short: "A brief description of your application",
   Long: `A longer description that spans multiple lines and likely contains
 examples and usage of using your application. For example:
@@ -60,7 +60,7 @@ func init() {
   // Cobra supports persistent flags, which, if defined here,
   // will be global for your application.
 
-  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.gopdfc.yaml)")
+  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.demo.yaml)")
 
 
   // Cobra also supports local flags, which will only run
@@ -82,9 +82,9 @@ func initConfig() {
       os.Exit(1)
     }
 
-    // Search config in home directory with name ".gopdfc" (without extension).
+    // Search config in home directory with name ".demo" (without extension).
     viper.AddConfigPath(home)
-    viper.SetConfigName(".gopdfc")
+    viper.SetConfigName(".demo")
   }
 
   viper.AutomaticEnv() // read in environment variables that match

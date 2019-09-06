@@ -1,5 +1,5 @@
 /*
-Copyright © 2019 K.I.A.Derouiche
+Copyright © 2019 NAME HERE <EMAIL ADDRESS>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@ limitations under the License.
 */
 package main
 
-import "github.com/kiaderouiche/gopdfc/cmd"
+import "../demo/cmd"
 
 func main() {
-  cmd.Execute()
+	cmd.Execute()
 }
