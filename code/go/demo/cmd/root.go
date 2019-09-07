@@ -19,15 +19,15 @@ import (
 	"log"
 	"os"
 
-	"github.com/spf13/cobra"
 	"../imp"
+	"github.com/spf13/cobra"
 )
 
 var name string
 var age int
 
 // rootCmd represents the base command when called without any subcommands
-var RootCmd = &cobra.Command{
+var rootCmd = &cobra.Command{
 	Use:   "demo",
 	Short: "A Test demo",
 	Long:  `Demo is a test application for print things.`,
@@ -36,6 +36,7 @@ var RootCmd = &cobra.Command{
 			cmd.Help()
 			return
 		}
+		//Execute cmd
 		imp.Show(name, age)
 	},
 }
@@ -43,7 +44,7 @@ var RootCmd = &cobra.Command{
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
-	if err := RootCmd.Execute(); err != nil {
+	if err := rootCmd.Execute(); err != nil {
 		log.Fatalln(err)
 		os.Exit(1)
 	}
@@ -51,8 +52,8 @@ func Execute() {
 
 func init() {
 
-	RootCmd.Flags().StringVarP(&name, "name", "n", "", "person's name")
-	RootCmd.Flags().IntVarP(&age, "age", "a", 0, "person's age")
+	rootCmd.Flags().StringVarP(&name, "name", "n", "", "person's name")
+	rootCmd.Flags().IntVarP(&age, "age", "a", 0, "person's age")
 }
 
 // initConfig reads in config file and ENV variables if set.
