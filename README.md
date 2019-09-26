@@ -1,2 +1,2 @@
 # misc
-Miscellaneous: presentation codes and book.
+Miscellaneous: presentation, code, papers and book.
