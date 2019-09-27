@@ -1,0 +1,190 @@
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
+
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book%
+
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+%%%
+
+%% Bibliography
+%\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+%\addbibresource{biblio.bib} % BibTeX bibliography file
+%\defbibheading{bibempty}{}
+
+\input{template/structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+%----------------------------------------------------------------------------------------
+%	Definitions of new commands
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.25]{esahubble}}} % Image background
+\centering
+\vspace*{5cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\textbf{Le pharaon dans le Coran}\\
+{\LARGE Le systeme}\par % Book title
+\vspace*{1cm}
+{\Huge K.I.A Derouiche}\par % Author name
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head1.png} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	AVANT PROPOS
+%----------------------------------------------------------------------------------------
+
+\include{first/avant_propos}
+
+\chapterimage{head2.png} % Chapter heading image
+\include{first/firststep}
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+\include{chapter1/basecalculs}
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2
+%----------------------------------------------------------------------------------------
+\part{Bref histoire des pharaons}
+\include{chapter2/egypt}
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+\part{Panaroma des systemes politiques}
+\include{chapter3/ringfinitefiled}
+\include{chapter3/polynomes}
+\include{chapter3/linearalgebra}
+\include{chapter3/systempolynom}
+\include{chapter3/symbolicdiffequ}
+\include{chapter3/recurrsquence}
+
+%---------------------------------------------------------------------------------------
+%	CHAPTER 4
+%----------------------------------------------------------------------------------------
+\part{Géométrie}
+Le module de géométrie pour SymPy permet de créer des entités géométriques bidimensionnelles, telles que des lignes et des cercles, et une requête d'informations sur ces entités. Cela peut inclure de demander l’aire d’une ellipse, de vérifier la colinéarité d’un ensemble de points ou de rechercher l’intersection de deux lignes. Le cas d'utilisation principal du module implique des entités avec des valeurs numériques, mais il est également possible d'utiliser des représentations symboliques.
+\include{chapter4/plangeometry}
+\include{chapter4/diffgeometry}
+\include{chapter4/liegeometry}
+\include{chapter4/trigolorentz}
+%-------------------------------------------------------------------------------------------------
+%   CHAPTER 5
+%-------------------------------------------------------------------------------------------------
+\part{Calcul numérique et discret}\index{Calcul numérique et discret}
+\include{chapter5/floatappro}
+\include{chapter5/numalgebra}
+\include{chapter5/numintgration}
+\include{chapter5/integrtransform}
+%-------------------------------------------------
+
+\section{Figure}\index{Figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l l l}
+\toprule
+\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+\midrule
+Treatment 1 & 0.0003262 & 0.562 \\
+Treatment 2 & 0.0015681 & 0.910 \\
+Treatment 3 & 0.0009271 & 0.296 \\
+\bottomrule
+\end{tabular}
+\caption{Table caption}
+\end{table}
+
+%
+%\begin{figure}[h]
+%\centering\includegraphics[scale=0.5]
+%\caption{Figure caption}
+%\end{figure}
+
+%----------------------------------------------------------------------------------------
+\include{chapter6/combina}
+%----------------------------------------------------------------------------------------
+\part{Physique}
+\include{chapter7/chaos}
+\include{chapter7/quantum}
+%----------------------------------------------------------------------------------------
+%	Technique Avancée
+%----------------------------------------------------------------------------------------
+
+\part{Annexe}
+\include{annexe/poo/intropoo}
+\include{annexe/decor/decorator}
+\chapter{Optimisation du code}
+Sans aucun doute l'usage de la programmation symbolique avec ce que en a vue plus haut, ralentisse
+grandement l'exécution du programme, donc en gagne sur le coté sûreté, élégance
+et maintenance du code et d'autre part en perd complètement la vitesse; penser à des centaine de ligne
+de code si vous voulez programmé un robot, voiture ou des objets connectés qui implémente des
+algorithmes mathématiques et qui de demande beaucoup de ressource est un temps de retour très élevées
+\include{annexe/optimization/cython}
+\include{annexe/optimization/theano}
+\include{annexe/gui/qt}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}} % Add a Bibliography heading to the table of contents
+
+%------------------------------------------------
+
+\section*{Articles}
+\addcontentsline{toc}{section}{Articles}
+\printbibliography[heading=bibempty,type=article]
+
+%------------------------------------------------
+
+\section*{Books}
+\addcontentsline{toc}{section}{Books}
+\printbibliography[heading=bibempty,type=book]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage % Make sure the index starts on an odd (right side) page
+\phantomsection
+\setlength{\columnsep}{0.75cm} % Space between the 2 columns of the index
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
+
+
+\section{Index}
+
+\end{document}
