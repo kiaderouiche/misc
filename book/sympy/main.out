@@ -192,16 +192,18 @@
 \BOOKMARK [0][-]{chapter.26}{Groupe Ab\351lien}{part.6}% 192
 \BOOKMARK [-1][-]{part.7}{VII Physique}{}% 193
 \BOOKMARK [0][-]{chapter.27}{Chaos}{part.7}% 194
-\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 195
-\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 196
-\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 197
-\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 198
-\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 199
-\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 200
-\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 201
-\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 202
-\BOOKMARK [0][-]{chapter*.11}{Bibliography}{part.8}% 203
-\BOOKMARK [1][-]{section*.12}{Articles}{chapter*.11}% 204
-\BOOKMARK [1][-]{section*.13}{Books}{chapter*.11}% 205
-\BOOKMARK [0][-]{section*.14}{Index}{part.8}% 206
-\BOOKMARK [1][-]{section.32.1}{Index}{section*.14}% 207
+\BOOKMARK [1][-]{section.27.1}{Mouvement d'un double pendule}{chapter.27}% 195
+\BOOKMARK [1][-]{section.27.2}{Cin\351tique des gaz}{chapter.27}% 196
+\BOOKMARK [0][-]{chapter.28}{M\351canique et information quantique}{part.7}% 197
+\BOOKMARK [-1][-]{part.8}{VIII Annexe}{}% 198
+\BOOKMARK [0][-]{chapter.29}{Programmation Orient\351e Objet}{part.8}% 199
+\BOOKMARK [0][-]{chapter.30}{D\351corateurs}{part.8}% 200
+\BOOKMARK [0][-]{chapter.31}{Optimisation du code}{part.8}% 201
+\BOOKMARK [1][-]{subsection.31.0.1}{Cython}{chapter.31}% 202
+\BOOKMARK [2][-]{subsection.31.0.2}{Theano}{subsection.31.0.1}% 203
+\BOOKMARK [0][-]{chapter.32}{Interface graphique}{part.8}% 204
+\BOOKMARK [0][-]{chapter*.11}{Bibliography}{part.8}% 205
+\BOOKMARK [1][-]{section*.12}{Articles}{chapter*.11}% 206
+\BOOKMARK [1][-]{section*.13}{Books}{chapter*.11}% 207
+\BOOKMARK [0][-]{section*.14}{Index}{part.8}% 208
+\BOOKMARK [1][-]{section.32.1}{Index}{section*.14}% 209
