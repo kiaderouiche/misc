@@ -215,8 +215,14 @@ NotImplementedError: multiple generators [3**exp(-x), 5**x]
 No algorithms are implemented to solve equation 3**exp(-x) - 5**x
 \end{python}
 
-
 \section{In\'equations}\index{In\'equations}
+Considérons l'inéquation suivante $ln\left(x-2 \right) + ln\left(x+1 \right) \geqslant ln\left(4\right)$
+La bibliothèque SymPy implémente des modules pour calculer des inéquations à une et plusieurs inconnus qui fait appel à la classe qui l'objet..., plus simplement on montre dans l'exemple suivant
+ \begin{python}
+In [153]: solve(x**(1/x)==(1/x)**x, x)
+Out[153]: False
+\end{python}
+\subsection{L’inéquation trigonométrique}
 Par exemple l'inéquation $\cos^{2}x \leq \frac{1}{2}$, $I = \left[0, 2\pi\right]$
 \section{Analyse}\index{Analyse}
 Dans cette section, nous présentons succinctement les fonctions couramment utiles en analyse réelle et complexe. 

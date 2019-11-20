@@ -13,6 +13,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {0.2.4}Pourquoi choisir SymPy?}{13}{subsection.0.2.4}% 
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {0.3}Passer du probl\IeC {\`e}me au codage du probl\IeC {\`e}me}{13}{section.0.3}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {part}{I\hspace {1em}Premier pas vers SymPy}{15}{part.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Premier pas vers SymPy}{17}{chapter.1}% 
@@ -70,6 +72,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}In\'equations}{23}{section.2.3}% 
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}L\IeC {\textquoteright }in\IeC {\'e}quation trigonom\IeC {\'e}trique}{23}{subsection.2.3.1}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Analyse}{23}{section.2.4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.1}Les Fonctions}{23}{subsection.2.4.1}% 
@@ -82,9 +86,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.5}D\IeC {\'e}veloppements limit\IeC {\'e}s}{24}{subsection.2.4.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}S\IeC {\'e}ries}{24}{subsection.2.4.6}% 
+\contentsline {subsection}{\numberline {2.4.6}S\IeC {\'e}ries}{25}{subsection.2.4.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.7}D\IeC {\'e}rivation}{24}{subsection.2.4.7}% 
+\contentsline {subsection}{\numberline {2.4.7}D\IeC {\'e}rivation}{25}{subsection.2.4.7}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.8}D\IeC {\'e}riv\IeC {\'e}es partielles}{25}{subsection.2.4.8}% 
 \defcounter {refsection}{0}\relax 
