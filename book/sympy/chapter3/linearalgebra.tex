@@ -106,7 +106,7 @@ invariants de la matrice. Ils sont totalement ordonnés pour la divisibilité (i
 \end{flushleft}
 
 \subsection{ Résolution de systèmes ; image et base du noyau}
-\subsection{Valeurs propres, forme de Jordan et transformations de similitude}
+\subsection{forme de Jordan et transformations de similitude}
 Lorsque l’on interprète une matrice carrée comme un opérateur linéaire (un endomorphisme), elle n’en est que la représentation dans une base donnée. Tout changement de base correspond à une transformation de similitude 
 $B = U^{-1}AU$ de la matrice. Les deux matrices $A$ et $B$ sont alors dites semblables. Ainsi les propriétés de l’opérateur linéaire, qui sont indépendantes de la base, sont révélées par l’étude des invariants de similitude de la matrice.
 par l’étude des invariants de similitude de la matrice. Parmi ces invariants, les plus simples sont le rang et le déterminant. En effet les matrices $U$ et $U^{-1}$ étant inversibles, le rang de $U^{-1}AU$ égale le rang de $A$. De plus $det\left( U^{-1}AU\right)  = det\left( U^{-1}\right) det \left(A det(U) = det(U^{-1}U\right) det\left( A\right) = det\left(A\right)$. De
@@ -208,6 +208,15 @@ Soit $E=\mathbb{R}_{n}\left[x\right]$. Pour $P\in E$, on pose $Q\left(P\right)= 
   \item Déterminer sa signature.
 \end{itemize}
 \end{exercise}
+\section{Valeur propre et vecteur propre}
+L'apport du théorème de valeur propre et vecteur propre dans les mathématiques, la science, et ingénierie et énorme des volumes ne suffisse pas pour décrire les bienfaits de cette très belle théorie de algèbre linéaire 
+\subsection{L'identité vecteur propre-valeur propre}
+Un résultat récemment obtenu par Terence Tao\footnote{https://arxiv.org/abs/1908.03795}
+\begin{equation}
+|v_{i,j}|^2\prod_{k=1;k\neq
+i}^{n}\left(\lambda_i(A)-\lambda_k(A)\right)=\prod_{k=1}^{n-1}\left(\lambda_i(A)-\lambda_k(M_j)\right)\
+\end{equation}
+
 \section{Tenseur}
 
 
