@@ -59,24 +59,24 @@ if __name__ == '__main__':
     ## Absolute path
     # Dir
     if find_program (os.environ['HOME']) is not None:
-        print "FAILED"
+        print ("FAILED")
         sys.exit (1)
 
     # File not exec
     if find_program ('./FindProgram.py') is not None:
-        print "FAILED"
+        print ("FAILED")
         sys.exit (2)
 
     # File exec
     if find_program ('/bin/ls') != '/bin/ls':
-        print "FAILED"
+        print ("FAILED")
         sys.exit (3)
 
     ## Relative path
     if find_program ('cat') != '/bin/cat':
-        print "FAILED"
+        print ("FAILED")
         sys.exit (4)
 
-    print "SUCCESS"
+    print ("SUCCESS")
 
 

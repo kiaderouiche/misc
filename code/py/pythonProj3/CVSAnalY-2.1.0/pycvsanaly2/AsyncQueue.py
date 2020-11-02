@@ -153,5 +153,5 @@ if __name__ == '__main__':
     try:
         q.get (5)
     except TimeOut:
-        print "Queue empty! bye bye!"
+        print ("Queue empty! bye bye!")
         

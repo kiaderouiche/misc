@@ -120,7 +120,7 @@ if __name__ == '__main__':
     from repositoryhandler.backends import create_repository, create_repository_from_path
 
     def new_line (line, user_data = None):
-        print line.strip ('\n')
+        print (line.strip ('\n'))
         if user_data is not None:
             user_data.add_line (line)
     

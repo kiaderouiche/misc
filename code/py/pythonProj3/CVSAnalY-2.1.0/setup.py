@@ -37,14 +37,14 @@ from pycvsanaly2.FindProgram import find_program
 def pkg_check_modules (deps):
     pkg_config = find_program ('pkg-config')
     if pkg_config is None:
-        print "pkg-config was not found and it's required to build cvsanaly2"
+        print ("pkg-config was not found and it's required to build cvsanaly2")
         sys.exit (1)
         
     cmd = "%s --errors-to-stdout --print-errors --exists '%s'" % (pkg_config, ' '.join (deps))
     out = commands.getoutput (cmd)
 
     if out:
-        print out
+        print (out)
         sys.exit (1)
 
 def generate_changelog ():
@@ -53,7 +53,7 @@ def generate_changelog ():
 
     fd, filename = mkstemp (dir=os.getcwd ())
 
-    print "Creating ChangeLog"
+    print ("Creating ChangeLog")
     cmd = ["git", "log", "-M", "-C", "--name-status", "--date=short", "--no-color"]
     pipe = Popen (cmd, stdout=PIPE).stdout
 

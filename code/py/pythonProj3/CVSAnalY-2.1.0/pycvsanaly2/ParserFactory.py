@@ -33,7 +33,7 @@ def create_parser_from_logfile (uri):
 
         try:
             f = open (logfile, 'r')
-        except IOError, e:
+        except IOError as e:
             printerr (str (e))
             return False
         
@@ -50,12 +50,11 @@ def create_parser_from_logfile (uri):
 
         return retval
 
-    def logfile_is_svn (logfile):
+    def logfile_is_svn (logfile) -> bool:
         retval = False
-
         try:
             f = open (logfile, 'r')
-        except IOError, e:
+        except IOError as e:
             printerr (str (e))
             return False
 
@@ -72,12 +71,12 @@ def create_parser_from_logfile (uri):
 
         return retval
 
-    def log_file_is_git (logfile):
+    def log_file_is_git (logfile)-> bool:
         retval = False
 
         try:
             f = open (logfile, 'r')
-        except IOError, e:
+        except IOError as e:
             printerr (str (e))
             return False
 
@@ -94,12 +93,12 @@ def create_parser_from_logfile (uri):
 
         return retval
 
-    def log_file_is_bzr (logfile):
+    def log_file_is_bzr (logfile) -> bool:
         retval = False
 
         try:
             f = open (logfile, 'r')
-        except IOError, e:
+        except IOError as e:
             printerr (str (e))
             return False
 

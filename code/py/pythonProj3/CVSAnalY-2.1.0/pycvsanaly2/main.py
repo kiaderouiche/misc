@@ -44,10 +44,10 @@ from utils import printerr, printout, uri_to_filename
 from _config import *
 
 def usage ():
-    print "%s %s - %s" % (PACKAGE, VERSION, DESCRIPTION)
-    print COPYRIGHT
-    print
-    print "Usage: cvsanaly2 [options] [URI]"
+    print ("{} {} - {}".format((PACKAGE, VERSION, DESCRIPTION))
+    print (COPYRIGHT)
+    print ( )
+    print ("Usage: cvsanaly2 [options] [URI]")
     print """
 Analyze the given URI. An URI can be a checked out directory, 
 or a remote URL pointing to a repository. If URI is omitted,
@@ -117,7 +117,7 @@ def main (argv):
             usage ()
             return 0
         elif opt in ("-V", "--version"):
-            print VERSION
+            print (VERSION)
             return 0
         elif opt in ("--debug", "-g"):
             debug = True

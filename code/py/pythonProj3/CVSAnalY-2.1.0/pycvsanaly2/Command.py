@@ -262,7 +262,7 @@ if __name__ == '__main__':
 
     # Valid command with cwd
     def out_func (line):
-        print "LINE: %s" % (line)
+        print ("LINE: {}".format(line))
     cmd = Command (['ls', '-lh'], '/')
     cmd.run (parser_out_func = out_func)
 
@@ -270,32 +270,32 @@ if __name__ == '__main__':
     cmd = Command ('invalid')
     try:
         cmd.run ()
-    except Exception, e:
-        print 'Command not found (%s)' % (str (e))
+    except Exception as e:
+        print ('Command not found {}'.format(str(e)))
 
     # Command returning non-zero
     cmd = Command (['diff', '/etc/passwd', '/etc/group'])
     try:
         cmd.run_sync ()
-    except CommandError, e:
-        print "Error running command. Error: %s" % (e.error)
+    except CommandError as e:
+        print ("Error running command. Error: {}".format((e.error)))
 
     cmd = Command (['cat', '/foo'])
     try:
         cmd.run_sync ()
-    except CommandError, e:
-        print "Error running command. Error: %s" % (e.error)
+    except CommandError as e:
+        print ("Error running command. Error: {}".format((e.error)))
 
     # Run sync
     cmd = Command (['ls'], '/tmp/')
-    print cmd.run_sync ()
+    print (cmd.run_sync ())
 
     def error_handler (cmd, data):
         cmd.input ('p\n')
         return True
     cmd = Command (['svn', 'info', 'https://svn.apache.org/repos/asf/activemq/trunk'])
     cmd.set_error_handler (error_handler)
-    print cmd.run ()
+    print (cmd.run ())
 
     # Timeout
     cmd = Command (['sleep', '100'])

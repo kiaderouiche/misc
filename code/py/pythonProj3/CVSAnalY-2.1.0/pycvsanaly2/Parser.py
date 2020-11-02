@@ -72,7 +72,7 @@ if __name__ == '__main__':
     
     class StdoutContentHandler (ContentHandler):
         def commit (self, commit):
-            print "Commit"
+            print ("Commit")
             print "rev: %s, committer: %s <%s>, date: %s" % (commit.revision, commit.committer.name, commit.committer.email, commit.date)
             if commit.author is not None:
                 print "Author: %s <%s>" % (commit.author.name, commit.author.email)
