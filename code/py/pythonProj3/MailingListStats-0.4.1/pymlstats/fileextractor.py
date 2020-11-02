@@ -53,7 +53,7 @@ class FileExtractor(object):
     """
     The intention of this class is to provide an easy way to extract,
     decompress and access to the files stored in any kind of containers
-    such as zips, tars and so on.
+    such as zips, tars, xz and so on.
     """
 
     def gzExtraction(self, filename) ->str:
@@ -177,9 +177,9 @@ class FileExtractor(object):
         @param filename: path to xz file to be extracted
         @return: the path to the file that has been extracted
         """
-        bz2file = bz2.BZ2File(filename, mode='r')
+        xzfile = bz2.BZ2File(filename, mode='r')
         outputfilename, ext = os.path.splitext(filename)
-        # If the extension is different than bz2,
+        # If the extension is different than xz,
         # add this to avoid using the same output
         # filename than the original file
         if '.bz2' != ext.lower():
