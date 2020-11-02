@@ -39,62 +39,61 @@ author = "(C) 2007-2010 %s <%s>" % \
 name = "mlstats %s - Libresoft Research Group http://libresoft.es" % \
        mlstats_version
 credits = "%s\n%s\n" % (name, author)
+help = "where URL1, URL2, ...., URLn are the urls of the archive web pages \
+    of the mailing list. If they are a local dir instead of a remote URL, \
+    the directory will be recursively scanned for mbox files. \
+    If the option \"-\" is passed instead of a URL(s), the URLs will be \
+    read from the standard input. \
+                                \
+General options: \
+                                                                            \
+  -h, --help        Print this usage message.                               \
+  -q, --quiet       Do not show messages about the progress in the retrieval \
+                    and analysis of the archives.                           \
+  --version         Show the version number and exit.                       \
+  -                 Read URLs from the standard input. This will ignore all \
+                    the URLs passed via the command line.                   \
+                                                                            \
+Report options:                                                             \
+                                                                            \
+  --report-file     Filename for the report generated after the analysis    \
+                    (default is standard output)                            \
+                    WARNING: The report file will be overwritten if already \
+                    exists.                                                 \
+  --no-report       Do not generate report after the retrieval and parsing  \
+                    of the archives.                                        \
+                                                                             \
+                                                                             \
+Private archives options:                                                    \
+                                                                             \
+  --web-user        If the archives of the mailing list are private, use     \
+                    this username to login in order to retrieve the files.   \
+  --web-password    If the archives of the mailing list are private, use     \
+                    this password to login in order to retrieve the files.   \
+                                                                             \
+Database options:                                                            \
+                                                                             \
+  --db-driver          Database backend: mysql or postgres                   \
+                       (default is mysql)                                    \
+  --db-user            Username to connect to the database                   \
+                       (default is operator)                                 \
+  --db-password        Password to connect to the database                   \
+                       (default is operator)                                 \
+  --db-name            Name of the database that contains data previously    \
+                       analyzed (default is mlstats)                         \
+  --db-hostname        Name of the host with a database server running       \
+                       (default is localhost)                                \
+  --db-admin-user      Username to create the mlstats database               \
+                       (default is root)                                     \
+  --db-admin-password  Password to create the mlstats database               \
+                       (default is empty)                                   "
+
 
 
 def usage():
     print (credits)
-    print "Usage: %s [options] [URL1] [URL2] ... [URLn]" % (sys.argv[0])
-    print """
-    where URL1, URL2, ...., URLn are the urls of the archive web pages
-    of the mailing list. If they are a local dir instead of a remote URL,
-    the directory will be recursively scanned for mbox files.
-    If the option \"-\" is passed instead of a URL(s), the URLs will be
-    read from the standard input.
-
-General options:
-
-  -h, --help        Print this usage message.
-  -q, --quiet       Do not show messages about the progress in the retrieval
-                    and analysis of the archives.
-  --version         Show the version number and exit.
-  -                 Read URLs from the standard input. This will ignore all
-                    the URLs passed via the command line.
-
-Report options:
-
-  --report-file     Filename for the report generated after the analysis
-                    (default is standard output)
-                    WARNING: The report file will be overwritten if already
-                    exists.
-  --no-report       Do not generate report after the retrieval and parsing
-                    of the archives.
-
-
-Private archives options:
-
-  --web-user        If the archives of the mailing list are private, use
-                    this username to login in order to retrieve the files.
-  --web-password    If the archives of the mailing list are private, use
-                    this password to login in order to retrieve the files.
-
-Database options:
-
-  --db-driver          Database backend: mysql or postgres
-                       (default is mysql)
-  --db-user            Username to connect to the database
-                       (default is operator)
-  --db-password        Password to connect to the database
-                       (default is operator)
-  --db-name            Name of the database that contains data previously
-                       analyzed (default is mlstats)
-  --db-hostname        Name of the host with a database server running
-                       (default is localhost)
-  --db-admin-user      Username to create the mlstats database
-                       (default is root)
-  --db-admin-password  Password to create the mlstats database
-                       (default is empty)
-"""
-
+    print ("Usage: %s [options] [URL1] [URL2] ... [URLn]".format(sys.argv[0]))
+    print (help)
 
 def start():
     # Short (one letter) options. Those requiring argument followed by :
@@ -124,7 +123,7 @@ def start():
 
     try:
         opts, args = getopt.getopt(sys.argv[1:], short_opts, long_opts)
-    except getopt.GetoptError, (msg, opt):
+    except getopt.GetoptError as (msg, opt):
         print ('>>sys.stderr'.format(msg))
         usage()
         sys.exit(2)
@@ -163,7 +162,7 @@ def start():
         elif "--web-password" == opt:
             web_password = value
         elif "--version" == opt:
-            print mlstats_version
+            print (mlstats_version)
             sys.exit(0)
 
     myapp = Application(db_driver, db_user, db_password, db_name,
