@@ -126,7 +126,8 @@ class Person:
         return not isinstance (other, Person) or self.name != other.name
 
 if __name__ == '__main__':
-    from cPickle import dump, load
+    import _pickle as cPickle
+    #from cPickle import dump, load
     import datetime
 
     c = Commit ()
@@ -144,12 +145,14 @@ if __name__ == '__main__':
 
         c.actions.append (a)
 
-    f = open ("/tmp/commits", "wb")
-    dump (c, f, -1)
-    f.close ()
+    try:
+        with open ("/tmp/commits", "wb") as f:
+            cPickle.dump (c, f, -1)
+    finally:
+        f.close ()
 
     f = open ("/tmp/commits", "rb")
-    commit = load (f)
+    commit = cPickle.load (f)
     f.close ()
 
     print "Commit"
