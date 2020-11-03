@@ -29,8 +29,8 @@ import datetime
 from storm.exceptions import IntegrityError # DatabaseError,
 from storm.locals import DateTime, Int, Reference, Unicode
 
-from Bicho.utils import printdbg
-from Bicho.Config import Config
+from .Bicho.utils import printdbg
+from .Bicho.Config import Config
 
 
 class NotFoundError(Exception):

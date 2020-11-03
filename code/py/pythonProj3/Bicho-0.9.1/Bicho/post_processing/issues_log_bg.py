@@ -19,8 +19,8 @@
 #
 #
 
-from Bicho.post_processing import IssueLogger
-from issues_log import *
+from .Bicho.post_processing import IssueLogger
+from .issues_log import *
 
 __sql_drop__ = 'DROP TABLE IF EXISTS issues_log_bugzilla;'
 
