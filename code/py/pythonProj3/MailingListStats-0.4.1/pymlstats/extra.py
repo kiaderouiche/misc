@@ -1,6 +1,6 @@
 import lzma
 
-class Compressorerror:
+class Compressorerror(Exception):
     pass
 
 def extract_file_xz(file_xz):
