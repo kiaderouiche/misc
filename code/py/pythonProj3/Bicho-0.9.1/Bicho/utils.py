@@ -43,7 +43,7 @@ def printerr (str = '\n'):
     sys.stderr.write (str)
     sys.stderr.flush ()
 
-def printwrn (str = '\n'):
+def printwrn (str = '\n') -> None:
     if Config.quiet:
         return
 
@@ -55,11 +55,11 @@ def printdbg (str = '\n'):
     t = time.strftime("%d/%b/%Y-%X")
     printout ("DBG: [" + t +"] "+ str)
 
-def get_domain(url):
+def get_domain(url) -> str:
     strings = url.split('/')
     return strings[0] + "//" + strings[2] + "/"
 
-def url_join(base, *kwargs):
+def url_join(base, *kwargs) -> str:
     retval = [base.strip('/')]
 
     for comp in kwargs:
@@ -67,7 +67,7 @@ def url_join(base, *kwargs):
 
     return "/".join(retval)
 
-def url_strip_protocol(url):
+def url_strip_protocol(url) -> str:
     p = url.find("://")
     if p == -1:
         return url
@@ -75,7 +75,7 @@ def url_strip_protocol(url):
     p += 3
     return url[p:]
 
-def url_get_attr(url, attr=None):
+def url_get_attr(url, attr=None) -> None:
     query = urllib.parse.splitquery(url)
     try:
         if query[1] is None:
@@ -113,7 +113,7 @@ def create_dir(dir):
             raise
 
 
-def bicho_dot_dir ():
+def bicho_dot_dir () -> str:
     try:
         return _dirs['dot']
     except KeyError:
