@@ -1,11 +1,17 @@
 import lzma
 
+class Compressorerror:
+    pass
+
 def extract_file_xz(file_xz):
     with lzma.open(file_xz) as f:
         file_content = f.read()
         print(type(file_content))
-        decompressed = lzma.decompress(file_content)
-        fp.write(decompressed)
+        try:
+            decompressed = lzma.decompress(file_content)
+            fp.write(decompressed)
+        except lzma.LZMAError as e:
+            raise Compressorerror(e)
     print(fp)
 
 def main():
