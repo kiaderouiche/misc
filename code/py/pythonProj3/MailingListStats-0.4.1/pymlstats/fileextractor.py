@@ -71,10 +71,14 @@ class FileExtractor(object):
         if '.gz' != ext.lower():
             outputfilename = filename + '.extracted'
 
-        outputfileobj = open(outputfilename, 'w')
-        outputfileobj.write(gzipfile.read())
-        gzipfile.close()
-        outputfileobj.close()
+        try:
+            with open(outputfilename, 'w') as outputfileobj:
+                outputfileobj.write(gzipfile.read())
+        except IOError as e:
+            pass #Checher L'exception
+        finally:
+            gzipfile.close()
+            outputfileobj.close()
 
         return outputfilename
 
@@ -92,10 +96,14 @@ class FileExtractor(object):
         if '.bz2' != ext.lower():
             outputfilename = filename + '.extracted'
 
-        outputfileobj = open(outputfilename, 'w')
-        outputfileobj.write(bz2file.read())
-        bz2file.close()
-        outputfileobj.close()
+        try:
+            with open(outputfilename, 'w') as outputfileobj:
+                outputfileobj.write(bz2file.read())
+        except:
+            pass
+        finally:
+            bz2file.close()
+            outputfileobj.close()
 
         return outputfilename
 
@@ -185,10 +193,14 @@ class FileExtractor(object):
         if '.bz2' != ext.lower():
             outputfilename = filename + '.extracted'
 
-        outputfileobj = open(outputfilename, 'w')
-        outputfileobj.write(bz2file.read())
-        bz2file.close()
-        outputfileobj.close()
+        try:
+            with open(outputfilename, 'w') as outputfileobj:
+                outputfileobj.write(xzfile.read())
+        except: 
+            pass
+        finally:
+            xzfile.close()
+            outputfileobj.close()
 
         return outputfilename
     
@@ -285,6 +297,6 @@ if __name__ == "__main__":
         extracted_list = fe.extract(container_list)
         print (str(extracted_list))
     except FileExtractorError as  e:
-        print (">>sys.stderr".format(e.message))
+        print (">>sys.stderr {}".format(e.message))
     else:
         print ("Extraction completed")
