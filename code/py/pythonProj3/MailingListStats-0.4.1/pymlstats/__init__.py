@@ -31,7 +31,7 @@ options are changed.
 import sys
 import getopt
 from .main import Application
-from version import mlstats_version
+from .version import mlstats_version
 
 # Some stuff about the project
 author = "(C) 2007-2010 %s <%s>" % \
