@@ -123,8 +123,8 @@ def start():
 
     try:
         opts, args = getopt.getopt(sys.argv[1:], short_opts, long_opts)
-    except getopt.GetoptError as (msg, opt):
-        print ('>>sys.stderr'.format(msg))
+    except getopt.GetoptError as msg:
+        print ('>>sys.stderr {}'.format(msg))
         usage()
         sys.exit(2)
 
