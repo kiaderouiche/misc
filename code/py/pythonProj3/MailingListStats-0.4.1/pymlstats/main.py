@@ -31,10 +31,10 @@ import os.path
 import re
 import datetime
 
-from database import create_database
-from analyzer import MailArchiveAnalyzer
-from htmlparser import MyHTMLParser
-from utils import current_month, create_dirs, mlstats_dot_dir,\
+from .database import create_database
+from .analyzer import MailArchiveAnalyzer
+from .htmlparser import MyHTMLParser
+from .utils import current_month, create_dirs, mlstats_dot_dir,\
     retrieve_remote_file, check_compressed_file, uncompress_file
 
 
