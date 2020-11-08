@@ -103,7 +103,7 @@ class FileExtractor(object):
 
         return outputfilename
 
-    def tarExtraction(self, filename) ->str:
+    def tarExtraction(self, filename):
         """
         Extracts the contents of a tar file
 
@@ -130,7 +130,7 @@ class FileExtractor(object):
 
         return extracted_list
 
-    def zipExtraction(self, filename) ->str:
+    def zipExtraction(self, filename):
         """Extracts the contents of a zip file
 
         @param filename: path to zip file to be extracted
@@ -175,28 +175,6 @@ class FileExtractor(object):
 
         return extracted_list
 
-    def xzExtraction(self, filename) -> str:
-        """Extracts the contents of a xz file
-
-        @param filename: path to xz file to be extracted
-        @return: the path to the file that has been extracted
-        """
-        xzfile = bz2.BZ2File(filename, mode='r')
-        outputfilename, ext = os.path.splitext(filename)
-        # If the extension is different than xz,
-        # add this to avoid using the same output
-        # filename than the original file
-        if '.bz2' != ext.lower():
-            outputfilename = filename + '.extracted'
-
-        try:
-            with open(outputfilename, 'w') as outputfileobj:
-                outputfileobj.write(xzfile.read())
-        finally:
-            xzfile.close()
-            outputfileobj.close()
-
-        return outputfilename
     
     def extract(self, path_list):
         """
