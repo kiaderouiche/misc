@@ -74,8 +74,6 @@ class FileExtractor(object):
         try:
             with open(outputfilename, 'w') as outputfileobj:
                 outputfileobj.write(gzipfile.read())
-        except IOError as e:
-            pass #Checher L'exception
         finally:
             gzipfile.close()
             outputfileobj.close()
@@ -99,8 +97,6 @@ class FileExtractor(object):
         try:
             with open(outputfilename, 'w') as outputfileobj:
                 outputfileobj.write(bz2file.read())
-        except:
-            pass
         finally:
             bz2file.close()
             outputfileobj.close()
@@ -196,8 +192,6 @@ class FileExtractor(object):
         try:
             with open(outputfilename, 'w') as outputfileobj:
                 outputfileobj.write(xzfile.read())
-        except: 
-            pass
         finally:
             xzfile.close()
             outputfileobj.close()
