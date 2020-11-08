@@ -27,7 +27,7 @@ Some utils functions for MLStats
 @contact:      libresoft-tools-devel@lists.morfeo-project.org
 """
 
-from fileextractor import FileExtractor
+from .fileextractor import FileExtractor
 import gzip
 import os
 import os.path
@@ -38,7 +38,7 @@ import shutil
 import datetime
 
 COMPRESSED_TYPES = ['.gz', '.bz2', '.zip', '.tar',
-                    '.tar.gz', '.tar.bz2', '.tar.xz', '.tgz', '.tbz','.xz']
+                    '.tar.gz', '.tar.bz2', '.tgz', '.tbz']
 ACCEPTED_TYPES = ['.mbox', '.txt']
 EMAIL_OBFUSCATION_PATTERNS = [' at ', '_at_', ' en ']
 MAILMAN_DATE_FORMAT = '%Y-%B'

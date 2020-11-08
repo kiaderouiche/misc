@@ -35,7 +35,7 @@ from the standard Python modules (for instance, Maildir).
 
 from email.header import decode_header
 from email.utils import getaddresses, parsedate_tz
-from email.Iterators import typed_subpart_iterator
+from email.iterators import typed_subpart_iterator
 import datetime
 import hashlib
 import sys

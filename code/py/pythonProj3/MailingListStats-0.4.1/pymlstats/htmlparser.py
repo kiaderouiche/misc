@@ -29,15 +29,14 @@ return a list with all the links contained in the web page.
 @contact:      libresoft-tools-devel@lists.morfeo-project.org
 """
 
-import htmllib
+from html.parser import HTMLParser
 import urllib
-import urllib2
 import os
 import formatter
 import utils
 
 
-class MyHTMLParser(htmllib.HTMLParser):
+class MyHTMLParser(HTMLParser):
     def __init__(self, url, web_user=None, web_password=None, verbose=0):
 
         f = formatter.NullFormatter()
@@ -48,7 +47,7 @@ class MyHTMLParser(htmllib.HTMLParser):
         self.links = []
         self.mboxes_links = []
 
-        htmllib.HTMLParser.__init__(self, f, verbose)
+        HTMLParser.__init__(self, f, verbose)
 
     def anchor_bgn(self, href, name, type):
         self.save_bgn()
