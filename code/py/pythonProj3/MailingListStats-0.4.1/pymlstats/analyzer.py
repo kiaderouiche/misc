@@ -166,7 +166,7 @@ class MailArchiveAnalyzer:
                     try:
                         msg = to_unicode(msg, charset)
                     except TypeError:
-                        print >> sys.stderr, 'TypeError: msg: %s % msg'
+                        print (>> sys.stderr, 'TypeError: msg: %s % msg')
                         msg = [to_unicode(e, charset) for e in msg]
 
                 filtered_message[header] = msg
@@ -180,7 +180,7 @@ class MailArchiveAnalyzer:
                                         filtered_message['body'])
                 filtered_message['message-id'] = msgid
                 print >> sys.stderr, '=> message-id not present for:'
-                print >> sys.stderr, message
+                print (">>" sys.stderr.format(message))
 
             # message.getaddrlist returns a list of tuples
             # Each one of the tuples is like this
@@ -271,7 +271,7 @@ class MailArchiveAnalyzer:
 
         return r
 
-    def make_msgid(self, from_addr, message):
+    def make_msgid(self, from_addr, message) ->str:
         try:
             domain = from_addr[0][1].split('@')[1]
         except:

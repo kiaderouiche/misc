@@ -31,6 +31,7 @@ return a list with all the links contained in the web page.
 
 from html.parser import HTMLParser
 import urllib
+import urllib3.request
 import os
 import formatter
 import utils
@@ -84,11 +85,11 @@ class MyHTMLParser(HTMLParser):
         postdata = None
 
         if self.user:
-            postdata = urllib.urlencode({'username': self.user,
+            postdata = urllib3.request.urlencode({'username': self.user,
                                          'password': self.password})
 
-        request = urllib2.Request(self.url, postdata, headers)
-        response = urllib2.urlopen(request)
+        request = urllib.request.Request(self.url, postdata, headers)
+        response = urllib.request.urlopen(request)
 
         htmltxt = response.read()
         response.close()
