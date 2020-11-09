@@ -166,7 +166,7 @@ class MailArchiveAnalyzer:
                     try:
                         msg = to_unicode(msg, charset)
                     except TypeError:
-                        print (>> sys.stderr, 'TypeError: msg: %s % msg')
+                        print(">> {} TypeError: msg: {}.".format(sys.stderr, msg))
                         msg = [to_unicode(e, charset) for e in msg]
 
                 filtered_message[header] = msg
@@ -179,8 +179,9 @@ class MailArchiveAnalyzer:
                 msgid = self.make_msgid(filtered_message['from'],
                                         filtered_message['body'])
                 filtered_message['message-id'] = msgid
-                print >> sys.stderr, '=> message-id not present for:'
-                print (">>" sys.stderr.format(message))
+                print(">> {} => message-id not present for:.".format(sys.stderr))
+                print(">> {} {}.".format(sys.stderr, message))
+            
 
             # message.getaddrlist returns a list of tuples
             # Each one of the tuples is like this
@@ -265,7 +266,9 @@ class MailArchiveAnalyzer:
             r = sep.join([to_unicode(text, text_charset or charset)
                           for text, text_charset in decoded_s])
         except:
+            print(">> {} TypeError: msg: {}.".format(sys.stderr, msg))
             print >> sys.stderr, 'WARNING: charset: %s' % charset,
+            print(">> {} TypeError: msg: {}.".format(sys.stderr, s))
             print >> sys.stderr, '"%s"' % s
             r = s
 
