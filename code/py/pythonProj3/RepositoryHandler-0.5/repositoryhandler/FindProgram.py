@@ -42,6 +42,7 @@ def find_program(program):
     except KeyError:
         # There is no PATH in env!!!
         # FIXME: it only works on UNIX
+        # NetBSD path: /usr/pkg/
         path = "/bin:/usr/bin:/usr/pkg/bin:."
 
     for p in path.split(os.pathsep):

@@ -11,16 +11,16 @@ class TarballTest (Test):
         # checkout
         self.repo = create_repository('tarball', None)
         self.repo.checkout(
-            'http://cairographics.org/snapshots/pycairo-0.4.0.tar.gz', '/tmp/')
-        if not os.path.exists('/tmp/pycairo-0.4.0.tar.gz'):
+            'https://www.cairographics.org/snapshots/pycairo-1.1.6.tar.gz', '/tmp/')
+        if not os.path.exists('/tmp/pycairo-1.1.6.tar.gz'):
             print ("Tarball checkout: FAILED")
             return
-        elif not os.path.exists('/tmp/pycairo-0.4.0/ChangeLog'):
+        elif not os.path.exists('/tmp/pycairo-1.1.6/ChangeLog'):
             print ("Tarball checkout: FAILED")
             return
 
         # checkout with local path
-        self.repo.checkout('/tmp/pycairo-0.4.0.tar.gz', '/tmp/pycairo-local')
+        self.repo.checkout('/tmp/pycairo-1.1.6.tar.gz', '/tmp/pycairo-local')
         if not os.path.exists('/tmp/pycairo-local/pycairo-0.4.0/ChangeLog'):
             print ("Tarball checkout: FAILED")
             return
@@ -38,8 +38,8 @@ class TarballTest (Test):
         # TODO: check zip
 
     def clean(self):
-        os.remove('/tmp/pycairo-0.4.0.tar.gz')
-        remove_directory('/tmp/pycairo-0.4.0/')
+        os.remove('/tmp/pycairo-1.1.6.tar.gz')
+        remove_directory('/tmp/pycairo-1.1.6/')
         remove_directory('/tmp/pycairo-local')
         os.remove('/tmp/2007-April.txt')
 
