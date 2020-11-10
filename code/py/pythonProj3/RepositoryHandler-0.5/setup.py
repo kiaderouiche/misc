@@ -22,6 +22,9 @@ try:
 except:
     from distutils.core import setup
 
+#Ajouter le support pour Python3
+#Ajouter le support pour Wget
+#Ajouter le support pour les programmes, git, bzr et etc
 setup(name="RepositoryHandler",
       version="0.4",
       author="GSyC/LibreSoft, Universidad Rey Juan Carlos",

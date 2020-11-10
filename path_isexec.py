@@ -4,7 +4,9 @@
 import os
 
 def __path_is_executable(path):
-    return os.stat(path)[ST_MODE] & S_IEXEC
+    mode = os.stat(path).st_mode
+    if S_IEXEC(mode):
+        return    return os.stat(path)[ST_MODE] & S_IEXEC
 
 def main():
     __path_is_executable('/etc/group')

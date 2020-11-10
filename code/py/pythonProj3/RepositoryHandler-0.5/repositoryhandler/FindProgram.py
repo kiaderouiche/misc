@@ -24,6 +24,8 @@ def find_program(program):
     '''Looks for given program in current path.
     Returns an absolute path if program was found or None'''
 
+    #https://www.generacodice.com/fr/articolo/188841/Test-if-executable-exists-in-Python
+    #https://stackoverrun.com/fr/q/3436669
     def __path_is_executable(path):
         return os.stat(path)[ST_MODE] & S_IEXEC
 
