@@ -158,8 +158,8 @@ class Database(GenericDatabase):
                 the mbox.""" % m['message-id']
                 stored_messages -= 1
                 # Write message to the stderr
-                print('>>>sys.stderr'.format(error_message))
-                print('>>>sys.stderr'.format(query_message))
+                print('>>>sys.stderr {}'.format(error_message))
+                print('>>>sys.stderr {}'.format(query_message))
                 pprint.pprint(values, sys.stderr)
 
             for key, values in msgs_people_value.iteritems():

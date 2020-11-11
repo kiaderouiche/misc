@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import os
 import pathlib
 from repositoryhandler.backends import create_repository
 from tests import Test, register_test, remove_directory
@@ -30,7 +29,7 @@ class TarballTest (Test):
         self.repo.checkout('http://lists.morfeo-project.org/pipermail/'
                            'libresoft-tools-devel/2007-April.txt.gz',
                            '/tmp')
-        if not os.path.exists('/tmp/2007-April.txt'):
+        if not pathlib.Path('/tmp/2007-April.txt').exists():
             print ("Tarball checkout: FAILED")
             return
 
@@ -39,9 +38,9 @@ class TarballTest (Test):
         # TODO: check zip
 
     def clean(self):
-        os.remove('/tmp/pycairo-1.1.6.tar.gz')
+        pathlib.Path.unlink('/tmp/pycairo-1.1.6.tar.gz')
         remove_directory('/tmp/pycairo-1.1.6/')
         remove_directory('/tmp/pycairo-local')
-        os.remove('/tmp/2007-April.txt')
+        pathlib.Path.unlink('/tmp/2007-April.txt')
 
 register_test('tarball', TarballTest)

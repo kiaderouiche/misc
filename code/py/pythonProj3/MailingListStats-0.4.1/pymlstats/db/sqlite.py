@@ -63,7 +63,7 @@ class Database(GenericDatabase):
             db = dbapi.connect(dsn)
             db.set_client_encoding('UTF8')
             db.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-        except dbapi.OperationalError, as e:
+        except dbapi.OperationalError as e:
             raise e
 
         GenericDatabase.connect(self, db)
@@ -157,8 +157,8 @@ class Database(GenericDatabase):
                 the mbox.""" % m['message-id']
                 stored_messages -= 1
                 # Write message to the stderr
-                print('>>>sys.stderr'.format(error_message))
-                print('>>>sys.stderr'.format(query_message))
+                print('>>>sys.stderr {}'.format(error_message))
+                print('>>>sys.stderr {}'.format(query_message))
                 pprint.pprint(values, sys.stderr)
 
             for key, values in msgs_people_value.iteritems():

@@ -67,13 +67,13 @@ class Database(GenericDatabase):
             errno = e.args[0]
             if 1045 == errno:  # Unknown or unauthorized user
                 msg = e.args[1]
-                print ('>>sys.stderr'.format(msg))
-                print('>>>sys.stderr'.format(check_options_msg))
+                print ('>>sys.stderr {}'.format(msg))
+                print('>>>sys.stderr {}'.format(check_options_msg))
                 sys.exit(2)
             elif 1044 == errno:  # User can not access database
                 msg = e.args[1]
-                print ('>>sys.stderr'.format(msg))
-                print('>>>sys.stderr'.format(check_options_msg))
+                print ('>>sys.stderr {}'.format(msg))
+                print('>>>sys.stderr {}'.format(check_options_msg))
                 sys.exit(2)
             elif 1049 == errno:  # Unknown database
                 # Database does not exist

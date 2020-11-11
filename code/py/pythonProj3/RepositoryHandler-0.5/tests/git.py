@@ -1,4 +1,4 @@
-import os
+import pathlib
 import re
 from repositoryhandler.backends import create_repository, \
      create_repository_from_path, RepositoryUnknownError
@@ -12,13 +12,13 @@ class GitTest(Test):
         self.repo = create_repository('git', 'git://git.kernel.org/pub/scm/')
         self.repo.checkout('utils/kernel/cpufreq/cpufrequtils.git', '/tmp/',
                            newdir='cpufrequtils')
-        if not os.path.exists('/tmp/cpufrequtils/.git'):
+        if not pathlib.Path('/tmp/cpufrequtils/.git').exists():
             print ("Git checkout: FAILED")
             return
 
         self.repo.checkout('utils/pciutils/pciutils.git', '/tmp/',
                            newdir='pciutils', branch='network')
-        if not os.path.exists('/tmp/pciutils/.git'):
+        if not pathlib.Path('/tmp/pciutils/.git').exists():
             print ("Git checkout: FAILED")
             return
 
@@ -26,7 +26,7 @@ class GitTest(Test):
         repo2 = create_repository('git',
                                   'git://anongit.freedesktop.org/libspectre')
         repo2.checkout('.', '/tmp')
-        if not os.path.exists('/tmp/libspectre/.git'):
+        if not pathlib.Path('/tmp/libspectre/.git').exists():
             print "Git checkout(module='.'): FAILED"
             return
 

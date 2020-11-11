@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
+import pathlib
 import re
 
 from repositoryhandler.Command import Command, CommandError
@@ -26,8 +26,8 @@ from repositoryhandler.backends.watchers import *
 
 
 def get_config(path, option=None):
-    if os.path.isfile(path):
-        path = os.path.dirname(path)
+    if pathlib.Path(path).is_file():
+        path = pathlib.PurePosixPath(path).parent
 
     cmd = ['git', 'config']
 
@@ -56,8 +56,8 @@ def get_config(path, option=None):
 
 
 def get_repository_from_path(path):
-    if os.path.isfile(path):
-        path = os.path.dirname(path)
+    if pathlib.Path(path).is_file():
+        path = pathlib.PurePosixPath(path).parent
 
     dir = path
     while dir and not os.path.isdir(os.path.join(dir, ".git")) and dir != "/":

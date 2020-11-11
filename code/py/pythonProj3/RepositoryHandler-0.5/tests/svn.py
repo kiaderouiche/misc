@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os
+import pathlib
 import re
 from repositoryhandler.backends import create_repository,\
      create_repository_from_path, RepositoryUnknownError
@@ -15,14 +15,14 @@ class SVNTest(Test):
         self.repo = create_repository('svn',
                                       'http://svn.gnome.org/svn/gnome-common')
         self.repo.checkout('gnome-common', '/tmp/', branch="trunk", rev="3910")
-        if not os.path.exists('/tmp/gnome-common/.svn') or \
+        if not pathlib.Path('/tmp/gnome-common/.svn').exists() or \
                 self.repo.get_last_revision('/tmp/gnome-common') != "3910":
             print ("SVN checkout: FAILED")
             return
 
         self.repo.checkout('gnome-common', '/tmp/', newdir='gnome-common-2.16',
                            branch='gnome-2-16')
-        if os.path.exists('/tmp/gnome-common-2.16/.svn'):
+        if pathlib.Path('/tmp/gnome-common-2.16/.svn').exists():
             print ("SVN checkout: FAILED")
             try:
                 repo2 = create_repository_from_path('/tmp/gnome-common-2.16')
@@ -46,7 +46,7 @@ class SVNTest(Test):
                 'https://svn.forge.morfeo-project.org/svn/libresoft-tools')
 
             repo2.checkout('octopus/trunk', '/tmp/', newdir='octopus')
-            if not os.path.exists('/tmp/octopus/.svn'):
+            if not pathlib.Path('/tmp/octopus/.svn').exists():
                 print ("SVN checkout repo without /trunk: FAILED")
                 return
         except:
@@ -60,7 +60,7 @@ class SVNTest(Test):
             repo3 = create_repository('svn',
                                       'http://svn.gnome.org/svn/asyncworker')
             repo3.checkout('.', '/tmp/')
-            if not os.path.exists('/tmp/asyncworker/.svn'):
+            if not pathlib.Path('/tmp/asyncworker/.svn').exists():
                 print ("SVN checkout repo without /trunk: FAILED")
                 return
         except:

@@ -17,7 +17,7 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import re
-import os
+import pathlib
 
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository, \
@@ -26,8 +26,8 @@ from repositoryhandler.backends.watchers import *
 
 
 def get_repository_from_path(path):
-    if os.path.isfile(path):
-        path = os.path.dirname(path)
+    if pathlib.Path(path).is_file():
+        path = pathlib.PurePosixPath(path).parent
 
     pattern = re.compile("^[ \t]*(checkout of)?(parent)? branch:(.*)$")
     uri = None

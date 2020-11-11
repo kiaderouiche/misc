@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os
+import pathlib
 from repositoryhandler.backends import create_repository, \
      create_repository_from_path, RepositoryUnknownError
 from repositoryhandler.backends.watchers import *
@@ -8,7 +8,7 @@ from tests import Test, register_test, remove_directory
 
 
 def output(line, user_data):
-    print "line(%s): %s" % (user_data, line),
+    print ("line({}): {}".format(user_data, line))
 
 
 class CVSTest(Test):
@@ -21,14 +21,14 @@ class CVSTest(Test):
 
         self.repo.add_watch(CHECKOUT, output, "check out")
         self.repo.checkout('poppler', '/tmp/')
-        if not os.path.exists('/tmp/poppler/CVS'):
+        if not pathlib.Path('/tmp/poppler/CVS').exists():
             print ("CVS checkout: FAILED")
             return
 
         self.repo.checkout('poppler', '/tmp/', newdir='poppler-0.5',
                            rev='POPPLER_0_5_X')
 
-        if os.path.exists('/tmp/poppler-0.5/CVS'):
+        if pathlib.Path('/tmp/poppler-0.5/CVS').exists():
             print ("CVS checkout module: PASSED")
             try:
                 repo2 = create_repository_from_path('/tmp/poppler-0.5/')
@@ -45,10 +45,10 @@ class CVSTest(Test):
             print ("CVS checkout: FAILED")
 
         # checkout of all modules module
-        print "CVS checkout of all modules"
+        print ("CVS checkout of all modules")
         self.repo.checkout('.', '/tmp/', newdir='poppler_modules-0.5',
                            rev='POPPLER_0_5_X')
-        if not os.path.exists('/tmp/poppler_modules-0.5/CVS'):
+        if not pathlib.Path('/tmp/poppler_modules-0.5/CVS').exists():
             print ("CVS checkout: FAILED")
             return
         print ("CVS checkout: PASSED")
@@ -62,9 +62,12 @@ class CVSTest(Test):
             print ("CVS update: FAILED")
             return
 
-        f = open('/tmp/poppler/CVS/Tag', 'r')
-        tag = f.read(len('TPOPPLER_0_5_X'))
-        f.close()
+        try:
+            with open('/tmp/poppler/CVS/Tag', 'r') as f:
+                tag = f.read(len('TPOPPLER_0_5_X'))
+        finally:
+            f.close()
+
         if tag == 'TPOPPLER_0_5_X':
             print ("CVS update: PASSED")
         else:

@@ -1,4 +1,4 @@
-import os
+import pathlib
 import re
 from repositoryhandler.backends import create_repository,\
      create_repository_from_path, RepositoryUnknownError
@@ -12,7 +12,7 @@ class BzrTest(Test):
         self.repo = create_repository('bzr',
                                       'http://pkg-config.freedesktop.org/bzr/')
         self.repo.checkout('pkg-config', '/tmp/', newdir='pkg-config')
-        if not os.path.exists('/tmp/pkg-config/.bzr'):
+        if not pathlib.Path('/tmp/pkg-config/.bzr').exists():
             print ("Bzr checkout: FAILED")
             return
 
