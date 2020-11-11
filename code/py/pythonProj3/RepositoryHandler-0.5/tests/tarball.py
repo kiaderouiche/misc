@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import pathlib
 from repositoryhandler.backends import create_repository
 from tests import Test, register_test, remove_directory
 
@@ -12,16 +13,16 @@ class TarballTest (Test):
         self.repo = create_repository('tarball', None)
         self.repo.checkout(
             'https://www.cairographics.org/snapshots/pycairo-1.1.6.tar.gz', '/tmp/')
-        if not os.path.exists('/tmp/pycairo-1.1.6.tar.gz'):
+        if not pathlib.Path('/tmp/pycairo-1.1.6.tar.gz').exists():
             print ("Tarball checkout: FAILED")
             return
-        elif not os.path.exists('/tmp/pycairo-1.1.6/ChangeLog'):
+        elif not pathlib.Path('/tmp/pycairo-1.1.6/ChangeLog').exists():
             print ("Tarball checkout: FAILED")
             return
 
         # checkout with local path
         self.repo.checkout('/tmp/pycairo-1.1.6.tar.gz', '/tmp/pycairo-local')
-        if not os.path.exists('/tmp/pycairo-local/pycairo-0.4.0/ChangeLog'):
+        if not pathlib.Path('/tmp/pycairo-local/pycairo-0.4.0/ChangeLog').exists():
             print ("Tarball checkout: FAILED")
             return
 

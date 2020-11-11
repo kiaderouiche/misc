@@ -2,14 +2,18 @@
 #
 
 import os
+import stat
 
 def __path_is_executable(path):
     mode = os.stat(path).st_mode
-    return os.path.isfile(path) and os.access(path, mode)
-    #os.stat(path)[ST_MODE] & S_IEXEC
+    return mode & stat.S_IEXEC
 
-def main():
-    __path_is_executable('/etc/group')
+def find_prog(program):
+    etat_program = __path_is_executable(program)
+    if etat_program and not os.path.isdir(program):
+        print(program)
+    else:
+        print("None")
 
 if __name__ == '__main__':
-    main()
+    find_prog("/etc/group")
