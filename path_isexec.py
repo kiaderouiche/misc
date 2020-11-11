@@ -1,12 +1,12 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 #
 
 import os
 
 def __path_is_executable(path):
     mode = os.stat(path).st_mode
-    if S_IEXEC(mode):
-        return    return os.stat(path)[ST_MODE] & S_IEXEC
+    return os.path.isfile(path) and os.access(path, mode)
+    #os.stat(path)[ST_MODE] & S_IEXEC
 
 def main():
     __path_is_executable('/etc/group')
