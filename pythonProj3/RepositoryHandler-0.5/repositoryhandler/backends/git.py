@@ -60,8 +60,8 @@ def get_repository_from_path(path):
         path = pathlib.PurePosixPath(path).parent
 
     dir = path
-    while dir and not os.path.isdir(os.path.join(dir, ".git")) and dir != "/":
-        dir = os.path.dirname(dir)
+    while dir and not pathlib.Path(pathlib.Path().joinpath(dir, ".git")).is_dir() and dir != "/":
+        dir = pathlib.Path(dir).parent
 
     if not dir or dir == "/":
         raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Git '
@@ -149,12 +149,12 @@ class GitRepository(Repository):
         command = Command(cmd, path)
         command.run()
 
-    def __get_root_dir(self, uri):
+    def __get_root_dir(self, uri) -> str:
         if uri != self.uri:
-            directory = os.path.dirname(uri)
-            while directory and not os.path.isdir(os.path.join(directory,
-                                                               ".git")):
-                directory = os.path.dirname(directory)
+            directory = pathlib.Path(uri).parent
+            while directory and not pathlib.Path(pathlib.Path().joinpath(directory,
+                                                               ".git")).is_dir():
+                directory = pathlib.Path(directory).parent
         else:
             directory = uri
 
@@ -290,13 +290,13 @@ class GitRepository(Repository):
     def diff(self, uri, branch=None, revs=None, files=None):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
+        if pathlib.Path(uri).is_file():
             cwd = self.__get_root_dir(uri)
             files = [uri[len(cwd):].strip("/")]
-        elif os.path.isdir(uri):
+        elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['git', 'diff']
 
@@ -317,14 +317,14 @@ class GitRepository(Repository):
     def show(self, uri, rev=None):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
+        if pathlib.Path(uri).is_file():
             cwd = self.__get_root_dir(uri)
             target = uri[len(cwd):].strip("/")
-        elif os.path.isdir(uri):
+        elif pathlib.Path(uri).is_dir():
             cwd = uri
             target = None
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
             target = None
 
         cmd = ['git', 'show', '--pretty=format:']
