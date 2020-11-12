@@ -22,7 +22,8 @@ import re
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository,\
      RepositoryInvalidWorkingCopy, register_backend
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import CHECKOUT, UPDATE, \
+    LOG, DIFF, BLAME, CAT, LS
 
 
 def get_config(path, option=None):
@@ -55,7 +56,7 @@ def get_config(path, option=None):
     return retval
 
 
-def get_repository_from_path(path):
+def get_repository_from_path(path) -> str:
     if pathlib.Path(path).is_file():
         path = pathlib.PurePosixPath(path).parent
 
@@ -167,11 +168,11 @@ class GitRepository(Repository):
             srcdir = rootdir
         else:
             if module == '.':
-                srcdir = os.path.join(rootdir,
+                srcdir = pathlib.Path().joinpath(rootdir,
                                       pathlib.Path(self.uri.rstrip('/')).name())
             else:
                 srcdir = pathlib.Path().joinpath(rootdir, module)
-        if pathlib.Path(scrdir).exists():
+        if pathlib.Path(srcdir).exists():
             try:
                 self.update(srcdir, rev)
                 return
@@ -343,13 +344,13 @@ class GitRepository(Repository):
     def blame(self, uri, rev=None, files=None, mc=False):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
-            cwd = os.path.dirname(uri)
-            files = [os.path.basename(uri)]
-        elif os.path.isdir(uri):
+        if pathlib.Path(uri).is_file():
+            cwd = pathlib.Path(uri).parent
+            files = [pathlib.Path(uri).name]
+        elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['git', 'blame', '--root', '-l', '-t', '-f']
 
@@ -378,13 +379,13 @@ class GitRepository(Repository):
         self._check_uri(uri)
 
         target = None
-        if os.path.isfile(uri):
-            cwd = os.path.dirname(uri)
-            target = os.path.basename(uri)
-        elif os.path.isdir(uri):
+        if pathlib.Path(uri).is_file():
+            cwd = pathlib.Path(uri).parent
+            target = [pathlib.Path(uri).name]
+        elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         if rev is None:
             try:

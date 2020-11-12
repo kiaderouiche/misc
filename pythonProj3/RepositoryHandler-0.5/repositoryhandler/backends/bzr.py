@@ -22,7 +22,7 @@ import pathlib
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository, \
      RepositoryInvalidWorkingCopy, register_backend
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import CHECKOUT, UPDATE, LOG
 
 
 def get_repository_from_path(path):
