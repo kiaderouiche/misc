@@ -162,16 +162,16 @@ class GitRepository(Repository):
 
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
         if newdir is not None:
-            srcdir = os.path.join(rootdir, newdir)
+            srcdir = pathlib.Path().joinpath(rootdir, newdir)
         elif newdir == '.':
             srcdir = rootdir
         else:
             if module == '.':
                 srcdir = os.path.join(rootdir,
-                                      os.path.basename(self.uri.rstrip('/')))
+                                      pathlib.Path(self.uri.rstrip('/')).name())
             else:
-                srcdir = os.path.join(rootdir, module)
-        if os.path.exists(srcdir):
+                srcdir = pathlib.Path().joinpath(rootdir, module)
+        if pathlib.Path(scrdir).exists():
             try:
                 self.update(srcdir, rev)
                 return
@@ -184,14 +184,14 @@ class GitRepository(Repository):
         if module == '.':
             uri = self.uri
         else:
-            uri = os.path.join(self.uri, module)
+            uri = pathlib.Path().joinpath(self.uri, module)
 
         cmd = ['git', 'clone', uri]
 
         if newdir is not None:
             cmd.append(newdir)
         elif module == '.':
-            cmd.append(os.path.basename(uri.rstrip('/')))
+            cmd.append(pathlib.Path(uri.rstrip('/')).name)
         else:
             cmd.append(module)
 
@@ -210,8 +210,8 @@ class GitRepository(Repository):
 
         cmd = ['git', 'pull']
 
-        if os.path.isfile(uri):
-            directory = os.path.dirname(uri)
+        if pathlib.Path(uri).is_file():
+            directory = pathlib.Path(uri).parent
         else:
             directory = uri
 
@@ -239,13 +239,13 @@ class GitRepository(Repository):
     def log(self, uri, rev=None, files=None):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
-            cwd = os.path.dirname(uri)
-            files = [os.path.basename(uri)]
-        elif os.path.isdir(uri):
+        if pathlib.Path(uri).is_file():
+            cwd = pathlib.Path(uri).parent
+            files = [pathlib.Path(uri).parent]
+        elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['git', 'log', '--all', '--topo-order', '--pretty=fuller',
                '--parents', '--name-status', '-M', '-C']
