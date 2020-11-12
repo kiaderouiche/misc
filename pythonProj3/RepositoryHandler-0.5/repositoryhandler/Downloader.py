@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
+import pathlib
 from .FindProgram import find_program
 from .Command import Command
 
@@ -36,12 +36,12 @@ def get_download_command(uri, dest_path, output):
 def download(uri, dirname=None, output=None) -> str:
 
     if dirname is None:
-        dirname = os.getcwd()
+        dirname = pathlib.Path.cwd()
 
     if output is None:
         output = '/dev/null'
 
-    dest_path = os.path.join(dirname, os.path.basename(uri))
+    dest_path = pathlib.Path.joinpath(dirname, pathlib.Path(uri).name)
     cmd = get_download_command(uri, dest_path, output)
     if cmd is None:
         return False
@@ -52,7 +52,7 @@ def download(uri, dirname=None, output=None) -> str:
     except:
         return False
 
-    return os.path.exists(dest_path)
+    return pathlib.Path(uri).exists()
 
 if __name__ == '__main__':
     import sys
