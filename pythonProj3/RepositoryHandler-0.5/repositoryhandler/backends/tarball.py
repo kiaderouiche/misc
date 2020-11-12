@@ -17,11 +17,11 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
+import pathlib
 
 from repositoryhandler.Command import Command
 from repositoryhandler.backends import Repository, register_backend
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import CHECKOUT
 from repositoryhandler.Downloader import get_download_command
 
 ### FileExtractor
@@ -82,7 +82,7 @@ class TarFileExtractor(FileExtractor):
                                      "%s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = os.cwd()
+            path = pathlib.Path.cwd()
 
         try:
             tar.extractall(path)
@@ -107,16 +107,16 @@ class ZipFileExtractor(FileExtractor):
                                      " %s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = os.cwd()
+            path = pathlib.Path.cwd()
 
         for name in zip.namelist():
             try:
-                fpath = os.path.join(path, name)
+                fpath = pathlib.Path.joinpath(path, name)
 
                 # Check if 'name' is a directory
                 if name[-1] == '/':
                     try:
-                        os.makedirs(fpath)
+                        pathlib.Path(fpath).mkdir()                       
                     except IOError as e:
                         zip.close()
                         raise FileExtractorError("FileExtractor Error: Write "
@@ -157,10 +157,10 @@ class GzipFileExtractor(FileExtractor):
                                      "%s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = os.cwd()
+            path = pathlib.Path.cwd()
 
         try:
-            path = os.path.join(path,
+            path = pathlib.Path().joinpath(path,
                                 self.uri.split("/")[-1].replace(".gz", ""))
             with open(path, "w") as f:
                 f.write(gz.read())
