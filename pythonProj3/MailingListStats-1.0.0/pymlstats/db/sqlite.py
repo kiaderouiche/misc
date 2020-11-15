@@ -22,18 +22,18 @@
 """
 This module contains a basic SQL wrapper. It uses the standard
 database API of Python, so any module may be used (just substitute
-import MySQLdb for any other, for instance import PyGreSQL).
+import MySQLdb for any other, for instance import PyGreSQL and SQLite).
 
 @authors:      K.I.A.Derouiche
-@organization: Libresoft Research Group, Universidad Rey Juan Carlos
+@organization: Adgon Solutions
 @copyright:    Universidad Rey Juan Carlos (Madrid, Spain)
 @license:      GNU GPL version 2 or any later version
-@contact:      libresoft-tools-devel@lists.morfeo-project.org
+@contact:      kamel.derouiche@gmail.com
 """
 
 import sys
 import pprint
-import psycopg2 as dbapi
+import sqlite3 as dbapi2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 from pymlstats.database import GenericDatabase

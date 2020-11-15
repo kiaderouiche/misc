@@ -182,7 +182,7 @@ class SVNRepository(Repository):
                                                    'repository %s'
                                                    % (uri, self.uri))
 
-    def __get_uri_for_branch(self, module, branch):
+    def __get_uri_for_branch(self, module, branch) -> str:
         if branch is None:
             uri = pathlib.Path.joinpath(self.uri, module)
         elif branch == 'trunk':

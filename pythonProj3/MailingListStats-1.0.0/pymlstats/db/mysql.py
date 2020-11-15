@@ -87,8 +87,8 @@ class Database(GenericDatabase):
 
                     if 1045 == errno:  # Unauthorized user
                         msg = e.args[1]
-                        print ('>>sys.stderr'.format(msg))
-                        print('>>>sys.stderr'.format(check_options_msg))
+                        print ('>>sys.stderr {}'.format(msg))
+                        print('>>>sys.stderr {}'.format(check_options_msg))
                         sys.exit(1)
                     else:  # Unknown exception
                         message = """ERROR: Runtime error while trying to
@@ -98,7 +98,7 @@ class Database(GenericDatabase):
                         failure.""" % (str(e.args[0]), str(e.args[1]))
 
                         # Write message to the stderr
-                        print('>>>sys.stderr'.format(message))
+                        print('>>>sys.stderr {}'.format(message))
                         sys.exit(1)
 
                 cursor = db.cursor()
@@ -124,7 +124,7 @@ class Database(GenericDatabase):
                 failure.""" % (str(e.args[0]), str(e.args[1]))
 
                 # Write message to the stderr
-                print('>>>sys.stderr'.format(message))
+                print('>>>sys.stderr {}'.format(message))
                 sys.exit(1)
 
         GenericDatabase.connect(self, db)
@@ -214,7 +214,7 @@ class Database(GenericDatabase):
 
                 stored_messages -= 1
                 # Write message to the stderr
-                print('>>>sys.stderr'.format(error_message))
+                print('>>>sys.stderr {}'.format(error_message))
             for key, values in msgs_people_value.iteritems():
                 try:
                     self.write_cursor.execute(query_m_people, values)
