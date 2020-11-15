@@ -21,6 +21,10 @@
 #          Francisco Rivas <frivas@libresoft.es>
 #          Luis Cañas Díaz <lcanas@libresoft.es>
 #
+#Ajouter le support pour Python3.7, 3.8+
+#Ajouter le support pour Wget
+#Ajouter un prefix pour NetBSD
+#Ajouter le support pour les programmes, git, bzr et etc
 from distutils.core import setup
 import sys
 

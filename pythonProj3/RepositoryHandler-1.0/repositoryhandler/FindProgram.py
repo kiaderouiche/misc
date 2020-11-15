@@ -17,8 +17,8 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import os
-
-from stat import *
+import pathlib
+import stat
 
 
 def find_program(program):
@@ -26,12 +26,12 @@ def find_program(program):
     Returns an absolute path if program was found or None'''
 
     def __path_is_executable(path):
-        return os.stat(path)[ST_MODE] & S_IEXEC
+        return os.stat(path).st_mode & stat.S_IEXEC
 
     # Do not look in PATH if it's already an absolute path
     # or a relative path containing directories
-    if os.path.isabs(program) or program.find(os.path.sep) > 0:
-        if __path_is_executable(program) and not os.path.isdir(program):
+    if pathlib.PurePosixPath(program).is_absolute() or program.find(os.path.sep) > 0:
+        if __path_is_executable(program) and not pathlib.Path(program).is_dir():
             return program
         else:
             return None
@@ -42,13 +42,14 @@ def find_program(program):
     except KeyError:
         # There is no PATH in env!!!
         # FIXME: it only works on UNIX
+        # NetBSD path: /usr/pkg/
         path = "/bin:/usr/bin:/usr/pkg/bin:."
 
     for p in path.split(os.pathsep):
-        absolute = os.path.join(p, program)
-        if os.path.exists(absolute) and \
+        absolute = pathlib.Path().joinpath(p, program)
+        if pathlib.Path(absolute).exists() and \
            __path_is_executable(absolute) and \
-           not os.path.isdir(absolute):
+           not pathlib.Path(absolute).is_dir():
             return absolute
 
     return None

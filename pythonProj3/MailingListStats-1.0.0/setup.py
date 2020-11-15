@@ -31,7 +31,10 @@ Installer
 @contact:      herraiz@gsyc.escet.urjc.es
 """
 
-
+#Ajouter le support pour Python3.7, 3.8+
+#Ajouter le support pour Wget
+#Ajouter un prefix pour NetBSD
+#Ajouter le support pour les programmes, git, bzr et etc
 import sys
 from setuptools import setup
 from pymlstats.version import mlstats_version

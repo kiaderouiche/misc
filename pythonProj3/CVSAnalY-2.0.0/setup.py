@@ -26,9 +26,13 @@ Installer
 @license:      GNU GPL version 2 or any later version
 @contact:      libresoft-tools-devel@lists.morfeo-project.org
 """
-
+#Ajouter le support pour Python3.7, 3.8+
+#Ajouter le support pour Wget
+#Ajouter un prefix pour NetBSD
+#Ajouter le support pour les programmes, git, bzr et etc
 import commands
 import os
+import pathlib
 import sys
 
 from distutils.core import setup
@@ -63,17 +67,27 @@ def generate_changelog ():
         buff = pipe.read (1024)
     os.close (fd)
 
-    os.rename (filename, "ChangeLog")
+    pathlib.Path(filename).rename("ChangeLog")
 
 # Check dependencies
-deps = ['repositoryhandler >= 0.3']
+deps = ['repositoryhandler >= 1.0']
 
 pkg_check_modules (deps)
 
 if sys.argv[1] == 'sdist':
     generate_changelog ()
 
-from pycvsanaly2._config import *
+from pycvsanaly2._config import PACKAGE, VERSION, \
+    AUTHOR, AUTHOR_EMAIL, DESCRIPTION
+
+data_files = []
+if sys.platform.startswith('linux'):
+    data_files.append(('/usr/share/man/man1', ['help/cvsanaly2.1']))
+elif sys.platform[:6] == 'netbsd':
+    data_files.append(('/usr/pkg/man/man1', ['help/cvsanaly2.1']))
+elif sys.platform.startswith('openbsd') or sys.platform.startswith('freebsd'):
+    data_files.append(('/usr/local/man/man1', ['help/cvsanaly2.1']))
+
 
 setup(name = PACKAGE,
       version = VERSION,
@@ -82,6 +96,5 @@ setup(name = PACKAGE,
       description = DESCRIPTION,
       url = "http://projects.libresoft.es/projects/cvsanaly/wiki/",
       packages = ['pycvsanaly2', 'pycvsanaly2.extensions'],
-      data_files = [('share/man/man1',['help/cvsanaly2.1'])],
       scripts = ["cvsanaly2"])
 

@@ -23,12 +23,23 @@ except:
     from distutils.core import setup
 
 #Ajouter le support pour Python3.7, 3.8+
-#Ajouter le support pour Wget
-#Ajouter le support pour les programmes, git, bzr et etc
+#Ajouter le support pour Wget, et surtout py-httpie
+#Ajouter un prefix pour NetBSD
+#Ajouter le support pour les programmes, pygit, pybzr, pycvs et pysvn,  et etc
 setup(name="RepositoryHandler",
-      version="0.4",
+      version="1.0", #Total Support Python3.7, Python.8
       author="GSyC/LibreSoft, Universidad Rey Juan Carlos",
       author_email="libresoft-tools-devel@lists.morfeo-project.org",
       description="Python library for handling code repositories",
       url="http://metricsgrimoire.github.io/RepositoryHandler/",
-      packages=['repositoryhandler', 'repositoryhandler.backends'])
+      classifiers=[
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+     ],
+      packages=['repositoryhandler', 'repositoryhandler.backends']
+)

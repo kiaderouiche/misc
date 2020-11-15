@@ -17,11 +17,11 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
+import pathlib
 
 from repositoryhandler.Command import Command
 from repositoryhandler.backends import Repository, register_backend
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import CHECKOUT
 from repositoryhandler.Downloader import get_download_command
 
 ### FileExtractor
@@ -82,7 +82,7 @@ class TarFileExtractor(FileExtractor):
                                      "%s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = os.cwd()
+            path = pathlib.Path.cwd()
 
         try:
             tar.extractall(path)
@@ -107,16 +107,16 @@ class ZipFileExtractor(FileExtractor):
                                      " %s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = os.cwd()
+            path = pathlib.Path.cwd()
 
         for name in zip.namelist():
             try:
-                fpath = os.path.join(path, name)
+                fpath = pathlib.Path().joinpath(path, name)
 
                 # Check if 'name' is a directory
                 if name[-1] == '/':
                     try:
-                        os.makedirs(fpath)
+                        pathlib.Path(fpath).mkdir(parents=True, exist_ok=True)                       
                     except IOError as e:
                         zip.close()
                         raise FileExtractorError("FileExtractor Error: Write "
@@ -157,10 +157,10 @@ class GzipFileExtractor(FileExtractor):
                                      "%s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = os.cwd()
+            path = pathlib.Path.cwd()
 
         try:
-            path = os.path.join(path,
+            path = pathlib.Path().joinpath(path,
                                 self.uri.split("/")[-1].replace(".gz", ""))
             with open(path, "w") as f:
                 f.write(gz.read())
@@ -181,26 +181,26 @@ class Bzip2FileExtractor(FileExtractor):
 
     def extract(self, path=None):
         try:
-            bz2 = bz2.BZ2File(self.uri, 'r')
+            file_bz2 = bz2.BZ2File(self.uri, 'r')
         except Exception as e:
             raise FileExtractorError("FileExtractor Error: Opening bzip2 "
                                      "%s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = os.cwd()
+            path = pathlib.Path.cwd()
 
         try:
-            path = os.path.join(path,
+            path = pathlib.Path().joinpath(path,
                                 self.uri.split("/")[-1].replace(".bz2", ""))
             with open(path, 'w') as f:
-                f.write(bz2.read())
+                f.write(file_bz2.read())
         except Exception as e:
-            bz2.close()
-            raise FileExtractorError("FileExtractor Error: Extracting bzip2"
+           file_bz2.close()
+           raise FileExtractorError("FileExtractor Error: Extracting bzip2"
                                      " %s: %s" % (self.uri, str(e)))
         finally:
             f.close()
-        bz2.close()
+        file_bz2.close()
 
 
 def create_file_extractor(uri):
@@ -210,7 +210,7 @@ def create_file_extractor(uri):
         return ZipFileExtractor(uri)
     elif is_gzipfile(uri):
         return GzipFileExtractor(uri)
-    elif is_b2file(uri):
+    elif is_bz2file(uri):
         return Bzip2FileExtractor(uri)
 
     raise FileExtractorError("FileExtractor Error: URI '%s' doesn't look like "
@@ -225,18 +225,18 @@ class TarballRepository(Repository):
 
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
         if newdir is not None:
-            srcdir = os.path.join(rootdir, newdir)
+            srcdir = pathlib.Path().joinpath(rootdir, newdir)
         else:
             srcdir = rootdir
-        if not os.path.exists(srcdir):
-            os.makedirs(srcdir)
+        if not pathlib.Path(srcdir).exists():
+            pathlib.Path(srcdir).mkdir(parents=True, exist_ok=True)
 
-        if os.path.exists(module):
+        if pathlib.Path(module).exists():
             tarball_path = module
         else:
             # Download module to rootdir
-            filename = os.path.basename(module).split('?')[0]
-            tarball_path = os.path.join(srcdir, filename)
+            filename = pathlib.Path(module).name.split('?')[0]
+            tarball_path = pathlib.Path().joinpath(srcdir, filename)
             cmd = get_download_command(module, tarball_path, '/dev/stdout')
             if cmd is None:
                 return
@@ -244,7 +244,7 @@ class TarballRepository(Repository):
             command = Command(cmd, srcdir)
             self._run_command(command, CHECKOUT)
 
-            if not os.path.exists(tarball_path):
+            if not pathlib.Path(tarball_path).exists():
                 return
 
         # Unpack the tarball
