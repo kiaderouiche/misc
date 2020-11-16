@@ -30,7 +30,7 @@ Some utils functions for MLStats
 from .fileextractor import FileExtractor
 import gzip
 import os
-import os.path
+import pathlib
 import tempfile
 import urllib.parse
 import urllib.request
@@ -55,8 +55,8 @@ def current_month():
 
 def create_dirs(dirpath):
     """Wrapper to make directories"""
-    if not os.path.exists(dirpath):
-        os.makedirs(dirpath)
+    if not pathlib.Path(dirpath).exists():
+        pathlib.Path(dirpath).mkdir()
 
 
 def check_compressed_file(filename):
@@ -67,7 +67,8 @@ def check_compressed_file(filename):
 
     # Check the two last extensions
     # (to recognize also composed extensions such as tar.gz)
-    filename_noext, ext = os.path.splitext(filename)
+    filename_noext= str(pathlib.Path(filename).parent) +'/'+ pathlib.Path(filename).stem
+    ext = pathlib.Path(filename).suffix
     long_ext = ''.join([os.path.splitext(filename_noext)[1], ext])
 
     if long_ext in recognized_exts:
@@ -80,7 +81,7 @@ def check_compressed_file(filename):
 
 
 def retrieve_remote_file(url, destfilename=None, web_user=None,
-                         web_password=None):
+                         web_password=None) -> str:
     """Retrieve a file from a remote location. It logins in the
     archives private page if necessary."""
 
@@ -115,16 +116,16 @@ def retrieve_remote_file(url, destfilename=None, web_user=None,
     return destfilename
 
 
-def uncompress_file(filepath, extension, output_dir=None):
+def uncompress_file(filepath, extension, output_dir=None) -> str:
     """This function uncompress the file, and return
     the extension for the uncompressed file."""
 
     if not output_dir:
         output_dir = tempfile.mkdtemp()
 
-    basename = os.path.basename(filepath)
+    basename = pathlib.Path(filepath).name
     # Get new path to the uncompressed file
-    new_filepath = os.path.join(output_dir, basename)
+    new_filepath = pathlib.Path().joinpath(output_dir, basename)
 
     extractor = FileExtractor()
     files = []
@@ -149,8 +150,8 @@ def uncompress_file(filepath, extension, output_dir=None):
 
     # We copied the compressed file to outputdir to uncompress it,
     # now we need to remove it and leave only the uncompressed file(s)
-    if os.path.exists(new_filepath):
-        os.unlink(new_filepath)
+    if pathlib.Path(new_filepath).exists():
+        pathlib.Path(new_filepath).unlink()
 
     return files
 
@@ -165,21 +166,21 @@ def get_home_dir() -> str:
 
     home_dir = None
 
-    if 'HOME' in os.environ:
-        home_dir = os.environ.get('HOME')
+    if 'HOME' in pathlib.os.environ:
+        home_dir = pathlib.os.environ.get('HOME')
     else:
         if os.name == 'posix':
             import pwd
-            home_dir = pwd.getpwuid(os.getuid()).pw_dir
+            home_dir = pwd.getpwuid(pathlib.os.getuid()).pw_dir
         else:
-            if 'USERPROFILE' in os.environ:
-                home_dir = os.environ.get('USERPROFILE')
-            elif 'HOMEPATH' in os.environ:
+            if 'USERPROFILE' in pathlib.os.environ:
+                home_dir = pathlib.os.environ.get('USERPROFILE')
+            elif 'HOMEPATH' in pathlib.os.environ:
                 try:
-                    drive = os.environ.get('HOMEDRIVE')
+                    drive = pathlib.os.environ.get('HOMEDRIVE')
                 except KeyError:
                     drive = ''
-                home_dir = os.path.join(drive, os.environ.get('HOMEPATH'))
+                home_dir = pathlib.Path().joinpath(drive, pathlib.os.environ.get('HOMEPATH'))
 
     assert home_dir is not None
 
@@ -192,7 +193,7 @@ def mlstats_dot_dir():
     try:
         return _dirs['dot']
     except KeyError:
-        _dirs['dot'] = os.path.join(get_home_dir(), '.mlstats')
+        _dirs['dot'] = pathlib.Path().joinpath(get_home_dir(), '.mlstats')
         return _dirs['dot']
 
 if __name__ == '__main__':
