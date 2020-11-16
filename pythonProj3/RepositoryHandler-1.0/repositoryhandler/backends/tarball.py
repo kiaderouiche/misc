@@ -101,7 +101,8 @@ class ZipFileExtractor(FileExtractor):
         try:
             zip = zipfile.ZipFile(self.uri, 'r')
         except zipfile.BadZipfile as e:
-            raise FileExtractorError("FileExtractor Error: Opening zipfile {}: {}".format(self.uri, str(e)))
+            raise FileExtractorError("FileExtractor Error: Opening zipfile {}: {}"
+                                     .format(self.uri, str(e)))
 
         if path is None:
             path = pathlib.Path.cwd()
@@ -118,8 +119,7 @@ class ZipFileExtractor(FileExtractor):
                         zip.close()
                         raise FileExtractorError("FileExtractor Error: Write "
                                                  "error while extracting "
-                                                 "zipfile %s: %s" %
-                                                 (self.uri, str(e)))
+                                                 "zipfile {}: {}".format(self.uri, str(e)))
                 else:
                     bytes = zip.read(name)
 
@@ -131,13 +131,12 @@ class ZipFileExtractor(FileExtractor):
                         f.close()
                         raise FileExtractorError("FileExtractor Error: Write "
                                                  "error while extracting "
-                                                 "zipfile %s: %s" %
-                                                 (self.uri, str(e)))
+                                                 "zipfile {}: {}".format(self.uri, str(e)))
                     f.close()
             except zipfile.BadZipfile as e:
                 zip.close()
                 raise FileExtractorError("FileExtractor Error: Reading "
-                                         "zipfile %s: %s" % (self.uri, str(e)))
+                                         "zipfile {}: {}".format(self.uri, str(e)))
         zip.close()
 
 
