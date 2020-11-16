@@ -45,7 +45,7 @@ class Backend:
                 raise
 
         if backend_name not in Backend._backends:
-            raise BackendUnknownError ('Backend type %s not registered' % backend_name)
+            raise BackendUnknownError (f'Backend type {backend_name} not registered' )
     
         return Backend._backends[backend_name]
     

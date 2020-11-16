@@ -169,8 +169,8 @@ class Issue:
         @raise ValueError: raised if the type of X{comment} is not valid.
         """
         if not isinstance(comment, Comment):
-            raise ValueError('Parameter "comment" should be a %s instance. %s given.' %
-                             ('Comment', comment.__class__.__name__,))
+            raise ValueError(f'Parameter "comment" should be a {} instance. {comment.__class__.__name__} given.' %
+                             ('Comment', ,))
         self.comments.append(comment)
 
     def add_attachment(self, attachment):

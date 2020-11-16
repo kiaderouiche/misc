@@ -19,13 +19,6 @@
 # Authors:  Alvaro del Castillo <acs@bitergia.com>
 #
 
-from .Bicho.Config import Config
-
-from .Bicho.backends import Backend
-from .Bicho.utils import create_dir, printdbg, printout, printerr
-from .Bicho.db.database import DBIssue, DBBackend, get_database
-from .Bicho.common import Tracker, Issue, People, Change
-
 from dateutil.parser import parse
 from datetime import datetime
 
@@ -41,6 +34,14 @@ import urllib.request
 import feedparser
 
 from storm.locals import DateTime, Desc, Int, Reference, Unicode, Bool
+from .Bicho.Config import Config
+
+from .Bicho.backends import Backend
+from .Bicho.utils import create_dir, printdbg, printout, printerr
+from .Bicho.db.database import DBIssue, DBBackend, get_database
+from .Bicho.common import Tracker, Issue, People, Change
+
+
 
 
 class DBAlluraIssueExt(object):
