@@ -23,6 +23,7 @@
 # We should migrate to argparse. optparse is deprecated since Python 2.7
 
 from optparse import OptionGroup, OptionParser
+import pathlib
 import os
 import pprint
 import sys
@@ -69,13 +70,13 @@ class Config:
 
         # First look in /etc
         # FIXME /etc is not portable
-        config_file = os.path.join ('/etc', 'bicho')
-        if os.path.isfile (config_file):
+        config_file = pathlib.Path().joinpath ('/etc', 'bicho')
+        if pathlib.Path(config_file).is_file():
             Config.load_from_file (config_file)
 
         # Then look at $HOME
-        config_file = os.path.join (bicho_dot_dir (), 'config')
-        if os.path.isfile (config_file):
+        config_file = pathlib.Path().joinpath(bicho_dot_dir (), 'config')
+        if pathlib.Path(config_file).is_file():
             Config.load_from_file (config_file) 
         else:
             # If there's an old file, migrate it
