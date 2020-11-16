@@ -31,6 +31,7 @@ import traceback
 from BeautifulSoup import BeautifulSoup
 from BeautifulSoup import Comment as BFComment
 from .Bicho.backends import Backend
+
 from .Bicho.backends.bg import DBBugzillaIssueExt
 from .Bicho.backends.jira import DBJiraIssueExt
 from .Bicho.Config import Config

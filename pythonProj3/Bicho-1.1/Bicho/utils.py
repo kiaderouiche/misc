@@ -75,7 +75,7 @@ def url_strip_protocol(url) -> str:
     p += 3
     return url[p:]
 
-def url_get_attr(url, attr=None) -> None:
+def url_get_attr(url, attr=None) :
     query = urllib.parse.splitquery(url)
     try:
         if query[1] is None:

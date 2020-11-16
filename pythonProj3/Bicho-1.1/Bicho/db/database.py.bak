@@ -158,12 +158,12 @@ class DBDatabase:
                 db_issue = DBIssue(issue.issue, tracker_id)
 
             #update the data, or take the new one
-            db_issue.type = str(issue.type)
-            db_issue.summary = str(issue.summary)
-            db_issue.description = str(issue.description)
-            db_issue.status = str(issue.status)
-            db_issue.resolution = str(issue.resolution)
-            db_issue.priority = str(issue.priority)
+            db_issue.type = unicode(issue.type)
+            db_issue.summary = unicode(issue.summary)
+            db_issue.description = unicode(issue.description)
+            db_issue.status = unicode(issue.status)
+            db_issue.resolution = unicode(issue.resolution)
+            db_issue.priority = unicode(issue.priority)
             db_issue.submitted_by = self.insert_people(issue.submitted_by).id
             
 
@@ -312,8 +312,8 @@ class DBDatabase:
         try:
             self.store.flush()
         except UnicodeEncodeError:
-            print(("UnicodeEncodeError: one of the comments of the issue_id " + \
-                  "%s couldn't be stored" % (issue_id)))
+            print("UnicodeEncodeError: one of the comments of the issue_id " + \
+                  "%s couldn't be stored" % (issue_id))
         return db_comment
 
     def _insert_attachment(self, attachment, issue_id, tracker_id):
@@ -395,8 +395,8 @@ class DBDatabase:
         @raise NotFoundError: when the supported type of tracker is not found.
         """
         db_sup = self.store.find(DBSupportedTracker,
-                                 DBSupportedTracker.name == str(name),
-                                 DBSupportedTracker.version == str(version)).one()
+                                 DBSupportedTracker.name == unicode(name),
+                                 DBSupportedTracker.version == unicode(version)).one()
         if not db_sup:
             raise NotFoundError('Supported tracker %s (v. %s) not found' % (name, version))
         return db_sup
@@ -414,7 +414,7 @@ class DBDatabase:
         @raise NotFoundError: When the tracker is not found.
         """
         db_tracker = self.store.find(DBTracker,
-                                     DBTracker.url == str(url)).one()
+                                     DBTracker.url == unicode(url)).one()
         if not db_tracker:
             raise NotFoundError('Tracker %s not found' % url)
         return db_tracker
@@ -435,9 +435,9 @@ class DBDatabase:
         """
         try:
             db_people = self.store.find(DBPeople,
-                                        DBPeople.user_id == str(user_id)).one()
-        except Exception as e:
-            print(e)
+                                        DBPeople.user_id == unicode(user_id)).one()
+        except Exception, e:
+            print e
             
         if not db_people:
             raise NotFoundError('Idenitity %s not found in tracker %s' % 
@@ -459,7 +459,7 @@ class DBDatabase:
         @raise NotFoundError: When the identity is not found.
         """
         db_issue = self.store.find(DBIssue,
-                                    DBIssue.issue == str(issue),
+                                    DBIssue.issue == unicode(issue),
                                     DBIssue.tracker_id == tracker_id).one()
         if not db_issue:
             #if the issue is not stored, return -1 to know its a new one
@@ -504,7 +504,7 @@ class DBDatabase:
         #source forge don't have new_value so we recived
         #a string that must be unicode
         if change.new_value == "unknown":
-            change.new_value = str(change.new_value)
+            change.new_value = unicode(change.new_value)
 
         db_change = self.store.find(DBChange,
                                     DBChange.issue_id == issue_id,
@@ -581,8 +581,8 @@ class DBSupportedTracker(object):
     version = Unicode()
 
     def __init__(self, name, version):
-        self.name = str(name)
-        self.version = str(version)
+        self.name = unicode(name)
+        self.version = unicode(version)
 
 
 class DBTracker(object):
@@ -618,7 +618,7 @@ class DBTracker(object):
     supported = Reference(type, DBSupportedTracker.id)
 
     def __init__(self, url, type):
-        self.url = str(url)
+        self.url = unicode(url)
         self.type = type
         self.retrieved_on = datetime.datetime.now()
 
@@ -656,7 +656,7 @@ class DBPeople(object):
     user_id = Unicode()
 
     def __init__(self, user_id):
-        self.user_id = str(user_id)
+        self.user_id = unicode(user_id)
 
     def set_name(self, name):
         """
@@ -665,7 +665,7 @@ class DBPeople(object):
         @param name: name of the identity
         @type name: C{str}
         """
-        self.name = str(name)
+        self.name = unicode(name)
 
     def set_email(self, email):
         """
@@ -674,7 +674,7 @@ class DBPeople(object):
         @param email: email of the identity
         @type email: C{str}
         """
-        self.email = str(email)
+        self.email = unicode(email)
 
 
 class DBIssue(object):
@@ -740,7 +740,7 @@ class DBIssue(object):
     assigned = Reference(assigned_to, DBPeople.id)
 
     def __init__(self, issue, tracker_id):
-        self.issue = str(issue)
+        self.issue = unicode(issue)
         self.tracker_id = tracker_id
 
 class DBIssuesWatchers(object):
@@ -800,7 +800,7 @@ class DBIssueRelationship(object):
 
     def __init__(self, related_to, type, issue_id):
         self.related_to = related_to
-        self.type = str(type)
+        self.type = unicode(type)
         self.issue_id = issue_id
 
 class DBIssueTempRelationship(object):
@@ -845,7 +845,7 @@ class DBIssueTempRelationship(object):
 
     def __init__(self, issue_id, type, related_to, tracker_id):
         self.related_to = related_to
-        self.type = str(type)
+        self.type = unicode(type)
         self.issue_id = issue_id
         self.tracker_id = tracker_id
 
@@ -893,7 +893,7 @@ class DBComment(object):
     submitted = Reference(submitted_by, DBPeople.id)
 
     def __init__(self, text, submitted_by, submitted_on, issue_id):
-        self.text = str(text)
+        self.text = unicode(text)
         self.submitted_by = submitted_by
         self.submitted_on = submitted_on
         self.issue_id = issue_id
@@ -949,9 +949,9 @@ class DBAttachment(object):
     submitted = Reference(submitted_by, DBPeople.id)
 
     def __init__(self, name, description, url, submitted_by, submitted_on, issue_id):
-        self.name = str(name)
-        self.description = str(description)
-        self.url = str(url)
+        self.name = unicode(name)
+        self.description = unicode(description)
+        self.url = unicode(url)
         self.submitted_by = submitted_by
         self.submitted_on = submitted_on
         self.issue_id = issue_id
@@ -1010,9 +1010,9 @@ class DBChange(object):
     people = Reference(changed_by, DBPeople.id)
 
     def __init__(self, field, old_value, new_value, changed_by, changed_on, issue_id):
-        self.field = str(field)
-        self.old_value = str(old_value)
-        self.new_value = str(new_value)
+        self.field = unicode(field)
+        self.old_value = unicode(old_value)
+        self.new_value = unicode(new_value)
         self.changed_by = changed_by
         self.changed_on = changed_on
         self.issue_id = issue_id
@@ -1059,7 +1059,7 @@ def get_database(backend=None):
     """
     """
     opts = Config
-    if 'url' not in vars(Config):
+    if not vars(Config).has_key('url'):
         opts = Config()
 
     if opts.db_driver_out == "mysql":
