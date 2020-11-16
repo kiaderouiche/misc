@@ -24,7 +24,6 @@
 
 from optparse import OptionGroup, OptionParser
 import pathlib
-import os
 import pprint
 import sys
 from urllib.error import HTTPError, URLError
@@ -80,11 +79,11 @@ class Config:
             Config.load_from_file (config_file) 
         else:
             # If there's an old file, migrate it
-            old_config = os.path.join (os.environ.get ('HOME'), '.bicho')
-            if os.path.isfile (old_config):
+            old_config = pathlib.Path().joinpath(pathlib.os.environ.get ('HOME'), '.bicho')
+            if pathlib.Path(old_config).is_file():
                 printout ("Old config file found in %s, moving to %s", \
                               (old_config, config_file))
-                os.rename (old_config, config_file)
+                pathlib.Path(old_config).rename(config_file)
                 Config.load_from_file (config_file)
 
     @staticmethod
