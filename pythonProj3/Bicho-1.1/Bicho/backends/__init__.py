@@ -17,7 +17,6 @@
 # Authors: Daniel Izquierdo Cortazar <dizquierdo@gsyc.escet.urjc.es>
 #
 
-import os
 import pathlib
 import glob
 import importlib
@@ -41,7 +40,7 @@ class Backend:
     def _get_backend (backend_name):
         if backend_name not in Backend._backends:
             try:
-                importlib.import_module ('Bicho.backends.%s' % backend_name)
+                importlib.import_module (f'Bicho.backends.{backend_name}')
             except ImportError:
                 raise
 
@@ -60,7 +59,7 @@ class Backend:
         # we should clean this directory
         backends = []
         not_backends = ('HTMLParser.py', 'HTMLUtils.py', '__init__.py')
-        for fname in glob.glob( os.path.join(os.path.dirname(__file__), '*.py') ):
+        for fname in pathlib.Path(pathlib.Path(__file__).resolve()).rglob('*.py'):
             if pathlib.Path(fname).name not in not_backends:
                 backends.append(pathlib.Path(fname).name)
         return backends
