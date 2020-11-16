@@ -53,7 +53,7 @@ class CVSRepository(Repository):
     def __init__(self, uri):
         Repository.__init__(self, uri, 'cvs')
 
-    def __get_repository_for_path(self, path):
+    def __get_repository_for_path(self, path) -> str:
         if not pathlib.Path(path).is_dir():
             basename = pathlib.Path(path).name
             path = pathlib.Path(path).parent

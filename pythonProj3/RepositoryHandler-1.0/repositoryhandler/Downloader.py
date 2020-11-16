@@ -21,14 +21,13 @@ from .FindProgram import find_program
 from .Command import Command
 
 
-def get_download_command(uri, dest_path, output)->str:
-    wget = find_program('wget')
-    if wget is None:
+def get_download_command(uri, dest_path, output)->list:
+    http = find_program('http') #use httpie
+    if http is None:
         return None
 
-    cmd = [wget, uri, '-O', dest_path, '-o', output]
-    if uri.startswith('https://'):
-        cmd.append('--no-check-certificate')
+    cmd = [http, --download, dest_path, '-o', output]
+    
 
     return cmd
 

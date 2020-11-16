@@ -43,7 +43,7 @@ def find_program(program):
         # There is no PATH in env!!!
         # FIXME: it only works on UNIX
         # NetBSD path: /usr/pkg/
-        path = "/bin:/usr/bin:/usr/pkg/bin:."
+        path = "/bin:/usr/bin:/usr/local/bin/:/usr/pkg/bin:."
 
     for p in path.split(os.pathsep):
         absolute = pathlib.Path().joinpath(p, program)
