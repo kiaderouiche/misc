@@ -88,8 +88,7 @@ class TarFileExtractor(FileExtractor):
             tar.extractall(path)
         except tarfile.TarError as e:
             tar.close()
-            raise FileExtractorError("FileExtractor Error: Extracting tarfile"
-                                     " %s: %s" % (self.uri, str(e)))
+            raise FileExtractorError(f"FileExtractor Error: Extracting tarfile {self.uri}: {str(e)}")
 
         tar.close()
 
