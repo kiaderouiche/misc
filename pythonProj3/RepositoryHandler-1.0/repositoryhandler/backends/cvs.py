@@ -31,7 +31,7 @@ CVSPASS_ERROR_MESSAGE = "^.*: CVS password file .*\.cvspass does "\
                         "not exist - creating a new file$"
 
 
-def get_repository_from_path(path):
+def get_repository_from_path(path) -> str:
     # Just in case path is a file
     if not pathlib.Path(path).is_dir():
         path = pathlib.Path(path).name
