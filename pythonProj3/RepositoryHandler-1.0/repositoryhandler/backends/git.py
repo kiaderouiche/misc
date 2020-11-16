@@ -305,7 +305,7 @@ class GitRepository(Repository):
             if len(revs) == 1:
                 cmd.append(revs[0])
             elif len(revs) > 1:
-                cmd.append("%s..%s" % (revs[0], revs[1]))
+                cmd.append("{}..{}".format(revs[0], revs[1]))
 
         cmd.append("--")
 
