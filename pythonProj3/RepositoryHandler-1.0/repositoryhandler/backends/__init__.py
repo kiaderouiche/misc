@@ -16,6 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+import importlib
 from repositoryhandler.backends.watchers import N_WATCHES
 from repositoryhandler.Command import CommandError, CommandRunningError
 
@@ -37,26 +38,32 @@ __all__ = [
 
 class RepositoryUnknownError (Exception):
     '''Unkown repository type'''
+    pass
 
 
 class RepositoryInvalidWorkingCopy (Exception):
     '''Invalid Working Copy directory'''
+    pass
 
 
 class RepositoryInvalidBranch (Exception):
     '''Invalid Branch'''
+    pass
 
 
 class InvalidWatch (Exception):
     '''Invalid watch type'''
+    pass
 
 
 class RepositoryCommandError (CommandError):
     '''Error running a command'''
+    pass
 
 
 class RepositoryCommandRunningError (CommandRunningError):
     '''Error running a command that is still running'''
+    pass
 
 
 class Repository:
@@ -74,7 +81,7 @@ class Repository:
         '''Returns the repository URI corresponding to the given local path'''
         return self.uri
 
-    def get_type(self):
+    def get_type(self) -> str:
         return self.type
 
     def checkout(self, uri, rootdir, newdir=None, branch=None, rev=None):
@@ -123,7 +130,7 @@ class Repository:
 
     def add_watch(self, type, callback, user_data=None) -> int:
         if type not in range(N_WATCHES):
-            raise InvalidWatch('Type %d is not a valid watch type' % (type))
+            raise InvalidWatch(f"Type {type} is not a valid watch type")
 
         if not type in self.watchers:
             self.watchers[type] = [(callback, user_data)]
@@ -134,7 +141,7 @@ class Repository:
 
     def remove_watch(self, type, watcher_id):
         if type not in range(N_WATCHES):
-            raise InvalidWatch('Type %d is not a valid watch type' % (type))
+            raise InvalidWatch(f"Type {type} is not a valid watch type")
 
         if not type in self.watchers:
             return
@@ -180,13 +187,12 @@ def register_backend(backend_name, backend_class):
 def _get_backend(backend_name):
     if backend_name not in _backends:
         try:
-            __import__('repositoryhandler.backends.%s' % backend_name)
+            importlib.import_module(f"repositoryhandler.backends.{backend_name}")
         except ImportError:
             pass
 
     if backend_name not in _backends:
-        raise RepositoryUnknownError('Repository type %s not registered'
-                                     % backend_name)
+        raise RepositoryUnknownError(f"Repository type {backend_name} not registered")
 
     return _backends[backend_name]
 
@@ -202,7 +208,7 @@ def create_repository_from_path(path):
     for repo_type in repo_types:
         try:
             backend = 'repositoryhandler.backends.%s' % repo_type
-            f = getattr(__import__(backend, None, None,
+            f = getattr(importlib.import_module(backend, None, None,
                                    ['get_repository_from_path']),
                         'get_repository_from_path')
         except ImportError:
@@ -217,5 +223,4 @@ def create_repository_from_path(path):
             continue
 
     if rep is None:
-        raise RepositoryUnknownError('Unknown repository type for path %s'
-                                     % path)
+        raise RepositoryUnknownError(f"Unknown repository type for path {path}")

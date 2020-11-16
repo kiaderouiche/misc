@@ -13,6 +13,7 @@ Latest version: ```git clone https://github.com/MetricsGrimoire/RepositoryHandle
  * CVS
  * SVN
  * GIT
+ * Mercurial
  * BZR (Preliminary support)
  * Tarball
 
@@ -23,11 +24,12 @@ Optional:
 
 ## Dependencies
 
- * Python >= 2.4
+ * Python >= 3.7
  * CVS client
  * SVN client
  * Git client
- * WGET or curl
+ * Mercurial client
+ * Httpie, WGET or curl
  * Autoconf (for installation)
 
 ## How to install

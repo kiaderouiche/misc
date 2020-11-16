@@ -47,6 +47,7 @@ class CommandRunningError(Exception):
 
 class CommandTimeOut (Exception):
     '''Timeout running command'''
+    pass
 
 
 class Command:
@@ -141,8 +142,8 @@ class Command:
 
                 if p.stdin in wlist:
                     bytes_written = self._write(p.stdin.fileno(), \
-                                                buffer(stdin, \
-                                            input_offset, 512))
+                                                bytes(memoryview(stdin, \
+                                            input_offset, 512)))
                     input_offset += bytes_written
                     if input_offset >= len(stdin):
                         p.stdin.close()
