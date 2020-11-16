@@ -1,6 +1,6 @@
-# git.py
+# hg.py
 #
-# Copyright (C) 2007 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,9 +28,9 @@ from repositoryhandler.backends.watchers import CHECKOUT, UPDATE, \
 
 def get_config(path, option=None):
     if pathlib.Path(path).is_file():
-        path = pathlib.Path(path).parent
+        path = pathlib.PurePosixPath(path).parent
 
-    cmd = ['git', 'config']
+    cmd = ['hg', 'config']
 
     if option is not None:
         cmd.extend(['--get', option])
@@ -58,7 +58,7 @@ def get_config(path, option=None):
 
 def get_repository_from_path(path) -> str:
     if pathlib.Path(path).is_file():
-        path = pathlib.Path(path).parent
+        path = pathlib.PurePosixPath(path).parent
 
     dir = path
     while dir and not pathlib.Path(pathlib.Path().joinpath(dir, ".git")).is_dir() and dir != "/":

@@ -16,8 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-from repositoryhandler.backends.watchers import CHECKOUT, UPDATE, \
-    LOG, DIFF, BLAME, CAT, LS
+from repositoryhandler.backends.watchers import N_WATCHES
 from repositoryhandler.Command import CommandError, CommandRunningError
 
 DEBUG = False
@@ -199,7 +198,7 @@ def create_repository(backend_name, uri):
 
 def create_repository_from_path(path):
     rep = None
-    repo_types = ['cvs', 'svn', 'git', 'bzr']
+    repo_types = ['cvs', 'svn', 'git', 'bzr', 'hg']
     for repo_type in repo_types:
         try:
             backend = 'repositoryhandler.backends.%s' % repo_type

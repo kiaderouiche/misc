@@ -27,7 +27,7 @@ from repositoryhandler.backends.watchers import CHECKOUT, UPDATE, LOG
 
 def get_repository_from_path(path):
     if pathlib.Path(path).is_file():
-        path = pathlib.PurePosixPath(path).parent
+        path = pathlib.Path(path).parent
 
     pattern = re.compile("^[ \t]*(checkout of)?(parent)? branch:(.*)$")
     uri = None
