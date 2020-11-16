@@ -25,12 +25,12 @@ def find_program(program):
     '''Looks for given program in current path.
     Returns an absolute path if program was found or None'''
 
-    def __path_is_executable(path):
-        return os.stat(path).st_mode & stat.S_IEXEC
+    def __path_is_executable(path): #revisited function
+        return pathlib.os.stat(path).st_mode & stat.S_IEXEC
 
     # Do not look in PATH if it's already an absolute path
     # or a relative path containing directories
-    if pathlib.PurePosixPath(program).is_absolute() or program.find(os.path.sep) > 0:
+    if pathlib.Path(program).is_absolute() or program.find(os.path.sep) > 0:
         if __path_is_executable(program) and not pathlib.Path(program).is_dir():
             return program
         else:
@@ -38,7 +38,7 @@ def find_program(program):
 
     # Look in PATH
     try:
-        path = pathlibos.environ['PATH']
+        path = pathlib.os.environ['PATH']   
     except KeyError:
         # There is no PATH in env!!!
         # FIXME: it only works on UNIX
@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
     ## Absolute path
     # Dir
-    if find_program(os.environ['HOME']) is not None:
+    if find_program(pathlib.os.environ['HOME']) is not None:
         print ("FAILED")
         sys.exit(1)
 
