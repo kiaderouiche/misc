@@ -207,7 +207,7 @@ def create_repository_from_path(path):
     repo_types = ['cvs', 'svn', 'git', 'bzr', 'hg']
     for repo_type in repo_types:
         try:
-            backend = 'repositoryhandler.backends.%s' % repo_type
+            backend = (f'repositoryhandler.backends.{repo_type}')
             f = getattr(importlib.import_module(backend, None, None,
                                    ['get_repository_from_path']),
                         'get_repository_from_path')
