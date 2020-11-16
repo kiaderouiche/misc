@@ -38,7 +38,7 @@ def find_program(program):
 
     # Look in PATH
     try:
-        path = os.environ['PATH']
+        path = pathlibos.environ['PATH']
     except KeyError:
         # There is no PATH in env!!!
         # FIXME: it only works on UNIX
