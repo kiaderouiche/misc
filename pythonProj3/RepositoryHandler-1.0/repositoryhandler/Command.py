@@ -30,7 +30,7 @@ class CommandError(Exception):
         self.returncode = returncode
         self.error = error
 
-    def __str__(self):
+    def __str__(self) :
         return "Command '%s' returned non-zero exit status %d" % \
             (self.cmd, self.returncode)
 
@@ -140,10 +140,9 @@ class Command:
                     elapsed = 0.0
 
                 if p.stdin in wlist:
-                    bytes_written = self._write(p.stdin.fileno(),
-                                                buffer(stdin,
-                                                       input_offset,
-                                                       512))
+                    bytes_written = self._write(p.stdin.fileno(), \
+                                                buffer(stdin, \
+                                            input_offset, 512))
                     input_offset += bytes_written
                     if input_offset >= len(stdin):
                         p.stdin.close()
