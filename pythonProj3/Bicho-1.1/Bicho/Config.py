@@ -29,6 +29,7 @@ import sys
 from urllib.error import HTTPError, URLError
 from urllib.request import urlopen, Request
 import urllib.parse
+
 from .backends import Backend
 from .info import VERSION, DESCRIPTION
 
@@ -53,8 +54,9 @@ class Config:
     @staticmethod
     def load_from_file (config_file):
         try:
-            f = open (config_file, 'r')
-            exec (f in Config.__dict__)
+            pathlib.Path(config_file).open () as f:
+                exec (f in Config.__dict__)
+        finally:
             f.close ()
         except Exception as e:
             raise ErrorLoadingConfig ("Error reading config file %s (%s)" % (\
