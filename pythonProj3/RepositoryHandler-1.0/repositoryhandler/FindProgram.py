@@ -30,7 +30,7 @@ def find_program(program):
 
     # Do not look in PATH if it's already an absolute path
     # or a relative path containing directories
-    if pathlib.Path(program).is_absolute() or program.find(os.path.sep) > 0:
+    if pathlib.Path(program).is_absolute() or program.find(pathlib.os.sep) > 0:
         if __path_is_executable(program) and not pathlib.Path(program).is_dir():
             return program
         else:
@@ -45,7 +45,7 @@ def find_program(program):
         # NetBSD path: /usr/pkg/
         path = "/bin:/usr/bin:/usr/local/bin/:/usr/pkg/bin:."
 
-    for p in path.split(os.pathsep):
+    for p in path.split(pathlib.os.pathsep):
         absolute = pathlib.Path().joinpath(p, program)
         if pathlib.Path(absolute).exists() and \
            __path_is_executable(absolute) and \
