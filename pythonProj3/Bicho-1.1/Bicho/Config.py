@@ -22,8 +22,6 @@
 #
 # We should migrate to argparse. optparse is deprecated since Python 2.7
 
-from .backends import Backend
-from .info import VERSION, DESCRIPTION
 from optparse import OptionGroup, OptionParser
 import os
 import pprint
@@ -31,6 +29,8 @@ import sys
 from urllib.error import HTTPError, URLError
 from urllib.request import urlopen, Request
 import urllib.parse
+from .backends import Backend
+from .info import VERSION, DESCRIPTION
 
 
 

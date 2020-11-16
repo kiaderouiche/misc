@@ -25,8 +25,12 @@
 #Ajouter le support pour Wget
 #Ajouter un prefix pour NetBSD
 #Ajouter le support pour les programmes, git, bzr et etc
-from distutils.core import setup
 import sys
+
+try:
+    from setuptools import setup
+except:
+    from distutils.core import setup
 
 setup(name = "Bicho",
       version = "0.9",
@@ -37,4 +41,5 @@ setup(name = "Bicho",
       packages = ['Bicho', 'Bicho.backends', 'Bicho.db',
                   'Bicho.post_processing'],
       data_files = [('man/man1/',['doc/bicho.1'])],
-      scripts = ["bin/bicho"+sys.version[0:3]])
+      scripts = ["bin/bicho"]
+)

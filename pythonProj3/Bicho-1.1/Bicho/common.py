@@ -105,12 +105,10 @@ class Issue:
         self.assigned_to = None
 
         if not isinstance(submitted_by, People):
-            raise ValueError('Parameter "submitted_by" should be a %s instance. %s given.' %
-                             ('People', submitted_by.__class__.__name__,))
+            raise ValueError('Parameter "submitted_by" should be a {People} instance. { submitted_by.__class__.__name__} given.'))
 
         if not isinstance(submitted_on, datetime.datetime):
-            raise ValueError('Parameter "submitted_on" should be a %s instance. %s given.' %
-                             ('datetime', input.__class__.__name__))
+            raise ValueError(f'Parameter "submitted_on" should be a {datetime} instance. { input.__class__.__name__} given.' ))
 
         self.submitted_by = submitted_by
         self.submitted_on = submitted_on

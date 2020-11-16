@@ -43,7 +43,7 @@ def printerr (str = '\n'):
     sys.stderr.write (str)
     sys.stderr.flush ()
 
-def printwrn (str = '\n') -> None:
+def printwrn (str = '\n'):
     if Config.quiet:
         return
 
