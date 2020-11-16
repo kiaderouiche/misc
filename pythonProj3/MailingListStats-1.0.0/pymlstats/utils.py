@@ -69,6 +69,7 @@ def check_compressed_file(filename):
     # (to recognize also composed extensions such as tar.gz)
     filename_noext= str(pathlib.Path(filename).parent) +'/'+ pathlib.Path(filename).stem
     ext = pathlib.Path(filename).suffix
+    #WIP_CODE:
     long_ext = ''.join([os.path.splitext(filename_noext)[1], ext])
 
     if long_ext in recognized_exts:
