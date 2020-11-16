@@ -90,7 +90,7 @@ class Config:
     def check_params(check_params):            
         for param in check_params:
             if not vars(Config).has_key(param) or vars(Config)[param] is None:
-                raise InvalidConfig('Configuration parameter ''%s'' is required' % param)
+                raise InvalidConfig(f'Configuration parameter ''{param}'' is required' )
 
     @staticmethod
     def check_config():
