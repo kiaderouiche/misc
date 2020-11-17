@@ -3,15 +3,16 @@ name = "Bicho-2.0"
 version = "0.1.0"
 description = "Analysis tool for Issue/Bug Tracking Systems"
 authors = ["GSyC/LibreSoft, Universidad Rey Juan Carlos"]
-license = "GPL-3.0+"
-readme = "README.md"
+license = "GPL-2.0+"
+readme = "README.rst"
+include = ["CHANGELOG.md"]
+include = ["NEWS.md"]
 classifiers=[
         "Programming Language :: Python",
         "Development Status :: 1 - Planning",
         "License :: OSI Approved",
         "Natural Language :: English",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Topic :: Communications",
