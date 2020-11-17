@@ -23,7 +23,7 @@
 
 import cgi
 import errno
-import os
+import pathlib
 import random
 import sys
 import time
@@ -104,10 +104,10 @@ _dirs = {}
 
 def create_dir(dir):
     try:
-        os.mkdir(dir)
+        pathlib.Path(dir).mkdir()
     except OSError as e:
         if e.errno == errno.EEXIST:
-            if not os.path.isdir (dir):
+            if not pathlib.Path(dir).is_dir():
                 raise
         else:
             raise
@@ -119,7 +119,7 @@ def bicho_dot_dir () -> str:
     except KeyError:
         pass
 
-    dot_dir = os.path.join (os.environ.get ('HOME'), '.bicho')
+    dot_dir = pathlib.Path().joinpath(pathlib.os.environ.get ('HOME'), '.bicho')
     create_dir (dot_dir)
     create_dir (os.path.join(dot_dir, "cache"))
         
