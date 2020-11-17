@@ -5,8 +5,7 @@ description = "Analysis tool for Issue/Bug Tracking Systems"
 authors = ["GSyC/LibreSoft, Universidad Rey Juan Carlos"]
 license = "GPL-2.0+"
 readme = "README.rst"
-include = ["CHANGELOG.md"]
-include = ["NEWS.md"]
+include = ["CHANGELOG.md", "NEWS.md"]
 classifiers=[
         "Programming Language :: Python",
         "Development Status :: 1 - Planning",
@@ -17,6 +16,9 @@ classifiers=[
         "Programming Language :: Python :: 3.9",
         "Topic :: Communications",
         ]
+[tool.poetry.urls]
+url = "http://metricsgrimoire.github.io/Bicho/"
+
 [tool.poetry.dependencies]
 python = "^3.8"
 bs4 = "^0.0.1"
@@ -28,3 +30,6 @@ pytest = "^5.2"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+bicho = "bin:bicho.py"
