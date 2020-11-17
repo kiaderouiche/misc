@@ -25,7 +25,6 @@
 import string
 import time
 import urllib
-import urllib2
 import urlparse
 import xml.sax.handler
 
@@ -318,16 +317,16 @@ class SoupHtmlParser():
                 # [u'\n', u'Attachment #12723', u'\n              Flag\n            ']
                 #
                 if len(cols[2].contents) > 1:
-                    aux_c = unicode(" ".join(cols[2].contents))
-                    field = unicode(aux_c.replace("\n","").strip())
+                    aux_c = str(" ".join(cols[2].contents))
+                    field = str(aux_c.replace("\n","").strip())
                 else:
-                    field = unicode(cols[2].contents[0].replace("\n","").strip())
-                removed = unicode(cols[3].contents[0].strip())
-                added = unicode(cols[4].contents[0].strip())
+                    field = str(cols[2].contents[0].replace("\n","").strip())
+                removed = str(cols[3].contents[0].strip())
+                added = str(cols[4].contents[0].strip())
             else:
                 # same as above with the Attachment example
                 if len(cols[0].contents) > 1:
-                    aux_c = unicode(" ".join(cols[0].contents))
+                    aux_c = str(" ".join(cols[0].contents))
                     field = aux_c.replace("\n","").strip()
                 else:
                     field = cols[0].contents[0].strip()
@@ -634,7 +633,7 @@ class BugzillaHandler(xml.sax.handler.ContentHandler):
             self.init_bugzilla()
 
             for attrName in attrs.keys():
-                self.bugzilla[attrName] = unicode(attrs.get(attrName))
+                self.bugzilla[attrName] = str(attrs.get(attrName))
 
 class BugsHandler(xml.sax.handler.ContentHandler):
     """
@@ -741,11 +740,11 @@ class BugsHandler(xml.sax.handler.ContentHandler):
 
         for attrName in attrs.keys():
             if self.tag_name == "reporter":
-                self.atags["reporter_name"] = unicode(attrs.get(attrName))
+                self.atags["reporter_name"] =str(attrs.get(attrName))
             elif self.tag_name == "assigned_to":
-                self.atags["assigned_to_name"] = unicode(attrs.get(attrName))
+                self.atags["assigned_to_name"] = str(attrs.get(attrName))
             elif self.tag_name == "who":
-                self.long_desc_tags["who_name"] = unicode(attrs.get(attrName))
+                self.long_desc_tags["who_name"] = str(attrs.get(attrName))
 
     def characters (self, chrs):
         if self.tag_name:
@@ -772,15 +771,15 @@ class BugsHandler(xml.sax.handler.ContentHandler):
             aux = string.join(self.interestData)
             if not self.atags[name]:
                 #delta_ts could be overwritten by delta_ts of attachment
-                self.atags[name] = unicode(aux)
+                self.atags[name] = str(aux)
             self.tag_name = None
         elif self.long_desc_tags.has_key( name ):
             aux = string.join(self.interestData)
-            self.long_desc_tags[name] = unicode(aux)
+            self.long_desc_tags[name] = str(aux)
             self.tag_name = None
         elif self.btags.has_key( name ):
             aux = string.join(self.interestData)
-            self.btags[name].append(unicode(aux))
+            self.btags[name].append(str(aux))
             self.tag_name = None
         elif self.ctags.has_key( name ):
             if name == 'long_desc':
@@ -829,7 +828,7 @@ class BugsHandler(xml.sax.handler.ContentHandler):
         """
         return parse(str_date).replace(tzinfo=None)
 
-    def get_issue(self):
+    def get_issue(self) -> str:
         issue_id = self.atags["bug_id"]
         type  = self.atags["bug_severity"]
         summary = self.atags["short_desc"]

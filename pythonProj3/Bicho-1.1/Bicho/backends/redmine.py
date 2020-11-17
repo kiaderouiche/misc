@@ -26,7 +26,6 @@ from datetime import datetime
 
 import errno
 import json
-import os
 import random
 import time
 import traceback
