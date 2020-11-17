@@ -121,7 +121,7 @@ def bicho_dot_dir () -> str:
 
     dot_dir = pathlib.Path().joinpath(pathlib.os.environ.get ('HOME'), '.bicho')
     create_dir (dot_dir)
-    create_dir (os.path.join(dot_dir, "cache"))
+    create_dir (pathlib.Path().joinpath(dot_dir, "cache"))
         
     _dirs['dot'] = dot_dir
 
