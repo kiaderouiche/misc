@@ -30,14 +30,13 @@ File Extractor Module
 """
 
 import os
-import sys
 
 # Extraction modules
 import tarfile
 import zipfile
 import gzip
 import bz2
-import lzma
+
 
 
 class FileExtractorError(Exception):

@@ -27,7 +27,6 @@ Some utils functions for MLStats
 @contact:      libresoft-tools-devel@lists.morfeo-project.org
 """
 
-from .fileextractor import FileExtractor
 import gzip
 import os
 import pathlib
@@ -36,6 +35,9 @@ import urllib.parse
 import urllib.request
 import shutil
 import datetime
+
+from .fileextractor import FileExtractor
+
 
 COMPRESSED_TYPES = ['.gz', '.bz2', '.zip', '.tar',
                     '.tar.gz', '.tar.bz2', '.tgz', '.tbz']

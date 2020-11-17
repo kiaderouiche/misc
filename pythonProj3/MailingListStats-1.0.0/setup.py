@@ -36,6 +36,7 @@ Installer
 #Ajouter un prefix pour NetBSD
 #Ajouter le support pour les programmes, git, bzr et etc
 import sys
+import pathlib
 from setuptools import setup
 from pymlstats.version import mlstats_version
 

@@ -1,11 +1,15 @@
 [tool.poetry]
-name = "Bicho-2.0"
-version = "0.1.0"
+name = "Bicho"
+version = "2.0"
 description = "Analysis tool for Issue/Bug Tracking Systems"
 authors = ["GSyC/LibreSoft, Universidad Rey Juan Carlos"]
+homepage = "http://metricsgrimoire.github.io/Bicho/"
 license = "GPL-2.0+"
 readme = "README.rst"
 include = ["CHANGELOG.md", "NEWS.md"]
+
+keywords = ["packaging", "dependency", "poetry"]
+
 classifiers=[
         "Programming Language :: Python",
         "Development Status :: 1 - Planning",
@@ -16,8 +20,6 @@ classifiers=[
         "Programming Language :: Python :: 3.9",
         "Topic :: Communications",
         ]
-[tool.poetry.urls]
-url = "http://metricsgrimoire.github.io/Bicho/"
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -31,5 +33,30 @@ pytest = "^5.2"
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.black]
+line-length = 79
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+  | __pycache__
+)
+'''
+packages = [
+    { include = "Bicho", from="." }
+]
 [tool.poetry.scripts]
-bicho = "bin:bicho.py"
+bicho = "bin:bicho"

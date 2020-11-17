@@ -39,6 +39,7 @@ from email.iterators import typed_subpart_iterator
 import datetime
 import hashlib
 import sys
+
 from pymlstats.strictmbox import strict_mbox
 from pymlstats.utils import EMAIL_OBFUSCATION_PATTERNS
 
@@ -254,7 +255,7 @@ class MailArchiveAnalyzer:
 
         return field
 
-    def __decode(self, s, charset='latin-1', sep=u' '):
+    def __decode(self, s, charset='latin-1', sep=u' ') -> str:
         """ Decode a header.  A header can be composed by strings with
             different encoding each.  We convert each group to unicode
             separately and then we merge them back."""
