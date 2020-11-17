@@ -18,7 +18,6 @@
 #
 
 import pathlib
-import glob
 import importlib
 
 __all__ = ['Backend']

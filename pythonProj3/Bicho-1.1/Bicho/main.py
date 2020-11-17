@@ -23,7 +23,6 @@
 #       Alvaro del Castillo <acs@bitergia.com>
 #
 
-import pprint
 import sys
 
 from .Config import Config, ErrorLoadingConfig, InvalidConfig

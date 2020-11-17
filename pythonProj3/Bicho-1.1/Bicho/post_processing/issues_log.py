@@ -25,8 +25,11 @@ import string
 import sys
 import time
 import urllib
-import urllib2
 import traceback
+
+from storm.exceptions import NotOneError
+from dateutil.parser import parse
+from datetime import datetime
 
 from BeautifulSoup import BeautifulSoup
 from BeautifulSoup import Comment as BFComment
@@ -38,11 +41,8 @@ from .Bicho.db.database import DBIssue, DBBackend, get_database, DBTracker,\
      DBPeople
 from storm.locals import DateTime, Int, Reference, Unicode, Desc, Store, \
      create_database
-from storm.exceptions import NotOneError
-import xml.sax.handler
 
-from dateutil.parser import parse
-from datetime import datetime
+
 
 from .Bicho.Config import Config
 

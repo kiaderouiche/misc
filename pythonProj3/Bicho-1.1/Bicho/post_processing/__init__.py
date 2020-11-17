@@ -20,7 +20,7 @@
 #           Luis Cañas Díaz <lcanas@bitergia.com>
 #
 
-import os
+import importlib
 
 
 class LoggerUnknownError (Exception):
@@ -39,7 +39,7 @@ class IssueLogger:
     def _get_logger(logger_name):
         if logger_name not in IssueLogger._loggers:
             try:
-                __import__('Bicho.post_processing.issues_log_%s' % logger_name)
+                importlib.import_module('Bicho.post_processing.issues_log_%s' % logger_name)
             except ImportError:
                 raise
 

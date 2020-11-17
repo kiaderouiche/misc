@@ -440,8 +440,7 @@ class DBDatabase:
             print(e)
             
         if not db_people:
-            raise NotFoundError('Idenitity %s not found in tracker %s' % 
-                                (user_id, tracker_id))
+            raise NotFoundError(f'Idenitity {user_id} not found in tracker {tracker_id)}')
         return db_people
 
     def _get_db_issue(self, issue, tracker_id):
