@@ -19,7 +19,7 @@
 
 import sys
 import time
-import os
+import pathlib
 import pwd
 
 from launchpadlib.launchpad import Launchpad
@@ -838,8 +838,8 @@ class LPBackend(Backend):
 
         if bug.bug.duplicate_of:
             temp_rel = TempRelationship(bug.bug.id,
-                                        unicode('duplicate_of'),
-                                        unicode(bug.bug.duplicate_of.id))
+                                        str('duplicate_of'),
+                                        str(bug.bug.duplicate_of.id))
             issue.add_temp_relationship(temp_rel)
             
         issue.set_heat(bug.bug.heat)
@@ -957,11 +957,11 @@ class LPBackend(Backend):
         printdbg(url)
 
         # launchpad needs a temp directory to store cached data
-        homedir = pwd.getpwuid(os.getuid()).pw_dir
-        cachedir = os.path.join(homedir, ".cache/bicho/")
-        if not os.path.exists(cachedir):
-            os.makedirs(cachedir)
-        cre_file = os.path.join(cachedir + 'launchpad-credential')
+        homedir = pwd.getpwuid(pathlib.os.getuid()).pw_dir
+        cachedir = pathlib.Path().joinpath(homedir, ".cache/bicho/")
+        if not pathlib.Path(cachedir).exists():
+            pathlib.Path(cachedir).mkdir()
+        cre_file = pathlib.Path().joinpath(cachedir + 'launchpad-credential')
         self.lp = Launchpad.login_with('Bicho','production',
                                        credentials_file = cre_file)
 
@@ -1025,10 +1025,10 @@ class LPBackend(Backend):
             except NotFoundError:
                 printerr("NotFoundError: the issue %s couldn't be stored"
                          % (issue_data.issue))
-            except Exception, e:
+            except Exception as e:
                 printerr("Unexpected Error: the issue %s couldn't be stored"
                          % (issue_data.issue))
-                print e
+                print (e)
 
             analyzed.append(bug.web_link)  # for the bizarre error #338
             time.sleep(self.delay)
@@ -1040,6 +1040,6 @@ class LPBackend(Backend):
         except:
             raise
 
-        printout("Done. %s bugs analyzed" % (nbugs))
+        printout(f"Done.{nbugs} bugs analyzed")
 
 Backend.register_backend("lp", LPBackend)

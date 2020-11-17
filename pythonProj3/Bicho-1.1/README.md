@@ -38,7 +38,7 @@ Latest version:
  Requirements
 ------------
 
- * Python >= 2.4
+ * Python >= 3.8
  * Python Storm. Depending on the database driver to be used you'll also need
  one of the following python libraries:
    - mysqldb or psycopg2 or pysqlite2 (unstable with PostgreSQL; MySQL is recommended - default engine should be set to MYISAM)
