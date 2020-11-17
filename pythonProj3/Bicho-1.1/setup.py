@@ -32,6 +32,7 @@ try:
 except:
     from distutils.core import setup
 
+#dependency: launchpadlib PYPI
 setup(name = "Bicho",
       version = "0.9",
       author =  "GSyC/LibreSoft, Universidad Rey Juan Carlos",
