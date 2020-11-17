@@ -24,7 +24,16 @@ from BeautifulSoup import BeautifulSoup, Comment as BFComment
 from dateutil.parser import parse
 from datetime import datetime
 
-import errno, json, os, random, time, traceback, urllib, urllib2, feedparser, base64, sys
+import errno
+import json
+import os
+import random
+import time
+import traceback
+import urllib
+import feedparser
+import base64
+import sys
 import pprint 
 import re
 
