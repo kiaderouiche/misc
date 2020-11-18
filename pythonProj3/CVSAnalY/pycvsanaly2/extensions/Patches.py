@@ -94,7 +94,7 @@ class Patches(Extension):
 
         return commits
 
-    def get_patch_for_commit(self, rev):
+    def get_patch_for_commit(self, rev)-> str:
         def diff_line(data, io):
             io.write(data)
 
@@ -104,7 +104,7 @@ class Patches(Extension):
             self.repo.show(self.repo_uri, rev)
             data = io.getvalue()
         except Exception as e:
-            printerr("Error running show command: %s", (str(e)))
+            printerr(f"Error running show command: {str(e)}")
             data = None
 
         self.repo.remove_watch(DIFF, wid)
