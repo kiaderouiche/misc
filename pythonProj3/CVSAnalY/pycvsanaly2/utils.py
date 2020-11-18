@@ -126,7 +126,6 @@ def printdbg(str='\n', args=None):
 def remove_directory(path):
     if not pathlib.Path(path).exists():
         return
-
     for root, dirs, files in os.walk(path, topdown=False):
         for file in files:
             pathlib.Path(pathlib.Path().joinpath(root, file))
