@@ -110,7 +110,7 @@ class FilePaths:
             query += "and fl.commit_id between ? and ? "
             args = (prev_commit_id, commit_id, repo_id)
         query += "and f.repository_id = ?"
-        profiler_start("Getting file links for commit %d", (commit_id,))
+        profiler_start(f"Getting file links for commit {commit_id}")
         cursor.execute(statement(query, db.place_holder), args)
         profiler_stop("Getting file links for commit %d", (commit_id,), True)
         rs = cursor.fetchmany()
@@ -123,11 +123,11 @@ class FilePaths:
 
         profiler_stop("Updating adjacency matrix for commit %d", (commit_id,), True)
 
-    def __build_path(self, file_id, adj):
+    def __build_path(self, file_id, adj) -> str:
         if file_id not in adj.adj:
             return None
 
-        profiler_start("Building path for file %d", (file_id,))
+        profiler_start(f"Building path for file {file_id}")
 
         tokens = []
         id = file_id
@@ -140,8 +140,8 @@ class FilePaths:
 
         return "/" + "/".join(tokens)
 
-    def get_path(self, file_id, commit_id, repo_id):
-        profiler_start("Getting path for file %d at commit %d", (file_id, commit_id))
+    def get_path(self, file_id, commit_id, repo_id) -> str:
+        profiler_start("Getting path for file {file_id} at commit {commit_id}")
 
         adj = self.__dict__['adj']
         assert adj is not None, "Matrix no updated"

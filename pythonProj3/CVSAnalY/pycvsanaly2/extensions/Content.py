@@ -18,6 +18,11 @@
 #       Chris Lewis <cflewis@soe.ucsc.edu>
 #       Zhongpeng Lin <linzhp@soe.ucsc.edu>
 
+from Jobs import JobPool, Job
+from io import BytesIO
+import traceback
+
+
 from pycvsanaly2.extensions import Extension, register_extension, \
     ExtensionRunError
 from pycvsanaly2.Database import SqliteDatabase, MysqlDatabase, statement
@@ -26,10 +31,6 @@ from pycvsanaly2.profile import profiler_start, profiler_stop
 from FileRevs import FileRevs
 from repositoryhandler.backends import RepositoryCommandError
 from repositoryhandler.backends.watchers import CAT, SIZE
-from Jobs import JobPool, Job
-from io import BytesIO
-import os
-import traceback
 
 
 # This class holds a single repository retrieve task,
@@ -98,7 +99,7 @@ class ContentJob(Job):
             try:
                 repo_func(os.path.join(self.repo_uri, self.path), self.rev)
                 done = True
-            except RepositoryCommandError, e:
+            except RepositoryCommandError as e:
                 if retries > 0:
                     printerr("Command %s returned %d(%s), try again",
                             (e.cmd, e.returncode, e.error))
@@ -112,8 +113,7 @@ class ContentJob(Job):
                              e.returncode, e.error))
             except:
                 failed = True
-                printerr("Error obtaining %s@%s.",
-                        (self.path, self.rev))
+                printerr(f"Error obtaining {self.path}@{self.rev}.")
                 traceback.print_exc()
                 
         self.repo.remove_watch(watcher, wid)
@@ -122,9 +122,9 @@ class ContentJob(Job):
         if not failed:
             try:
                 results = io.getvalue()
-            except Exception, e:
-                printerr("Error getting contents." +
-                         "Exception: %s", (str(e),))
+            except Exception as e:
+                printerr(f"Error getting contents." +
+                         "Exception: {str(e)}")
             finally:
                 io.close()
         return results
