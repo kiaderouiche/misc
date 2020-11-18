@@ -169,10 +169,10 @@ def cvsanaly_cache_dir():
 
 def create_directory(path):
     try:
-        os.makedirs(path, 0700)
-    except OSError, e:
+        pathlib.Path(path).mkdir(0700)
+    except OSError as e:
         if e.errno == errno.EEXIST:
-            if not os.path.isdir(path):
+            if not pathlib.Path(path).is_dir():
                 raise
         else:
             raise
@@ -180,17 +180,17 @@ def create_directory(path):
 
 def set_writable_path_from_config(context, path):
     if context == 'cache':
-        path_postfix = os.path.join('.cvsanaly2', context)
+        path_postfix = pathlib.Path().joinpath('.cvsanaly2', context)
     elif context == 'dot':
         path_postfix = '.cvsanaly2'
     else:
         raise TypeError("foo")
 
-    directory = os.path.join(path, path_postfix)
+    directory = pathlib.Path().joinpath(path, path_postfix)
     create_directory(directory)
     _dirs[context] = directory
 
 
 if __name__ == '__main__':
-    print cvsanaly_dot_dir()
-    print cvsanaly_cache_dir()
+    print (cvsanaly_dot_dir())
+    print (cvsanaly_cache_dir())

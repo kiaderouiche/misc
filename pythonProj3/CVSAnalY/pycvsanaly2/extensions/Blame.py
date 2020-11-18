@@ -75,26 +75,26 @@ class BlameJob(Job):
         else:
             path = self.path.strip('/')
 
-        filename = os.path.basename(self.path)
+        filename = pathlib.Path(self.path).name
         p = create_parser(repo.get_type(), self.path)
         out = self.BlameContentHandler()
         p.set_output_device(out)
         wid = repo.add_watch(BLAME, blame_line, p)
         try:
-            repo.blame(os.path.join(repo_uri, path), self.rev)
+            repo.blame(pathlib.Path().joinpath(repo_uri, path), self.rev)
         except RepositoryCommandError as e:
-            printerr("Command %s returned %d (%s)", (e.cmd, e.returncode, e.error))
+            printerr(f"Command {e.cmd} returned {e.returncode} ({e.error})")
         p.end()
 
         self.authors = out.get_authors()
 
-    def get_authors(self):
+    def get_authors(self) -> str:
         return self.authors
 
-    def get_file_id(self):
+    def get_file_id(self) -> int:
         return self.file_id
 
-    def get_commit_id(self):
+    def get_commit_id(self) -> int:
         return self.commit_id
 
 
@@ -162,7 +162,7 @@ class Blame(Extension):
         cursor.execute(statement(query, self.db.place_holder), (repoid,))
         return [(res[0], res[1]) for res in cursor.fetchall()]
 
-    def __get_authors(self, cursor):
+    def __get_authors(self, cursor) -> str:
         query = "select id, name from people"
         cursor.execute(statement(query, self.db.place_holder))
         self.authors = dict([(name, id) for id, name in cursor.fetchall()])
@@ -215,9 +215,9 @@ class Blame(Extension):
             read_cursor.execute(statement("SELECT id from repositories where uri = ?", db.place_holder), (repo_uri,))
             repoid = read_cursor.fetchone()[0]
         except NotImplementedError:
-            raise ExtensionRunError("Blame extension is not supported for %s repositories" % (repo.get_type()))
+            raise ExtensionRunError(f"Blame extension is not supported for {repo.get_type()} repositories" % ())
         except Exception as e:
-            raise ExtensionRunError("Error creating repository %s. Exception: %s" % (repo.get_uri(), str(e)))
+            raise ExtensionRunError(f"Error creating repository {repo.get_uri()}. Exception: { str(e)} ")
 
         try:
             self.__create_table(cnn)
@@ -263,10 +263,10 @@ class Blame(Extension):
                 rev = revision
 
             relative_path = fr.get_path(repo, path or repo.get_uri())
-            printdbg("Path for %d at %s -> %s", (file_id, rev, relative_path))
+            printdbg(f"Path for {file_id} at {rev} -> {relative_path}")
 
             if repo.get_type() == 'svn' and relative_path == 'tags':
-                printdbg("Skipping file %s", (relative_path,))
+                printdbg(f"Skipping file {relative_path}")
                 continue
 
             job = BlameJob(file_id, commit_id, relative_path, rev)
