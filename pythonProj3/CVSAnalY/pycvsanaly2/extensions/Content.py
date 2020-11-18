@@ -129,7 +129,7 @@ class ContentJob(Job):
                 io.close()
         return results
                 
-    def _get_file_contents(self):
+    def _get_file_contents(self) -> str:
             """Returns contents of the file, stripped of whitespace 
             at either end
             """
@@ -201,8 +201,8 @@ class Content(Extension):
             
             try:
                 cursor.execute("DROP TABLE content")
-            except Exception, e:
-                printerr("Couldn't drop content table because %s", (e,))
+            except Exception as e:
+                printerr(f"Couldn't drop content table because {e}")
             finally:
                 cursor.close()
 
