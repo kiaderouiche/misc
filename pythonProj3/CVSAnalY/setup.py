@@ -29,8 +29,12 @@ Installer
 @contact:      libresoft-tools-devel@lists.morfeo-project.org
 """
 
+import pathlib
 import os
 import sys
+
+from pycvsanaly2._config import PACKAGE, VERSION, AUTHOR, \
+            AUTHOR_EMAIL, DESCRIPTION
 
 from setuptools import setup
 
@@ -41,7 +45,7 @@ def generate_changelog():
 
     fd, filename = mkstemp(dir=os.getcwd())
 
-    print "Creating ChangeLog"
+    print ("Creating ChangeLog")
     cmd = [
         "git", "log", "-M", "-C", "--name-status", "--date=short", "--no-color"
     ]
@@ -53,7 +57,7 @@ def generate_changelog():
         buff = pipe.read(1024)
     os.close(fd)
 
-    os.rename(filename, "ChangeLog")
+    pathlib.Path(filename).rename("ChangeLog.md")
 
 # Check dependencies
 deps = ['repositoryhandler >= 0.3']
@@ -63,7 +67,6 @@ deps = ['repositoryhandler >= 0.3']
 if sys.argv[1] == 'sdist':
     generate_changelog()
 
-from pycvsanaly2._config import *
 
 setup(name=PACKAGE,
       version=VERSION,
@@ -74,4 +77,5 @@ setup(name=PACKAGE,
       url="http://projects.libresoft.es/projects/cvsanaly/wiki/",
       packages=['pycvsanaly2', 'pycvsanaly2.extensions'],
       data_files=[('share/man/man1', ['help/cvsanaly2.1'])],
-      scripts=["cvsanaly2"])
+      scripts=["cvsanaly2"]
+)

@@ -133,7 +133,7 @@ class Database(object):
             self.session.rollback()
             result = self.INSERT_ERROR_INTEGRITY_ERROR
         except DataError:
-            self.log.warning(u'DataError: {}'.format(msg))
+            self.log.warning(f'DataError: {msg}')
             result = self.INSERT_ERROR_DATA_ERROR
 
         return result
