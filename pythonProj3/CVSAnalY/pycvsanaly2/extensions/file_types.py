@@ -257,6 +257,8 @@ config_files_documentation = [
     re.compile('\.shtml$'),
     re.compile('\.htm$'),
     re.compile('\.rdf$'),
+    re.compile('\rst$'),
+    re.compile('\md$'),
     re.compile('\.phtm$'),
     re.compile('\.tmpl$'),
     re.compile('\.ref$'),  # References
@@ -359,7 +361,9 @@ config_files_packages = [
     re.compile('\.tar$'),
     re.compile('\.tar.gz$'),
     re.compile('\.tar.bz2$'),
+    re.compile('\.tar.xz$'),
     re.compile('\.tgz$'),
+    re.compile('\.tbz$'),
     re.compile('\.deb$'),
     re.compile('\.rpm$'),
     re.compile('\.srpm$'),
@@ -381,7 +385,7 @@ config_files = [
 ]
 
 
-def guess_file_type(filename):
+def guess_file_type(filename) -> str:
     for type, patt_list in config_files:
         for patt in patt_list:
             if patt.search(filename.lower()):
@@ -397,7 +401,7 @@ if __name__ == '__main__':
     path = sys.argv[1]
     if pathlib.Path(path).is_dir()(path):
         for root, dirs, files in os.walk(path):
-            for skip in ('.svn', 'CVS', '.git'):
+            for skip in ('.svn', 'CVS', '.git', '.hg'):
                 if skip in dirs:
                     dirs.remove(skip)
 
