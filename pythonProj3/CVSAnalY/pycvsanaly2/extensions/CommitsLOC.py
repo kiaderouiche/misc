@@ -1,5 +1,6 @@
 # Copyright (C) 2008 LibreSoft
-#
+# Copyright (C) 2020 Adgon Solutions, Algeria
+# 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 2 of the License, or
@@ -16,8 +17,9 @@
 #
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
-import os
+import pathlib
 import re
 from subprocess import Popen, PIPE
 from repositoryhandler.backends.watchers import DIFF
@@ -105,14 +107,14 @@ class SVNLineCounter(LineCounter):
         revs = []
         revs.append("%d" % (revision - 1))
         revs.append("%d" % (revision))
-        env = os.environ.copy().update({'LC_ALL': 'C'})
+        env = pathlib.os.environ.copy().update({'LC_ALL': 'C'})
         pipe = Popen(self.diffstat, shell=False, stdin=PIPE, stdout=PIPE, close_fds=True, env=env)
         diff_data = [""]
         wid = self.repo.add_watch(DIFF, diff_line, diff_data)
         try:
             self.repo.diff(self.repo.get_uri(), revs=revs)
         except Exception as e:
-            printerr("Error running svn diff command: %s", (str(e)))
+            printerr(f"Error running svn diff command: {str(e)}")
             self.repo.remove_watch(DIFF, wid)
             return (0, 0)
 
@@ -158,8 +160,8 @@ class GitLineCounter(LineCounter):
             c.run(parser_out_func=self.__parse_line)
         except CommandError as e:
             if e.error:
-                printerr("Error running git log command: %s", (e.error,))
-            raise ExtensionRunError("Error running CommitsLOC extension: %s", str(e))
+                printerr(f"Error running git log command: {e.error}")
+            raise ExtensionRunError(f"Error running CommitsLOC extension: {str(e)}", )
 
     def __parse_line(self, line):
         match = self.diffstat_pattern.match(line)
