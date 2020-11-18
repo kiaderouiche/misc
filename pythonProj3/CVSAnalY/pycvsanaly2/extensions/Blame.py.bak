@@ -21,8 +21,8 @@ from pycvsanaly2.Database import (SqliteDatabase, MysqlDatabase, TableAlreadyExi
 from pycvsanaly2.extensions import Extension, register_extension, ExtensionRunError
 from pycvsanaly2.profile import profiler_start, profiler_stop
 from pycvsanaly2.utils import printdbg, printerr, uri_to_filename
-from .FileRevs import FileRevs
-from .Jobs import JobPool, Job
+from FileRevs import FileRevs
+from Jobs import JobPool, Job
 from repositoryhandler.backends import RepositoryCommandError
 from repositoryhandler.backends.watchers import BLAME
 from Guilty.Parser import create_parser
@@ -142,7 +142,7 @@ class Blame(Extension):
                                "FOREIGN KEY (commit_id) REFERENCES scmlog(id)," +
                                "FOREIGN KEY (author_id) REFERENCES people(id)" +
                                ") CHARACTER SET=utf8")
-            except _mysql_exceptions.OperationalError as e:
+            except _mysql_exceptions.OperationalError, e:
                 if e.args[0] == 1050:
                     cursor.close()
                     raise TableAlreadyExists
@@ -213,7 +213,7 @@ class Blame(Extension):
             repoid = read_cursor.fetchone()[0]
         except NotImplementedError:
             raise ExtensionRunError("Blame extension is not supported for %s repositories" % (repo.get_type()))
-        except Exception as e:
+        except Exception, e:
             raise ExtensionRunError("Error creating repository %s. Exception: %s" % (repo.get_uri(), str(e)))
 
         try:
@@ -226,7 +226,7 @@ class Blame(Extension):
                 self.id_counter = id + 1
 
             cursor.close()
-        except Exception as e:
+        except Exception, e:
             raise ExtensionRunError(str(e))
 
         self.__get_authors(read_cursor)
