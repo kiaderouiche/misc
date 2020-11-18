@@ -561,20 +561,20 @@ class MetricsJob(Job):
             measures.ncomment = measures.lcomment = measures.lblank = -1
         profiler_stop("[CommentsBlank] Measuring %s @ %s", (checkout_path, rev), True)
 
-        profiler_start("[HalsteadComplexity] Measuring %s @ %s", (checkout_path, rev))
+        profiler_start(f"[HalsteadComplexity] Measuring {checkout_path} @ {rev}")
         try:
             measures.halstead_length, measures.halstead_vol, \
                 measures.halstead_level, measures.halstead_md = fm.get_HalsteadComplexity()
         except NotImplementedError:
             pass
         except ProgramNotFound as e:
-            printout('Program %s is not installed. Skipping halstead metric', (e.program, ))
+            printout(f'Program {e.program} is not installed. Skipping halstead metric')
         except Exception as e:
             printerr('Error running HalsteadComplexity for %s@%s. Exception: %s', (checkout_path, rev, str(e)))
             measures.halstead_length = measures.halstead_vol = measures.halstead_level = measures.halstead_md = -1
         profiler_stop("[HalsteadComplexity] Measuring %s @ %s", (checkout_path, rev), True)
 
-        profiler_start("[MccabeComplexity] Measuring %s @ %s", (checkout_path, rev))
+        profiler_start("[MccabeComplexity] Measuring {checkout_path} @ {rev}")
         try:
             measures.mccabe_sum, measures.mccabe_min, measures.mccabe_max, \
                 measures.mccabe_mean, measures.mccabe_median, \
@@ -582,7 +582,7 @@ class MetricsJob(Job):
         except NotImplementedError:
             pass
         except ProgramNotFound as e:
-            printout('Program %s is not installed. Skipping mccabe metric', (e.program, ))
+            printout(f'Program {e.program} is not installed. Skipping mccabe metric')
         except Exception as e:
             printerr('Error running MccabeComplexity for %s@%s. Exception: %s', (checkout_path, rev, str(e)))
             measures.mccabe_sum = measures.mccabe_min = measures.mccabe_max = \
@@ -597,7 +597,7 @@ class MetricsJob(Job):
         
         #skip this if self.path is None, this can happen in new versions
         if self.path is None:
-            printerr("No path for file %d in commit '%s'", (self.file_id, self.rev))
+            printerr(f"No path for file {self.file_id} in commit '{self.rev}'")
             return
         
         repo_type = repo.get_type()
