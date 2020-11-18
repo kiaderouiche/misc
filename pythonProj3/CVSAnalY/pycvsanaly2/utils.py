@@ -42,7 +42,7 @@ def to_utf8(string) ->str:
         return string
 
 
-def to_unicode(string):
+def to_unicode(string) -> str:
     """Converts a string type to an object of unicode type.
 
     Gets an string object as argument, and tries several
@@ -62,7 +62,7 @@ def to_unicode(string):
         encoded = False
         for encoding in ['ascii', 'utf-8', 'iso-8859-15']:
             try:
-                uni_string = unicode(string, encoding)
+                uni_string = str(string, encoding)
             except:
                 continue
             encoded = True
@@ -145,7 +145,7 @@ def cvsanaly_dot_dir():
     except KeyError:
         pass
 
-    dot_dir = os.path.join(os.environ.get('HOME'), '.cvsanaly2')
+    dot_dir = pathlib.Path().joinpath(pathlib.os.environ.get('HOME'), '.cvsanaly2')
     create_directory(dot_dir)
 
     _dirs['dot'] = dot_dir
@@ -159,7 +159,7 @@ def cvsanaly_cache_dir():
     except KeyError:
         pass
 
-    cache_dir = os.path.join(cvsanaly_dot_dir(), 'cache')
+    cache_dir = pathlib.Path().joinpath(cvsanaly_dot_dir(), 'cache')
     create_directory(cache_dir)
 
     _dirs['cache'] = cache_dir
