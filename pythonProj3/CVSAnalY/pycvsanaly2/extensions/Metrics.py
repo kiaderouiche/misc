@@ -24,6 +24,13 @@
 # versions of all the files stored in the control version system.
 #
 
+from xml.sax import handler as xmlhandler, make_parser
+from signal import SIGTERM
+import pathlib
+import re
+from tempfile import mkdtemp, NamedTemporaryFile
+
+
 from pycvsanaly2.Database import (SqliteDatabase, MysqlDatabase, TableAlreadyExists, statement)
 from pycvsanaly2.extensions import Extension, register_extension, ExtensionRunError
 from pycvsanaly2.Config import Config
@@ -33,13 +40,9 @@ from pycvsanaly2.profile import profiler_start, profiler_stop
 from pycvsanaly2.Command import Command, CommandError, CommandRunningError
 from repositoryhandler.backends import RepositoryCommandError
 from repositoryhandler.backends.watchers import CAT
-from tempfile import mkdtemp, NamedTemporaryFile
 from .FileRevs import FileRevs
 from .Jobs import JobPool, Job
-from xml.sax import handler as xmlhandler, make_parser
-from signal import SIGTERM
-import os
-import re
+
 
 
 class ProgramNotFound(Extension):
@@ -90,7 +93,7 @@ class FileMetrics:
         self.lang = lang
         self.sloc = sloc
 
-    def get_LOC(self):
+    def get_LOC(self) ->int:
         """Measures LOC using Python file functions"""
 
         fileobj = open(self.path, 'r')
@@ -99,7 +102,7 @@ class FileMetrics:
 
         return loc
 
-    def get_SLOCLang(self):
+    def get_SLOCLang(self) -> int:
         return self.sloc, self.lang
 
     def get_CommentsBlank(self):
@@ -162,13 +165,13 @@ class FileMetricsC(FileMetrics):
             outputtext = cmd.run()
         except CommandError as e:
             if e.error:
-                printerr('Error running kdsi: %s', (e.error,))
+                printerr(f'Error running kdsi: {e.error}')
             raise e
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
-                os.kill(pid, SIGTERM)
-            printerr('Error running kdsi: %s', (e.error,))
+                pathlib.os.kill(pid, SIGTERM)
+            printerr('Error running kdsi: {e.error}')
             raise e
         # Get rid of all the spaces and get a list
         output_values = [x for x in outputtext.split(' ') if '' != x]
@@ -192,13 +195,13 @@ class FileMetricsC(FileMetrics):
             outputtext = cmd.run()
         except CommandError as e:
             if e.error:
-                printerr('Error running halstead: %s', (e.error,))
+                printerr('Error running halstead: {e.error}')
             raise e
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
-                os.kill(pid, SIGTERM)
-            printerr('Error running halstead: %s', (e.error,))
+                pathlib.os.kill(pid, SIGTERM))
+            printerr('Error running halstead: {e.error}')
             raise e
 
         values = outputtext.split('\t')
@@ -328,13 +331,13 @@ class FileMetricsPython(FileMetrics):
             outputlines = cmd.run().split('\n')
         except CommandError as e:
             if e.error:
-                printerr('Error running pymetrics: %s', (e.error,))
+                printerr(f'Error running pymetrics: {e.error}')
             raise e
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
-            printerr('Error running pymetrics: %s', (e.error,))
+            printerr(f'Error running pymetrics: {e.error}')
             raise e
 
         mccabe_values = []
@@ -414,19 +417,19 @@ class FileMetricsCCCC(FileMetrics):
             cmd.run()
         except CommandError as e:
             if e.error:
-                printerr('Error running cccc: %s', (e.error,))
+                printerr(f'Error running cccc: {e.error}')
             remove_directory(tmpdir)
             raise e
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
-            printerr('Error running cccc: %s', (e.error,))
+            printerr(f'Error running cccc: {e.error}')
             remove_directory(tmpdir)
             raise e
 
         self.handler = FileMetricsCCCC.XMLMetricsHandler()
-        fd = open(os.path.join(tmpdir, 'cccc.xml'), 'r')
+        fd = open(pathlib.Path().joinpath(tmpdir, 'cccc.xml'), 'r')
 
         parser = make_parser()
         parser.setContentHandler(self.handler)
@@ -924,7 +927,7 @@ class Metrics(Extension):
             printdbg("Path for %d at %s -> %s", (file_id, rev, relative_path))
 
             if repo.get_type() == 'svn' and relative_path == 'tags':
-                printdbg("Skipping file %s", (relative_path,))
+                printdbg(f"Skipping file {relative_path}")
                 continue
 
             job = MetricsJob(id_counter, file_id, commit_id, relative_path, rev, failed)
