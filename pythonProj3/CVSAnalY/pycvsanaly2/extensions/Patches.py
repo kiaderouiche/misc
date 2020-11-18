@@ -17,11 +17,13 @@
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 
+from io import StringIO
+
 from repositoryhandler.backends.watchers import DIFF
-from pycvsanaly2.Database import (SqliteDatabase, MysqlDatabase, TableAlreadyExists, statement, ICursor)
+from pycvsanaly2.Database import SqliteDatabase, MysqlDatabase, TableAlreadyExists, statement, ICursor
 from pycvsanaly2.extensions import Extension, register_extension, ExtensionRunError
 from pycvsanaly2.utils import printerr, uri_to_filename
-from io import StringIO
+
 
 
 class DBPatch:

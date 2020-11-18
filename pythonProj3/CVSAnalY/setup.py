@@ -60,7 +60,7 @@ def generate_changelog():
     pathlib.Path(filename).rename("ChangeLog.md")
 
 # Check dependencies
-deps = ['repositoryhandler >= 0.3']
+deps = ['repositoryhandler >= 0.3', 'sqlite3']
 
 #pkg_check_modules (deps)
 
