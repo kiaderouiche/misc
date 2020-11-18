@@ -38,7 +38,7 @@ class Timer:
         self._start -= elapsed
         self._active = True
 
-    def elapsed(self)-> int:
+    def elapsed(self)-> float:
         if self._active:
             self._end = time.time()
 
@@ -51,25 +51,25 @@ if __name__ == '__main__':
     t = Timer()
     time.sleep(5)
     t.stop()
-    print ("Elapsed %f" % (t.elapsed()))
+    print ("Elapsed {}".format(t.elapsed()))
     print ()
 
     t.start()
     for i in range(10):
         time.sleep(2)
-        print ("Elapsed %f " % (t.elapsed()))
+        print ("Elapsed {}".format(t.elapsed()))
     print()
 
     for i in range(10):
         t.start()
         time.sleep(2)
-        print ("Elapsed %f " % (t.elapsed()))
+        print ("Elapsed {}".format(t.elapsed()))
     print()
 
     t.start()
     time.sleep(2)
     t.stop()
-    print ("Elapsed %f " % (t.elapsed()))
+    print ("Elapsed {}".format(t.elapsed()))
     t.resume()
     time.sleep(2)
-    print ("Elapsed %f " % (t.elapsed()))
+    print ("Elapsed {}".format(t.elapsed()))
