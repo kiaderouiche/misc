@@ -1,4 +1,5 @@
 # Copyright (C) 2009 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,6 +17,9 @@
 #
 # Authors :
 #       Carlos Garcia Campos  <carlosgc@gsyc.escet.urjc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
+
+import pathlib
 
 from pycvsanaly2.Database import (SqliteDatabase, MysqlDatabase, TableAlreadyExists, statement)
 from pycvsanaly2.extensions import Extension, register_extension, ExtensionRunError
@@ -27,7 +31,6 @@ from repositoryhandler.backends import RepositoryCommandError
 from repositoryhandler.backends.watchers import BLAME
 from Guilty.Parser import create_parser
 from Guilty.OutputDevs import OutputDevice
-import os
 
 
 class BlameJob(Job):

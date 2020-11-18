@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 #
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 if __name__ == '__main__':
     import sys
@@ -90,9 +92,9 @@ class FilePaths:
                 "and af.commit_id = ? " + \
                 "and af.type = 'V' " + \
                 "and f.repository_id = ?"
-        profiler_start("Getting new file names for commit %d", (commit_id,))
+        profiler_start(f"Getting new file names for commit {commit_id}")
         cursor.execute(statement(query, db.place_holder), (commit_id, repo_id))
-        profiler_stop("Getting new file names for commit %d", (commit_id,), True)
+        profiler_stop(f"Getting new file names for commit {commit_id}", True)
         rs = cursor.fetchmany()
         while rs:
             for id, file_name in rs:
@@ -148,11 +150,11 @@ class FilePaths:
 
         path = self.__build_path(file_id, adj)
 
-        profiler_stop("Getting path for file %d at commit %d", (file_id, commit_id), True)
+        profiler_stop(f"Getting path for file {file_id} at commit {commit_id}", True)
 
         return path
 
-    def get_filename(self, file_id):
+    def get_filename(self, file_id) ->str:
         adj = self.__dict__['adj']
         assert adj is not None, "Matrix no updated"
         try:
@@ -160,7 +162,7 @@ class FilePaths:
         except KeyError:
             return None
 
-    def get_commit_id(self):
+    def get_commit_id(self) ->str:
         return self.__dict__['rev']
 
 

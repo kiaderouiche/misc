@@ -272,7 +272,7 @@ class Content(Extension):
 
         connection.commit()
 
-    def __process_finished_jobs(self, job_pool, connection, db):
+    def __process_finished_jobs(self, job_pool, connection, db) -> str:
         if isinstance(self.db, SqliteDatabase):
             from sqlite3 import IntegrityError
         elif isinstance(self.db, MysqlDatabase):
@@ -302,8 +302,7 @@ class Content(Extension):
                     pass
                 else:
                     printerr(
-                        'Error while inserting content for file %d @ commit %d'
-                        % (finished_job.file_id, finished_job.commit_id))
+                        f'Error while inserting content for file {finished_job.file_id} @ commit {finished_job.commit_id}')
                     raise
 
             processed_jobs += 1
