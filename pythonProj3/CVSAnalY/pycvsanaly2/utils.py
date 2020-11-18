@@ -169,7 +169,7 @@ def cvsanaly_cache_dir():
 
 def create_directory(path):
     try:
-        pathlib.Path(path).mkdir(0700)
+        pathlib.Path(path).mkdir('0700')
     except OSError as e:
         if e.errno == errno.EEXIST:
             if not pathlib.Path(path).is_dir():
