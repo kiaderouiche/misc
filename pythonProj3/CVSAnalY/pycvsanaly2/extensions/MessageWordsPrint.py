@@ -63,7 +63,7 @@ class MessageWordsPrint(Extension):
 
         self.theCommonWords = CommonWords()
 
-    def _get_repo_id(self, repo, uri, cursor):
+    def _get_repo_id(self, repo, uri, cursor) -> int:
         """Get repository id from repositories table"""
 
         path = uri_to_filename(uri)
@@ -75,7 +75,7 @@ class MessageWordsPrint(Extension):
                        repo_uri)
         return (cursor.fetchone()[0])
 
-    def _wordToExclude(self, word):
+    def _wordToExclude(self, word) -> bool:
         """Is this a word to exclude?"""
 
         if "@" in word or "/" in word or "_" in word:
