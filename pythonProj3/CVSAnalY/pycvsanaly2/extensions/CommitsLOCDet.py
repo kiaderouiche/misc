@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 Adgon Solutions
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,6 +18,7 @@
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 #       Jesus M. Gonzalez-Barahona <jgb@gsyc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 """Computes lines added, lines removed for every file in every commit.
 
@@ -338,17 +340,17 @@ class GitLineCounter(LineCounter):
                 self.removed += int(file_removed)
                 self.lines[self.commit] = (self.added, self.removed)
 
-    def get_lines_for_commit(self, commit):
+    def get_lines_for_commit(self, commit) -> str:
         """Get lines added, removed for a given commit."""
 
         return self.lines.get(commit, (0, 0))
 
-    def get_paths_for_commit(self, commit):
+    def get_paths_for_commit(self, commit) -> str:
         """Get lines added, removed for a given commit."""
 
         return self.paths.get(commit, [])
 
-    def get_lines_for_commit_file(self, commit, path):
+    def get_lines_for_commit_file(self, commit, path) ->int:
         """Get lines added, removed for a given commit & file path pair."""
 
         return self.lines_files.get(commit + ',' + path, (0, 0))
@@ -359,7 +361,7 @@ _counters = {
 }
 
 
-def create_line_counter_for_repository(repo, uri):
+def create_line_counter_for_repository(repo, uri)-> int:
     """Creates and returns a counter for the kind of repository specified.
 
     Raises exception if repository is not supported.
@@ -375,7 +377,7 @@ def create_line_counter_for_repository(repo, uri):
 
 
 class CommitsLOCDet(Extension):
-    def _get_repo_id(self, repo, uri, cursor):
+    def _get_repo_id(self, repo, uri, cursor) -> int:
         """Get repository id from repositories table"""
 
         path = uri_to_filename(uri)
