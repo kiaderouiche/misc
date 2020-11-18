@@ -395,16 +395,16 @@ if __name__ == '__main__':
     import pathlib
 
     path = sys.argv[1]
-    if pathlib.path(path).is_dir()(path):
+    if pathlib.Path(path).is_dir()(path):
         for root, dirs, files in os.walk(path):
             for skip in ('.svn', 'CVS', '.git'):
                 if skip in dirs:
                     dirs.remove(skip)
 
             for file in files:
-                print ("{}: {}" % (
-                    os.path.join(root, file),
+                print ("{}: {}".format(
+                    pathlib.Path().joinpath(root, file),
                     guess_file_type(file))
                 )
     else:
-        print guess_file_type(path)
+        print (guess_file_type(path))
