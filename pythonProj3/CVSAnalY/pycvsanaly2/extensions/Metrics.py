@@ -200,7 +200,7 @@ class FileMetricsC(FileMetrics):
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
-                pathlib.os.kill(pid, SIGTERM))
+                pathlib.os.kill(pid, SIGTERM)
             printerr('Error running halstead: {e.error}')
             raise e
 
@@ -245,13 +245,13 @@ class FileMetricsC(FileMetrics):
             outputlines = cmd.run().split('\n')
         except CommandError as e:
             if e.error:
-                printerr('Error running mccabe: %s', (e.error,))
+                printerr(f'Error running mccabe: {e.error}')
             raise e
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
-                os.kill(pid, SIGTERM)
-            printerr('Error running mccabe: %s', (e.error,))
+                pathlib.os.kill(pid, SIGTERM)
+            printerr(f'Error running mccabe: {e.error}')
             raise e
 
         mccabe_values = []
@@ -310,7 +310,7 @@ class FileMetricsPython(FileMetrics):
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
-                os.kill(pid, SIGTERM)
+                pathlib.os.kill(pid, SIGTERM)
             printerr(f'Error running pymetrics: {e.error}')
             raise e
 
