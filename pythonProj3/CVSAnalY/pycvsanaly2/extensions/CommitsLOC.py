@@ -182,18 +182,62 @@ class GitLineCounter(LineCounter):
             if len(parts) > 0:
                 self.rev = parts[0]
 
-    def get_lines_for_revision(self, revision):
+    def get_lines_for_revision(self, revision) -> int:
         return self.lines.get(revision, (0, 0))
 
+#Revisited Code
+class HgLineCounter(LineCounter):
+    diffstat_pattern = re.compile("^ \d+ files? changed(, (\d+) insertions?\(\+\))?(, (\d+) deletions?\(\-\))?$")
 
+    def __init__(self, repo, uri):
+        LineCounter.__init__(self, repo, uri)
+
+        self.hg = find_program('hg')
+        if self.hg is None:
+            raise ExtensionRunError("Error running CommitsLOC extension: " +
+                                    "required git command cannot be found in path")
+
+        self.lines = {}
+
+        cmd = [self.hg, 'log', '--all', '--topo-order', '--shortstat', '--pretty=oneline', 'origin']
+        c = Command(cmd, uri)
+        try:
+            c.run(parser_out_func=self.__parse_line)
+        except CommandError as e:
+            if e.error:
+                printerr(f"Error running git log command: {e.error}")
+            raise ExtensionRunError(f"Error running CommitsLOC extension: {str(e)}", )
+
+    def __parse_line(self, line):
+        match = self.diffstat_pattern.match(line)
+        if match:
+            added = removed = 0
+            if match.group(1) is not None:
+                added = int(match.group(2))
+
+            if match.group(3) is not None:
+                removed = int(match.group(4))
+
+            self.lines[self.rev] = (added, removed)
+        else:
+            # We only have two kinds of lines:
+            # if it's not a diffstat, it's a rev line
+            # (except if it is an empty line, in which case it is just ignored)
+            parts = line.split(None, 1)
+            if len(parts) > 0:
+                self.rev = parts[0]
+
+    def get_lines_for_revision(self, revision) -> int:
+        return self.lines.get(revision, (0, 0))
 _counters = {
     'cvs': CVSLineCounter,
     'svn': SVNLineCounter,
-    'git': GitLineCounter
+    'git': GitLineCounter,
+    'hg': HgLineCounter
 }
 
 
-def create_line_counter_for_repository(repo, uri):
+def create_line_counter_for_repository(repo, uri) -> int:
     try:
         counter = _counters[repo.get_type()]
     except KeyError:
