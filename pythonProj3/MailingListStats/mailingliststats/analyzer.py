@@ -44,7 +44,7 @@ from pymlstats.strictmbox import strict_mbox
 from pymlstats.utils import EMAIL_OBFUSCATION_PATTERNS
 
 
-def to_unicode(string, charset='latin-1')-> str:
+def to_unicode(string, charset='latin-1')-> str: #Revisted code
     """Converts a string type to an object of unicode type.
 
     Gets an string object as argument, and tries several
@@ -268,7 +268,7 @@ class MailArchiveAnalyzer:
                           for text, text_charset in decoded_s])
         except:
             print(">> {} TypeError: msg: {}.".format(sys.stderr, msg))
-            print >> sys.stderr, 'WARNING: charset: %s' % charset,
+            print(f'WARNING: charset: {charset}', file=sys.stderr)
             print(">> {} TypeError: msg: {}.".format(sys.stderr, s))
             print >> sys.stderr, '"%s"' % s
             r = s
