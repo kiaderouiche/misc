@@ -1,4 +1,5 @@
 # Copyright(C) 2010 University of California, Santa Cruz
+# Copyright(C) 2020 Adgon Solution, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,8 +18,10 @@
 # Authors :
 #       Chris Lewis <cflewis@soe.ucsc.edu>
 #       Zhongpeng Lin <linzhp@soe.ucsc.edu>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
-from Jobs import JobPool, Job
+import pathlib
+from .Jobs import JobPool, Job
 from io import BytesIO
 import traceback
 
@@ -28,7 +31,7 @@ from pycvsanaly2.extensions import Extension, register_extension, \
 from pycvsanaly2.Database import SqliteDatabase, MysqlDatabase, statement
 from pycvsanaly2.utils import printdbg, printerr, uri_to_filename, to_unicode
 from pycvsanaly2.profile import profiler_start, profiler_stop
-from FileRevs import FileRevs
+from .FileRevs import FileRevs
 from repositoryhandler.backends import RepositoryCommandError
 from repositoryhandler.backends.watchers import CAT, SIZE
 
@@ -62,7 +65,7 @@ class ContentJob(Job):
             self.path = self.path.strip('/')
 
         suffix = ''
-        filename = os.path.basename(self.path)
+        filename = pathlib.Path(self.path).name
         ext_ptr = filename.rfind('.')
         if ext_ptr != -1:
             suffix = filename[ext_ptr:]
@@ -97,7 +100,7 @@ class ContentJob(Job):
         # Try downloading the file revision
         while not done and not failed:
             try:
-                repo_func(os.path.join(self.repo_uri, self.path), self.rev)
+                repo_func(pathlib.Path().joinpath(self.repo_uri, self.path), self.rev)
                 done = True
             except RepositoryCommandError as e:
                 if retries > 0:
@@ -123,8 +126,7 @@ class ContentJob(Job):
             try:
                 results = io.getvalue()
             except Exception as e:
-                printerr(f"Error getting contents." +
-                         "Exception: {str(e)}")
+                printerr(f"Error getting contents. Exception: {str(e)}")
             finally:
                 io.close()
         return results
@@ -337,7 +339,7 @@ class Content(Extension):
             raise ExtensionRunError(
                 "Content extension is not supported for %s repos" %
                 (repo.get_type()))
-        except Exception, e:
+        except Exception as e:
             raise ExtensionRunError(
                 "Error creating repository %s. Exception: %s" %
                 (repo.get_uri(), str(e)))
@@ -390,9 +392,8 @@ class Content(Extension):
 
             try:
                 relative_path = fr.get_path(repo, path or repo.get_uri())
-            except TypeError as e:
-                printerr("No path found for file %d at commit %d", 
-                         (file_id, commit_id))
+            except TypeError :
+                printerr(f"No path found for file {file_id} at commit {commit_id}")
                 continue
             if composed:
                 rev = revision.split("|")[0]
