@@ -57,6 +57,8 @@ config_files_code = [
     re.compile('\.pm$'),  # Perl
     re.compile('\.pod$'),  # Perl
     re.compile('\.perl$'),  # Perl
+    re.compile('\.go$'),  # Golang
+    re.compile('\.hs$'),  # Haskell
     re.compile('\.cgi$'),  # CGI
     re.compile('\.php$'),  # PHP
     re.compile('\.php3$'),  # PHP
@@ -184,6 +186,7 @@ config_files_devel_doc = [
     re.compile('versions?$'),
     re.compile('mappings$'),
     re.compile('tips$'),
+    re.compile('news$'),
     re.compile('ideas?$'),
     re.compile('spec$'),
     re.compile('compiling$'),
@@ -211,11 +214,14 @@ config_files_building = [
     re.compile('autogen\.sh$'),
     re.compile('config$'),
     re.compile('conf$'),
+    re.compile('cmakelistxts.txt$'),
+    re.compile('gitignore$'),
     re.compile('cvsignore$'),
     re.compile('\.cfg$'),
     re.compile('\.m4$'),
     re.compile('\.mk$'),
     re.compile('\.mak$'),
+    re.compile('\.toml$'),
     re.compile('\.make$'),
     re.compile('\.mbx$'),
     re.compile('\.protocol$'),
@@ -256,6 +262,7 @@ config_files_documentation = [
     re.compile('\.phtml$'),
     re.compile('\.shtml$'),
     re.compile('\.htm$'),
+    re.compile('\.json$'),
     re.compile('\.rdf$'),
     re.compile('\rst$'),
     re.compile('\md$'),
