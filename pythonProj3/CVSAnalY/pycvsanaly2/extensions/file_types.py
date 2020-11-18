@@ -1,5 +1,6 @@
 # -*- coding: iso-8859-1 -*-
 # Copyright (C) 2006 Libresoft
+# Copyright (C) 2020 Adgon Solutions
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 #
 # Authors : Gregorio Robles <grex@gsyc.escet.urjc.es>
+#           K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 """
 This modules contains configuration parameters regarding filetypes
@@ -390,10 +392,10 @@ def guess_file_type(filename):
 
 if __name__ == '__main__':
     import sys
-    import os
+    import pathlib
 
     path = sys.argv[1]
-    if os.path.isdir(path):
+    if pathlib.path(path).is_dir()(path):
         for root, dirs, files in os.walk(path):
             for skip in ('.svn', 'CVS', '.git'):
                 if skip in dirs:
