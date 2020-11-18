@@ -484,7 +484,7 @@ def create_file_metrics(path):
     lang = 'unknown'
 
     if sloccount is not None:
-        profiler_start("Running sloccount %s", (path,))
+        profiler_start(f"Running sloccount {path}")
         tmpdir = mkdtemp()
         scmd = [sloccount, '--wide', '--details', '--datadir', tmpdir, path]
         cmd = Command(scmd, env={'LC_ALL': 'C'})
@@ -614,7 +614,7 @@ class MetricsJob(Job):
             path = self.path.strip('/')
 
         suffix = ''
-        filename = os.path.basename(self.path)
+        filename = pathlib.Path(self.path).name
         ext_ptr = filename.rfind('.')
         if ext_ptr != -1:
             suffix = filename[ext_ptr:]
@@ -631,7 +631,7 @@ class MetricsJob(Job):
         failed = False
         while not done and not failed:
             try:
-                repo.cat(os.path.join(repo_uri, path), self.rev)
+                repo.cat(pathlib.Path().joinpath(repo_uri, path), self.rev)
                 done = True
             except RepositoryCommandError as e:
                 if retries > 0:
@@ -644,7 +644,7 @@ class MetricsJob(Job):
                              (self.path, self.rev, e.cmd, e.returncode, e.error))
             except Exception as e:
                 failed = True
-                printerr("Error obtaining %s@%s. Exception: %s", (self.path, self.rev, str(e)))
+                printerr(f"Error obtaining {self.path}@{self.rev}. Exception: {str(e)}")
 
         repo.remove_watch(CAT, wid)
         fd.file.close()
@@ -656,21 +656,21 @@ class MetricsJob(Job):
                 fm = create_file_metrics(fd.name)
                 self.__measure_file(fm, self.measures, fd.name, self.rev)
             except Exception as e:
-                printerr("Error creating FileMetrics for %s@%s. Exception: %s", (fd.name, self.rev, str(e)))
+                printerr(f"Error creating FileMetrics for {fd.name}@{self.rev}. Exception: {str(e)}")
                 self.measures.set_error()
 
         fd.close()
 
-    def get_id(self):
+    def get_id(self) -> int:
         return self.id_counter
 
-    def get_measures(self):
+    def get_measures(self) ->int:
         return self.measures
 
-    def get_file_id(self):
+    def get_file_id(self) -> int:
         return self.file_id
 
-    def get_commit_id(self):
+    def get_commit_id(self) ->int:
         return self.commit_id
 
     def is_failed(self):
