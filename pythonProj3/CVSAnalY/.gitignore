@@ -1,0 +1,6 @@
+*~
+*.pyc
+.idea
+MANIFEST
+dist/
+config

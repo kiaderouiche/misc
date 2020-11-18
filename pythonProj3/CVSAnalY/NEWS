@@ -1,0 +1,291 @@
+================
+cvsanaly   2.1.0
+================
+
+This is the CVSAnalY which bring together a lot of commits done during
+2009, 2010 and 2011.
+
+Bug fixes:
+
+    * Fix --version command line option
+    * [metrics] Fix file extension extraction from paths
+    * [metrics] Fix path building in cvs when module is '.'
+    * Encode strings to utf-8 before writing to stdout/stderr
+    * Fix prefix branch for paths in multi-paths actions. In SVN it's
+    possible to copy/move/replace a path from one branch into
+    another. In this case the action branch is different from the
+    branch of the second path. This usually happens when creating a
+    branch:   A /branches/foo (from /trunk: 1234)
+    * Remove leading / from path before querying the cache.
+    For repositories like git where paths don't start with / we have to
+    remove the leading / from the built path before inserting in into
+    the cache, but also before querying the cache
+    * Fix compatibility in SQL statement LIMIT.
+    The previous declaration of the LIMIT statement in the class
+    ICursor is incompatible with Postgresql.  However, both SQLite
+    and MySQL supports the statement LIMIT ... OFFSET which also
+    support Postgresql.
+    * Fix SQL portability issue in view action_files.
+    The syntax used when the view action_files is created is not
+    compatible with Postgresql, which requires the clause 'AS' when
+    an alias is defined.  The clause 'AS' is optional in MySQL and
+    SQLite. Fixes bug #28.
+    * Add conditional use of args when executing a query.
+    SQLite cursor's does not handle extra parameters in a query that
+    does not have paraments.  Instead of passing None, it should not
+    pass any argument at all.  Fix Bug #30.
+    * [git] Fix a crash when there's a commit in a svn tag. Fixes #75
+    * [cvs] Remove additional trailing \n added to commit messages.
+    Problem spotted by David Gray.
+    * Fixes incorrect licence header in most of the files. Fixes #240
+    * [extensions] Missing self before class attribute. Fixes #248
+
+New features:
+
+    * Add a flag command line option to ignore errors in metrics
+    extension
+    * Add ICursor class to split up queries.
+    The result of a query is always stored in memory, which means that
+    queries that return a large amount of data might fill up the
+    memory.
+    ICursor is a class that uses a real cursor emulating the execute +
+    fetchmany API, but splitting up the query by using limit, so that
+    the query is executed with different limit values everytime a
+    fetchmany is required.
+    * [extensions] Add Blame extension.
+    It adds a new table with information about the amount of lines
+    owned by every author of every file for every revision
+    * [extensions] Add Patches extension to save diffs of changes.
+    It adds a new table to store the patch of every commit
+    * Add a configuration sample file. Fixes bug #27
+
+Performance fixes and improvements:
+
+    * Do not save caches to disk on every database commit since it's a
+    very heavy operation, it is done only once at the end of the
+    parsing process
+    * Paths in different branches are now considered as different
+    files. That was obvious with SVN because branches are directories,
+    but in CVS and Git exactly the same path can be in different
+    branches.
+    * Use cat instead of checkout/update to get the contents of files
+    in metrics extension. Multiple cat commands can run in parallel
+    which improves performance quite a lot.
+    * Proccess finished jobs every 100 jobs to make sure there are jobs
+    in the done queue and removing the timeout the first time
+    job_pool.get_next_done is called to make sure we always get a job.
+    * Update the adjacency matrix sequentially instead of re-create it
+    for every revision. It drastically improves the performance of the
+    Metrics extension
+    * Add debug messages to git parser
+    * [git] Rework git parser to save memory with large repos
+    * [metrics] Remove unnecessary code
+    * Add get_filename() to FilePaths to get just the file name of a
+    given file_id
+    * Detect and ignore empty branches in git
+    * [git] Ignore commits done on svn tags directory. This is a
+    workaround for a bug in the GNOME Git migration
+    * DBContentHandler.py refactored
+    * Do not call DBContentHandler methods until proxy has finished.
+    DBContentHandler creates a database connection in begin() and
+    keeps it opened until proxy finishes. For repos with a very long
+    history it might take a long time until proxy finishes and mysql
+    resets the connection of the DBContentHandler because of
+    inactivity timeout.
+    * Improved Debian files
+
+Documentation:
+
+    * Rename ChangeLog to ChangeLog.pre-git and autogenerate it
+    * Improved README file
+
+Thanks to all contributors:
+    Santiago Dueñas
+    Jesus M. Gonzalez-Barahona
+    Carlos Garcia Campos
+    Germán Póo-Caamaño
+    Juan Francisco Gato Luis
+    David Gray
+    Luis Cañas Díaz
+
+================
+cvsanaly   2.0.0
+================
+
+This is the final CVSAnalY 2.0 release.
+
+Bug fixes:
+
+    * Include man page and other documentation files in the dist
+      tarball. (Thanks to Víctor Llorens Vilella for reporting)
+
+Documentation:
+
+    * First version of the user manual
+
+================
+cvsanaly 1.99.91
+================
+
+This the last beta release of cvsanaly2. Next releases (release
+candidates and final release) will only contain bug fixes and
+documentation updates.
+
+Database Schema Changes:
+
+    * commit_id has been removed from the file_types table.
+    * A new view (action_files) has been added to be able to match the
+      file_id associated to the action independently of the action
+      type. This is needed because in a replace action might involve 3
+      files: the file being replaced, the new file replacing the
+      old one and the file from which the replacement is done. In
+      these cases the new file is not stored in the actions table, but
+      in the to_id field of file_copies table. This view is almost a
+      copy of the actions table but the file_id will be taken from
+      file_copies for replace actions. 
+
+New Features:
+
+    * Add a command line option (-n, --no-parse) to be able to skip
+      the parsing process when used in conjunction with --extensions
+    * Add git support in Metrics extension
+    * Use a persistent cache on disk to store the caches used in
+      DBContentHandler. This makes running CVSAnalY incrementally
+      finally work
+    * Store -1 values in the database instead of NULL when the file
+      failed to be measured, so that it can be tried again in a
+      another CVSAnalY execution. NULL values are now reserved for the
+      files that are not supported.
+    * Try again up to 3 times when a checkout/update fails, just in
+      case it's just a short temporary network problem, in Metrics
+      extension
+    * Use the Command.py module in Metrics extension which provides
+      better error handling
+    * Instead of a single config file a directory is used now to store
+      the config file and the state of the caches used in
+      DBContentHandler needed to incrmentally run CVSAnalY. The old
+      configuration is automatically migrated. 
+    * Subsets of repositories can be analyzed and treated as
+      individual repositories. Specially useful to analyze SVN
+      repositorires with 'modules'
+
+Performance Fixes and Improvements:
+
+    * All queries have been reviewed and optimized
+    * CommitsLOC extension has been reworked, so that for CVS and Git
+      repositories we extract the information from the log command
+      instead of running diffs which drastically improves the
+      performance. 
+    * Do not run executemany if we don't have any data to insert in
+      FileTypes and CommitsLOC extensions
+    * Do not find te same program in PATH more than once in Metrics
+      extension
+    * Split the temp_log query into several queries to save memory
+    * Use a maximum size in queues, blocking on put() when the queue
+      is full, in order to save memory
+
+Documentation:
+
+    * Add documentation in texi format. Not finished yet.
+    * Update the manpage
+
+Bug Fixes:
+
+    * Remove the tempdir used in Metrics extension when the extension
+      is aborted 
+    * Do not use deprecated python stuff
+    * Fix infinite loop in DBContentHandler when a path has been
+      renamed several times to the same name
+    * Do not crash when the Metrics extension doesn't support the
+      repository type, raise an exception instead. 
+    * Fix a crash with repositories where paths don't start with '/' 
+    * Fix the main queries used in FileTypes and Metrics extensions by
+      using the new action_files view to make sure we always get the
+      right file_id.
+    * Fix incosistency issues between the cache used in
+      DBContentandler and the database
+    * Several fixes in the SVN parser.
+
+================
+cvsanaly 1.99.90
+================
+
+This is the first relase of cvsanaly2 (2.0.0-beta1), a complete rework
+of CVSAnalY. 
+
+New Features:
+
+    * Support for MySQL and SQLite, althought MySQL is the recommended
+      one (and default option) because it gives better
+      performance. SQLite is recommended for debuging or for small
+      projects. 
+    * Improved file handling. The whole history is stored in the
+      repository so that the files tree can be rebuilt for any
+      given revision. It's possible to get the path of any file at any
+      given revision even if it (or any of its parents) has been moved
+      or renamed.
+    * Committer and Author fields for systems like git and bzr that
+      differenciate between them.
+    * Option to save the logfile into a local path while parsing.
+    * Tags and branches support.
+    * Additional information not contained in the repository log can
+      be optionally added to the database by using extensions. At the
+      moment there are three extensions available: FileTypes,
+      CommitsLOC and Metrics.
+    * Multiple repositories can be analyzed using a single database.
+    * New database design which fits much better with all source code
+      management systems.
+    * Configuration file support.
+    * New code design, more efficient and extensible.
+    * Better performance, it's quite faster performing the whole
+      analysis proccess.
+    * New and improved log parsers with support for CVS, SVN and
+      Git. There's also a preliminary Bazaar support.
+
+Thanks to all contributors:
+
+    Santiago Dueñas
+    Israel Herraiz
+    Luis Cañas
+
+==============
+cvsanaly 1.1.0
+==============
+
+New features and improvements:
+
+    * Rework command line options (keeping backward compatibility)
+      (#284, #288, Carlos Garcia Campos)
+
+Bug Fixes:
+
+    * Do not identify SVN logfiles that contain CVS-like strings as
+      CVS (Israel Herraiz)
+    * Fix handling of removed files in CVS repos (Israel Herraiz)
+    * Fix several data inconsistencies in database (#268, Israel Herraiz)
+    * Install man page using python distutils (Israel Herraiz)
+    * Create repository objects based on logfile instead of checkout
+      dir when a logfile is provided (#247, Carlos Garcia Campos)
+
+==============
+cvsanaly 1.0.1
+==============
+
+New plugins:
+
+    * Generations plugin written by Jesus M. Gonzalez-Barahona
+
+Bug Fixes:
+
+    * Create and fill database when it doesn't exist before running 
+      a plugin. Running cvsanaly twice is no longer needed (Carlos Garcia Campos)
+    * Generate evolution graphics in graphs plugin (Carlos Garcia Campos)
+    * Rework plugins system. Support for plugins specific command 
+      line options (Carlos Garcia Campos)
+    * Look for cvs/svn binaries in PATH instead of using /usr/bin. 
+      Option --path has been removed (Carlos Garcia Campos)
+
+Thanks:
+
+    Israel Herraiz
+
