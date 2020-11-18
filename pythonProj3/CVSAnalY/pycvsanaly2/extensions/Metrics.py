@@ -206,7 +206,7 @@ class FileMetricsC(FileMetrics):
 
         values = outputtext.split('\t')
 
-        filename = values[0]
+        #filename = values[0]
         try:
             halstead_length = int(values[1])
         except:
@@ -336,7 +336,7 @@ class FileMetricsPython(FileMetrics):
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
-                os.kill(pid, SIGTERM)
+                pathlib.os.kill(pid, SIGTERM)
             printerr(f'Error running pymetrics: {e.error}')
             raise e
 
@@ -423,7 +423,7 @@ class FileMetricsCCCC(FileMetrics):
         except CommandRunningError as e:
             pid = cmd.get_pid()
             if pid:
-                os.kill(pid, SIGTERM)
+               pathlib.os.kill(pid, SIGTERM)
             printerr(f'Error running cccc: {e.error}')
             remove_directory(tmpdir)
             raise e
@@ -495,15 +495,15 @@ def create_file_metrics(path):
             profiler_stop("Running sloccount %s", (path,), True)
             remove_directory(tmpdir)
             if e.error:
-                printerr('Error running sloccount: %s', (e.error,))
+                printerr(f'Error running sloccount: {e.error}')
             raise e
         except CommandRunningError as e:
             profiler_stop("Running sloccount %s", (path,), True)
             remove_directory(tmpdir)
             pid = cmd.get_pid()
             if pid:
-                os.kill(pid, SIGTERM)
-            printerr('Error running sloccount: %s', (e.error,))
+                pathlib.os.kill(pid, SIGTERM)
+            printerr(f'Error running sloccount: {e.error}')
             raise e
 
         for l in outputlines:
