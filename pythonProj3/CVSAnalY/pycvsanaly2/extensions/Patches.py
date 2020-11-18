@@ -1,4 +1,5 @@
 # Copyright (C) 2009 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 #
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 from io import StringIO
 
@@ -86,7 +88,7 @@ class Patches(Extension):
         cnn.commit()
         cursor.close()
 
-    def __get_patches_for_repository(self, repo_id, cursor):
+    def __get_patches_for_repository(self, repo_id, cursor) -> str:
         query = "SELECT p.commit_id from patches p, scmlog s " + \
                 "WHERE p.commit_id = s.id and repository_id = ?"
         cursor.execute(statement(query, self.db.place_holder), (repo_id,))

@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,6 +18,7 @@
 # Authors :
 #       Israel Herraiz <herraiz@gsyc.escet.urjc.es>
 #       Carlos Garcia Campos  <carlosgc@gsyc.escet.urjc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 # Description
 # -----------

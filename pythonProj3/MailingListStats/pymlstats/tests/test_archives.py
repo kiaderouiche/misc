@@ -17,6 +17,7 @@
 # MA 02111-1301, USA.
 #
 
+import pathlib
 import unittest
 
 
@@ -38,7 +39,7 @@ class MailingListTest(unittest.TestCase):
         expected = {
             'location': 'http://mlstats.org/pipermail/mlstats-list',
             'alias': 'mlstats-list',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': False,
             'is_remote': True,
         }
@@ -59,7 +60,7 @@ class MailingListTest(unittest.TestCase):
         expected = {
             'location': 'http://mlstats.org/pipermail/mlstats-list',
             'alias': 'mlstats-list',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': False,
             'is_remote': True,
         }
@@ -80,7 +81,7 @@ class MailingListTest(unittest.TestCase):
         expected = {
             'location': 'http://mlstats.org',
             'alias': 'mlstats.org',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': False,
             'is_remote': True,
         }
@@ -101,7 +102,7 @@ class MailingListTest(unittest.TestCase):
         expected = {
             'location': 'http://mlstats.org',
             'alias': 'mlstats.org',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': False,
             'is_remote': True,
         }
@@ -122,7 +123,7 @@ class MailingListTest(unittest.TestCase):
         expected = {
             'location': '/mlstats.org/pipermail/mlstats-list',
             'alias': 'mlstats-list',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': True,
             'is_remote': False,
         }
@@ -143,7 +144,7 @@ class MailingListTest(unittest.TestCase):
         expected = {
             'location': '/mlstats.org/pipermail/mlstats-list',
             'alias': 'mlstats-list',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': True,
             'is_remote': False,
         }
@@ -159,14 +160,14 @@ class MailingListTest(unittest.TestCase):
 
     def test_mailing_list_6(self):
         '''Local directory in .mlstats with no trailing slash'''
-        base = os.path.sep.join([COMPRESSED_DIR,
+        base = pathlib.os.sep.join([COMPRESSED_DIR,
                                 'mlstats.org/pipermail/mlstats-list'])
-        target = base.lstrip(os.path.sep)
+        target = base.lstrip(pathlib.os.sep)
         ml = MailingList(base)
         expected = {
-            'location': base.rstrip(os.path.sep),
+            'location': base.rstrip(pathlib.os.sep),
             'alias': 'mlstats-list',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': True,
             'is_remote': False,
         }
@@ -182,14 +183,14 @@ class MailingListTest(unittest.TestCase):
 
     def test_mailing_list_7(self):
         '''Local directory in .mlstats with trailing slash'''
-        base = os.path.sep.join([COMPRESSED_DIR,
+        base = pathlib.os.sep.join([COMPRESSED_DIR,
                                 'mlstats.org/pipermail/mlstats-list/'])
         ml = MailingList(base)
-        target = base.strip(os.path.sep)
+        target = base.strip(pathlib.os.sep)
         expected = {
-            'location': base.rstrip(os.path.sep),
+            'location': base.rstrip(pathlib.os.sep),
             'alias': 'mlstats-list',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': True,
             'is_remote': False,
         }
@@ -206,12 +207,12 @@ class MailingListTest(unittest.TestCase):
     def test_mailing_list_8(self):
         '''Local URL (file://) with no trailing slash'''
         base = 'file:///mlstats.org/pipermail/mlstats-list'
-        target = '/mlstats.org/pipermail/mlstats-list'.lstrip(os.path.sep)
+        target = '/mlstats.org/pipermail/mlstats-list'.lstrip(pathlib.os.sep.join)
         ml = MailingList(base)
         expected = {
             'location': '/mlstats.org/pipermail/mlstats-list',
             'alias': 'mlstats-list',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': True,
             'is_remote': False,
         }
@@ -229,11 +230,11 @@ class MailingListTest(unittest.TestCase):
         '''Local URL (file://) with trailing slash'''
         base = 'file:///mlstats.org/pipermail/mlstats-list/'
         ml = MailingList(base)
-        target = '/mlstats.org/pipermail/mlstats-list'.lstrip(os.path.sep)
+        target = '/mlstats.org/pipermail/mlstats-list'.lstrip(pathlib.os.sep)
         expected = {
             'location': '/mlstats.org/pipermail/mlstats-list',
             'alias': 'mlstats-list',
-            'compressed_dir': os.path.join(COMPRESSED_DIR, target),
+            'compressed_dir': pathlib.Path().joinpath(COMPRESSED_DIR, target),
             'is_local': True,
             'is_remote': False,
         }

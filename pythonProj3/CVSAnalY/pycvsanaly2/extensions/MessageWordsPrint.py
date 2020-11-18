@@ -15,7 +15,8 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 #
 # Authors :
-#       Jesus M. Gonzalez-Barahona  <jgb@gsyc.es>
+#       Jesus M. Gonzalez-Barahona  <jgb@gsyc.es>*
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 # Description
 # -----------
