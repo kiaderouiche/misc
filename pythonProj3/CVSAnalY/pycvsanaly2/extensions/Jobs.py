@@ -91,7 +91,7 @@ if __name__ == '__main__':
 
         def run(self, repo, repo_uri):
             uri = repo_uri + self.module
-            print("%s -> %s" % (uri, repo.get_last_revision(uri)))
+            print("{} -> {}".format(uri, repo.get_last_revision(uri)))
 
     modules = ['cvsanaly', 'octopus', 'cmetrics', 'repositoryhandler', 'retrieval_system',
                'bicho', 'pandaRest']
