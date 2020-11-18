@@ -1,4 +1,5 @@
 # Copyright (C) 2007 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+# Copyright (c) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,7 +15,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 #
-
+#    
 
 class Commit:
     def __init__(self):
@@ -159,16 +160,16 @@ if __name__ == '__main__':
     commit = load(f)
     f.close()
 
-    print "Commit"
-    print "rev: %s, committer: %s, date: %s" % (commit.revision, commit.committer, commit.date)
+    print ("Commit")
+    print ("rev: %s, committer: %s, date: %s" % (commit.revision, commit.committer, commit.date))
     if commit.author is not None:
-        print "Author: %s, date: %s" % (commit.author, commit.author_date)
-    print "files: ",
+        print ("Author: {}, date: {}".format(commit.author, commit.author_date))
+    print ("files: ",)
     for action in commit.actions:
-        print "%s %s " % (action.type, action.f1),
+        print ("%s %s " % (action.type, action.f1),)
         if action.f2 is not None:
-            print "(%s: %s) on branch %s" % (action.f2, action.rev, commit.branch or action.branch)
+            print ("(%s: %s) on branch %s" % (action.f2, action.rev, commit.branch or action.branch))
         else:
-            print "on branch %s" % (commit.branch or action.branch)
-    print "Message"
-    print commit.message
+            print ("on branch %s" % (commit.branch or action.branch))
+    print ("Message")
+    print (commit.message)
