@@ -1,4 +1,5 @@
 # Copyright (C) 2007 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,6 +19,7 @@
 #       Alvaro Navarro <anavarro@gsyc.escet.urjc.es>
 #       Gregorio Robles <grex@gsyc.escet.urjc.es>
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 import re
 import datetime
@@ -98,14 +100,14 @@ class SVNParser(Parser):
 
                 elif action.type == 'R':
                     # TODO
-                    printdbg("SVN Parser: File %s replaced to %s", (action.f2, action.f1))
+                    printdbg(f"SVN Parser: File {action.f2} replaced to {action.f1}")
                     pass
 
         for action in remove_actions:
-            printdbg("SVN Parser: Removing action %s %s", (action.type, action.f1))
+            printdbg(f"SVN Parser: Removing action {action.type} {action.f1}")
             commit.actions.remove(action)
 
-    def __guess_branch_from_path(self, path):
+    def __guess_branch_from_path(self, path)-> str:
         path = path[len(self.root_path):]
 
         if path.startswith("/branches"):
@@ -118,7 +120,7 @@ class SVNParser(Parser):
 
         return branch
 
-    def __guess_tag_from_path(self, path):
+    def __guess_tag_from_path(self, path)-> str:
         path = path[len(self.root_path):]
 
         if not path.startswith("/tags"):
@@ -133,7 +135,7 @@ class SVNParser(Parser):
 
     def __append_message_line(self, line=None):
         if self.msg_lines <= 0:
-            printout("Warning (%d): parsing svn log, unexpected line in message: %s", (self.n_line, line))
+            printout(f"Warning ({self.n_line}): parsing svn log, unexpected line in message: {line}")
             self.msg_lines = 0
             return
 
@@ -143,7 +145,7 @@ class SVNParser(Parser):
         self.commit.message += '\n'
         self.msg_lines -= 1
 
-    def _parse_line(self, line):
+    def _parse_line(self, line)-> bool:
         if not line:
             if self.commit is not None and self.state == SVNParser.COMMIT or self.state == SVNParser.FILES:
                 self.state = SVNParser.MESSAGE
@@ -162,7 +164,7 @@ class SVNParser(Parser):
         # r176840 | (no author) | (no date) | 1 line
         # without any canged path, so I think we can just ignore them
         if self.patterns['invalid'].match(line):
-            printdbg("SVN Parser: skipping invalid commit: %s", (line,))
+            printdbg(f"SVN Parser: skipping invalid commit: {line}")
             self.state = SVNParser.COMMIT
             self.commit = None
             return
@@ -175,7 +177,7 @@ class SVNParser(Parser):
                 # We can go directly from FILES to COMMIT
                 # when there is an empty log message
                 if self.msg_lines > 0:
-                    printout("Warning (%d): parsing svn log, missing lines in commit message!", (self.n_line,))
+                    printout(f"Warning ({self.n_line}): parsing svn log, missing lines in commit message!")
 
                 self.__convert_commit_actions(self.commit)
                 self.handler.commit(self.commit)
@@ -183,7 +185,7 @@ class SVNParser(Parser):
                 self.commit = None
                 self.msg_lines = 0
             else:
-                printout("Warning (%d): parsing svn log, unexpected separator", (self.n_line,))
+                printout(f"Warning ({self.n_line}): parsing svn log, unexpected separator")
 
             return
 
@@ -209,7 +211,7 @@ class SVNParser(Parser):
             self.commit.message += line + '\n'
             return
         elif match and self.state != SVNParser.COMMIT:
-            printout("Warning (%d): parsing svn log, unexpected line %s", (self.n_line, line))
+            printout(f"Warning ({self.n_line}): parsing svn log, unexpected line {line}")
             return
 
         # Files
@@ -217,7 +219,7 @@ class SVNParser(Parser):
             if self.patterns['paths'].match(line):
                 self.state = SVNParser.FILES
             else:
-                printout("Warning (%d): parsing svn log, unexpected line %s", (self.n_line, line))
+                printout(f"Warning ({self.n_line}): parsing svn log, unexpected line {line}")
 
             return
 
@@ -225,7 +227,7 @@ class SVNParser(Parser):
         match = self.patterns['file-moved'].match(line)
         if match:
             if self.state != SVNParser.FILES:
-                printout("Warning (%d): parsing svn log, unexpected line %s", (self.n_line, line))
+                printout(f"Warning ({self.n_line}): parsing svn log, unexpected line {line}")
                 return
 
             action = Action()
@@ -246,7 +248,7 @@ class SVNParser(Parser):
         match = self.patterns['file'].match(line)
         if match:
             if self.state != SVNParser.FILES:
-                printout("Warning (%d): parsing svn log, unexpected line %s", (self.n_line, line))
+                printout(f"Warning ({self.n_line}): parsing svn log, unexpected line {line}")
                 return
 
             path = match.group(2)
