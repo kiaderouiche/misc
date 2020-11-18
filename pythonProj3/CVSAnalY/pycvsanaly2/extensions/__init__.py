@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,16 +17,19 @@
 #
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 __all__ = ['Extension', 'get_extension', 'register_extension']
 
 
 class ExtensionUnknownError(Exception):
     '''Unkown extension'''
+    pass
 
 
 class ExtensionRunError(Exception):
     '''Error running extension'''
+    pass
 
 
 class Extension:

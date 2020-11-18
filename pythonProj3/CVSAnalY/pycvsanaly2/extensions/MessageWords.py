@@ -1,4 +1,5 @@
 # Copyright (C) 2012 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 #
 # Authors :
 #       Jesus M. Gonzalez-Barahona  <jgb@gsyc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 # Description
 # -----------
@@ -66,7 +68,7 @@ class MessageWords(Extension):
     It works on the messages field of the scmlog table.
     """
 
-    def _get_repo_id(self, repo, uri, cursor):
+    def _get_repo_id(self, repo, uri, cursor) -> int:
         """Get repository id from repositories table"""
 
         path = uri_to_filename(uri)
