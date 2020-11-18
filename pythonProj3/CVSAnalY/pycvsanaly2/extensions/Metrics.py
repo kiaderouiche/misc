@@ -531,7 +531,7 @@ class MetricsJob(Job):
     def __measure_file(self, fm, measures, checkout_path, rev):
         printdbg("Measuring %s @ %s", (checkout_path, rev))
 
-        profiler_start("[LOC] Measuring %s @ %s", (checkout_path, rev))
+        profiler_start(f"[LOC] Measuring {checkout_path} @ {rev}")
         try:
             measures.loc = fm.get_LOC()
         except Exception as e:
