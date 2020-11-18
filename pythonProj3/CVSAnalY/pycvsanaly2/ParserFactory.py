@@ -1,4 +1,5 @@
 # Copyright (C) 2007 LibreSoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,26 +18,27 @@
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 
-import os
+import pathlib
 import re
 
 from CVSParser import CVSParser
 from SVNParser import SVNParser
 from GitParser import GitParser
 from BzrParser import BzrParser
+#from HgParser import HgParser
 
 from utils import printerr
 
 
-def create_parser_from_logfile(uri):
+def create_parser_from_logfile(uri) -> int:
     def logfile_is_cvs(logfile):
         retval = False
 
         try:
-            f = open(logfile, 'r')
-        except IOError, e:
-            printerr(str(e))
-            return False
+            with open(logfile, 'r') as f:
+        except IOError as e:
+                    printerr(str(e))
+                    return False
 
         patt = re.compile("^RCS file:(.*)$")
 
@@ -46,17 +48,17 @@ def create_parser_from_logfile(uri):
                 retval = True
                 break
             line = f.readline()
-
-        f.close()
+        finally:
+            f.close()
 
         return retval
 
-    def logfile_is_svn(logfile):
+    def logfile_is_svn(logfile) -> int:
         retval = False
 
         try:
             f = open(logfile, 'r')
-        except IOError, e:
+        except IOError as e:
             printerr(str(e))
             return False
 
@@ -73,12 +75,12 @@ def create_parser_from_logfile(uri):
 
         return retval
 
-    def log_file_is_git(logfile):
+    def log_file_is_git(logfile) -> int:
         retval = False
 
         try:
             f = open(logfile, 'r')
-        except IOError, e:
+        except IOError as e:
             printerr(str(e))
             return False
 
@@ -95,12 +97,12 @@ def create_parser_from_logfile(uri):
 
         return retval
 
-    def log_file_is_bzr(logfile):
+    def log_file_is_bzr(logfile) -> int:
         retval = False
 
         try:
             f = open(logfile, 'r')
-        except IOError, e:
+        except IOError as e:
             printerr(str(e))
             return False
 
@@ -116,8 +118,32 @@ def create_parser_from_logfile(uri):
         f.close()
 
         return retval
+    
+#    def log_file_is_hg(logfile) -> int:
+#        '''
+#        '''
+#        retval = False
+#
+#        try:
+#            f = open(logfile, 'r')
+#        except IOError as e:
+#            printerr(str(e))
+#            return False
+#
+#        patt = re.compile("^revno:[ \t]+(.*)$")
+#
+#        line = f.readline()
+#        while line:
+#            if patt.match(line) is not None:
+#                retval = True
+#                break
+#            line = f.readline()
+#
+#        f.close()
+#
+#        return retval
 
-    if os.path.isfile(uri):
+    if pathlib.Path(uri).is_file():
         if logfile_is_svn(uri):
             p = SVNParser()
         elif logfile_is_cvs(uri):
@@ -131,7 +157,7 @@ def create_parser_from_logfile(uri):
 
         return p
 
-    printerr("Error: path %s doesn't look like a valid log file", (uri,))
+    printerr(f"Error: path {uri,} doesn't look like a valid log file")
     return None
 
 
@@ -145,7 +171,7 @@ def create_parser_from_repository(repo):
     elif repo.get_type() == 'bzr':
         p = BzrParser()
     else:
-        printerr("Error: Unsupported repository type: %s", (repo.get_type(),))
+        printerr(f"Error: Unsupported repository type: {repo.get_type(),}")
         return None
 
     return p

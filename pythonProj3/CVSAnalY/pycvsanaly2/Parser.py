@@ -63,7 +63,7 @@ class Parser:
 
 if __name__ == '__main__':
     import sys
-    import os
+    import pathlib
     from repositoryhandler.backends import create_repository, create_repository_from_path
     from ParserFactory import create_parser_from_logfile, create_parser_from_repository
     from Log import LogReader

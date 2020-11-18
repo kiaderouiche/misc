@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,8 +14,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+# 
 
-import os
+import pathlib
 import sys
 import threading
 
@@ -28,8 +30,8 @@ def plog(data):
     if not config.profile:
         return
 
-    str = "MARK: %s: %s" % ('foo', data)
-    os.access(str, os.F_OK)
+    str = (f"MARK:{'foo'}: {data}")
+    pathlib.os.access(str, pathlib.os.F_OK)
 
 
 def profiler_start(msg, args=None):

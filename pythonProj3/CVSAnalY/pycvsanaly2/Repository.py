@@ -45,7 +45,7 @@ class Commit:
     def __getattr__(self, name):
         return self.__dict__[name]
 
-    def __setattr__(self, name, value):
+    def __setattr__(self, name, value) -> int:
         self.__dict__[name] = value
 
     def __eq__(self, other):
@@ -134,7 +134,7 @@ class Person:
 
 
 if __name__ == '__main__':
-    from cPickle import dump, load
+    from pickle import dump, load
     import datetime
 
     c = Commit()
@@ -152,24 +152,28 @@ if __name__ == '__main__':
 
         c.actions.append(a)
 
-    f = open("/tmp/commits", "wb")
-    dump(c, f, -1)
-    f.close()
+    try:
+        with open("/tmp/commits", "wb") as f:
+            dump(c, f, -1)
+    finally:
+        f.close()
 
-    f = open("/tmp/commits", "rb")
-    commit = load(f)
-    f.close()
+    try:
+        with open("/tmp/commits", "rb") as f:
+            commit = load(f)
+    finally:
+        f.close()
 
     print ("Commit")
-    print ("rev: %s, committer: %s, date: %s" % (commit.revision, commit.committer, commit.date))
+    print (f"rev: {commit.revision}, committer:{commit.committer}, date: {commit.date}")
     if commit.author is not None:
         print ("Author: {}, date: {}".format(commit.author, commit.author_date))
     print ("files: ",)
     for action in commit.actions:
-        print ("%s %s " % (action.type, action.f1),)
+        print ("{} {} ".format(action.type, action.f1))
         if action.f2 is not None:
-            print ("(%s: %s) on branch %s" % (action.f2, action.rev, commit.branch or action.branch))
+            print ("({}: {}) on branch {}".format(action.f2, action.rev, commit.branch or action.branch))
         else:
-            print ("on branch %s" % (commit.branch or action.branch))
+            print (f"on branch {commit.branch or action.branch}")
     print ("Message")
     print (commit.message)
