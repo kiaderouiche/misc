@@ -15,6 +15,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 #
 # Authors: Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+#          K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 import time
 
@@ -37,7 +38,7 @@ class Timer:
         self._start -= elapsed
         self._active = True
 
-    def elapsed(self):
+    def elapsed(self)-> int:
         if self._active:
             self._end = time.time()
 
@@ -50,25 +51,25 @@ if __name__ == '__main__':
     t = Timer()
     time.sleep(5)
     t.stop()
-    print "Elapsed %f" % (t.elapsed())
-    print
+    print ("Elapsed %f" % (t.elapsed()))
+    print ()
 
     t.start()
     for i in range(10):
         time.sleep(2)
-        print "Elapsed %f " % (t.elapsed())
-    print
+        print ("Elapsed %f " % (t.elapsed()))
+    print()
 
     for i in range(10):
         t.start()
         time.sleep(2)
-        print "Elapsed %f " % (t.elapsed())
-    print
+        print ("Elapsed %f " % (t.elapsed()))
+    print()
 
     t.start()
     time.sleep(2)
     t.stop()
-    print "Elapsed %f " % (t.elapsed())
+    print ("Elapsed %f " % (t.elapsed()))
     t.resume()
     time.sleep(2)
-    print "Elapsed %f " % (t.elapsed())
+    print ("Elapsed %f " % (t.elapsed()))
