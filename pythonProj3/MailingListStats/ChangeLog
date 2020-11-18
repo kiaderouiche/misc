@@ -1,0 +1,344 @@
+2010-08-18  Israel Herraiz  <isra@herraiz.org>
+
+	* pymlstats/htmlparser.py:
+
+	Fixed bug with private archives.
+	Thanks to Francisco Puga for the patch.
+
+2010-05-04  Israel Herraiz  <isra@herraiz.org>
+
+	* pymlstats/utils.py
+	* pymlstats/main.py:
+
+	Always download archives files for the current month.
+	Fixes #1183. Thanks to Dave Neary for the patch.
+
+2010-01-24  Israel Herraiz  <isra@herraiz.org>
+
+	* NEWS:
+
+	Release 0.4
+
+2010-01-11  Israel Herraiz  <isra@herraiz.org>
+
+	* pymlstats/datamodel.py:
+	* pymlstats/database.py:
+
+	Add UTF-8 support for the database.
+	Removed People_ID field. Substituted by email address.
+
+	* pymlstats/analyzer.py:
+
+	Mailbox parser update to Python 2.6 (the previous one is
+	deprecated).
+
+	Fixed handling of text attachments and multipart messages
+
+	* pymlstats/version.py:
+
+	Preparing for release 0.4.
+
+2009-12-23  Israel Herraiz  <isra@herraiz.org>
+
+	* pymlstats/database.py:
+
+	Ignore received header when storing messages in the database if it
+	is none.
+
+2009-22-12  Israel Herraiz  <isra@herraiz.org>
+
+        * pymlstats/datamodel.py:
+        * pymlstats/fileextractor.py:
+        * pymlstats/__init__.py:
+        * pymlstats/utils.py:
+        * pymlstats/htmlparser.py:
+        * pymlstats/database.py:
+        * pymlstats/main.py:
+        * pymlstats/analyzer.py:
+        * pymlstats/version.py:
+        * setup.py:
+        * mlstats:
+        * README:
+
+	Update email addresses, contact URLs, and copyright year.
+
+2009-17-12  Israel Herraiz <isra@herraiz.org>
+
+	* pymlstats/analyzer.py:
+
+	Received date is now set using the Unix From line rather than the
+	value in the the header.
+	Patch sent by Simón Pena Placer <spenap@gmail.com>
+
+2009-04-03  Carlos Garcia Campos  <carlosgc@libresoft.es>
+
+	* pymlstats/main.py:
+	* pymlstats/utils.py:
+
+	Add a function to get the home user directory in a platform
+	independent way.
+	
+2009-02-13  Israel Herraiz <herraiz@libresoft.es>
+
+	* mlstats:
+	* pymlstats/__init__.py:
+	* pymlstats/analyzer.py:
+	* pymlstats/database.py:
+	* pymlstats/datamodel.py:
+	* pymlstats/fileextractor.py:
+	* pymlstats/htmlparser.py:
+	* pymlstats/main.py:
+	* pymlstats/version.py:
+	* pymlstats/utils.py:
+	* setup.py:
+
+	Moved URL retrieval and compressed files handling to a new module
+	called utils.
+	Updated copyright info.
+	
+2009-02-13  Israel Herraiz <herraiz@libresoft.es>
+
+	* pymlstats/htmlparser.py:
+	* pymlstats/main.py:
+
+	MyHTMLParser now returns a list with links that are exclusively
+	mboxes. That part has been removed from main.py.
+	
+2008-10-10  Juan Francisco Gato Luis <jfcogato@gsyc.es>
+
+        * pymlstats/database.py
+	added filter function that erase the quotation marks from the e-mails
+	address
+
+2008-09-16  Santiago Dueñas Domínguez  <sduenas@gsyc.escet.urjc.es>
+
+	* db/mlstats_model_dbdesigner.png
+	* db/mlstats_model_dbdesigner.sql
+	* db/mlstats_model_dbdesigner.xml
+	
+	DB schema modified to include a is_response_of FK.
+
+2008-07-22  Liliana Tovar <lilitovar@gsyc.es>
+
+	* db/data_model.sql
+	* db/mlstats_model_dbdesigner.png
+	* db/mlstats_model_dbdesigner.sql
+	* db/mlstats_model_dbdesigner.xml
+	
+	Added database schema.
+
+2008-07-22  Liliana Tovar <lilitovar@gsyc.es>
+
+	* pymlstats/analyzer.py:
+	* pymlstats/database.py:
+	* pymlstats/datamodel.py:
+	
+	Database model modified. 
+	Added a numeric identifier for people entries, instead of using the 
+	email address. 'author_email_address' deleted from messages table. The 
+	value can be found into the 'messages_people' table.
+
+2008-03-11  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* debian/changelog:
+	* debian/control:
+	* debian/copyright:
+	* debian/mlstats.docs:
+	* debian/rules:
+	* man/mlstats.1:
+	* setup.py:
+
+	The Debian package is now Lintian compliant. The Python egg files
+	are now automatically generated, so the mlstats.egg-info directory
+	has been removed.
+	
+2007-12-03  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* NEWS:
+	* debian/rules:
+	* debian/changelog:
+	* debian/control:
+	* mlstats.egg-info/PKG-INFO:
+
+	Release 0.3.3
+	
+2007-12-03  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* pymlstats/version.py:
+	* pymlstats/main.py:
+
+	Remote files are now analyzed in ascending chronological
+	order. Version number updated. 
+
+2007-09-05  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* pymlstats/version.py:
+	* debian/control:
+	* debian/changelog:
+	* debian/copyright:
+	* debian/rules:
+	* mlstats.egg-info/SOURCES.txt:
+	* mlstats.egg-info/PKG-INFO:	
+
+	Added copyright file for the Debian package.
+
+	Updated version number for trunk sources.
+	
+2007-08-21  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* pymlstats/datamodel.py:
+	* pymlstats/database.py:
+	* db/data_model.sql:
+
+	Fixing bug #314.
+
+	Some changes in the database. Now the people table contains all
+	the people participating in the mailing list, regardless is a
+	writer or not.
+
+	The field type_of_recipient in the messages_people table may now
+	take the values From, To or Cc. That table contains all the people
+	participating in the mailing list, regardless is a recipient or a
+	writer.
+
+	The same happens with the mailing_lists_people table.
+
+	I have realized that the database schema needs a serious
+	modification.	
+		
+2007-08-01  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* mlstats:
+	* pymlstats/fileextractor.py:
+	* pymlstats/__init__.py:
+	* pymlstats/database.py:
+	* pymlstats/analyzer.py:
+
+	Fixing bug #308.
+
+	Now all the error messages are written to stderr and not stdout. 
+		
+2007-08-01  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* pymlstats/database.py:
+
+	Fixing bug #310
+
+2007-07-31 Santiago Dueñas <sduenas@gsyc.escet.urjc.es> 
+
+	* man/mlstats.1:
+	
+	Typo error fixed. This closes the bug #309.
+
+2007-06-13  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* pymlstats/version.py:
+	* mlstats.egg-info/SOURCES.txt:
+	* mlstats.egg-info/PKG-INFO:
+	* debian/control:
+	* debian/changelog:
+	* debian/rules:
+	* MANIFEST.in:
+	* NEWS:
+
+	Release 0.3.2	
+	
+2007-06-13  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* setup.py:
+	* man/mlstats.1:
+	* pymlstats/__init__.py:
+	* README:
+
+	Added man page. The Examples section has been removed from the
+	help message, and it is now present in the man page.
+
+	Fixed minor typo in README.
+
+2007-06-13  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* pymlstats/__init__.py:
+	* pymlstats/main.py:
+	* pymlstats/analyzer.py:
+	* pymlstats/version.py:
+	* setup.py:
+	
+	Fixed help message, that still contained the old command line
+	options.
+	
+	Added --quiet option.
+	
+	Added --web-user and --web-password options to retrieve mailing
+	list archives that are set to private.
+
+2007-05-10  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* setup.py:
+	* ChangeLog:
+
+	Added dependency for the Python modules.
+
+	Fixed the format of the ChangeLog. From now on, the format of this
+	log should follow the same style that this entry.
+
+2007-04-23  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+	
+	* pymlstats/database.py:
+	
+	Changed the handling of exceptions. When a unknown error happens
+	parsing a message, the message is ignored and the message-id
+	written to stderr along with a warning message.	When connecting to
+	a database, unknown errors are written to stderr and the execution
+	stopped. This is related to bug #237, in order to get more
+	meaningful and brief error messages. 
+
+	Added one more error case when trying to connect the database
+	(error 1044, authorized user but not for that database).
+
+2007-04-23  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+	
+	* mlstats.egg-info/SOURCES.txt:
+	* mlstats.egg-info/top_level.txt:
+	* mlstats.egg-info/PKG-INFO:
+	* mlstats.egg-info/dependency_links.txt:
+
+	Added Python egg info. This is a requirement for the Debian
+	package. 
+
+2007-03-27  Roberto Andradas Izquierdo <randradas@gsyc.esceturjc.es>
+
+	* Fixed a little error with the README file, there was a reference
+	to cvsanaly instead of MLSstats
+	
+2007-03-22  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* Added check to find out how many messages are ignored by the
+	  parser 
+	* Solved bug 227
+	
+2007-03-21  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* Release 0.3.1
+	* Solved bug 222
+
+2007-03-20  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* Release 0.3
+
+2007-03-15  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* Updated contact information
+	* Add fileextractor module for cross-platform compressed files
+	  managing 
+	* All the extraction and file handling (copying to cache and so)
+	  is now cross-platform (it uses the Python standard modules) 
+
+2007-03-15  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* First tested version
+	* It can retrieve the archives from a remote URL, or scan a
+	  directory recursively looking for mboxes 
+
+2007-03-09  Israel Herraiz <herraiz@gsyc.escet.urjc.es>
+
+	* Initial import 
