@@ -311,7 +311,7 @@ class FileMetricsPython(FileMetrics):
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
-            printerr('Error running pymetrics: %s', (e.error,))
+            printerr(f'Error running pymetrics: {e.error}')
             raise e
 
         comment_number = comment_lines = blank_lines = None
