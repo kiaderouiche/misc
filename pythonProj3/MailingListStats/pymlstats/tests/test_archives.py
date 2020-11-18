@@ -18,7 +18,7 @@
 #
 
 import unittest
-import os
+
 
 from pymlstats.archives import MailingList, COMPRESSED_DIR
 
