@@ -305,7 +305,7 @@ class FileMetricsPython(FileMetrics):
             outputlines = cmd.run().split('\n')
         except CommandError as e:
             if e.error:
-                printerr('Error running pymetrics: %s', (e.error,))
+                printerr(f'Error running pymetrics: {e.error}')
             raise e
         except CommandRunningError as e:
             pid = cmd.get_pid()
