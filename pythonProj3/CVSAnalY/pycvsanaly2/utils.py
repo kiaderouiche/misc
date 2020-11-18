@@ -18,7 +18,7 @@
 
 import sys
 import re
-import os
+import pathlib
 import errno
 
 from Config import Config
@@ -26,13 +26,13 @@ from Config import Config
 config = Config()
 
 
-def to_utf8(string):
-    if isinstance(string, unicode):
+def to_utf8(string) ->str:
+    if isinstance(string, str):
         return string.encode('utf-8')
     elif isinstance(string, str):
         for encoding in ['ascii', 'utf-8', 'iso-8859-15']:
             try:
-                s = unicode(string, encoding)
+                s = str(string, encoding)
             except:
                 continue
             break
@@ -55,7 +55,7 @@ def to_unicode(string):
     and the returned object is of unicode type.
     If the string is already of unicode type, just return it."""
 
-    if isinstance(string, unicode):
+    if isinstance(string, str):
         return string
     elif isinstance(string, str):
         encoded = False
@@ -75,7 +75,7 @@ def to_unicode(string):
         raise TypeError("string should be of str type")
 
 
-def uri_is_remote(uri):
+def uri_is_remote(uri) ->str:
     match = re.compile("^.*://.*$").match(uri)
     if match is None:
         return False
@@ -83,7 +83,7 @@ def uri_is_remote(uri):
         return not uri.startswith("file://")
 
 
-def uri_to_filename(uri):
+def uri_to_filename(uri) ->str:
     if uri_is_remote(uri):
         return None
 
@@ -124,16 +124,16 @@ def printdbg(str='\n', args=None):
 
 
 def remove_directory(path):
-    if not os.path.exists(path):
+    if not pathlib.Path(path).exists():
         return
 
     for root, dirs, files in os.walk(path, topdown=False):
         for file in files:
-            os.remove(os.path.join(root, file))
+            pathlib.Path(pathlib.Path().joinpath(root, file))
         for dir in dirs:
-            os.rmdir(os.path.join(root, dir))
+            pathlib.Path(pathlib.Path().joinpath(root, dir)).rmdir()
 
-    os.rmdir(path)
+    pathlib.Path(path).rmdir()
 
 
 _dirs = {}

@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 #
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 from pycvsanaly2.Database import SqliteDatabase, MysqlDatabase, TableAlreadyExists, statement
 from pycvsanaly2.extensions import Extension, register_extension, ExtensionRunError
@@ -82,7 +84,7 @@ class FileTypes(Extension):
         cnn.commit()
         cursor.close()
 
-    def __get_files_for_repository(self, repo_id, cursor):
+    def __get_files_for_repository(self, repo_id, cursor) -> str:
         query = "SELECT ft.file_id from file_types ft, files f " + \
                 "WHERE f.id = ft.file_id and f.repository_id = ?"
         cursor.execute(statement(query, self.db.place_holder), (repo_id,))

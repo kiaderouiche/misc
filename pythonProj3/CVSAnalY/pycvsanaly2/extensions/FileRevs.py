@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright (C) 2009-2012 LibreSoft
+# Copyright (C) 2020 Adgon Solutions, Algeria
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,9 +19,11 @@
 # Authors :
 #       Carlos Garcia Campos  <carlosgc@libresoft.es>
 #       Santiago Dueñas <sduenas@libresoft.es>
+#       K.I.A.Derouiche <kamel.derouiche@gmail.com>
 
 from pycvsanaly2.Database import statement, ICursor
 from pycvsanaly2.Command import CommandError
+from pycvanaly2.utils import printerr
 
 if __name__ == '__main__':
     import sys
