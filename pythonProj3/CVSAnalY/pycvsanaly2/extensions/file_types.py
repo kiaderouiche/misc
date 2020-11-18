@@ -402,9 +402,9 @@ if __name__ == '__main__':
                     dirs.remove(skip)
 
             for file in files:
-                print "%s: %s" % (
+                print ("{}: {}" % (
                     os.path.join(root, file),
-                    guess_file_type(file)
+                    guess_file_type(file))
                 )
     else:
         print guess_file_type(path)
