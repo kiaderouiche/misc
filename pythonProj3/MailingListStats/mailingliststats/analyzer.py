@@ -44,7 +44,7 @@ from pymlstats.strictmbox import strict_mbox
 from pymlstats.utils import EMAIL_OBFUSCATION_PATTERNS
 
 
-def to_unicode(string, charset='latin-1'):
+def to_unicode(string, charset='latin-1')-> str:
     """Converts a string type to an object of unicode type.
 
     Gets an string object as argument, and tries several
@@ -58,13 +58,13 @@ def to_unicode(string, charset='latin-1'):
     and the returned object is of unicode type.
     If the string is already of unicode type, just return it."""
 
-    if isinstance(string, unicode):
+    if isinstance(string, str):
         return string
     elif isinstance(string, str):
         encoded = False
         for encoding in [charset, 'ascii', 'utf-8', 'iso-8859-15']:
             try:
-                uni_string = unicode(string, encoding)
+                uni_string = str(string, encoding)
             except:
                 continue
             encoded = True
@@ -73,7 +73,7 @@ def to_unicode(string, charset='latin-1'):
             return uni_string
         else:
             # All conversions failed, get unicode with unknown characters
-            return (unicode(string, errors='replace'))
+            return (str(string, errors='replace'))
     else:
         raise TypeError('string should be of str type')
 
