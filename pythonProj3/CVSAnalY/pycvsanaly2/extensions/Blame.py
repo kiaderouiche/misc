@@ -79,7 +79,7 @@ class BlameJob(Job):
         wid = repo.add_watch(BLAME, blame_line, p)
         try:
             repo.blame(os.path.join(repo_uri, path), self.rev)
-        except RepositoryCommandError, e:
+        except RepositoryCommandError as e:
             printerr("Command %s returned %d (%s)", (e.cmd, e.returncode, e.error))
         p.end()
 
