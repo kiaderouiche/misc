@@ -82,12 +82,12 @@ class SVNParser(Parser):
                     del_action = find_action(commit.actions, 'D', action.f2)
                     if del_action is not None and del_action not in remove_actions:
                         # FIXME: See http://research.libresoft.es/cgi-bin/trac.cgi/wiki/Tools/CvsanalyRevamped#Filesmovedandcopiedinthesamerevision
-                        printdbg("SVN Parser: File %s has been renamed to %s", (action.f2, action.f1))
+                        printdbg(f"SVN Parser: File {action.f2} has been renamed to {action.f1}")
                         action.type = 'V'
                         remove_actions.append(del_action)
                     else:
                         action.type = 'C'
-                        printdbg("SVN Parser: File %s has been copied to %s", (action.f2, action.f1))
+                        printdbg(f"SVN Parser: File {action.f2} has been copied to {action.f1}")
 
                         # Try to guess if it was a tag
                         # Yes, with svn we are always guessing :-/
