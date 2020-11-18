@@ -69,7 +69,7 @@ from scmlog s, action_files af where s.id = af.commit_id and s.repository_id = ?
         self.current = self.__get_next()
         return self.current
 
-    def get_path(self, repo=None, repo_path=None):
+    def get_path(self, repo=None, repo_path=None) -> str:
         if not self.current:
             return None
 

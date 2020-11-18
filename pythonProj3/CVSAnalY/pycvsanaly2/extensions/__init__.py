@@ -38,11 +38,11 @@ class Extension:
 _extensions = {}
 
 
-def register_extension(extension_name, extension_class):
+def register_extension(extension_name, extension_class) -> str:
     _extensions[extension_name] = extension_class
 
 
-def get_extension(extension_name):
+def get_extension(extension_name) -> str:
     if extension_name not in _extensions:
         try:
             __import__("pycvsanaly2.extensions.%s" % extension_name)
