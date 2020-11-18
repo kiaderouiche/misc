@@ -167,7 +167,7 @@ class MailArchiveAnalyzer:
                     try:
                         msg = to_unicode(msg, charset)
                     except TypeError:
-                        print(">> {} TypeError: msg: {}.".format(sys.stderr, msg))
+                        print(f'TypeError: msg: {msg}', file=sys.stderr)
                         msg = [to_unicode(e, charset) for e in msg]
 
                 filtered_message[header] = msg
