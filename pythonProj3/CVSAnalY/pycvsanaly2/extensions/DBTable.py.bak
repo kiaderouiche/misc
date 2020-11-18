@@ -65,7 +65,7 @@ class DBTable:
         except TableAlreadyExists:
             # If the table already exisits, fill in self.table with its data
             self._init_from_table(cursor)
-        except Exception as e:
+        except Exception, e:
             raise ExtensionRunError(str(e))
         finally:
             cursor.close()
@@ -109,7 +109,7 @@ class DBTable:
         try:
             cursor.execute(self._sql_create_table_mysql)
             self.cnn.commit()
-        except _mysql_exceptions.OperationalError as e:
+        except _mysql_exceptions.OperationalError, e:
             if e.args[0] == 1050:
                 raise TableAlreadyExists
             else:

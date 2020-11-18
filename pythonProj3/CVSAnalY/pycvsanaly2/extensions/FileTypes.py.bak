@@ -71,7 +71,7 @@ class FileTypes(Extension):
                                "FOREIGN KEY (file_id) REFERENCES files(id)" +
                                ") ENGINE=MyISAM" +
                                " CHARACTER SET=utf8")
-            except _mysql_exceptions.OperationalError as e:
+            except _mysql_exceptions.OperationalError, e:
                 if e.args[0] == 1050:
                     cursor.close()
                     raise TableAlreadyExists
@@ -116,7 +116,7 @@ class FileTypes(Extension):
                 DBFileType.id_counter = id + 1
 
             files = self.__get_files_for_repository(repo_id, cursor)
-        except Exception as e:
+        except Exception, e:
             raise ExtensionRunError(str(e))
 
         query = "select a.file_id fid, f.file_name fname " + \

@@ -111,15 +111,15 @@ class MessageWordsPrint(Extension):
                WHERE date = '%s' ORDER BY times DESC"""
             cursor.execute(query % date)
             rows = cursor.fetchall()
-            print('*** ' + date + ":", end=' ')
+            print '*** ' + date + ":",
             count = 0
             for (text, times) in rows:
                 if not self._wordToExclude(text):
                     count += 1
-                    print(text + " (" + str(times) + ")", end=' ')
+                    print text + " (" + str(times) + ")",
                 if count > 10:
                     break
-            print()
+            print
 
 
 register_extension("MessageWordsPrint", MessageWordsPrint)

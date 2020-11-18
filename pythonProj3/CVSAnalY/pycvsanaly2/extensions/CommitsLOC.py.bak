@@ -111,7 +111,7 @@ class SVNLineCounter(LineCounter):
         wid = self.repo.add_watch(DIFF, diff_line, diff_data)
         try:
             self.repo.diff(self.repo.get_uri(), revs=revs)
-        except Exception as e:
+        except Exception, e:
             printerr("Error running svn diff command: %s", (str(e)))
             self.repo.remove_watch(DIFF, wid)
             return (0, 0)
@@ -156,7 +156,7 @@ class GitLineCounter(LineCounter):
         c = Command(cmd, uri)
         try:
             c.run(parser_out_func=self.__parse_line)
-        except CommandError as e:
+        except CommandError, e:
             if e.error:
                 printerr("Error running git log command: %s", (e.error,))
             raise ExtensionRunError("Error running CommitsLOC extension: %s", str(e))
@@ -234,7 +234,7 @@ class CommitsLOC(Extension):
                                "FOREIGN KEY (commit_id) REFERENCES scmlog(id)" +
                                ") ENGINE=MyISAM" +
                                " CHARACTER SET=utf8")
-            except _mysql_exceptions.OperationalError as e:
+            except _mysql_exceptions.OperationalError, e:
                 if e.args[0] == 1050:
                     cursor.close()
                     raise TableAlreadyExists
@@ -281,7 +281,7 @@ class CommitsLOC(Extension):
                 DBCommitLines.id_counter = id + 1
 
             commits = self.__get_commits_lines_for_repository(repo_id, cursor)
-        except Exception as e:
+        except Exception, e:
             raise ExtensionRunError(str(e))
 
         counter = create_line_counter_for_repository(repo, uri)

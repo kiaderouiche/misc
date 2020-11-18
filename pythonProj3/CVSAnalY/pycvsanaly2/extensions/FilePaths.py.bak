@@ -182,10 +182,10 @@ if __name__ == '__main__':
     old_id = -1
     for id, file_id in cursor.fetchall():
         if old_id != id:
-            print("Commit ", id)
+            print "Commit ", id
             fp.update_for_revision(cursor, id, 1)
             old_id = id
-        print(fp.get_path(file_id, id, 1))
+        print fp.get_path(file_id, id, 1)
 
     cursor.close()
 

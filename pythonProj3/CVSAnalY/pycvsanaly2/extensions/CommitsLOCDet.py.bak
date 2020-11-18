@@ -84,7 +84,7 @@ class DBTable:
         except TableAlreadyExists:
             # If the table already exisits, fill in self.table with its data
             self._init_from_table(cursor)
-        except Exception as e:
+        except Exception, e:
             raise ExtensionRunError(str(e))
         finally:
             cursor.close()
@@ -128,7 +128,7 @@ class DBTable:
         try:
             cursor.execute(self._sql_create_table_mysql)
             self.cnn.commit()
-        except _mysql_exceptions.OperationalError as e:
+        except _mysql_exceptions.OperationalError, e:
             if e.args[0] == 1050:
                 raise TableAlreadyExists
             else:
@@ -301,7 +301,7 @@ class GitLineCounter(LineCounter):
         c = Command(cmd, uri)
         try:
             c.run(parser_out_func=self.__parse_line)
-        except CommandError as e:
+        except CommandError, e:
             if e.error:
                 printerr("Error running git log command: %s", (e.error,))
             raise ExtensionRunError("Error running " +

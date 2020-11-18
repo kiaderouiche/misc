@@ -53,16 +53,16 @@ from scmlog s, action_files af where s.id = af.commit_id and s.repository_id = ?
 
     def __get_next(self):
         try:
-            t = next(self.rs)
+            t = self.rs.next()
         except StopIteration:
             self.rs = iter(self.icursor.fetchmany())
             if not self.rs:
                 raise StopIteration
-            t = next(self.rs)
+            t = self.rs.next()
 
         return t
 
-    def __next__(self):
+    def next(self):
         if not self.rs:
             raise StopIteration
 
@@ -115,7 +115,7 @@ if __name__ == '__main__':
 
     fr = FileRevs(db, cnn, cursor, 1)
     for revision, commit_id, file_id, action_type, composed in fr:
-        print(revision, commit_id, action_type, fr.get_path())
+        print revision, commit_id, action_type, fr.get_path()
 
     cursor.close()
     cnn.close()

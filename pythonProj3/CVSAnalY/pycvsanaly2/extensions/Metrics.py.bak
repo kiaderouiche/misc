@@ -34,8 +34,8 @@ from pycvsanaly2.Command import Command, CommandError, CommandRunningError
 from repositoryhandler.backends import RepositoryCommandError
 from repositoryhandler.backends.watchers import CAT
 from tempfile import mkdtemp, NamedTemporaryFile
-from .FileRevs import FileRevs
-from .Jobs import JobPool, Job
+from FileRevs import FileRevs
+from Jobs import JobPool, Job
 from xml.sax import handler as xmlhandler, make_parser
 from signal import SIGTERM
 import os
@@ -75,10 +75,10 @@ class Measures:
         self.__dict__[name] = value
 
     def getattrs(self):
-        return list(self.__dict__.keys())
+        return self.__dict__.keys()
 
     def set_error(self):
-        keys = list(self.__dict__.keys())
+        keys = self.__dict__.keys()
         keys.remove('lang')
         for key in keys:
             self.__dict__[key] = -1
@@ -160,11 +160,11 @@ class FileMetricsC(FileMetrics):
         cmd = Command([kdsi, self.path], env={'LC_ALL': 'C'})
         try:
             outputtext = cmd.run()
-        except CommandError as e:
+        except CommandError, e:
             if e.error:
                 printerr('Error running kdsi: %s', (e.error,))
             raise e
-        except CommandRunningError as e:
+        except CommandRunningError, e:
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
@@ -190,11 +190,11 @@ class FileMetricsC(FileMetrics):
         cmd = Command([halstead, self.path], env={'LC_ALL': 'C'})
         try:
             outputtext = cmd.run()
-        except CommandError as e:
+        except CommandError, e:
             if e.error:
                 printerr('Error running halstead: %s', (e.error,))
             raise e
-        except CommandRunningError as e:
+        except CommandRunningError, e:
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
@@ -240,11 +240,11 @@ class FileMetricsC(FileMetrics):
         # The output of this tool is multiline (one line per function)
         try:
             outputlines = cmd.run().split('\n')
-        except CommandError as e:
+        except CommandError, e:
             if e.error:
                 printerr('Error running mccabe: %s', (e.error,))
             raise e
-        except CommandRunningError as e:
+        except CommandRunningError, e:
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
@@ -300,11 +300,11 @@ class FileMetricsPython(FileMetrics):
         cmd = Command([self.pymetrics, '-C', '-S', '-i', 'simple:SimpleMetric', self.path], env={'LC_ALL': 'C'})
         try:
             outputlines = cmd.run().split('\n')
-        except CommandError as e:
+        except CommandError, e:
             if e.error:
                 printerr('Error running pymetrics: %s', (e.error,))
             raise e
-        except CommandRunningError as e:
+        except CommandRunningError, e:
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
@@ -326,11 +326,11 @@ class FileMetricsPython(FileMetrics):
         cmd = Command([self.pymetrics, '-C', '-S', '-B', '-i', 'mccabe:McCabeMetric', self.path], env={'LC_ALL': 'C'})
         try:
             outputlines = cmd.run().split('\n')
-        except CommandError as e:
+        except CommandError, e:
             if e.error:
                 printerr('Error running pymetrics: %s', (e.error,))
             raise e
-        except CommandRunningError as e:
+        except CommandRunningError, e:
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
@@ -412,12 +412,12 @@ class FileMetricsCCCC(FileMetrics):
         cmd = Command(command, env={'LC_ALL': 'C'})
         try:
             cmd.run()
-        except CommandError as e:
+        except CommandError, e:
             if e.error:
                 printerr('Error running cccc: %s', (e.error,))
             remove_directory(tmpdir)
             raise e
-        except CommandRunningError as e:
+        except CommandRunningError, e:
             pid = cmd.get_pid()
             if pid:
                 os.kill(pid, SIGTERM)
@@ -488,13 +488,13 @@ def create_file_metrics(path):
         try:
             outputlines = cmd.run().split('\n')
             remove_directory(tmpdir)
-        except CommandError as e:
+        except CommandError, e:
             profiler_stop("Running sloccount %s", (path,), True)
             remove_directory(tmpdir)
             if e.error:
                 printerr('Error running sloccount: %s', (e.error,))
             raise e
-        except CommandRunningError as e:
+        except CommandRunningError, e:
             profiler_stop("Running sloccount %s", (path,), True)
             remove_directory(tmpdir)
             pid = cmd.get_pid()
@@ -531,7 +531,7 @@ class MetricsJob(Job):
         profiler_start("[LOC] Measuring %s @ %s", (checkout_path, rev))
         try:
             measures.loc = fm.get_LOC()
-        except Exception as e:
+        except Exception, e:
             printerr('Error running loc for %s@%s. Exception: %s', (checkout_path, rev, str(e)))
             measures.loc = -1
         profiler_stop("[LOC] Measuring %s @ %s", (checkout_path, rev), True)
@@ -539,9 +539,9 @@ class MetricsJob(Job):
         profiler_start("[SLOC] Measuring %s @ %s", (checkout_path, rev))
         try:
             measures.sloc, measures.lang = fm.get_SLOCLang()
-        except ProgramNotFound as e:
+        except ProgramNotFound, e:
             printout('Program %s is not installed. Skipping sloc metric', (e.program, ))
-        except Exception as e:
+        except Exception, e:
             printerr('Error running sloc for %s@%s. Exception: %s', (checkout_path, rev, str(e)))
             measures.sloc = measures.lang = - 1
         profiler_stop("[SLOC] Measuring %s @ %s", (checkout_path, rev), True)
@@ -551,9 +551,9 @@ class MetricsJob(Job):
             measures.ncomment, measures.lcomment, measures.lblank = fm.get_CommentsBlank()
         except NotImplementedError:
             pass
-        except ProgramNotFound as e:
+        except ProgramNotFound, e:
             printout('Program %s is not installed. Skipping CommentsBlank metric', (e.program, ))
-        except Exception as e:
+        except Exception, e:
             printerr('Error running CommentsBlank for %s@%s. Exception: %s', (checkout_path, rev, str(e)))
             measures.ncomment = measures.lcomment = measures.lblank = -1
         profiler_stop("[CommentsBlank] Measuring %s @ %s", (checkout_path, rev), True)
@@ -564,9 +564,9 @@ class MetricsJob(Job):
                 measures.halstead_level, measures.halstead_md = fm.get_HalsteadComplexity()
         except NotImplementedError:
             pass
-        except ProgramNotFound as e:
+        except ProgramNotFound, e:
             printout('Program %s is not installed. Skipping halstead metric', (e.program, ))
-        except Exception as e:
+        except Exception, e:
             printerr('Error running HalsteadComplexity for %s@%s. Exception: %s', (checkout_path, rev, str(e)))
             measures.halstead_length = measures.halstead_vol = measures.halstead_level = measures.halstead_md = -1
         profiler_stop("[HalsteadComplexity] Measuring %s @ %s", (checkout_path, rev), True)
@@ -578,9 +578,9 @@ class MetricsJob(Job):
                 measures.nfunctions = fm.get_MccabeComplexity()
         except NotImplementedError:
             pass
-        except ProgramNotFound as e:
+        except ProgramNotFound, e:
             printout('Program %s is not installed. Skipping mccabe metric', (e.program, ))
-        except Exception as e:
+        except Exception, e:
             printerr('Error running MccabeComplexity for %s@%s. Exception: %s', (checkout_path, rev, str(e)))
             measures.mccabe_sum = measures.mccabe_min = measures.mccabe_max = \
                 measures.mccabe_mean = measures.mccabe_median = measures.nfunctions = -1
@@ -630,7 +630,7 @@ class MetricsJob(Job):
             try:
                 repo.cat(os.path.join(repo_uri, path), self.rev)
                 done = True
-            except RepositoryCommandError as e:
+            except RepositoryCommandError, e:
                 if retries > 0:
                     printerr("Command %s returned %d (%s), try again", (e.cmd, e.returncode, e.error))
                     retries -= 1
@@ -639,7 +639,7 @@ class MetricsJob(Job):
                     failed = True
                     printerr("Error obtaining %s@%s. Command %s returned %d (%s)",
                              (self.path, self.rev, e.cmd, e.returncode, e.error))
-            except Exception as e:
+            except Exception, e:
                 failed = True
                 printerr("Error obtaining %s@%s. Exception: %s", (self.path, self.rev, str(e)))
 
@@ -652,7 +652,7 @@ class MetricsJob(Job):
             try:
                 fm = create_file_metrics(fd.name)
                 self.__measure_file(fm, self.measures, fd.name, self.rev)
-            except Exception as e:
+            except Exception, e:
                 printerr("Error creating FileMetrics for %s@%s. Exception: %s", (fd.name, self.rev, str(e)))
                 self.measures.set_error()
 
@@ -751,7 +751,7 @@ class Metrics(Extension):
                                "FOREIGN KEY (commit_id) REFERENCES scmlog(id)" +
                                ") ENGINE=MyISAM" +
                                " CHARACTER SET=utf8")
-            except _mysql_exceptions.OperationalError as e:
+            except _mysql_exceptions.OperationalError, e:
                 if e.args[0] == 1050:
                     cursor.close()
                     raise TableAlreadyExists
@@ -849,7 +849,7 @@ class Metrics(Extension):
             repoid = read_cursor.fetchone()[0]
         except NotImplementedError:
             raise ExtensionRunError("Metrics extension is not supported for %s repositories" % (repo.get_type()))
-        except Exception as e:
+        except Exception, e:
             raise ExtensionRunError("Error creating repository %s. Exception: %s" % (repo.get_uri(), str(e)))
 
         try:
@@ -871,7 +871,7 @@ class Metrics(Extension):
                 id_counter = id + 1
 
             cursor.close()
-        except Exception as e:
+        except Exception, e:
             raise ExtensionRunError(str(e))
 
         if id_counter > 1:
@@ -910,7 +910,7 @@ class Metrics(Extension):
 
             try:
                 relative_path = fr.get_path(repo, path or repo.get_uri())
-            except AttributeError as e:
+            except AttributeError, e:
                 if self.config.metrics_noerr:
                     printerr("Error getting path for file %d@%d: %s", (file_id, commit_id, str(e)))
                 else:
