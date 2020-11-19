@@ -17,7 +17,7 @@
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 
-import os
+import pathlib
 
 from ContentHandler import ContentHandler
 from Database import (DBRepository, DBLog, DBFile, DBFileLink, DBAction,
@@ -25,7 +25,7 @@ from Database import (DBRepository, DBLog, DBFile, DBFileLink, DBAction,
                       DBGraph, statement)
 from profile import profiler_start, profiler_stop
 from utils import printdbg, printout, to_utf8, cvsanaly_cache_dir
-from cPickle import dump, load
+from pickle import dump, load
 
 
 class FileNotInCache(Exception):
@@ -58,21 +58,25 @@ class DBContentHandler(ContentHandler):
         self.people_cache = {}
 
     def __save_caches_to_disk(self):
-        printdbg("DBContentHandler: Saving caches to disk (%s)", (self.cache_file,))
+        printdbg(f"DBContentHandler: Saving caches to disk ({self.cache_file})")
         cache = [self.file_cache, self.moves_cache, self.deletes_cache,
                  self.revision_cache, self.branch_cache, self.tags_cache,
                  self.people_cache]
-        f = open(self.cache_file, 'w')
-        dump(cache, f, -1)
-        f.close()
+        try:
+            with open(self.cache_file, 'w') as f:
+                dump(cache, f, -1)
+        finally:
+            f.close()
 
     def __load_caches_from_disk(self):
-        printdbg("DBContentHandler: Loading caches from disk (%s)", (self.cache_file,))
-        f = open(self.cache_file, 'r')
-        (self.file_cache, self.moves_cache, self.deletes_cache,
-         self.revision_cache, self.branch_cache, self.tags_cache,
-         self.people_cache) = load(f)
-        f.close()
+        printdbg(f"DBContentHandler: Loading caches from disk ({self.cache_file})")
+        try:
+            with open(self.cache_file, 'r') as f:
+                (self.file_cache, self.moves_cache, self.deletes_cache,
+                 self.revision_cache, self.branch_cache, self.tags_cache,
+                 self.people_cache) = load(f)
+        finally:
+            f.close()
 
     def __del__(self):
         if self.cnn is not None:
@@ -100,10 +104,10 @@ class DBContentHandler(ContentHandler):
             last_rev, last_commit = rs
 
         filename = uri.replace('/', '_')
-        self.cache_file = os.path.join(cvsanaly_cache_dir(), filename)
+        self.cache_file = pathlib.Path().joinpath(cvsanaly_cache_dir(), filename)
 
         # if there's a previous cache file, just use it
-        if os.path.isfile(self.cache_file):
+        if pathlib.Path(self.cache_file).is_file():
             self.__load_caches_from_disk()
 
             if last_rev is not None:
@@ -128,8 +132,8 @@ class DBContentHandler(ContentHandler):
                 # a cache file. We can just remove it and continue
                 # normally
                 self.__init_caches()
-                os.remove(self.cache_file)
-                printout("Database looks empty, removing cache file %s", (self.cache_file,))
+                pathlib.Path(self.cache_file).remove()
+                printout(f"Database looks empty, removing cache file {self.cache_file}")
         elif last_rev is not None:
             # There are data in the database,
             # but we don't have a cache file!!!

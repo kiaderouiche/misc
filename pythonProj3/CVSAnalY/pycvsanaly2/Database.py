@@ -1,4 +1,5 @@
 # Copyright (C) 2007 LibreSoft
+# K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -494,7 +495,7 @@ class MysqlDatabase(Database):
                 return MySQLdb.connect(self.hostname, self.username, self.password, self.database, charset='utf8')
             else:
                 return MySQLdb.connect(self.hostname, self.username, db=self.database, charset='utf8')
-        except _mysql_exceptions.OperationalError, e:
+        except _mysql_exceptions.OperationalError as e:
             if e.args[0] == 1049:
                 raise DatabaseNotFound
             elif e.args[0] == 1045:
@@ -616,7 +617,7 @@ class MysqlDatabase(Database):
             cursor.execute("CREATE index commit_id on commit_graph(commit_id)")
             cursor.execute("CREATE index parent_id on commit_graph(parent_id)")
             self._create_views(cursor)
-        except _mysql_exceptions.OperationalError, e:
+        except _mysql_exceptions.OperationalError as e:
             if e.args[0] == 1050:
                 raise TableAlreadyExists
             else:
@@ -644,7 +645,7 @@ def create_database(driver, database, username=None, password=None, hostname=Non
     try:
         db.connect().close()
         return db
-    except AccessDenied, e:
+    except AccessDenied as e:
         if password is None:
             import sys
             import getpass

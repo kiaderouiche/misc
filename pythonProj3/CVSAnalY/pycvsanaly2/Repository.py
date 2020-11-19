@@ -126,10 +126,10 @@ class Person:
     def __setattr__(self, name, value):
         self.__dict__[name] = value
 
-    def __eq__(self, other):
+    def __eq__(self, other) ->str:
         return isinstance(other, Person) and self.name == other.name
 
-    def __ne__(self, other):
+    def __ne__(self, other) -> str:
         return not isinstance(other, Person) or self.name != other.name
 
 

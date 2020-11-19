@@ -1,4 +1,5 @@
 # Copyright (C) 2007 LibreSoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -82,7 +83,7 @@ class CVSParser(Parser):
             self.file_added_on_branch = None
             self.file = None
 
-    def get_added_removed_lines(self):
+    def get_added_removed_lines(self) -> int:
         return self.lines
 
     def _parse_line(self, line):
