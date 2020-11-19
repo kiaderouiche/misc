@@ -32,18 +32,18 @@ Main funcion of mlstats. Fun starts here!
 import datetime
 import logging
 
-from .analyzer import MailArchiveAnalyzer
-from .utils import find_current_month, create_dirs
+from analyzer import MailArchiveAnalyzer
+from utils import find_current_month, create_dirs
 
 from sqlalchemy import create_engine
 from sqlalchemy.engine import url
 from sqlalchemy.orm import sessionmaker
 
-from .db.session import Database
-from .db.report import Report
+from db.session import Database
+from db.report import Report
 
-from .archives import MailingList, COMPRESSED_DIR
-from .backends import LocalArchive, GmaneArchive, MailmanArchive,\
+from archives import MailingList, COMPRESSED_DIR
+from backends import LocalArchive, GmaneArchive, MailmanArchive,\
     WebdirectoryArchive, GMANE_URL, GMANE_DOMAIN, GMANE_DOWNLOAD_URL,\
     REMOTE_BACKENDS
 
@@ -106,10 +106,10 @@ class Application(object):
             stored_messages += s
             non_parsed += np
 
-        self.__print_output(f"{total_messages} messages analyzed" )
+        self.__print_output("%d messages analyzed" % total_messages)
         self.__print_output("%d messages stored in database %s" %
                             (stored_messages, dbname))
-        self.__print_output("f{non_parsed} messages ignored by the parser")
+        self.__print_output("%d messages ignored by the parser" % non_parsed)
 
         difference = total_messages - stored_messages
         if difference == 0 and non_parsed == 0:
@@ -134,8 +134,8 @@ class Application(object):
         if not self.be_quiet:
             print (text)
 
-    def __get_backend(self, mailing_list) -> str:
-        def guess_backend(ml) -> str:
+    def __get_backend(self, mailing_list):
+        def guess_backend(ml):
             if self.backend and self.backend not in REMOTE_BACKENDS:
                 self.__print_output('Unknown backend "%s".'
                                     'Assuming "mailman" backend' %
@@ -203,7 +203,7 @@ class Application(object):
 
         return total, stored, non_parsed
 
-    def __set_archives_to_analyze(self, mailing_list, archives) -> str:
+    def __set_archives_to_analyze(self, mailing_list, archives):
         # today = datetime.datetime.today().strftime(datetimefmt)
         today = datetime.datetime.today()
 
@@ -246,14 +246,15 @@ class Application(object):
         non_parsed_messages_url = 0
 
         for archive in archives_to_analyze:
-            self.__print_output(f'Analyzing {archive.filepath}')
+            self.__print_output('Analyzing %s' % archive.filepath)
 
             self.mail_parser.archive = archive
 
             try:
                 messages, non_parsed_messages = self.mail_parser.get_messages()
-            except IOError as e:
-                self.__print_output(f"Invalid file: {archive.filepath} - {str(e)}. Skipping.")
+            except IOError, e:
+                self.__print_output("Invalid file: %s - %s. Skipping."
+                                    % (archive.filepath, str(e)))
                 continue
 
             total_messages = len(messages)
@@ -285,7 +286,7 @@ class Application(object):
 
         return total_messages_url, stored_messages_url, non_parsed_messages_url
 
-    def __get_gmane_total_count(self, mailing_list_url, download_url) ->str:
+    def __get_gmane_total_count(self, mailing_list_url, download_url):
         """Return the total count of messages from gmane mailing list"""
         mboxes = self.db.get_compressed_files(mailing_list_url)
 
@@ -299,7 +300,7 @@ class Application(object):
         # to restart the analysis from that point.
         import sys
 
-        min_new = sys.maxsize
+        min_new = sys.maxint
         max_visited = 0
 
         for mbox in mboxes:

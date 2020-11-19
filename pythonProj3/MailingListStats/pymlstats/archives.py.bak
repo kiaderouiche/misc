@@ -26,10 +26,10 @@ import gzip
 import zipfile
 
 import os.path
-import urllib.parse
+import urlparse
 
-from .htmlparser import MyHTMLParser
-from .utils import mlstats_dot_dir, check_compressed_file
+from htmlparser import MyHTMLParser
+from utils import mlstats_dot_dir, check_compressed_file
 
 
 COMPRESSED_DIR = os.path.join(mlstats_dot_dir(), 'compressed')
@@ -39,7 +39,7 @@ class MailingList(object):
     def __init__(self, url_or_dirpath, compressed_dir=COMPRESSED_DIR):
         rpath = url_or_dirpath.rstrip(os.path.sep)
 
-        url = urllib.parse.urlparse(rpath)
+        url = urlparse.urlparse(rpath)
         lpath = url.path.rstrip(os.path.sep)
 
         self._local = url.scheme == 'file' or len(url.scheme) == 0

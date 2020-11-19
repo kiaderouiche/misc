@@ -251,7 +251,7 @@ class FileExtractor(object):
                         container_list.extend(ext_list)
 
                 else:
-                    print("FileExtractor: %s extraction ignored" % container)
+                    print "FileExtractor: %s extraction ignored" % container
 
         return extracted_list
 
@@ -263,8 +263,8 @@ if __name__ == "__main__":
 
     try:
         extracted_list = fe.extract(container_list)
-        print(str(extracted_list))
-    except FileExtractorError as e:
-        print(e.message, file=sys.stderr)
+        print str(extracted_list)
+    except FileExtractorError, e:
+        print >>sys.stderr, e.message
     else:
-        print("Extraction completed")
+        print "Extraction completed"

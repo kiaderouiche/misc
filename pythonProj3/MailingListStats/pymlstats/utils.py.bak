@@ -28,7 +28,7 @@ Some utils functions for MLStats
 @contact:      libresoft-tools-devel@lists.morfeo-project.org
 """
 
-from .fileextractor import FileExtractor
+from fileextractor import FileExtractor
 import os.path
 import tempfile
 import shutil
@@ -94,7 +94,7 @@ def file_type(content):
         '\x50\x4b\x03\x04': 'zip'
     }
 
-    for magic, filetype in list(magic_dict.items()):
+    for magic, filetype in magic_dict.items():
         if content.startswith(magic):
             return filetype
 
@@ -179,4 +179,4 @@ def mlstats_dot_dir():
         return _dirs['dot']
 
 if __name__ == '__main__':
-    print("mlstats dot dir: %s" % (mlstats_dot_dir()))
+    print "mlstats dot dir: %s" % (mlstats_dot_dir())

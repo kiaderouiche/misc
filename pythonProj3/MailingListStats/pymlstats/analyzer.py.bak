@@ -108,7 +108,7 @@ class ParseMessage:
         # The 'body' is not actually part of the header, but it will be
         # treated as any other header
         body, patches = self.__get_body(message, charset)
-        filtered_message['body'] = '\n'.join(body)
+        filtered_message['body'] = u'\n'.join(body)
 
         filtered_message['subject'] = self.__decode(message.get('subject'),
                                                     charset)
@@ -153,7 +153,7 @@ class ParseMessage:
                 try:
                     msg = to_unicode(msg, charset)
                 except TypeError:
-                    print('TypeError: msg: %s % msg', file=sys.stderr)
+                    print >> sys.stderr, 'TypeError: msg: %s % msg'
                     msg = [to_unicode(e, charset) for e in msg]
 
             filtered_message[header] = msg
@@ -224,7 +224,7 @@ class ParseMessage:
 
         return field
 
-    def __decode(self, s, charset='latin-1', sep=' '):
+    def __decode(self, s, charset='latin-1', sep=u' '):
         """ Decode a header.  A header can be composed by strings with
             different encoding each.  We convert each group to unicode
             separately and then we merge them back."""
@@ -236,8 +236,8 @@ class ParseMessage:
             r = sep.join([to_unicode(text, text_charset or charset)
                           for text, text_charset in decoded_s])
         except:
-            print('WARNING: charset: %s' % charset, end=' ', file=sys.stderr)
-            print('"%s"' % s, file=sys.stderr)
+            print >> sys.stderr, 'WARNING: charset: %s' % charset,
+            print >> sys.stderr, '"%s"' % s
             r = s
 
         return r
@@ -267,8 +267,8 @@ class MailArchiveAnalyzer:
                 msgid = self.make_msgid(filtered_message['from'],
                                         filtered_message['body'])
                 filtered_message['message-id'] = msgid
-                print('=> message-id not present for:', file=sys.stderr)
-                print(message, file=sys.stderr)
+                print >> sys.stderr, '=> message-id not present for:'
+                print >> sys.stderr, message
                 without_message_id += 1
 
             messages_list.append(filtered_message)
@@ -281,15 +281,15 @@ class MailArchiveAnalyzer:
         try:
             domain = from_addr[0][1].split('@')[1]
         except:
-            domain = 'mlstats.localdomain'
+            domain = u'mlstats.localdomain'
 
         m = hashlib.md5(message.encode('utf-8')).hexdigest()
-        return '<%s.mlstats@%s>' % (m, domain)
+        return u'<%s.mlstats@%s>' % (m, domain)
 
 
 if __name__ == '__main__':
     import pprint
-    from .archives import MBoxArchive
+    from archives import MBoxArchive
 
     # Print analyzer's output to check manually the parsing. In can
     # be used with egrep to filter out specific fields.

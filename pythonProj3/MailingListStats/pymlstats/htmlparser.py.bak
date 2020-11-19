@@ -32,10 +32,10 @@ return a list with all the links contained in the web page.
 
 import formatter
 import htmllib
-import urllib.parse
-import urllib.request, urllib.parse, urllib.error
-import urllib.request, urllib.error, urllib.parse
-import io
+import urlparse
+import urllib
+import urllib2
+import cStringIO
 import gzip
 
 
@@ -60,7 +60,7 @@ class MyHTMLParser(htmllib.HTMLParser):
 
     def get_links(self):
         htmltxt = fetch_remote_resource(self.url, self.user, self.password)
-        scheme = urllib.parse.urlparse(self.url).scheme
+        scheme = urlparse.urlparse(self.url).scheme
 
         if scheme in ('ftp', 'ftps'):
             # FTP servers return a plain page that contains
@@ -93,14 +93,14 @@ def fetch_remote_resource(url, user=None, password=None):
 
     postdata = None
     if user:
-        postdata = urllib.parse.urlencode({'username': user, 'password': password})
+        postdata = urllib.urlencode({'username': user, 'password': password})
 
-    request = urllib.request.Request(url, postdata, headers)
-    response = urllib.request.urlopen(request)
+    request = urllib2.Request(url, postdata, headers)
+    response = urllib2.urlopen(request)
     data = response.read()
 
     if response.info().getheader('content-encoding') == 'gzip':
-        data = io.StringIO(data)
+        data = cStringIO.StringIO(data)
         content = gzip.GzipFile(mode='r', compresslevel=0,
                                 fileobj=data).read()
     else:

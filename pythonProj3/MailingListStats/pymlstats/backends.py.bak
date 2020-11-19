@@ -23,12 +23,12 @@
 
 import gzip
 import os.path
-import urllib.parse
+import urlparse
 
-from .htmlparser import MyHTMLParser, fetch_remote_resource
-from .utils import find_current_month, create_dirs, file_type,\
+from htmlparser import MyHTMLParser, fetch_remote_resource
+from utils import find_current_month, create_dirs, file_type,\
     COMPRESSED_TYPES, ACCEPTED_TYPES
-from .archives import MBoxArchive, MailingList
+from archives import MBoxArchive, MailingList
 
 
 GMANE_DOMAIN = 'gmane.org'
@@ -62,7 +62,7 @@ class BaseArchive(object):
 
     def _print_output(self, text):
         if not self.be_quiet:
-            print(text)
+            print text
 
     def _create_download_dirs(self):
         # Remote archives are retrieved and stored in output_dir.
@@ -183,11 +183,11 @@ class WebdirectoryArchive(MailmanArchive):
 
     def filter_links(self, links):
         """Do not filter any link from the site, only external links."""
-        netloc = urllib.parse.urlparse(self.url).netloc
+        netloc = urlparse.urlparse(self.url).netloc
         filtered_links = []
 
         for l in links:
-            l_netloc = urllib.parse.urlparse(l).netloc
+            l_netloc = urlparse.urlparse(l).netloc
             if l_netloc and l_netloc != netloc:
                 # URL pointing to an external site
                 continue
@@ -250,7 +250,7 @@ class GmaneArchive(RemoteArchive):
         offsets = [0]
         output_dir = self.mailing_list.compressed_dir
 
-        _, _, files = next(os.walk(output_dir))
+        _, _, files = os.walk(output_dir).next()
         for f in files:
             try:
                 offsets.append(int(f))
