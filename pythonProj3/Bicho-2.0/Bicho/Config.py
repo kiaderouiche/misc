@@ -53,14 +53,13 @@ class Config:
 
     @staticmethod
     def load_from_file (config_file):
-        try:
-            with pathlib.Path(config_file).open () as f:
-                exec (f in Config.__dict__)
-        finally:
-            f.close ()
+       try:
+            f = open(config_file, 'r')
+            exec (f in Config.__dict__)  # run variable assignments
+            f.close()
         except Exception as e:
-            raise ErrorLoadingConfig ("Error reading config file %s (%s)" % (\
-                    config_file, str (e)))
+            raise ErrorLoadingConfig("Error reading config file %s (%s)" %
+                                     (config_file, str(e)))
 
     @staticmethod        
     def load ():
