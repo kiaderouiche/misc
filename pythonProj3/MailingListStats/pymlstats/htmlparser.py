@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # Copyright (C) 2007-2010 Libresoft Research Group
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -31,7 +32,7 @@ return a list with all the links contained in the web page.
 """
 
 import formatter
-import htmllib
+import html.parser
 import urllib.parse
 import urllib.request, urllib.parse, urllib.error
 import urllib.request, urllib.error, urllib.parse
@@ -39,7 +40,7 @@ import io
 import gzip
 
 
-class MyHTMLParser(htmllib.HTMLParser):
+class MyHTMLParser(html.parser.HTMLParser):
     def __init__(self, url, web_user=None, web_password=None, verbose=0):
 
         f = formatter.NullFormatter()
@@ -50,7 +51,7 @@ class MyHTMLParser(htmllib.HTMLParser):
         self.links = []
         self.mboxes_links = []
 
-        htmllib.HTMLParser.__init__(self, f, verbose)
+        html.parser.HTMLParser.__init__(self, f, verbose)
 
     def anchor_bgn(self, href, name, type):
         self.save_bgn()
@@ -58,7 +59,7 @@ class MyHTMLParser(htmllib.HTMLParser):
         if href not in self.links:
             self.links.append(href)
 
-    def get_links(self):
+    def get_links(self) -> str:
         htmltxt = fetch_remote_resource(self.url, self.user, self.password)
         scheme = urllib.parse.urlparse(self.url).scheme
 
@@ -84,7 +85,7 @@ class MyHTMLParser(htmllib.HTMLParser):
         return self.links
 
 
-def fetch_remote_resource(url, user=None, password=None):
+def fetch_remote_resource(url, user=None, password=None)-> str:
     user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 ' \
                  '(KHTML, like Gecko) Ubuntu/11.04 Chromium/15.0.871.0 ' \
                  'Chrome/15.0.871.0 Safari/535.2'
