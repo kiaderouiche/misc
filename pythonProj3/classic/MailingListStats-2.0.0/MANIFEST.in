@@ -1,4 +1,0 @@
-include *.md
-include ChangeLog NEWS COPYING TODO
-include db/*
-include man/mlstats.1
