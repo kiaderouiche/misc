@@ -33,9 +33,7 @@ return a list with all the links contained in the web page.
 
 import formatter
 import html.parser
-import urllib.parse
 import urllib.request, urllib.parse, urllib.error
-import urllib.request, urllib.error, urllib.parse
 import io
 import gzip
 
