@@ -27,7 +27,8 @@ from sqlalchemy.orm import aliased
 from sqlalchemy.exc import IntegrityError, DataError
 import logging
 
-import database
+from .database import Base, People, MailingListsPeople, \
+            MessagesPeople,MailingLists, Messages, CompressedFiles
 
 
 class Database(object):
@@ -48,11 +49,11 @@ class Database(object):
 
     @staticmethod
     def create_tables(engine, checkfirst=True):
-        database.Base.metadata.create_all(engine, checkfirst=checkfirst)
+        Base.metadata.create_all(engine, checkfirst=checkfirst)
 
     @staticmethod
     def drop_tables(engine):
-        database.Base.metadata.drop_all(engine)
+        Base.metadata.drop_all(engine)
 
     def truncate(self, text, width=None) -> str:
         if width and len(text) > width:
@@ -75,7 +76,7 @@ class Database(object):
         tld = get_top_level_domain_from_email(email)
         user, domain = get_user_and_domain_from_email(email)
 
-        people = database.People(email_address=email, name=name, username=user,
+        people = People(email_address=email, name=name, username=user,
                            domain_name=domain, top_level_domain=tld)
         try:
             self.session.add(people)
@@ -87,7 +88,7 @@ class Database(object):
             self.log.warning(u'DataError: {}'.format(people))
 
     def insert_mailing_list_people(self, email, mailing_list_url):
-        mlp = database.MailingListsPeople(email_address=email,
+        mlp = MailingListsPeople(email_address=email,
                                     mailing_list_url=mailing_list_url)
         try:
             self.session.add(mlp)
@@ -99,7 +100,7 @@ class Database(object):
             self.log.warning(u'DataError: {}'.format(mlp))
 
     def insert_messages_people(self, msg_people_value):
-        msg_people = database.MessagesPeople(type_of_recipient=msg_people_value[1],
+        msg_people = MessagesPeople(type_of_recipient=msg_people_value[1],
                                        email_address=msg_people_value[0].lower(),
                                        message_id=msg_people_value[2],
                                        mailing_list_url=msg_people_value[3])
@@ -116,7 +117,7 @@ class Database(object):
 
     def insert_messages(self, message, mailing_list_url)->str:
         result = 0
-        msg = database.Messages(message_id=message['message-id'],
+        msg = Messages(message_id=message['message-id'],
                           mailing_list_url=mailing_list_url,
                           mailing_list=message['list-id'],
                           first_date=message['date'],
@@ -192,7 +193,7 @@ class Database(object):
                       SET last_analysis=%s WHERE mailing_list_url=%s;'''
         """
 
-        ml = database.MailingLists(mailing_list_url=url,
+        ml = MailingLists(mailing_list_url=url,
                              mailing_list_name=name,
                              last_analysis=last_analysis)
 
@@ -210,7 +211,7 @@ class Database(object):
                       VALUES (%s, %s, %s, %s);'''
         """
 
-        cf = database.CompressedFiles(url=url,
+        cf = CompressedFiles(url=url,
                                 mailing_list_url=mailing_list_url,
                                 last_analysis=last_analysis,
                                 status=status)
@@ -219,13 +220,13 @@ class Database(object):
         self.session.commit()
 
     def get_compressed_files(self, mailing_list_url) -> str:
-        cf = aliased(database.CompressedFiles)
+        cf = aliased(CompressedFiles)
         ret = self.session.query(cf)\
                           .filter(cf.mailing_list_url==mailing_list_url)
         return ret.all()
 
     def check_compressed_file(self, url) -> str:
-        cf = aliased(database.CompressedFiles)
+        cf = aliased(CompressedFiles)
         ret = self.session.query(cf.status).filter(cf.url == url).all()
 
         status = ret[0] if len(ret) > 0 else None

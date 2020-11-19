@@ -32,12 +32,12 @@ Main funcion of mlstats. Fun starts here!
 import datetime
 import logging
 
-from .analyzer import MailArchiveAnalyzer
-from .utils import find_current_month, create_dirs
-
 from sqlalchemy import create_engine
 from sqlalchemy.engine import url
 from sqlalchemy.orm import sessionmaker
+
+from .analyzer import MailArchiveAnalyzer
+from .utils import find_current_month, create_dirs
 
 from .db.session import Database
 from .db.report import Report

@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # Copyright (C) 2014 Germán Poo-Caamaño <gpoo@calcifer.org>
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -516,11 +517,11 @@ class Report(Database):
                   "Please credit this data as generated using Libresoft's 'MLStats'."
 
         if report_filename:
-            print u"Report written to {}".format(report_filename)
+            print (u"Report written to {}".format(report_filename))
             with open(report_filename, 'w') as f:
                 f.write(output)
         else:
-            print output
+            print (output)
 
 
 if __name__ == '__main__':
@@ -530,12 +531,12 @@ if __name__ == '__main__':
     from sqlalchemy.orm import sessionmaker
 
     if len(sys.argv) < 2:
-        print 'Usage: {} <uri>'.format(sys.argv[0])
-        print ' driver://user:password@host/database\n'
-        print ' eg: sqlite:///:memory:'
-        print '     sqlite:///mlstats.db'
-        print '     mysql://user@password@localhost/mlstats'
-        print '     postgres://user@/mlstats'
+        print ('Usage: {} <uri>'.format(sys.argv[0]))
+        print (' driver://user:password@host/database\n')
+        print (' eg: sqlite:///:memory:')
+        print ('     sqlite:///mlstats.db')
+        print ('     mysql://user@password@localhost/mlstats')
+        print ('     postgres://user@/mlstats')
         sys.exit(-1)
 
     logging.basicConfig()
