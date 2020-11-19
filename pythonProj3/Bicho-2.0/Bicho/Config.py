@@ -25,8 +25,6 @@
 
 from optparse import OptionGroup, OptionParser
 import pathlib
-import pprint
-import sys
 from urllib.error import HTTPError, URLError
 from urllib.request import urlopen, Request
 import urllib.parse
@@ -90,7 +88,7 @@ class Config:
     def check_params(check_params):            
         for param in check_params:
             if not vars(Config).has_key(param) or vars(Config)[param] is None:
-                raise InvalidConfig(f'Configuration parameter ''{param}'' is required' )
+                raise InvalidConfig(f'Configuration parameter {param} is required' )
 
     @staticmethod
     def check_config():
