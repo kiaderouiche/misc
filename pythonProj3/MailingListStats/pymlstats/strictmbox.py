@@ -33,7 +33,7 @@ import email
 from pymlstats.utils import EMAIL_OBFUSCATION_PATTERNS
 
 
-class CustomMailbox(mailbox.UnixMailbox):
+class CustomMailbox(mailbox.mbox):
     """
         Custom mbox that can detect obscured email addressed at
         the beggining of each message.
@@ -45,14 +45,14 @@ class CustomMailbox(mailbox.UnixMailbox):
         that MLStats does not need."
     """
     def __init__(self, fp, factory=email.message_from_file):
-        mailbox.UnixMailbox.__init__(self, fp, factory)
+        mailbox.mbox.__init__(self, fp, factory)
 
-    def _strict_isrealfromline(self, line):
+    def _strict_isrealfromline(self, line) -> str:
         if not self._regexp:
             self._regexp = re.compile(self._fromlinepattern)
         return self._regexp.match(self._check_spam_obscuring(line))
 
-    def _check_spam_obscuring(self, line):
+    def _check_spam_obscuring(self, line) -> str:
         if not line:
             return line
 
