@@ -2,6 +2,7 @@
 #
 # Copyright (C) 2007-2010 Libresoft Research Group
 # Copyright (C) 2015 Germán Poo-Caamaño
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,53 +22,52 @@
 # Authors : Israel Herraiz <herraiz@gsyc.escet.urjc.es>
 #           Germán Poo-Caamaño <gpoo@gnome.org>
 
+import pathlib
 import bz2
 import gzip
 import zipfile
 
-import os.path
 import urllib.parse
 
-from .htmlparser import MyHTMLParser
 from .utils import mlstats_dot_dir, check_compressed_file
 
 
-COMPRESSED_DIR = os.path.join(mlstats_dot_dir(), 'compressed')
+COMPRESSED_DIR = pathlib.Path().joinpath(mlstats_dot_dir(), 'compressed')
 
 
 class MailingList(object):
     def __init__(self, url_or_dirpath, compressed_dir=COMPRESSED_DIR):
-        rpath = url_or_dirpath.rstrip(os.path.sep)
+        rpath = url_or_dirpath.rstrip(pathlib.os.sep)
 
         url = urllib.parse.urlparse(rpath)
-        lpath = url.path.rstrip(os.path.sep)
+        lpath = url.path.rstrip(pathlib.os.sep)
 
         self._local = url.scheme == 'file' or len(url.scheme) == 0
         self._location = os.path.realpath(lpath) if self._local else rpath
-        self._alias = os.path.basename(self._location) or url.netloc
+        self._alias = pathlib.Path(self._location or url.netloc).name()
 
         # Define local directories to store mboxes archives
-        target = os.path.join(url.netloc, lpath.lstrip(os.path.sep))
-        target = target.rstrip(os.path.sep)
+        target = pathlib.Path().joinpath(url.netloc, lpath.lstrip(pathlib.os.sep))
+        target = target.rstrip(pathlib.os.sep)
 
-        self._compressed_dir = os.path.join(compressed_dir, target)
+        self._compressed_dir = pathlib.Path().joinpath(compressed_dir, target)
 
     @property
-    def location(self):
+    def location(self) -> str:
         return self._location
 
     @property
-    def alias(self):
+    def alias(self) -> str:
         return self._alias
 
     @property
-    def compressed_dir(self):
+    def compressed_dir(self) -> str:
         return self._compressed_dir
 
-    def is_local(self):
+    def is_local(self) -> str:
         return self._local
 
-    def is_remote(self):
+    def is_remote(self) -> str:
         return not self.is_local()
 
 
@@ -79,7 +79,7 @@ class MBoxArchive(object):
         self._compressed = check_compressed_file(filepath)
 
     @property
-    def filepath(self):
+    def filepath(self) -> str:
         return self._filepath
 
     @property
@@ -95,8 +95,8 @@ class MBoxArchive(object):
             return zipfile.ZipFile(self.filepath, mode='rb')
 
     @property
-    def compressed_type(self):
+    def compressed_type(self) -> str:
         return self._compressed
 
-    def is_compressed(self):
+    def is_compressed(self) -> str:
         return self._compressed is not None
