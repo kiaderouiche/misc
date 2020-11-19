@@ -656,10 +656,10 @@ class DBContentHandler(ContentHandler):
             self.cursor.executemany(statement(DBGraph.__insert__, self.db.place_holder), edges)
 
         if len(self.actions) >= self.MAX_ACTIONS:
-            printdbg("DBContentHandler: %d actions inserting", (len(self.actions),))
+            printdbg(f"DBContentHandler: {len(self.actions)} actions inserting")
             self.__insert_many()
 
-        profiler_stop("New commit %s for repository %d", (commit.revision, self.repo_id), True)
+        profiler_stop(f"New commit {commit.revision} for repository {self.repo_id}", True)
 
     def end(self):
         # flush pending inserts
