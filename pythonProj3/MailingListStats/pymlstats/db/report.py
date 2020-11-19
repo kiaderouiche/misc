@@ -29,8 +29,9 @@ from sqlalchemy import func, extract
 from sqlalchemy.sql.expression import label
 from sqlalchemy.orm import aliased
 
-import database as db
-from session import Database
+from .database import People, MailingListsPeople, \
+            MessagesPeople,MailingLists, Messages
+from .session import Database
 
 
 class Report(Database):
@@ -41,7 +42,7 @@ class Report(Database):
     def get_num_of_mailing_lists(self, session):
         '''SELECT count(distinct mailing_list_url)
              FROM mailing_lists;'''
-        ml = aliased(db.MailingLists)
+        ml = aliased(MailingLists)
         ret = session.query(func.count(func.distinct(ml.mailing_list_url)))
         return ret.first()
 
@@ -58,9 +59,9 @@ class Report(Database):
         mailing_lists = int(self.get_num_of_mailing_lists(session)[0])
         limit = limit * mailing_lists
 
-        m = aliased(db.Messages)
-        mp = aliased(db.MessagesPeople)
-        p = aliased(db.People)
+        m = aliased(Messages)
+        mp = aliased(MessagesPeople)
+        p = aliased(People)
         ret = session.query(m.mailing_list_url,
                             label('domain', func.lower(p.domain_name)),
                             func.count(m.message_id)) \
@@ -87,8 +88,8 @@ class Report(Database):
         mailing_lists = int(self.get_num_of_mailing_lists(session)[0])
         limit = limit * mailing_lists
 
-        mlp = aliased(db.MailingListsPeople)
-        p = aliased(db.People)
+        mlp = aliased(MailingListsPeople)
+        p = aliased(People)
         ret = session.query(mlp.mailing_list_url,
                             label('domain', func.lower(p.domain_name)),
                             func.count(func.lower(p.email_address))) \
@@ -116,9 +117,9 @@ class Report(Database):
         mailing_lists = int(self.get_num_of_mailing_lists(session)[0])
         limit = limit * mailing_lists
 
-        m = aliased(db.Messages)
-        mp = aliased(db.MessagesPeople)
-        p = aliased(db.People)
+        m = aliased(Messages)
+        mp = aliased(MessagesPeople)
+        p = aliased(People)
         ret = session.query(m.mailing_list_url,
                             label('tld', func.lower(p.top_level_domain)),
                             func.count(m.message_id)) \
@@ -145,8 +146,8 @@ class Report(Database):
         mailing_lists = int(self.get_num_of_mailing_lists(session)[0])
         limit = limit * mailing_lists
 
-        mlp = aliased(db.MailingListsPeople)
-        p = aliased(db.People)
+        mlp = aliased(MailingListsPeople)
+        p = aliased(People)
         ret = session.query(mlp.mailing_list_url,
                             label('tld', func.lower(p.top_level_domain)),
                             func.count(p.email_address)) \
@@ -168,13 +169,13 @@ class Report(Database):
               AND type_of_recipient = 'From'
             GROUP BY m.mailing_list_url, year;'''
 
-        ret = session.query(db.Messages.mailing_list_url,
-                            extract('year', db.Messages.first_date),
-                            func.count(db.Messages.mailing_list_url)) \
-            .group_by(db.Messages.mailing_list_url,
-                      extract('year', db.Messages.first_date)) \
-            .order_by(db.Messages.mailing_list_url,
-                      extract('year', db.Messages.first_date))
+        ret = session.query(Messages.mailing_list_url,
+                            extract('year', Messages.first_date),
+                            func.count(Messages.mailing_list_url)) \
+            .group_by(Messages.mailing_list_url,
+                      extract('year', Messages.first_date)) \
+            .order_by(Messages.mailing_list_url,
+                      extract('year', Messages.first_date))
         return ret.all()
 
     def get_people_by_year(self, session):
@@ -186,8 +187,8 @@ class Report(Database):
               AND type_of_recipient = 'From'
                     GROUP BY m.mailing_list_url, year;'''
 
-        m = aliased(db.Messages)
-        mp = aliased(db.MessagesPeople)
+        m = aliased(Messages)
+        mp = aliased(MessagesPeople)
         ret = session.query(m.mailing_list_url,
                             extract('year', m.first_date),
                             func.count(func.distinct(
@@ -207,8 +208,8 @@ class Report(Database):
             GROUP BY m.mailing_list_url, email
             ORDER BY t desc, email limit %s;'''
 
-        m = aliased(db.Messages)
-        mp = aliased(db.MessagesPeople)
+        m = aliased(Messages)
+        mp = aliased(MessagesPeople)
         ret = session.query(m.mailing_list_url,
                             label('email', func.lower(mp.email_address)),
                             label('t', func.count(m.message_id))) \
@@ -229,8 +230,8 @@ class Report(Database):
               AND mp.type_of_recipient = 'From'
             GROUP BY m. mailing_list_url;'''
 
-        m = aliased(db.Messages)
-        mp = aliased(db.MessagesPeople)
+        m = aliased(Messages)
+        mp = aliased(MessagesPeople)
         ret = session.query(m.mailing_list_url,
                             func.count(func.distinct(
                                 func.lower(mp.email_address)))) \
@@ -244,9 +245,9 @@ class Report(Database):
              FROM messages
             GROUP BY mailing_list_url;'''
 
-        ret = session.query(db.Messages.mailing_list_url,
-                            func.count(db.Messages.mailing_list_url)) \
-            .group_by(db.Messages.mailing_list_url)
+        ret = session.query(Messages.mailing_list_url,
+                            func.count(Messages.mailing_list_url)) \
+            .group_by(Messages.mailing_list_url)
         return ret.all()
 
     def determine_longest_values(self, keyed_tuple, callbacks):
