@@ -404,7 +404,7 @@ class DBContentHandler(ContentHandler):
         # so it was copied at some point
         return ensure_path(path, commit_id)
 
-    def __action_add(self, path, prefix, log):
+    def __action_add(self, path, prefix, log) -> int:
         """Process a new file added"""
         parent_path = pathlib.Path(path).parent
         file_name = pathlib.Path(path).name
@@ -419,7 +419,7 @@ class DBContentHandler(ContentHandler):
 
         return file_id
 
-    def __action_delete(self, path, log):
+    def __action_delete(self, path, log) -> int:
         """Process a deleted file"""
         file_id = self.__get_file_for_path(path, log.id)[0]
 
@@ -432,10 +432,10 @@ class DBContentHandler(ContentHandler):
 
         return file_id
 
-    def __action_rename(self, path, prefix, log, action, dbaction):
+    def __action_rename(self, path, prefix, log, action, dbaction) -> int:
         """Process a renamed file"""
-        new_parent_path = os.path.dirname(path)
-        new_file_name = os.path.basename(path)
+        new_parent_path = pathlib.Path(path).parent
+        new_file_name = pathlib.Path(path).name
 
         from_commit_id = self.revision_cache.get(action.rev, None)
 
@@ -474,29 +474,29 @@ class DBContentHandler(ContentHandler):
 
         return file_id
 
-    def __action_copy(self, path, prefix, log, action, dbaction):
+    def __action_copy(self, path, prefix, log, action, dbaction) ->int:
         """Process a copied file"""
-        new_parent_path = os.path.dirname(path)
-        new_file_name = os.path.basename(path)
+        #new_parent_path = pathlib.Path(path).parent
+        #new_file_name = pathlib.Path(path).name
 
         from_commit_id = self.revision_cache.get(action.rev, None)
 
         if action.branch_f2:
             branch_f2_id = self.__get_branch(action.branch_f2)
-            old_path = "%d://%s" % (branch_f2_id, action.f2)
+            old_path = (f"{branch_f2_id}://{action.f2}")
         else:
             old_path = prefix + action.f2
         file_id, parent_id = self.__get_file_for_path(old_path,
                                                       from_commit_id, True)
 
-        parent_path = os.path.dirname(path)
-        file_name = os.path.basename(path)
+        parent_path = pathlib.Path(path).parent
+        file_name = pathlib.Path(path).name
 
         from_commit_id = self.revision_cache.get(action.rev, None)
 
         if action.branch_f2:
             branch_f2_id = self.__get_branch(action.branch_f2)
-            old_path = "%d://%s" % (branch_f2_id, action.f2)
+            old_path = (f"{branch_f2_id}://{action.f2}")
         else:
             old_path = prefix + action.f2
         from_file_id = self.__get_file_for_path(old_path, from_commit_id, True)[0]
@@ -517,10 +517,10 @@ class DBContentHandler(ContentHandler):
 
         return file_id
 
-    def __action_replace(self, path, prefix, log, action, dbaction):
+    def __action_replace(self, path, prefix, log, action, dbaction)->int:
         # Replace action: Path has been removed and
         # a new one has been added with the same path
-        file_name = os.path.basename(path)
+        file_name = pathlib.Path(path).name
 
         # The replace action is over the old file_id
         file_id, parent_id = self.__get_file_for_path(path, log.id)
