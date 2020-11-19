@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # Copyright (C) 2014 Germán Poo-Caamaño <gpoo@calcifer.org>
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -26,7 +27,7 @@ from sqlalchemy.orm import aliased
 from sqlalchemy.exc import IntegrityError, DataError
 import logging
 
-import database as db
+import database
 
 
 class Database(object):
@@ -41,24 +42,24 @@ class Database(object):
         self.log.setLevel(logging.WARN)
 
     @staticmethod
-    def create_engine(engine=None):
+    def create_engine(engine=None)-> str:
         engine = create_engine(engine or 'sqlite:///:memory:')
         return engine
 
     @staticmethod
     def create_tables(engine, checkfirst=True):
-        db.Base.metadata.create_all(engine, checkfirst=checkfirst)
+        database.Base.metadata.create_all(engine, checkfirst=checkfirst)
 
     @staticmethod
     def drop_tables(engine):
-        db.Base.metadata.drop_all(engine)
+        database.Base.metadata.drop_all(engine)
 
-    def truncate(self, text, width=None):
+    def truncate(self, text, width=None) -> str:
         if width and len(text) > width:
             text = text[:width-3] + '...'
         return text
 
-    def filter(self, address):
+    def filter(self, address) -> str:
         if not address:
             return address
 
@@ -74,7 +75,7 @@ class Database(object):
         tld = get_top_level_domain_from_email(email)
         user, domain = get_user_and_domain_from_email(email)
 
-        people = db.People(email_address=email, name=name, username=user,
+        people = database.People(email_address=email, name=name, username=user,
                            domain_name=domain, top_level_domain=tld)
         try:
             self.session.add(people)
@@ -86,7 +87,7 @@ class Database(object):
             self.log.warning(u'DataError: {}'.format(people))
 
     def insert_mailing_list_people(self, email, mailing_list_url):
-        mlp = db.MailingListsPeople(email_address=email,
+        mlp = database.MailingListsPeople(email_address=email,
                                     mailing_list_url=mailing_list_url)
         try:
             self.session.add(mlp)
@@ -98,7 +99,7 @@ class Database(object):
             self.log.warning(u'DataError: {}'.format(mlp))
 
     def insert_messages_people(self, msg_people_value):
-        msg_people = db.MessagesPeople(type_of_recipient=msg_people_value[1],
+        msg_people = database.MessagesPeople(type_of_recipient=msg_people_value[1],
                                        email_address=msg_people_value[0].lower(),
                                        message_id=msg_people_value[2],
                                        mailing_list_url=msg_people_value[3])
@@ -113,9 +114,9 @@ class Database(object):
         except DataError:
             self.log.warning(u'DataError: {}'.format(msg_people))
 
-    def insert_messages(self, message, mailing_list_url):
+    def insert_messages(self, message, mailing_list_url)->str:
         result = 0
-        msg = db.Messages(message_id=message['message-id'],
+        msg = database.Messages(message_id=message['message-id'],
                           mailing_list_url=mailing_list_url,
                           mailing_list=message['list-id'],
                           first_date=message['date'],
@@ -138,7 +139,7 @@ class Database(object):
 
         return result
 
-    def store_messages(self, message_list, mailing_list_url):
+    def store_messages(self, message_list, mailing_list_url)-> (str, str, str):
         stored_messages = 0
         duplicated_messages = 0
         error_messages = 0
@@ -154,7 +155,7 @@ class Database(object):
                     email = email.lower()
                     self.insert_people(name, email)
                     self.insert_mailing_list_people(email, mailing_list_url)
-                    key = '%s-%s' % (header, email)
+                    key = (f'{header}-{email}')
                     value = (email, header.capitalize(), m['message-id'],
                              mailing_list_url)
                     msgs_people_value.setdefault(key, value)
@@ -191,7 +192,7 @@ class Database(object):
                       SET last_analysis=%s WHERE mailing_list_url=%s;'''
         """
 
-        ml = db.MailingLists(mailing_list_url=url,
+        ml = database.MailingLists(mailing_list_url=url,
                              mailing_list_name=name,
                              last_analysis=last_analysis)
 
@@ -209,7 +210,7 @@ class Database(object):
                       VALUES (%s, %s, %s, %s);'''
         """
 
-        cf = db.CompressedFiles(url=url,
+        cf = database.CompressedFiles(url=url,
                                 mailing_list_url=mailing_list_url,
                                 last_analysis=last_analysis,
                                 status=status)
@@ -217,21 +218,21 @@ class Database(object):
         self.session.merge(cf)
         self.session.commit()
 
-    def get_compressed_files(self, mailing_list_url):
-        cf = aliased(db.CompressedFiles)
+    def get_compressed_files(self, mailing_list_url) -> str:
+        cf = aliased(database.CompressedFiles)
         ret = self.session.query(cf)\
                           .filter(cf.mailing_list_url==mailing_list_url)
         return ret.all()
 
-    def check_compressed_file(self, url):
-        cf = aliased(db.CompressedFiles)
+    def check_compressed_file(self, url) -> str:
+        cf = aliased(database.CompressedFiles)
         ret = self.session.query(cf.status).filter(cf.url == url).all()
 
         status = ret[0] if len(ret) > 0 else None
         return status
 
 
-def get_top_level_domain_from_email(email):
+def get_top_level_domain_from_email(email) ->str:
     try:
         top_level_domain = email.split('.')[-1]
     except IndexError:
@@ -240,7 +241,7 @@ def get_top_level_domain_from_email(email):
     return top_level_domain
 
 
-def get_user_and_domain_from_email(email):
+def get_user_and_domain_from_email(email) -> (str, str):
     try:
         username, domain_name = email.split('@')
     except ValueError:
@@ -254,12 +255,12 @@ if __name__ == '__main__':
     from sqlalchemy import create_engine
 
     if len(sys.argv) < 2:
-        print 'Usage: {} <uri>'.format(sys.argv[0])
-        print ' driver://user:password@host/database\n'
-        print ' eg: sqlite:///:memory:'
-        print '     sqlite:///mlstats.db'
-        print '     mysql://user@password@localhost/mlstats'
-        print '     postgres://user@/mlstats'
+        print ('Usage: {} <uri>'.format(sys.argv[0]))
+        print (' driver://user:password@host/database\n')
+        print (' eg: sqlite:///:memory:')
+        print ('     sqlite:///mlstats.db')
+        print ('     mysql://user@password@localhost/mlstats')
+        print ('     postgres://user@/mlstats')
         sys.exit(-1)
 
     logging.basicConfig()
