@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -30,10 +31,12 @@ from pickle import dump, load
 
 class FileNotInCache(Exception):
     '''File is not in Cache'''
+    pass
 
 
 class CacheFileMismatch(Exception):
     '''File cache doesn't match with the Database'''
+    pass
 
 
 class DBContentHandler(ContentHandler):
@@ -151,24 +154,24 @@ class DBContentHandler(ContentHandler):
 
         if self.actions:
             actions = [(a.id, a.type, a.file_id, a.commit_id, a.branch_id) for a in self.actions]
-            profiler_start("Inserting actions for repository %d", (self.repo_id,))
+            profiler_start(f"Inserting actions for repository {self.repo_id}")
             cursor.executemany(statement(DBAction.__insert__, self.db.place_holder), actions)
             self.actions = []
-            profiler_stop("Inserting actions for repository %d", (self.repo_id,))
+            profiler_stop(f"Inserting actions for repository {self.repo_id}")
         if self.commits:
             commits = [
                 (c.id, c.rev, c.committer, c.author, c.date, c.date_tz, c.author_date, c.author_date_tz, c.message, c.composed_rev, c.repository_id)
                 for c in self.commits]
-            profiler_start("Inserting commits for repository %d", (self.repo_id,))
+            profiler_start(f"Inserting commits for repository {self.repo_id}")
             cursor.executemany(statement(DBLog.__insert__, self.db.place_holder), commits)
             self.commits = []
-            profiler_stop("Inserting commits for repository %d", (self.repo_id,))
+            profiler_stop(f"Inserting commits for repository {self.repo_id}")
 
-        profiler_start("Committing inserts for repository %d", (self.repo_id,))
+        profiler_start(f"Committing actions for repository {self.repo_id}")
         self.cnn.commit()
-        profiler_stop("Committing inserts for repository %d", (self.repo_id,))
+        profiler_start(f"Committing actions for repository {self.repo_id}")
 
-    def __add_new_file_and_link(self, file_name, parent_id, commit_id, file_path):
+    def __add_new_file_and_link(self, file_name, parent_id, commit_id, file_path) ->int:
         dbfile = DBFile(None, file_name)
         dbfile.repository_id = self.repo_id
         self.cursor.execute(statement(DBFile.__insert__, self.db.place_holder),
@@ -196,7 +199,7 @@ class DBContentHandler(ContentHandler):
            updated
         """
 
-        def ensure_person(person):
+        def ensure_person(person) ->int:
             profiler_start("Ensuring person %s for repository %d",
                            (person.name, self.repo_id))
             printdbg("DBContentHandler: ensure_person %s <%s>",
@@ -238,10 +241,9 @@ class DBContentHandler(ContentHandler):
            updated
         """
 
-        def ensure_branch(branch):
-            profiler_start("Ensuring branch %s for repository %d",
-                           (branch, self.repo_id))
-            printdbg("DBContentHandler: ensure_branch %s", (branch,))
+        def ensure_branch(branch) -> int:
+            profiler_start(f"Ensuring branch {branch} for repository {self.repo_id}")
+            printdbg(f"DBContentHandler: ensure_branch {branch}")
             cursor = self.cursor
 
             cursor.execute(statement("SELECT id from branches where name = ?",
@@ -268,14 +270,14 @@ class DBContentHandler(ContentHandler):
 
         return branch_id
 
-    def __get_tag(self, tag):
+    def __get_tag(self, tag) ->int:
         """Get the tag_id given a tag name.
            First, it tries to get it from cache and then from the database.
            When a new tag_id is gotten from the database, the cache must be
            updated
         """
 
-        def ensure_tag(tag):
+        def ensure_tag(tag)-> int:
             profiler_start("Ensuring tag %s for repository %d",
                            (tag, self.repo_id))
             printdbg("DBContentHandler: ensure_tag %s", (tag,))
@@ -292,7 +294,7 @@ class DBContentHandler(ContentHandler):
             else:
                 tag_id = rs[0]
 
-            profiler_stop("Ensuring tag %s for repository %d", (tag, self.repo_id), True)
+            profiler_stop(f"Ensuring tag {tag} for repository {self.repo_id}")
 
             return tag_id
 
@@ -312,7 +314,7 @@ class DBContentHandler(ContentHandler):
     def __get_file_from_moves_cache(self, path):
         # Path is not in the cache, but it should
         # Look if any of its parents was moved
-        printdbg("DBContentHandler: looking for path %s in moves cache", (path,))
+        printdbg(f"DBContentHandler: looking for path {path} in moves cache")
         current_path = path
         replaces = []
         while current_path not in self.file_cache:
@@ -527,7 +529,7 @@ class DBContentHandler(ContentHandler):
         if action.f2 is not None:
             if action.branch_f2:
                 branch_f2_id = self.__get_branch(action.branch_f2)
-                old_path = "%d://%s" % (branch_f2_id, action.f2)
+                old_path = (f"{branch_f2_id}://{action.f2}")
             else:
                 old_path = prefix + action.f2
             from_commit_id = self.revision_cache.get(action.rev, None)
@@ -579,7 +581,7 @@ class DBContentHandler(ContentHandler):
         if commit.revision in self.revision_cache:
             return
 
-        profiler_start("New commit %s for repository %d", (commit.revision, self.repo_id))
+        profiler_start(f"New commit {commit.revision} for repository {self.repo_id}")
 
         log = DBLog(None, commit)
         log.repository_id = self.repo_id
@@ -598,7 +600,7 @@ class DBContentHandler(ContentHandler):
 
         # TODO: sort actions? R, A, D, M, V, C
         for action in commit.actions:
-            printdbg("DBContentHandler: Action: %s", (action.type,))
+            printdbg("DBContentHandler: Action: {action.type}")
             dbaction = DBAction(None, action.type)
             dbaction.commit_id = log.id
 
@@ -630,7 +632,7 @@ class DBContentHandler(ContentHandler):
                 if file_id is None:
                     continue
             else:
-                assert "Unknown action type %s" % (action.type)
+                assert (f"Unknown action type {action.type}")
 
             dbaction.file_id = file_id
             self.actions.append(dbaction)
@@ -677,7 +679,6 @@ class DBContentHandler(ContentHandler):
 if __name__ == '__main__':
     import sys
     from cStringIO import StringIO
-    from cPickle import dump, load
     from Database import create_database, DBRepository, ICursor
 
     uri = "http://svn.test-cvsanaly.org/svn/test"
