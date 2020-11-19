@@ -42,16 +42,16 @@ class Commit:
     def __setstate__(self, dict):
         self.__dict__.update(dict)
 
-    def __getattr__(self, name):
+    def __getattr__(self, name) -> str:
         return self.__dict__[name]
 
     def __setattr__(self, name, value) -> int:
         self.__dict__[name] = value
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> str:
         return isinstance(other, Commit) and self.revision == other.revision
 
-    def __ne__(self, other):
+    def __ne__(self, other) -> str:
         return not isinstance(other, Commit) or self.revision != other.revision
 
 
@@ -81,10 +81,10 @@ class Action:
     def __setstate__(self, dict):
         self.__dict__.update(dict)
 
-    def __getattr__(self, name):
+    def __getattr__(self, name) ->str:
         return self.__dict__[name]
 
-    def __setattr__(self, name, value):
+    def __setattr__(self, name, value) -> str:
         self.__dict__[name] = value
 
     def __eq__(self, other):
