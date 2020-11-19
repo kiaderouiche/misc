@@ -66,7 +66,7 @@ def profiler_stop(msg, args=None, delete=False):
     t = _timers[msg]
     t.stop()
 
-    str = "[ %s ] %f s elapsed\n" % (msg, t.elapsed())
+    str = (f"[ {msg} ] {t.elapsed} s elapsed\n")
     sys.stdout.write(str)
     sys.stdout.flush()
 
@@ -80,9 +80,9 @@ if __name__ == '__main__':
     Config().profile = True
 
     def _thread(n):
-        profiler_start("Running thread %d sleeping %d seconds", (n, n + 1))
+        profiler_start(f"Running thread {n} sleeping {n+1} seconds")
         time.sleep(n + 1)
-        profiler_stop("Running thread %d sleeping %d seconds", (n, n + 1), True)
+        profiler_stop(f"Running thread {n} sleeping {n+1} seconds", True)
 
     for i in range(6):
         thread = threading.Thread(target=_thread, args=(i,))

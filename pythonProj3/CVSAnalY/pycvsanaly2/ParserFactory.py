@@ -35,7 +35,7 @@ def create_parser_from_logfile(uri) -> int:
         retval = False
 
         try:
-            with open(logfile, 'r') as f:
+            f = open(logfile, 'r')
         except IOError as e:
                     printerr(str(e))
                     return False
@@ -48,8 +48,8 @@ def create_parser_from_logfile(uri) -> int:
                 retval = True
                 break
             line = f.readline()
-        finally:
-            f.close()
+
+        f.close()
 
         return retval
 

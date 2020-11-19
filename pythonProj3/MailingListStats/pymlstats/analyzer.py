@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 # Copyright (C) 2007-2010 Libresoft Research Group
 # Copyright (C) 2011-2014 Germán Poo-Caamaño <gpoo@gnome.org>
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -58,13 +59,13 @@ def to_unicode(string, charset='latin-1'):
     and the returned object is of unicode type.
     If the string is already of unicode type, just return it."""
 
-    if isinstance(string, unicode):
+    if isinstance(string, str):
         return string
     elif isinstance(string, str):
         encoded = False
         for encoding in [charset, 'ascii', 'utf-8', 'iso-8859-15']:
             try:
-                uni_string = unicode(string, encoding)
+                uni_string = str(string, encoding)
             except:
                 continue
             encoded = True
@@ -73,7 +74,7 @@ def to_unicode(string, charset='latin-1'):
             return uni_string
         else:
             # All conversions failed, get unicode with unknown characters
-            return (unicode(string, errors='replace'))
+            return (str(string, errors='replace'))
     else:
         raise TypeError('string should be of str type')
 
