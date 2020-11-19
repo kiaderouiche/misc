@@ -200,10 +200,8 @@ class DBContentHandler(ContentHandler):
         """
 
         def ensure_person(person) ->int:
-            profiler_start("Ensuring person %s for repository %d",
-                           (person.name, self.repo_id))
-            printdbg("DBContentHandler: ensure_person %s <%s>",
-                     (person.name, person.email))
+            profiler_start(f"Ensuring person {person.name} for repository {self.repo_id}",)
+            printdbg(f"DBContentHandler: ensure_person {person.name} <person.email>")
             cursor = self.cursor
 
             name = to_utf8(person.name)
@@ -219,8 +217,7 @@ class DBContentHandler(ContentHandler):
             else:
                 person_id = rs[0]
 
-            profiler_stop("Ensuring person %s for repository %d",
-                          (person.name, self.repo_id), True)
+            profiler_stop(f"Ensuring person {person.name} for repository {self.repo_id}", True)
 
             return person_id
 
@@ -257,8 +254,7 @@ class DBContentHandler(ContentHandler):
             else:
                 branch_id = rs[0]
 
-            profiler_stop("Ensuring branch %s for repository %d",
-                          (branch, self.repo_id), True)
+            profiler_stop(f"Ensuring branch {branch} for repository {self.repo_id}", True)
 
             return branch_id
 
@@ -280,7 +276,7 @@ class DBContentHandler(ContentHandler):
         def ensure_tag(tag)-> int:
             profiler_start("Ensuring tag %s for repository %d",
                            (tag, self.repo_id))
-            printdbg("DBContentHandler: ensure_tag %s", (tag,))
+            printdbg(f"DBContentHandler: ensure_tag {tag}")
             cursor = self.cursor
 
             cursor.execute(statement("SELECT id from tags where name = ?",

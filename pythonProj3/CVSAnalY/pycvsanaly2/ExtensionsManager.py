@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,13 +18,15 @@
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 
+import pathlib
+
 from extensions import get_extension, ExtensionRunError, ExtensionUnknownError
 from utils import printerr, printout
-import os
 
 
 class ExtensionException(Exception):
     '''ExtensionException'''
+    pass
 
 
 class InvalidExtension(ExtensionException):
@@ -60,12 +63,12 @@ class ExtensionsManager:
                 except:
                     raise InvalidDependency(ext, dep)
 
-    def run_extension(self, name, extension, repo, uri, db):
+    def run_extension(self, name, extension, repo, uri, db) -> bool:
         printout("Executing extension %s", (name,))
         try:
             extension.run(repo, uri, db)
-        except ExtensionRunError, e:
-            printerr("Error running extension %s: %s", (name, str(e)))
+        except ExtensionRunError as e:
+            printerr(f"Error running extension {name}: {str(e)}")
             return False
 
         return True
@@ -104,10 +107,10 @@ class ExtensionsManager:
 
             self.run_extension(name, extension, repo, uri, db)
 
-    def load_all_extensions(self):
+    def load_all_extensions(self) -> str:
         extensions = {}
-        dir = os.path.dirname(os.path.realpath(__file__))
-        for files in os.listdir(dir + "/extensions"):
+        dir = pathlib.Path().joinpath(os.path.realpath(__file__)) #replace (wai)
+        for files in pathlib.Path(dir + "/extensions").iterdir():
             if files.endswith(".py"):
                 ext = files[:-3]
                 try:

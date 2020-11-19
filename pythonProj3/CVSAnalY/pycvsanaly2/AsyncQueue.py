@@ -1,4 +1,5 @@
 # Copyright (C) 2008 Libresoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -55,14 +56,14 @@ class AsyncQueue:
         finally:
             self.finish.release()
 
-    def empty(self):
+    def empty(self) ->int:
         self.mutex.acquire()
         retval = self._empty()
         self.mutex.release()
 
         return retval
 
-    def empty_unlocked(self):
+    def empty_unlocked(self) ->str:
         return self._empty()
 
     def put(self, item, timeout=None):
@@ -112,7 +113,7 @@ class AsyncQueue:
         finally:
             self.empty_cond.release()
 
-    def get_unlocked(self):
+    def get_unlocked(self) ->str:
         return self._get()
 
     # Queue implementation
@@ -123,13 +124,13 @@ class AsyncQueue:
     def _empty(self):
         return not self.queue
 
-    def _full(self):
+    def _full(self) -> int:
         return self.maxsize > 0 and len(self.queue) == self.maxsize
 
     def _put(self, item):
         self.queue.append(item)
 
-    def _get(self):
+    def _get(self) ->str:
         return self.queue.popleft()
 
 
@@ -137,7 +138,7 @@ if __name__ == '__main__':
     def worker(q):
         while True:
             item = q.get()
-            print "Got item ", item
+            print ("Got item ", item)
             q.done()
 
     q = AsyncQueue()
@@ -154,4 +155,4 @@ if __name__ == '__main__':
     try:
         q.get(5)
     except TimeOut:
-        print "Queue empty! bye bye!"
+        print ("Queue empty! bye bye!")

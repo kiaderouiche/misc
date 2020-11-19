@@ -1,4 +1,5 @@
 # Copyright (C) 2007  GSyC/LibreSoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 #
 # Authors: Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 
+import pathlib
 
 class ErrorLoadingConfig(Exception):
     def __init__(self, message=None):
@@ -47,10 +49,10 @@ class Config:
     def __init__(self):
         self.__dict__ = self.__shared_state
 
-    def __getattr__(self, attr):
+    def __getattr__(self, attr) -> str:
         return self.__dict__[attr]
 
-    def __setattr__(self, attr, value):
+    def __setattr__(self, attr, value) ->int:
         self.__dict__[attr] = value
 
     def __load_from_file(self, config_file):
@@ -58,11 +60,13 @@ class Config:
             from types import ModuleType
 
             config = ModuleType('cvsanaly-config')
-            f = open(config_file, 'r')
-            exec f in config.__dict__
-            f.close()
-        except Exception, e:
-            raise ErrorLoadingConfig("Error reading config file %s (%s)" % (config_file, str(e)))
+            try:
+                with pathlib.Path().open(config_file, 'r') as f:
+                    exec (f in config.__dict__)
+            finally:
+                f.close()
+        except Exception as e:
+            raise ErrorLoadingConfig(f"Error reading config file {config_file} ({str(e)})")
 
         try:
             self.debug = config.debug
@@ -134,25 +138,24 @@ class Config:
             pass
 
     def load(self):
-        import os
         from utils import cvsanaly_dot_dir, printout
 
         # First look in /etc
         # FIXME /etc is not portable
-        config_file = os.path.join('/etc', 'cvsanaly2')
-        if os.path.isfile(config_file):
+        config_file = pathlib.Path().joinpath('/etc', 'cvsanaly2')
+        if pathlib.Path(config_file).is_file():
             self.__load_from_file(config_file)
 
         # Then look at $HOME
-        config_file = os.path.join(cvsanaly_dot_dir(), 'config')
-        if os.path.isfile(config_file):
+        config_file = pathlib.Path().joinpath(cvsanaly_dot_dir(), 'config')
+        if pathlib.Path(config_file).is_file():
             self.__load_from_file(config_file)
         else:
             # If there's an old file, migrate it
-            old_config = os.path.join(os.environ.get('HOME'), '.cvsanaly')
-            if os.path.isfile(old_config):
-                printout("Old config file found in %s, moving to %s", (old_config, config_file))
-                os.rename(old_config, config_file)
+            old_config = pathlib.Path().joinpath(pathlib.os.environ.get('HOME'), '.cvsanaly')
+            if pathlib.Path(config_file).is_file():
+                printout(f"Old config file found in {old_config}, moving to {config_file}")
+                pathlib.Path(old_config).rename(config_file)
                 self.__load_from_file(config_file)
 
     def load_from_file(self, path):

@@ -1,4 +1,5 @@
 # Copyright (C) 2008 LibreSoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -24,7 +25,7 @@ from AsyncQueue import AsyncQueue
 
 import threading
 from cStringIO import StringIO
-from cPickle import dump, load
+from pickle import dump, load
 
 
 class DBTempLog:
@@ -78,7 +79,7 @@ class DBTempLog:
                                "date datetime," +
                                "object LONGBLOB" +
                                ") CHARACTER SET=utf8")
-            except _mysql_exceptions.OperationalError, e:
+            except _mysql_exceptions.OperationalError as e:
                 if e.args[0] == 1050:
                     cursor.close()
                     raise TableAlreadyExists

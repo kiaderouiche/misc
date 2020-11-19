@@ -17,6 +17,7 @@
 # Authors :
 #       Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 
+import pathlib
 import threading
 from repositoryhandler.backends.watchers import LOG
 from AsyncQueue import AsyncQueue, TimeOut
@@ -47,19 +48,16 @@ class LogReader:
     def set_logfile(self, filename):
         self.logfile = filename
 
-    def _read_from_logfile(self, new_line_cb, user_data):
-        try:
-            f = open(self.logfile, 'r')
-        except IOError, e:
-            printerr(str(e))
-            return
+    # def _read_from_logfile(self, new_line_cb, user_data): #Revisited code
+    #     log_file = pathlib.Path(self.logfile)
+    #     if log_file.exists() and log_file.is_file():
+    #         with log_file.open(mode='r') as f:
+    #             line = f.readline()
+    #             while line:
+    #                 new_line_cb(line, user_data)
+    #                 line = f.readline()
 
-        line = f.readline()
-        while line:
-            new_line_cb(line, user_data)
-            line = f.readline()
-
-        f.close()
+    #         f.close()
 
     def _logreader(self, repo, queue):
         def new_line(data, user_data=None):
@@ -97,7 +95,7 @@ class LogReader:
         if self.logfile is not None:
             try:
                 self._read_from_logfile(new_line_cb, user_data)
-            except IOError, e:
+            except IOError as e:
                 printerr(str(e))
         elif self.repo is not None:
             self._read_from_repository(new_line_cb, user_data)
@@ -132,7 +130,7 @@ if __name__ == '__main__':
     from repositoryhandler.backends import create_repository, create_repository_from_path
 
     def new_line(line, user_data=None):
-        print line.strip('\n')
+        print (line.strip('\n'))
         if user_data is not None:
             user_data.add_line(line)
 
