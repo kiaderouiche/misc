@@ -23,6 +23,8 @@ This module contains a the definition of the generic SQL tables used
 by mlstats.
 """
 
+import pathlib
+
 from sqlalchemy import func, extract
 from sqlalchemy.sql.expression import label
 from sqlalchemy.orm import aliased
@@ -518,8 +520,8 @@ class Report(Database):
 
         if report_filename:
             print (u"Report written to {}".format(report_filename))
-            with open(report_filename, 'w') as f:
-                f.write(output)
+            path_file = pathlib.Path(report_filename)
+            path_file.write_text(output)
         else:
             print (output)
 
