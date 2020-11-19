@@ -201,12 +201,12 @@ if __name__ == '__main__':
     import sys
 
     if len(sys.argv) < 2:
-        print 'Usage: {} <uri>'.format(sys.argv[0])
-        print ' driver://user:password@host/database\n'
-        print ' eg: sqlite:///:memory:'
-        print '     sqlite:///mlstats.db'
-        print '     mysql://user:password@localhost/mlstats'
-        print '     postgres://user@/mlstats'
+        print ('Usage: {} <uri>'.format(sys.argv[0]))
+        print (' driver://user:password@host/database\n')
+        print (' eg: sqlite:///:memory:')
+        print ('     sqlite:///mlstats.db')
+        print ('     mysql://user:password@localhost/mlstats')
+        print ('     postgres://user@/mlstats')
         sys.exit(-1)
 
     engine = create_engine(sys.argv[1], encoding='utf8',

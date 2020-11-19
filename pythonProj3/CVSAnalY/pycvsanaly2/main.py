@@ -1,4 +1,5 @@
 # Copyright (C) 2006-2009 LibreSoft
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,7 +29,7 @@ Main funcion of cvsanaly. Fun starts here!
 @contact:      libresoft-tools-devel@lists.morfeo-project.org
 """
 
-import os
+import pathlib
 import getopt
 
 from repositoryhandler.backends import create_repository, create_repository_from_path, RepositoryUnknownError
@@ -41,11 +42,11 @@ from .Log import LogReader, LogWriter
 from .ExtensionsManager import ExtensionsManager, InvalidExtension, InvalidDependency
 from .Config import Config, ErrorLoadingConfig
 from .utils import printerr, printout, uri_to_filename
-from ._config import *
+from ._config import PACKAGE, VERSION, DESCRIPTION, COPYRIGHT
 
 
 def usage():
-    print("%s %s - %s" % (PACKAGE, VERSION, DESCRIPTION))
+    print(f"{PACKAGE} {VERSION} - {DESCRIPTION}")
     print(COPYRIGHT)
     print()
     print("Usage: cvsanaly2 [options] [URI]")
@@ -175,7 +176,7 @@ def main(argv):
             gitref = value
 
     if len(args) <= 0:
-        uri = os.getcwd()
+        uri = pathlib.Path().cwd()
     else:
         uri = args[0]
 
@@ -239,8 +240,7 @@ def main(argv):
         try:
             set_writable_path_from_config('cache', config.writable_path)
         except OSError as e:
-            printerr("Cannot create cache directory in %s. Error: %s" ,
-                     (config.writable_path, repr(e)))
+            printerr(f"Cannot create cache directory in {config.writable_path}. Error: {repr(e)}")
             return 1
 
         try:
@@ -256,10 +256,10 @@ def main(argv):
         try:
             repo = create_repository_from_path(path)
         except RepositoryUnknownError:
-            printerr("Path %s doesn't seem to point to a repository supported by cvsanaly", (path,))
+            printerr(f"Path {path} doesn't seem to point to a repository supported by cvsanaly")
             return 1
         except Exception as e:
-            printerr("Unknown error creating repository for path %s (%s)", (path, str(e)))
+            printerr(f"Unknown error creating repository for path {path} ({str(e)})")
             return 1
         uri = repo.get_uri_for_path(path)
     else:
@@ -268,7 +268,7 @@ def main(argv):
         repo = create_repository('svn', uri)
         # Check uri actually points to a valid svn repo
         if repo.get_last_revision(uri) is None:
-            printerr("URI %s doesn't seem to point to a valid svn repository", (uri,))
+            printerr(f"URI {uri} doesn't seem to point to a valid svn repository")
             return 1
 
     if not config.no_parse:
@@ -295,13 +295,13 @@ def main(argv):
     try:
         emg = ExtensionsManager(config.extensions)
     except InvalidExtension as e:
-        printerr("Invalid extension %s (%s)", (e.name, e.message,))
+        printerr(f"Invalid extension {e.name} ({e.message})")
         return 1
     except InvalidDependency as e:
-        printerr("Extension %s depends on extension %s which is not a valid extension", (e.name1, e.name2))
+        printerr(f"Extension {e.name1} depends on extension {e.name2} which is not a valid extension")
         return 1
     except Exception as e:
-        printerr("Unknown extensions error: %s", (str(e),))
+        printerr(f"Unknown extensions error: {str(e)}")
         return 1
 
     db_exists = False
@@ -313,13 +313,13 @@ def main(argv):
                              config.db_password,
                              config.db_hostname)
     except AccessDenied as e:
-        printerr("Error creating database: %s", (e.message,))
+        printerr(f"Error creating database: {e.message}")
         return 1
     except DatabaseNotFound:
         printerr("Database %s doesn't exist. It must be created before running cvsanaly", (config.db_database,))
         return 1
     except DatabaseDriverNotSupported:
-        printerr("Database driver %s is not supported by cvsanaly", (config.db_driver,))
+        printerr(f"Database driver {config.db_driver} is not supported by cvsanaly")
         return 1
 
     cnn = db.connect()
@@ -330,7 +330,7 @@ def main(argv):
     except TableAlreadyExists:
         db_exists = True
     except DatabaseException as e:
-        printerr("Database error: %s", (e.message,))
+        printerr(f"Database error: {e.message}")
         return 1
 
     if config.no_parse and not db_exists:
@@ -361,7 +361,7 @@ def main(argv):
 
     if not config.no_parse:
         # Start the parsing process
-        printout("Parsing log for %s (%s)", (path or uri, repo.get_type()))
+        printout(f"Parsing log for {path or uri} (repo.get_type())")
 
         def new_line(line, user_data):
             parser, writer = user_data
