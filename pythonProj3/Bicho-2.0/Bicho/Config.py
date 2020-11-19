@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -53,7 +54,7 @@ class Config:
 
     @staticmethod
     def load_from_file (config_file):
-       try:
+        try:
             f = open(config_file, 'r')
             exec (f in Config.__dict__)  # run variable assignments
             f.close()
