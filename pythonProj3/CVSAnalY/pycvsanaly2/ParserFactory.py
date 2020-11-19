@@ -143,25 +143,25 @@ def create_parser_from_logfile(uri) -> int:
 #
 #        return retval
 
-    if pathlib.Path(uri).is_file():
-        if logfile_is_svn(uri):
-            p = SVNParser()
-        elif logfile_is_cvs(uri):
-            p = CVSParser()
-        elif log_file_is_git(uri):
-            p = GitParser()
-        elif log_file_is_bzr(uri):
-            p = BzrParser()
+    # if pathlib.Path(uri).is_file():
+    #     if logfile_is_svn(uri):
+    #         p = SVNParser()
+    #     elif logfile_is_cvs(uri):
+    #         p = CVSParser()
+    #     elif log_file_is_git(uri):
+    #         p = GitParser()
+    #     elif log_file_is_bzr(uri):
+    #         p = BzrParser()
 
-        assert p is not None
+    #     assert p is not None
 
-        return p
+    #     return p
 
-    printerr(f"Error: path {uri,} doesn't look like a valid log file")
-    return None
+    # printerr(f"Error: path {uri,} doesn't look like a valid log file")
+    # return None
 
 
-def create_parser_from_repository(repo):
+def create_parser_from_repository(repo) -> str:
     if repo.get_type() == 'cvs':
         p = CVSParser()
     elif repo.get_type() == 'svn':
