@@ -1,5 +1,5 @@
 PACKAGE = "bicho"
-VERSION = "0.9"
+VERSION = "2.0"
 
 AUTHOR = "GSyC/LibreSoft, Universidad Rey Juan Carlos"
 AUTHOR_EMAIL = "libresoft-tools-devel@lists.morfeo-project.org"

@@ -54,7 +54,7 @@ class Config:
     @staticmethod
     def load_from_file (config_file):
         try:
-            pathlib.Path(config_file).open () as f:
+            with pathlib.Path(config_file).open () as f:
                 exec (f in Config.__dict__)
         finally:
             f.close ()
