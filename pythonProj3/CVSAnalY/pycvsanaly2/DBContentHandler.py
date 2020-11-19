@@ -406,8 +406,8 @@ class DBContentHandler(ContentHandler):
 
     def __action_add(self, path, prefix, log):
         """Process a new file added"""
-        parent_path = os.path.dirname(path)
-        file_name = os.path.basename(path)
+        parent_path = pathlib.Path(path).parent
+        file_name = pathlib.Path(path).name
 
         if not parent_path or parent_path == prefix.strip('/'):
             parent_id = -1
