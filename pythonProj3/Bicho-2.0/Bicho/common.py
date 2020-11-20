@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright (C) 2007-2011  GSyC/LibreSoft, Universidad Rey Juan Carlos
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -155,8 +156,7 @@ class Issue:
          is not valid. 
         """
         if not isinstance(assigned_to, People):
-            raise ValueError('Parameter "assigned_to" should be a %s instance. %s given.' %
-                             ('People', assigned_to.__class__.__name__,))
+            raise ValueError(f'Parameter "assigned_to" should be a {'People'} instance. {assigned_to.__class__.__name__} given.')
         self.assigned_to = assigned_to
 
     def add_comment(self, comment):
@@ -351,8 +351,7 @@ class Change:
         self.new_value = new_value
 
         if not isinstance(changed_by, People):
-            raise ValueError('Parameter "changed_by" should be a %s instance. %s given.' %
-                             ('People', changed_by.__class__.__name__,))
+            raise ValueError(f'Parameter "changed_by" should be a {'People'} instance. {changed_by.__class__.__name__} given.')
 
         if not isinstance(changed_on, datetime.datetime):
             raise ValueError('Parameter "changed_on" should be a %s instance. %s given.' %
