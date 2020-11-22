@@ -145,7 +145,7 @@ class MailmanArchive(RemoteArchive):
                         'Found substring %s in URL %s...' % (this_month, link))
                     self._print_output('Retrieving %s...' % link)
                     self._retrieve_remote_file(link, destfilename)
-                elif os.path.exists(destfilename) and not self.force:
+                elif pathlib.path(destfilename).exists() and not self.force:
                     self._print_output('Already downloaded %s' % link)
                 else:
                     self._print_output('Retrieving %s...' % link)
@@ -173,7 +173,7 @@ class MailmanArchive(RemoteArchive):
 
             # Ignore links with not recognized extension
             if ext1 in accepted_types or ext1+ext2 in accepted_types:
-                filtered_links.append(os.path.join(self.url, l))
+                filtered_links.append(pathlib.Path().joinpath(self.url, l))
 
         return filtered_links
 
@@ -196,7 +196,7 @@ class WebdirectoryArchive(MailmanArchive):
                 filtered_links.append(l)
             else:
                 # a relative URL converted to a full one
-                filtered_links.append(os.path.join(self.url, l))
+                filtered_links.append(pathlib.Path().joinpath(self.url, l))
 
         return filtered_links
 
@@ -230,7 +230,7 @@ class GmaneArchive(RemoteArchive):
             to_msg = from_msg + GMANE_LIMIT
             url = gmane_url + '/' + str(from_msg) + '/' + str(to_msg)
             archive_url = gmane_url + '/' + str(from_msg)
-            filename = os.path.join(mailing_list.compressed_dir, str(from_msg))
+            filename = pathlib.Path().joinpath(mailing_list.compressed_dir, str(from_msg))
 
             self._print_output('Retrieving %s...' % url)
             fp, size = self._retrieve_remote_file(url, filename)
@@ -239,7 +239,7 @@ class GmaneArchive(RemoteArchive):
             # In Gmane, an empty page means we reached the last msg
             # Therefore, we also remove the file before leaving.
             if not size:
-                os.unlink(fp)
+                pathlib.Path().unlink(fp)
                 break
 
             from_msg = to_msg
@@ -270,7 +270,7 @@ class LocalArchive(BaseArchive):
 
         mailing_list = self.mailing_list
 
-        if os.path.isfile(mailing_list.location):
+        if pathlib.Path(mailing_list.location).is_file():
             yield MBoxArchive(mailing_list.location, mailing_list.location)
         else:
             for root, dirs, files in os.walk(mailing_list.location):
