@@ -2,6 +2,7 @@
 #
 # Copyright (C) 2007-2010 Libresoft Research Group
 # Copyright (C) 2015 Germán Poo-Caamaño
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -31,8 +32,8 @@ from .utils import find_current_month, create_dirs, file_type,\
     COMPRESSED_TYPES, ACCEPTED_TYPES
 from .archives import MBoxArchive, MailingList
 
-#Revisited code
-GMANE_DOMAIN = 'gmane.io'
+#Revisited code, 
+GMANE_DOMAIN = 'gmane.io' #alternative: https://pocoo-libs.narkive.com ?!!
 GMANE_URL = 'http://dir.gmane.io/'
 GMANE_DOWNLOAD_URL = 'http://download.gmane.io/'
 GMANE_LIMIT = 2000
@@ -250,8 +251,8 @@ class GmaneArchive(RemoteArchive):
     def __get_gmane_offset(self) -> int:
         offsets = [0]
         output_dir = self.mailing_list.compressed_dir
-
-        _, _, files = next(os.walk(output_dir))
+        #Revisited Code
+        _, _, files = next(pathlib.Path(output_dir).iterdir())
         for f in files:
             try:
                 offsets.append(int(f))
@@ -269,14 +270,15 @@ class LocalArchive(BaseArchive):
     def fetch(self):
         '''Walk the mailing list directory looking for archives'''
 
+        list_files = []
         mailing_list = self.mailing_list
 
         if pathlib.Path(mailing_list.location).is_file():
             yield MBoxArchive(mailing_list.location, mailing_list.location)
         else:
-            for root, dirs, files in os.walk(mailing_list.location):
-                for filename in sorted(files):
-                    location = pathlib.Path().joinpath(root, filename)
+            for files in pathlib.Path(mailing_list.location).rglob('*'):
+                for filename in sorted(list_files.append(files)):
+                    location = filename
                     yield MBoxArchive(location, location)
 
 
