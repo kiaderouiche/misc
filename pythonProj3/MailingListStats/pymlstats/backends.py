@@ -22,7 +22,7 @@
 #           Germán Poo-Caamaño <gpoo@gnome.org>
 
 import gzip
-import os.path
+import pathlib
 import urllib.parse
 
 from .htmlparser import MyHTMLParser, fetch_remote_resource
