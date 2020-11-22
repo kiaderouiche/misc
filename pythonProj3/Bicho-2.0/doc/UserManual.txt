@@ -43,6 +43,7 @@ Bicho needs some libraries such as :
 								 (http://www.crummy.com/software/BeautifulSoup/)
 * Python (>=3.8)
 * python-mysqlclient (https://pypi.org/project/mysqlclient/)
+* py-launchpadlib
 
 
 
