@@ -34,8 +34,8 @@ from .post_processing import IssueLogger
 
 
 def main():
-    """
-    """
+    '''
+    '''
     # Note: Default values for options are defined on
     # configuration module
     usage = 'Usage: %prog [options]'
