@@ -82,7 +82,7 @@ class MyHTMLParser(html.parser.HTMLParser):
 
         return self.links
 
-
+#Revisited Code
 def fetch_remote_resource(url, user=None, password=None)-> str:
     user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 ' \
                  '(KHTML, like Gecko) Ubuntu/11.04 Chromium/15.0.871.0 ' \
