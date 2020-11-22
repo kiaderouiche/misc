@@ -22,6 +22,7 @@
 #           Germán Poo-Caamaño <gpoo@gnome.org>
 
 import gzip
+import tempfile
 import pathlib
 import urllib.parse
 
@@ -89,7 +90,7 @@ class RemoteArchive(BaseArchive):
         # Force to download and parse any link found in the given URL
         self.force = force
 
-    def _retrieve_remote_file(self, url, destfilename=None):
+    def _retrieve_remote_file(self, url, destfilename=None) -> (str, int):
         """Retrieve a file from a remote location.
 
         It logins in the archives private page if necessary.
@@ -97,8 +98,8 @@ class RemoteArchive(BaseArchive):
 
         # Creat a temporary file is no destination is given
         if not destfilename:
-            destfilename = os.tmpnam()
-
+            destfilename = tempfile.TemporaryFile()
+            
         content = fetch_remote_resource(url, self.web_user, self.web_password)
 
         if file_type(content) is None:
@@ -156,7 +157,7 @@ class MailmanArchive(RemoteArchive):
 
             yield MBoxArchive(destfilename, link)
 
-    def filter_links(self, links):
+    def filter_links(self, links) -> str:
         """Filter according to file types found in a Mailman archive index."""
         accepted_types = COMPRESSED_TYPES + ACCEPTED_TYPES
 
@@ -275,7 +276,7 @@ class LocalArchive(BaseArchive):
         else:
             for root, dirs, files in os.walk(mailing_list.location):
                 for filename in sorted(files):
-                    location = os.path.join(root, filename)
+                    location = pathlib.Path().joinpath(root, filename)
                     yield MBoxArchive(location, location)
 
 
