@@ -87,13 +87,13 @@ class Config:
     @staticmethod
     def check_params(check_params):            
         for param in check_params:
-            if not vars(Config).has_key(param) or vars(Config)[param] is None:
+            if not param in vars(Config) or vars(Config)[param] is None:
                 raise InvalidConfig(f'Configuration parameter {param} is required' )
 
     @staticmethod
     def check_config():
-        """
-        """
+        '''
+        '''
         Config.check_params(['url','backend'])
         
         if Config.backend+".py" not in Backend.get_all_backends():
@@ -124,18 +124,19 @@ class Config:
                                  'db_hostname_out','db_port_out','db_database_out'])
         
     @staticmethod
-    def clean_empty_options(options):
-        clean_opt = {};        
+    def clean_empty_options(options) -> dict:
+        # https://stackoverflow.com/questions/61517/python-dictionary-from-an-objects-fields
+        clean_opt = {}        
         for option in vars(options):
             if (vars(options)[option] is not None) and \
-              ( not Config.__dict__.has_key(option)) :
+              ( not 'option' in Config.__dict__) :
                 clean_opt[option]=vars(options)[option]                    
         return clean_opt
         
     @staticmethod
     def set_config_options(usage):
-        """
-        """
+        '''
+        '''
         
         parser = OptionParser(usage=usage, description=DESCRIPTION,
                               version=VERSION)
@@ -223,5 +224,6 @@ class Config:
             Config.url=args[1]
 
         # Not remove config file options with empty default values
-        Config.__dict__(Config.clean_empty_options(options))
+        #Revisited code
+        #Config.__dict__(Config.clean_empty_options(options))
         Config.check_config ()
