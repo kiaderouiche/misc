@@ -131,8 +131,8 @@ class MailmanArchive(RemoteArchive):
         links = self.filter_links(htmlparser.get_links())
 
         for link in links:
-            basename = os.path.basename(link)
-            destfilename = os.path.join(mailing_list.compressed_dir, basename)
+            basename = pathlib.Path(link).name(link)
+            destfilename = pathlib.Path().joinpath(mailing_list.compressed_dir, basename)
 
             try:
                 # If the URL is for the current month, always retrieve.
