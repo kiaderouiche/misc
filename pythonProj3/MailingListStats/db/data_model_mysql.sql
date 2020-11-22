@@ -1,4 +1,4 @@
--- MySQL schema
+{-- MySQL schema
 
 -- Create tables --
 CREATE TABLE mailing_lists (
