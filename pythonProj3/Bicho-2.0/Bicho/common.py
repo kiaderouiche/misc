@@ -21,55 +21,55 @@
 #          Daniel Izquierdo Cortázar <dizquierdo@libresoft.es>
 #
 
-"""
+'''
 Symbols and classes shared by Bicho's modules
-"""
+'''
 
 import datetime
 
 
 class People:
-    """
+    '''
     Identity on a issue tracking system.
 
     @param user_id: identifier of the user
     @type user_id: C{str}
-    """
+    '''
     def __init__(self, user_id):
         self.name = None
         self.email = None
         self.user_id = user_id
 
     def set_name(self, name):
-        """
+        '''
         Set the name of the identity.
 
         @param name: name of the identity
         @type name: C{str}
-        """
+        '''
         self.name = name
 
     def set_email(self, email):
-        """
+        '''
         Set the email of the identity.
 
         @param email: email of the identity
         @type email: C{str} 
-        """
+        '''
         self.email = email
 
 
 class Tracker:
-    """
+    '''
     Issue tracker instance.
-b
+
     @param url: URL of the issue tracker
     @type url: C{str}
     @param name: name or type of the issue tracker
     @type name: C{str}
     @param version: version of the issue tracker
     @type version: C{str}
-    """
+    '''
     def __init__(self, url, name, version):
         self.url = url
         self.name = name
@@ -77,7 +77,7 @@ b
 
 
 class Issue:
-    """
+    '''
     Generic object for managing issues. 
 
     @param issue: identifier of the issue
@@ -94,7 +94,7 @@ class Issue:
     @type submitted_on: L{datetime.datetime}
 
     @raise ValueError: when the type of the parameters is not valid.
-    """
+    '''
     def __init__(self, issue, type, summary, desc, submitted_by, submitted_on):
         self.issue = issue
         self.type = type
@@ -122,16 +122,16 @@ class Issue:
         self.watchers = []
 
     def set_priority(self, priority):
-        """
+        '''
         Set the priority of the issue.
 
         @param priority: priority of the issue
         @type priority: C{str}
-        """
+        '''
         self.priority = priority
 
     def set_status(self, status, resolution=None):
-        """
+        '''
         Set the status of the issue. Additionally, the resolution
         can also be set.
 
@@ -139,14 +139,14 @@ class Issue:
         @type status: C{str}
         @param resolution: resolution of the issue
         @type resolution: C{str}
-        """
+        '''
         self.status = status
 
         if resolution is not None:
             self.resolution = resolution
 
     def set_assigned(self, assigned_to):
-        """
+        '''
         Set the identity assigned to the issue.
 
         @param assigned_to: identity assigned to the bug
@@ -154,90 +154,89 @@ class Issue:
 
         @raise ValueError: raised if the type of X{assigned_to}}
          is not valid. 
-        """
+        '''
         if not isinstance(assigned_to, People):
             raise ValueError(f'Parameter "assigned_to" should be a {'People'} instance. {assigned_to.__class__.__name__} given.')
         self.assigned_to = assigned_to
 
     def add_comment(self, comment):
-        """
+       '''
         Add a comment to the issue.
 
         @param comment: a comment of the issue 
         @type comment: L{Comment}
 
         @raise ValueError: raised if the type of X{comment} is not valid.
-        """
+        '''
         if not isinstance(comment, Comment):
             raise ValueError(f'Parameter "comment" should be a {Comment} instance. {comment.__class__.__name__}' )
 
         self.comments.append(comment)
 
     def add_attachment(self, attachment):
-        """
+        '''
         Add an attachment to the issue.
 
         @param attachment: an attachment of the issue 
         @type attachment: L{Attachment}
 
         @raise ValueError: raised if the type of X{attachment} is not valid.
-        """
+        '''
         if not isinstance(attachment, Attachment):
             raise ValueError('Parameter "attachment" should be a %s instance. %s given.' %
                              ('Attachment', attachment.__class__.__name__,))
         self.attachments.append(attachment)
 
     def add_change(self, change):
-        """
+        '''
         Add a change to the issue.
 
         @param change: a change of the issue 
         @type change: L{Change}
 
         @raise ValueError: raised if the type of X{change} is not valid.
-        """
+        '''
         if not isinstance(change, Change):
             raise ValueError('Parameter "change" should be a %s instance. %s given.' %
                              ('Change', change.__class__.__name__,))
         self.changes.append(change)
 
     def add_relationship(self, issue, type):
-        """
+        '''
         Add a relationship to the issue.
 
         @param issue: an issue related to this issue
         @type issue: C{str}
         @param type: type of the relationship
         @type type: C{str}
-        """
+        '''
         self.relationships.append((issue, type))
 
     def add_temp_relationship(self, relationship):
-        """
+        '''
         Add a relationship to the issue.
 
         @param issue: an issue related to this issue
         @type issue: C{str}
         @param type: type of the relationship
         @type type: C{str}
-        """
+        '''
         if not isinstance(relationship, TempRelationship):
-            raise ValueError('Parameter "relationship" should be a %s instance. %s given.' %
-                             ('TempRelationship', relationship.__class__.__name__,))
+            raise ValueError(f'Parameter "relationship" should be a {'TempRelationship'} instance. {relationship.__class__.__name__} given.')
         self.temp_relationships.append(relationship)
 
 
     def set_resolution(self, resolution):
-        """
+        '''
         Set the resolution of the issue.
 
         @param resolution: resolution of the issue
         @type resolution: C{str}
-        """
+        '''
         self.resolution = resolution
 
     def add_watcher(self, watcher):
-        """
+        '''
         Set the identity assigned to the issue.
 
         @param watcher: identity watching the bug
@@ -245,7 +244,7 @@ class Issue:
 
         @raise ValueError: raised if the type of X{assigned_to}}
         is not valid.
-        """
+        '''
         if not isinstance(watcher, People):
             raise ValueError('Parameter "assigned_to" should be a %s instance. %s given.' %
                              ('People', watcher.__class__.__name__,))
@@ -253,7 +252,7 @@ class Issue:
 
 
 class Comment:
-    """
+    '''
     Comment instance.
 
     @param comment: brief description of the issue
@@ -265,7 +264,7 @@ class Comment:
 
     @raise ValueError: raised when the type of the parameters
      is not valid.
-    """
+    '''
     def __init__(self, comment, submitted_by, submitted_on):
         self.comment = comment
 
@@ -282,7 +281,7 @@ class Comment:
 
 
 class Attachment:
-    """
+    '''
     Attachment instance.
 
     @param url: URL of the attachment
@@ -294,44 +293,41 @@ class Attachment:
 
     @raise ValueError: raised when the type of the parameters
      is not valid.
-    """
+    '''
     def __init__(self, url, submitted_by=None, submitted_on=None):
         self.name = None
         self.description = None
         self.url = url
 
         if submitted_by is not None and not isinstance(submitted_by, People):
-            raise ValueError('Parameter "submitted_by" should be a %s instance. %s given.' %
-                             ('People', submitted_by.__class__.__name__,))
+            raise ValueError(f'Parameter "submitted_by" should be a {'People'} instance. {submitted_by.__class__.__name_} given.')
 
         if submitted_on is not None and not isinstance(submitted_on, datetime.datetime):
-            raise ValueError('Parameter "submitted_on" should be a %s instance. %s given.' %
-                             ('datetime', input.__class__.__name__))
-
+            raise ValueError(f'Parameter "submitted_on" should be a {'datetime'} instance. {input.__class__.__name__} given.')
         self.submitted_by = submitted_by
         self.submitted_on = submitted_on
 
     def set_name(self, name):
-        """
+        '''
         Set the name of the attachment.
 
         @param name: name of the attachemnt
         @type name: C{str}
-        """
+        '''
         self.name = name
 
     def set_description(self, desc):
-        """
+        '''
         Set the description of the attachment.
 
         @param desc: description of the attachment
         @type desc: C{str}
-        """
+        '''
         self.description = desc
 
 
 class Change:
-    """
+    '''
     A change performed during the issue lifecycle.
 
     @param field: name of the field that was changed
@@ -344,7 +340,7 @@ class Change:
     @type changed_by: L{People}
     @param changed_on: date when the attachment was submitted
     @type changed_on: C{datetime.datetime}
-    """
+    '''
     def __init__(self, field, old_value, new_value, changed_by, changed_on):
         self.field = field
         self.old_value = old_value
@@ -354,16 +350,15 @@ class Change:
             raise ValueError(f'Parameter "changed_by" should be a {'People'} instance. {changed_by.__class__.__name__} given.')
 
         if not isinstance(changed_on, datetime.datetime):
-            raise ValueError('Parameter "changed_on" should be a %s instance. %s given.' %
-                             ('datetime', input.__class__.__name__))
+            raise ValueError(f'Parameter "changed_on" should be a {'datetime'} instance. {input.__class__.__name__} given.')
 
         self.changed_by = changed_by
         self.changed_on = changed_on
 
 
 class TempRelationship:
-    """
-    """
+    '''
+    '''
     def __init__(self, issue, type, related_to):
         self.issue = issue
         self.type = type
@@ -371,8 +366,8 @@ class TempRelationship:
 
 
 class Relationship:
-    """
-    """
+    '''
+    '''
     def __init__(self, issue, type, related_to):
         self.issue = issue
         self.type = type
