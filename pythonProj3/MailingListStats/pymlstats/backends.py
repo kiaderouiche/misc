@@ -31,10 +31,10 @@ from .utils import find_current_month, create_dirs, file_type,\
     COMPRESSED_TYPES, ACCEPTED_TYPES
 from .archives import MBoxArchive, MailingList
 
-
-GMANE_DOMAIN = 'gmane.org'
-GMANE_URL = 'http://dir.gmane.org/'
-GMANE_DOWNLOAD_URL = 'http://download.gmane.org/'
+#Revisited code
+GMANE_DOMAIN = 'gmane.io'
+GMANE_URL = 'http://dir.gmane.io/'
+GMANE_DOWNLOAD_URL = 'http://download.gmane.io/'
 GMANE_LIMIT = 2000
 
 MOD_MBOX_THREAD_STR = "/thread"
@@ -43,14 +43,14 @@ REMOTE_BACKENDS = ['gmane', 'mailman', 'webdirectory']
 
 
 class BaseArchive(object):
-    """Base class to handle mailing lists archives.
+    '''Base class to handle mailing lists archives.
 
     Used to process local and remote mailing lists archives via generators.
     An Archive class must have the following attributes:
     - mailing_list: (MailingList) a Mailing List object with its location.
     - be_quite: (boolean) tell if this class should not print any text
       indicating progress of a task (e.g. while downloading files).
-    """
+    '''
     def __init__(self, mailing_list, be_quiet=False):
         # Don't show messages when retrieveing and analyzing files
         self.be_quiet = be_quiet
@@ -73,11 +73,11 @@ class BaseArchive(object):
 
 
 class RemoteArchive(BaseArchive):
-    """Generic class to handle remove mailing lists archives.
+    '''Generic class to handle remove mailing lists archives.
 
     Use this class to implement mechanisms to download mailing list archives
     from Internet.
-    """
+    '''
     def __init__(self, mailing_list, be_quiet=False, force=False,
                  web_user=None, web_password=None):
         super(RemoteArchive, self).__init__(mailing_list, be_quiet)
@@ -114,15 +114,15 @@ class RemoteArchive(BaseArchive):
 
 
 class MailmanArchive(RemoteArchive):
-    """Class to download mboxes from Mailman interface."""
+    '''Class to download mboxes from Mailman interface.'''
 
     def fetch(self):
-        """Get all the links listed in the Mailing List's URL.
+        '''Get all the links listed in the Mailing List's URL.
 
         The archives are usually retrieved in descending chronological
         order (newest archives are always shown on the top of the archives).
         Reverse the list to analyze in chronological order.
-        """
+        '''
 
         mailing_list = self.mailing_list
 
@@ -158,7 +158,7 @@ class MailmanArchive(RemoteArchive):
             yield MBoxArchive(destfilename, link)
 
     def filter_links(self, links) -> str:
-        """Filter according to file types found in a Mailman archive index."""
+        '''Filter according to file types found in a Mailman archive index.'''
         accepted_types = COMPRESSED_TYPES + ACCEPTED_TYPES
 
         filtered_links = []
@@ -169,8 +169,8 @@ class MailmanArchive(RemoteArchive):
             if l.endswith(MOD_MBOX_THREAD_STR):
                 l = l[:-len(MOD_MBOX_THREAD_STR)]
 
-            ext1 = os.path.splitext(l)[-1]
-            ext2 = os.path.splitext(l.rstrip(ext1))[-1]
+            ext1 = pathlib.Path(l).suffix
+            ext2 = pathlib.Path(l.rstrip(ext1)).suffix
 
             # Ignore links with not recognized extension
             if ext1 in accepted_types or ext1+ext2 in accepted_types:
@@ -180,10 +180,10 @@ class MailmanArchive(RemoteArchive):
 
 
 class WebdirectoryArchive(MailmanArchive):
-    """Class to download mboxes from a Web directory-like page."""
+    '''Class to download mboxes from a Web directory-like page.'''
 
-    def filter_links(self, links):
-        """Do not filter any link from the site, only external links."""
+    def filter_links(self, links) -> str:
+        '''Do not filter any link from the site, only external links.'''
         netloc = urllib.parse.urlparse(self.url).netloc
         filtered_links = []
 
@@ -203,7 +203,7 @@ class WebdirectoryArchive(MailmanArchive):
 
 
 class GmaneArchive(RemoteArchive):
-    """Class to download mboxes from Gmane interface."""
+    '''Class to download mboxes from Gmane interface.'''
 
     def __init__(self, mailing_list, be_quiet=False, force=False,
                  web_user=None, web_password=None, offset=0):
@@ -212,12 +212,12 @@ class GmaneArchive(RemoteArchive):
         self.offset = offset
 
     def fetch(self):
-        """Get all the links listed in the Mailing List's URL.
+        '''Get all the links listed in the Mailing List's URL.
 
         The archives are usually retrieved in descending chronological
         order (newest archives are always shown on the top of the archives).
         Reverse the list to analyze in chronological order.
-        """
+        '''
 
         mailing_list = self.mailing_list
 
@@ -247,7 +247,7 @@ class GmaneArchive(RemoteArchive):
 
             yield MBoxArchive(filename, archive_url)
 
-    def __get_gmane_offset(self):
+    def __get_gmane_offset(self) -> int:
         offsets = [0]
         output_dir = self.mailing_list.compressed_dir
 
@@ -264,10 +264,10 @@ class GmaneArchive(RemoteArchive):
 
 
 class LocalArchive(BaseArchive):
-    """Class to walk through mboxes stored locally."""
+    '''Class to walk through mboxes stored locally.'''
 
     def fetch(self):
-        """Walk the mailing list directory looking for archives"""
+        '''Walk the mailing list directory looking for archives'''
 
         mailing_list = self.mailing_list
 
