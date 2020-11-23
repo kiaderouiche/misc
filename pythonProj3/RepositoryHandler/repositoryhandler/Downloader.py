@@ -35,7 +35,9 @@ def get_download_command(uri, dest_path, output) -> list:
     return cmd
 
 
-def download(uri, dirname=None, output=None) -> bool:
+def download(uri, dirname=None, output=None) -> str:
+    '''
+    '''
 
     if dirname is None:
         dirname = pathlib.Path().cwd()
@@ -54,7 +56,7 @@ def download(uri, dirname=None, output=None) -> bool:
     except:
         return False
 
-    return os.path.exists(dest_path)
+    return pathlib.Path(dest_path).exists()
 
 if __name__ == '__main__':
     import sys

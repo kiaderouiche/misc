@@ -1,5 +1,6 @@
 # Command.py
 #
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 # Copyright (C) 2007 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -16,7 +17,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
+import pathlib
 import select
 import subprocess
 import sys
@@ -31,7 +32,7 @@ class CommandError(Exception):
         self.returncode = returncode
         self.error = error
 
-    def __str__(self):
+    def __str__(self) -> str:
         return "Command '%s' returned non-zero exit status %d" % \
             (self.cmd, self.returncode)
 
@@ -42,12 +43,13 @@ class CommandRunningError(Exception):
         self.cmd = cmd
         self.error = error
 
-    def __str__(self):
+    def __str__(self) -> str:
         return "Error during execution of command %s" % (self.cmd)
 
 
 class CommandTimeOut (Exception):
     '''Timeout running command'''
+    pass
 
 
 class Command:
@@ -181,7 +183,7 @@ class Command:
 
         except KeyboardInterrupt:
             try:
-                os.kill(p.pid, SIGINT)
+                pathlib.os.kill(p.pid, SIGINT)
             except OSError:
                 pass
 
@@ -230,7 +232,7 @@ class Command:
 
         return self._read_from_pipes(stdin, out_func, err_func, timeout)
 
-    def _get_process(self):
+    def _get_process(self) -> str:
         if self.process is not None:
             return self.process
 
@@ -239,7 +241,7 @@ class Command:
             'stdout': subprocess.PIPE,
             'stderr': subprocess.PIPE,
             'stdin': subprocess.PIPE,
-            'env': os.environ.copy()
+            'env': pathlib.os.environ.copy()
         }
 
         if self.cwd is not None:
@@ -255,7 +257,7 @@ class Command:
     # We keep this only for backwards compatibility,
     # but it doesn't make sense, since both run and run_sync
     # have been always synchronous
-    def run_sync(self, stdin=None, timeout=None):
+    def run_sync(self, stdin=None, timeout=None)->str:
         return self.run(stdin, None, None, timeout)
 
     def run(self, stdin=None, parser_out_func=None, parser_error_func=None,
@@ -280,7 +282,7 @@ class Command:
         if self.process is not None:
             self.process.stdin.write(data)
 
-    def get_pid(self):
+    def get_pid(self) -> int:
         try:
             return self.process.pid
         except:
@@ -293,7 +295,7 @@ if __name__ == '__main__':
 
     # Valid command with cwd
     def out_func(line):
-        print("LINE: %s" % (line))
+        print("LINE: {}".format(line))
     cmd = Command(['ls', '-lh'], '/')
     cmd.run(parser_out_func=out_func)
 
@@ -302,20 +304,20 @@ if __name__ == '__main__':
     try:
         cmd.run()
     except Exception as e:
-        print('Command not found (%s)' % (str(e)))
+        print('Command not found ({})'.format(str(e)))
 
     # Command returning non-zero
     cmd = Command(['diff', '/etc/passwd', '/etc/group'])
     try:
         cmd.run_sync()
     except CommandError as e:
-        print("Error running command. Error: %s" % (e.error))
+        print("Error running command. Error: {}".format(e.error))
 
     cmd = Command(['cat', '/foo'])
     try:
         cmd.run_sync()
     except CommandError as e:
-        print("Error running command. Error: %s" % (e.error))
+        print("Error running command. Error: {}".format(e.error))
 
     # Run sync
     cmd = Command(['ls'], '/tmp/')

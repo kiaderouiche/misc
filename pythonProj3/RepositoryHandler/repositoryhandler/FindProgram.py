@@ -1,5 +1,6 @@
 # FindProgram.py
 #
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 # Copyright (C) 2007 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -16,39 +17,38 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
-
+import pathlib
 from stat import *
 
 
-def find_program(program):
+def find_program(program) ->str:
     '''Looks for given program in current path.
     Returns an absolute path if program was found or None'''
 
-    def __path_is_executable(path):
+    def __path_is_executable(path) ->str:
         return os.stat(path)[ST_MODE] & S_IEXEC
 
     # Do not look in PATH if it's already an absolute path
     # or a relative path containing directories
     if os.path.isabs(program) or program.find(os.path.sep) > 0:
-        if __path_is_executable(program) and not os.path.isdir(program):
+        if __path_is_executable(program) and not pathlib.Path(program).is_dir():
             return program
         else:
             return None
 
     # Look in PATH
     try:
-        path = os.environ['PATH']
+        path = pathlib.os.environ['PATH']
     except KeyError:
         # There is no PATH in env!!!
         # FIXME: it only works on UNIX
-        path = "/bin:/usr/bin:."
+        path = "/bin:/usr/bin:/usr/local/bin:/usr/pkg/bin:."
 
     for p in path.split(os.pathsep):
-        absolute = os.path.join(p, program)
-        if os.path.exists(absolute) and \
+        absolute = pathlib.Path().joinpath(p, program)
+        if pathlib.Path(absolute).exists() and \
            __path_is_executable(absolute) and \
-           not os.path.isdir(absolute):
+           not pathlib.Path(absolute).is_dir():
             return absolute
 
     return None
@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
     ## Absolute path
     # Dir
-    if find_program(os.environ['HOME']) is not None:
+    if find_program(pathlib.os.environ['HOME']) is not None:
         print("FAILED")
         sys.exit(1)
 
