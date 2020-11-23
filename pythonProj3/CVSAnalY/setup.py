@@ -30,7 +30,6 @@ Installer
 """
 
 import pathlib
-import os
 import sys
 
 from pycvsanaly2._config import PACKAGE, VERSION, AUTHOR, \
@@ -60,7 +59,7 @@ def generate_changelog():
     pathlib.Path(filename).rename("ChangeLog.md")
 
 # Check dependencies
-deps = ['repositoryhandler >= 0.3', 'sqlite3', 'MySQLdb']
+deps = ['repositoryhandler >= 0.3', 'sqlite3', 'mysqlclient']
 
 #pkg_check_modules (deps)
 
@@ -77,5 +76,6 @@ setup(name=PACKAGE,
       url="http://projects.libresoft.es/projects/cvsanaly/wiki/",
       packages=['pycvsanaly2', 'pycvsanaly2.extensions'],
       data_files=[('share/man/man1', ['help/cvsanaly2.1'])],
-      scripts=["cvsanaly2"]
+      scripts=["cvsanaly2"],
+      python_requires='>=3.8',
 )

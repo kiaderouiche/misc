@@ -22,13 +22,15 @@
 #        Alvaro del Castillo <acs@bitergia.com>
 #        Sumana Harihareswara <sumanah@panix.com>
 
-from .backends import Backend
-from . import info
 from argparse import ArgumentParser
 import pathlib
 from urllib.request import Request, urlopen
 import urllib.parse
 from urllib.error import URLError, HTTPError
+
+from .backends import Backend
+from . import info
+
 
 # 500 is the max recommend by bugmaster@gnome.org.
 # Use 1 for legacy working.
@@ -90,8 +92,7 @@ class Config():
             # If there's an old file, migrate it
             old_config = pathlib.Path().joinpath(pathlib.os.environ.get ('HOME'), '.bicho')
             if pathlib.Path(old_config).is_file():
-                printout("Old config file found in %s, moving to %s",
-                         (old_config, config_file))
+                printout(f"Old config file found in {old_config}, moving to {config_file}")
                 pathlib.Path(old_config).rename(config_file)
                 Config.load_from_file(config_file)
 
@@ -100,7 +101,7 @@ class Config():
         for param in check_params:
             # raise exception if the param is None or nonexistent
             if getattr(Config, param, None) is None:
-                raise InvalidConfig(f'Configuration parameter ''{param}'' is required')
+                raise InvalidConfig(f'Configuration parameter "{param}" is required')
 
     @staticmethod
     def check_config():

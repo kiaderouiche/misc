@@ -24,12 +24,15 @@
 from distutils.core import setup
 
 setup(name="Bicho",
-      version="0.9",
+      version="1.0",
       author="GSyC/LibreSoft, Universidad Rey Juan Carlos",
       author_email="metrics-grimoire@lists.libresoft.es",
       description="Analysis tool for Issue/Bug Tracking Systems",
       url="http://metricsgrimoire.github.com/Bicho/",
       packages=['bicho', 'bicho.backends', 'bicho.db',
                   'bicho.post_processing'],
+      #Ajouter ici les prefix: NetBSD, FreeBSD/OpenBSD et GNU/Linux
       data_files=[('share/man/man1', ['doc/bicho.1'])],
-      scripts=["bin/bicho"])
+      scripts=["bin/bicho"],
+      python_requires='>=3.8',
+)

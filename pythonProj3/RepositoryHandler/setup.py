@@ -25,4 +25,6 @@ setup(name="RepositoryHandler",
       author_email="metrics-grimoire@lists.libresoft.es",
       description="Python library for handling code repositories",
       url="http://github.com/MetricsGrimoire/RepositoryHandler",
-      packages=['repositoryhandler', 'repositoryhandler.backends'])
+      packages=['repositoryhandler', 'repositoryhandler.backends'],
+      python_requires='>=3.8',
+)

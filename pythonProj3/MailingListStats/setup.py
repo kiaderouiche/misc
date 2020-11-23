@@ -76,8 +76,9 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
+    python_requires='>=3.8',
     extras_require = {
-        'mysql': ['MySQL-python'],
+        'mysql': ['mysqlclient>=1.0'],
         'postgres': ['psycopg2']
     },
     **extra
