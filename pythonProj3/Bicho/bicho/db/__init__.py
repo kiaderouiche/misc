@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2007-2011  GSyC/LibreSoft, Universidad Rey Juan Carlos
 #
@@ -16,15 +16,5 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
-
-import sys
-import bicho.main
-
-if __name__ == "__main__":
-    try:
-        retval = bicho.main.main()
-        sys.exit (retval)
-    except KeyboardInterrupt:
-        print "\n\nReceived Ctrl-C or other break signal. Exiting."
-        sys.exit (0)
-
+# Authors:  Santiago Dueñas <sduenas@libresoft.es>
+#
