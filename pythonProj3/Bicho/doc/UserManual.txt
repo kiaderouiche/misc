@@ -36,7 +36,7 @@ Bicho needs some libraries such as :
 					developed at Canonical. The project was in development for more than a
  					year for use in Canonical projects such as Launchpad and Landscape
  					before being released as free software on July 9th, 2007
- 					(https://storm.canonical.com/) ; replace by sqlalchemy
+ 					(https://storm.canonical.com/) ; replace by [sqlalchemy]
 
 * BeutifulSoup : Beautiful Soup is a Python HTML/XML parser designed for
  								 quick turnaround projects like screen-scraping

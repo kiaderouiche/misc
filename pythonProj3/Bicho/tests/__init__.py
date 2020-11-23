@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Copyright (C) 2012 GSyC/LibreSoft, Universidad Rey Juan Carlos
+# # Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,7 +20,8 @@
 # Authors: Luis Cañas Díaz <lcanas@libresoft.es>
 
 import sys
-import os
+import pathlib
+import importlib
 
 __all__ = [
         'Test',
@@ -32,63 +34,63 @@ __all__ = [
 class Test:
 
     def execution(self):
-        """
+        '''
         Execution of Bicho using the different extensions
-        """
+        '''
         pass
 
     def number_of_bugs(self):
-        """
+        '''
         Total number of bugs
-        """
+        '''
         pass
 
     def bugs_per_status(self):
-        """
+        '''
         Total number of bugs per status
-        """
+        '''
         pass
 
     def assignees(self):
-        """
+        '''
         Assignees for a couple of bugs
-        """
+        '''
         pass
 
     def importance(self):
-        """
+        '''
         Importance of the bugs
-        """
+        '''
         pass
 
     def duplicates(self):
-        """
+        '''
         Number of duplicates for a list of bugs
-        """
+        '''
         pass
 
     def number_comments(self):
-        """
+        '''
         Number of comments
-        """
+        '''
         pass
 
     def number_entries(self):
-        """
+        '''
         Number of entries in the activity log
-        """
+        '''
         pass
 
     def urls(self):
-        """
+        '''
         URLs of the ..
-        """
+        '''
         pass
 
     def number_bugs_milestone(self):
-        """
+        '''
         Number of bugs per milestone
-        """
+        '''
         pass
 
     def run(self):
@@ -105,14 +107,14 @@ class Test:
 
 
 def remove_directory(path):
-    if not os.path.exists(path):
+    if not pathlib.Path(path).exists():
         return
 
     for root, dirs, files in os.walk(path, topdown=False):
         for file in files:
-            os.remove(os.path.join(root, file))
+            pathlib.path(pathlib.Path().joinpath(root, file)).unlink()
         for dir in dirs:
-            os.rmdir(os.path.join(root, dir))
+            os.rmdir(pathlib.Path().joinpath(root, dir))
 
     os.rmdir(path)
 
@@ -126,11 +128,11 @@ def register_test(test_name, test_class):
 
 def get_test(test_name):
     if test_name not in _tests:
-        """try:
+        '''try:
             __import__(test_name)
         except:
-            pass"""
-        __import__(test_name)
+            pass'''
+        importlib.import_module(test_name)
 
     if test_name not in _tests:
         sys.stderr.write('Test %s not found\n' % (test_name))

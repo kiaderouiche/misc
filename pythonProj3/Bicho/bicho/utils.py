@@ -30,7 +30,7 @@ import sys
 import time
 import urllib
 
-from .Config import Config
+from .config import Config
 
 def printout (str = '\n'):
     if str != '\n':

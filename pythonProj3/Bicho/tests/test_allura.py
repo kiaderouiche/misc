@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Copyright (C) 2012 Bitergia
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,24 +19,29 @@
 #
 # Authors: Alvaro del Castillo San Felix <acs@bitergia.com>
 
-import errno, feedparser, json, MySQLdb, os, pprint, random, string, sys, unittest, urllib
+import errno, feedparser
+import pathlib
+import json, MySQLdb #use python-mysqlclient (https://pypi.org/project/mysqlclient/)
+import random, string, sys
+import unittest, urllib.request, urllib.parse, urllib.error
+
 sys.path.insert(0, "..")
 from bicho.backends import Backend
 from bicho.backends.allura import DBAlluraBackend
 from bicho.Config import Config
 from bicho.common import Tracker #, Issue, People, Change
-from bicho.db.database import DBIssue, DBBackend, get_database
+from bicho.db.database import get_database
 
 class AlluraTest(unittest.TestCase):
 
     def read_issues(self, page, limit):
         project_name = Config.url.split("/")[-2]
         issues_file = project_name+"_p"+str(page)+"_"+str(limit)
-        self.project_issues_file = os.path.join(AlluraTest.tests_data_dir, issues_file)
+        self.project_issues_file = pathlib.Path().joinpath(AlluraTest.tests_data_dir, issues_file)
         try:
             f = open(self.project_issues_file)
-        except Exception, e:
-            print "Can not find test data"
+        except Exception as e:
+            print("Can not find test data")
             if e.errno == errno.ENOENT:
                 f = open(self.project_issues_file,'w+')
                 issues_url = Config.url+"/search/?limit="+str(limit)
@@ -43,10 +49,10 @@ class AlluraTest(unittest.TestCase):
                 time_window_start = "1900-01-01T00:00:00Z"
                 time_window_end = "2200-01-01T00:00:00Z"
                 time_window = time_window_start + " TO  " + time_window_end
-                issues_url +="&q=" + urllib.quote("mod_date_dt:["+time_window+"]")
+                issues_url +="&q=" + urllib.parse.quote("mod_date_dt:["+time_window+"]")
                 issues_url +="&page="+str(page)
-                print "URL for getting data: " + issues_url
-                fr = urllib.urlopen(issues_url)
+                print("URL for getting data: " + issues_url)
+                fr = urllib.request.urlopen(issues_url)
                 f.write(fr.read())
                 f.close()
                 f = open(self.project_issues_file)
@@ -55,19 +61,19 @@ class AlluraTest(unittest.TestCase):
     def read_issue(self, issue_id):
         issue_url = Config.url+"/"+str(issue_id)
         project_name = Config.url.split("/")[-2]
-        issue_file = os.path.join(AlluraTest.tests_data_dir, project_name+"." + str(issue_id))
+        issue_file = pathlib.Path().joinpath(AlluraTest.tests_data_dir, project_name+"." + str(issue_id))
         try:
             f = open(issue_file)
-        except Exception, e:
+        except Exception as e:
             if e.errno == errno.ENOENT:
-                print ("Downloading " + issue_file)
+                print(("Downloading " + issue_file))
                 f = open(issue_file,'w')
-                fr = urllib.urlopen(issue_url)
+                fr = urllib.request.urlopen(issue_url)
                 f.write(fr.read())
                 f.close()
                 f = open(issue_file)
             else:
-                print "ERROR", e.errno
+                print("ERROR", e.errno)
                 raise e
         return f.read()
 
@@ -76,13 +82,13 @@ class AlluraTest(unittest.TestCase):
         issue_url = Config.url+"/"+str(issue_id)
         changes_url = issue_url.replace("rest/","")+"/feed.atom"
         project_name = Config.url.split("/")[-2]
-        changes_file = os.path.join(AlluraTest.tests_data_dir, project_name+"." + str(issue_id) + ".changes")
+        changes_file = pathlib.Path().joinpath(AlluraTest.tests_data_dir, project_name+"." + str(issue_id) + ".changes")
 
-        if os.path.isfile(changes_file): pass
+        if pathlib.Path(changes_file).is_file(): pass
         else:
-            print ("Downloading " + changes_file)
+            print(("Downloading " + changes_file))
             f = open(changes_file,'w')
-            fr = urllib.urlopen(changes_url)
+            fr = urllib.request.urlopen(changes_url)
             f.write(fr.read())
             f.close()
         return changes_file
@@ -157,11 +163,11 @@ class AlluraTest(unittest.TestCase):
         AlluraTest.tracker = Tracker(Config.url, backend_name, "beta")
         AlluraTest.dbtracker = AlluraTest.issuesDB.insert_tracker(AlluraTest.tracker)
 
-        AlluraTest.tests_data_dir = os.path.join('./data/', AlluraTest.tracker.name)
+        AlluraTest.tests_data_dir = pathlib.Path().joinpath('./data/', AlluraTest.tracker.name)
         AlluraTest.backend = Backend.create_backend(backend_name)
 
-        if not os.path.isdir(AlluraTest.tests_data_dir):
-            os.makedirs(AlluraTest.tests_data_dir)
+        if not pathlib.Path(AlluraTest.tests_data_dir).is_dir():
+            pathlib.Path(AlluraTest.tests_data_dir).mkdir()
 
     @staticmethod
     def closeBackend():

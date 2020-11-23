@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Copyright (C) 2012 GSyC/LibreSoft, Universidad Rey Juan Carlos
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +19,7 @@
 #
 # Authors: Luis Cañas Díaz <lcanas@libresoft.es>
 
-import MySQLdb as mdb
+import MySQLdb as mdb #use python-mysqlclient (https://pypi.org/project/mysqlclient/)
 from launchpadlib.launchpad import Launchpad
 import subprocess
 import sys
@@ -52,7 +53,7 @@ class LaunchpadTest(Test):
 
         self._initialize_database()
 
-        print("Launchpad test using the project %s" % self.pname)
+        print(("Launchpad test using the project %s" % self.pname))
 
         homedir = pwd.getpwuid(os.getuid()).pw_dir
         cachedir = os.path.join(homedir, ".cache/bicho/")
@@ -306,7 +307,7 @@ class LaunchpadTest(Test):
             n_comments = b.bug.message_count
             bug_comments[bug_id] = n_comments
 
-        for k in bug_comments.keys():
+        for k in list(bug_comments.keys()):
             aux_query = query_nc.replace('X', str(k))
             db_number = self._execute_query(aux_query)[0]
             aux_n = bug_comments[k] - 1  #1st is the description
@@ -332,7 +333,7 @@ class LaunchpadTest(Test):
             n_changes = b.bug.activity.total_size
             bug_changes[bug_id] = n_changes
 
-        for k in bug_changes.keys():
+        for k in list(bug_changes.keys()):
             aux_query = query_ne.replace('X', str(k))
             db_number = self._execute_query(aux_query)[0]
             if (bug_changes[k] == db_number):
@@ -364,7 +365,7 @@ class LaunchpadTest(Test):
             bug_patches[bug_id] = urls
 
         # we first check the number of attachments/patches per bug
-        for k in bug_patches.keys():
+        for k in list(bug_patches.keys()):
             aux_query = query_a.replace('X', str(k))
             db_number = self._execute_query(aux_query)[0]
             if (len(bug_patches[k]) == db_number):
@@ -374,7 +375,7 @@ class LaunchpadTest(Test):
 
         # second, we check that the urls of the patches are the same
 
-        for k in bug_patches.keys():
+        for k in list(bug_patches.keys()):
             aux_query = query_b.replace('X', str(k))
             for url in bug_patches[k]:
                 aux_query = aux_query.replace('Y', str(url))
@@ -406,7 +407,7 @@ class LaunchpadTest(Test):
             if number > 0:
                 milestone_number[m.name] = len(bugs_mile)
 
-        for k in milestone_number.keys():
+        for k in list(milestone_number.keys()):
             aux_query = query.replace('X', k)
             db_number = self._execute_query(aux_query)[0]
             if (milestone_number[k] == db_number):

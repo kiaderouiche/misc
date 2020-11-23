@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Copyright (C) 2012 GSyC/LibreSoft, Universidad Rey Juan Carlos
+# # Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -39,6 +40,6 @@ if __name__ == '__main__':
             func = get_test(backend)
             if func is not None:
                 t = func()
-                print "Testing %s" % (backend)
+                print("Testing %s" % (backend))
                 t.run()
-                print
+                print()
