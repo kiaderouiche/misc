@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: RepositoryHandler
+Version: 1.0.0
+Summary: Python library for handling code repositories
+Home-page: http://github.com/MetricsGrimoire/RepositoryHandler
+Author: GSyC/LibreSoft, Universidad Rey Juan Carlos
+Author-email: metrics-grimoire@lists.libresoft.es
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8

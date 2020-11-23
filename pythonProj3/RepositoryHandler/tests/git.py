@@ -13,13 +13,13 @@ class GitTest(Test):
         self.repo.checkout('utils/kernel/cpufreq/cpufrequtils.git', '/tmp/',
                            newdir='cpufrequtils')
         if not os.path.exists('/tmp/cpufrequtils/.git'):
-            print "Git checkout: FAILED"
+            print("Git checkout: FAILED")
             return
 
         self.repo.checkout('utils/pciutils/pciutils.git', '/tmp/',
                            newdir='pciutils', branch='network')
         if not os.path.exists('/tmp/pciutils/.git'):
-            print "Git checkout: FAILED"
+            print("Git checkout: FAILED")
             return
 
         # Test module='.'
@@ -27,38 +27,38 @@ class GitTest(Test):
                                   'git://anongit.freedesktop.org/libspectre')
         repo2.checkout('.', '/tmp')
         if not os.path.exists('/tmp/libspectre/.git'):
-            print "Git checkout(module='.'): FAILED"
+            print("Git checkout(module='.'): FAILED")
             return
 
         try:
             repo2 = create_repository_from_path('/tmp/cpufrequtils')
         except:
-            print "Git create_repository_from_path: FAILED"
+            print("Git create_repository_from_path: FAILED")
             return
         try:
             repo2 = create_repository_from_path('/tmp/')
         except RepositoryUnknownError:
-            print "Git create_repository_from_path: PASSED"
+            print("Git create_repository_from_path: PASSED")
         except:
-            print "Git create_repository_from_path: FAILED"
+            print("Git create_repository_from_path: FAILED")
             return
 
-        print "Git checkout: PASSED"
+        print("Git checkout: PASSED")
 
     def update(self):
         try:
             self.repo.update('/tmp/cpufrequtils')
         except:
-            print "Git update: FAILED"
+            print("Git update: FAILED")
             return
 
         try:
             self.repo.update('/tmp/pciutils/', rev='master')
         except:
-            print "Git update: FAILED"
+            print("Git update: FAILED")
             return
 
-        print "Git update: PASSED"
+        print("Git update: PASSED")
 
     def cat(self):
         def cat_output(line, user_data):
@@ -70,13 +70,13 @@ class GitTest(Test):
             self.repo.cat("/tmp/cpufrequtils/lib/cpufreq.c",
                           rev="e982c5fc03f594d4c0384c4a35d761f64acb9273")
         except:
-            print "Git cat: FAILED"
+            print("Git cat: FAILED")
             return
 
         if n_lines[0] == 234:
-            print "Git cat: PASSED"
+            print("Git cat: PASSED")
         else:
-            print "Git cat: FAILED"
+            print("Git cat: FAILED")
 
     def log(self):
         def log_cb(data, user_data=None):
@@ -88,14 +88,14 @@ class GitTest(Test):
             self.log_data = ""
             self.repo.log('/tmp/pciutils/', files=['ChangeLog'])
         except:
-            print "Git log: FAILED"
+            print("Git log: FAILED")
             return
 
         if len(self.log_data) <= 0:
-            print "Git log: FAILED"
+            print("Git log: FAILED")
             return
 
-        print "Git log: PASSED"
+        print("Git log: PASSED")
 
     def diff(self):
         # TODO
@@ -111,14 +111,14 @@ class GitTest(Test):
             self.blame_data = ""
             self.repo.blame('/tmp/pciutils/', files=['ChangeLog'])
         except:
-            print "Git blame: FAILED"
+            print("Git blame: FAILED")
             return
 
         if len(self.blame_data) <= 0:
-            print "Git blame: FAILED"
+            print("Git blame: FAILED")
             return
 
-        print "Git blame: PASSED"
+        print("Git blame: PASSED")
 
     def get_modules(self):
         pass
@@ -127,12 +127,12 @@ class GitTest(Test):
         try:
             rev = self.repo.get_last_revision('/tmp/cpufrequtils')
             if rev is not None:
-                print "Git get_last_revision(%s): PASSED" % (rev)
+                print("Git get_last_revision(%s): PASSED" % (rev))
                 return
         except:
             pass
 
-        print "Git get_last_revision: FAILED"
+        print("Git get_last_revision: FAILED")
 
     def clean(self):
         remove_directory('/tmp/cpufrequtils')

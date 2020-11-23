@@ -17,10 +17,13 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
-from distutils.core import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 setup(name="RepositoryHandler",
-      version="0.5.1",
+      version="1.0.0",
       author="GSyC/LibreSoft, Universidad Rey Juan Carlos",
       author_email="metrics-grimoire@lists.libresoft.es",
       description="Python library for handling code repositories",

@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: cvsanaly2
+Version: 2.1.0
+Summary: An analysis tool for your source code repository
+Home-page: http://projects.libresoft.es/projects/cvsanaly/wiki/
+Author: GSyC/LibreSoft, Universidad Rey Juan Carlos
+Author-email: libresoft-tools-devel@lists.morfeo-project.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8

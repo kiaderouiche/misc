@@ -135,7 +135,7 @@ class Repository:
         raise  NotImplementedError
 
     def add_watch(self, type, callback, user_data=None):
-        if type not in range(N_WATCHES):
+        if type not in list(range(N_WATCHES)):
             raise InvalidWatch('Type %d is not a valid watch type' % (type))
 
         if not type in self.watchers:
@@ -146,7 +146,7 @@ class Repository:
         return len(self.watchers[type]) - 1
 
     def remove_watch(self, type, watcher_id):
-        if type not in range(N_WATCHES):
+        if type not in list(range(N_WATCHES)):
             raise InvalidWatch('Type %d is not a valid watch type' % (type))
 
         if not type in self.watchers:
@@ -173,13 +173,13 @@ class Repository:
             self.__run_callbacks(type, data)
 
         if DEBUG:
-            print command.cmd
+            print((command.cmd))
 
         try:
             command.run(input, callback)
-        except CommandError, e:
+        except CommandError as e:
             raise RepositoryCommandError(e.cmd, e.returncode, e.error)
-        except CommandRunningError, e:
+        except CommandRunningError as e:
             raise RepositoryCommandRunningError(e.cmd, e.error)
 
 

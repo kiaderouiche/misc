@@ -13,22 +13,22 @@ class BzrTest(Test):
                                       'http://pkg-config.freedesktop.org/bzr/')
         self.repo.checkout('pkg-config', '/tmp/', newdir='pkg-config')
         if not os.path.exists('/tmp/pkg-config/.bzr'):
-            print "Bzr checkout: FAILED"
+            print("Bzr checkout: FAILED")
             return
 
         try:
             repo2 = create_repository_from_path('/tmp/pkg-config')
         except:
-            print "Bzr create_repository_from_path: FAILED"
+            print("Bzr create_repository_from_path: FAILED")
             return
 
-        print "Bzr checkout: PASSED"
+        print("Bzr checkout: PASSED")
 
     def update(self):
         try:
             self.repo.update('/tmp/pkg-config')
         except:
-            print "Bzr update: FAILED"
+            print("Bzr update: FAILED")
             return
 
         # TODO
@@ -37,7 +37,7 @@ class BzrTest(Test):
         #except:
         #    print "Git update: FAILED"
         #    raise
-        print "Bzr update: PASSED"
+        print("Bzr update: PASSED")
 
     def log(self):
         def log_cb(data, user_data=None):
@@ -49,15 +49,15 @@ class BzrTest(Test):
             self.log_data = ""
             self.repo.log('/tmp/pkg-config/')
         except:
-            print "Bzr log: FAILED"
+            print("Bzr log: FAILED")
             raise
             return
 
         if len(self.log_data) <= 0:
-            print "Bzr log: FAILED"
+            print("Bzr log: FAILED")
             return
 
-        print "Bzr log: PASSED"
+        print("Bzr log: PASSED")
 
     def diff(self):
         # TODO
@@ -70,12 +70,12 @@ class BzrTest(Test):
         try:
             rev = self.repo.get_last_revision('/tmp/pkg-config')
             if rev is not None:
-                print "Bzr get_last_revision(%s): PASSED" % (rev)
+                print("Bzr get_last_revision(%s): PASSED" % (rev))
                 return
         except:
             pass
 
-        print "Bzr get_last_revision: FAILED"
+        print("Bzr get_last_revision: FAILED")
 
     def clean(self):
         remove_directory('/tmp/pkg-config')

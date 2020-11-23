@@ -1,5 +1,6 @@
 # Downloader.py
 #
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 # Copyright (C) 2007 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -16,19 +17,17 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
-from FindProgram import find_program
-from Command import Command
+import pathlib
+from .FindProgram import find_program
+from .Command import Command
 
 
-def get_download_command(uri, dest_path, output):
-    wget = find_program('wget')
-    if wget is None:
+def get_download_command(uri, dest_path, output) -> list:
+    http = find_program('http')
+    if http is None:
         return None
 
-    cmd = [wget, uri, '-O', dest_path, '-o', output]
-    if uri.startswith('https://'):
-        cmd.append('--no-check-certificate')
+    cmd = [http, uri, '-O', dest_path, '-o', output]
 
     return cmd
 
@@ -68,6 +67,6 @@ if __name__ == '__main__':
         output = None
 
     if download(uri, dir, output):
-        print "SUSSCESS"
+        print("SUSSCESS")
     else:
-        print "FAILED"
+        print("FAILED")

@@ -42,7 +42,7 @@ def generate_changelog():
     from subprocess import Popen, PIPE
     from tempfile import mkstemp
 
-    fd, filename = mkstemp(dir=os.getcwd())
+    fd, filename = mkstemp(dir=pathlib.path().cwd())
 
     print ("Creating ChangeLog")
     cmd = [
@@ -59,7 +59,7 @@ def generate_changelog():
     pathlib.Path(filename).rename("ChangeLog.md")
 
 # Check dependencies
-deps = ['repositoryhandler >= 0.3', 'sqlite3', 'mysqlclient']
+deps = ['repositoryhandler >= 0.3']
 
 #pkg_check_modules (deps)
 
