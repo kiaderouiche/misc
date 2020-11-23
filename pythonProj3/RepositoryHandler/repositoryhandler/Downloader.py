@@ -23,24 +23,27 @@ from .Command import Command
 
 
 def get_download_command(uri, dest_path, output) -> list:
+    '''
+    
+    '''
     http = find_program('http')
     if http is None:
-        return None
+        return None # use Wget or curl(library)
 
     cmd = [http, uri, '-O', dest_path, '-o', output]
 
     return cmd
 
 
-def download(uri, dirname=None, output=None):
+def download(uri, dirname=None, output=None) -> bool:
 
     if dirname is None:
-        dirname = os.getcwd()
+        dirname = pathlib.Path().cwd()
 
     if output is None:
         output = '/dev/null'
 
-    dest_path = os.path.join(dirname, os.path.basename(uri))
+    dest_path =  pathlib.Path().joinpath(dirname, pathlib.Path(uri).name())
     cmd = get_download_command(uri, dest_path, output)
     if cmd is None:
         return False
