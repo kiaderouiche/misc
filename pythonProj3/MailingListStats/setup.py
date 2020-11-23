@@ -54,7 +54,7 @@ setup(
     author_email='metrics-grimoire@lists.libresoft.es',
     description='A tool to retrieve and analyze mailing lists discussions, '
                 'part of the Metrics Grimoire suite.',
-    long_description=README,
+    long_description=README.rst,
     license='GNU GPL 2 or any later version',
     url='http://metricsgrimoire.github.io/MailingListStats/',
     platforms = ['any'],
@@ -69,8 +69,8 @@ setup(
         'License :: OSI Approved :: GNU General Public License v2 or later '
         '(GPLv2+)',
         'Operating System :: POSIX',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8,,
         'Topic :: Communications :: Email',
         'Topic :: Internet :: Log Analysis',
         'Topic :: Internet :: WWW/HTTP',

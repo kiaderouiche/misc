@@ -300,5 +300,5 @@ class Config():
             Config.load()  # try to load a config file from default locations
 
         # Reconciling config file options with command-line options
-        Config.__dict__.update(Config.clean_empty_options(args))
+        #Config.__dict__.update(Config.clean_empty_options(args))
         Config.check_config()
