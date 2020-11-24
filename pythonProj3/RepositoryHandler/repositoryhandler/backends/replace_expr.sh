@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 #
 
-for pyfile in *.py
+for pyfile in [a-t]*.py
 do
-    echo $pyfile
+    echo "$pyfile Processing..."
+    
 done

@@ -181,7 +181,7 @@ class GitRepository(Repository):
                                       os.path.basename(self.uri.rstrip('/')))
             else:
                 srcdir = pathlib.Path().joinpath(rootdir, module)
-        if os.path.exists(srcdir):
+        if pathlib.Path(srcdir).exists():
             try:
                 self.update(srcdir, rev)
                 return
