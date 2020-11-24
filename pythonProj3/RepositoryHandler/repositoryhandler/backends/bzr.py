@@ -1,5 +1,6 @@
 # bzr.py
 #
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 # Copyright (C) 2008 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -17,17 +18,17 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import re
-import os
+import pathlib
 
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository, \
     RepositoryInvalidWorkingCopy, register_backend
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import CHECKOUT
 
 
-def get_repository_from_path(path):
-    if os.path.isfile(path):
-        path = os.path.dirname(path)
+def get_repository_from_path(path) -> str:
+    if pathlib.Path(path).is_file():
+        path = pathlib.Path(path).name
 
     pattern = re.compile("^[ \t]*(checkout of)?(parent)? branch:(.*)$")
     uri = None
@@ -109,8 +110,8 @@ class BzrRepository(Repository):
 
         cmd = ['bzr', 'pull']
 
-        if os.path.isfile(uri):
-            directory = os.path.dirname(uri)
+        if pathlib.Path(uri).is_file()
+            directory = pathlib.Path(uri).parent
         else:
             directory = uri
 
@@ -120,14 +121,14 @@ class BzrRepository(Repository):
     def log(self, uri, rev=None, files=None):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
-            cwd = os.path.dirname(uri)
-            files = [os.path.basename(uri)]
-        elif os.path.isdir(uri):
+        if  pathlib.Path(uri).is_file():
+            cwd = pathlib.Path(uri).parent
+            files = [pathlib.Path(uri).name]
+        elif pathlib.Path(uri).is_dir():
             cwd = uri
             files = ['.']
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path().cwd()
 
         cmd = ['bzr', 'log', '-v']
 
@@ -154,11 +155,11 @@ class BzrRepository(Repository):
         # TODO
         pass
 
-    def get_modules(self):
+    def get_modules(self) -> list:
         #Not supported by Bzr
         return []
 
-    def get_last_revision(self, uri):
+    def get_last_revision(self, uri) -> str:
         self._check_uri(uri)
 
         cmd = ['bzr', 'revno']
