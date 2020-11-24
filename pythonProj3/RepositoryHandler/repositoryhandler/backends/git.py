@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
+import pathlib
 import re
 
 from repositoryhandler.Command import Command, CommandError
@@ -26,7 +26,7 @@ from repositoryhandler.backends.watchers import *
 
 
 def get_config(path, option=None):
-    if os.path.isfile(path):
+    if pathlib.Path(path).is_file():
         path = os.path.dirname(path)
 
     cmd = ['git', 'config']
@@ -56,7 +56,7 @@ def get_config(path, option=None):
 
 
 def get_repository_from_path(path):
-    if os.path.isfile(path):
+    if pathlib.Path(path).is_file():
         path = os.path.dirname(path)
 
     dir = path
@@ -224,7 +224,7 @@ class GitRepository(Repository):
 
         cmd = ['git', 'pull']
 
-        if os.path.isfile(uri):
+        if pathlib.Path(uri).is_file():
             directory = os.path.dirname(uri)
         else:
             directory = uri
@@ -271,7 +271,7 @@ class GitRepository(Repository):
     def log(self, uri, rev=None, files=None, gitref=None):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
+        if pathlib.Path(uri).is_file():
             cwd = os.path.dirname(uri)
             files = [os.path.basename(uri)]
         elif os.path.isdir(uri):
@@ -335,7 +335,7 @@ class GitRepository(Repository):
     def diff(self, uri, branch=None, revs=None, files=None):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
+        if pathlib.Path(uri).is_file():
             cwd = self.__get_root_dir(uri)
             files = [uri[len(cwd):].strip("/")]
         elif os.path.isdir(uri):
@@ -362,7 +362,7 @@ class GitRepository(Repository):
     def show(self, uri, rev=None):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
+        if pathlib.Path(path).is_file(uri)):
             cwd = self.__get_root_dir(uri)
             target = uri[len(cwd):].strip("/")
         elif os.path.isdir(uri):
@@ -388,7 +388,7 @@ class GitRepository(Repository):
     def blame(self, uri, rev=None, files=None, mc=False):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
+        if pathlib.Path(path).is_file(uri):
             cwd = os.path.dirname(uri)
             files = [os.path.basename(uri)]
         elif os.path.isdir(uri):
@@ -423,7 +423,7 @@ class GitRepository(Repository):
         self._check_uri(uri)
 
         target = None
-        if os.path.isfile(uri):
+        if pathlib.Path(path).is_file():
             cwd = os.path.dirname(uri)
             target = os.path.basename(uri)
         elif os.path.isdir(uri):
