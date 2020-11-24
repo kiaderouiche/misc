@@ -60,8 +60,8 @@ def get_repository_from_path(path):
         path = os.path.dirname(path)
 
     dir = path
-    while dir and not os.path.isdir(pathlib.Path().joinpath(dir, ".git")) and dir != "/":
-        dir = pathlib.Path(dir).parent
+    while dir and not os.path.isdir(os.path.join(dir, ".git")) and dir != "/":
+        dir = os.path.dirname(dir)
 
     if not dir or dir == "/":
         raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Git '
@@ -156,8 +156,8 @@ class GitRepository(Repository):
 
     def __get_root_dir(self, uri):
         if uri != self.uri:
-            directory = pathlib.Path(uri).parent
-            while directory and not os.path.isdir(pathlib.Path().joinpath(directory,
+            directory = os.path.dirname(uri)
+            while directory and not os.path.isdir(os.path.join(directory,
                                                                ".git")):
                 directory = os.path.dirname(directory)
         else:
@@ -172,15 +172,15 @@ class GitRepository(Repository):
 
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
         if newdir is not None:
-            srcdir = pathlib.Path().joinpath(rootdir, newdir)
+            srcdir = os.path.join(rootdir, newdir)
         elif newdir == '.':
             srcdir = rootdir
         else:
             if module == '.':
-                srcdir = pathlib.Path().joinpath(rootdir,
+                srcdir = os.path.join(rootdir,
                                       os.path.basename(self.uri.rstrip('/')))
             else:
-                srcdir = pathlib.Path().joinpath(rootdir, module)
+                srcdir = os.path.join(rootdir, module)
         if os.path.exists(srcdir):
             try:
                 self.update(srcdir, rev)
@@ -194,7 +194,7 @@ class GitRepository(Repository):
         if module == '.':
             uri = self.uri
         else:
-            uri = pathlib.Path().joinpath(self.uri, module)
+            uri = os.path.join(self.uri, module)
 
         cmd = ['git', 'clone', uri]
 
@@ -224,8 +224,8 @@ class GitRepository(Repository):
 
         cmd = ['git', 'pull']
 
-        if pathlib.Path(uri).is_file():
-            directory = pathlib.Path(uri).parent
+        if os.path.isfile(uri):
+            directory = os.path.dirname(uri)
         else:
             directory = uri
 
@@ -271,10 +271,10 @@ class GitRepository(Repository):
     def log(self, uri, rev=None, files=None, gitref=None):
         self._check_uri(uri)
 
-        if pathlib.Path(uri).is_file():
-            cwd = pathlib.Path(uri).parent
-            files = [pathlib.Path(uri).name]
-        elif pathlib.Path(uri).is_dir():
+        if os.path.isfile(uri):
+            cwd = os.path.dirname(uri)
+            files = [os.path.basename(uri)]
+        elif os.path.isdir(uri):
             cwd = uri
         else:
             cwd = os.getcwd()
@@ -335,10 +335,10 @@ class GitRepository(Repository):
     def diff(self, uri, branch=None, revs=None, files=None):
         self._check_uri(uri)
 
-        if pathlib.Path(uri).is_file():
+        if os.path.isfile(uri):
             cwd = self.__get_root_dir(uri)
             files = [uri[len(cwd):].strip("/")]
-        elif pathlib.Path(uri).is_dir():
+        elif os.path.isdir(uri):
             cwd = uri
         else:
             cwd = os.getcwd()
@@ -362,10 +362,10 @@ class GitRepository(Repository):
     def show(self, uri, rev=None):
         self._check_uri(uri)
 
-        if pathlib.Path(uri).is_file():
+        if os.path.isfile(uri):
             cwd = self.__get_root_dir(uri)
             target = uri[len(cwd):].strip("/")
-        elif pathlib.Path(uri).is_dir():
+        elif os.path.isdir(uri):
             cwd = uri
             target = None
         else:
@@ -388,10 +388,10 @@ class GitRepository(Repository):
     def blame(self, uri, rev=None, files=None, mc=False):
         self._check_uri(uri)
 
-        if pathlib.Path(uri).is_file():
-            cwd = pathlib.Path(uri).parent
-            files = [pathlib.Path(uri).name]
-        elif pathlib.Path(uri).is_dir():
+        if os.path.isfile(uri):
+            cwd = os.path.dirname(uri)
+            files = [os.path.basename(uri)]
+        elif os.path.isdir(uri):
             cwd = uri
         else:
             cwd = os.getcwd()
@@ -423,10 +423,10 @@ class GitRepository(Repository):
         self._check_uri(uri)
 
         target = None
-        if pathlib.Path(uri).is_file():
-            cwd = pathlib.Path(uri).parent
-            target = pathlib.Path(uri).name
-        elif pathlib.Path(uri).is_dir():
+        if os.path.isfile(uri):
+            cwd = os.path.dirname(uri)
+            target = os.path.basename(uri)
+        elif os.path.isdir(uri):
             cwd = uri
         else:
             cwd = os.getcwd()

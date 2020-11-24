@@ -35,7 +35,7 @@ def get_repository_from_path(path):
     if not os.path.isdir(path):
         path = os.path.dirname(path)
 
-    cvsroot = pathlib.Path().joinpath(path, 'CVS', 'Root')
+    cvsroot = os.path.join(path, 'CVS', 'Root')
 
     try:
         uri = open(cvsroot, 'r').read().strip()
@@ -59,7 +59,7 @@ class CVSRepository(Repository):
         else:
             basename = None
 
-        repository = pathlib.Path().joinpath(path, 'CVS', 'Repository')
+        repository = os.path.join(path, 'CVS', 'Repository')
 
         try:
             rpath = open(repository, 'r').read().strip()
@@ -68,7 +68,7 @@ class CVSRepository(Repository):
                                                'CVS working copy' % path)
 
         if basename is not None:
-            return pathlib.Path().joinpath(rpath, basename)
+            return os.path.join(rpath, basename)
         else:
             return rpath
 
@@ -85,12 +85,12 @@ class CVSRepository(Repository):
 
         rpath = self.__get_repository_for_path(path)
 
-        return pathlib.Path().joinpath(self.uri, rpath)
+        return os.path.join(self.uri, rpath)
 
     def _check_srcdir(self, srcuri):
         # srcuri can be a module, directory or file
-        if pathlib.Path(srcuri).is_file():
-            srcdir = pathlib.Path(srcuri).parent
+        if os.path.isfile(srcuri):
+            srcdir = os.path.dirname(srcuri)
         else:
             srcdir = srcuri
 
@@ -117,11 +117,11 @@ class CVSRepository(Repository):
         # raise an exception if both parameters are provided and
         # use them, it doesn't matter which, when only one is provided.
         if newdir is not None:
-            srcdir = pathlib.Path().joinpath(rootdir, newdir)
+            srcdir = os.path.join(rootdir, newdir)
         elif newdir == '.' or uri == '.':
             srcdir = rootdir
         else:
-            srcdir = pathlib.Path().joinpath(rootdir, uri)
+            srcdir = os.path.join(rootdir, uri)
         if os.path.exists(srcdir):
             try:
                 self.update(srcdir, rev)
@@ -151,9 +151,9 @@ class CVSRepository(Repository):
         if rev is not None:
             cmd.extend(['-r', rev])
 
-        if pathlib.Path(uri).is_file():
-            directory = pathlib.Path(uri).parent
-            cmd.append(pathlib.Path(uri).name)
+        if os.path.isfile(uri):
+            directory = os.path.dirname(uri)
+            cmd.append(os.path.basename(uri))
         else:
             directory = uri
             cmd.append('.')
@@ -171,9 +171,9 @@ class CVSRepository(Repository):
         if rev is not None:
             cmd.extend(['-r', rev])
 
-        if not pathlib.Path(uri).is_dir():
-            directory = pathlib.Path(uri).parent
-            cmd.append(pathlib.Path().joinpath(rpath, pathlib.Path(uri).name))
+        if not os.path.isdir(uri):
+            directory = os.path.dirname(uri)
+            cmd.append(os.path.join(rpath, os.path.basename(uri)))
         else:
             directory = uri
             cmd.append(rpath)
@@ -189,8 +189,8 @@ class CVSRepository(Repository):
         if rev is not None:
             cmd.extend(['-r', rev])
 
-        if pathlib.Path(uri).is_file():
-            directory = pathlib.Path(uri).parent
+        if os.path.isfile(uri):
+            directory = os.path.dirname(uri)
         else:
             directory = uri
 
@@ -211,7 +211,7 @@ class CVSRepository(Repository):
 
         if files is not None:
             for file in files:
-                cmd.append(pathlib.Path().joinpath(module, file))
+                cmd.append(os.path.join(module, file))
         else:
             cmd.append(module)
 
@@ -227,8 +227,8 @@ class CVSRepository(Repository):
             for rev in revs:
                 cmd.extend(['-r', rev])
 
-        if pathlib.Path(uri).is_file():
-            cwd = pathlib.Path(uri).parent
+        if os.path.isfile(uri):
+            cwd = os.path.dirname(uri)
         else:
             cwd = uri
 
@@ -265,9 +265,9 @@ class CVSRepository(Repository):
         if rev is not None:
             cmd.extend(['-r', rev])
 
-        if pathlib.Path(uri).is_file():
-            directory = pathlib.Path(uri).parent
-            target = pathlib.Path(uri).name
+        if os.path.isfile(uri):
+            directory = os.path.dirname(uri)
+            target = os.path.basename(uri)
         else:
             directory = uri
             target = '.'
@@ -289,8 +289,8 @@ class CVSRepository(Repository):
         if rev is not None:
             cmd.extend(['-r', rev])
 
-        if pathlib.Path(uri).is_file():
-            directory = pathlib.Path(uri).parent
+        if os.path.isfile(uri):
+            directory = os.path.dirname(uri)
         else:
             directory = uri
 
@@ -307,11 +307,11 @@ class CVSRepository(Repository):
     def get_last_revision(self, uri):
         self._check_srcdir(uri)
 
-        if not pathlib.Path(uri).is_file():
+        if not os.path.isfile(uri):
             return None
 
-        filename = pathlib.Path(uri).name
-        path = pathlib.Path(uri).parent
+        filename = os.path.basename(uri)
+        path = os.path.dirname(uri)
 
         cmd = ['cvs', 'status', filename]
         command = Command(cmd, path)

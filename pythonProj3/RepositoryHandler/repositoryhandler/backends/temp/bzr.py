@@ -79,11 +79,11 @@ class BzrRepository(Repository):
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
         # branch doesn't make sense here module == branch
         if newdir is not None:
-            srcdir = pathlib.Path().joinpath(rootdir, newdir)
+            srcdir = os.path.join(rootdir, newdir)
         elif newdir == '.':
             srcdir = rootdir
         else:
-            srcdir = pathlib.Path().joinpath(rootdir, module)
+            srcdir = os.path.join(rootdir, module)
         if os.path.exists(srcdir):
             try:
                 self.update(srcdir, rev)

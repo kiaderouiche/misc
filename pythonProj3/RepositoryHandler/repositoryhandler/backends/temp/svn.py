@@ -61,7 +61,7 @@ def get_auth_info(uri):
 
 
 def get_info(uri, user=None, passwd=None):
-    if pathlib.Path(uri).is_dir():
+    if os.path.isdir(uri):
         path = uri
         uri = '.'
     else:
@@ -89,7 +89,7 @@ def get_info(uri, user=None, passwd=None):
 
 
 def list_files(uri, user=None, passwd=None):
-    if pathlib.Path(uri).is_dir():
+    if os.path.isdir(uri):
         path = uri
         uri = '.'
     else:
@@ -195,11 +195,11 @@ class SVNRepository(Repository):
 
     def __get_uri_for_branch(self, module, branch):
         if branch is None:
-            uri = pathlib.Path().joinpath(self.uri, module)
+            uri = os.path.join(self.uri, module)
         elif branch == 'trunk':
-            uri = pathlib.Path().joinpath(self.uri, 'trunk')
+            uri = os.path.join(self.uri, 'trunk')
         else:
-            uri = pathlib.Path().joinpath(self.uri, 'branches', branch)
+            uri = os.path.join(self.uri, 'branches', branch)
 
         try:
             info = get_info(uri)
@@ -216,15 +216,15 @@ class SVNRepository(Repository):
 
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
         if newdir is not None:
-            srcdir = pathlib.Path().joinpath(rootdir, newdir)
+            srcdir = os.path.join(rootdir, newdir)
         elif newdir == '.':
             srcdir = rootdir
         else:
             if module == '.':
-                srcdir = pathlib.Path().joinpath(rootdir,
+                srcdir = os.path.join(rootdir,
                                       os.path.basename(self.uri.rstrip('/')))
             else:
-                srcdir = pathlib.Path().joinpath(rootdir, module)
+                srcdir = os.path.join(rootdir, module)
         if os.path.exists(srcdir):
             try:
                 self.update(srcdir, rev)
@@ -277,9 +277,9 @@ class SVNRepository(Repository):
 
         self._check_uri(repo_uri)
 
-        if pathlib.Path(repo_uri).exists():
-            cwd = pathlib.Path(repo_uri).parent
-            target = pathlib.Path(repo_uri).name
+        if os.path.exists(repo_uri):
+            cwd = os.path.dirname(repo_uri)
+            target = os.path.basename(repo_uri)
         else:
             cwd = os.getcwd()
             target = repo_uri
@@ -300,10 +300,10 @@ class SVNRepository(Repository):
 
         self._check_uri(repo_uri)
 
-        if pathlib.Path(repo_uri).is_file():
-            cwd = pathlib.Path(repo_uri).parent
+        if os.path.isfile(repo_uri):
+            cwd = os.path.dirname(repo_uri)
             target = '.'
-        elif pathlib.Path(repo_uri).is_dir():
+        elif os.path.isdir(repo_uri):
             cwd = repo_uri
             target = '.'
         else:
@@ -329,7 +329,7 @@ class SVNRepository(Repository):
 
     def rlog(self, module=None, rev=None, files=None):
         if module is not None:
-            uri = pathlib.Path().joinpath(self.uri, module.strip("/"))
+            uri = os.path.join(self.uri, module.strip("/"))
         else:
             uri = self.uri
 
@@ -340,10 +340,10 @@ class SVNRepository(Repository):
 
         self._check_uri(repo_uri)
 
-        if pathlib.Path(repo_uri).is_file():
-            cwd = pathlib.Path(repo_uri).parent
+        if os.path.isfile(repo_uri):
+            cwd = os.path.dirname(repo_uri)
             target = '.'
-        elif pathlib.Path(repo_uri).is_dir():
+        elif os.path.isdir(repo_uri):
             cwd = repo_uri
             target = '.'
         else:
@@ -364,7 +364,7 @@ class SVNRepository(Repository):
                 if target == '.':
                     cmd.append(file)
                 else:
-                    cmd.append(pathlib.Path().joinpath(target, file))
+                    cmd.append(os.path.join(target, file))
         else:
             cmd.append(target)
 
@@ -376,10 +376,10 @@ class SVNRepository(Repository):
 
         self._check_uri(repo_uri)
 
-        if pathlib.Path(repo_uri).is_file():
-            cwd = pathlib.Path(repo_uri).parent
-            target = pathlib.Path(repo_uri).name
-        elif pathlib.Path(repo_uri).is_dir():
+        if os.path.isfile(repo_uri):
+            cwd = os.path.dirname(repo_uri)
+            target = os.path.basename(repo_uri)
+        elif os.path.isdir(repo_uri):
             cwd = repo_uri
             target = '.'
         else:
@@ -403,10 +403,10 @@ class SVNRepository(Repository):
         # so no need for a branch parameter
         self._check_uri(repo_uri)
 
-        if pathlib.Path(repo_uri).is_file():
-            cwd = pathlib.Path(repo_uri).parent
-            target = pathlib.Path(repo_uri).name
-        elif pathlib.Path(repo_uri).is_dir():
+        if os.path.isfile(repo_uri):
+            cwd = os.path.dirname(repo_uri)
+            target = os.path.basename(repo_uri)
+        elif os.path.isdir(repo_uri):
             cwd = repo_uri
             target = '.'
         else:
@@ -444,10 +444,10 @@ class SVNRepository(Repository):
 
         self._check_uri(repo_uri)
 
-        if pathlib.Path(repo_uri).is_file():
-            cwd = pathlib.Path(repo_uri).parent
-            target = pathlib.Path(repo_uri).name
-        elif pathlib.Path(repo_uri).is_dir():
+        if os.path.isfile(repo_uri):
+            cwd = os.path.dirname(repo_uri)
+            target = os.path.basename(repo_uri)
+        elif os.path.isdir(repo_uri):
             cwd = repo_uri
             target = '.'
         else:
@@ -479,7 +479,7 @@ class SVNRepository(Repository):
         #
 
         # Try the first layout
-        uri = pathlib.Path().joinpath(self.uri, 'trunk')
+        uri = os.path.join(self.uri, 'trunk')
         try:
             info = get_info(uri, self.user, self.passwd)
             if info is not None:
@@ -492,7 +492,7 @@ class SVNRepository(Repository):
         retval = []
         modules = list_files(self.uri)
         for module in modules:
-            uri = pathlib.Path().joinpath(self.uri, module, 'trunk')
+            uri = os.path.join(self.uri, module, 'trunk')
 
             try:
                 info = get_info(uri, self.user, self.passwd)
