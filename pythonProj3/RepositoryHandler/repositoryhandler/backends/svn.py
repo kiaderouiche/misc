@@ -281,7 +281,7 @@ class SVNRepository(Repository):
             cwd = pathlib.Path(repo_uri).parent
             target = pathlib.Path(repo_uri).name
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
             target = repo_uri
 
         cmd = ['svn', 'cat']
@@ -307,7 +307,7 @@ class SVNRepository(Repository):
             cwd = repo_uri
             target = '.'
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
             target = repo_uri
 
         cmd = ['svn', '-v', 'log']
@@ -348,7 +348,7 @@ class SVNRepository(Repository):
             target = '.'
         else:
             target = repo_uri
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['svn', 'diff']
         cmd = self._get_command_auth(cmd)
@@ -384,7 +384,7 @@ class SVNRepository(Repository):
             target = '.'
         else:
             target = repo_uri
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         if rev is None:
             info = get_info(repo_uri, self.user, self.passwd)
@@ -410,7 +410,7 @@ class SVNRepository(Repository):
             cwd = repo_uri
             target = '.'
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
             target = repo_uri
 
         if rev is not None and target != '.':
@@ -451,7 +451,7 @@ class SVNRepository(Repository):
             cwd = repo_uri
             target = '.'
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
             target = repo_uri
 
         cmd = ['svn', '-R', 'ls']

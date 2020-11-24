@@ -9,6 +9,7 @@ for keywords in uri dir repo_uri srcuri module tarball_path
         sed -i -e "s/\os.path.basename($keywords)/\pathlib.Path($keywords).name/g" $1
         sed -i -e "s/\os.path.exists($keywords)/\pathlib.Path($keywords).exists()/g" $1
         sed -i -e "s/\os.path.isfile($keywords)/\pathlib.Path($keywords).is_file()/g" $1
+        sed -i -e "s/os.getcwd/pathlib.Path.cwd/g" $1
     done
 }
 
@@ -16,6 +17,7 @@ for pyfile in [a-t]*.py
 do
     if [ "$pyfile" == "git.py" ] 
     then
+        echo " ==> $pyfile enter..."
         echo "$pyfile Processing..."
         #function
         keywordsReplace "./$pyfile"

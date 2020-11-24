@@ -277,7 +277,7 @@ class GitRepository(Repository):
         elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['git', 'log', '--topo-order', '--pretty=fuller',
                '--parents', '--name-status', '-M', '-C', '-c']
@@ -341,7 +341,7 @@ class GitRepository(Repository):
         elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['git', 'diff']
 
@@ -369,7 +369,7 @@ class GitRepository(Repository):
             cwd = uri
             target = None
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
             target = None
 
         cmd = ['git', 'show', '--pretty=format:']
@@ -394,7 +394,7 @@ class GitRepository(Repository):
         elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['git', 'blame', '--root', '-l', '-t', '-f']
 
@@ -429,7 +429,7 @@ class GitRepository(Repository):
         elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         if rev is None:
             try:
