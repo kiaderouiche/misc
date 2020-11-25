@@ -62,7 +62,7 @@ def get_repository_from_path(path):
         path = pathlib.Path(path).parent
 
     dir = path
-    while dir and not os.path.isdir(pathlib.Path().joinpath(dir, ".git")) and dir != "/":
+    while dir and not pathlib.Path(pathlib.Path().joinpath(dir, ".git")).is_dir() and dir != "/":
         dir = pathlib.Path(dir).parent
 
     if not dir or dir == "/":
