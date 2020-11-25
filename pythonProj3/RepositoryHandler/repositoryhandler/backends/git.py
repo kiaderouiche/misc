@@ -25,7 +25,7 @@ from repositoryhandler.backends import Repository,\
 from repositoryhandler.backends.watchers import *
 
 
-def get_config(path, option=None)->int:
+def get_config(path, option=None):
     if pathlib.Path(path).is_file():
         path = os.path.dirname(path)
 
@@ -61,7 +61,7 @@ def get_repository_from_path(path):
 
     dir = path
     while dir and not os.path.isdir(pathlib.Path().joinpath(dir, ".git")) and dir != "/":
-        dir = pathlib.Path(dir).parent
+        dir = os.path.dirname(dir)
 
     if not dir or dir == "/":
         raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Git '
@@ -156,10 +156,10 @@ class GitRepository(Repository):
 
     def __get_root_dir(self, uri):
         if uri != self.uri:
-            directory = pathlib.Path(uri).parent
+            directory = os.path.dirname(uri)
             while directory and not os.path.isdir(pathlib.Path().joinpath(directory,
                                                                ".git")):
-                directory = pathlib.Path(directory).parent
+                directory = os.path.dirname(directory)
         else:
             directory = uri
 
@@ -225,7 +225,7 @@ class GitRepository(Repository):
         cmd = ['git', 'pull']
 
         if pathlib.Path(uri).is_file():
-            directory = pathlib.Path(uri).parent
+            directory = os.path.dirname(uri)
         else:
             directory = uri
 
@@ -272,12 +272,12 @@ class GitRepository(Repository):
         self._check_uri(uri)
 
         if pathlib.Path(uri).is_file():
-            cwd = pathlib.Path(uri).parent
-            files = [pathlib.Path(uri).name]
+            cwd = os.path.dirname(uri)
+            files = [os.path.basename(uri)]
         elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = pathlib.Path.cwd()
+            cwd = os.getcwd()
 
         cmd = ['git', 'log', '--topo-order', '--pretty=fuller',
                '--parents', '--name-status', '-M', '-C', '-c']
@@ -341,7 +341,7 @@ class GitRepository(Repository):
         elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = pathlib.Path.cwd()
+            cwd = os.getcwd()
 
         cmd = ['git', 'diff']
 
@@ -369,7 +369,7 @@ class GitRepository(Repository):
             cwd = uri
             target = None
         else:
-            cwd = pathlib.Path.cwd()
+            cwd = os.getcwd()
             target = None
 
         cmd = ['git', 'show', '--pretty=format:']
@@ -389,12 +389,12 @@ class GitRepository(Repository):
         self._check_uri(uri)
 
         if pathlib.Path(path).is_file(uri):
-            cwd = pathlib.Path(uri).parent
-            files = [pathlib.Path(uri).name]
+            cwd = os.path.dirname(uri)
+            files = [os.path.basename(uri)]
         elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = pathlib.Path.cwd()
+            cwd = os.getcwd()
 
         cmd = ['git', 'blame', '--root', '-l', '-t', '-f']
 
@@ -424,12 +424,12 @@ class GitRepository(Repository):
 
         target = None
         if pathlib.Path(path).is_file():
-            cwd = pathlib.Path(uri).parent
-            target = pathlib.Path(uri).name
+            cwd = os.path.dirname(uri)
+            target = os.path.basename(uri)
         elif pathlib.Path(uri).is_dir():
             cwd = uri
         else:
-            cwd = pathlib.Path.cwd()
+            cwd = os.getcwd()
 
         if rev is None:
             try:

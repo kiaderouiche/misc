@@ -82,7 +82,7 @@ class TarFileExtractor(FileExtractor):
                                      "%s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = pathlib.Path().cwd()
+            path = os.cwd()
 
         try:
             tar.extractall(path)
@@ -107,16 +107,16 @@ class ZipFileExtractor(FileExtractor):
                                      " %s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = pathlib.path().cwd()
+            path = os.cwd()
 
         for name in zip.namelist():
             try:
-                fpath = pathlib.Path().joinpath(path, name)
+                fpath = os.path.join(path, name)
 
                 # Check if 'name' is a directory
                 if name[-1] == '/':
                     try:
-                        parthlib.Path(fpath).mkdir()
+                        os.makedirs(fpath)
                     except IOError as e:
                         zip.close()
                         raise FileExtractorError("FileExtractor Error: Write "
@@ -145,7 +145,8 @@ class ZipFileExtractor(FileExtractor):
 
 
 class GzipFileExtractor(FileExtractor):
-
+    '''
+    '''
     def __init__(self, uri):
         FileExtractor.__init__(self, uri)
 
@@ -157,10 +158,10 @@ class GzipFileExtractor(FileExtractor):
                                      "%s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = pathlib.Path().cwd()
+            path = os.cwd()
 
         try:
-            path = pathlib.Path().joinpath(path,
+            path = os.path.join(path,
                                 self.uri.split("/")[-1].replace(".gz", ""))
             f = open(path, "w")
             f.write(gz.read())
@@ -186,10 +187,10 @@ class Bzip2FileExtractor(FileExtractor):
                                      "%s: %s" % (self.uri, str(e)))
 
         if path is None:
-            path = pathlib.Path().cwd()
+            path = os.cwd()
 
         try:
-            path = pathlib.Path().joinpath(path,
+            path = os.path.join(path,
                                 self.uri.split("/")[-1].replace(".bz2", ""))
             f = open(path, "w")
             f.write(bz2.read())
@@ -227,18 +228,18 @@ class TarballRepository(Repository):
 
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
         if newdir is not None:
-            srcdir = pathlib.Path().joinpath(rootdir, newdir)
+            srcdir = os.path.join(rootdir, newdir)
         else:
             srcdir = rootdir
-        if not pathlib.Path(srcdir).exists():
-           pathlib.Path().mkdir(srcdir)
+        if not os.path.exists(srcdir):
+            os.makedirs(srcdir)
 
-        if pathlib.Path(module).exists():
+        if os.path.exists(module):
             tarball_path = module
         else:
             # Download module to rootdir
-            filename = pathlib.Path(module).name.split('?')[0]
-            tarball_path = pathlib.Path().joinpath(srcdir, filename)
+            filename = os.path.basename(module).split('?')[0]
+            tarball_path = os.path.join(srcdir, filename)
             cmd = get_download_command(module, tarball_path, '/dev/stdout')
             if cmd is None:
                 return
@@ -246,7 +247,7 @@ class TarballRepository(Repository):
             command = Command(cmd, srcdir)
             self._run_command(command, CHECKOUT)
 
-            if not pathlib.Path(tarball_path).exists():
+            if not os.path.exists(tarball_path):
                 return
 
         # Unpack the tarball
