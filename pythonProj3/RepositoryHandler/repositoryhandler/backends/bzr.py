@@ -155,7 +155,7 @@ class BzrRepository(Repository):
         # TODO
         pass
 
-    def get_modules(self):
+    def get_modules(self) -> liste:
         #Not supported by Bzr
         return []
 
