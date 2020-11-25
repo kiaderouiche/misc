@@ -20,7 +20,7 @@
 import pathlib
 import select
 import subprocess
-import sys
+import os
 import errno
 from signal import SIGINT, SIGTERM
 
@@ -33,8 +33,7 @@ class CommandError(Exception):
         self.error = error
 
     def __str__(self) -> str:
-        return "Command '%s' returned non-zero exit status %d" % \
-            (self.cmd, self.returncode)
+        return "Command '{}' returned non-zero exit status {}".format(self.cmd, self.returncode)
 
 
 class CommandRunningError(Exception):
@@ -44,7 +43,7 @@ class CommandRunningError(Exception):
         self.error = error
 
     def __str__(self) -> str:
-        return "Error during execution of command %s" % (self.cmd)
+        return "Error during execution of command {}".format(self.cmd)
 
 
 class CommandTimeOut (Exception):
@@ -144,7 +143,7 @@ class Command:
 
                 if p.stdin in wlist:
                     bytes_written = self._write(p.stdin.fileno(),
-                                                buffer(stdin,
+                                                memoryview(stdin,
                                                        input_offset,
                                                        512))
                     input_offset += bytes_written
@@ -171,7 +170,7 @@ class Command:
                         read_set.remove(p.stderr)
 
                     if err_data_cb is None:
-                        err_data += err_chunk
+                        err_data += str(err_chunk)
                     else:
                         err_data_cb[0](err_chunk, err_data_cb[1])
 
@@ -261,7 +260,7 @@ class Command:
         return self.run(stdin, None, None, timeout)
 
     def run(self, stdin=None, parser_out_func=None, parser_error_func=None,
-            timeout=None):
+            timeout=None)-> str:
         self._get_process()
 
         if parser_out_func is None and parser_error_func is None:
