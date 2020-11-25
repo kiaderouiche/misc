@@ -23,10 +23,10 @@ import pathlib
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository, \
     RepositoryInvalidWorkingCopy, register_backend
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import CHECKOUT, UPDATE, LOG
 
 
-def get_repository_from_path(path):
+def get_repository_from_path(path) -> str:
     if pathlib.Path(path).is_file():
         path = pathlib.Path(path).parent
 
@@ -73,7 +73,7 @@ class BzrRepository(Repository):
                                                ' but got %s)'
                                                % (uri, self.uri, repo_uri))
 
-    def copy(self):
+    def copy(self) -> str:
         return BzrRepository(self.uri)
 
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
@@ -159,7 +159,7 @@ class BzrRepository(Repository):
         #Not supported by Bzr
         return []
 
-    def get_last_revision(self, uri):
+    def get_last_revision(self, uri) -> str:
         self._check_uri(uri)
 
         cmd = ['bzr', 'revno']
