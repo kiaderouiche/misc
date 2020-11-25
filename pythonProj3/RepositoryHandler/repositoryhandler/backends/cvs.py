@@ -31,7 +31,7 @@ CVSPASS_ERROR_MESSAGE = "^.*: CVS password file .*\.cvspass does "\
                         "not exist - creating a new file$"
 
 
-def get_repository_from_path(path):
+def get_repository_from_path(path)-> str:
     # Just in case path is a file
     if not pathlib.Path(path).is_dir():
         path = pathlib.Path(path).parent
@@ -41,8 +41,8 @@ def get_repository_from_path(path):
     try:
         uri = open(cvsroot, 'r').read().strip()
     except IOError:
-        raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a CVS'
-                                           ' working copy' % path)
+        raise RepositoryInvalidWorkingCopy(f'"{path}" does not appear to be a CVS'
+                                           ' working copy')
 
     return 'cvs', uri
 
@@ -53,7 +53,7 @@ class CVSRepository(Repository):
     def __init__(self, uri):
         Repository.__init__(self, uri, 'cvs')
 
-    def __get_repository_for_path(self, path):
+    def __get_repository_for_path(self, path)-> str:
         if not pathlib.Path(path).is_dir():
             basename = pathlib.Path(path).name
             path = pathlib.Path(path).parent
@@ -65,8 +65,8 @@ class CVSRepository(Repository):
         try:
             rpath = open(repository, 'r').read().strip()
         except IOError:
-            raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a '
-                                               'CVS working copy' % path)
+            raise RepositoryInvalidWorkingCopy(f'"{path}" does not appear to be a CVS'
+                                           ' working copy')
 
         if basename is not None:
             return pathlib.Path().joinpath(rpath, basename)
@@ -74,14 +74,14 @@ class CVSRepository(Repository):
             return rpath
 
     def _run_command(self, command, type, input=None):
-        def error_handler(cmd, error):
+        def error_handler(cmd, error) -> str:
             patt = re.compile(CVSPASS_ERROR_MESSAGE)
             return patt.match(error) is not None
 
         command.set_error_handler(error_handler)
         Repository._run_command(self, command, type, input)
 
-    def get_uri_for_path(self, path):
+    def get_uri_for_path(self, path)-> str:
         self._check_srcdir(path)
 
         rpath = self.__get_repository_for_path(path)
@@ -103,7 +103,7 @@ class CVSRepository(Repository):
                                                '(expected %s but got %s)'
                                                % (srcdir, self.uri, uri))
 
-    def copy(self):
+    def copy(self) -> str:
         return CVSRepository(self.uri)
 
     def checkout(self, uri, rootdir, newdir=None, branch=None, rev=None):
@@ -205,6 +205,23 @@ class CVSRepository(Repository):
         self._run_command(command, LOG)
 
     def rlog(self, module, rev=None, files=None):
+        '''
+        '''
+
+        Parameters
+        ----------
+        module : TYPE
+            DESCRIPTION.
+        rev : TYPE, optional
+            DESCRIPTION. The default is None.
+        files : TYPE, optional
+            DESCRIPTION. The default is None.
+
+        Returns
+        -------
+        None.
+
+        '''
         cmd = ['cvs', '-z3', '-q', '-d', self.uri, 'rlog']
 
         if rev is not None:
