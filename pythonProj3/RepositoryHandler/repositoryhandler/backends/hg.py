@@ -224,7 +224,7 @@ class HgRepository(Repository):
         if branch is not None:
             self._checkout_branch(uri, branch)
 
-        cmd = ['git', 'pull']
+        cmd = ['hg', 'pull']
 
         if pathlib.Path(uri).is_file():
             directory = pathlib.Path(uri).parent
@@ -237,7 +237,7 @@ class HgRepository(Repository):
     def cat(self, uri, rev=None):
         self._check_uri(uri)
 
-        cmd = ['git', 'show']
+        cmd = ['hg', 'show']
 
         cwd = self.__get_root_dir(uri)
         target = uri[len(cwd):].strip("/")
@@ -255,7 +255,7 @@ class HgRepository(Repository):
     def size(self, uri, rev=None):
         self._check_uri(uri)
 
-        cmd = ['git', 'cat-file', '-s']
+        cmd = ['hg', 'cat-file', '-s']
 
         cwd = self.__get_root_dir(uri)
         target = uri[len(cwd):].strip("/")
