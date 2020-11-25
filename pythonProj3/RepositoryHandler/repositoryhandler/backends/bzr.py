@@ -47,14 +47,13 @@ def get_repository_from_path(path) -> str:
             uri = match.group(3).strip()
             break
     except CommandError:
-        raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Bzr '
-                                           'working copy' % path)
+        raise RepositoryInvalidWorkingCopy('"{}" does not appear to be a Bzr '
+                                           'working copy'.format(path))
 
     if uri is None:
         raise RepositoryInvalidWorkingCopy(
-            '"%s" does not appear to be a Bzr'
-            ' working copy' % path
-        )
+            f'"{path}" does not appear to be a Bzr'
+            ' working copy')
 
     return 'bzr', uri
 
@@ -68,10 +67,9 @@ class BzrRepository(Repository):
     def _check_uri(self, uri):
         type, repo_uri = get_repository_from_path(uri)
         if not repo_uri.startswith(self.uri):
-            raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a '
-                                               'Bzr working copy (expected %s'
-                                               ' but got %s)'
-                                               % (uri, self.uri, repo_uri))
+            raise RepositoryInvalidWorkingCopy(f'"{uri}" does not appear to be a '
+                                               'Bzr working copy (expected {self.uri}'
+                                               ' but got {repo_uri})')
 
     def copy(self) -> str:
         return BzrRepository(self.uri)
@@ -155,7 +153,7 @@ class BzrRepository(Repository):
         # TODO
         pass
 
-    def get_modules(self) -> liste:
+    def get_modules(self) -> list:
         #Not supported by Bzr
         return []
 

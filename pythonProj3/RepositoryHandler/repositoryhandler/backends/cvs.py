@@ -24,7 +24,8 @@ from repositoryhandler.backends import (Repository,
                                         RepositoryInvalidWorkingCopy,
                                         RepositoryCommandError,
                                         register_backend)
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import CHECKOUT, UPDATE, CAT, \
+        LOG, DIFF, BLAME, LS
 
 CVSPASS_ERROR_MESSAGE = "^.*: CVS password file .*\.cvspass does "\
                         "not exist - creating a new file$"
@@ -304,7 +305,7 @@ class CVSRepository(Repository):
         #Not supported by CVS
         return []
 
-    def get_last_revision(self, uri):
+    def get_last_revision(self, uri) -> int:
         self._check_srcdir(uri)
 
         if not pathlib.Path(uri).is_file():
