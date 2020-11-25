@@ -25,7 +25,8 @@ from repositoryhandler.backends import(Repository,
                                        RepositoryInvalidWorkingCopy,
                                        RepositoryInvalidBranch,
                                        register_backend)
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import BLAME, LOG, DIFF, \
+            LS, CAT, UPDATE, CHECKOUT
 
 SSL_CERTIFICATE_QUESTION = "(R)eject, accept (t)emporarily "\
                            "or accept (p)ermanently?"
@@ -223,7 +224,7 @@ class SVNRepository(Repository):
         else:
             if module == '.':
                 srcdir = pathlib.Path().joinpath(rootdir,
-                                      os.path.basename(self.uri.rstrip('/')))
+                                      pathlib.Path(pathlib.Path(self.uri.rstrip('/')).name()))
             else:
                 srcdir = pathlib.Path().joinpath(rootdir, module)
         if pathlib.Path(srcdir).exists():
@@ -250,7 +251,7 @@ class SVNRepository(Repository):
         if newdir is not None:
             cmd.append(newdir)
         elif module == '.':
-            cmd.append(os.path.basename(uri.rstrip('/')))
+            cmd.append(pathlib.Path(self.uri.rstrip('/')).name())
         else:
             cmd.append(module)
 

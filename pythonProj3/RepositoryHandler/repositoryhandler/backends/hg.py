@@ -23,14 +23,15 @@ import re
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository,\
     RepositoryInvalidWorkingCopy, register_backend, RepositoryCommandError
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import BLAME, LOG, DIFF, \
+            LS, CAT, UPDATE, SIZE, CHECKOUT
 
 
-def get_config(path, option=None):
+def get_config(path, option=None) -> int:
     if pathlib.Path(path).is_file():
         path = pathlib.Path(path).parent
 
-    cmd = ['git', 'config']
+    cmd = ['hg', 'config']
 
     if option is not None:
         cmd.extend(['--get', option])
@@ -56,13 +57,13 @@ def get_config(path, option=None):
     return retval
 
 
-def get_repository_from_path(path):
+def get_repository_from_path(path) -> str:
     if pathlib.Path(path).is_file():
         path = pathlib.Path(path).parent
 
     dir = path
-    while dir and not os.path.isdir(pathlib.Path().joinpath(dir, ".git")) and dir != "/":
-        dir = os.path.dirname(dir)
+    while dir and not pathlib.Path(pathlib.Path().joinpath(dir, ".git")).is_dir() and dir != "/":
+        dir = pathlib.Path(dir).parent
 
     if not dir or dir == "/":
         raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Git '
@@ -95,7 +96,7 @@ class GitRepository(Repository):
                                                ' but got %s)' %
                                                (uri, self.uri, repo_uri))
 
-    def _get_git_version(self):
+    def _get_git_version(self)-> str:
         if self.git_version is not None:
             return self.git_version
 
@@ -114,7 +115,7 @@ class GitRepository(Repository):
 
         return self.git_version
 
-    def _get_branches(self, path):
+    def _get_branches(self, path) -> str:
         cmd = ['git', 'branch']
 
         command = Command(cmd, path)
@@ -155,18 +156,18 @@ class GitRepository(Repository):
         command = Command(cmd, path)
         command.run()
 
-    def __get_root_dir(self, uri):
+    def __get_root_dir(self, uri)-> str:
         if uri != self.uri:
             directory = pathlib.Path(uri).parent
-            while directory and not os.path.isdir(pathlib.Path().joinpath(directory,
-                                                               ".git")):
-                directory = os.path.dirname(directory)
+            while directory and not pathlib.Path(pathlib.Path().joinpath(directory,
+                                                               ".git")).is_dir():
+                directory = pathlib.Path(directory).parent
         else:
             directory = uri
 
         return directory or self.uri
 
-    def copy(self):
+    def copy(self) -> str:
         repo = GitRepository(self.uri)
         repo.git_version = self.git_version
         return repo
@@ -179,7 +180,7 @@ class GitRepository(Repository):
         else:
             if module == '.':
                 srcdir = pathlib.Path().joinpath(rootdir,
-                                      os.path.basename(self.uri.rstrip('/')))
+                                       pathlib.Path(self.uri.rstrip('/')).name())
             else:
                 srcdir = pathlib.Path().joinpath(rootdir, module)
         if pathlib.Path(srcdir).exists():
@@ -197,12 +198,12 @@ class GitRepository(Repository):
         else:
             uri = pathlib.Path().joinpath(self.uri, module)
 
-        cmd = ['git', 'clone', uri]
+        cmd = ['hg', 'clone', uri]
 
         if newdir is not None:
             cmd.append(newdir)
         elif module == '.':
-            cmd.append(os.path.basename(uri.rstrip('/')))
+            cmd.append(pathlib.Path(uri.rstrip('/')).name)
         else:
             cmd.append(module)
 
@@ -280,7 +281,7 @@ class GitRepository(Repository):
         else:
             cwd = pathlib.Path.cwd()
 
-        cmd = ['git', 'log', '--topo-order', '--pretty=fuller',
+        cmd = ['hg', 'log', '--topo-order', '--pretty=fuller',
                '--parents', '--name-status', '-M', '-C', '-c']
 
         # Git < 1.6.4 -> --decorate
@@ -447,11 +448,11 @@ class GitRepository(Repository):
         command = Command(cmd, cwd, env={'PAGER': ''})
         self._run_command(command, LS)
 
-    def get_modules(self):
+    def get_modules(self)-> list:
         #Not supported by Git
         return []
 
-    def get_last_revision(self, uri):
+    def get_last_revision(self, uri)-> str:
         self._check_uri(uri)
 
         cmd = ['git', 'rev-list', 'HEAD^..HEAD']
@@ -491,4 +492,4 @@ class GitRepository(Repository):
                 raise e
 
 
-register_backend('git', GitRepository)
+register_backend('hg', GitRepository)

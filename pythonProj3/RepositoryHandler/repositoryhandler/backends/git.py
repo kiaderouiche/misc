@@ -27,7 +27,7 @@ from repositoryhandler.backends.watchers import BLAME, LOG, DIFF, \
             LS, CAT, UPDATE, SIZE, CHECKOUT
 
 
-def get_config(path, option=None):
+def get_config(path, option=None)-> int:
     if pathlib.Path(path).is_file():
         path = pathlib.Path(path).parent
 
