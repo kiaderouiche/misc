@@ -23,7 +23,8 @@ import re
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository,\
     RepositoryInvalidWorkingCopy, register_backend, RepositoryCommandError
-from repositoryhandler.backends.watchers import *
+from repositoryhandler.backends.watchers import BLAME, LOG, DIFF, \
+            LS, CAT, UPDATE, SIZE, CHECKOUT
 
 
 def get_config(path, option=None):
@@ -62,7 +63,7 @@ def get_repository_from_path(path):
 
     dir = path
     while dir and not os.path.isdir(pathlib.Path().joinpath(dir, ".git")) and dir != "/":
-        dir = os.path.dirname(dir)
+        dir = pathlib.Path(dir).parent
 
     if not dir or dir == "/":
         raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Git '
@@ -158,9 +159,9 @@ class GitRepository(Repository):
     def __get_root_dir(self, uri):
         if uri != self.uri:
             directory = pathlib.Path(uri).parent
-            while directory and not os.path.isdir(pathlib.Path().joinpath(directory,
-                                                               ".git")):
-                directory = os.path.dirname(directory)
+            while directory and not pathlib.Path(pathlib.Path().joinpath(directory,
+                                                               ".git")).is_dir():
+                directory = pathlib.Path(directory).parent
         else:
             directory = uri
 
@@ -179,7 +180,7 @@ class GitRepository(Repository):
         else:
             if module == '.':
                 srcdir = pathlib.Path().joinpath(rootdir,
-                                      os.path.basename(self.uri.rstrip('/')))
+                                       pathlib.Path(self.uri.rstrip('/')).name())
             else:
                 srcdir = pathlib.Path().joinpath(rootdir, module)
         if pathlib.Path(srcdir).exists():
@@ -202,7 +203,7 @@ class GitRepository(Repository):
         if newdir is not None:
             cmd.append(newdir)
         elif module == '.':
-            cmd.append(os.path.basename(uri.rstrip('/')))
+            cmd.append(pathlib.Path(uri.rstrip('/')).name)
         else:
             cmd.append(module)
 

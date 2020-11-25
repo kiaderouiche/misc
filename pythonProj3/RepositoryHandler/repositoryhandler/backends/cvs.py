@@ -206,7 +206,7 @@ class CVSRepository(Repository):
 
     def rlog(self, module, rev=None, files=None):
         '''
-        '''
+
 
         Parameters
         ----------
@@ -318,7 +318,7 @@ class CVSRepository(Repository):
         command = Command(cmd, directory)
         self._run_command(command, LS)
 
-    def get_modules(self):
+    def get_modules(self) -> list:
         #Not supported by CVS
         return []
 
