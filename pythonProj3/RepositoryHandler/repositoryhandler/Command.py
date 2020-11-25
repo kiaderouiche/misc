@@ -197,7 +197,7 @@ class Command:
 
         def out_cb(out_chunk, out_data_l, flush=False):
             out_data = out_data_l[0]
-            out_data += out_chunk
+            out_data += str(out_chunk)
             while '\n' in out_data:
                 pos = out_data.find('\n')
                 parser_out_func(out_data[:pos + 1])
