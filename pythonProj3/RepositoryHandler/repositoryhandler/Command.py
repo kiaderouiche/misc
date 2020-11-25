@@ -158,7 +158,7 @@ class Command:
                         read_set.remove(p.stdout)
 
                     if out_data_cb is None:
-                        out_data += out_chunk
+                        out_data += str(out_chunk)
                     else:
                         out_data_cb[0](out_chunk, out_data_cb[1])
 
