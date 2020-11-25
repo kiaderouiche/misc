@@ -162,7 +162,7 @@ class SVNRepository(Repository):
     def _run_command(self, command, type, input=None):
         try:
             Repository._run_command(self, command, type, input)
-        except CommandRunningError, e:
+        except CommandRunningError as e:
             # Read error message
             question = e.error.split('\n')[-1]
             if question.strip() == SSL_CERTIFICATE_QUESTION:

@@ -77,7 +77,7 @@ class TarFileExtractor(FileExtractor):
     def extract(self, path=None):
         try:
             tar = tarfile.open(self.uri, 'r:*')
-        except tarfile.TarError, e:
+        except tarfile.TarError as e:
             raise FileExtractorError("FileExtractor Error: Opening tarfile "
                                      "%s: %s" % (self.uri, str(e)))
 
@@ -86,7 +86,7 @@ class TarFileExtractor(FileExtractor):
 
         try:
             tar.extractall(path)
-        except tarfile.TarError, e:
+        except tarfile.TarError as e:
             tar.close()
             raise FileExtractorError("FileExtractor Error: Extracting tarfile"
                                      " %s: %s" % (self.uri, str(e)))
@@ -102,7 +102,7 @@ class ZipFileExtractor(FileExtractor):
     def extract(self, path=None):
         try:
             zip = zipfile.ZipFile(self.uri, 'r')
-        except zipfile.BadZipfile, e:
+        except zipfile.BadZipfile as e:
             raise FileExtractorError("FileExtractor Error: Opening zipfile"
                                      " %s: %s" % (self.uri, str(e)))
 
@@ -117,7 +117,7 @@ class ZipFileExtractor(FileExtractor):
                 if name[-1] == '/':
                     try:
                         os.makedirs(fpath)
-                    except IOError, e:
+                    except IOError as e:
                         zip.close()
                         raise FileExtractorError("FileExtractor Error: Write "
                                                  "error while extracting "
@@ -129,7 +129,7 @@ class ZipFileExtractor(FileExtractor):
                     f = open(fpath, 'w')
                     try:
                         f.write(bytes)
-                    except IOError, e:
+                    except IOError as e:
                         zip.close()
                         f.close()
                         raise FileExtractorError("FileExtractor Error: Write "
@@ -137,7 +137,7 @@ class ZipFileExtractor(FileExtractor):
                                                  "zipfile %s: %s" %
                                                  (self.uri, str(e)))
                     f.close()
-            except zipfile.BadZipfile, e:
+            except zipfile.BadZipfile as e:
                 zip.close()
                 raise FileExtractorError("FileExtractor Error: Reading "
                                          "zipfile %s: %s" % (self.uri, str(e)))
@@ -152,7 +152,7 @@ class GzipFileExtractor(FileExtractor):
     def extract(self, path=None):
         try:
             gz = gzip.GzipFile(self.uri, 'r')
-        except Exception, e:
+        except Exception as e:
             raise FileExtractorError("FileExtractor Error: Opening gzip "
                                      "%s: %s" % (self.uri, str(e)))
 
@@ -165,7 +165,7 @@ class GzipFileExtractor(FileExtractor):
             f = open(path, "w")
             f.write(gz.read())
             f.close()
-        except Exception, e:
+        except Exception as e:
             gz.close()
             raise FileExtractorError("FileExtractor Error: Extracting gzip "
                                      "%s: %s" % (self.uri, str(e)))
@@ -181,7 +181,7 @@ class Bzip2FileExtractor(FileExtractor):
     def extract(self, path=None):
         try:
             bz2 = bz2.BZ2File(self.uri, 'r')
-        except Exception, e:
+        except Exception as e:
             raise FileExtractorError("FileExtractor Error: Opening bzip2 "
                                      "%s: %s" % (self.uri, str(e)))
 
@@ -194,7 +194,7 @@ class Bzip2FileExtractor(FileExtractor):
             f = open(path, "w")
             f.write(bz2.read())
             f.close()
-        except Exception, e:
+        except Exception as e:
             bz2.close()
             raise FileExtractorError("FileExtractor Error: Extracting bzip2"
                                      " %s: %s" % (self.uri, str(e)))

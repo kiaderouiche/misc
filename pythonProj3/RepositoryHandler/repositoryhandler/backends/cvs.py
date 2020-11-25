@@ -249,7 +249,7 @@ class CVSRepository(Repository):
         # other cvs commands.
         try:
             self._run_command(command, DIFF)
-        except RepositoryCommandError, e:
+        except RepositoryCommandError as e:
             if e.returncode != 0 and not e.error:
                 pass
             else:
