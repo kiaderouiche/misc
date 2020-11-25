@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import pathlib
+import os
 
 from repositoryhandler.Command import Command, CommandError,\
     CommandRunningError
@@ -162,7 +162,7 @@ class SVNRepository(Repository):
     def _run_command(self, command, type, input=None):
         try:
             Repository._run_command(self, command, type, input)
-        except CommandRunningError as e:
+        except CommandRunningError, e:
             # Read error message
             question = e.error.split('\n')[-1]
             if question.strip() == SSL_CERTIFICATE_QUESTION:

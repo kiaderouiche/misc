@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import pathlib
+import os
 import re
 
 from repositoryhandler.Command import Command, CommandError
@@ -362,7 +362,7 @@ class GitRepository(Repository):
     def show(self, uri, rev=None):
         self._check_uri(uri)
 
-        if pathlib.Path(path).is_file(uri)):
+        if pathlib.Path(uri).is_file():
             cwd = self.__get_root_dir(uri)
             target = uri[len(cwd):].strip("/")
         elif pathlib.Path(uri).is_dir():
@@ -388,7 +388,7 @@ class GitRepository(Repository):
     def blame(self, uri, rev=None, files=None, mc=False):
         self._check_uri(uri)
 
-        if pathlib.Path(path).is_file(uri):
+        if pathlib.Path(uri).is_file():
             cwd = pathlib.Path(uri).parent
             files = [pathlib.Path(uri).name]
         elif pathlib.Path(uri).is_dir():
@@ -423,7 +423,7 @@ class GitRepository(Repository):
         self._check_uri(uri)
 
         target = None
-        if pathlib.Path(path).is_file():
+        if pathlib.Path(uri).is_file():
             cwd = pathlib.Path(uri).parent
             target = pathlib.Path(uri).name
         elif pathlib.Path(uri).is_dir():

@@ -1,6 +1,5 @@
 # bzr.py
 #
-# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 # Copyright (C) 2008 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -18,17 +17,17 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import re
-import pathlib
+import os
 
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository, \
     RepositoryInvalidWorkingCopy, register_backend
-from repositoryhandler.backends.watchers import CHECKOUT
+from repositoryhandler.backends.watchers import *
 
 
-def get_repository_from_path(path) -> str:
+def get_repository_from_path(path):
     if pathlib.Path(path).is_file():
-        path = pathlib.Path(path).name
+        path = pathlib.Path(path).parent
 
     pattern = re.compile("^[ \t]*(checkout of)?(parent)? branch:(.*)$")
     uri = None
@@ -110,7 +109,7 @@ class BzrRepository(Repository):
 
         cmd = ['bzr', 'pull']
 
-        if pathlib.Path(uri).is_file()
+        if pathlib.Path(uri).is_file():
             directory = pathlib.Path(uri).parent
         else:
             directory = uri
@@ -121,14 +120,14 @@ class BzrRepository(Repository):
     def log(self, uri, rev=None, files=None):
         self._check_uri(uri)
 
-        if  pathlib.Path(uri).is_file():
+        if pathlib.Path(uri).is_file():
             cwd = pathlib.Path(uri).parent
             files = [pathlib.Path(uri).name]
         elif pathlib.Path(uri).is_dir():
             cwd = uri
             files = ['.']
         else:
-            cwd = pathlib.Path().cwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['bzr', 'log', '-v']
 
@@ -155,11 +154,11 @@ class BzrRepository(Repository):
         # TODO
         pass
 
-    def get_modules(self) -> list:
+    def get_modules(self):
         #Not supported by Bzr
         return []
 
-    def get_last_revision(self, uri) -> str:
+    def get_last_revision(self, uri):
         self._check_uri(uri)
 
         cmd = ['bzr', 'revno']

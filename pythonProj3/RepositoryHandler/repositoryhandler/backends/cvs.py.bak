@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import pathlib
+import os
 import re
 
 from repositoryhandler.Command import Command
@@ -249,7 +249,7 @@ class CVSRepository(Repository):
         # other cvs commands.
         try:
             self._run_command(command, DIFF)
-        except RepositoryCommandError as e:
+        except RepositoryCommandError, e:
             if e.returncode != 0 and not e.error:
                 pass
             else:
