@@ -17,7 +17,7 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import re
-import os
+import pathlib
 
 from repositoryhandler.Command import Command, CommandError
 from repositoryhandler.backends import Repository, \
