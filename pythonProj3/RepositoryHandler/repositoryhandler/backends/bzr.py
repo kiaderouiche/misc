@@ -26,8 +26,8 @@ from repositoryhandler.backends.watchers import *
 
 
 def get_repository_from_path(path):
-    if os.path.isfile(path):
-        path = os.path.dirname(path)
+    if pathlib.Path(path).is_file():
+        path = pathlib.Path(path).parent
 
     pattern = re.compile("^[ \t]*(checkout of)?(parent)? branch:(.*)$")
     uri = None
@@ -78,12 +78,12 @@ class BzrRepository(Repository):
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
         # branch doesn't make sense here module == branch
         if newdir is not None:
-            srcdir = os.path.join(rootdir, newdir)
+            srcdir = pathlib.Path().joinpath(rootdir, newdir)
         elif newdir == '.':
             srcdir = rootdir
         else:
-            srcdir = os.path.join(rootdir, module)
-        if os.path.exists(srcdir):
+            srcdir = pathlib.Path().joinpath(rootdir, module)
+        if pathlib.Path(srcdir).exists():
             try:
                 self.update(srcdir, rev)
                 return
@@ -109,8 +109,8 @@ class BzrRepository(Repository):
 
         cmd = ['bzr', 'pull']
 
-        if os.path.isfile(uri):
-            directory = os.path.dirname(uri)
+        if pathlib.Path(uri).is_file():
+            directory = pathlib.Path(uri).parent
         else:
             directory = uri
 
@@ -120,14 +120,14 @@ class BzrRepository(Repository):
     def log(self, uri, rev=None, files=None):
         self._check_uri(uri)
 
-        if os.path.isfile(uri):
-            cwd = os.path.dirname(uri)
-            files = [os.path.basename(uri)]
-        elif os.path.isdir(uri):
+        if pathlib.Path(uri).is_file():
+            cwd = pathlib.Path(uri).parent
+            files = [pathlib.Path(uri).name]
+        elif pathlib.Path(uri).is_dir():
             cwd = uri
             files = ['.']
         else:
-            cwd = os.getcwd()
+            cwd = pathlib.Path.cwd()
 
         cmd = ['bzr', 'log', '-v']
 
