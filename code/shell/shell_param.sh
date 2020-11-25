@@ -13,13 +13,15 @@ do
     sed -i.bak -e "s/\os.path.exists($texpr)/\pathlib.Path($texpr).exists()/g" $1
     sed -i.bak -e "s/\os.path.isfile($texpr)/\pathlib.Path($texpr).is_file()/g" $1
     sed -i.bak -e "s/os.getcwd/pathlib.Path.cwd/g" $1
+    sed -i.bak -e "s/os.cwd/pathlib.Path.cwd/g" $1
     sed -i.bak -e "s/os.path.join/pathlib.Path().joinpath/g" $1
     sed -i.bak -e "s/\os.makedirs($texpr)/\pathlib.Path($texpr).mkdir()/g" $1
 done
 
 }
+#"cvs.py" "git.py" "hg.py" "svn.py"  "bzr.py"
 
-for pyfile in "cvs.py" "git.py" "hg.py" "svn.py" "tarball.py" "bzr.py"
+for pyfile in  "tarball.py"
 do
     replacekeywords $pyfile
 done
