@@ -197,7 +197,8 @@ class Command:
         out_func = err_func = None
 
         def out_cb(out_chunk, out_data_l, flush=False):
-            out_data = out_data_l[0]
+            print("Display out_chunk: {}".format(out_chunk))
+            out_data = str(out_data_l[0])
             out_data += str(out_chunk)
             while '\n' in out_data:
                 pos = out_data.find('\n')
