@@ -1,5 +1,6 @@
 # bzr.py
 #
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 # Copyright (C) 2008 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 #
 # This program is free software; you can redistribute it and/or modify

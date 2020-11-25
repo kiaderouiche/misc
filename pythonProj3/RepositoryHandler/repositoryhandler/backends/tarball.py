@@ -1,5 +1,6 @@
 # tarball.py
 #
+# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 # Copyright (C) 2007 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 # Copyright (C) 2007 GSyC/LibreSoft Group
 #
