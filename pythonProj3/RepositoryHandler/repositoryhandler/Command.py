@@ -164,6 +164,7 @@ class Command:
 
                 if p.stderr in rlist:
                     err_chunk = self._read(p.stderr.fileno(), 1024)
+                    print("Display: {}".format(err_chunk))
 
                     if err_chunk == "":
                         p.stderr.close()
