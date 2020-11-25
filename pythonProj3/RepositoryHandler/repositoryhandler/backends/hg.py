@@ -66,8 +66,8 @@ def get_repository_from_path(path) -> str:
         dir = pathlib.Path(dir).parent
 
     if not dir or dir == "/":
-        raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Git '
-                                           'working copy' % path)
+        raise RepositoryInvalidWorkingCopy('"{}" does not appear to be a Git '
+                                           'working copy'.format(path))
     try:
         uri = get_config(dir, 'remote.origin.url')
     except CommandError:
@@ -80,11 +80,11 @@ def get_repository_from_path(path) -> str:
     return 'git', uri
 
 
-class GitRepository(Repository):
-    '''Git Repository'''
+class HgRepository(Repository):
+    '''Hg Repository'''
 
     def __init__(self, uri):
-        Repository.__init__(self, uri, 'git')
+        Repository.__init__(self, uri, 'hg')
 
         self.git_version = None
 
@@ -100,14 +100,14 @@ class GitRepository(Repository):
         if self.git_version is not None:
             return self.git_version
 
-        cmd = ['git', '--version']
+        cmd = ['hg', '--version']
 
         command = Command(cmd)
         out = command.run_sync()
         # it could looks like:
-        #  git version 1.7.10.4 // 1.8.4.rc3 // 1.7.12.4 (Apple Git-37) // 1.9.3 (Apple Git-50)
+        #  hg version 1.7.10.4 // 1.8.4.rc3 // 1.7.12.4 (Apple Git-37) // 1.9.3 (Apple Git-50)
 
-        version = out.replace("git version ", "")
+        version = out.replace("hg version ", "")
         try:
             self.git_version = tuple([int(i) for i in version.split('.')])
         except ValueError:
@@ -168,7 +168,7 @@ class GitRepository(Repository):
         return directory or self.uri
 
     def copy(self) -> str:
-        repo = GitRepository(self.uri)
+        repo = HgRepository(self.uri)
         repo.git_version = self.git_version
         return repo
 
@@ -345,7 +345,7 @@ class GitRepository(Repository):
         else:
             cwd = pathlib.Path.cwd()
 
-        cmd = ['git', 'diff']
+        cmd = ['hg', 'diff']
 
         if revs is not None:
             if len(revs) == 1:
@@ -374,7 +374,7 @@ class GitRepository(Repository):
             cwd = pathlib.Path.cwd()
             target = None
 
-        cmd = ['git', 'show', '--pretty=format:']
+        cmd = ['hg', 'show', '--pretty=format:']
 
         if rev is not None:
             cmd.append(rev)
@@ -398,7 +398,7 @@ class GitRepository(Repository):
         else:
             cwd = pathlib.Path.cwd()
 
-        cmd = ['git', 'blame', '--root', '-l', '-t', '-f']
+        cmd = ['hg', 'blame', '--root', '-l', '-t', '-f']
 
         if mc:
             cmd.extend(['-M', '-C'])
@@ -455,7 +455,7 @@ class GitRepository(Repository):
     def get_last_revision(self, uri)-> str:
         self._check_uri(uri)
 
-        cmd = ['git', 'rev-list', 'HEAD^..HEAD']
+        cmd = ['hg', 'rev-list', 'HEAD^..HEAD']
 
         command = Command(cmd, uri, env={'PAGER': ''})
         try:
@@ -480,7 +480,7 @@ class GitRepository(Repository):
             raise NotImplementedError
 
         # 'git merge-base --is-ancestor' is only supported after 1.8
-        cmd = ['git', 'merge-base', '--is-ancestor', rev1, rev2]
+        cmd = ['hg', 'merge-base', '--is-ancestor', rev1, rev2]
         command = Command(cmd, uri, env={'PAGER': ''})
         try:
             command.run()
@@ -492,4 +492,4 @@ class GitRepository(Repository):
                 raise e
 
 
-register_backend('hg', GitRepository)
+register_backend('hg', HgRepository)
