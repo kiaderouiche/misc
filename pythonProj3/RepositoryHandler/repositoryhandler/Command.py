@@ -21,6 +21,7 @@ import pathlib
 import select
 import subprocess
 import os
+import io
 import errno
 from signal import SIGINT, SIGTERM
 
@@ -33,7 +34,8 @@ class CommandError(Exception):
         self.error = error
 
     def __str__(self) -> str:
-        return "Command '{}' returned non-zero exit status {}".format(self.cmd, self.returncode)
+        return "Command '{}' returned non-zero exit status {}".format(self.cmd,
+                                            self.returncode)
 
 
 class CommandRunningError(Exception):
@@ -141,9 +143,10 @@ class Command:
                     # reset timeout
                     elapsed = 0.0
 
+                buffer = io.StringIO() #https://pythonpedia.com/en/tutorial/809/incompatibilities-moving-from-python-2-to-python-3
                 if p.stdin in wlist:
                     bytes_written = self._write(p.stdin.fileno(),
-                                                memoryview(stdin,
+                                                buffer(stdin,
                                                        input_offset,
                                                        512))
                     input_offset += bytes_written
@@ -153,12 +156,14 @@ class Command:
 
                 if p.stdout in rlist:
                     out_chunk = self._read(p.stdout.fileno(), 1024)
-                    if out_chunk == "":
+                    if out_chunk.decode("utf-8") == "":
                         p.stdout.close()
                         read_set.remove(p.stdout)
-
+                    print("out_data_cb: {}".format(type(out_data_cb)))
+                    print("out_data: {}".format(type(out_data)))
+                    print("out_chunk: {}".format(type(out_chunk)))
                     if out_data_cb is None:
-                        out_data += out_chunk
+                        out_data += out_chunk.decode("utf-8")
                     else:
                         out_data_cb[0](out_chunk, out_data_cb[1])
 
@@ -166,12 +171,12 @@ class Command:
                     err_chunk = self._read(p.stderr.fileno(), 1024)
                     print("Display: {}".format(err_chunk))
 
-                    if err_chunk == "":
+                    if err_chunk.decode("utf-8") == "":
                         p.stderr.close()
                         read_set.remove(p.stderr)
 
                     if err_data_cb is None:
-                        err_data +=err_chunk
+                        err_data +=err_chunk.decode("utf-8")
                     else:
                         err_data_cb[0](err_chunk, err_data_cb[1])
 
@@ -200,7 +205,7 @@ class Command:
 
             print("Display out_chunk: {}".format(out_chunk))
             out_data = out_data_l[0]
-            out_data += out_chunk
+            out_data += str(out_chunk)
             while '\n' in out_data:
                 pos = out_data.find('\n')
                 parser_out_func(out_data[:pos + 1])
