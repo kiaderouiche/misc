@@ -23,10 +23,12 @@ Optional:
 
 ## Dependencies
 
- * Python >= 2.4
+ * Python >= 3.8
  * CVS client
  * SVN client
  * Git client
+ * Hg  client
+ * http (Httpie)
  * WGET or curl
  * Autoconf (for installation)
 
@@ -58,9 +60,9 @@ repo.update ('/tmp/poppler', rev = 'POPPLER_0_5_X')
 
 # show diff between HEAD and POPPLER_0_5_X branches
 diff = repo.diff ('/tmp/poppler', revs = ['HEAD', 'POPPLER_0_5_X'])
-print diff
+print (diff)
 
 # show history for ChangeLog file
 history = repo.log ('/tmp/poppler', files = ['ChangeLog'])
-print history
+print (history)
 ```
