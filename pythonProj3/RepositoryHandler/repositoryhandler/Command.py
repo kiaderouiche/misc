@@ -66,7 +66,7 @@ class Command:
     def set_error_handler(self, error_handler_func):
         self.error_handler_func = error_handler_func
 
-    def _read(self, fd, buffsize):
+    def _read(self, fd, buffsize)-> bytes:
         while True:
             try:
                 return os.read(fd, buffsize)
@@ -76,7 +76,7 @@ class Command:
                 else:
                     raise
 
-    def _write(self, fd, s):
+    def _write(self, fd, s) -> bytes:
         while True:
             try:
                 return os.write(fd, s)
@@ -158,7 +158,7 @@ class Command:
                         read_set.remove(p.stdout)
 
                     if out_data_cb is None:
-                        out_data += str(out_chunk)
+                        out_data += out_chunk
                     else:
                         out_data_cb[0](out_chunk, out_data_cb[1])
 
@@ -171,7 +171,7 @@ class Command:
                         read_set.remove(p.stderr)
 
                     if err_data_cb is None:
-                        err_data += str(err_chunk)
+                        err_data +=err_chunk
                     else:
                         err_data_cb[0](err_chunk, err_data_cb[1])
 
@@ -197,9 +197,10 @@ class Command:
         out_func = err_func = None
 
         def out_cb(out_chunk, out_data_l, flush=False):
+
             print("Display out_chunk: {}".format(out_chunk))
-            out_data = str(out_data_l[0])
-            out_data += str(out_chunk)
+            out_data = out_data_l[0]
+            out_data += out_chunk
             while '\n' in out_data:
                 pos = out_data.find('\n')
                 parser_out_func(out_data[:pos + 1])
