@@ -1,0 +1,418 @@
+/*
+ * This is generic CCS for HRS's Web Page
+ * 
+ * $hrs: www/www.allbsd.org/share/style/article.css,v 1.4 2004/09/29 17:33:53 hrs Exp $
+ */
+
+A:link    { color: green; }
+A:visited { color: gray; }
+A:active  { color: red; }
+A:hover   { color: lightgreen; }
+
+.maintable {
+  vertical-align: top;
+  width: 99%; 
+
+  border-spacing: 0; 
+  border-bottom: thin solid #333333; 
+  border-top: thin solid #333333;  
+  border-right: thin solid #333333;
+}
+
+.leftbar {
+ width: 150px;
+
+ background-color: #ddddcc;
+
+ border-spacing:0;
+ border: none;
+ margin-top: 2em;
+ font-size: small;
+}
+
+.leftbartable {
+  padding-top: 1em;
+  vertical-align: top;
+}
+
+.leftbartitle {
+ vertical-align: middle;
+
+ text-align: left;
+ font-weight: bold;
+
+ color: black;
+ border-bottom: thin dotted #a08030;
+}
+
+.leftbaritem {
+ vertical-align: middle;
+ padding-right: 5px;
+ text-align: right;
+
+ color: black;
+ border-bottom: thin dotted #a08030;
+}
+
+.rightbar {
+
+}
+
+.rightbartable {
+  padding-top: 1em;
+  padding-left: 0.1em;
+  vertical-align: top;
+
+  border-spacing: 0; 
+  border-bottom: thin solid #777777; 
+  border-top: thin solid #777777;  
+  border-right: thin solid #777777;
+}
+
+.navibar {
+ width: 99%;
+ background-color: #ddddcc;
+ margin-top: 1em;
+ margin-bottom: 1em;
+
+ text-align: center;
+ font-size: small;
+
+ border-spacing:0;
+ border-bottom: thin solid #777777; 
+ border-top: thin solid #777777;  
+}
+
+      tr.thead {
+        background-color: #AACCAA;
+      }
+
+      tr.todd {
+        background-color: #FFCCCC;
+      }
+
+      tr.teven {
+        background-color: #FFDDDD;
+      }
+
+      p.red {
+        color: red
+      }
+
+BODY{
+ background: #e2e2e2;
+ color: black;
+ font-family: 'verdana,arial,helvetica',sans-serif;
+}
+
+hr.sep { text-align: center }
+
+DIV.navibar {
+ margin: 0em; padding: 0em;
+ text-align: center;
+
+ font-weight: bold;
+ font-family: sans-serif;
+}
+
+ADDRESS.footer {
+ margin:  0em 0.5em;
+ padding: 0em 0.5em;
+ text-align: right;
+
+ font: bold smaller sans-serif;
+
+ border-width: 0em thick 0em 0em;
+ border-style: solid;
+ border-color: #117777;
+}
+
+/* headings ..................................................... */
+
+H1.center   { text-align: center; }
+H1.sectitle { text-align: left; margin-left: .2em; }
+
+DIV.righttitle    { margin: 0em; padding: 1em 0em; }
+DIV.righttitle P  { padding-right: 0.5em; text-align: right; }
+
+DIV.righttitle H1 { padding-right: 0.5em; text-align: right;
+ margin: 0em; padding: 0em;
+ margin-bottom: 0.5em;
+ border-width: 0em;
+}
+DIV.righttitle H2 { padding-right: 0.5em; text-align: right; 
+ margin: 0em; padding: 0em;
+ border-width: 0em;
+}
+
+DIV.righttitle DIV.lastmodified{
+ margin: 0em; padding: 0em;
+ padding-top: 0.5em;
+}
+
+DIV.righttitle DIV.lastmodified P{
+ margin: 0em; padding: 0em;
+ text-align: right;
+ text-decoration: underline;
+
+ font: normal normal smaller sans-serif;
+}
+
+P.lastmodified{
+ margin: 0em; padding: 0em;
+ padding-bottom: 0.5em;
+ text-decoration: underline;
+
+ font: normal normal smaller sans-serif;
+}
+
+DIV.author{
+}
+
+.subtitle {
+ font-size: smaller;
+}
+
+H2 {
+ margin-left: 0.2em;
+ padding: 0.5em;
+ /*
+  * next that specifies font-family
+  * will make strange behavior in IE4.0.
+  * Font size of Japanese characters are not
+  * affected, always normal size. 
+  */
+ font-weight: bold;
+ font-family: 'Verdana,Arial,Helvetica',sans-serif;
+
+ border-width: 0em 0em 0em thick; border-style: solid;
+ border-color: #117777;
+}
+
+H3 {
+ margin-left: 0em; margin-right: 0em;
+ padding: 0.3em;
+
+ font-weight: bold;
+ font-family: 'Verdana,Arial,Helvetica',sans-serif;
+
+ border-width: 0px 0px 2px 2px; border-style: solid;
+ border-color: #117777;
+}
+
+H4 {
+ margin-left: 0em; margin-right: 0em;
+ /* margin: 0em 0.8em; */
+
+ font-family: 'Verdana,Arial,Helvetica',sans-serif;
+ font-weight: bold;
+
+ border-width: 0em 0em 1px 0em; border-style: solid;
+}
+
+H4.noline {
+ margin: 0em; padding: 0em;
+ font-weight: bold;
+
+ border-width: 0em;
+}
+
+H5 {
+ /* margin: 0em 0.8em; */
+ margin-left:  1em;
+ margin-right: 1em;
+
+ font-family: 'Verdana,Arial,Helvetica',sans-serif;
+ font-size: medium;
+}
+
+
+/* paragraph .................................................... */
+
+// BODY { margin-left: 1em; margin-right: 1em; } 
+BODY P { margin-left: 0.5em; margin-right: 0.5em; text-indent: 1em; } 
+BODY PRE { margin-left: 0.5em; margin-right: 0.5em; } 
+// BODY DIV P  { text-indent: 0em; }
+UL LI P { margin-left: 0em; text-indent: 0em; }
+OL LI P { margin-left: 0em; text-indent: 0em; }
+TD P { margin: 0.5em; text-indent: 0em; }
+DIV TABLE { margin-left: 0.5em; margin-right: 0.5em; } 
+/* special paragraph ............................................ */
+
+DIV.abstract   { text-align: center; }
+DIV.abstract P { margin-right: 5em; margin-left: 5em; text-align: left; } 
+
+P.saying { margin: 0em; margin-top: 1em; text-align: right; }
+
+P.isay{
+ padding: 0.1em;
+ text-align: center;
+ text-indent: 0em;
+ font-weight: bold;
+}
+
+/* special division ,............................................ */
+
+div.sidebar {
+ margin-left: 2.5em;
+ padding-left: 0.5em;
+
+ text-align: left;
+
+ border-width: 0em 0em 0em thick;
+ border-style: solid;
+ border-color: #117777;
+}
+
+div.sidebar p {
+ margin-left:  0em;
+ padding-left: 0em;
+}
+
+pre.sidebar {
+ padding-top: 1em;
+ padding-bottom: 1em;
+ margin-left: 2.5em;
+ padding-left: 0.5em;
+
+ text-align: left;
+ font-family: monospace;
+ font-size: small;
+ /* font-weight: bold; */
+ white-space: pre;
+
+ border-width: 0em 0em 0em 2px;
+ border-style: solid;
+ border-color: #117777;
+}
+
+/* lists ........................................................ */
+
+/*
+UL    { margin-left: 1em; }
+TD UL { margin-left: 0em; }
+OL    { margin-left: 1em; }
+TD OL { margin-left: 0em; }
+DL    { margin-left: 1em; }
+TD DL { margin-left: 0em; }
+*/
+
+DL DT { font-weight: bold; }
+
+UL    { color: purple; font-weight: bold;   }
+UL P  { color: black;  font-weight: normal; }
+OL    { color: purple; font-weight: bold;   }
+OL P  { color: black;  font-weight: normal; }
+
+UL LI {
+ padding: 0em;
+ margin-bottom: 0em;
+ margin-top: 0em;
+/* border-width: thin;
+ border-style: solid;
+ border-color: yellow; */
+}
+
+OL LI {
+ padding: 0em;
+ margin-bottom: 0em;
+ margin-top: 0em;
+/* border-width: thin;
+ border-style: solid;
+ border-color: yellow; */
+}
+
+LI DL {
+ padding: 0em;
+ margin-bottom: 0em;
+ margin-top: 0em;
+/* border-width: thin;
+ border-style: solid;
+ border-color: black; */
+}
+LI {
+ /* color: green; */
+ padding: 0em;
+ margin-bottom: 0em;
+ margin-top: 0em;
+/* border-width: thin;
+ border-style: solid;
+ border-color: #117777; */
+}
+
+ADDRESS.author {
+ margin-bottom: 1em;
+
+ font-weight: bold;
+ font-family: serif;
+ font-style: normal;
+ text-align: center;
+}
+
+.box {
+ border-width: thin;
+ border-style: solid;
+ border-color: #117777;
+ text-align: center;
+}
+
+.pbox {
+ margin-left: 1em;
+ margin-right: 1em;
+}
+
+.leftbox {
+ border-width: thin;
+ border-style: solid;
+ border-color: #117777;
+ text-align: left;
+}
+
+.info{
+ font: normal smaller sans-serif;
+ text-align: right;
+ line-height: .7em;
+ margin-bottom: 1em;
+}
+
+/* miscellaneous ................................................ */
+
+DIV.contents { /* margin-top: 1em; */ text-align: center; }
+
+KBD { font-weight: bold; }
+/* KBD, CODE { font-weight: bold; } */
+
+.code{
+ font-family: monospace;
+ font-size: small;
+ /* font-weight: bold; */
+ white-space: pre;
+
+ margin: 0em 1em;
+ padding: 1em 1em;
+
+ border-width: thin;
+ border-style: solid;
+
+ color:        white;
+ border-color: white;
+ background-color: #191970;
+
+ text-indent: 0em;
+}
+
+/* positionnings ................................................. */
+
+.center{ text-align: center; }
+.right { text-align: right; }
+
+/* colors of table colum/rows .................................... */
+
+.head{ background: #DDDDAA; color: black; }
+.odd { background: #FFCCCC; color: black; }
+.even{ background: #EEBBBB; color: black; }
+
+/* equation division ............................................. */
+
+DIV.eqn{ text-align: center; }
+

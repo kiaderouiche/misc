@@ -1,0 +1,759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=ISO-2022-JP">
+    <meta http-equiv="CONTENT-STYLE-TYPE" content="text/css">
+    <meta name="LANGUAGE" content="Japanese">
+    <meta name="AUTHOR" content="Hiroki Sato">
+    <meta name="DESCRIPTION" content="佐藤＠東京理科大学のウェブページ">
+    <link href="mailto:hrs@allbsd.org" rev="made">
+    <link href="allbsd.org%20-%20homepage_fichiers/article.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+      tr.thead {
+        background-color: #AACCAA;
+      }
+
+      tr.todd {
+        background-color: #FFCCCC;
+      }
+
+      tr.teven {
+        background-color: #FFDDDD;
+      }
+
+      p.red {
+        color: red
+      }
+    
+</style>
+
+    <title>allbsd.org - homepage</title>
+<style type="text/css">
+ p.c1 {font-weight: bold}
+</style>
+  </head>
+
+  <body>
+    <table class="maintable">
+      <tbody>
+        <tr valign="TOP">
+          <td class="leftbar">
+            <table class="leftbartable">
+              <tbody>
+                <tr>
+                  <td class="leftbartitle" colspan="2">By Services:</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="#pub-finger">Finger</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="http://mailserv.allbsd.org/">Mailing List</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="http://pub.allbsd.org/">HTTP</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="ftp://ftp.allbsd.org/pub/">FTP</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="http://cvsweb.allbsd.org/">CVSWeb</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="#pub-anoncvs">Anonymous CVS</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="#pub-rsync">Anonymous Rsync</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="#pub-cvsync">CVSync</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="#pub-cvsup">CVSup</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+
+                <tr>
+                  <td class="leftbaritem"><a href="#pub-shell">Shell Account</a></td>
+
+                  <td class="leftbaritem">&nbsp;&gt;&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+
+          <td class="rightbar">
+            <table class="rightbartable">
+              <tbody>
+                <tr>
+                  <td>
+                    <h1>allbsd.org</h1>
+
+                    <div class="abstract">
+                      <p>allbsd.org aims to support developers who interested in open source communities, providing
+                      various resources including web publishing space, remote shell account service, and so on.</p>
+                    </div>
+                    <hr class="sep" width="8" size="8">
+
+                    <h2>Updates</h2>
+
+                    <ul>
+                      <li>2005.07.17: <b>All of the services are available again.</b></li>
+
+                      <li>2005.07.16: <b>Some of allbsd.org services (FTP and CVSWeb) are currently down due to
+                      hardware failure. Please be patient for a couple of days.</b></li>
+
+                      <li>2004.09.30: new mirror: Xorg, GCC, QEMU, MirBSD (cvsweb, cvsync, rsync)</li>
+                    </ul>
+
+                    <h2>Available Services</h2>
+
+                    <p>Almost all of the provided network services support both IPv4 and IPv6.</p>
+
+                    <p>If you have any questions, please do not hesitate to let us (admin@allbsd.org) know.</p>
+
+                    <h3><a id="PUB-FINGER" name="pub-finger">Updates Information via Finger(1)</a></h3>
+
+                    <p>You can get information about the upstream servers that allbsd.org uses, the update frequency,
+                    and the exact time of them by using finger(1) like this:</p>
+<pre class="sidebar">% finger @info.allbsd.org
+</pre>
+
+                    <h3><a id="PUB-MAILINGLIST" name="pub-mailinglist">Public Mailing List served by
+                    allbsd.org</a></h3>
+
+                    <p><a href="http://mailserv.allbsd.org/">http://mailserv.allbsd.org/</a> serves several mailing
+                    lists concerning open source software use and development.</p>
+
+                    <h3><a id="PUB-FTP-HTTP" name="pub-ftp-http">Public FTP/HTTP service</a></h3>
+
+                    <h4>FTP Mirrors</h4>
+
+                    <p><a href="ftp://ftp.allbsd.org/pub/">ftp.allbsd.org</a> provides the distributions of FreeBSD,
+                    NetBSD, OpenBSD, DragonFly, TenDRA, and CVSync. <a href="http://pub.allbsd.org/">pub.allbsd.org</a>
+                    provides the same sets available from <a href="ftp://ftp.allbsd.org/pub/">ftp.allbsd.org</a> via
+                    HTTP.</p>
+
+                    <h4><a id="PUB-CVSWEB" name="pub-cvsweb">CVSWeb</a></h4>
+
+                    <p><a href="http://cvsweb.allbsd.org/">cvsweb.allbsd.org</a> provides web interface to browse the
+                    CVS repositories.</p>
+
+                    <h3><a id="PUB-ANONCVS" name="pub-anoncvs">Public Anonymous CVS service</a></h3>
+
+                    <p><tt>anoncvs.allbsd.org</tt> provides read-only anonymous CVS access of the following
+                    repositories: FreeBSD, NetBSD, OpenBSD, and DragonFly BSD. The server uses SSH2 password
+                    authentication on port 2022 (not pserver and rsh).</p>
+
+                    <h4>How To Use</h4>
+
+                    <p><tt>anoncvs.allbsd.org</tt> supports OpenSSH version 3.5 or later only. For the other OpenSSH
+                    versions and/or other SSH implementations, this may or may not work. The following instruction
+                    assumes you use OpenSSH.</p>
+
+                    <p>Put the following lines into your <tt>${HOME}/.ssh/config</tt>.</p>
+<pre class="sidebar">Host                    anoncvs.allbsd.org
+Port                    2022
+Protocol                2
+</pre>
+
+                    <p>After that, you can access to <tt>anoncvs.allbsd.org</tt>. Set ${CVSROOT} and ${CVS_RSH} like
+                    this:</p>
+<pre class="sidebar"># For all
+CVS_RSH=ssh
+
+# For FreeBSD
+CVSROOT=anoncvs-freebsd@anoncvs.allbsd.org:/home/ncvs
+
+# For NetBSD
+CVSROOT=anoncvs-netbsd@anoncvs.allbsd.org:/cvsroot
+
+# For OpenBSD
+CVSROOT=anoncvs-openbsd@anoncvs.allbsd.org:/cvs
+
+# For DragonFly BSD
+CVSROOT=anoncvs-dfly@anoncvs.allbsd.org:/dcvs
+</pre>
+
+                    <p>The access uses OpenSSH password authentication. However, since the password on
+                    <tt>anoncvs.allbsd.org</tt> is empty string, you do not need to enter the password. If you are in
+                    trouble, please contact admin@allbsd.org.</p>
+
+                    <h3><a id="PUB-RSYNC" name="pub-rsync">Public rsync service</a></h3>
+
+                    <p><a href="rsync://rsync.allbsd.org/">rsync.allbsd.org</a> provides the distribution and source
+                    trees of FreeBSD, NetBSD, OpenBSD, DragonFly BSD, OpenDarwin, XFree86, TenDRA, CVSync, and so on.
+                    Available collections and their upstreams are found by using "finger @info.allbsd.org" or "rsync
+                    rsync://rsync.allbsd.org/".</p>
+
+                    <h3><a id="PUB-CVSYNC" name="pub-cvsync">Public cvsync service</a></h3>
+
+                    <p><a href="http://www.cvsync.org/">cvsync</a> (<a href="http://pub.allbsd.org/cvsync/">local
+                    mirror</a>) is another CVS repository synchronization utility by MAEKAWA Masahide (maekawa AT
+                    cvsync DOT org), which is very similar to CVSup but not compatible with it, and written in C and
+                    pthreads (POSIX 1003.1c-1995, aka ISO/IEC 9945-1:1996) library. Although it is still at
+                    experimental stage, it has reasonable portability, better performance, and IPv6 capability.</p>
+
+                    <p><a href="https://www.allbsd.org/cvsync/">Other public cvsync mirrors are listed here.</a></p>
+
+                    <p><tt>cvsync.allbsd.org</tt> provides the distribution and source trees of FreeBSD, NetBSD,
+                    OpenBSD, DragonFly BSD, OpenDarwin, XFree86, TenDRA, and CVSync itself via cvsync. Available
+                    collections can be retrieved using <tt>cvsync cvsync://cvsync.allbsd.org/</tt> command. The
+                    respective upstream servers are the same as <tt>rsync.allbsd.org</tt>.</p>
+
+                    <h3><a id="PUB-CVSUP" name="pub-cvsup">Public CVSup service (IPv4 only)</a></h3>
+
+                    <p>cvsup.allbsd.org provides the source trees of FreeBSD, NetBSD, OpenBSD, DragonFly BSD,
+                    OpenDarwin, and XFree86.</p>
+
+                    <h4>FreeBSD</h4>
+
+                    <p>Available collections are the same as described in <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html">http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html</a>.
+                    The upstream server is <b>cvsup.jp.FreeBSD.org</b>, and the contents are updated <b>every 30
+                    minutes</b>.</p>
+
+                    <h4>NetBSD</h4>
+
+                    <p>Available collections are as follows:</p>
+
+                    <div>
+                      <table>
+                        <thead>
+                          <tr class="thead">
+                            <th>Collection Name</th>
+
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr class="todd">
+                            <td>netbsd</td>
+
+                            <td>The whole of the CVS repository</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-base</td>
+
+                            <td>CVSROOT/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src</td>
+
+                            <td>src/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-base</td>
+
+                            <td>src/[A-Z]* and src/build.sh</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-bin</td>
+
+                            <td>src/bin</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-crypto</td>
+
+                            <td>src/crypto</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-dist</td>
+
+                            <td>src/dist</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-distrib</td>
+
+                            <td>src/distrib</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-doc</td>
+
+                            <td>src/doc</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-etc</td>
+
+                            <td>src/etc</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-games</td>
+
+                            <td>src/games</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-gnu</td>
+
+                            <td>src/gnu</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-include</td>
+
+                            <td>src/include</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-lib</td>
+
+                            <td>src/lib</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-libexec</td>
+
+                            <td>src/libexec</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-regress</td>
+
+                            <td>src/regress</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-rescue</td>
+
+                            <td>src/rescue</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-sbin</td>
+
+                            <td>src/sbin</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-share</td>
+
+                            <td>src/share</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-sys</td>
+
+                            <td>src/sys</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-tools</td>
+
+                            <td>src/tools</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-src-usrbin</td>
+
+                            <td>src/usr.bin</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-src-usrsbin</td>
+
+                            <td>src/usr.sbin</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-htdocs</td>
+
+                            <td>htdocs</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-othersrc</td>
+
+                            <td>othersrc</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-pkgsrc</td>
+
+                            <td>pkgsrc</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-xsrc</td>
+
+                            <td>xsrc/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-xsrc-3</td>
+
+                            <td>xsrc/ (XFree86 3.X part only)</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-xsrc-4</td>
+
+                            <td>xsrc/ (XFree86 4.X part only)</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-distrib</td>
+
+                            <td>for NetBSD.org CVSup mirror sites</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-jp-all</td>
+
+                            <td>jp.NetBSD.org local CVS repository</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-jp-base</td>
+
+                            <td>CVSROOT/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-jp-hpcmips</td>
+
+                            <td>hpcmips/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-jp-htdocs</td>
+
+                            <td>htdocs/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-jp-localsrc</td>
+
+                            <td>localsrc/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>netbsd-jp-othersrc</td>
+
+                            <td>othersrc/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>netbsd-jp-distrib</td>
+
+                            <td>for jp.NetBSD.org CVSup mirror sites</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p>The upstream server is <b>cvsup.jp.NetBSD.org</b>, and the contents are <b>updated every 7
+                    hours</b>.</p>
+
+                    <h4>OpenBSD</h4>
+
+                    <p>Available collections are as follows:</p>
+
+                    <div>
+                      <table>
+                        <thead>
+                          <tr class="thead">
+                            <th>Collection Name</th>
+
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr class="todd">
+                            <td>OpenBSD-src</td>
+
+                            <td>src/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>OpenBSD-ports</td>
+
+                            <td>ports/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>OpenBSD-X11</td>
+
+                            <td>X11/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>OpenBSD-XF4</td>
+
+                            <td>XF4/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>OpenBSD-all</td>
+
+                            <td>The whole of the CVS repository</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>OpenBSD-distrib</td>
+
+                            <td>for CVSup mirror servers (not official one).</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p>The upstream server is <b>cvsup.jp.OpenBSD.org</b>, and the contents are updated <b>every 2
+                    hours</b>.</p>
+
+                    <h4><a id="PUB-CVSUP-DFLY" name="pub-cvsup-dfly">DragonFly BSD</a></h4>
+
+                    <p>Available collections are as follows:</p>
+
+                    <div>
+                      <table>
+                        <thead>
+                          <tr class="thead">
+                            <th>Collection Name</th>
+
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr class="todd">
+                            <td>dragonfly-cvs-all</td>
+
+                            <td>/home/dcvs</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>dragonfly-cvs-root</td>
+
+                            <td>/home/dcvs/CVSROOT</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>dragonfly-cvs-src</td>
+
+                            <td>/home/dcvs/src</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>dragonfly-cvs-sys</td>
+
+                            <td>/home/dcvs/src/sys</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>dragonfly-cvs-site</td>
+
+                            <td>/home/dcvs/site</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>dragonfly-cvs-doc</td>
+
+                            <td>/home/dcvs/doc</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>dragonfly-cvs-dfpors</td>
+
+                            <td>/home/dcvs/dfports</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>dragonfly-distrib</td>
+
+                            <td>for CVSup mirror servers (not official one).</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p>The upstream server is <b>cvsup.dragonflybsd.org</b>, and the contents are updated <b>every 12
+                    hours</b>. Note that the official (upstream) server used the collection name like <tt>cvs-src</tt>
+                    before January 2005, but it now uses a name like <tt>dragonfly-cvs-src</tt> (see <a href="http://leaf.dragonflybsd.org/mailarchive/users/2005-01/msg00190.html">this mail</a> for details).
+                    Although allbsd.org uses the <tt>dragonfly-cvs-*</tt> names from the first stage to avoid the name
+                    conflict and you do not need to change your supfile, you may want to keep in mind this
+                    transition.</p>
+
+                    <p>For more information, see <a href="http://www.dragonflybsd.org/main/download.cgi">official
+                    page</a>.</p>
+
+                    <h4>OpenDarwin</h4>
+
+                    <p>Available collections are as follows:</p>
+
+                    <div>
+                      <table>
+                        <thead>
+                          <tr class="thead">
+                            <th>Collection Name</th>
+
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr class="todd">
+                            <td>opendarwin-cvs</td>
+
+                            <td>cvs/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>opendarwin-cvs-all</td>
+
+                            <td>cvs/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>opendarwin-dports-all</td>
+
+                            <td>dports/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>opendarwin-src-all</td>
+
+                            <td>src/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>opendarwin-www-all</td>
+
+                            <td>www/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>opendarwin-cvs-apple</td>
+
+                            <td>cvs-Apple/</td>
+                          </tr>
+
+                          <tr class="todd">
+                            <td>opendarwin-distrib</td>
+
+                            <td>for CVSup mirror servers (not official one)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p>The upstream server is <b>rsync.OpenDarwin.org</b>, and the contents are updated <b>every 7
+                    hours</b>.</p>
+
+                    <h4>XFree86</h4>
+
+                    <p>Available collections are the same as described in <a href="http://www.xfree86.org/cvs/#cvsup">http://www.xfree86.org/cvs/#cvsup</a>. The upstream server is
+                    <b>anoncvs.XFree86.org</b>, and the contents are updated <b>every 6 hours</b>.</p>
+
+                    <p class="c1"><a id="NOTICE-XFREE86" name="notice-xfree86">NOTICE:</a> Although XFree86 CVS
+                    repository distributed in allbsd.org via CVSup is the same as anoncvs.XFree86.org, it may be
+                    possibly different because we do not use the official CVSup collection file used in
+                    anoncvs.XFree86.org. We have tried to contact <a href="mailto:mirroradmin@xfree86.org">mirroradmin@xfree86.org</a> about the official configuration
+                    repeatedly, but we have no reply at all. So, allbsd.org uses its own configuration referring to
+                    collections described in <a href="http://www.xfree86.org/cvs/#cvsup">http://www.xfree86.org/cvs/#cvsup</a>. While it should provide
+                    the same functionality, we appreciate to let us know about the mistakes or errors if you are in
+                    trouble.</p>
+
+                    <h4>CVSync</h4>
+
+                    <p>Available collections are as follows:</p>
+
+                    <div>
+                      <table>
+                        <thead>
+                          <tr class="thead">
+                            <th>Collection Name</th>
+
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr class="todd">
+                            <td>cvsync-cvs</td>
+
+                            <td>src/ and CVSROOT/</td>
+                          </tr>
+
+                          <tr class="teven">
+                            <td>cvsync-distrib</td>
+
+                            <td>for CVSup mirror servers (not official one)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p>The upstream server is <b>www.cvsync.org</b>, and the contents are updated <b>every 1
+                    hour</b>.</p>
+
+                    <h3><a id="PUB-SHELL" name="pub-shell">Shell account service</a></h3>
+
+                    <p>allbsd.org provides shell accounts to developers who are interested in open source software
+                    development but have no access to *BSD. FreeBSD/{i386,sparc64} 5-STABLE, FreeBSD/i386 4-STABLE,
+                    NetBSD/{i386,sparc64} 2.0, and OpenBSD/{alpha,sparc,sparc64} 3.7 are now available. And
+                    NetBSD/{sparc, macppc} will be available soon.</p>
+
+                    <p>To prevent abuse of the service, the detail information is restricted. If you are interested,
+                    please let us (admin@allbsd.org) know. Basically, it requires that you can make your purpose to
+                    employ the service clear, or have an recommender who already has an account of the service. Thank
+                    you.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+
+    <address class="footer">
+      Copyright (c) 1998, 1999, 2000, 2001, 2002, 2003, 2004 <em>Hiroki Sato/hrs &lt;hrs@allbsd.org&gt;</em><br>
+      All rights reserved and unauthorized reproduction prohibitted.<br>
+      <br>
+      This document is located at<br>
+      <a href="http://www.allbsd.org/index.html">URI:http://www.allbsd.org/index.html</a><br>
+
+      <p class="lastmodified">LAST MODIFIED: 2007/09/24 02:00:19 UTC</p>
+    </address>
+  
+
+
+<div id="SL_balloon_obj" alt="0" style="display: block;"><div id="SL_button" class="SL_ImTranslatorLogo" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/imtranslator-s.png&quot;) repeat scroll 0% 0%; display: none;"></div><div id="SL_shadow_translation_result2" style="display: none;"></div><div id="SL_shadow_translator"><div id="SL_planshet"><div id="SL_arrow_up" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/up.png&quot;) repeat scroll 0% 0%;"></div><div id="SL_Bproviders"><div class="SL_BL_LABLE_ON" title="Google" id="SL_P0"><div id="SL_PN0">G</div></div><div class="SL_BL_LABLE_ON" title="Microsoft" id="SL_P1"><div id="SL_PN1">M</div></div><div class="SL_BL_LABLE_ON" title="Translator" id="SL_P2"><div id="SL_PN2">T</div></div></div><div id="SL_alert_bbl"><div id="SLHKclose" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/delete.png&quot;) repeat scroll 0% 0%;"></div><div id="SL_alert_cont"></div></div><div id="SL_TB"><table id="SL_tables" cellspacing="1"><tr><td class="SL_td" width="10%" align="right"><input id="SL_locer" type="checkbox" title="Fixer la langue"></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_from" class="SL_lngs" style="background: rgb(255, 255, 255) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/select.png&quot;) no-repeat scroll 100% 0px;"><option value="auto" selected="selected">D&#233;tecter la langue</option><option value="af">Afrikaans</option><option value="sq">Albanais</option><option value="de">Allemand</option><option value="am">Amharique</option><option value="en">Anglais</option><option value="ar">Arabe</option><option value="hy">Arm&#233;nien</option><option value="az">Az&#233;ri</option><option value="eu">Basque</option><option value="bn">Bengali</option><option value="be">Bi&#233;lorusse</option><option value="my">Birman</option><option value="bs">Bosniaque</option><option value="bg">Bulgare</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinois Simp</option><option value="zh-TW">Chinois Trad</option><option value="si">Cingalais</option><option value="ko">Cor&#233;en</option><option value="co">Corse</option><option value="ht">Cr&#233;ole ha&#239;tien</option><option value="hr">Croate</option><option value="da">Danois</option><option value="es">Espagnol</option><option value="eo">Esp&#233;ranto</option><option value="et">Estonien</option><option value="fi">Finnois</option><option value="fr">Fran&#231;ais</option><option value="fy">Frison</option><option value="gd">Ga&#233;lique &#201;cosse</option><option value="gl">Galicien</option><option value="cy">Gallois</option><option value="ka">G&#233;orgien</option><option value="el">Grec</option><option value="gu">Gudjarati</option><option value="ha">Haoussa</option><option value="haw">Hawa&#239;en</option><option value="iw">H&#233;breu</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hongrois</option><option value="ig">Igbo</option><option value="id">Indon&#233;sien</option><option value="ga">Irlandais</option><option value="is">Islandais</option><option value="it">Italien</option><option value="ja">Japonais</option><option value="jw">Javanais</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ky">Kirghiz</option><option value="ku">Kurde</option><option value="lo">Laotien</option><option value="la">Latin</option><option value="lv">Letton</option><option value="lt">Lituanien</option><option value="lb">Luxembourgeois</option><option value="mk">Mac&#233;donien</option><option value="ms">Malaisien</option><option value="ml">Malayalam</option><option value="mg">Malgache</option><option value="mt">Maltais</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="nl">N&#233;erlandais</option><option value="ne">N&#233;palais</option><option value="no">Norv&#233;gien</option><option value="uz">Ouzbek</option><option value="ps">Pacht&#244;</option><option value="pa">Panjabi</option><option value="fa">Persan</option><option value="pl">Polonais</option><option value="pt">Portugais</option><option value="ro">Roumain</option><option value="ru">Russe</option><option value="sm">Samoan</option><option value="sr">Serbe</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindh&#238;</option><option value="sk">Slovaque</option><option value="sl">Slov&#232;ne</option><option value="so">Somali</option><option value="su">Soudanais</option><option value="sv">Su&#233;dois</option><option value="sw">Swahili</option><option value="tg">Tadjik</option><option value="tl">Tagalog</option><option value="ta">Tamoul</option><option value="cs">Tch&#232;que</option><option value="te">Telugu</option><option value="th">Tha&#239;</option><option value="tr">Turc</option><option value="uk">Ukrainien</option><option value="ur">Urdu</option><option value="vi">Vietnamien</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yorouba</option><option value="zu">Zoulou</option></select></td><td class="SL_td" width="3" align="center"><div id="SL_switch_b" title="Inverser les langues" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/switchb.png&quot;) repeat scroll 0% 0%;"></div></td><td class="SL_td" width="20%" align="left"><select id="SL_lng_to" class="SL_lngs" style="background: rgb(255, 255, 255) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/select.png&quot;) no-repeat scroll 100% 0px;"><option value="af">Afrikaans</option><option value="sq">Albanais</option><option value="de">Allemand</option><option value="am">Amharique</option><option value="en">Anglais</option><option value="ar">Arabe</option><option value="hy">Arm&#233;nien</option><option value="az">Az&#233;ri</option><option value="eu">Basque</option><option value="bn">Bengali</option><option value="be">Bi&#233;lorusse</option><option value="my">Birman</option><option value="bs">Bosniaque</option><option value="bg">Bulgare</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinois Simp</option><option value="zh-TW">Chinois Trad</option><option value="si">Cingalais</option><option value="ko">Cor&#233;en</option><option value="co">Corse</option><option value="ht">Cr&#233;ole ha&#239;tien</option><option value="hr">Croate</option><option value="da">Danois</option><option value="es">Espagnol</option><option value="eo">Esp&#233;ranto</option><option value="et">Estonien</option><option value="fi">Finnois</option><option selected="selected" value="fr">Fran&#231;ais</option><option value="fy">Frison</option><option value="gd">Ga&#233;lique &#201;cosse</option><option value="gl">Galicien</option><option value="cy">Gallois</option><option value="ka">G&#233;orgien</option><option value="el">Grec</option><option value="gu">Gudjarati</option><option value="ha">Haoussa</option><option value="haw">Hawa&#239;en</option><option value="iw">H&#233;breu</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hongrois</option><option value="ig">Igbo</option><option value="id">Indon&#233;sien</option><option value="ga">Irlandais</option><option value="is">Islandais</option><option value="it">Italien</option><option value="ja">Japonais</option><option value="jw">Javanais</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ky">Kirghiz</option><option value="ku">Kurde</option><option value="lo">Laotien</option><option value="la">Latin</option><option value="lv">Letton</option><option value="lt">Lituanien</option><option value="lb">Luxembourgeois</option><option value="mk">Mac&#233;donien</option><option value="ms">Malaisien</option><option value="ml">Malayalam</option><option value="mg">Malgache</option><option value="mt">Maltais</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="nl">N&#233;erlandais</option><option value="ne">N&#233;palais</option><option value="no">Norv&#233;gien</option><option value="uz">Ouzbek</option><option value="ps">Pacht&#244;</option><option value="pa">Panjabi</option><option value="fa">Persan</option><option value="pl">Polonais</option><option value="pt">Portugais</option><option value="ro">Roumain</option><option value="ru">Russe</option><option value="sm">Samoan</option><option value="sr">Serbe</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindh&#238;</option><option value="sk">Slovaque</option><option value="sl">Slov&#232;ne</option><option value="so">Somali</option><option value="su">Soudanais</option><option value="sv">Su&#233;dois</option><option value="sw">Swahili</option><option value="tg">Tadjik</option><option value="tl">Tagalog</option><option value="ta">Tamoul</option><option value="cs">Tch&#232;que</option><option value="te">Telugu</option><option value="th">Tha&#239;</option><option value="tr">Turc</option><option value="uk">Ukrainien</option><option value="ur">Urdu</option><option value="vi">Vietnamien</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yorouba</option><option value="zu">Zoulou</option></select></td><td class="SL_td" width="8%" align="center"><div id="SL_TTS_voice" title="undefined" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/ttsvoice.png&quot;) repeat scroll 0% 0%;"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_copy" title="Copier" class="SL_copy" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/copy.png&quot;) repeat scroll 0% 0%;"><div id="SL_copy_tip"></div></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_font_patch"></div><div id="SL_bbl_font" title="Taille de police" class="SL_bbl_font" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/font.png&quot;) repeat scroll 0% 0%;"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_help" title="Aide" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/bhelp.png&quot;) repeat scroll 0% 0%;"></div></td><td class="SL_td" width="15%" align="right"><div id="SL_pin" class="SL_pin_off" title="Fixer la fen&#234;tre pop-up" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/pin-on.png&quot;) repeat scroll 0% 0%;"></div></td></tr></table></div></div><div id="SL_shadow_translation_result" style="visibility: visible;"></div><div id="SL_loading" class="SL_loading" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/loading.gif&quot;) repeat scroll 0% 0%;"></div><div id="SL_player2" style="display: none;"></div><div id="SL_alert100" style="display: none;">Fonction Sound est limit&#233;e &#224; 200 caract&#232;res</div><div id="SL_Balloon_options" style="background: rgb(255, 255, 255) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/bg3.png&quot;) repeat scroll 0% 0%;"><div id="SL_arrow_down" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/down.png&quot;) repeat scroll 0% 0%;"></div><table id="SL_tbl_opt" width="100%"><tr><td class="SL_td" width="5%" align="center"><input id="SL_BBL_locer" type="checkbox" title="Afficher le bouton ImTranslator 3 secondes"></td><td class="SL_td" width="5%" align="left"><div id="SL_BBL_IMG" title="Afficher le bouton ImTranslator 3 secondes" style="background: rgba(0, 0, 0, 0) url(&quot;moz-extension://43f28e52-096b-4401-b049-668120911855/content/img/util/bbl-logo.png&quot;) repeat scroll 0% 0%;"></div></td><td class="SL_td" width="70%" align="center"><a href="moz-extension://43f28e52-096b-4401-b049-668120911855/content/html/options/options.html?bbl" target="_blank" class="SL_options" id="SL_opt1" title="Afficher les options">Options</a> : <a href="moz-extension://43f28e52-096b-4401-b049-668120911855/content/html/options/options.html?hist" target="_blank" class="SL_options" id="SL_opt2" title="Historique des traductions">Historique</a> : <a href="moz-extension://43f28e52-096b-4401-b049-668120911855/content/html/options/options.html?feed" target="_blank" class="SL_options" id="SL_opt3" title="Commentaires">Commentaires</a> : <a href="https://imtranslator.net/extensions/?tp=ff-ImTranslator&amp;a=0" target="_blank" class="SL_options" id="SL_opt4" title="Faire une contribution">Donate</a></td><td class="SL_td" width="15%" align="right"><span id="SL_Balloon_Close" class="SL_options" title="Fermer">Fermer</span></td></tr></table></div></div></div></body></html>
