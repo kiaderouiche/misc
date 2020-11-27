@@ -1,6 +1,5 @@
 # Command.py
 #
-# Copyright (C) 2020 K.I.A.Derouiche <kamel.derouiche@gmail.com>
 # Copyright (C) 2007 Carlos Garcia Campos <carlosgc@gsyc.escet.urjc.es>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -17,11 +16,10 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import pathlib
+import os
 import select
 import subprocess
-import os
-import io
+import sys
 import errno
 from signal import SIGINT, SIGTERM
 
@@ -33,9 +31,9 @@ class CommandError(Exception):
         self.returncode = returncode
         self.error = error
 
-    def __str__(self) -> str:
-        return "Command '{}' returned non-zero exit status {}".format(self.cmd,
-                                            self.returncode)
+    def __str__(self):
+        return "Command '%s' returned non-zero exit status %d" % \
+            (self.cmd, self.returncode)
 
 
 class CommandRunningError(Exception):
@@ -44,13 +42,12 @@ class CommandRunningError(Exception):
         self.cmd = cmd
         self.error = error
 
-    def __str__(self) -> str:
-        return "Error during execution of command {}".format(self.cmd)
+    def __str__(self):
+        return "Error during execution of command %s" % (self.cmd)
 
 
 class CommandTimeOut (Exception):
     '''Timeout running command'''
-    pass
 
 
 class Command:
@@ -68,21 +65,21 @@ class Command:
     def set_error_handler(self, error_handler_func):
         self.error_handler_func = error_handler_func
 
-    def _read(self, fd, buffsize)-> bytes:
+    def _read(self, fd, buffsize):
         while True:
             try:
                 return os.read(fd, buffsize)
-            except OSError as e:
+            except OSError, e:
                 if e.errno == errno.EINTR:
                     continue
                 else:
                     raise
 
-    def _write(self, fd, s) -> bytes:
+    def _write(self, fd, s):
         while True:
             try:
                 return os.write(fd, s)
-            except OSError as e:
+            except OSError, e:
                 if e.errno == errno.EINTR:
                     continue
                 else:
@@ -119,7 +116,7 @@ class Command:
                     rlist, wlist, xlist = select.select(read_set, write_set,
                                                         [],
                                                         self.SELECT_TIMEOUT)
-                except select.error as e:
+                except select.error, e:
                     # Ignore interrupted system call, reraise anything else
                     if e.args[0] == errno.EINTR:
                         continue
@@ -143,7 +140,6 @@ class Command:
                     # reset timeout
                     elapsed = 0.0
 
-                buffer = io.StringIO() #https://pythonpedia.com/en/tutorial/809/incompatibilities-moving-from-python-2-to-python-3
                 if p.stdin in wlist:
                     bytes_written = self._write(p.stdin.fileno(),
                                                 buffer(stdin,
@@ -156,27 +152,24 @@ class Command:
 
                 if p.stdout in rlist:
                     out_chunk = self._read(p.stdout.fileno(), 1024)
-                    if out_chunk.decode("utf-8") == "":
+                    if out_chunk == "":
                         p.stdout.close()
                         read_set.remove(p.stdout)
-                    print("out_data_cb: {}".format(type(out_data_cb)))
-                    print("out_data: {}".format(type(out_data)))
-                    print("out_chunk: {}".format(type(out_chunk)))
+
                     if out_data_cb is None:
-                        out_data += out_chunk.decode("utf-8")
+                        out_data += out_chunk
                     else:
                         out_data_cb[0](out_chunk, out_data_cb[1])
 
                 if p.stderr in rlist:
                     err_chunk = self._read(p.stderr.fileno(), 1024)
-                    print("Display: {}".format(err_chunk))
 
                     if err_chunk == "":
                         p.stderr.close()
                         read_set.remove(p.stderr)
 
                     if err_data_cb is None:
-                        err_data +=err_chunk
+                        err_data += err_chunk
                     else:
                         err_data_cb[0](err_chunk, err_data_cb[1])
 
@@ -188,7 +181,7 @@ class Command:
 
         except KeyboardInterrupt:
             try:
-                pathlib.os.kill(p.pid, SIGINT)
+                os.kill(p.pid, SIGINT)
             except OSError:
                 pass
 
@@ -202,10 +195,8 @@ class Command:
         out_func = err_func = None
 
         def out_cb(out_chunk, out_data_l, flush=False):
-
-            print("Display out_chunk: {}".format(out_chunk))
             out_data = out_data_l[0]
-            out_data += str(out_chunk)
+            out_data += out_chunk
             while '\n' in out_data:
                 pos = out_data.find('\n')
                 parser_out_func(out_data[:pos + 1])
@@ -239,7 +230,7 @@ class Command:
 
         return self._read_from_pipes(stdin, out_func, err_func, timeout)
 
-    def _get_process(self) -> str:
+    def _get_process(self):
         if self.process is not None:
             return self.process
 
@@ -248,7 +239,7 @@ class Command:
             'stdout': subprocess.PIPE,
             'stderr': subprocess.PIPE,
             'stdin': subprocess.PIPE,
-            'env': pathlib.os.environ.copy()
+            'env': os.environ.copy()
         }
 
         if self.cwd is not None:
@@ -264,11 +255,11 @@ class Command:
     # We keep this only for backwards compatibility,
     # but it doesn't make sense, since both run and run_sync
     # have been always synchronous
-    def run_sync(self, stdin=None, timeout=None)->str:
+    def run_sync(self, stdin=None, timeout=None):
         return self.run(stdin, None, None, timeout)
 
     def run(self, stdin=None, parser_out_func=None, parser_error_func=None,
-            timeout=None)-> str:
+            timeout=None):
         self._get_process()
 
         if parser_out_func is None and parser_error_func is None:
@@ -289,7 +280,7 @@ class Command:
         if self.process is not None:
             self.process.stdin.write(data)
 
-    def get_pid(self) -> int:
+    def get_pid(self):
         try:
             return self.process.pid
         except:
@@ -302,7 +293,7 @@ if __name__ == '__main__':
 
     # Valid command with cwd
     def out_func(line):
-        print("LINE: {}".format(line))
+        print "LINE: %s" % (line)
     cmd = Command(['ls', '-lh'], '/')
     cmd.run(parser_out_func=out_func)
 
@@ -310,25 +301,25 @@ if __name__ == '__main__':
     cmd = Command('invalid')
     try:
         cmd.run()
-    except Exception as e:
-        print('Command not found ({})'.format(str(e)))
+    except Exception, e:
+        print 'Command not found (%s)' % (str(e))
 
     # Command returning non-zero
     cmd = Command(['diff', '/etc/passwd', '/etc/group'])
     try:
         cmd.run_sync()
-    except CommandError as e:
-        print("Error running command. Error: {}".format(e.error))
+    except CommandError, e:
+        print "Error running command. Error: %s" % (e.error)
 
     cmd = Command(['cat', '/foo'])
     try:
         cmd.run_sync()
-    except CommandError as e:
-        print("Error running command. Error: {}".format(e.error))
+    except CommandError, e:
+        print "Error running command. Error: %s" % (e.error)
 
     # Run sync
     cmd = Command(['ls'], '/tmp/')
-    print(cmd.run_sync())
+    print cmd.run_sync()
 
     def error_handler(cmd, data):
         cmd.input('p\n')
@@ -336,7 +327,7 @@ if __name__ == '__main__':
     cmd = Command(['svn', 'info',
                    'https://svn.apache.org/repos/asf/activemq/trunk'])
     cmd.set_error_handler(error_handler)
-    print(cmd.run())
+    print cmd.run()
 
     # Timeout
     cmd = Command(['sleep', '100'])
