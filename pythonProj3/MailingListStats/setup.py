@@ -33,7 +33,19 @@ Installer
 
 
 import sys
-from setuptools import setup
+# Allow for environments without setuptools
+try:
+    from setuptools import setup
+except ImportError:
+    from ez_setup import use_setuptools
+    use_setuptools()
+    from setuptools import setup  # pylint: disable=ungrouped-imports
+
+from distutils.core import Extension
+from distutils.command.build_ext import build_ext
+from distutils.errors import CCompilerError
+from distutils.errors import DistutilsPlatformError, DistutilsExecError
+
 from pymlstats.version import mlstats_version
 
 # Dirty trick to allow installing the man page, making setuptools behave

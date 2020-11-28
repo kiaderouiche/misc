@@ -17,10 +17,18 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
+# Allow for environments without setuptools
 try:
     from setuptools import setup
 except ImportError:
-    from distutils.core import setup
+    from ez_setup import use_setuptools
+    use_setuptools()
+    from setuptools import setup  # pylint: disable=ungrouped-imports
+
+from distutils.core import Extension
+from distutils.command.build_ext import build_ext
+from distutils.errors import CCompilerError
+from distutils.errors import DistutilsPlatformError, DistutilsExecError
 
 setup(name="RepositoryHandler",
       version="1.0.0",
