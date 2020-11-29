@@ -82,7 +82,7 @@ setup(
         '(GPLv2+)',
         'Operating System :: POSIX',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.8,,
+        'Programming Language :: Python :: 3.8',
         'Topic :: Communications :: Email',
         'Topic :: Internet :: Log Analysis',
         'Topic :: Internet :: WWW/HTTP',
