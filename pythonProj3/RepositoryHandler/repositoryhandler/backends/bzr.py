@@ -64,7 +64,7 @@ class BzrRepository(Repository):
     def __init__(self, uri):
         Repository.__init__(self, uri, 'bzr')
 
-    def _check_uri(self, uri):
+    def _check_uri(self, uri) -> BzrRepository:
         type, repo_uri = get_repository_from_path(uri)
         if not repo_uri.startswith(self.uri):
             raise RepositoryInvalidWorkingCopy(f'"{uri}" does not appear to be a '
@@ -141,7 +141,7 @@ class BzrRepository(Repository):
         command = Command(cmd, cwd)
         self._run_command(command, LOG)
 
-    def rlog(self, module=None, rev=None, files=None):
+    def rlog(self, module=None, rev=None, files=None) -> None:
         # TODO: is it supported by bzr???
         return
 

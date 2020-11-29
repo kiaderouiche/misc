@@ -32,7 +32,7 @@ SSL_CERTIFICATE_QUESTION = "(R)eject, accept (t)emporarily "\
                            "or accept (p)ermanently?"
 
 
-def run_command_sync(command):
+def run_command_sync(command) -> str:
     def error_handler(cmd, error):
         # Read error message
         question = error.split('\n')[-1]
@@ -46,7 +46,7 @@ def run_command_sync(command):
     return command.run()
 
 
-def get_auth_info(uri):
+def get_auth_info(uri) -> str:
     import re
 
     auth = {'uri': uri,
@@ -62,7 +62,7 @@ def get_auth_info(uri):
     return auth
 
 
-def get_info(uri, user=None, passwd=None):
+def get_info(uri, user=None, passwd=None) -> int:
     if pathlib.Path(uri).is_dir():
         path = uri
         uri = '.'
@@ -90,7 +90,7 @@ def get_info(uri, user=None, passwd=None):
     return retval
 
 
-def list_files(uri, user=None, passwd=None):
+def list_files(uri, user=None, passwd=None) -> int:
     if pathlib.Path(uri).is_dir():
         path = uri
         uri = '.'
@@ -112,7 +112,7 @@ def list_files(uri, user=None, passwd=None):
     return retval
 
 
-def get_repository_from_path(path):
+def get_repository_from_path(path)-> str:
     # Just in case path is a file
     if pathlib.Path(path).is_file():
         path = pathlib.Path(path).parent
@@ -151,7 +151,7 @@ class SVNRepository(Repository):
 
         Repository.__init__(self, root, 'svn')
 
-    def get_uri_for_path(self, path):
+    def get_uri_for_path(self, path)-> str:
         self._check_uri(path)
 
         try:
@@ -170,7 +170,7 @@ class SVNRepository(Repository):
             if question.strip() == SSL_CERTIFICATE_QUESTION:
                 Repository._run_command(self, command, type, 'p\n')
 
-    def _get_command_auth(self, command):
+    def _get_command_auth(self, command) -> str:
         if (self.user is not None) and (self.passwd is not None):
             return command + ['--username', self.user,
                               '--password', self.passwd]
@@ -195,7 +195,7 @@ class SVNRepository(Repository):
                                                    'repository %s'
                                                    % (uri, self.uri))
 
-    def __get_uri_for_branch(self, module, branch):
+    def __get_uri_for_branch(self, module, branch) -> str:
         if branch is None:
             uri = pathlib.Path().joinpath(self.uri, module)
         elif branch == 'trunk':
@@ -213,7 +213,7 @@ class SVNRepository(Repository):
 
         return uri
 
-    def copy(self):
+    def copy(self) -> SVNRepository:
         return SVNRepository(self.uri, self.user, self.passwd)
 
     def checkout(self, module, rootdir, newdir=None, branch=None, rev=None):
@@ -470,7 +470,7 @@ class SVNRepository(Repository):
         command = Command(cmd, cwd, env={'LC_ALL': 'C'})
         self._run_command(command, LS)
 
-    def get_modules(self):
+    def get_modules(self)-> str:
         # Two 'standard' repository layouts
         # repo/trunk repo/branches
         #
