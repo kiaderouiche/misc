@@ -57,7 +57,7 @@ def get_config(path, option=None)-> int:
     return retval
 
 
-def get_repository_from_path(path):
+def get_repository_from_path(path) -> str:
     if pathlib.Path(path).is_file():
         path = pathlib.Path(path).parent
 
@@ -66,16 +66,16 @@ def get_repository_from_path(path):
         dir = pathlib.Path(dir).parent
 
     if not dir or dir == "/":
-        raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Git '
-                                           'working copy' % path)
+        raise RepositoryInvalidWorkingCopy('"{}" does not appear to be a Git '
+                                           'working copy'.format(path))
     try:
         uri = get_config(dir, 'remote.origin.url')
     except CommandError:
         uri = dir
 
     if uri is None or not uri:
-        raise RepositoryInvalidWorkingCopy('"%s" does not appear to be a Git '
-                                           'working copy' % path)
+        raise RepositoryInvalidWorkingCopy('"{}" does not appear to be a Git '
+                                           'working copy'.format(path))
 
     return 'git', uri
 
@@ -151,7 +151,7 @@ class GitRepository(Repository):
 
             cmd = ['git', 'checkout', branch]
         else:
-            cmd = ['git', 'checkout', '-b', branch, 'origin/%s' % (branch)]
+            cmd = ['git', 'checkout', '-b', branch, 'origin/{}s'.format(branch)]
 
         command = Command(cmd, path)
         command.run()
@@ -261,9 +261,9 @@ class GitRepository(Repository):
         target = uri[len(cwd):].strip("/")
 
         if rev is not None:
-            target = "%s:%s" % (rev, target)
+            target = "{}:{}".format(rev, target)
         else:
-            target = "HEAD:%s" % (target)
+            target = "HEAD:{}".format(target)
 
         cmd.append(target)
 
@@ -351,7 +351,7 @@ class GitRepository(Repository):
             if len(revs) == 1:
                 cmd.append(revs[0])
             elif len(revs) > 1:
-                cmd.append("%s..%s" % (revs[0], revs[1]))
+                cmd.append("{}..{}".format(revs[0], revs[1]))
 
         cmd.append("--")
 
