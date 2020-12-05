@@ -17,6 +17,9 @@
 #
 # Authors: K.I.A.Derouiche, kamel.derouiche@gmail.com
 
+'''
+https://gforge.inria.fr/
+'''
 import sys
 import time
 import urllib.request
@@ -29,7 +32,7 @@ from .Bicho.utils import printerr, printdbg, printout
 from .Bicho.common import Tracker, People, Issue, Comment, Change
 from .Bicho.db.database import DBIssue, DBBackend, get_database
 
-from storm.locals import DateTime, Int, Reference, Unicode, Desc
+from storm.locals import DateTime, Int, Reference, Unicode, Desc #replace by sqlachemy
 from datetime import datetime
 from dateutil.parser import parse  # used to convert str time to datetime
 
@@ -42,7 +45,7 @@ OPEN_STATE = "open"
 class DBGithubIssueExt(object):
     """
     """
-    __storm_table__ = 'issues_ext_github'
+    __storm_table__ = 'issues_ext_gforge'
 
     id = Int(primary=True)
     status = Unicode()
