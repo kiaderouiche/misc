@@ -1,0 +1,66 @@
+	#####################################################################
+DESCRIPTION OF FILES IN STRINGS PACKAGE
+
+STRINGS.py    - Python code for STRINGS simulation package
+ChangeLog     - Covers changes made between code versions
+run.sh        - Shell script containing all of the input parameters, initially set to their default values
+setup.sh      - Example shell script to set up the necessary environment variables for using PDF sets of the LHAPDF (Should be sourced once before running the program)
+#####################################################################
+DEPENDENCIES OF THE GENERATOR AND INSTRUCTIONS ON HOW TO INSTALL IT
+
+STRINGS uses PDF sets of the LHAPDF (http://arxiv.org/abs/1412.7420). 
+In order to install the LHAPDF follow the following instructions from (https://lhapdf.hepforge.org/install.html):
+
+# wget http://www.hepforge.org/archive/lhapdf/LHAPDF-6.X.Y.tar.gz
+# tar vzxf LHAPDF-6.X.Y.tar.gz
+# cd LHAPDF-6.X.Y
+# ./configure --prefix=$INSTALLATION_PATH/
+# make
+# make install
+
+For the LHAPDF to be useable by Python, Python.h header should be found by configure, otherwise Python will not be able to use LHAPDF.
+Furthermore, for the LHAPDF to work with Python, python-devel needs to be installed.
+LHAPDF uses C++11 features. Centos7 or newer machines, automatically, have C++11 installed. If you are using older machines, boost libraries should be installed.
+
+After installing the LHAPDF, a shell script should be created, containing all of the environment variables, and make sure to source it before running the generator. Paths should point to where python and LHAPDF are installed to avoid import errors. LHAPDF libraries must be properly compiled and referenced in order for the generator to run. An example is given in the setup.sh.
+
+For using different PDF sets, they need to be downloaded and extracted in the following directory:
+
+# $INSTALLATION_PATH/share/LHAPDF
+
+(The default PDF set in STRINGS is "cteq6l1")
+(For an example of the $INSTALLATION_PATH look at the setup.sh file.)
+#####################################################################
+DESCRIPTION OF HOW TO RUN THE GENERATOR
+
+There are two ways of running this generator:
+
+1) Sourcing the shell script "run.sh":
+
+   "run.sh" contains all of the input parameters with their default values. User can change the variables to the desired values and source this shell script.
+    In order to run this script, type the following
+
+            source run.sh
+
+2) Running through the command line:
+
+   In order to see all of the input parameters that can be passes the the STRINGS, type:
+
+               python STRINGS.py --help
+
+   Those parameters which are not changed by the user will be set to their default values. For example, the default value for the number of generated events is 10000. In order to run STRINGS to generate 2000 events, user can type either of the following lines:
+
+            a) python STRINGS.py -Number 2000 
+            b) python STRINGS.py --Numbervalue 2000
+
+   It is also possible to make STRINGS.py and executable file by:
+
+               chmod +x STRINGS.py
+
+   And run the generator by
+
+               ./STRINGS.py
+
+(Parameters with their default values, are given in the "run.sh" file)
+After running the generator, all of the variables will appear on the screen and STRINGSfile.lhe will be created, which contains all of the events and variables.
+#####################################################################
