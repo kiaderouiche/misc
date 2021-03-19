@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "STRINGS"
+version = "2.00"
+description = "Monte Carlo Event Generator for the Production and Decay of String Resonances in Proton-Proton Collisions"
+authors = ["Fairhurst Lyons <rflyons@ualberta.ca>"]
+keywords = ["Monte Carl"]
+readme = "README"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
