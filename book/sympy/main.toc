@@ -177,9 +177,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.2.4}Itération}{44}{subsection.8.2.4}%
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.5}Polyn\^ome irr\'eductible}{44}{subsection.8.2.5}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.3}Arithmétique euclidienne}{44}{section.8.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.1} Divisibilité}{44}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.1} Divisibilit\'e}{44}{subsection.8.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.3.2} Idéaux et quotients}{44}{subsection.8.3.2}%
 \defcounter {refsection}{0}\relax 
@@ -191,7 +193,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.4.2} Recherche de racines}{44}{subsection.8.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.3} Résultant}{44}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.3} R\'esultant}{44}{subsection.8.4.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.4.4} Groupe de Galois}{44}{subsection.8.4.4}%
 \defcounter {refsection}{0}\relax 
