@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.3.11)  21 MAR 2021 20:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.3.11)  21 MAR 2021 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1351,7 +1351,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <35> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 47.
-<Pictures//esahubble.png, id=887, 614.295pt x 794.97pt>
+<Pictures//esahubble.png, id=891, 614.295pt x 794.97pt>
 File: Pictures//esahubble.png Graphic file (type png)
 <use Pictures//esahubble.png>
 Package pdftex.def Info: Pictures//esahubble.png  used on input line 57.
@@ -1360,7 +1360,7 @@ Package pdftex.def Info: Pictures//esahubble.png  used on input line 57.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Pictures//esahubble.png>
 ] [2]
-<Pictures//head1.png, id=899, 1027.6794pt x 514.0806pt>
+<Pictures//head1.png, id=903, 1027.6794pt x 514.0806pt>
 File: Pictures//head1.png Graphic file (type png)
 <use Pictures//head1.png>
 Package pdftex.def Info: Pictures//head1.png  used on input line 69.
@@ -1426,18 +1426,18 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 246.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 248.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 246.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 248.
  [6] [7]
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <10> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 358.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 360.
 
-[8])
+[8] [9])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [9] [10]
+ [10]
 \openout2 = `first/avant_propos.aux'.
 
  (./first/avant_propos.tex
@@ -1478,7 +1478,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 ] [16]
 Chapter 1.
 \c@ttl@toc@default=\count472
-<Pictures//head2.png, id=1419, 1027.6794pt x 514.0806pt>
+<Pictures//head2.png, id=1425, 1027.6794pt x 514.0806pt>
 File: Pictures//head2.png Graphic file (type png)
 <use Pictures//head2.png>
 Package pdftex.def Info: Pictures//head2.png  used on input line 2.
@@ -1492,7 +1492,7 @@ Overfull \hbox (100.60786pt too wide) in paragraph at lines 37--38
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<Pictures//../Pictures/sympyGammaMain.png, id=1424, 1350.04375pt x 612.2875pt>
+<Pictures//../Pictures/sympyGammaMain.png, id=1430, 1350.04375pt x 612.2875pt>
 File: Pictures//../Pictures/sympyGammaMain.png Graphic file (type png)
 <use Pictures//../Pictures/sympyGammaMain.png>
 Package pdftex.def Info: Pictures//../Pictures/sympyGammaMain.png  used on inpu
@@ -1504,7 +1504,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--79
  []
 
 [19]
-<Pictures//../Pictures/sympyarch.png, id=1465, 336.50719pt x 321.45094pt>
+<Pictures//../Pictures/sympyarch.png, id=1471, 336.50719pt x 321.45094pt>
 File: Pictures//../Pictures/sympyarch.png Graphic file (type png)
 <use Pictures//../Pictures/sympyarch.png>
 Package pdftex.def Info: Pictures//../Pictures/sympyarch.png  used on input lin
@@ -2272,18 +2272,18 @@ File: Pictures//head2.png Graphic file (type png)
 <use Pictures//head2.png>
 Package pdftex.def Info: Pictures//head2.png  used on input line 138.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures//1_1.png, id=1943, 529.98pt x 469.755pt>
+<Pictures//1_1.png, id=1948, 529.98pt x 469.755pt>
 File: Pictures//1_1.png Graphic file (type png)
 <use Pictures//1_1.png>
 Package pdftex.def Info: Pictures//1_1.png  used on input line 140.
 (pdftex.def)             Requested size: 264.98933pt x 234.87692pt.
 [81 <./Pictures//1_1.png>]
-<Pictures//1_2.png, id=1952, 318.18875pt x 316.18124pt>
+<Pictures//1_2.png, id=1957, 318.18875pt x 316.18124pt>
 File: Pictures//1_2.png Graphic file (type png)
 <use Pictures//1_2.png>
 Package pdftex.def Info: Pictures//1_2.png  used on input line 170.
 (pdftex.def)             Requested size: 318.18796pt x 316.18047pt.
-<Pictures//1_3.png, id=1953, 326.21875pt x 165.61874pt>
+<Pictures//1_3.png, id=1958, 326.21875pt x 165.61874pt>
 File: Pictures//1_3.png Graphic file (type png)
 <use Pictures//1_3.png>
 Package pdftex.def Info: Pictures//1_3.png  used on input line 179.
@@ -2398,7 +2398,7 @@ File: Pictures//head2.png Graphic file (type png)
 <use Pictures//head2.png>
 Package pdftex.def Info: Pictures//head2.png  used on input line 1.
 (pdftex.def)             Requested size: 614.295pt x 307.30548pt.
-<Pictures//../Pictures/Figure_1.png, id=2034, 462.528pt x 346.896pt>
+<Pictures//../Pictures/Figure_1.png, id=2039, 462.528pt x 346.896pt>
 File: Pictures//../Pictures/Figure_1.png Graphic file (type png)
 <use Pictures//../Pictures/Figure_1.png>
 Package pdftex.def Info: Pictures//../Pictures/Figure_1.png  used on input line
@@ -2683,23 +2683,17 @@ r1/basecalculs.aux) (./chapter2/logic.aux) (./chapter2/ensemble.aux) (./chapter
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 14B59A8F0918A0890849861FCD95A9E8;16540
-(rerunfilecheck)             After:  0AB5EAB8A8BAFF48DAF72F226EAEEA10;16622.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 0AB5EAB8A8BAFF48DAF72F226EAEEA10;16622.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34342 strings out of 480518
- 632356 string characters out of 5895347
- 1565736 words of memory out of 5000000
- 49258 multiletter control sequences out of 15000+600000
+ 34343 strings out of 480518
+ 632374 string characters out of 5895347
+ 1565739 words of memory out of 5000000
+ 49259 multiletter control sequences out of 15000+600000
  567964 words of font info for 534 fonts, out of 8000000 for 9000
  417 hyphenation exceptions out of 8191
  92i,15n,91p,1188b,2010s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2721,10 +2715,10 @@ mbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (133 pages, 14029872 bytes).
+Output written on main.pdf (133 pages, 14029973 bytes).
 PDF statistics:
- 2464 PDF objects out of 2487 (max. 8388607)
- 2065 compressed objects within 21 object streams
+ 2469 PDF objects out of 2487 (max. 8388607)
+ 2069 compressed objects within 21 object streams
  675 named destinations out of 1000 (max. 500000)
- 166162 words of extra memory for PDF output out of 184870 (max. 10000000)
+ 166170 words of extra memory for PDF output out of 184870 (max. 10000000)
 
