@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html><head>
+  <link rel="search" type="application/opensearchdescription+xml" href="https://help.github.com/opensearch.xml" title="GitHub:Help">
+  <title>
+  
+    
+      Basic writing and formatting syntax - User Documentation
+    
+  
+  </title>
+  
+<link rel="icon" type="image/x-icon" href="https://help.github.com/assets/images/site/favicon.ico">
+<link rel="stylesheet" href="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/application.css">
+<script type="text/javascript" async="" src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/ga.js"></script><script src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/application.js"></script><style></style>
+
+<meta name="Description" content="Create sophisticated formatting for your prose and code on GitHub with simple syntax.
+…">
+
+<script type="text/javascript">
+  $(function() {
+    $('#quicksearch-query').lunrSearch({
+      
+      indexUrl: '/search/search.json',
+      
+      quickSearchResults:  '.autocomplete-results',
+      quickSearchEntries:  '.result-group',
+      quickSearchTemplate: '#quicksearch-results-template',
+
+      searchResults: '.search-container',
+      searchEntries: '.search-results',
+      searchTemplate: '#search-results-template'
+    });
+  });
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3769691-27']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body id="com" class="platform-switch platform-linux">
+
+<div id="not-footer">
+  
+
+
+  <div id="header">
+    <div class="clearfix">
+      <h1 class="site-logo"><a href="https://help.github.com/">GitHub Help</a></h1>
+
+      <ul class="top-nav">
+        
+<li>
+  <button class="js-dropdown-button dropdown-button">Version <div class="dropdown-caret"></div></button>
+  <div class="dropdown-menu js-dropdown-menu">
+    <a href="https://help.github.com/">GitHub.com</a>
+    
+    <a href="https://help.github.com/enterprise/2.13/">GitHub Enterprise 2.13</a>
+    
+    <a href="https://help.github.com/enterprise/2.12/">GitHub Enterprise 2.12</a>
+    
+    <a href="https://help.github.com/enterprise/2.11/">GitHub Enterprise 2.11</a>
+    
+    <a href="https://help.github.com/enterprise/2.10/">GitHub Enterprise 2.10</a>
+    
+  </div>
+</li>
+
+
+        
+          <li><a href="https://github.com/contact" onclick="_gaq.push(['_trackEvent', 'Contact Support', 'Basic writing and formatting syntax', window.location.href]);">Contact Support</a></li>
+<li><a href="https://github.com/">Return to GitHub</a></li>
+
+        
+      </ul>
+    </div>
+  </div>
+
+  <div id="content-wrapper">
+
+    <div class="site">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="content-header small">
+        <h6 class="breadcrumbs">
+          
+          <a href="https://help.github.com/categories/writing-on-github">Writing on GitHub</a>
+          /
+          
+          Basic writing and formatting syntax
+        </h6>
+        <div class="search-form small right">
+          
+  
+
+
+<script id="quicksearch-results-template" type="text/mustache">
+  <div class="header">
+    <a class="initial quicksearch-seemore" href="/search?q=">See more results</a>
+  </div>
+  [[#entries]]
+    <tr class="article">
+      <td class="info">
+        <a href="[[url]]" class="js-articles-quicksearch-link">[[title]]</a>
+      </td>
+    </tr>
+  [[/entries]]
+</script>
+
+<form accept-charset="UTF-8" action="/search" id="articles-search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"></div>
+  <div class="outer">
+    <div class="inner fade-label">
+      <input name="q" id="quicksearch-query" class="js-articles-quicksearch" placeholder="How can we help?" type="text">
+      <div class="search-form-btn">
+        <button><span class="octicon octicon-search"></span></button>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="autocomplete-results" style="display: none;">
+  <table class="result-group" cellspacing="0" cellpadding="0" border="0">
+  </table>
+</div>
+
+        </div>
+      </div>
+
+      <div class="article js-hide-during-search">
+
+        <h2>Basic writing and formatting syntax</h2>
+
+        <div id="article-platform-nav">
+  <ul>
+    <li class="platform-mac">
+      <a href="#platform-mac" data-platform="mac">
+        mac
+      </a>
+    </li>
+    <li class="platform-windows">
+      <a href="#platform-windows" data-platform="windows">
+        windows
+      </a>
+    </li>
+    <li class="platform-linux">
+      <a href="#platform-linux" data-platform="linux">
+        linux
+      </a>
+    </li>
+    <li class="platform-all">
+      <a href="#platform-all" data-platform="all">
+        all
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+        <div class="article-body content-body wikistyle markdown-format">
+          <div class="intro">
+
+          <p>Create sophisticated formatting for your prose and code on GitHub with simple syntax.</p>
+
+          </div>
+
+          <p>In this article:</p>
+
+<ul>
+<li><a href="#headings">Headings</a></li>
+<li><a href="#styling-text">Styling text</a></li>
+<li><a href="#quoting-text">Quoting text</a></li>
+<li><a href="#quoting-code">Quoting code</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#section-links">Section links</a></li>
+<li><a href="#relative-links">Relative links</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#task-lists">Task lists</a></li>
+<li><a href="#mentioning-people-and-teams">Mentioning people and teams</a></li>
+<li><a href="#referencing-issues-and-pull-requests">Referencing issues and pull requests</a></li>
+<li><a href="#using-emoji">Using emoji</a></li>
+<li><a href="#paragraphs-and-line-breaks">Paragraphs and line breaks</a></li>
+<li><a href="#ignoring-markdown-formatting">Ignoring Markdown formatting</a></li>
+</ul>
+
+<h3>
+<a id="headings" class="anchor" href="#headings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Headings</h3>
+
+<p>To create a heading, add one to six <code>#</code> symbols before your heading text. The number of <code>#</code> you use will determine the size of the heading.</p>
+
+<pre><code># The largest heading
+## The second largest heading
+###### The smallest heading
+</code></pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/headings-rendered.png" alt="Rendered H1, H2, and H6 headings"></p>
+
+<h3>
+<a id="styling-text" class="anchor" href="#styling-text" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Styling text</h3>
+
+<p>You can indicate emphasis with bold, italic, or strikethrough text.</p>
+
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Syntax</th>
+<th>Keyboard shortcut</th>
+<th>Example</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bold</td>
+<td>
+<code>** **</code> or <code>__ __</code>
+</td>
+<td>command/control + b</td>
+<td><code>**This is bold text**</code></td>
+<td><strong>This is bold text</strong></td>
+</tr>
+<tr>
+<td>Italic</td>
+<td>
+<code>* *</code> or <code>_ _</code>
+</td>
+<td>command/control + i</td>
+<td><code>*This text is italicized*</code></td>
+<td><em>This text is italicized</em></td>
+</tr>
+<tr>
+<td>Strikethrough</td>
+<td><code>~~ ~~</code></td>
+<td></td>
+<td><code>~~This was mistaken text~~</code></td>
+<td><del>This was mistaken text</del></td>
+</tr>
+<tr>
+<td>Bold and italic</td>
+<td>
+<code>** **</code> and <code>_ _</code>
+</td>
+<td></td>
+<td><code>**This text is _extremely_ important**</code></td>
+<td><strong>This text is <em>extremely</em> important</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="quoting-text" class="anchor" href="#quoting-text" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quoting text</h3>
+
+<p>You can quote text with a <code>&gt;</code>.</p>
+
+<pre><code>In the words of Abraham Lincoln:
+
+&gt; Pardon my French
+</code></pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/quoted-text-rendered.png" alt="Rendered quoted text"></p>
+
+<div class="alert tip">
+
+<p><strong>Tip:</strong> When viewing a conversation, you can automatically quote text in a reply by highlighting the text, then typing <code>r</code>. For more information, see "<a href="https://help.github.com/articles/using-keyboard-shortcuts/">Using keyboard shortcuts</a>."</p>
+
+</div>
+
+<h3>
+<a id="quoting-code" class="anchor" href="#quoting-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quoting code</h3>
+
+<p>You can call out code or a command within a sentence with single backticks. The text within the backticks will not be formatted.</p>
+
+<p><code>Use `git status` to list all new or modified files that haven't yet been committed.</code></p>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/inline-code-rendered.png" alt="Rendered inline code block"></p>
+
+<p>To format code or text into its own distinct block, use triple backticks.</p>
+
+<pre>Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
+</pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/code-block-rendered.png" alt="Rendered code block"></p>
+
+<p>For more information, see "<a href="https://help.github.com/articles/creating-and-highlighting-code-blocks">Creating and highlighting code blocks</a>."</p>
+
+<h3>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h3>
+
+<p>You can create an inline link by wrapping link text in brackets <code>[ ]</code>, and then wrapping the URL in parentheses <code>( )</code>. You can also use the keyboard shortcut <code>command + k</code> to create a link.</p>
+
+<p><code>This site was built using [GitHub Pages](https://pages.github.com/).</code></p>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/link-rendered.png" alt="Rendered link"></p>
+
+<div class="alert tip">
+
+<p><strong>Tip:</strong> GitHub automatically creates links when valid URLs are written in a comment. For more information, see "<a href="https://help.github.com/articles/autolinked-references-and-urls">Autolinked references and URLS</a>."</p>
+
+</div>
+
+<h3>
+<a id="section-links" class="anchor" href="#section-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Section links</h3>
+
+<p>You can link directly to a section in a rendered file by hovering over the section heading to expose the link:</p>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/readme-links.png" alt="Section link within the README file for the github/scientist repository"></p>
+
+<h3>
+<a id="relative-links" class="anchor" href="#relative-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Relative links</h3>
+
+<p>You can define relative links and image paths in your rendered files to help readers navigate to other files in your repository.</p>
+
+<p>A relative link is a link that is relative to the current file. For 
+example, if you have a  README file in root of your repository, and you 
+have another file in <em>docs/CONTRIBUTING.md</em>, the relative link to <em>CONTRIBUTING.md</em> in your README might look like this:</p>
+
+<pre><code>[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+</code></pre>
+
+<p>GitHub will automatically transform your relative link or image path 
+based on whatever branch you're currently on, so that the link or path 
+always works. You can use all relative link operands, such as <code>./</code> and <code>../</code>.</p>
+
+<p>Relative links are easier for users who clone your repository. 
+Absolute links may not work in clones of your repository - we recommend 
+using relative links to refer to other files within your repository.</p>
+
+<h3>
+<a id="lists" class="anchor" href="#lists" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lists</h3>
+
+<p>You can make an unordered list by preceding one or more lines of text with <code>-</code> or <code>*</code>.</p>
+
+<pre><code>- George Washington
+- John Adams
+- Thomas Jefferson
+</code></pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/unordered-list-rendered.png" alt="Rendered unordered list"></p>
+
+<p>To order your list, precede each line with a number.</p>
+
+<pre><code>1. James Madison
+2. James Monroe
+3. John Quincy Adams
+</code></pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/ordered-list-rendered.png" alt="Rendered ordered list"></p>
+
+<h4>
+<a id="nested-lists" class="anchor" href="#nested-lists" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Nested Lists</h4>
+
+<p>You can create a nested list by indenting one or more list items below another item.</p>
+
+<p>To create a nested list using the web editor on GitHub or a text editor that uses a monospaced font, like <a href="https://atom.io/">Atom</a>, you can align your list visually. Type space characters in front of your nested list item, until the list marker character (<code>-</code> or <code>*</code>) lies directly below the first character of the text in the item above it.</p>
+
+<pre><code>1. First list item
+   - First nested list item
+     - Second nested list item
+</code></pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/nested-list-alignment.png" alt="Nested list with alignment highlighted"></p>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/nested-list-example-1.png" alt="List with two levels of nested items"></p>
+
+<p>To create a nested list in the comment editor on GitHub, which 
+doesn't use a monospaced font, you can look at the list item immediately
+ above the nested list and count the number of characters that appear 
+before the content of the item. Then type that number of space 
+characters in front of the nested list item.</p>
+
+<p>In this example, you could add a nested list item under the list item <code>100. First list item</code> by indenting the nested list item a minimum of five spaces, since there are five characters (<code>100.</code>) before <code>First list item</code>.</p>
+
+<pre><code>100. First list item
+     - First nested list item
+</code></pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/nested-list-example-3.png" alt="List with a nested list item">   </p>
+
+<p>You can create multiple levels of nested lists using the same method.
+ For example, because the first nested list item has seven spaces (<code>␣␣␣␣␣-␣</code>) before the nested list content <code>First nested list item</code>, you would need to indent the second nested list item by seven spaces.</p>
+
+<pre><code>100. First list item
+     - First nested list item
+       - Second nested list item
+</code></pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/nested-list-example-2.png" alt="List with two levels of nested items">    </p>
+
+<p>For more examples, see the <a href="https://github.github.com/gfm/#example-265">GitHub Flavored Markdown Spec</a>.</p>
+
+<h3>
+<a id="task-lists" class="anchor" href="#task-lists" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Task lists</h3>
+
+<p>To create a task list, preface list items with <code>[ ]</code>. To mark a task as complete, use <code>[x]</code>.</p>
+
+<pre><code>- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
+</code></pre>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/task-list-rendered.png" alt="Rendered task list"></p>
+
+<p>If a task list item description begins with a parenthesis, you'll need to escape it with <code>\</code>:</p>
+
+<p><code>- [ ] \(Optional) Open a followup issue</code></p>
+
+<p>For more information, see "<a href="https://help.github.com/articles/about-task-lists">About task lists</a>."</p>
+
+<h3>
+<a id="mentioning-people-and-teams" class="anchor" href="#mentioning-people-and-teams" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mentioning people and teams</h3>
+
+<p>You can mention a person or <a href="https://help.github.com/articles/setting-up-teams/">team</a> on GitHub by typing <code>@</code> plus their username or team name. This will trigger a <a href="https://help.github.com/articles/about-notifications">notification</a>
+ and bring their attention to the conversation. People will also receive
+ a notification if you edit a comment to mention their username or team 
+name.</p>
+
+<p><code>@github/support What do you think about these updates?</code></p>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/mention-rendered.png" alt="Rendered @mention"></p>
+
+<p>When you mention a parent team, members of its child teams also 
+receive notifications, simplifying communication with multiple groups of
+ people. For more information, see "<a href="https://help.github.com/articles/about-teams">About teams</a>."</p>
+
+<p>Typing an <code>@</code> symbol will bring up a list of people or 
+teams on a project. The list filters as you type, so once you find the 
+name of the person or team you are looking for, you can use the arrow 
+keys to select it and press either tab or enter to complete the name. 
+For teams, enter the @organization/team-name and all members of that 
+team will get subscribed to the conversation.</p>
+
+<p>The autocomplete results are restricted to repository collaborators and any other participants on the thread.</p>
+
+<h3>
+<a id="referencing-issues-and-pull-requests" class="anchor" href="#referencing-issues-and-pull-requests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Referencing issues and pull requests</h3>
+
+<p>You can bring up a list of suggested issues and pull requests within the repository by typing <code>#</code>.
+ Type the issue or pull request number or title to filter the list, and 
+then press either tab or enter to complete the highlighted result.</p>
+
+<p>For more information, see "<a href="https://help.github.com/articles/autolinked-references-and-urls">Autolinked references and URLs</a>."</p>
+
+<h3>
+<a id="using-emoji" class="anchor" href="#using-emoji" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using emoji</h3>
+
+<p>You can add emoji to your writing by typing <code>:EMOJICODE:</code>.</p>
+
+<p><code>@octocat :+1: This PR looks great - it's ready to merge! :shipit:</code></p>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/emoji-rendered.png" alt="Rendered emoji"></p>
+
+<p>Typing <code>:</code> will bring up a list of suggested emoji. The 
+list will filter as you type, so once you find the emoji you're looking 
+for, press <strong>Tab</strong> or <strong>Enter</strong> to complete the highlighted result.</p>
+
+<p>For a full list of available emoji and codes, check out <a href="http://emoji-cheat-sheet.com/">emoji-cheat-sheet.com</a>.</p>
+
+<h3>
+<a id="paragraphs-and-line-breaks" class="anchor" href="#paragraphs-and-line-breaks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Paragraphs and line breaks</h3>
+
+<p>You can create a new paragraph by leaving a blank line between lines of text.</p>
+
+<h3>
+<a id="ignoring-markdown-formatting" class="anchor" href="#ignoring-markdown-formatting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ignoring Markdown formatting</h3>
+
+<p>You can tell GitHub to ignore (or escape) Markdown formatting by using <code>\</code> before the Markdown character.</p>
+
+<p><code>Let's rename \*our-new-project\* to \*our-old-project\*.</code></p>
+
+<p><img src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/escaped-character-rendered.png" alt="Rendered escaped character"></p>
+
+<p>For more information, see Daring Fireball's "<a href="https://daringfireball.net/projects/markdown/syntax#backslash">Markdown Syntax</a>."</p>
+
+<h3>
+<a id="further-reading" class="anchor" href="#further-reading" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further reading</h3>
+
+<ul>
+<li>"<a href="https://help.github.com/articles/about-writing-and-formatting-on-github">About writing and formatting on GitHub</a>"</li>
+<li>"<a href="https://help.github.com/articles/working-with-advanced-formatting">Working with advanced formatting</a>"</li>
+<li>"<a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a>"</li>
+</ul>
+        </div>
+
+        <div class="support-footer">
+  <ul class="article-footer button-nav">
+    
+      <li><a href="https://github.com/contact" class="minibutton" onclick="_gaq.push(['_trackEvent', 'Contact Support', 'Basic writing and formatting syntax', window.location.href]);">
+          <span class="octicon octicon-comment-discussion"></span>
+          Contact a human
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+
+      <div class="sidebar">
+  <h3>Article versions</h3>
+  <ul>
+    <li><a href="#" skip-conversion="" data-proofer-ignore="">GitHub.com</a></li>
+
+    
+      <li class="">
+        <a data-proofer-ignore="" href="https://help.github.com/enterprise/2.13/user/articles/basic-writing-and-formatting-syntax/">GitHub Enterprise 2.13</a>
+      </li>
+    
+      <li class="">
+        <a data-proofer-ignore="" href="https://help.github.com/enterprise/2.12/user/articles/basic-writing-and-formatting-syntax/">GitHub Enterprise 2.12</a>
+      </li>
+    
+      <li class="">
+        <a data-proofer-ignore="" href="https://help.github.com/enterprise/2.11/user/articles/basic-writing-and-formatting-syntax/">GitHub Enterprise 2.11</a>
+      </li>
+    
+      <li class="">
+        <a data-proofer-ignore="" href="https://help.github.com/enterprise/2.10/user/articles/basic-writing-and-formatting-syntax/">GitHub Enterprise 2.10</a>
+      </li>
+    
+
+  </ul>
+</div>
+
+
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="inner">
+    <a href="https://github.com/" class="invertocat">
+      <img alt="The GitHub Logo" src="Basic%20writing%20and%20formatting%20syntax%20-%20User%20Documentation_files/invertocat.png" width="24" height="24">
+    </a>
+    <p class="left">
+      © <span id="year">2018</span> GitHub Inc. All rights reserved.
+    </p>
+      <ul class="links right">
+        <li><a href="https://help.github.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="https://help.github.com/privacy-policy">Privacy</a></li>
+        
+          <li><a href="https://help.github.com/security">Security</a></li>
+        
+        
+          <li><a href="https://github.com/contact" onclick="_gaq.push(['_trackEvent', 'Contact Support', 'Basic writing and formatting syntax', window.location.href]);">
+              Support
+            </a>
+          </li>
+        
+      </ul>
+  </div>
+</div>
+
+
+<div class="fullscreen-overlay"></div>
+
+
+</body></html>
